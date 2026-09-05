@@ -1,25 +1,25 @@
 ---
-title: "Mandel Beach"
-description: "Mandel Beach adalah salah satu destinasi menakjubkan di Banggai yang menawarkan pemandangan alam memukau dan pengalaman wisata tak terlupakan. Tempat ini memiliki keunikan tersendiri yang wajib dikunjungi."
-seoTitle: "Mandel Beach | Banggai Wonderland"
-seoDescription: "Kunjungi dan eksplorasi keindahan Mandel Beach di Banggai."
-image: "/images/destinations/mandel-beach.jpg"
-imageAlt: "Mandel Beach view"
-location: "Banggai Kepulauan"
-category: "Pantai"
+title: Mandel Beach
+description: Mandel Beach adalah salah satu destinasi menakjubkan di Banggai yang menawarkan pemandangan alam memukau dan pengalaman wisata tak terlupakan. Tempat ini memiliki keunikan tersendiri yang wajib dikunjungi.
+seoTitle: Mandel Beach | Banggai Wonderland
+seoDescription: Kunjungi dan eksplorasi keindahan Mandel Beach di Banggai.
+image: /images/mandel.jpg
+imageAlt: Mandel Beach view
+location: Banggai Kepulauan
+category: Pantai
 highlights:
-  - "Pemandangan alam yang eksotis"
-  - "Spot foto instagramable"
-  - "Suasana yang tenang dan asri"
+  - Pemandangan alam yang eksotis
+  - Spot foto instagramable
+  - Suasana yang tenang dan asri
 activities:
-  - "Eksplorasi alam"
-  - "Fotografi"
-  - "Relaksasi"
-bestTime: "All year round"
+  - Eksplorasi alam
+  - Fotografi
+  - Relaksasi
+bestTime: All year round
 travelTips:
-  - "Bawa kamera terbaik Anda"
-  - "Gunakan pakaian yang nyaman"
-  - "Jaga kebersihan lingkungan"
+  - Bawa kamera terbaik Anda
+  - Gunakan pakaian yang nyaman
+  - Jaga kebersihan lingkungan
 ---
 
 ## Mandel Beach
