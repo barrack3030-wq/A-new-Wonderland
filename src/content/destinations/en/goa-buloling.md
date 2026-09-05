@@ -1,25 +1,25 @@
 ---
-title: "Goa Buloling"
-description: "Goa Buloling is one of the stunning destinations in Banggai offering breathtaking natural views and unforgettable travel experiences. This place has its own uniqueness that must be visited."
-seoTitle: "Goa Buloling | Banggai Wonderland"
-seoDescription: "Visit and explore the beauty of Goa Buloling di Banggai."
-image: "/images/destinations/goa-buloling.jpg"
-imageAlt: "Goa Buloling view"
-location: "Banggai"
-category: "Cave"
+title: Goa Buloling
+description: Goa Buloling is one of the stunning destinations in Banggai offering breathtaking natural views and unforgettable travel experiences. This place has its own uniqueness that must be visited.
+seoTitle: Goa Buloling | Banggai Wonderland
+seoDescription: Visit and explore the beauty of Goa Buloling di Banggai.
+image: /images/destinations/goa-buloling.jpg
+imageAlt: Goa Buloling view
+location: Banggai
+category: Cave
 highlights:
-  - "Exotic natural scenery"
-  - "Instagrammable photo spots"
-  - "Peaceful and lush atmosphere"
+  - Exotic natural scenery
+  - Instagrammable photo spots
+  - Peaceful and lush atmosphere
 activities:
-  - "Nature exploration"
-  - "Photography"
-  - "Relaxation"
-bestTime: "All year round"
+  - Nature exploration
+  - Photography
+  - Relaxation
+bestTime: All year round
 travelTips:
-  - "Bring your best camera"
-  - "Wear comfortable clothes"
-  - "Keep the environment clean"
+  - Bring your best camera
+  - Wear comfortable clothes
+  - Keep the environment clean
 ---
 
 ## Goa Buloling
