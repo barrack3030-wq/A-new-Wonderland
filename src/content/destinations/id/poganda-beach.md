@@ -1,25 +1,25 @@
 ---
-title: "Poganda Beach"
-description: "Poganda Beach adalah salah satu destinasi menakjubkan di Banggai yang menawarkan pemandangan alam memukau dan pengalaman wisata tak terlupakan. Tempat ini memiliki keunikan tersendiri yang wajib dikunjungi."
-seoTitle: "Poganda Beach | Banggai Wonderland"
-seoDescription: "Kunjungi dan eksplorasi keindahan Poganda Beach di Banggai."
-image: "/images/destinations/poganda-beach.jpg"
-imageAlt: "Poganda Beach view"
-location: "Bulagi Utara, Banggai Kepulauan"
-category: "Pantai"
+title: Poganda Beach
+description: Poganda Beach adalah salah satu destinasi menakjubkan di Banggai yang menawarkan pemandangan alam memukau dan pengalaman wisata tak terlupakan. Tempat ini memiliki keunikan tersendiri yang wajib dikunjungi.
+seoTitle: Poganda Beach | Banggai Wonderland
+seoDescription: Kunjungi dan eksplorasi keindahan Poganda Beach di Banggai.
+image: /images/Poganda-Beach-Banggai-IndonesiaJuara-Trip.webp
+imageAlt: Poganda Beach view
+location: Bulagi Utara, Banggai Kepulauan
+category: Pantai
 highlights:
-  - "Pemandangan alam yang eksotis"
-  - "Spot foto instagramable"
-  - "Suasana yang tenang dan asri"
+  - Pemandangan alam yang eksotis
+  - Spot foto instagramable
+  - Suasana yang tenang dan asri
 activities:
-  - "Eksplorasi alam"
-  - "Fotografi"
-  - "Relaksasi"
-bestTime: "All year round"
+  - Eksplorasi alam
+  - Fotografi
+  - Relaksasi
+bestTime: All year round
 travelTips:
-  - "Bawa kamera terbaik Anda"
-  - "Gunakan pakaian yang nyaman"
-  - "Jaga kebersihan lingkungan"
+  - Bawa kamera terbaik Anda
+  - Gunakan pakaian yang nyaman
+  - Jaga kebersihan lingkungan
 ---
 
 ## Poganda Beach
