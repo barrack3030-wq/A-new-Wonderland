@@ -1,25 +1,25 @@
 ---
-title: "Kawalu Bay"
-description: "Kawalu Bay adalah salah satu destinasi menakjubkan di Banggai yang menawarkan pemandangan alam memukau dan pengalaman wisata tak terlupakan. Tempat ini memiliki keunikan tersendiri yang wajib dikunjungi."
-seoTitle: "Kawalu Bay | Banggai Wonderland"
-seoDescription: "Kunjungi dan eksplorasi keindahan Kawalu Bay di Banggai."
-image: "/images/destinations/kawalu-bay.jpg"
-imageAlt: "Kawalu Bay view"
-location: "Banggai"
-category: "Teluk"
+title: Kawalu Bay
+description: Kawalu Bay adalah salah satu destinasi menakjubkan di Banggai yang menawarkan pemandangan alam memukau dan pengalaman wisata tak terlupakan. Tempat ini memiliki keunikan tersendiri yang wajib dikunjungi.
+seoTitle: Kawalu Bay | Banggai Wonderland
+seoDescription: Kunjungi dan eksplorasi keindahan Kawalu Bay di Banggai.
+image: /images/kawalu.webp
+imageAlt: Kawalu Bay view
+location: Banggai
+category: Teluk
 highlights:
-  - "Pemandangan alam yang eksotis"
-  - "Spot foto instagramable"
-  - "Suasana yang tenang dan asri"
+  - Pemandangan alam yang eksotis
+  - Spot foto instagramable
+  - Suasana yang tenang dan asri
 activities:
-  - "Eksplorasi alam"
-  - "Fotografi"
-  - "Relaksasi"
-bestTime: "All year round"
+  - Eksplorasi alam
+  - Fotografi
+  - Relaksasi
+bestTime: All year round
 travelTips:
-  - "Bawa kamera terbaik Anda"
-  - "Gunakan pakaian yang nyaman"
-  - "Jaga kebersihan lingkungan"
+  - Bawa kamera terbaik Anda
+  - Gunakan pakaian yang nyaman
+  - Jaga kebersihan lingkungan
 ---
 
 ## Kawalu Bay
