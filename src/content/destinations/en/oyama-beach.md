@@ -1,25 +1,25 @@
 ---
-title: "Oyama Beach"
-description: "Oyama Beach is one of the stunning destinations in Banggai offering breathtaking natural views and unforgettable travel experiences. This place has its own uniqueness that must be visited."
-seoTitle: "Oyama Beach | Banggai Wonderland"
-seoDescription: "Visit and explore the beauty of Oyama Beach di Banggai."
-image: "/images/destinations/oyama-beach.jpg"
-imageAlt: "Oyama Beach view"
-location: "Banggai Laut"
-category: "Beach"
+title: Oyama Beach
+description: Oyama Beach is one of the stunning destinations in Banggai offering breathtaking natural views and unforgettable travel experiences. This place has its own uniqueness that must be visited.
+seoTitle: Oyama Beach | Banggai Wonderland
+seoDescription: Visit and explore the beauty of Oyama Beach di Banggai.
+image: /images/destinations/oyama-beach.jpg
+imageAlt: Oyama Beach view
+location: Banggai Laut
+category: Beach
 highlights:
-  - "Exotic natural scenery"
-  - "Instagrammable photo spots"
-  - "Peaceful and lush atmosphere"
+  - Exotic natural scenery
+  - Instagrammable photo spots
+  - Peaceful and lush atmosphere
 activities:
-  - "Nature exploration"
-  - "Photography"
-  - "Relaxation"
-bestTime: "All year round"
+  - Nature exploration
+  - Photography
+  - Relaxation
+bestTime: All year round
 travelTips:
-  - "Bring your best camera"
-  - "Wear comfortable clothes"
-  - "Keep the environment clean"
+  - Bring your best camera
+  - Wear comfortable clothes
+  - Keep the environment clean
 ---
 
 ## Oyama Beach
