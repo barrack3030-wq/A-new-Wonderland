@@ -1,25 +1,25 @@
 ---
-title: "皮亚拉瀑布 (Piala Waterfall)"
-description: "一个令人惊叹的多层瀑布，拥有天然的绿松石色水池，隐藏在邦盖郁郁葱葱的热带雨林中。"
-seoTitle: "邦盖皮亚拉瀑布 | 隐藏的天堂 | 邦盖仙境"
-seoDescription: "参观邦盖的皮亚拉瀑布，享受拥有天然绿松石色水池的层叠瀑布的魅力。立即预订您的旅游套餐。"
-image: "/images/destinations/piala-waterfall.jpg"
-imageAlt: "邦盖皮亚拉瀑布的景色"
-location: "中苏拉威西省邦盖县卢武克"
-category: "瀑布"
+title: 皮亚拉瀑布 (Piala Waterfall)
+description: 一个令人惊叹的多层瀑布，拥有天然的绿松石色水池，隐藏在邦盖郁郁葱葱的热带雨林中。
+seoTitle: 邦盖皮亚拉瀑布 | 隐藏的天堂 | 邦盖仙境
+seoDescription: 参观邦盖的皮亚拉瀑布，享受拥有天然绿松石色水池的层叠瀑布的魅力。立即预订您的旅游套餐。
+image: /images/destinations/piala-waterfall.jpg
+imageAlt: 邦盖皮亚拉瀑布的景色
+location: 中苏拉威西省邦盖县卢武克
+category: 瀑布
 highlights:
-  - "充满异国情调的多层瀑布"
-  - "天然绿松石色游泳池"
-  - "被茂密的热带雨林包围"
+  - 充满异国情调的多层瀑布
+  - 天然绿松石色游泳池
+  - 被茂密的热带雨林包围
 activities:
-  - "游泳"
-  - "自然摄影"
-  - "放松"
-bestTime: "旱季（5月-9月）"
+  - 游泳
+  - 自然摄影
+  - 放松
+bestTime: 旱季（5月-9月）
 travelTips:
-  - "带上换洗衣服和毛巾"
-  - "使用防滑鞋"
-  - "不要乱扔垃圾"
+  - 带上换洗衣服和毛巾
+  - 使用防滑鞋
+  - 不要乱扔垃圾
 ---
 
 ## 皮亚拉瀑布的魅力

@@ -1,25 +1,25 @@
 ---
-title: "Piala Waterfall"
-description: "Air terjun bertingkat yang menakjubkan dengan kolam alami berwarna hijau tosca, tersembunyi di rimbunnya hutan tropis Banggai."
-seoTitle: "Air Terjun Piala Banggai | Surga Tersembunyi | Banggai Wonderland"
-seoDescription: "Kunjungi Air Terjun Piala di Banggai, nikmati pesona air terjun bertingkat dengan kolam tosca alami. Pesan paket wisata Anda sekarang."
-image: "/images/destinations/piala-waterfall.jpg"
-imageAlt: "Pemandangan Air Terjun Piala Banggai"
-location: "Luwuk, Kabupaten Banggai, Sulawesi Tengah"
-category: "Waterfall"
+title: Piala Waterfall
+description: Air terjun bertingkat yang menakjubkan dengan kolam alami berwarna hijau tosca, tersembunyi di rimbunnya hutan tropis Banggai.
+seoTitle: Air Terjun Piala Banggai | Surga Tersembunyi | Banggai Wonderland
+seoDescription: Kunjungi Air Terjun Piala di Banggai, nikmati pesona air terjun bertingkat dengan kolam tosca alami. Pesan paket wisata Anda sekarang.
+image: /images/piala.jpg
+imageAlt: Pemandangan Air Terjun Piala Banggai
+location: Luwuk, Kabupaten Banggai, Sulawesi Tengah
+category: Waterfall
 highlights:
-  - "Air terjun bertingkat yang eksotis"
-  - "Kolam renang alami berwarna hijau tosca"
-  - "Dikelilingi hutan hujan tropis yang asri"
+  - Air terjun bertingkat yang eksotis
+  - Kolam renang alami berwarna hijau tosca
+  - Dikelilingi hutan hujan tropis yang asri
 activities:
-  - "Berenang"
-  - "Fotografi alam"
-  - "Relaksasi"
-bestTime: "Musim kemarau (Mei - September)"
+  - Berenang
+  - Fotografi alam
+  - Relaksasi
+bestTime: Musim kemarau (Mei - September)
 travelTips:
-  - "Bawa pakaian ganti dan handuk"
-  - "Gunakan alas kaki anti selip"
-  - "Jangan membuang sampah sembarangan"
+  - Bawa pakaian ganti dan handuk
+  - Gunakan alas kaki anti selip
+  - Jangan membuang sampah sembarangan
 ---
 
 ## Pesona Air Terjun Piala

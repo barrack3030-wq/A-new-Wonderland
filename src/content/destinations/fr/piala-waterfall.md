@@ -1,25 +1,25 @@
 ---
-title: "Cascade de Piala"
-description: "Une magnifique cascade à plusieurs niveaux avec des piscines naturelles turquoise, cachée dans la luxuriante forêt tropicale de Banggai."
-seoTitle: "Cascade Piala Banggai | Paradis Caché | Banggai Wonderland"
-seoDescription: "Visitez la cascade Piala à Banggai, profitez du charme des cascades avec des piscines naturelles turquoise. Réservez votre voyage dès maintenant."
-image: "/images/destinations/piala-waterfall.jpg"
-imageAlt: "Vue de la cascade de Piala à Banggai"
-location: "Luwuk, Régence de Banggai, Sulawesi Central"
-category: "Cascade"
+title: Cascade de Piala
+description: Une magnifique cascade à plusieurs niveaux avec des piscines naturelles turquoise, cachée dans la luxuriante forêt tropicale de Banggai.
+seoTitle: Cascade Piala Banggai | Paradis Caché | Banggai Wonderland
+seoDescription: Visitez la cascade Piala à Banggai, profitez du charme des cascades avec des piscines naturelles turquoise. Réservez votre voyage dès maintenant.
+image: /images/destinations/piala-waterfall.jpg
+imageAlt: Vue de la cascade de Piala à Banggai
+location: Luwuk, Régence de Banggai, Sulawesi Central
+category: Cascade
 highlights:
-  - "Cascade exotique à plusieurs niveaux"
-  - "Piscines naturelles d'eau turquoise"
-  - "Entouré d'une forêt tropicale luxuriante"
+  - Cascade exotique à plusieurs niveaux
+  - Piscines naturelles d'eau turquoise
+  - Entouré d'une forêt tropicale luxuriante
 activities:
-  - "Natation"
-  - "Photographie de la nature"
-  - "Relaxation"
-bestTime: "Saison sèche (Mai - Septembre)"
+  - Natation
+  - Photographie de la nature
+  - Relaxation
+bestTime: Saison sèche (Mai - Septembre)
 travelTips:
-  - "Apportez des vêtements de rechange et une serviette"
-  - "Utilisez des chaussures antidérapantes"
-  - "Ne jetez pas de déchets"
+  - Apportez des vêtements de rechange et une serviette
+  - Utilisez des chaussures antidérapantes
+  - Ne jetez pas de déchets
 ---
 
 ## Le charme de la cascade de Piala

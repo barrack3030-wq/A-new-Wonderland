@@ -1,25 +1,25 @@
 ---
-title: "Piala Waterfall"
-description: "A stunning multi-tiered waterfall with natural turquoise pools, hidden in the lush tropical forest of Banggai."
-seoTitle: "Piala Waterfall Banggai | Hidden Paradise | Banggai Wonderland"
-seoDescription: "Visit Piala Waterfall in Banggai, enjoy the charm of cascading waterfalls with natural turquoise pools. Book your tour package now."
-image: "/images/destinations/piala-waterfall.jpg"
-imageAlt: "View of Piala Waterfall in Banggai"
-location: "Luwuk, Banggai Regency, Central Sulawesi"
-category: "Waterfall"
+title: Piala Waterfall
+description: A stunning multi-tiered waterfall with natural turquoise pools, hidden in the lush tropical forest of Banggai.
+seoTitle: Piala Waterfall Banggai | Hidden Paradise | Banggai Wonderland
+seoDescription: Visit Piala Waterfall in Banggai, enjoy the charm of cascading waterfalls with natural turquoise pools. Book your tour package now.
+image: /images/destinations/piala-waterfall.jpg
+imageAlt: View of Piala Waterfall in Banggai
+location: Luwuk, Banggai Regency, Central Sulawesi
+category: Waterfall
 highlights:
-  - "Exotic multi-tiered waterfall"
-  - "Natural turquoise swimming pools"
-  - "Surrounded by lush rainforest"
+  - Exotic multi-tiered waterfall
+  - Natural turquoise swimming pools
+  - Surrounded by lush rainforest
 activities:
-  - "Swimming"
-  - "Nature photography"
-  - "Relaxation"
-bestTime: "Dry season (May - September)"
+  - Swimming
+  - Nature photography
+  - Relaxation
+bestTime: Dry season (May - September)
 travelTips:
-  - "Bring a change of clothes and a towel"
-  - "Use non-slip footwear"
-  - "Do not litter"
+  - Bring a change of clothes and a towel
+  - Use non-slip footwear
+  - Do not litter
 ---
 
 ## The Charm of Piala Waterfall

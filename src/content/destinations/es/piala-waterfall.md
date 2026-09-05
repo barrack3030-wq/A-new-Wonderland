@@ -1,25 +1,25 @@
 ---
-title: "Cascadas de Piala"
-description: "Una impresionante cascada de varios niveles con piscinas naturales de color turquesa, escondida en el exuberante bosque tropical de Banggai."
-seoTitle: "Cascada Piala Banggai | Paraíso Escondido | Banggai Wonderland"
-seoDescription: "Visite la cascada Piala en Banggai, disfrute del encanto de las cascadas con piscinas naturales de color turquesa. Reserve su paquete turístico ahora."
-image: "/images/destinations/piala-waterfall.jpg"
-imageAlt: "Vista de la Cascada Piala en Banggai"
-location: "Luwuk, Regencia de Banggai, Célebes Central"
-category: "Cascada"
+title: Cascadas de Piala
+description: Una impresionante cascada de varios niveles con piscinas naturales de color turquesa, escondida en el exuberante bosque tropical de Banggai.
+seoTitle: Cascada Piala Banggai | Paraíso Escondido | Banggai Wonderland
+seoDescription: Visite la cascada Piala en Banggai, disfrute del encanto de las cascadas con piscinas naturales de color turquesa. Reserve su paquete turístico ahora.
+image: /images/destinations/piala-waterfall.jpg
+imageAlt: Vista de la Cascada Piala en Banggai
+location: Luwuk, Regencia de Banggai, Célebes Central
+category: Cascada
 highlights:
-  - "Cascada exótica de varios niveles"
-  - "Piscinas naturales de color turquesa"
-  - "Rodeado de exuberante selva tropical"
+  - Cascada exótica de varios niveles
+  - Piscinas naturales de color turquesa
+  - Rodeado de exuberante selva tropical
 activities:
-  - "Natación"
-  - "Fotografía de naturaleza"
-  - "Relajación"
-bestTime: "Estación seca (Mayo - Septiembre)"
+  - Natación
+  - Fotografía de naturaleza
+  - Relajación
+bestTime: Estación seca (Mayo - Septiembre)
 travelTips:
-  - "Lleva una muda de ropa y una toalla."
-  - "Use calzado antideslizante"
-  - "No tirar basura"
+  - Lleva una muda de ropa y una toalla.
+  - Use calzado antideslizante
+  - No tirar basura
 ---
 
 ## El encanto de la cascada de Piala
