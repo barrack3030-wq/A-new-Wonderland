@@ -1,25 +1,25 @@
 ---
-title: "Bukit Teletubbies"
-description: "Bukit Teletubbies est l'une des destinations magnifiques de Banggai offrant des vues naturelles à couper le souffle et des expériences de voyage inoubliables. Cet endroit a sa propre unicité qui doit être visitée."
-seoTitle: "Bukit Teletubbies | Banggai Wonderland"
-seoDescription: "Visitez et explorez la beauté de Bukit Teletubbies di Banggai."
-image: "/images/destinations/bukit-teletubbies.jpg"
-imageAlt: "Bukit Teletubbies view"
-location: "Luwuk, Banggai"
-category: "Colline"
+title: Bukit Teletubbies
+description: Bukit Teletubbies est l'une des destinations magnifiques de Banggai offrant des vues naturelles à couper le souffle et des expériences de voyage inoubliables. Cet endroit a sa propre unicité qui doit être visitée.
+seoTitle: Bukit Teletubbies | Banggai Wonderland
+seoDescription: Visitez et explorez la beauté de Bukit Teletubbies di Banggai.
+image: /images/destinations/bukit-teletubbies.jpg
+imageAlt: Bukit Teletubbies view
+location: Luwuk, Banggai
+category: Colline
 highlights:
-  - "Paysage naturel exotique"
-  - "Lieux de photos instagrammables"
-  - "Atmosphère paisible et luxuriante"
+  - Paysage naturel exotique
+  - Lieux de photos instagrammables
+  - Atmosphère paisible et luxuriante
 activities:
-  - "Exploration de la nature"
-  - "Photographie"
-  - "Relaxation"
-bestTime: "All year round"
+  - Exploration de la nature
+  - Photographie
+  - Relaxation
+bestTime: All year round
 travelTips:
-  - "Apportez votre meilleur appareil photo"
-  - "Portez des vêtements confortables"
-  - "Gardez l'environnement propre"
+  - Apportez votre meilleur appareil photo
+  - Portez des vêtements confortables
+  - Gardez l'environnement propre
 ---
 
 ## Bukit Teletubbies
