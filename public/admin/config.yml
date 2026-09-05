@@ -1,0 +1,85 @@
+backend:
+  name: github
+  repo: your-username/banggai-wonderland-repo # TODO: Change this to your actual GitHub repo once exported
+  branch: main
+
+# Enable local backend for local development (run 'npx decap-server' locally)
+local_backend: true
+
+media_folder: "public/images"
+public_folder: "/images"
+
+# Configure multilingual support (5 languages)
+i18n:
+  structure: multiple_folders
+  locales: [id, en, es, fr, zh]
+  default_locale: id
+
+collections:
+  - name: "destinations"
+    label: "Destinations"
+    folder: "src/content/destinations"
+    create: true
+    i18n: true
+    slug: "{{slug}}"
+    fields:
+      - {label: "Title", name: "title", widget: "string", i18n: true}
+      - {label: "Description", name: "description", widget: "text", i18n: true}
+      - {label: "SEO Title", name: "seoTitle", widget: "string", required: false, i18n: true}
+      - {label: "SEO Description", name: "seoDescription", widget: "text", required: false, i18n: true}
+      - {label: "Image", name: "image", widget: "image", i18n: true}
+      - {label: "Image Alt", name: "imageAlt", widget: "string", required: false, i18n: true}
+      - {label: "Location", name: "location", widget: "string", i18n: true}
+      - {label: "Category", name: "category", widget: "select", options: ["Beach", "Waterfall", "Island", "Lake", "Hill", "Cave", "Bay", "Culture"], i18n: true}
+      - {label: "Highlights", name: "highlights", widget: "list", required: false, i18n: true}
+      - {label: "Activities", name: "activities", widget: "list", required: false, i18n: true}
+      - {label: "Best Time to Visit", name: "bestTime", widget: "string", required: false, i18n: true}
+      - {label: "Travel Tips", name: "travelTips", widget: "list", required: false, i18n: true}
+      - {label: "Body", name: "body", widget: "markdown", i18n: true}
+
+  - name: "packages"
+    label: "Tour Packages"
+    folder: "src/content/packages"
+    create: true
+    i18n: true
+    slug: "{{slug}}"
+    fields:
+      - {label: "Title", name: "title", widget: "string", i18n: true}
+      - {label: "Description", name: "description", widget: "text", i18n: true}
+      - {label: "SEO Title", name: "seoTitle", widget: "string", required: false, i18n: true}
+      - {label: "SEO Description", name: "seoDescription", widget: "text", required: false, i18n: true}
+      - {label: "Image", name: "image", widget: "image", i18n: true}
+      - {label: "Image Alt", name: "imageAlt", widget: "string", required: false, i18n: true}
+      - {label: "Duration", name: "duration", widget: "string", i18n: true}
+      - {label: "Destination Coverage", name: "destination", widget: "string", i18n: true}
+      - {label: "Activities", name: "activities", widget: "list", required: false, i18n: true}
+      - {label: "Included", name: "included", widget: "list", required: false, i18n: true}
+      - {label: "Excluded", name: "excluded", widget: "list", required: false, i18n: true}
+      - label: "Itinerary"
+        name: "itinerary"
+        widget: "list"
+        required: false
+        i18n: true
+        fields:
+          - {label: "Day", name: "day", widget: "string"}
+          - {label: "Title", name: "title", widget: "string"}
+          - {label: "Description", name: "description", widget: "text"}
+      - {label: "Body Overview", name: "body", widget: "markdown", i18n: true}
+
+  - name: "blog"
+    label: "Blog Posts"
+    folder: "src/content/blog"
+    create: true
+    i18n: true
+    slug: "{{slug}}"
+    fields:
+      - {label: "Title", name: "title", widget: "string", i18n: true}
+      - {label: "Description", name: "description", widget: "text", i18n: true}
+      - {label: "SEO Title", name: "seoTitle", widget: "string", required: false, i18n: true}
+      - {label: "SEO Description", name: "seoDescription", widget: "text", required: false, i18n: true}
+      - {label: "Image", name: "image", widget: "image", i18n: true}
+      - {label: "Image Alt", name: "imageAlt", widget: "string", required: false, i18n: true}
+      - {label: "Author", name: "author", widget: "string", i18n: true}
+      - {label: "Publish Date", name: "pubDate", widget: "datetime", i18n: true}
+      - {label: "Tags", name: "tags", widget: "list", required: false, i18n: true}
+      - {label: "Body", name: "body", widget: "markdown", i18n: true}

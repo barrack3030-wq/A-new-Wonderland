@@ -1,0 +1,120 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import WhatsAppButton from '../../components/WhatsAppButton.astro';
+import DestinationCard from '../../components/DestinationCard.astro';
+import BlogCard from '../../components/BlogCard.astro';
+import { languages, useTranslations } from '../../utils/i18n';
+import { getCollection } from 'astro:content';
+
+export async function getStaticPaths() {
+  return Object.keys(languages).map((lang) => ({
+    params: { lang },
+  }));
+}
+
+const { lang } = Astro.params;
+const t = useTranslations(lang as any);
+
+// Fetch featured destinations (hardcoded 4 best spots)
+const featuredSlugs = ['paisu-pok-lake', 'piala-waterfall', 'oyama-beach', 'pulau-dua-balantak'];
+const allDestinations = await getCollection('destinations');
+const featuredDestinations = featuredSlugs
+  .map(slug => allDestinations.find(d => d.slug === `${lang}/${slug}`))
+  .filter(Boolean);
+
+// Fetch latest blog posts (top 3)
+const allBlogs = await getCollection('blog');
+const latestBlogs = allBlogs
+  .filter(b => b.id.startsWith(`${lang}/`))
+  .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf())
+  .slice(0, 3);
+---
+
+<BaseLayout title="Banggai Wonderland | Discover Hidden Paradise of Banggai">
+  
+  <!-- Hero Section Localized -->
+  <section class="relative pt-32 pb-20 md:pt-48 md:pb-40 overflow-hidden min-h-[85vh] flex flex-col justify-center items-center">
+    <div class="absolute inset-0 z-0">
+      <img src="/images/destinations/paisu-pok-lake-hero.jpg" alt="Danau Paisu Pok" class="w-full h-full object-cover object-center" />
+      <div class="absolute inset-0 bg-ocean-900/70 backdrop-blur-sm"></div>
+      <div class="absolute inset-0 bg-gradient-to-t from-ocean-900 via-ocean-900/50 to-ocean-900/60"></div>
+    </div>
+        
+    <div class="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <span class="inline-block py-1.5 px-5 rounded-full bg-turquoise-500 text-ocean-900 text-sm font-bold tracking-widest mb-6 uppercase shadow-lg">
+        {t('hero.welcome')}
+      </span>
+      <h1 class="text-4xl md:text-6xl lg:text-7xl font-serif font-bold text-white leading-tight mb-6 drop-shadow-2xl">
+        {t('hero.title.1')} <br/><span class="text-turquoise-400 drop-shadow-2xl">{t('hero.title.2')}</span>
+      </h1>
+      <p class="text-lg md:text-xl text-white mb-10 max-w-2xl mx-auto font-sans leading-relaxed drop-shadow-lg font-medium">
+        {t('hero.desc')}
+      </p>
+      <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-6 justify-center">
+        <a href={`/${lang}/destinations/`} class="bg-turquoise-500 text-ocean-900 px-8 py-4 rounded-full font-bold text-base hover:bg-turquoise-400 transition-all duration-300 shadow-lg hover:shadow-turquoise-500/30 hover:-translate-y-1 text-center">
+          {t('btn.explore')}
+        </a>
+        <a href={`/${lang}/packages/`} class="bg-white/10 text-white border border-white/30 px-8 py-4 rounded-full font-bold text-base hover:bg-white/20 transition-all duration-300 backdrop-blur-md hover:-translate-y-1 text-center">
+          {t('btn.view_packages')}
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Featured Destinations Section -->
+  {featuredDestinations.length > 0 && (
+    <section class="py-20 bg-sand-50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+          <h2 class="font-serif text-3xl md:text-5xl font-bold text-ocean-900 mb-4">{t('home.featured.destinations') || 'Featured Destinations'}</h2>
+          <p class="text-lg text-ocean-600 max-w-2xl mx-auto font-medium">
+            {t('home.featured.destinations.desc') || 'Explore the best natural beauties the Banggai archipelago has to offer.'}
+          </p>
+        </div>
+        
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+          {featuredDestinations.map(destination => (
+            <DestinationCard destination={destination} />
+          ))}
+        </div>
+        
+        <div class="mt-12 text-center">
+          <a href={`/${lang}/destinations/`} class="inline-flex items-center text-ocean-800 font-bold hover:text-turquoise-600 transition-colors">
+            {t('btn.explore')}
+            <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
+          </a>
+        </div>
+      </div>
+    </section>
+  )}
+
+  <!-- Latest Blog Posts Section -->
+  {latestBlogs.length > 0 && (
+    <section class="py-20 bg-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+          <h2 class="font-serif text-3xl md:text-5xl font-bold text-ocean-900 mb-4">{t('home.featured.blog') || 'Travel Stories & Guides'}</h2>
+          <p class="text-lg text-ocean-600 max-w-2xl mx-auto font-medium">
+            {t('home.featured.blog.desc') || 'Discover tips and exciting stories for your next adventure.'}
+          </p>
+        </div>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {latestBlogs.map(post => (
+            <BlogCard post={post} />
+          ))}
+        </div>
+        
+        <div class="mt-12 text-center">
+          <a href={`/${lang}/blog/`} class="inline-flex items-center text-ocean-800 font-bold hover:text-turquoise-600 transition-colors">
+            {t('nav.blog')}
+            <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
+          </a>
+        </div>
+      </div>
+    </section>
+  )}
+
+  <WhatsAppButton />
+
+</BaseLayout>

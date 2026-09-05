@@ -1,0 +1,63 @@
+---
+import { getLangFromUrl } from '../utils/i18n';
+
+interface Props {
+  mobile?: boolean;
+}
+
+const { mobile = false } = Astro.props;
+const currentLang = getLangFromUrl(Astro.url);
+
+const languages = [
+  { code: 'id', label: 'ID' },
+  { code: 'en', label: 'EN' },
+  { code: 'es', label: 'ES' },
+  { code: 'fr', label: 'FR' },
+  { code: 'zh', label: '中文' }
+];
+
+const getPath = (newLang: string) => {
+  // e.g. pathname is "/id/destinations/piala-waterfall/"
+  // split => ["", "id", "destinations", "piala-waterfall", ""]
+  const pathParts = Astro.url.pathname.split('/');
+  
+  // Replace the language segment (index 1)
+  if (pathParts.length > 1 && languages.map(l => l.code).includes(pathParts[1])) {
+     pathParts[1] = newLang;
+  } else if (pathParts.length > 1 && pathParts[1] !== '') {
+     // If first segment isn't a known lang but there's a path, just prepend
+     pathParts.splice(1, 0, newLang);
+  } else {
+    // If it's just root "/"
+    pathParts[1] = newLang;
+  }
+  
+  return pathParts.join('/') || '/';
+}
+---
+
+{mobile ? (
+  <div class="flex items-center space-x-2 flex-wrap gap-y-2">
+    {languages.map((lang) => (
+      <a 
+        href={getPath(lang.code)} 
+        class={`px-2 py-1 text-sm font-medium rounded transition-colors ${currentLang === lang.code ? 'bg-sand-200 text-ocean-900' : 'text-ocean-600 hover:bg-sand-100 hover:text-ocean-900'}`}
+        aria-label={`Change language to ${lang.label}`}
+      >
+        {lang.label}
+      </a>
+    ))}
+  </div>
+) : (
+  <div class="flex items-center space-x-1 border-r border-sand-200 pr-6">
+    {languages.map((lang) => (
+      <a 
+        href={getPath(lang.code)} 
+        class={`px-2 py-1 text-xs font-bold rounded transition-colors ${currentLang === lang.code ? 'bg-ocean-50 text-turquoise-600' : 'text-ocean-400 hover:text-ocean-900'}`}
+        aria-label={`Change language to ${lang.label}`}
+      >
+        {lang.label}
+      </a>
+    ))}
+  </div>
+)}

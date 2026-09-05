@@ -1,0 +1,60 @@
+---
+import type { CollectionEntry } from 'astro:content';
+import { getLangFromUrl, useTranslations } from '../utils/i18n';
+
+interface Props {
+  post: CollectionEntry<'blog'>;
+}
+
+const { post } = Astro.props;
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+
+const slugParts = post.slug.split('/');
+const postSlug = slugParts.slice(1).join('/');
+
+const formattedDate = new Intl.DateTimeFormat(lang, {
+  year: 'numeric',
+  month: 'long',
+  day: 'numeric'
+}).format(post.data.pubDate);
+---
+
+<a href={`/${lang}/blog/${postSlug}/`} class="group flex flex-col bg-white rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 border border-sand-200 overflow-hidden h-full">
+  <div class="relative h-56 overflow-hidden">
+    <img 
+      src={post.data.image} 
+      alt={post.data.imageAlt || post.data.title} 
+      class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+      loading="lazy"
+    />
+    <div class="absolute top-4 left-4 flex flex-wrap gap-2">
+      {post.data.tags?.slice(0, 2).map(tag => (
+        <span class="bg-white/90 backdrop-blur-sm text-ocean-900 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wide">
+          {tag}
+        </span>
+      ))}
+    </div>
+  </div>
+  
+  <div class="p-6 flex-grow flex flex-col">
+    <div class="flex items-center text-xs text-ocean-500 mb-3 uppercase tracking-wider font-semibold">
+      <span>{formattedDate}</span>
+      <span class="mx-2">•</span>
+      <span>{post.data.author}</span>
+    </div>
+
+    <h3 class="font-serif text-xl font-bold text-ocean-900 mb-3 group-hover:text-turquoise-600 transition-colors line-clamp-2">
+      {post.data.title}
+    </h3>
+    
+    <p class="text-ocean-600 line-clamp-3 mb-6 flex-grow text-sm">
+      {post.data.description}
+    </p>
+    
+    <div class="mt-auto flex items-center text-turquoise-600 font-bold group-hover:text-turquoise-500 transition-colors text-sm uppercase tracking-wider">
+      {t('blog.read_more')}
+      <svg class="w-4 h-4 ml-2 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
+    </div>
+  </div>
+</a>

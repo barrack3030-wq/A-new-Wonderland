@@ -1,0 +1,17 @@
+---
+// Redirect root URL (/) to default language (/id/) using relative path
+// to prevent absolute URL issues with placeholder 'site' config during deployment.
+---
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Banggai Wonderland</title>
+  <meta http-equiv="refresh" content="0;url=/id/" />
+  <script>window.location.replace("/id/");</script>
+</head>
+<body>
+  <p>Redirecting to <a href="/id/">Banggai Wonderland...</a></p>
+</body>
+</html>
+

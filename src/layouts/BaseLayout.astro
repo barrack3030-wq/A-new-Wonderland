@@ -1,0 +1,62 @@
+---
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import SEO from '../components/SEO.astro';
+import BookingModal from '../components/BookingModal.astro';
+import { getLangFromUrl } from '../utils/i18n';
+
+interface Props {
+  title: string;
+  description?: string;
+  seoTitle?: string;
+  seoDescription?: string;
+  ogImage?: string;
+  imageAlt?: string;
+  schema?: any;
+}
+
+const { 
+  title, 
+  description = "Premium travel agency website for Banggai Wonderland, discovering the hidden paradise of Banggai.",
+  seoTitle,
+  seoDescription,
+  ogImage,
+  imageAlt,
+  schema
+} = Astro.props;
+
+const lang = getLangFromUrl(Astro.url);
+---
+
+<!doctype html>
+<html lang={lang} class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    
+    <SEO 
+      title={title}
+      description={description}
+      seoTitle={seoTitle}
+      seoDescription={seoDescription}
+      ogImage={ogImage}
+      imageAlt={imageAlt}
+      schema={schema}
+    />
+    
+    <!-- Google Fonts: Plus Jakarta Sans & Playfair Display -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
+  </head>
+  <body class="bg-sand-50 text-ocean-900 font-sans antialiased min-h-screen flex flex-col">
+    <Header />
+    <main class="flex-grow">
+      <slot />
+    </main>
+    <Footer />
+    <BookingModal />
+  </body>
+</html>

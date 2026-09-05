@@ -1,0 +1,57 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import PackageCard from '../../../components/PackageCard.astro';
+import WhatsAppButton from '../../../components/WhatsAppButton.astro';
+import Breadcrumb from '../../../components/Breadcrumb.astro';
+import { getCollection } from 'astro:content';
+import { languages, useTranslations } from '../../../utils/i18n';
+
+export function getStaticPaths() {
+  return Object.keys(languages).map((lang) => ({
+    params: { lang },
+  }));
+}
+
+const { lang } = Astro.params;
+const t = useTranslations(lang as any);
+
+const allPackages = await getCollection('packages');
+const packages = allPackages.filter(pkg => pkg.slug.startsWith(`${lang}/`));
+
+const breadcrumbItems = [
+  { name: 'Home', url: `/${lang}/` },
+  { name: t('nav.packages'), url: `/${lang}/packages/` }
+];
+---
+
+<BaseLayout 
+  title={`${t('nav.packages')} | Banggai Wonderland`}
+  description={`Explore our exclusive tour packages in Banggai Wonderland.`}
+>
+  <div class="bg-sand-50 pt-32 pb-20 min-h-screen">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <Breadcrumb items={breadcrumbItems} />
+      
+      <div class="mb-12">
+        <h1 class="font-serif text-4xl md:text-5xl font-bold text-ocean-900 mb-4">{t('nav.packages')}</h1>
+        <p class="text-lg text-ocean-600 max-w-2xl">{t('hero.desc')}</p>
+      </div>
+
+      <div class="space-y-8">
+        {packages.length > 0 ? (
+          packages.map(pkg => (
+            <PackageCard pkg={pkg} />
+          ))
+        ) : (
+          <div class="text-center py-20 bg-white rounded-2xl border border-sand-200">
+            <p class="text-ocean-600">No packages found for this language yet.</p>
+          </div>
+        )}
+      </div>
+      
+    </div>
+  </div>
+
+  <WhatsAppButton />
+</BaseLayout>

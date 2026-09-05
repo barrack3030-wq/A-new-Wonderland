@@ -1,0 +1,145 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Breadcrumb from '../../components/Breadcrumb.astro';
+import WhatsAppButton from '../../components/WhatsAppButton.astro';
+import { languages, useTranslations } from '../../utils/i18n';
+import { getCollection } from 'astro:content';
+
+export async function getStaticPaths() {
+  return Object.keys(languages).map((lang) => ({
+    params: { lang },
+  }));
+}
+
+const { lang } = Astro.params;
+const t = useTranslations(lang as any);
+
+const breadcrumbItems = [
+  { name: 'Home', url: `/${lang}/` },
+  { name: t('nav.gallery'), url: `/${lang}/gallery/` }
+];
+
+// Fetch all destinations for the current language
+const allDestinations = await getCollection('destinations');
+const destinations = allDestinations.filter(d => d.slug.startsWith(`${lang}/`));
+
+// Experience Photos (Curated Unsplash placeholders with beach/tropical vibes)
+const experiences = [
+  {
+    image: "https://images.unsplash.com/photo-1544550581-5f7ceaf7f992?auto=format&fit=crop&q=80&w=800",
+    caption: "Snorkeling in crystal clear waters"
+  },
+  {
+    image: "https://images.unsplash.com/photo-1539367628448-4bc5c9d171c8?auto=format&fit=crop&q=80&w=800",
+    caption: "Island hopping adventures"
+  },
+  {
+    image: "https://images.unsplash.com/photo-1510414842594-a61c69b5ae57?auto=format&fit=crop&q=80&w=800",
+    caption: "Relaxing on white sand beaches"
+  },
+  {
+    image: "https://images.unsplash.com/photo-1499793983690-e29da59ef1c2?auto=format&fit=crop&q=80&w=800",
+    caption: "Sunset boat trips"
+  },
+  {
+    image: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&q=80&w=800",
+    caption: "Pristine coastlines"
+  },
+  {
+    image: "https://images.unsplash.com/photo-1519046904884-53103b34b206?auto=format&fit=crop&q=80&w=800",
+    caption: "Tropical getaways"
+  }
+];
+---
+
+<BaseLayout 
+  title={`${t('nav.gallery')} | Banggai Wonderland`}
+  description={t('gallery.subtitle')}
+>
+  <!-- Hero Section -->
+  <section class="relative h-[40vh] min-h-[300px] flex items-center justify-center pt-20">
+    <div class="absolute inset-0 z-0">
+      <div class="absolute inset-0 bg-gradient-to-r from-ocean-800 to-ocean-600 opacity-90"></div>
+    </div>
+    
+    <div class="relative z-10 text-center px-4">
+      <h1 class="text-4xl md:text-5xl font-serif font-bold text-white mb-4">
+        {t('gallery.title')}
+      </h1>
+      <p class="text-ocean-100 text-lg md:text-xl font-medium tracking-wide">
+        {t('gallery.subtitle')}
+      </p>
+    </div>
+  </section>
+
+  <!-- Gallery Content -->
+  <section class="py-16 md:py-24 bg-sand-50 relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="mb-12">
+        <Breadcrumb items={breadcrumbItems} />
+      </div>
+
+      <!-- Destinations Gallery -->
+      <div class="mb-20">
+        <div class="flex items-center justify-between mb-10">
+          <h2 class="text-3xl font-serif font-bold text-ocean-900 border-l-4 border-turquoise-500 pl-4">
+            {t('gallery.tab.destinations')}
+          </h2>
+        </div>
+        
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+          {destinations.map(dest => (
+            <a href={`/${lang}/destinations/${dest.slug.split('/').slice(1).join('/')}/`} class="group relative aspect-[4/3] rounded-2xl overflow-hidden shadow-md cursor-pointer block">
+              <img 
+                src={dest.data.image} 
+                alt={dest.data.imageAlt || dest.data.title} 
+                class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" 
+                loading="lazy"
+              />
+              <div class="absolute inset-0 bg-gradient-to-t from-ocean-900/80 via-ocean-900/20 to-transparent opacity-80 group-hover:opacity-90 transition-opacity duration-300"></div>
+              <div class="absolute bottom-0 left-0 p-6 w-full transform translate-y-2 group-hover:translate-y-0 transition-transform duration-300">
+                <h3 class="text-white font-serif text-xl font-bold mb-1">{dest.data.title}</h3>
+                <p class="text-turquoise-400 text-sm font-medium flex items-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 delay-100">
+                  <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+                  {dest.data.location}
+                </p>
+              </div>
+            </a>
+          ))}
+        </div>
+      </div>
+
+      <!-- Traveler Experiences Gallery -->
+      <div>
+        <div class="flex items-center justify-between mb-10">
+          <h2 class="text-3xl font-serif font-bold text-ocean-900 border-l-4 border-turquoise-500 pl-4">
+            {t('gallery.tab.experiences')}
+          </h2>
+        </div>
+        
+        <!-- Masonry-style Grid -->
+        <div class="columns-1 sm:columns-2 lg:columns-3 gap-6 space-y-6">
+          {experiences.map(exp => (
+            <div class="break-inside-avoid relative group rounded-2xl overflow-hidden shadow-md">
+              <img 
+                src={exp.image} 
+                alt={exp.caption} 
+                class="w-full h-auto object-cover transition-transform duration-700 group-hover:scale-105" 
+                loading="lazy"
+              />
+              <div class="absolute inset-0 bg-ocean-900/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center p-6 text-center">
+                <p class="text-white font-medium text-lg transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
+                  "{exp.caption}"
+                </p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <WhatsAppButton />
+</BaseLayout>

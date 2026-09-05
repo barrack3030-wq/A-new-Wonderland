@@ -1,0 +1,52 @@
+---
+import type { CollectionEntry } from 'astro:content';
+import { getLangFromUrl, useTranslations } from '../utils/i18n';
+
+interface Props {
+  destination: CollectionEntry<'destinations'>;
+}
+
+const { destination } = Astro.props;
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+
+// Extract the actual slug without the language prefix
+const slugParts = destination.slug.split('/');
+const destinationSlug = slugParts.slice(1).join('/');
+---
+
+<a href={`/${lang}/destinations/${destinationSlug}/`} class="group flex flex-col bg-white rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 border border-sand-200 overflow-hidden h-full">
+  <div class="relative h-64 overflow-hidden">
+    <img 
+      src={destination.data.image} 
+      alt={destination.data.imageAlt || destination.data.title} 
+      class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+      loading="lazy"
+    />
+    <div class="absolute top-4 left-4">
+      <span class="bg-white/90 backdrop-blur-sm text-ocean-900 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wide">
+        {destination.data.category}
+      </span>
+    </div>
+  </div>
+  
+  <div class="p-6 flex-grow flex flex-col">
+    <h3 class="font-serif text-2xl font-bold text-ocean-900 mb-2 group-hover:text-turquoise-600 transition-colors">
+      {destination.data.title}
+    </h3>
+    
+    <div class="flex items-center text-sm text-ocean-500 mb-4">
+      <svg class="w-4 h-4 mr-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+      <span class="truncate">{destination.data.location}</span>
+    </div>
+    
+    <p class="text-ocean-600 line-clamp-3 mb-6 flex-grow">
+      {destination.data.description}
+    </p>
+    
+    <div class="mt-auto flex items-center text-turquoise-600 font-semibold group-hover:text-turquoise-500 transition-colors">
+      {t('btn.explore')}
+      <svg class="w-5 h-5 ml-2 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
+    </div>
+  </div>
+</a>

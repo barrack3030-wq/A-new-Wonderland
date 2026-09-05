@@ -1,0 +1,106 @@
+---
+import { languages } from '../utils/i18n';
+
+interface Props {
+  title: string;
+  description: string;
+  seoTitle?: string;
+  seoDescription?: string;
+  ogImage?: string;
+  imageAlt?: string;
+  schema?: any; // Additional schema.org data
+}
+
+const { 
+  title, 
+  description, 
+  seoTitle, 
+  seoDescription, 
+  ogImage = '/images/og-default.jpg',
+  imageAlt,
+  schema
+} = Astro.props;
+
+const finalTitle = seoTitle || title;
+const finalDescription = seoDescription || description;
+const finalImageAlt = imageAlt || finalTitle;
+
+// Clean up current URL for canonical and hreflang
+const url = new URL(Astro.url.pathname, Astro.site);
+const currentUrl = url.href;
+
+// Generate hreflang links based on current path
+const pathParts = Astro.url.pathname.split('/').filter(Boolean);
+const currentLangCode = pathParts[0] && Object.keys(languages).includes(pathParts[0]) ? pathParts[0] : 'id';
+const pathWithoutLang = pathParts.slice(1).join('/');
+
+const alternateLinks = Object.keys(languages).map(langCode => {
+  const newPath = pathWithoutLang ? `/${langCode}/${pathWithoutLang}/` : `/${langCode}/`;
+  return {
+    lang: langCode,
+    href: new URL(newPath, Astro.site).href
+  };
+});
+
+// Default TravelAgency Schema
+const baseSchema = {
+  "@context": "https://schema.org",
+  "@type": "TravelAgency",
+  "name": "Banggai Wonderland",
+  "image": new URL('/images/logo.jpg', Astro.site || Astro.url.origin).href,
+  "@id": Astro.site ? Astro.site.href : Astro.url.origin,
+  "url": Astro.site ? Astro.site.href : Astro.url.origin,
+  "telephone": "+6285820830530",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Luwuk",
+    "addressLocality": "Banggai",
+    "addressRegion": "Central Sulawesi",
+    "addressCountry": "ID"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": -0.9478,
+    "longitude": 122.7842
+  },
+  "sameAs": [
+    "https://facebook.com/banggaiwonderland",
+    "https://instagram.com/banggaiwonderland"
+  ],
+  "description": "Premium travel agency for exploring the hidden paradise of Banggai."
+};
+
+const finalSchema = schema ? [baseSchema, schema] : baseSchema;
+---
+
+<!-- SEO Meta Tags -->
+<title>{finalTitle}</title>
+<meta name="description" content={finalDescription} />
+
+<!-- Canonical -->
+<link rel="canonical" href={currentUrl} />
+
+<!-- Hreflang Tags for Internationalization -->
+{alternateLinks.map(link => (
+  <link rel="alternate" hreflang={link.lang} href={link.href} />
+))}
+<link rel="alternate" hreflang="x-default" href={new URL(`/id/${pathWithoutLang}`, Astro.site).href} />
+
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content="website" />
+<meta property="og:url" content={currentUrl} />
+<meta property="og:title" content={finalTitle} />
+<meta property="og:description" content={finalDescription} />
+<meta property="og:image" content={new URL(ogImage, Astro.site).href} />
+<meta property="og:image:alt" content={finalImageAlt} />
+<meta property="og:site_name" content="Banggai Wonderland" />
+
+<!-- Twitter -->
+<meta property="twitter:card" content="summary_large_image" />
+<meta property="twitter:url" content={currentUrl} />
+<meta property="twitter:title" content={finalTitle} />
+<meta property="twitter:description" content={finalDescription} />
+<meta property="twitter:image" content={new URL(ogImage, Astro.site).href} />
+
+<!-- Schema.org JSON-LD -->
+<script type="application/ld+json" set:html={JSON.stringify(finalSchema)} />
