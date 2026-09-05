@@ -4,13 +4,15 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Content Manager - Banggai Wonderland</title>
-    <!-- Explicitly set the config path to prevent 404s on Vercel without trailing slash -->
+    <!-- Explicitly set the config path -->
     <link href="/admin/config.yml" type="text/yaml" rel="cms-config-url">
-    <!-- Include the identity widget for Netlify/Decap CMS authentication -->
-    <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
   </head>
   <body>
-    <!-- Include the script that builds the page and powers Decap CMS -->
-    <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
+    <!-- 
+      Using Sveltia CMS instead of Decap CMS. 
+      Sveltia is a 100% compatible drop-in replacement that works natively on Vercel 
+      without requiring a custom OAuth server backend!
+    -->
+    <script src="https://unpkg.com/@sveltia/cms/dist/sveltia-cms.js"></script>
   </body>
 </html>
