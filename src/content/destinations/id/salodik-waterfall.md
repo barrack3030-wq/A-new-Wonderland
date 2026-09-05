@@ -1,25 +1,25 @@
 ---
-title: "Salodik Waterfall"
-description: "Salodik Waterfall adalah salah satu destinasi menakjubkan di Banggai yang menawarkan pemandangan alam memukau dan pengalaman wisata tak terlupakan. Tempat ini memiliki keunikan tersendiri yang wajib dikunjungi."
-seoTitle: "Salodik Waterfall | Banggai Wonderland"
-seoDescription: "Kunjungi dan eksplorasi keindahan Salodik Waterfall di Banggai."
-image: "/images/destinations/salodik-waterfall.jpg"
-imageAlt: "Salodik Waterfall view"
-location: "Luwuk, Banggai"
-category: "Air Terjun"
+title: Salodik Waterfall
+description: Salodik Waterfall adalah salah satu destinasi menakjubkan di Banggai yang menawarkan pemandangan alam memukau dan pengalaman wisata tak terlupakan. Tempat ini memiliki keunikan tersendiri yang wajib dikunjungi.
+seoTitle: Salodik Waterfall | Banggai Wonderland
+seoDescription: Kunjungi dan eksplorasi keindahan Salodik Waterfall di Banggai.
+image: /images/images (3).jpg
+imageAlt: Salodik Waterfall view
+location: Luwuk, Banggai
+category: Air Terjun
 highlights:
-  - "Pemandangan alam yang eksotis"
-  - "Spot foto instagramable"
-  - "Suasana yang tenang dan asri"
+  - Pemandangan alam yang eksotis
+  - Spot foto instagramable
+  - Suasana yang tenang dan asri
 activities:
-  - "Eksplorasi alam"
-  - "Fotografi"
-  - "Relaksasi"
-bestTime: "All year round"
+  - Eksplorasi alam
+  - Fotografi
+  - Relaksasi
+bestTime: All year round
 travelTips:
-  - "Bawa kamera terbaik Anda"
-  - "Gunakan pakaian yang nyaman"
-  - "Jaga kebersihan lingkungan"
+  - Bawa kamera terbaik Anda
+  - Gunakan pakaian yang nyaman
+  - Jaga kebersihan lingkungan
 ---
 
 ## Salodik Waterfall
