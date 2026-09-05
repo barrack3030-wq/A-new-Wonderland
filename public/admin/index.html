@@ -4,6 +4,8 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Content Manager - Banggai Wonderland</title>
+    <!-- Explicitly set the config path to prevent 404s on Vercel without trailing slash -->
+    <link href="/admin/config.yml" type="text/yaml" rel="cms-config-url">
     <!-- Include the identity widget for Netlify/Decap CMS authentication -->
     <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
   </head>

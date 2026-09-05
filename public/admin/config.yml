@@ -1,6 +1,6 @@
 backend:
   name: github
-  repo: your-username/banggai-wonderland-repo # TODO: Change this to your actual GitHub repo once exported
+  repo: barrack3030-wq/A-new-Wonderland
   branch: main
 
 # Enable local backend for local development (run 'npx decap-server' locally)
