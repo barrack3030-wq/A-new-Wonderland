@@ -6,7 +6,7 @@ seoDescription: ''
 image: /images/blog/diving-guide-in-paisu-pok-lake.jpg
 imageAlt: ''
 author: Diving Expert
-pubDate: 2026-10-15T00:00:00Z
+pubDate: 2026-09-06T14:29:00
 tags:
   - Diving
   - Adventure
