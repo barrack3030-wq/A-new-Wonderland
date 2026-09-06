@@ -3,7 +3,7 @@ title: Bukit Teletubbies
 description: Bukit Teletubbies es uno de los destinos impresionantes en Banggai que ofrece vistas naturales impresionantes y experiencias de viaje inolvidables. Este lugar tiene su propia singularidad que debe ser visitada.
 seoTitle: Bukit Teletubbies | Banggai Wonderland
 seoDescription: Visita y explora la belleza de Bukit Teletubbies di Banggai.
-image: /images/destinations/bukit-teletubbies.jpg
+image: /images/bukit teletubis.jpg
 imageAlt: Bukit Teletubbies view
 location: Luwuk, Banggai
 category: Colina
