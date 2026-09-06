@@ -3,7 +3,7 @@ title: 探索皮亚拉瀑布
 description: Discover more about 探索皮亚拉瀑布 in Banggai Wonderland.
 seoTitle: ''
 seoDescription: ''
-image: /images/blog/exploring-piala-waterfall.jpg
+image: /images/piala.jpg
 imageAlt: ''
 author: Nature Lover
 pubDate: 2026-09-06T14:29:00

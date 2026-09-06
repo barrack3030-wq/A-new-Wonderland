@@ -3,7 +3,7 @@ title: Explorando la cascada de Piala
 description: Discover more about Explorando la cascada de Piala in Banggai Wonderland.
 seoTitle: ''
 seoDescription: ''
-image: /images/blog/exploring-piala-waterfall.jpg
+image: /images/piala.jpg
 imageAlt: ''
 author: Nature Lover
 pubDate: 2026-10-15T00:00:00Z
