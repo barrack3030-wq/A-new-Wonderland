@@ -1,32 +1,32 @@
 ---
-title: "Luwuk Stopover"
-description: "Experience the best of Luwuk Stopover with our exclusive tour package."
-seoTitle: "Luwuk Stopover Tour Package | Banggai Wonderland"
-seoDescription: "Book the Luwuk Stopover tour package to explore the hidden paradise of Banggai."
-image: "/images/packages/luwuk-stopover.jpg"
-imageAlt: "Luwuk Stopover"
-duration: "2 Days 1 Night"
-destination: "Luwuk City, Salodik"
+title: Luwuk Stopover
+description: Experience the best of Luwuk Stopover with our exclusive tour package.
+seoTitle: Luwuk Stopover Tour Package | Banggai Wonderland
+seoDescription: Book the Luwuk Stopover tour package to explore the hidden paradise of Banggai.
+image: /images/asasa.jpg
+imageAlt: Luwuk Stopover
+duration: 2 Days 1 Night
+destination: Luwuk City, Salodik
 activities:
-  - "Sightseeing"
-  - "Snorkeling"
-  - "Photography"
+  - Sightseeing
+  - Snorkeling
+  - Photography
 included:
-  - "Accommodation"
-  - "Transportation"
-  - "Meals as per itinerary"
-  - "Local Guide"
+  - Accommodation
+  - Transportation
+  - Meals as per itinerary
+  - Local Guide
 excluded:
-  - "Flights"
-  - "Personal expenses"
-  - "Tipping"
+  - Flights
+  - Personal expenses
+  - Tipping
 itinerary:
-  - day: "Day 1"
-    title: "Arrival"
-    description: "Meet and greet at the airport, transfer to hotel and rest."
-  - day: "Day 2"
-    title: "Explore Destinations"
-    description: "Visit the most iconic spots in Banggai and enjoy nature."
+  - day: Day 1
+    title: Arrival
+    description: Meet and greet at the airport, transfer to hotel and rest.
+  - day: Day 2
+    title: Explore Destinations
+    description: Visit the most iconic spots in Banggai and enjoy nature.
 ---
 
 ## Overview
