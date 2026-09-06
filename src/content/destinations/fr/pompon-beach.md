@@ -3,7 +3,7 @@ title: Pompon Beach
 description: Pompon Beach est l'une des destinations magnifiques de Banggai offrant des vues naturelles à couper le souffle et des expériences de voyage inoubliables. Cet endroit a sa propre unicité qui doit être visitée.
 seoTitle: Pompon Beach | Banggai Wonderland
 seoDescription: Visitez et explorez la beauté de Pompon Beach di Banggai.
-image: /images/destinations/pompon-beach.jpg
+image: /images/images (1).jpg
 imageAlt: Pompon Beach view
 location: Banggai
 category: Plage
