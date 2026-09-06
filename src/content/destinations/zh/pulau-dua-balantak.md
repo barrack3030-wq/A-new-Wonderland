@@ -3,7 +3,7 @@ title: Pulau Dua Balantak
 description: Pulau Dua Balantak 是邦盖令人惊叹的目的地之一，提供壮丽的自然景观和难忘的旅行体验。这个地方有它自己的独特之处，必须去看看。
 seoTitle: Pulau Dua Balantak | Banggai Wonderland
 seoDescription: 参观并探索美丽的 Pulau Dua Balantak di Banggai.
-image: /images/destinations/pulau-dua-balantak.jpg
+image: /images/images (2).jpg
 imageAlt: Pulau Dua Balantak view
 location: Balantak, Banggai
 category: 岛屿
