@@ -3,7 +3,7 @@ title: Teduang Beach
 description: Teduang Beach is one of the stunning destinations in Banggai offering breathtaking natural views and unforgettable travel experiences. This place has its own uniqueness that must be visited.
 seoTitle: Teduang Beach | Banggai Wonderland
 seoDescription: Visit and explore the beauty of Teduang Beach di Banggai.
-image: /images/destinations/teduang-beach.jpg
+image: /images/images (4).jpg
 imageAlt: Teduang Beach view
 location: Banggai
 category: Beach

@@ -3,7 +3,7 @@ title: Teduang Beach
 description: Teduang Beach 是邦盖令人惊叹的目的地之一，提供壮丽的自然景观和难忘的旅行体验。这个地方有它自己的独特之处，必须去看看。
 seoTitle: Teduang Beach | Banggai Wonderland
 seoDescription: 参观并探索美丽的 Teduang Beach di Banggai.
-image: /images/destinations/teduang-beach.jpg
+image: /images/images (4).jpg
 imageAlt: Teduang Beach view
 location: Banggai
 category: 海滩
