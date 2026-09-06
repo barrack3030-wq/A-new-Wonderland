@@ -1,32 +1,32 @@
 ---
-title: "Ultimate Banggai"
-description: "Experience the best of Ultimate Banggai with our exclusive tour package."
-seoTitle: "Ultimate Banggai Tour Package | Banggai Wonderland"
-seoDescription: "Book the Ultimate Banggai tour package to explore the hidden paradise of Banggai."
-image: "/images/packages/ultimate-banggai.jpg"
-imageAlt: "Ultimate Banggai"
-duration: "6 Days 5 Nights"
-destination: "All Banggai Islands, Sombori"
+title: Ultimate Banggai
+description: Experience the best of Ultimate Banggai with our exclusive tour package.
+seoTitle: Ultimate Banggai Tour Package | Banggai Wonderland
+seoDescription: Book the Ultimate Banggai tour package to explore the hidden paradise of Banggai.
+image: /images/Gemini_Generated_Image_xxtet3xxtet3xxte (4).jpg
+imageAlt: Ultimate Banggai
+duration: 6 Days 5 Nights
+destination: All Banggai Islands, Sombori
 activities:
-  - "Sightseeing"
-  - "Snorkeling"
-  - "Photography"
+  - Sightseeing
+  - Snorkeling
+  - Photography
 included:
-  - "Accommodation"
-  - "Transportation"
-  - "Meals as per itinerary"
-  - "Local Guide"
+  - Accommodation
+  - Transportation
+  - Meals as per itinerary
+  - Local Guide
 excluded:
-  - "Flights"
-  - "Personal expenses"
-  - "Tipping"
+  - Flights
+  - Personal expenses
+  - Tipping
 itinerary:
-  - day: "Day 1"
-    title: "Arrival"
-    description: "Meet and greet at the airport, transfer to hotel and rest."
-  - day: "Day 2"
-    title: "Explore Destinations"
-    description: "Visit the most iconic spots in Banggai and enjoy nature."
+  - day: Day 1
+    title: Arrival
+    description: Meet and greet at the airport, transfer to hotel and rest.
+  - day: Day 2
+    title: Explore Destinations
+    description: Visit the most iconic spots in Banggai and enjoy nature.
 ---
 
 ## Overview
