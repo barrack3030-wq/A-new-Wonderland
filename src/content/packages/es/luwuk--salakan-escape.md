@@ -1,32 +1,32 @@
 ---
-title: "Luwuk & Salakan Escape"
-description: "Experience the best of Luwuk & Salakan Escape with our exclusive tour package."
-seoTitle: "Luwuk & Salakan Escape Tour Package | Banggai Wonderland"
-seoDescription: "Book the Luwuk & Salakan Escape tour package to explore the hidden paradise of Banggai."
-image: "/images/packages/luwuk--salakan-escape.jpg"
-imageAlt: "Luwuk & Salakan Escape"
-duration: "3 Days 2 Nights"
-destination: "Luwuk, Salakan"
+title: Luwuk & Salakan Escape
+description: Experience the best of Luwuk & Salakan Escape with our exclusive tour package.
+seoTitle: Luwuk & Salakan Escape Tour Package | Banggai Wonderland
+seoDescription: Book the Luwuk & Salakan Escape tour package to explore the hidden paradise of Banggai.
+image: /images/Gemini_Generated_Image_gw3tx9gw3tx9gw3t.jpg
+imageAlt: Luwuk & Salakan Escape
+duration: 3 Days 2 Nights
+destination: Luwuk, Salakan
 activities:
-  - "Sightseeing"
-  - "Snorkeling"
-  - "Photography"
+  - Sightseeing
+  - Snorkeling
+  - Photography
 included:
-  - "Accommodation"
-  - "Transportation"
-  - "Meals as per itinerary"
-  - "Local Guide"
+  - Accommodation
+  - Transportation
+  - Meals as per itinerary
+  - Local Guide
 excluded:
-  - "Flights"
-  - "Personal expenses"
-  - "Tipping"
+  - Flights
+  - Personal expenses
+  - Tipping
 itinerary:
-  - day: "Day 1"
-    title: "Arrival"
-    description: "Meet and greet at the airport, transfer to hotel and rest."
-  - day: "Day 2"
-    title: "Explore Destinations"
-    description: "Visit the most iconic spots in Banggai and enjoy nature."
+  - day: Day 1
+    title: Arrival
+    description: Meet and greet at the airport, transfer to hotel and rest.
+  - day: Day 2
+    title: Explore Destinations
+    description: Visit the most iconic spots in Banggai and enjoy nature.
 ---
 
 ## Overview
