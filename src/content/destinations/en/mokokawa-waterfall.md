@@ -3,7 +3,7 @@ title: Mokokawa Waterfall
 description: Mokokawa Waterfall is one of the stunning destinations in Banggai offering breathtaking natural views and unforgettable travel experiences. This place has its own uniqueness that must be visited.
 seoTitle: Mokokawa Waterfall | Banggai Wonderland
 seoDescription: Visit and explore the beauty of Mokokawa Waterfall di Banggai.
-image: /images/destinations/mokokawa-waterfall.jpg
+image: /images/Air-Terjun-Mukokawa-Source-Instagram-@kulturdomestik.webp
 imageAlt: Mokokawa Waterfall view
 location: Banggai
 category: Waterfall
