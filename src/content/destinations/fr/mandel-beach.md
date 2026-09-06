@@ -3,7 +3,7 @@ title: Mandel Beach
 description: Mandel Beach est l'une des destinations magnifiques de Banggai offrant des vues naturelles à couper le souffle et des expériences de voyage inoubliables. Cet endroit a sa propre unicité qui doit être visitée.
 seoTitle: Mandel Beach | Banggai Wonderland
 seoDescription: Visitez et explorez la beauté de Mandel Beach di Banggai.
-image: /images/destinations/mandel-beach.jpg
+image: /images/mandel.jpg
 imageAlt: Mandel Beach view
 location: Banggai Kepulauan
 category: Plage
