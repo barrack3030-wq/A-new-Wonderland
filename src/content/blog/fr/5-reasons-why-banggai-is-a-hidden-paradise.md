@@ -3,10 +3,10 @@ title: 5 Raisons pour lesquelles Banggai est un Paradis Caché
 description: Discover more about 5 Raisons pour lesquelles Banggai est un Paradis Caché in Banggai Wonderland.
 seoTitle: ''
 seoDescription: ''
-image: /images/blog/5-reasons-why-banggai-is-a-hidden-paradise.jpg
+image: /images/DSCF7073-5.webp
 imageAlt: ''
 author: Banggai Explorer
-pubDate: 2026-10-15T00:00:00Z
+pubDate: 2026-09-06T16:05:00
 tags:
   - Nature
   - Travel Tips

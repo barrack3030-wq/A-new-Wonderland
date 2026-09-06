@@ -3,10 +3,10 @@ title: 邦盖是隐藏天堂的5个原因
 description: Discover more about 邦盖是隐藏天堂的5个原因 in Banggai Wonderland.
 seoTitle: ''
 seoDescription: ''
-image: /images/blog/5-reasons-why-banggai-is-a-hidden-paradise.jpg
+image: /images/DSCF7073-5.webp
 imageAlt: ''
 author: Banggai Explorer
-pubDate: 2026-09-06T14:29:00
+pubDate: 2026-09-06T16:05:00
 tags:
   - Nature
   - Travel Tips
