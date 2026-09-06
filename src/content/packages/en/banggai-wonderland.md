@@ -1,32 +1,32 @@
 ---
-title: "Banggai Wonderland"
-description: "Experience the best of Banggai Wonderland with our exclusive tour package."
-seoTitle: "Banggai Wonderland Tour Package | Banggai Wonderland"
-seoDescription: "Book the Banggai Wonderland tour package to explore the hidden paradise of Banggai."
-image: "/images/packages/banggai-wonderland.jpg"
-imageAlt: "Banggai Wonderland"
-duration: "4 Days 3 Nights"
-destination: "Paisu Pok, Peleng, Luwuk"
+title: Banggai Wonderland
+description: Experience the best of Banggai Wonderland with our exclusive tour package.
+seoTitle: Banggai Wonderland Tour Package | Banggai Wonderland
+seoDescription: Book the Banggai Wonderland tour package to explore the hidden paradise of Banggai.
+image: /images/Gemini_Generated_Image_kjky3nkjky3nkjky.jpg
+imageAlt: Banggai Wonderland
+duration: 4 Days 3 Nights
+destination: Paisu Pok, Peleng, Luwuk
 activities:
-  - "Sightseeing"
-  - "Snorkeling"
-  - "Photography"
+  - Sightseeing
+  - Snorkeling
+  - Photography
 included:
-  - "Accommodation"
-  - "Transportation"
-  - "Meals as per itinerary"
-  - "Local Guide"
+  - Accommodation
+  - Transportation
+  - Meals as per itinerary
+  - Local Guide
 excluded:
-  - "Flights"
-  - "Personal expenses"
-  - "Tipping"
+  - Flights
+  - Personal expenses
+  - Tipping
 itinerary:
-  - day: "Day 1"
-    title: "Arrival"
-    description: "Meet and greet at the airport, transfer to hotel and rest."
-  - day: "Day 2"
-    title: "Explore Destinations"
-    description: "Visit the most iconic spots in Banggai and enjoy nature."
+  - day: Day 1
+    title: Arrival
+    description: Meet and greet at the airport, transfer to hotel and rest.
+  - day: Day 2
+    title: Explore Destinations
+    description: Visit the most iconic spots in Banggai and enjoy nature.
 ---
 
 ## Overview
