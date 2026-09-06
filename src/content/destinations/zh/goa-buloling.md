@@ -3,7 +3,7 @@ title: Goa Buloling
 description: Goa Buloling 是邦盖令人惊叹的目的地之一，提供壮丽的自然景观和难忘的旅行体验。这个地方有它自己的独特之处，必须去看看。
 seoTitle: Goa Buloling | Banggai Wonderland
 seoDescription: 参观并探索美丽的 Goa Buloling di Banggai.
-image: /images/destinations/goa-buloling.jpg
+image: /images/buloling_3.webp
 imageAlt: Goa Buloling view
 location: Banggai
 category: 洞穴
