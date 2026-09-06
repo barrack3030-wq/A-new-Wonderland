@@ -3,7 +3,7 @@ title: Paisu Pok湖潜水指南
 description: Discover more about Paisu Pok湖潜水指南 in Banggai Wonderland.
 seoTitle: ''
 seoDescription: ''
-image: /images/blog/diving-guide-in-paisu-pok-lake.jpg
+image: /images/DSCF7073-5.webp
 imageAlt: ''
 author: Diving Expert
 pubDate: 2026-09-06T14:29:00
