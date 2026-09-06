@@ -3,7 +3,7 @@ title: Salodik Waterfall
 description: Salodik Waterfall is one of the stunning destinations in Banggai offering breathtaking natural views and unforgettable travel experiences. This place has its own uniqueness that must be visited.
 seoTitle: Salodik Waterfall | Banggai Wonderland
 seoDescription: Visit and explore the beauty of Salodik Waterfall di Banggai.
-image: /images/destinations/salodik-waterfall.jpg
+image: /images/images (3).jpg
 imageAlt: Salodik Waterfall view
 location: Luwuk, Banggai
 category: Waterfall
