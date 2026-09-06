@@ -6,7 +6,7 @@ seoDescription: ''
 image: /images/blog/exploring-piala-waterfall.jpg
 imageAlt: ''
 author: Nature Lover
-pubDate: 2026-10-15T00:00:00Z
+pubDate: 2026-09-06T14:29:00
 tags:
   - Waterfall
   - Trekking
