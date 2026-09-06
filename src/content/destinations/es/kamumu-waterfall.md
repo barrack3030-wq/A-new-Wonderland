@@ -3,7 +3,7 @@ title: Kamumu Waterfall
 description: Kamumu Waterfall es uno de los destinos impresionantes en Banggai que ofrece vistas naturales impresionantes y experiencias de viaje inolvidables. Este lugar tiene su propia singularidad que debe ser visitada.
 seoTitle: Kamumu Waterfall | Banggai Wonderland
 seoDescription: Visita y explora la belleza de Kamumu Waterfall di Banggai.
-image: /images/destinations/kamumu-waterfall.jpg
+image: /images/kamumuu.jpg
 imageAlt: Kamumu Waterfall view
 location: Luwuk, Banggai
 category: Cascada
