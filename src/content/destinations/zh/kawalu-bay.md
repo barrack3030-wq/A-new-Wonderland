@@ -3,7 +3,7 @@ title: Kawalu Bay
 description: Kawalu Bay 是邦盖令人惊叹的目的地之一，提供壮丽的自然景观和难忘的旅行体验。这个地方有它自己的独特之处，必须去看看。
 seoTitle: Kawalu Bay | Banggai Wonderland
 seoDescription: 参观并探索美丽的 Kawalu Bay di Banggai.
-image: /images/destinations/kawalu-bay.jpg
+image: /images/kawalu.webp
 imageAlt: Kawalu Bay view
 location: Banggai
 category: 海湾
