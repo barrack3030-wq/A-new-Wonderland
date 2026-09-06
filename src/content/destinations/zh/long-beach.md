@@ -3,7 +3,7 @@ title: Long Beach
 description: Long Beach 是邦盖令人惊叹的目的地之一，提供壮丽的自然景观和难忘的旅行体验。这个地方有它自己的独特之处，必须去看看。
 seoTitle: Long Beach | Banggai Wonderland
 seoDescription: 参观并探索美丽的 Long Beach di Banggai.
-image: /images/destinations/long-beach.jpg
+image: /images/long b.jpg
 imageAlt: Long Beach view
 location: Banggai Laut
 category: 海滩
