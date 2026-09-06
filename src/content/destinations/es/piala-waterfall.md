@@ -3,7 +3,7 @@ title: Cascadas de Piala
 description: Una impresionante cascada de varios niveles con piscinas naturales de color turquesa, escondida en el exuberante bosque tropical de Banggai.
 seoTitle: Cascada Piala Banggai | Paraíso Escondido | Banggai Wonderland
 seoDescription: Visite la cascada Piala en Banggai, disfrute del encanto de las cascadas con piscinas naturales de color turquesa. Reserve su paquete turístico ahora.
-image: /images/destinations/piala-waterfall.jpg
+image: /images/piala.jpg
 imageAlt: Vista de la Cascada Piala en Banggai
 location: Luwuk, Regencia de Banggai, Célebes Central
 category: Cascada

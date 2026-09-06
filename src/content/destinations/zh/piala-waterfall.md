@@ -3,7 +3,7 @@ title: 皮亚拉瀑布 (Piala Waterfall)
 description: 一个令人惊叹的多层瀑布，拥有天然的绿松石色水池，隐藏在邦盖郁郁葱葱的热带雨林中。
 seoTitle: 邦盖皮亚拉瀑布 | 隐藏的天堂 | 邦盖仙境
 seoDescription: 参观邦盖的皮亚拉瀑布，享受拥有天然绿松石色水池的层叠瀑布的魅力。立即预订您的旅游套餐。
-image: /images/destinations/piala-waterfall.jpg
+image: /images/piala.jpg
 imageAlt: 邦盖皮亚拉瀑布的景色
 location: 中苏拉威西省邦盖县卢武克
 category: 瀑布
