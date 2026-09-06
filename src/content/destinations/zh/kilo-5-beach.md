@@ -3,7 +3,7 @@ title: Kilo 5 Beach
 description: Kilo 5 Beach 是邦盖令人惊叹的目的地之一，提供壮丽的自然景观和难忘的旅行体验。这个地方有它自己的独特之处，必须去看看。
 seoTitle: Kilo 5 Beach | Banggai Wonderland
 seoDescription: 参观并探索美丽的 Kilo 5 Beach di Banggai.
-image: /images/destinations/kilo-5-beach.jpg
+image: /images/Pantai-Kilo-5-1.webp
 imageAlt: Kilo 5 Beach view
 location: Luwuk, Banggai
 category: 海滩
