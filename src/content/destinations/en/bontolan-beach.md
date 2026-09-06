@@ -3,7 +3,7 @@ title: Bontolan Beach
 description: Bontolan Beach is one of the stunning destinations in Banggai offering breathtaking natural views and unforgettable travel experiences. This place has its own uniqueness that must be visited.
 seoTitle: Bontolan Beach | Banggai Wonderland
 seoDescription: Visit and explore the beauty of Bontolan Beach di Banggai.
-image: /images/destinations/bontolan-beach.jpg
+image: /images/bontolan.jpg
 imageAlt: Bontolan Beach view
 location: Banggai
 category: Beach
