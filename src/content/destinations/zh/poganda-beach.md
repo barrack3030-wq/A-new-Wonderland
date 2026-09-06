@@ -3,7 +3,7 @@ title: Poganda Beach
 description: Poganda Beach 是邦盖令人惊叹的目的地之一，提供壮丽的自然景观和难忘的旅行体验。这个地方有它自己的独特之处，必须去看看。
 seoTitle: Poganda Beach | Banggai Wonderland
 seoDescription: 参观并探索美丽的 Poganda Beach di Banggai.
-image: /images/destinations/poganda-beach.jpg
+image: /images/Poganda-Beach-Banggai-IndonesiaJuara-Trip.webp
 imageAlt: Poganda Beach view
 location: Bulagi Utara, Banggai Kepulauan
 category: 海滩

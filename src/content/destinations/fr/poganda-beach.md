@@ -3,7 +3,7 @@ title: Poganda Beach
 description: Poganda Beach est l'une des destinations magnifiques de Banggai offrant des vues naturelles à couper le souffle et des expériences de voyage inoubliables. Cet endroit a sa propre unicité qui doit être visitée.
 seoTitle: Poganda Beach | Banggai Wonderland
 seoDescription: Visitez et explorez la beauté de Poganda Beach di Banggai.
-image: /images/destinations/poganda-beach.jpg
+image: /images/Poganda-Beach-Banggai-IndonesiaJuara-Trip.webp
 imageAlt: Poganda Beach view
 location: Bulagi Utara, Banggai Kepulauan
 category: Plage
