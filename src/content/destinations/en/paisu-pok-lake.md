@@ -3,7 +3,7 @@ title: Paisu Pok Lake
 description: Paisu Pok Lake is one of the stunning destinations in Banggai offering breathtaking natural views and unforgettable travel experiences. This place has its own uniqueness that must be visited.
 seoTitle: Paisu Pok Lake | Banggai Wonderland
 seoDescription: Visit and explore the beauty of Paisu Pok Lake di Banggai.
-image: /images/destinations/paisu-pok-lake.jpg
+image: /images/DSCF7073-5.webp
 imageAlt: Paisu Pok Lake view
 location: Luk Panenteng, Bulagi Utara, Banggai Kepulauan
 category: Lake
