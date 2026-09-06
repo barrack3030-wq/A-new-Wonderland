@@ -3,7 +3,7 @@ title: Banggai Wonderland
 description: Experience the best of Banggai Wonderland with our exclusive tour package.
 seoTitle: Banggai Wonderland Tour Package | Banggai Wonderland
 seoDescription: Book the Banggai Wonderland tour package to explore the hidden paradise of Banggai.
-image: /images/Gemini_Generated_Image_xxtet3xxtet3xxte (3).webp
+image: /images/wonder.jpg
 imageAlt: Banggai Wonderland
 duration: 4 Days 3 Nights
 destination: Paisu Pok, Peleng, Luwuk
