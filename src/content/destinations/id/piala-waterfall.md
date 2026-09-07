@@ -7,6 +7,7 @@ image: /images/piala.jpg
 imageAlt: Pemandangan Air Terjun Piala Banggai
 location: Luwuk, Kabupaten Banggai, Sulawesi Tengah
 category: Waterfall
+youtube: "https://www.youtube.com/watch?v=7_fiYirWPRc&t=18s"
 highlights:
   - Air terjun bertingkat yang eksotis
   - Kolam renang alami berwarna hijau tosca
