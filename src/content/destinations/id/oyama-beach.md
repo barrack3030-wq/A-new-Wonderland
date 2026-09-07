@@ -7,6 +7,7 @@ image: /images/698024319f723539c41d303baa496f2e.jpg
 imageAlt: Oyama Beach view
 location: Banggai Laut
 category: Pantai
+youtube: "https://www.youtube.com/watch?v=zcwUg-FHlcw"
 highlights:
   - Pemandangan alam yang eksotis
   - Spot foto instagramable
