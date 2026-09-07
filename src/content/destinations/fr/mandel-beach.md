@@ -20,6 +20,7 @@ travelTips:
   - Apportez votre meilleur appareil photo
   - Portez des vêtements confortables
   - Gardez l'environnement propre
+youtube: "https://www.youtube.com/watch?v=K2x5f2y1Hos"
 ---
 
 ## Mandel Beach
