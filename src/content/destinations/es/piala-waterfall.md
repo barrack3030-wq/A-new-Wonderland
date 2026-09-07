@@ -20,6 +20,7 @@ travelTips:
   - Lleva una muda de ropa y una toalla.
   - Use calzado antideslizante
   - No tirar basura
+youtube: "https://www.youtube.com/watch?v=7_fiYirWPRc&t=18s"
 ---
 
 ## El encanto de la cascada de Piala
