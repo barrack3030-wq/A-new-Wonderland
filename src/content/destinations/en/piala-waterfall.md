@@ -20,6 +20,7 @@ travelTips:
   - Bring a change of clothes and a towel
   - Use non-slip footwear
   - Do not litter
+youtube: "https://www.youtube.com/watch?v=7_fiYirWPRc&t=18s"
 ---
 
 ## The Charm of Piala Waterfall
