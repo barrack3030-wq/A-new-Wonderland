@@ -7,6 +7,7 @@ image: /images/Air-Terjun-Mukokawa-Source-Instagram-@kulturdomestik.webp
 imageAlt: Mokokawa Waterfall view
 location: Banggai
 category: Air Terjun
+youtube: "https://www.youtube.com/watch?v=Cly7QK6hYO0"
 highlights:
   - Pemandangan alam yang eksotis
   - Spot foto instagramable
