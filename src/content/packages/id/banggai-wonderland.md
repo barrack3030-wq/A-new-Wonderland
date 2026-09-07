@@ -23,10 +23,45 @@ excluded:
 itinerary:
   - day: Day 1
     title: Arrival
-    description: Meet and greet at the airport, transfer to hotel and rest.
+    description: |-
+      Arrival at Luwuk Airport
+      Airport pickup and welcome
+      Transfer to the port
+      Ferry/boat to Salakan/Peleng
+      Hotel check-in
+      Sunset and free time
+      Dinner and overnight
   - day: Day 2
-    title: Explore Destinations
-    description: Visit the most iconic spots in Banggai and enjoy nature.
+    title: Explore Destinations Crystal Lakes & Hidden Beaches
+    description: |-
+      Breakfast
+      Visit Paisu Pok Lake
+      Swimming and relaxation
+      Visit Paisubatango Lake
+      Local village experience
+      Poganda Beach
+      Mandel Beach
+      Sunset photography
+      Return to accommodation
+  - day: Day 3
+    title: Island & Underwater Adventure
+    description: |-
+      Breakfast
+      Island-hopping by local boat
+      Explore hidden beaches and islands
+      Snorkeling and swimming
+      Relaxation and photography
+      Return to accommodation
+  - day: Day 4
+    title: Day 4 — Peleng to Luwuk
+    description: |-
+      Breakfast and check-out
+      Morning exploration, depending on schedule
+      Transfer to the port
+      Ferry/boat to Luwuk
+      Coastal sightseeing if time permits
+      Airport transfer
+      End of
 ---
 
 ## Overview
