@@ -7,6 +7,7 @@ image: /images/Poganda-Beach-Banggai-IndonesiaJuara-Trip.webp
 imageAlt: Poganda Beach view
 location: Bulagi Utara, Banggai Kepulauan
 category: Pantai
+youtube: "https://www.youtube.com/watch?v=TsAT26i-QZE"
 highlights:
   - Pemandangan alam yang eksotis
   - Spot foto instagramable
