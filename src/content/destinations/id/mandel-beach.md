@@ -7,6 +7,7 @@ image: /images/mandel.jpg
 imageAlt: Mandel Beach view
 location: Banggai Kepulauan
 category: Pantai
+youtube: "https://www.youtube.com/watch?v=K2x5f2y1Hos"
 highlights:
   - Pemandangan alam yang eksotis
   - Spot foto instagramable
