@@ -7,6 +7,7 @@ image: /images/paisu.jpg
 imageAlt: Paisu Batango Lake view
 location: Banggai Kepulauan
 category: Danau
+youtube: "https://www.youtube.com/watch?v=7RTzL8yKLM4"
 highlights:
   - Pemandangan alam yang eksotis
   - Spot foto instagramable
