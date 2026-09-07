@@ -20,6 +20,7 @@ travelTips:
   - Bring your best camera
   - Wear comfortable clothes
   - Keep the environment clean
+youtube: "https://www.youtube.com/watch?v=Cly7QK6hYO0"
 ---
 
 ## Mokokawa Waterfall
