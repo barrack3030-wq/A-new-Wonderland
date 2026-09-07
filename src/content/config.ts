@@ -11,6 +11,7 @@ const destinationsCollection = defineCollection({
     imageAlt: z.string().optional(),
     location: z.string(),
     category: z.string(),
+    youtube: z.string().url().optional(),
     highlights: z.array(z.string()).optional(),
     activities: z.array(z.string()).optional(),
     bestTime: z.string().optional(),
