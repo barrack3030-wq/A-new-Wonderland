@@ -7,6 +7,7 @@ image: /images/DSCF7073-5.webp
 imageAlt: Paisu Pok Lake view
 location: Luk Panenteng, Bulagi Utara, Banggai Kepulauan
 category: Danau
+youtube: "https://www.youtube.com/watch?v=2vtdbJRPZMw"
 highlights:
   - Pemandangan alam yang eksotis
   - Spot foto instagramable
