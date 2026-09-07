@@ -20,6 +20,7 @@ travelTips:
   - Bring your best camera
   - Wear comfortable clothes
   - Keep the environment clean
+youtube: "https://www.youtube.com/watch?v=uunpYvkY0RA"
 ---
 
 ## Kilo 5 Beach
