@@ -20,6 +20,7 @@ travelTips:
   - Trae tu mejor cámara
   - Usa ropa cómoda
   - Mantén el ambiente limpio
+youtube: "https://www.youtube.com/watch?v=3HTD8j1C_Vk"
 ---
 
 ## Pompon Beach
