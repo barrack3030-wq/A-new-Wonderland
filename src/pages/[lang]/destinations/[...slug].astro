@@ -26,7 +26,13 @@ const t = useTranslations(lang as any);
 const { Content } = await entry.render();
 
 const accessText = getAccessInfo(Astro.params.slug as string, lang as string);
+const youtubeUrl = entry.data.youtube;
 
+const youtubeId = youtubeUrl
+  ? youtubeUrl.match(
+      /(?:youtube\.com\/watch\?v=|youtu\.be\/|youtube\.com\/embed\/)([^&?/]+)/
+    )?.[1]
+  : null;
 const breadcrumbItems = [
   { name: 'Home', url: `/${lang}/` },
   { name: t('nav.destinations'), url: `/${lang}/destinations/` },
@@ -91,8 +97,34 @@ const schema = {
             prose-p:text-ocean-700 prose-p:leading-relaxed
             prose-a:text-turquoise-600 hover:prose-a:text-turquoise-500
             prose-img:rounded-2xl prose-img:shadow-md">
+                   <div class="prose prose-lg prose-ocean max-w-none 
+            prose-headings:font-serif prose-headings:text-ocean-900 
+            prose-p:text-ocean-700 prose-p:leading-relaxed
+            prose-a:text-turquoise-600 hover:prose-a:text-turquoise-500
+            prose-img:rounded-2xl prose-img:shadow-md">
             <Content />
           </div>
+
+          {youtubeId && (
+            <section class="mt-12">
+              <h2 class="font-serif text-3xl font-bold text-ocean-900 mb-6">
+                Watch Video
+              </h2>
+
+              <div class="relative aspect-video overflow-hidden rounded-2xl shadow-lg bg-ocean-900">
+                <iframe
+                  src={`https://www.youtube.com/embed/${youtubeId}?rel=0`}
+                  title={`${entry.data.title} video`}
+                  loading="lazy"
+                  class="absolute inset-0 w-full h-full"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  allowfullscreen
+                ></iframe>
+              </div>
+            </section>
+          )}
+          </div>
+
         </div>
         
         <!-- Sidebar -->
