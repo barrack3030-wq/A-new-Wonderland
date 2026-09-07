@@ -7,6 +7,7 @@ image: /images/images (3).jpg
 imageAlt: Salodik Waterfall view
 location: Luwuk, Banggai
 category: Air Terjun
+youtube: "https://www.youtube.com/watch?v=e7ujyJ5RiCA"
 highlights:
   - Pemandangan alam yang eksotis
   - Spot foto instagramable
