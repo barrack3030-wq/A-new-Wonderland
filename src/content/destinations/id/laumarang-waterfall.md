@@ -7,6 +7,7 @@ image: /images/images.jpg
 imageAlt: Laumarang Waterfall view
 location: Luwuk, Banggai
 category: Air Terjun
+youtube: "https://www.youtube.com/watch?v=eES_hSIx6cQ"
 highlights:
   - Pemandangan alam yang eksotis
   - Spot foto instagramable
