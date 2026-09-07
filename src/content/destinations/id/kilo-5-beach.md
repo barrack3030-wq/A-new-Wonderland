@@ -7,6 +7,7 @@ image: /images/Pantai-Kilo-5-1.webp
 imageAlt: Kilo 5 Beach view
 location: Luwuk, Banggai
 category: Pantai
+youtube: "https://www.youtube.com/watch?v=uunpYvkY0RA"
 highlights:
   - Pemandangan alam yang eksotis
   - Spot foto instagramable
