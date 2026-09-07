@@ -7,6 +7,7 @@ image: /images/kamumuu.jpg
 imageAlt: Kamumu Waterfall view
 location: Luwuk, Banggai
 category: Air Terjun
+youtube: "https://www.youtube.com/watch?v=laIeC0TaHKg"
 highlights:
   - Pemandangan alam yang eksotis
   - Spot foto instagramable
