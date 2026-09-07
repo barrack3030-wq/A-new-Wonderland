@@ -27,6 +27,7 @@ travelTips:
   - Trae tu mejor cámara
   - Usa ropa cómoda
   - Mantén el ambiente limpio
+youtube: "https://www.youtube.com/watch?v=2vtdbJRPZMw"
 ---
 
 ## Paisu Pok Lake
