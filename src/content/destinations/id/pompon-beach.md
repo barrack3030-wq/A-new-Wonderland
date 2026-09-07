@@ -7,6 +7,7 @@ image: /images/images (1).jpg
 imageAlt: Pompon Beach view
 location: Banggai
 category: Pantai
+youtube: "https://www.youtube.com/watch?v=3HTD8j1C_Vk"
 highlights:
   - Pemandangan alam yang eksotis
   - Spot foto instagramable
