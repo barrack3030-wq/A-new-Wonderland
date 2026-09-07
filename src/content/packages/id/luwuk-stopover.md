@@ -20,17 +20,95 @@ excluded:
   - Flights
   - Personal expenses
   - Tipping
-itinerary:
-  - day: Day 1
-    title: Arrival
-    description: Meet and greet at the airport, transfer to hotel and rest.
-  - day: Day 2
-    title: Explore Destinations
-    description: Visit the most iconic spots in Banggai and enjoy nature.
+itinerary: []
 ---
 
-## Overview
+# Luwuk Stopover
 
-Welcome to the **Luwuk Stopover** package. This carefully curated tour is designed to give you the ultimate experience in Banggai Wonderland.
+**2 Hari 1 Malam**
+_Luwuk City • Salodik_
 
-Whether you are looking for an adventurous escape or a relaxing getaway, this package has it all. Enjoy breathtaking views, pristine beaches, and crystal-clear lakes.
+## Deskripsi
+
+Paket singkat namun berkesan bagi wisatawan yang memiliki waktu terbatas di Luwuk. Nikmati air terjun, panorama tropis, pesisir Luwuk, serta pengalaman lokal tanpa harus melakukan perjalanan panjang antar-pulau.
+
+## Hari 1 — Tiba & Eksplorasi Alam Luwuk
+
+**11.30 — Tiba di Bandara Luwuk**
+
+- Penjemputan di bandara
+- Meet and greet
+- Persiapan perjalanan
+
+**12.00 — Mulai Eksplorasi Luwuk**
+
+- Berangkat dari bandara
+- Makan siang / kuliner lokal
+- Menikmati perjalanan melalui lanskap tropis
+
+**Siang — Piala Waterfall**
+
+- Mengunjungi Piala Waterfall
+- Menjelajahi alam tropis
+- Berenang dan bersantai
+- Fotografi
+
+**Sore — Pesisir Luwuk**
+
+- Menuju kawasan pesisir
+- Mengunjungi Kilo 5 / spot pesisir pilihan
+- Menikmati sunset
+- Fotografi
+
+**Malam**
+
+- Check-in hotel
+- Makan malam
+- Waktu bebas
+- Bermalam di Luwuk
+
+## Hari 2 — Salodik & Perjalanan Pulang
+
+**Pagi**
+
+- Sarapan dan check-out
+- Berangkat menuju Salodik
+
+**Pagi–Siang**
+
+- Menjelajahi keindahan alam Salodik
+- Mengunjungi air terjun / destinasi alam
+- Berenang dan bersantai
+- Fotografi
+- Makan siang lokal
+
+**Sore**
+
+- Kembali ke Luwuk
+- City sightseeing jika waktu memungkinkan
+- Transfer menuju Bandara Luwuk
+- Trip selesai
+
+## Benefit / Termasuk
+
+✓ Penjemputan dan pengantaran bandara
+✓ Transportasi darat privat
+✓ Local English-speaking guide
+✓ Akomodasi 1 malam
+✓ Makanan sesuai itinerary
+✓ Tiket masuk destinasi
+✓ Pengalaman kuliner lokal
+✓ Bantuan fotografi
+✓ Itinerary fleksibel
+✓ **Drone Video — Opsional**
+
+## Tidak Termasuk
+
+✕ Tiket pesawat
+✕ Alat snorkeling
+✕ Pengeluaran pribadi
+✕ Makanan di luar itinerary
+✕ Asuransi perjalanan
+✕ **Drone Video — Opsional**
+
+**Catatan:** Itinerary dapat disesuaikan dengan jadwal penerbangan, cuaca, kondisi jalan, dan situasi lokal. Keselamatan dan kenyamanan wisatawan selalu menjadi prioritas.

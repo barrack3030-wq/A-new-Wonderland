@@ -20,17 +20,95 @@ excluded:
   - Flights
   - Personal expenses
   - Tipping
-itinerary:
-  - day: Day 1
-    title: Arrival
-    description: Meet and greet at the airport, transfer to hotel and rest.
-  - day: Day 2
-    title: Explore Destinations
-    description: Visit the most iconic spots in Banggai and enjoy nature.
+itinerary: []
 ---
 
-## Overview
+# Luwuk Stopover
 
-Welcome to the **Luwuk Stopover** package. This carefully curated tour is designed to give you the ultimate experience in Banggai Wonderland.
+**2 Días 1 Noche**
+_Luwuk City • Salodik_
 
-Whether you are looking for an adventurous escape or a relaxing getaway, this package has it all. Enjoy breathtaking views, pristine beaches, and crystal-clear lakes.
+## Descripción
+
+Una escapada corta pero memorable para viajeros con poco tiempo en Luwuk. Descubre cascadas, paisajes tropicales, vistas costeras y experiencias locales sin necesidad de realizar un largo viaje entre islas.
+
+## Día 1 — Llegada y Naturaleza de Luwuk
+
+**11:30 — Llegada al aeropuerto de Luwuk**
+
+- Recogida en el aeropuerto
+- Bienvenida
+- Preparación para el recorrido
+
+**12:00 — Comienza la exploración de Luwuk**
+
+- Salida desde el aeropuerto
+- Almuerzo / experiencia gastronómica local
+- Disfruta del paisaje tropical durante el trayecto
+
+**Tarde — Piala Waterfall**
+
+- Visita a Piala Waterfall
+- Exploración de la naturaleza tropical
+- Natación y relajación
+- Fotografía
+
+**Final de la tarde — Costa de Luwuk**
+
+- Visita a la zona costera
+- Kilo 5 / miradores costeros seleccionados
+- Disfruta del atardecer
+- Fotografía
+
+**Noche**
+
+- Check-in en el hotel
+- Cena
+- Tiempo libre
+- Alojamiento en Luwuk
+
+## Día 2 — Naturaleza de Salodik y Salida
+
+**Mañana**
+
+- Desayuno y check-out
+- Salida hacia Salodik
+
+**Mañana–Tarde**
+
+- Exploración de la naturaleza de Salodik
+- Visita a cascadas / lugares naturales
+- Natación y relajación
+- Fotografía
+- Almuerzo local
+
+**Tarde**
+
+- Regreso a Luwuk
+- Visita breve por la ciudad si el tiempo lo permite
+- Traslado al aeropuerto de Luwuk
+- Fin del viaje
+
+## Incluye
+
+✓ Recogida y traslado al aeropuerto
+✓ Transporte terrestre privado
+✓ Guía local de habla inglesa
+✓ 1 noche de alojamiento
+✓ Comidas seleccionadas
+✓ Entradas a los destinos incluidos
+✓ Experiencia gastronómica local
+✓ Asistencia fotográfica
+✓ Itinerario flexible
+✓ **Vídeo con dron — Opcional**
+
+## No Incluye
+
+✕ Vuelos
+✕ Equipo de snorkel
+✕ Gastos personales
+✕ Comidas no mencionadas
+✕ Seguro de viaje
+✕ **Vídeo con dron — Opcional**
+
+**Nota:** El itinerario puede modificarse según los horarios de vuelo, las condiciones meteorológicas, el estado de las carreteras y las circunstancias locales. La seguridad y comodidad de los viajeros son siempre nuestra prioridad.
