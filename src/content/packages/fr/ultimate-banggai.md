@@ -20,13 +20,7 @@ excluded:
   - Flights
   - Personal expenses
   - Tipping
-itinerary:
-  - day: Day 1
-    title: Arrival
-    description: Meet and greet at the airport, transfer to hotel and rest.
-  - day: Day 2
-    title: Explore Destinations
-    description: Visit the most iconic spots in Banggai and enjoy nature.
+itinerary: []
 ---
 
 ## Overview
