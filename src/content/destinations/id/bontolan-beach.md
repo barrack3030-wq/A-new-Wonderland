@@ -7,6 +7,7 @@ image: /images/bontolan.jpg
 imageAlt: Bontolan Beach view
 location: Banggai
 category: Pantai
+youtube: "https://www.youtube.com/watch?v=LEO-F982E6g"
 highlights:
   - Pemandangan alam yang eksotis
   - Spot foto instagramable
