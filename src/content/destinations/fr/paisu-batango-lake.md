@@ -20,6 +20,7 @@ travelTips:
   - Apportez votre meilleur appareil photo
   - Portez des vêtements confortables
   - Gardez l'environnement propre
+youtube: "https://www.youtube.com/watch?v=7RTzL8yKLM4"
 ---
 
 ## Paisu Batango Lake
