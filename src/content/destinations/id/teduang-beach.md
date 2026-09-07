@@ -7,6 +7,7 @@ image: /images/images (4).jpg
 imageAlt: Teduang Beach view
 location: Banggai
 category: Pantai
+youtube: "https://www.youtube.com/watch?v=51WQQ4nbepg"
 highlights:
   - Pemandangan alam yang eksotis
   - Spot foto instagramable
