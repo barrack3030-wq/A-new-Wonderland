@@ -20,6 +20,7 @@ travelTips:
   - Apportez des vêtements de rechange et une serviette
   - Utilisez des chaussures antidérapantes
   - Ne jetez pas de déchets
+youtube: "https://www.youtube.com/watch?v=7_fiYirWPRc&t=18s"
 ---
 
 ## Le charme de la cascade de Piala
