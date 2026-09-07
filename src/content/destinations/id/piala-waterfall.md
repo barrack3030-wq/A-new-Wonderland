@@ -24,9 +24,13 @@ travelTips:
 
 ## Pesona Air Terjun Piala
 
-Air Terjun Piala adalah salah satu destinasi wisata alam paling populer di Kabupaten Banggai. Terletak tidak jauh dari pusat kota Luwuk, air terjun ini menawarkan panorama alam yang memanjakan mata. Keunikan utama dari Air Terjun Piala adalah bentuknya yang bertingkat-tingkat, menciptakan aliran air yang indah dan menenangkan.
+Piala Waterfall adalah salah satu air terjun yang menarik untuk dikunjungi di sekitar Luwuk, Banggai. Air terjun ini dikelilingi hutan tropis yang hijau dan memiliki kolam alami dengan warna air yang menarik. Suasana alam yang sejuk membuat Piala Waterfall menjadi pilihan populer bagi wisatawan yang ingin menikmati alam setelah menjelajahi kawasan Luwuk.
 
-Di setiap tingkatannya, terbentuk kolam-kolam alami dengan air yang sangat jernih dan berwarna hijau tosca. Wisatawan sangat menyukai berenang atau sekadar berendam di kolam-kolam ini sambil menikmati udara segar pegunungan.
+Aktivitas utama di Piala Waterfall adalah menikmati pemandangan, berenang di kolam alami ketika kondisi memungkinkan, mengambil foto, dan menjelajahi lingkungan sekitar. Perjalanan menuju air terjun juga memberikan kesempatan untuk menikmati lanskap alami Banggai.
+
+Waktu terbaik untuk berkunjung biasanya saat cuaca cerah atau setelah kondisi hujan cukup aman. Kondisi jalur dan debit air dapat berubah mengikuti cuaca, sehingga wisatawan sebaiknya menggunakan alas kaki yang nyaman dan mengikuti arahan lokal.
+
+Bagi wisatawan yang mencari kombinasi antara petualangan ringan, air tawar yang menyegarkan, dan suasana hutan tropis, Piala Waterfall merupakan salah satu tempat yang layak dimasukkan dalam itinerary perjalanan di Luwuk..
 
 ### Akses Menuju Lokasi
 
