@@ -20,17 +20,75 @@ excluded:
   - Flights
   - Personal expenses
   - Tipping
-itinerary:
-  - day: Day 1
-    title: Arrival
-    description: Meet and greet at the airport, transfer to hotel and rest.
-  - day: Day 2
-    title: Explore Destinations
-    description: Visit the most iconic spots in Banggai and enjoy nature.
+itinerary: []
 ---
 
 ## Overview
 
-Welcome to the **Banggai Wonderland** package. This carefully curated tour is designed to give you the ultimate experience in Banggai Wonderland.
 
-Whether you are looking for an adventurous escape or a relaxing getaway, this package has it all. Enjoy breathtaking views, pristine beaches, and crystal-clear lakes.
+Discover the hidden paradise of Banggai through crystal-clear lakes, pristine beaches, tropical islands, snorkeling spots and authentic local experiences.
+
+**Day 1 — Welcome to Luwuk & Journey to Peleng**
+
+- Arrival at Luwuk Airport
+- Airport pickup and welcome
+- Transfer to the port
+- Ferry/boat to Salakan/Peleng
+- Hotel check-in
+- Sunset and free time
+- Dinner and overnight
+
+**Day 2 — Crystal Lakes & Hidden Beaches**
+
+- Breakfast
+- Visit Paisu Pok Lake
+- Swimming and relaxation
+- Visit Paisubatango Lake
+- Local village experience
+- Poganda Beach
+- Mandel Beach
+- Sunset photography
+- Return to accommodation
+
+**Day 3 — Island & Underwater Adventure**
+
+- Breakfast
+- Island-hopping by local boat
+- Explore hidden beaches and islands
+- Snorkeling and swimming
+- Relaxation and photography
+- Return to accommodation
+
+**Day 4 — Peleng to Luwuk**
+
+- Breakfast and check-out
+- Morning exploration, depending on schedule
+- Transfer to the port
+- Ferry/boat to Luwuk
+- Coastal sightseeing if time permits
+- Airport transfer
+- End of trip
+
+**Benefits / Included**
+
+- Airport pickup and drop-off
+- Local English-speaking guide
+- Land transportation during the trip
+- Ferry/boat transportation according to itinerary
+- Local boat for island exploration
+- Accommodation for 3 nights
+- Selected meals
+- Entrance fees to included destinations
+- Local village experience
+- Photography assistance
+- Flexible local arrangements
+- **Drone Video — Optional**
+
+**Not Included**
+
+- Snorkeling equipment
+- Personal expenses
+- Meals not mentioned in the itinerary
+- Flights
+- Travel insurance
+- **Drone Video — Optional**
