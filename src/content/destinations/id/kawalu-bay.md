@@ -7,6 +7,7 @@ image: /images/kawalu.webp
 imageAlt: Kawalu Bay view
 location: Banggai
 category: Teluk
+youtube: "https://www.youtube.com/watch?v=1LqWUDwkxTQ"
 highlights:
   - Pemandangan alam yang eksotis
   - Spot foto instagramable
