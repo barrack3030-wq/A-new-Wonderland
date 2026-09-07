@@ -7,6 +7,7 @@ image: /images/mbuang mbuang.jpg
 imageAlt: Mbuang-Mbuang Island view
 location: Bokan Kepulauan, Banggai Laut
 category: Pulau
+youtube: "https://www.youtube.com/watch?v=sRkhqbTYvnk"
 highlights:
   - Pemandangan alam yang eksotis
   - Spot foto instagramable
