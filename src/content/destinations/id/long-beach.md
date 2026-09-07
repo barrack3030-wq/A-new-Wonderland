@@ -7,6 +7,7 @@ image: /images/long b.jpg
 imageAlt: Long Beach view
 location: Banggai Laut
 category: Pantai
+youtube: "https://www.youtube.com/watch?v=P6PO7BwgQa0"
 highlights:
   - Pemandangan alam yang eksotis
   - Spot foto instagramable
