@@ -7,6 +7,7 @@ image: /images/images (2).jpg
 imageAlt: Pulau Dua Balantak view
 location: Balantak, Banggai
 category: Pulau
+youtube: "https://www.youtube.com/watch?v=gVEDHYLdyLI"
 highlights:
   - Pemandangan alam yang eksotis
   - Spot foto instagramable
