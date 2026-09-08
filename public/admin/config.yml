@@ -73,13 +73,17 @@ collections:
     i18n: true
     slug: "{{slug}}"
     fields:
+      # Shared article media: upload/select the featured image only once in Indonesian.
+      # All translated versions reuse the same image reference.
+      - {label: "Featured Image", name: "image", widget: "image", i18n: false}
+      - {label: "Image Alt", name: "imageAlt", widget: "string", required: false, i18n: true}
       - {label: "Title", name: "title", widget: "string", i18n: true}
       - {label: "Description", name: "description", widget: "text", i18n: true}
       - {label: "SEO Title", name: "seoTitle", widget: "string", required: false, i18n: true}
       - {label: "SEO Description", name: "seoDescription", widget: "text", required: false, i18n: true}
-      - {label: "Image", name: "image", widget: "image", i18n: true}
-      - {label: "Image Alt", name: "imageAlt", widget: "string", required: false, i18n: true}
       - {label: "Author", name: "author", widget: "string", i18n: true}
       - {label: "Publish Date", name: "pubDate", widget: "datetime", i18n: true}
       - {label: "Tags", name: "tags", widget: "list", required: false, i18n: true}
+      # Body remains fully translatable and continues to support inline images.
+      # Inline images use the shared Media Library and are not duplicated per language.
       - {label: "Body", name: "body", widget: "markdown", i18n: true}
