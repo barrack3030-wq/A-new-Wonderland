@@ -53,6 +53,7 @@ const blogCollection = defineCollection({
     seoDescription: z.string().optional(),
     image: z.string(),
     imageAlt: z.string().optional(),
+    imageSource: z.string().url().optional(),
     author: z.string(),
     pubDate: z.date(),
     tags: z.array(z.string()).optional(),
