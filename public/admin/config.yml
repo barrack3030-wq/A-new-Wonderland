@@ -69,25 +69,100 @@ collections:
           - {label: "Description", name: "description", widget: "text"}
       - {label: "Body Overview", name: "body", widget: "markdown", i18n: true}
 
-  - name: "blog"
-    label: "Blog Posts"
-    folder: "src/content/blog"
+  # Blog is intentionally split into five independent collections.
+  # This keeps Sveltia compatible with the existing translated filenames
+  # while the AI CMS continues to generate all five language files directly.
+  - name: "blog_id"
+    label: "Blog — Indonesia"
+    folder: "src/content/blog/id"
     create: true
-    i18n: true
-    slug: "{{slug | localize}}"
+    slug: "{{slug}}"
     fields:
-      # Featured image is shared across all language versions.
-      - {label: "Featured Image", name: "image", widget: "image", i18n: duplicate}
-      - {label: "Image Alt", name: "imageAlt", widget: "string", required: false, i18n: true}
-      - {label: "Title", name: "title", widget: "string", i18n: true}
-      - {label: "Description", name: "description", widget: "text", i18n: true}
-      - {label: "SEO Title", name: "seoTitle", widget: "string", required: false, i18n: true}
-      - {label: "SEO Description", name: "seoDescription", widget: "text", required: false, i18n: true}
-      # These values are shared, not translated independently.
-      - {label: "Author", name: "author", widget: "string", i18n: duplicate}
-      - {label: "Publish Date", name: "pubDate", widget: "datetime", i18n: duplicate}
-      - {label: "Tags", name: "tags", widget: "list", required: false, i18n: duplicate}
-      - {label: "Body", name: "body", widget: "markdown", i18n: true}
-      # Internal fields used by the website/CMS integration. Keep them out of the editor UI.
+      - {label: "Featured Image", name: "image", widget: "image"}
+      - {label: "Image Alt", name: "imageAlt", widget: "string", required: false}
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Description", name: "description", widget: "text"}
+      - {label: "SEO Title", name: "seoTitle", widget: "string", required: false}
+      - {label: "SEO Description", name: "seoDescription", widget: "text", required: false}
+      - {label: "Author", name: "author", widget: "string"}
+      - {label: "Publish Date", name: "pubDate", widget: "datetime"}
+      - {label: "Tags", name: "tags", widget: "list", required: false}
+      - {label: "Body", name: "body", widget: "markdown"}
+      - {label: "Image Source", name: "imageSource", widget: "hidden", required: false}
+      - {label: "Translation Key", name: "translationKey", widget: "hidden", required: false}
+
+  - name: "blog_en"
+    label: "Blog — English"
+    folder: "src/content/blog/en"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - {label: "Featured Image", name: "image", widget: "image"}
+      - {label: "Image Alt", name: "imageAlt", widget: "string", required: false}
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Description", name: "description", widget: "text"}
+      - {label: "SEO Title", name: "seoTitle", widget: "string", required: false}
+      - {label: "SEO Description", name: "seoDescription", widget: "text", required: false}
+      - {label: "Author", name: "author", widget: "string"}
+      - {label: "Publish Date", name: "pubDate", widget: "datetime"}
+      - {label: "Tags", name: "tags", widget: "list", required: false}
+      - {label: "Body", name: "body", widget: "markdown"}
+      - {label: "Image Source", name: "imageSource", widget: "hidden", required: false}
+      - {label: "Translation Key", name: "translationKey", widget: "hidden", required: false}
+
+  - name: "blog_es"
+    label: "Blog — Español"
+    folder: "src/content/blog/es"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - {label: "Featured Image", name: "image", widget: "image"}
+      - {label: "Image Alt", name: "imageAlt", widget: "string", required: false}
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Description", name: "description", widget: "text"}
+      - {label: "SEO Title", name: "seoTitle", widget: "string", required: false}
+      - {label: "SEO Description", name: "seoDescription", widget: "text", required: false}
+      - {label: "Author", name: "author", widget: "string"}
+      - {label: "Publish Date", name: "pubDate", widget: "datetime"}
+      - {label: "Tags", name: "tags", widget: "list", required: false}
+      - {label: "Body", name: "body", widget: "markdown"}
+      - {label: "Image Source", name: "imageSource", widget: "hidden", required: false}
+      - {label: "Translation Key", name: "translationKey", widget: "hidden", required: false}
+
+  - name: "blog_fr"
+    label: "Blog — Français"
+    folder: "src/content/blog/fr"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - {label: "Featured Image", name: "image", widget: "image"}
+      - {label: "Image Alt", name: "imageAlt", widget: "string", required: false}
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Description", name: "description", widget: "text"}
+      - {label: "SEO Title", name: "seoTitle", widget: "string", required: false}
+      - {label: "SEO Description", name: "seoDescription", widget: "text", required: false}
+      - {label: "Author", name: "author", widget: "string"}
+      - {label: "Publish Date", name: "pubDate", widget: "datetime"}
+      - {label: "Tags", name: "tags", widget: "list", required: false}
+      - {label: "Body", name: "body", widget: "markdown"}
+      - {label: "Image Source", name: "imageSource", widget: "hidden", required: false}
+      - {label: "Translation Key", name: "translationKey", widget: "hidden", required: false}
+
+  - name: "blog_zh"
+    label: "Blog — 中文"
+    folder: "src/content/blog/zh"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - {label: "Featured Image", name: "image", widget: "image"}
+      - {label: "Image Alt", name: "imageAlt", widget: "string", required: false}
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Description", name: "description", widget: "text"}
+      - {label: "SEO Title", name: "seoTitle", widget: "string", required: false}
+      - {label: "SEO Description", name: "seoDescription", widget: "text", required: false}
+      - {label: "Author", name: "author", widget: "string"}
+      - {label: "Publish Date", name: "pubDate", widget: "datetime"}
+      - {label: "Tags", name: "tags", widget: "list", required: false}
+      - {label: "Body", name: "body", widget: "markdown"}
       - {label: "Image Source", name: "imageSource", widget: "hidden", required: false}
       - {label: "Translation Key", name: "translationKey", widget: "hidden", required: false}
