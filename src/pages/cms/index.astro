@@ -1,0 +1,149 @@
+---
+const title = 'Banggai Wonderland CMS';
+---
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="noindex,nofollow" />
+  <title>{title}</title>
+  <style>
+    :root { color-scheme: dark; font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
+    * { box-sizing: border-box; }
+    body { margin: 0; min-height: 100vh; background: linear-gradient(145deg,#061525,#0b2b46 55%,#071a2a); color: #eef7ff; }
+    .wrap { width: min(960px, 92%); margin: 0 auto; padding: 34px 0 60px; }
+    .brand { margin-bottom: 28px; }
+    .brand h1 { margin: 0; font-size: clamp(28px,5vw,42px); letter-spacing: -.03em; }
+    .brand p { color: #9fc0d6; margin: 8px 0 0; }
+    .card { background: rgba(8,24,39,.86); border: 1px solid rgba(157,207,235,.16); border-radius: 20px; padding: 24px; box-shadow: 0 20px 70px rgba(0,0,0,.28); margin-bottom: 18px; }
+    label { display:block; font-size: 13px; font-weight: 700; color:#b8d5e7; margin: 0 0 8px; }
+    input, textarea, select { width:100%; border:1px solid #28465c; background:#071b2b; color:#f5fbff; border-radius:12px; padding:13px 14px; outline:none; font:inherit; }
+    input:focus, textarea:focus, select:focus { border-color:#56b8ea; box-shadow:0 0 0 3px rgba(86,184,234,.12); }
+    textarea { min-height: 170px; resize: vertical; }
+    .grid { display:grid; grid-template-columns: 1fr 180px; gap:14px; }
+    .row { display:flex; gap:10px; flex-wrap:wrap; margin-top:16px; }
+    button { border:0; border-radius:12px; padding:12px 18px; font-weight:800; cursor:pointer; color:#03121d; background:#65c8f2; }
+    button.secondary { background:#17364d; color:#dceffc; }
+    button:disabled { opacity:.5; cursor:not-allowed; }
+    .status { margin-top:14px; color:#9fc0d6; min-height:22px; white-space:pre-wrap; }
+    .result { display:none; }
+    .result.show { display:block; }
+    .result h2 { margin-top:0; }
+    .lang { border-top:1px solid rgba(157,207,235,.12); padding:18px 0; }
+    .lang:first-child { border-top:0; padding-top:0; }
+    .lang h3 { margin:0 0 8px; }
+    .muted { color:#86a7bb; font-size:13px; }
+    .danger { color:#ffb2b2; }
+    .success { color:#9ce7b4; }
+    .small { font-size:12px; }
+    @media(max-width:700px){ .grid{grid-template-columns:1fr;} .card{padding:18px;} }
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <header class="brand">
+      <h1>Banggai Wonderland CMS</h1>
+      <p>Private article generator · AI assisted · multilingual</p>
+    </header>
+
+    <section class="card">
+      <div class="grid">
+        <div>
+          <label for="topic">Article topic / command</label>
+          <input id="topic" placeholder="Contoh: Buat artikel SEO tentang Paisupok Lake untuk wisatawan Australia" />
+        </div>
+        <div>
+          <label for="model">AI model</label>
+          <input id="model" value="gpt-5.6-luna" readonly />
+        </div>
+      </div>
+      <div style="margin-top:14px">
+        <label for="accessKey">CMS access key</label>
+        <input id="accessKey" type="password" autocomplete="off" placeholder="Masukkan access key dari Google Apps Script" />
+        <div class="muted small" style="margin-top:7px">Access key tidak disimpan di website.</div>
+      </div>
+      <div class="row">
+        <button id="generate">Generate Article</button>
+        <button id="clear" class="secondary">Clear</button>
+      </div>
+      <div id="status" class="status"></div>
+    </section>
+
+    <section id="result" class="card result">
+      <h2>Generated article</h2>
+      <div id="articles"></div>
+      <div class="row">
+        <button id="publish">Publish to GitHub</button>
+      </div>
+      <div id="publishStatus" class="status"></div>
+    </section>
+  </main>
+
+  <script>
+    const ENDPOINT = 'PASTE_GOOGLE_APPS_SCRIPT_WEB_APP_URL_HERE';
+    const topicEl = document.getElementById('topic');
+    const keyEl = document.getElementById('accessKey');
+    const statusEl = document.getElementById('status');
+    const resultEl = document.getElementById('result');
+    const articlesEl = document.getElementById('articles');
+    const publishEl = document.getElementById('publish');
+    const publishStatusEl = document.getElementById('publishStatus');
+    let generated = null;
+
+    function setStatus(el, text, cls='') { el.className = 'status ' + cls; el.textContent = text; }
+    function esc(value='') { return value.replace(/[&<>'"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;',"'":'&#39;','"':'&quot;'}[c])); }
+
+    document.getElementById('generate').addEventListener('click', async () => {
+      const topic = topicEl.value.trim();
+      const accessKey = keyEl.value.trim();
+      if (!topic) return setStatus(statusEl, 'Tulis topik atau perintah artikel terlebih dahulu.', 'danger');
+      if (!accessKey) return setStatus(statusEl, 'Masukkan CMS access key terlebih dahulu.', 'danger');
+      if (ENDPOINT.includes('PASTE_')) return setStatus(statusEl, 'CMS belum dikonfigurasi: isi URL Google Apps Script pada file CMS.', 'danger');
+      setStatus(statusEl, 'Generating 5 language versions…');
+      document.getElementById('generate').disabled = true;
+      resultEl.classList.remove('show');
+      try {
+        const response = await fetch(ENDPOINT, { method:'POST', headers:{'Content-Type':'text/plain;charset=utf-8'}, body:JSON.stringify({action:'generate', accessKey, topic}) });
+        const data = await response.json();
+        if (!data.ok) throw new Error(data.error || 'Generation failed');
+        generated = data.articles;
+        articlesEl.innerHTML = Object.entries(generated).map(([lang,a]) => `
+          <article class="lang">
+            <h3>${esc(lang.toUpperCase())} · ${esc(a.title)}</h3>
+            <div class="muted">${esc(a.description)}</div>
+            <p>${esc(a.preview || '')}</p>
+          </article>`).join('');
+        resultEl.classList.add('show');
+        setStatus(statusEl, 'Article generated. Review the result, then publish.', 'success');
+      } catch (err) {
+        setStatus(statusEl, err.message || 'Generation failed.', 'danger');
+      } finally { document.getElementById('generate').disabled = false; }
+    });
+
+    publishEl.addEventListener('click', async () => {
+      if (!generated) return;
+      const accessKey = keyEl.value.trim();
+      publishEl.disabled = true;
+      setStatus(publishStatusEl, 'Publishing to GitHub…');
+      try {
+        const response = await fetch(ENDPOINT, { method:'POST', headers:{'Content-Type':'text/plain;charset=utf-8'}, body:JSON.stringify({action:'publish', accessKey, articles:generated}) });
+        const data = await response.json();
+        if (!data.ok) throw new Error(data.error || 'Publish failed');
+        setStatus(publishStatusEl, data.message || 'Published successfully.', 'success');
+      } catch (err) {
+        setStatus(publishStatusEl, err.message || 'Publish failed.', 'danger');
+      } finally { publishEl.disabled = false; }
+    });
+
+    document.getElementById('clear').addEventListener('click', () => {
+      topicEl.value = '';
+      resultEl.classList.remove('show');
+      articlesEl.innerHTML = '';
+      generated = null;
+      setStatus(statusEl, '');
+      setStatus(publishStatusEl, '');
+    });
+  </script>
+</body>
+</html>
