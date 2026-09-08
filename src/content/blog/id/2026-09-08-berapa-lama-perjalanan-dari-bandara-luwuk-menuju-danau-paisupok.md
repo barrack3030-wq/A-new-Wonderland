@@ -1,16 +1,16 @@
 ---
-title: "Berapa Lama Perjalanan dari Bandara Luwuk menuju Danau Paisupok?"
-description: "Panduan lengkap mengenai estimasi waktu perjalanan dari Bandara Luwuk menuju Danau Paisupok di Banggai Kepulauan, termasuk pilihan rute, transportasi, dan tips perjalanan."
-seoTitle: "Berapa Lama dari Bandara Luwuk ke Danau Paisupok?"
-seoDescription: "Cari tahu estimasi waktu perjalanan dari Bandara Luwuk ke Danau Paisupok, pilihan rute laut dan darat, serta tips praktis menuju hidden paradise Banggai."
-image: "/images/Poganda-Beach-Banggai-IndonesiaJuara-Trip.webp"
-imageAlt: "Pemandangan pantai tropis di Banggai, Sulawesi Tengah"
-author: "Banggai Wonderland"
+image: /images/images (5).jpg
+imageAlt: Pemandangan pantai tropis di Banggai, Sulawesi Tengah
+title: Berapa Lama Perjalanan dari Bandara Luwuk menuju Danau Paisupok?
+description: Panduan lengkap mengenai estimasi waktu perjalanan dari Bandara Luwuk menuju Danau Paisupok di Banggai Kepulauan, termasuk pilihan rute, transportasi, dan tips perjalanan.
+seoTitle: Berapa Lama dari Bandara Luwuk ke Danau Paisupok?
+seoDescription: Cari tahu estimasi waktu perjalanan dari Bandara Luwuk ke Danau Paisupok, pilihan rute laut dan darat, serta tips praktis menuju hidden paradise Banggai.
+author: Banggai Wonderland
 pubDate: 2026-09-08
 tags:
-  - "Banggai"
-  - "Indonesia"
-  - "Travel"
+  - Banggai
+  - Indonesia
+  - Travel
 ---
 
 # Berapa Lama Perjalanan dari Bandara Luwuk menuju Danau Paisupok?
