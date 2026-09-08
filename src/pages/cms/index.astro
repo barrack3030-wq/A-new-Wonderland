@@ -44,7 +44,9 @@ const title = 'Banggai Wonderland CMS';
     .upload-ok { display:none; margin-top:12px; padding:12px 14px; border-radius:12px; border:1px solid rgba(156,231,180,.25); background:rgba(33,83,55,.25); color:#b9f2c9; }
     .upload-ok.show { display:block; }
     .upload-ok strong { display:block; margin-bottom:4px; }
-    @media(max-width:700px){ .grid,.image-grid{grid-template-columns:1fr;} .card{padding:18px;} input{font-size:16px;} }
+    .topic-ok { display:none; margin-top:8px; color:#9ce7b4; font-size:12px; }
+    .topic-ok.show { display:block; }
+    @media(max-width:700px){ .grid,.image-grid{grid-template-columns:1fr;} .card{padding:18px;} input,textarea{font-size:16px;} }
   </style>
 </head>
 <body>
@@ -58,7 +60,8 @@ const title = 'Banggai Wonderland CMS';
       <div class="grid">
         <div>
           <label for="topic">Article topic / command</label>
-          <input id="topic" type="text" autocomplete="off" autocapitalize="sentences" placeholder="Contoh: Buat artikel SEO tentang Paisupok Lake untuk wisatawan Australia" />
+          <input id="topic" name="topic" type="text" autocomplete="off" autocapitalize="sentences" spellcheck="true" enterkeyhint="done" placeholder="Contoh: Buat artikel SEO tentang Paisupok Lake untuk wisatawan Australia" />
+          <div id="topicOk" class="topic-ok">✓ Topic terbaca dan siap digunakan</div>
         </div>
         <div>
           <label for="model">AI model</label>
@@ -117,16 +120,16 @@ const title = 'Banggai Wonderland CMS';
 
   <script>
     const ENDPOINT = 'https://script.google.com/macros/s/AKfycbxGMuyFzq0K-gKIPaamp1ClFqo6zYJfNNvZfd0hxeJIJTj0N_DVPywUtkWbo5g0_F08/exec';
-    const topicEl=document.getElementById('topic'), keyEl=document.getElementById('accessKey'), statusEl=document.getElementById('status');
+    const topicEl=document.getElementById('topic'), keyEl=document.getElementById('accessKey'), statusEl=document.getElementById('status'), topicOkEl=document.getElementById('topicOk');
     const resultEl=document.getElementById('result'), articlesEl=document.getElementById('articles'), publishEl=document.getElementById('publish'), publishStatusEl=document.getElementById('publishStatus');
     const imageFileEl=document.getElementById('imageFile'), imageUrlEl=document.getElementById('imageUrl'), imageStatusEl=document.getElementById('imageStatus');
     const imagePreview=document.getElementById('imagePreview'), imagePreviewImg=document.getElementById('imagePreviewImg'), selectedImageEl=document.getElementById('selectedImage');
     const uploadOk=document.getElementById('uploadOk'), uploadOkText=document.getElementById('uploadOkText');
-    let generated=null, selectedImage=null, topicValue='';
+    let generated=null, selectedImage=null;
 
-    topicEl.addEventListener('input',()=>{ topicValue=topicEl.value; });
-    topicEl.addEventListener('change',()=>{ topicValue=topicEl.value; });
-    topicEl.addEventListener('blur',()=>{ topicValue=topicEl.value; });
+    function getTopic(){ return String(topicEl.value || '').replace(/\u200B/g,'').trim(); }
+    function refreshTopicState(){ topicOkEl.classList.toggle('show',!!getTopic()); }
+    ['input','change','keyup','paste','blur'].forEach(eventName=>topicEl.addEventListener(eventName,()=>{ setTimeout(refreshTopicState,0); }));
 
     function setStatus(el,text,cls=''){el.className='status '+cls;el.textContent=text;}
     function esc(value=''){return String(value).replace(/[&<>'"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;',"'":'&#39;','"':'&quot;'}[c]));}
@@ -143,71 +146,82 @@ const title = 'Banggai Wonderland CMS';
       uploadOk.classList.add('show');
     }
 
+    imageFileEl.addEventListener('change',()=>{
+      uploadOk.classList.remove('show');
+      if(imageFileEl.files[0]) setStatus(imageStatusEl,'Foto dipilih: '+imageFileEl.files[0].name+'. Tekan Upload / Import Photo untuk mengirim ke GitHub.');
+    });
+
     document.getElementById('uploadImage').addEventListener('click',async()=>{
-      const accessKey=keyEl.value.trim();
-      if(!accessKey)return setStatus(imageStatusEl,'Masukkan CMS access key terlebih dahulu.','danger');
-      const file=imageFileEl.files[0]; const url=imageUrlEl.value.trim();
+      const accessKey=String(keyEl.value||'').trim();
+      if(!accessKey){ keyEl.focus(); return setStatus(imageStatusEl,'Masukkan CMS access key terlebih dahulu.','danger'); }
+      const file=imageFileEl.files && imageFileEl.files[0]; const url=String(imageUrlEl.value||'').trim();
       if(!file&&!url)return setStatus(imageStatusEl,'Pilih foto atau masukkan link foto terlebih dahulu.','danger');
       if(file&&file.size>8*1024*1024)return setStatus(imageStatusEl,'Ukuran foto maksimal 8 MB.','danger');
       uploadOk.classList.remove('show');
-      setStatus(imageStatusEl,file?'Mengupload foto ke GitHub…':'Mengambil foto dari link dan menyimpannya ke GitHub…');
-      document.getElementById('uploadImage').disabled=true;
+      setStatus(imageStatusEl,file?'⏳ Mengupload foto ke GitHub…':'⏳ Mengambil foto dari link dan menyimpannya ke GitHub…');
+      const button=document.getElementById('uploadImage'); button.disabled=true;
       try{
         let payload={action:'uploadImage',accessKey};
         if(file){
-          const dataUrl=await new Promise((resolve,reject)=>{const r=new FileReader();r.onload=()=>resolve(r.result);r.onerror=reject;r.readAsDataURL(file);});
+          const dataUrl=await new Promise((resolve,reject)=>{const r=new FileReader();r.onload=()=>resolve(r.result);r.onerror=()=>reject(new Error('File tidak dapat dibaca oleh browser.'));r.readAsDataURL(file);});
           payload.dataUrl=dataUrl; payload.fileName=file.name;
         }else{payload.imageUrl=url;}
         const response=await fetch(ENDPOINT,{method:'POST',headers:{'Content-Type':'text/plain;charset=utf-8'},body:JSON.stringify(payload)});
-        const data=await response.json(); if(!data.ok)throw new Error(data.error||'Upload failed');
+        const raw=await response.text();
+        let data; try{data=JSON.parse(raw);}catch(e){throw new Error('CMS tidak mengembalikan respons JSON. Pastikan deployment Google Apps Script sudah versi terbaru.');}
+        if(!data.ok)throw new Error(data.error||'Upload failed');
         if(!data.image||!data.image.url)throw new Error('Upload selesai tetapi URL foto tidak diterima CMS.');
         showImage(data.image); showUploadConfirmation(data.image);
-        setStatus(imageStatusEl,'Foto berhasil terupload dan siap digunakan.','success');
-      }catch(err){uploadOk.classList.remove('show');setStatus(imageStatusEl,err.message||'Upload failed.','danger');}
-      finally{document.getElementById('uploadImage').disabled=false;}
+        setStatus(imageStatusEl,'✓ Foto berhasil terupload dan siap digunakan.','success');
+      }catch(err){uploadOk.classList.remove('show');setStatus(imageStatusEl,'✕ '+(err.message||'Upload failed.'),'danger');}
+      finally{button.disabled=false;}
     });
 
     document.getElementById('useSearchImage').addEventListener('click',async()=>{
-      const accessKey=keyEl.value.trim(), topic=(topicValue||topicEl.value||'').trim();
-      if(!accessKey)return setStatus(imageStatusEl,'Masukkan CMS access key terlebih dahulu.','danger');
-      if(!topic)return setStatus(imageStatusEl,'Tulis topic terlebih dahulu agar foto dapat dicari.','danger');
+      const accessKey=String(keyEl.value||'').trim(), topic=getTopic();
+      if(!accessKey){keyEl.focus();return setStatus(imageStatusEl,'Masukkan CMS access key terlebih dahulu.','danger');}
+      if(!topic){topicEl.focus();return setStatus(imageStatusEl,'Tulis topic terlebih dahulu agar foto dapat dicari.','danger');}
       uploadOk.classList.remove('show');
-      setStatus(imageStatusEl,'Mencari foto berdasarkan topic…');
-      document.getElementById('useSearchImage').disabled=true;
+      setStatus(imageStatusEl,'⏳ Mencari foto berdasarkan topic…');
+      const button=document.getElementById('useSearchImage'); button.disabled=true;
       try{
         const response=await fetch(ENDPOINT,{method:'POST',headers:{'Content-Type':'text/plain;charset=utf-8'},body:JSON.stringify({action:'searchImage',accessKey,topic})});
-        const data=await response.json(); if(!data.ok)throw new Error(data.error||'Image search failed');
-        showImage(data.image); setStatus(imageStatusEl,'Foto relevan ditemukan dan dipilih sebagai featured image.','success');
-      }catch(err){setStatus(imageStatusEl,err.message||'Image search failed.','danger');}
-      finally{document.getElementById('useSearchImage').disabled=false;}
+        const raw=await response.text(); let data; try{data=JSON.parse(raw);}catch(e){throw new Error('CMS tidak mengembalikan respons JSON.');}
+        if(!data.ok)throw new Error(data.error||'Image search failed');
+        if(!data.image||!data.image.url)throw new Error('Foto tidak ditemukan.');
+        showImage(data.image); setStatus(imageStatusEl,'✓ Foto relevan ditemukan dan dipilih sebagai featured image.','success');
+      }catch(err){setStatus(imageStatusEl,'✕ '+(err.message||'Image search failed.'),'danger');}
+      finally{button.disabled=false;}
     });
 
     document.getElementById('generate').addEventListener('click',async()=>{
-      const topic=(topicValue||topicEl.value||'').trim(), accessKey=keyEl.value.trim();
-      if(!topic){ topicEl.focus(); return setStatus(statusEl,'Tulis topik atau perintah artikel terlebih dahulu.','danger'); }
-      if(!accessKey){ keyEl.focus(); return setStatus(statusEl,'Masukkan CMS access key terlebih dahulu.','danger'); }
-      if(!selectedImage) return setStatus(statusEl,'Pilih atau upload featured image terlebih dahulu.','danger');
-      setStatus(statusEl,'Generating 5 language versions with selected photo…'); document.getElementById('generate').disabled=true; resultEl.classList.remove('show');
+      const topic=getTopic(), accessKey=String(keyEl.value||'').trim();
+      if(!topic){ topicEl.focus(); setStatus(statusEl,'Tulis topik atau perintah artikel terlebih dahulu.','danger'); return; }
+      if(!accessKey){ keyEl.focus(); setStatus(statusEl,'Masukkan CMS access key terlebih dahulu.','danger'); return; }
+      if(!selectedImage){ setStatus(statusEl,'Pilih atau upload featured image terlebih dahulu.','danger'); return; }
+      setStatus(statusEl,'⏳ Generating 5 language versions with selected photo…'); document.getElementById('generate').disabled=true; resultEl.classList.remove('show');
       try{
         const response=await fetch(ENDPOINT,{method:'POST',headers:{'Content-Type':'text/plain;charset=utf-8'},body:JSON.stringify({action:'generate',accessKey,topic,image:selectedImage})});
-        const data=await response.json(); if(!data.ok)throw new Error(data.error||'Generation failed');
+        const raw=await response.text(); let data; try{data=JSON.parse(raw);}catch(e){throw new Error('CMS tidak mengembalikan respons JSON. Pastikan deployment Google Apps Script sudah versi terbaru.');}
+        if(!data.ok)throw new Error(data.error||'Generation failed');
         generated=data.articles;
         articlesEl.innerHTML=Object.entries(generated).map(([lang,a])=>`<article class="lang"><h3>${esc(lang.toUpperCase())} · ${esc(a.title)}</h3><div class="muted">${esc(a.description)}</div><p>${esc(a.preview||'')}</p></article>`).join('');
-        resultEl.classList.add('show'); setStatus(statusEl,'Article generated with the uploaded/selected featured image. Review the result, then publish.','success');
-      }catch(err){setStatus(statusEl,err.message||'Generation failed.','danger');}
+        resultEl.classList.add('show'); setStatus(statusEl,'✓ Article generated with the uploaded/selected featured image. Review the result, then publish.','success');
+      }catch(err){setStatus(statusEl,'✕ '+(err.message||'Generation failed.'),'danger');}
       finally{document.getElementById('generate').disabled=false;}
     });
 
     publishEl.addEventListener('click',async()=>{
-      if(!generated)return; const accessKey=keyEl.value.trim(); publishEl.disabled=true; setStatus(publishStatusEl,'Publishing article and featured image reference to GitHub…');
+      if(!generated)return; const accessKey=String(keyEl.value||'').trim(); publishEl.disabled=true; setStatus(publishStatusEl,'⏳ Publishing article and featured image reference to GitHub…');
       try{
         const response=await fetch(ENDPOINT,{method:'POST',headers:{'Content-Type':'text/plain;charset=utf-8'},body:JSON.stringify({action:'publish',accessKey,articles:generated})});
-        const data=await response.json(); if(!data.ok)throw new Error(data.error||'Publish failed'); setStatus(publishStatusEl,data.message||'Published successfully. Featured image included.','success');
-      }catch(err){setStatus(publishStatusEl,err.message||'Publish failed.','danger');}
+        const raw=await response.text(); let data; try{data=JSON.parse(raw);}catch(e){throw new Error('CMS tidak mengembalikan respons JSON.');}
+        if(!data.ok)throw new Error(data.error||'Publish failed'); setStatus(publishStatusEl,data.message||'✓ Published successfully. Featured image included.','success');
+      }catch(err){setStatus(publishStatusEl,'✕ '+(err.message||'Publish failed.'),'danger');}
       finally{publishEl.disabled=false;}
     });
 
-    document.getElementById('clear').addEventListener('click',()=>{topicEl.value='';topicValue='';imageFileEl.value='';imageUrlEl.value='';selectedImage=null;imagePreview.classList.remove('show');uploadOk.classList.remove('show');resultEl.classList.remove('show');articlesEl.innerHTML='';generated=null;setStatus(statusEl,'');setStatus(imageStatusEl,'');setStatus(publishStatusEl,'');});
+    document.getElementById('clear').addEventListener('click',()=>{topicEl.value='';imageFileEl.value='';imageUrlEl.value='';selectedImage=null;imagePreview.classList.remove('show');uploadOk.classList.remove('show');topicOkEl.classList.remove('show');resultEl.classList.remove('show');articlesEl.innerHTML='';generated=null;setStatus(statusEl,'');setStatus(imageStatusEl,'');setStatus(publishStatusEl,'');});
   </script>
 </body>
 </html>
