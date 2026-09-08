@@ -27,17 +27,15 @@ const finalDescription = seoDescription || description;
 const finalImageAlt = imageAlt || finalTitle;
 
 const siteUrl = Astro.site || new URL(Astro.url.origin);
-const currentUrl = new URL(Astro.url.pathname, siteUrl).href;
+const normalizedPath = Astro.url.pathname.endsWith('/') ? Astro.url.pathname : `${Astro.url.pathname}/`;
+const currentUrl = new URL(normalizedPath, siteUrl).href;
 
 const pathParts = Astro.url.pathname.split('/').filter(Boolean);
 const currentLangCode = pathParts[0] && Object.keys(languages).includes(pathParts[0]) ? pathParts[0] : 'id';
 const section = pathParts[1] || '';
 
 // Build language alternates from routes that actually exist.
-// Static pages use the same path in every language. Content pages are matched
-// across languages by their section plus image, which stays stable while titles/slugs are translated.
 let alternateLinks: { lang: string; href: string }[] = [];
-
 const isContentSection = ['destinations', 'packages', 'blog'].includes(section);
 
 if (!isContentSection) {
@@ -86,7 +84,14 @@ if (!isContentSection) {
   }
 }
 
-// Default TravelAgency Schema
+const localeMap: Record<string, string> = {
+  id: 'id_ID',
+  en: 'en_US',
+  es: 'es_ES',
+  fr: 'fr_FR',
+  zh: 'zh_CN'
+};
+
 const baseSchema = {
   "@context": "https://schema.org",
   "@type": "TravelAgency",
@@ -108,19 +113,30 @@ const baseSchema = {
     "longitude": 122.7842
   },
   "sameAs": [
-    "https://facebook.com/banggaiwonderland",
-    "https://instagram.com/banggaiwonderland"
+    "https://instagram.com/banggaiwonderland",
+    "https://facebook.com/banggaiwonderland"
   ],
-  "description": "Premium travel agency for exploring the hidden paradise of Banggai."
+  "description": "Premium travel agency for exploring the hidden paradise of Banggai.",
+  "mainEntityOfPage": currentUrl
 };
 
-const finalSchema = schema ? [baseSchema, schema] : baseSchema;
+const websiteSchema = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "Banggai Wonderland",
+  "url": siteUrl.href,
+  "inLanguage": currentLangCode
+};
+
+const finalSchema = schema ? [baseSchema, websiteSchema, schema] : [baseSchema, websiteSchema];
 const defaultLink = alternateLinks.find(link => link.lang === 'id');
 ---
 
 <!-- SEO Meta Tags -->
 <title>{finalTitle}</title>
 <meta name="description" content={finalDescription} />
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+<meta name="author" content="Banggai Wonderland" />
 
 <!-- Canonical -->
 <link rel="canonical" href={currentUrl} />
@@ -139,13 +155,19 @@ const defaultLink = alternateLinks.find(link => link.lang === 'id');
 <meta property="og:image" content={new URL(ogImage, siteUrl).href} />
 <meta property="og:image:alt" content={finalImageAlt} />
 <meta property="og:site_name" content="Banggai Wonderland" />
+<meta property="og:locale" content={localeMap[currentLangCode] || 'id_ID'} />
+{alternateLinks
+  .filter(link => link.lang !== currentLangCode)
+  .map(link => (
+    <meta property="og:locale:alternate" content={localeMap[link.lang] || link.lang} />
+  ))}
 
-<!-- Twitter -->
-<meta property="twitter:card" content="summary_large_image" />
-<meta property="twitter:url" content={currentUrl} />
-<meta property="twitter:title" content={finalTitle} />
-<meta property="twitter:description" content={finalDescription} />
-<meta property="twitter:image" content={new URL(ogImage, siteUrl).href} />
+<!-- Twitter / X -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:url" content={currentUrl} />
+<meta name="twitter:title" content={finalTitle} />
+<meta name="twitter:description" content={finalDescription} />
+<meta name="twitter:image" content={new URL(ogImage, siteUrl).href} />
 
 <!-- Schema.org JSON-LD -->
 <script type="application/ld+json" set:html={JSON.stringify(finalSchema)} />
