@@ -41,6 +41,9 @@ const title = 'Banggai Wonderland CMS';
     .preview.show { display:block; }
     .preview img { width:100%; max-height:280px; object-fit:cover; border-radius:14px; border:1px solid #28465c; }
     .selected { margin-top:10px; padding:10px 12px; border-radius:10px; background:#0b2437; color:#bfe4f7; font-size:13px; word-break:break-all; }
+    .upload-ok { display:none; margin-top:12px; padding:12px 14px; border-radius:12px; border:1px solid rgba(156,231,180,.25); background:rgba(33,83,55,.25); color:#b9f2c9; }
+    .upload-ok.show { display:block; }
+    .upload-ok strong { display:block; margin-bottom:4px; }
     @media(max-width:700px){ .grid,.image-grid{grid-template-columns:1fr;} .card{padding:18px;} input{font-size:16px;} }
   </style>
 </head>
@@ -78,10 +81,14 @@ const title = 'Banggai Wonderland CMS';
           </div>
         </div>
         <div class="row">
-          <button id="uploadImage">Upload / Import Photo</button>
-          <button id="useSearchImage" class="secondary">Auto Search by Topic</button>
+          <button id="uploadImage" type="button">Upload / Import Photo</button>
+          <button id="useSearchImage" type="button" class="secondary">Auto Search by Topic</button>
         </div>
         <div id="imageStatus" class="status"></div>
+        <div id="uploadOk" class="upload-ok">
+          <strong>✓ Foto berhasil terupload</strong>
+          <span id="uploadOkText"></span>
+        </div>
         <div id="imagePreview" class="preview">
           <img id="imagePreviewImg" alt="Selected featured image" />
           <div id="selectedImage" class="selected"></div>
@@ -109,11 +116,12 @@ const title = 'Banggai Wonderland CMS';
   </main>
 
   <script>
-    const ENDPOINT = 'https://script.google.com/macros/s/AKfycbxGMuyFzq0K-gKIPaamp1ClFqo6zJfNNvZfd0hxeJIJTj0N_DVPywUtkWbo5g0_F08/exec';
+    const ENDPOINT = 'https://script.google.com/macros/s/AKfycbxGMuyFzq0K-gKIPaamp1ClFqo6zYJfNNvZfd0hxeJIJTj0N_DVPywUtkWbo5g0_F08/exec';
     const topicEl=document.getElementById('topic'), keyEl=document.getElementById('accessKey'), statusEl=document.getElementById('status');
     const resultEl=document.getElementById('result'), articlesEl=document.getElementById('articles'), publishEl=document.getElementById('publish'), publishStatusEl=document.getElementById('publishStatus');
     const imageFileEl=document.getElementById('imageFile'), imageUrlEl=document.getElementById('imageUrl'), imageStatusEl=document.getElementById('imageStatus');
     const imagePreview=document.getElementById('imagePreview'), imagePreviewImg=document.getElementById('imagePreviewImg'), selectedImageEl=document.getElementById('selectedImage');
+    const uploadOk=document.getElementById('uploadOk'), uploadOkText=document.getElementById('uploadOkText');
     let generated=null, selectedImage=null, topicValue='';
 
     topicEl.addEventListener('input',()=>{ topicValue=topicEl.value; });
@@ -122,7 +130,18 @@ const title = 'Banggai Wonderland CMS';
 
     function setStatus(el,text,cls=''){el.className='status '+cls;el.textContent=text;}
     function esc(value=''){return String(value).replace(/[&<>'"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;',"'":'&#39;','"':'&quot;'}[c]));}
-    function showImage(image){selectedImage=image; imagePreviewImg.src=image.url; selectedImageEl.textContent=image.url+(image.source?' · Source: '+image.source:''); imagePreview.classList.add('show');}
+    function showImage(image){
+      selectedImage=image;
+      imagePreviewImg.src=image.url;
+      selectedImageEl.textContent=image.url+(image.source?' · Source: '+image.source:'');
+      imagePreview.classList.add('show');
+    }
+    function showUploadConfirmation(image){
+      const name=image.name||image.url.split('/').pop();
+      const path=image.path||('public'+image.url);
+      uploadOkText.textContent='File: '+name+' · Tersimpan di GitHub: '+path;
+      uploadOk.classList.add('show');
+    }
 
     document.getElementById('uploadImage').addEventListener('click',async()=>{
       const accessKey=keyEl.value.trim();
@@ -130,7 +149,8 @@ const title = 'Banggai Wonderland CMS';
       const file=imageFileEl.files[0]; const url=imageUrlEl.value.trim();
       if(!file&&!url)return setStatus(imageStatusEl,'Pilih foto atau masukkan link foto terlebih dahulu.','danger');
       if(file&&file.size>8*1024*1024)return setStatus(imageStatusEl,'Ukuran foto maksimal 8 MB.','danger');
-      setStatus(imageStatusEl,file?'Mengupload foto ke GitHub…':'Mengambil foto dari link…');
+      uploadOk.classList.remove('show');
+      setStatus(imageStatusEl,file?'Mengupload foto ke GitHub…':'Mengambil foto dari link dan menyimpannya ke GitHub…');
       document.getElementById('uploadImage').disabled=true;
       try{
         let payload={action:'uploadImage',accessKey};
@@ -140,8 +160,10 @@ const title = 'Banggai Wonderland CMS';
         }else{payload.imageUrl=url;}
         const response=await fetch(ENDPOINT,{method:'POST',headers:{'Content-Type':'text/plain;charset=utf-8'},body:JSON.stringify(payload)});
         const data=await response.json(); if(!data.ok)throw new Error(data.error||'Upload failed');
-        showImage(data.image); setStatus(imageStatusEl,'Foto siap digunakan sebagai featured image.','success');
-      }catch(err){setStatus(imageStatusEl,err.message||'Upload failed.','danger');}
+        if(!data.image||!data.image.url)throw new Error('Upload selesai tetapi URL foto tidak diterima CMS.');
+        showImage(data.image); showUploadConfirmation(data.image);
+        setStatus(imageStatusEl,'Foto berhasil terupload dan siap digunakan.','success');
+      }catch(err){uploadOk.classList.remove('show');setStatus(imageStatusEl,err.message||'Upload failed.','danger');}
       finally{document.getElementById('uploadImage').disabled=false;}
     });
 
@@ -149,12 +171,13 @@ const title = 'Banggai Wonderland CMS';
       const accessKey=keyEl.value.trim(), topic=(topicValue||topicEl.value||'').trim();
       if(!accessKey)return setStatus(imageStatusEl,'Masukkan CMS access key terlebih dahulu.','danger');
       if(!topic)return setStatus(imageStatusEl,'Tulis topic terlebih dahulu agar foto dapat dicari.','danger');
+      uploadOk.classList.remove('show');
       setStatus(imageStatusEl,'Mencari foto berdasarkan topic…');
       document.getElementById('useSearchImage').disabled=true;
       try{
         const response=await fetch(ENDPOINT,{method:'POST',headers:{'Content-Type':'text/plain;charset=utf-8'},body:JSON.stringify({action:'searchImage',accessKey,topic})});
         const data=await response.json(); if(!data.ok)throw new Error(data.error||'Image search failed');
-        showImage(data.image); setStatus(imageStatusEl,'Foto relevan ditemukan.','success');
+        showImage(data.image); setStatus(imageStatusEl,'Foto relevan ditemukan dan dipilih sebagai featured image.','success');
       }catch(err){setStatus(imageStatusEl,err.message||'Image search failed.','danger');}
       finally{document.getElementById('useSearchImage').disabled=false;}
     });
@@ -163,27 +186,28 @@ const title = 'Banggai Wonderland CMS';
       const topic=(topicValue||topicEl.value||'').trim(), accessKey=keyEl.value.trim();
       if(!topic){ topicEl.focus(); return setStatus(statusEl,'Tulis topik atau perintah artikel terlebih dahulu.','danger'); }
       if(!accessKey){ keyEl.focus(); return setStatus(statusEl,'Masukkan CMS access key terlebih dahulu.','danger'); }
-      setStatus(statusEl,'Generating 5 language versions…'); document.getElementById('generate').disabled=true; resultEl.classList.remove('show');
+      if(!selectedImage) return setStatus(statusEl,'Pilih atau upload featured image terlebih dahulu.','danger');
+      setStatus(statusEl,'Generating 5 language versions with selected photo…'); document.getElementById('generate').disabled=true; resultEl.classList.remove('show');
       try{
         const response=await fetch(ENDPOINT,{method:'POST',headers:{'Content-Type':'text/plain;charset=utf-8'},body:JSON.stringify({action:'generate',accessKey,topic,image:selectedImage})});
         const data=await response.json(); if(!data.ok)throw new Error(data.error||'Generation failed');
         generated=data.articles;
         articlesEl.innerHTML=Object.entries(generated).map(([lang,a])=>`<article class="lang"><h3>${esc(lang.toUpperCase())} · ${esc(a.title)}</h3><div class="muted">${esc(a.description)}</div><p>${esc(a.preview||'')}</p></article>`).join('');
-        resultEl.classList.add('show'); setStatus(statusEl,'Article generated. Review the result, then publish.','success');
+        resultEl.classList.add('show'); setStatus(statusEl,'Article generated with the uploaded/selected featured image. Review the result, then publish.','success');
       }catch(err){setStatus(statusEl,err.message||'Generation failed.','danger');}
       finally{document.getElementById('generate').disabled=false;}
     });
 
     publishEl.addEventListener('click',async()=>{
-      if(!generated)return; const accessKey=keyEl.value.trim(); publishEl.disabled=true; setStatus(publishStatusEl,'Publishing to GitHub…');
+      if(!generated)return; const accessKey=keyEl.value.trim(); publishEl.disabled=true; setStatus(publishStatusEl,'Publishing article and featured image reference to GitHub…');
       try{
         const response=await fetch(ENDPOINT,{method:'POST',headers:{'Content-Type':'text/plain;charset=utf-8'},body:JSON.stringify({action:'publish',accessKey,articles:generated})});
-        const data=await response.json(); if(!data.ok)throw new Error(data.error||'Publish failed'); setStatus(publishStatusEl,data.message||'Published successfully.','success');
+        const data=await response.json(); if(!data.ok)throw new Error(data.error||'Publish failed'); setStatus(publishStatusEl,data.message||'Published successfully. Featured image included.','success');
       }catch(err){setStatus(publishStatusEl,err.message||'Publish failed.','danger');}
       finally{publishEl.disabled=false;}
     });
 
-    document.getElementById('clear').addEventListener('click',()=>{topicEl.value='';topicValue='';imageFileEl.value='';imageUrlEl.value='';selectedImage=null;imagePreview.classList.remove('show');resultEl.classList.remove('show');articlesEl.innerHTML='';generated=null;setStatus(statusEl,'');setStatus(imageStatusEl,'');setStatus(publishStatusEl,'');});
+    document.getElementById('clear').addEventListener('click',()=>{topicEl.value='';topicValue='';imageFileEl.value='';imageUrlEl.value='';selectedImage=null;imagePreview.classList.remove('show');uploadOk.classList.remove('show');resultEl.classList.remove('show');articlesEl.innerHTML='';generated=null;setStatus(statusEl,'');setStatus(imageStatusEl,'');setStatus(publishStatusEl,'');});
   </script>
 </body>
 </html>
