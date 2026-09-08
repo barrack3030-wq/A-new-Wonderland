@@ -81,7 +81,7 @@ const title = 'Banggai Wonderland CMS';
   </main>
 
   <script>
-    const ENDPOINT = 'PASTE_GOOGLE_APPS_SCRIPT_WEB_APP_URL_HERE';
+    const ENDPOINT = 'https://script.google.com/macros/s/AKfycbxGMuyFzq0K-gKIPaamp1ClFqo6zYJfNNvZfd0hxeJIJTj0N_DVPywUtkWbo5g0_F08/exec';
     const topicEl = document.getElementById('topic');
     const keyEl = document.getElementById('accessKey');
     const statusEl = document.getElementById('status');
@@ -99,7 +99,6 @@ const title = 'Banggai Wonderland CMS';
       const accessKey = keyEl.value.trim();
       if (!topic) return setStatus(statusEl, 'Tulis topik atau perintah artikel terlebih dahulu.', 'danger');
       if (!accessKey) return setStatus(statusEl, 'Masukkan CMS access key terlebih dahulu.', 'danger');
-      if (ENDPOINT.includes('PASTE_')) return setStatus(statusEl, 'CMS belum dikonfigurasi: isi URL Google Apps Script pada file CMS.', 'danger');
       setStatus(statusEl, 'Generating 5 language versions…');
       document.getElementById('generate').disabled = true;
       resultEl.classList.remove('show');
