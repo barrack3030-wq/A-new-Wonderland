@@ -1,11 +1,11 @@
 ---
-title: '10 Destinasi Wisata Terbaik di Luwuk dan Banggai yang Wajib Dikunjungi'
-description: 'Panduan 10 destinasi wisata terbaik di Luwuk dan Banggai, dari Danau Paisupok dan pantai-pantai tersembunyi hingga air terjun dan pulau tropis.'
-seoTitle: '10 Destinasi Wisata Terbaik di Luwuk dan Banggai yang Wajib Dikunjungi'
+image: /images/oyama-beach.webp
+imageAlt: Poganda Beach, salah satu destinasi wisata terbaik di Banggai
+title: 10 Destinasi Wisata Terbaik di Luwuk dan Banggai yang Wajib Dikunjungi
+description: Panduan 10 destinasi wisata terbaik di Luwuk dan Banggai, dari Danau Paisupok dan pantai-pantai tersembunyi hingga air terjun dan pulau tropis.
+seoTitle: 10 Destinasi Wisata Terbaik di Luwuk dan Banggai yang Wajib Dikunjungi
 seoDescription: 'Temukan 10 destinasi wisata terbaik di Luwuk dan Banggai, Sulawesi Tengah: Danau Paisupok, Pantai Poganda, Mandel Beach, Pulo Dua, Oyama, Kawalu Bay, dan destinasi alam pilihan lainnya.'
-image: /images/Poganda-Beach-Banggai-IndonesiaJuara-Trip.webp
-imageAlt: 'Poganda Beach, salah satu destinasi wisata terbaik di Banggai'
-author: 'aji'
+author: aji
 pubDate: 2026-09-08T21:00:00
 tags:
   - Luwuk
