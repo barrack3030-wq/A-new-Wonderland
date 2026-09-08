@@ -9,6 +9,7 @@ const LANGUAGES = {
 };
 
 const DEFAULT_IMAGE = '/images/Poganda-Beach-Banggai-IndonesiaJuara-Trip.webp';
+const WIKIMEDIA_API = 'https://commons.wikimedia.org/w/api.php';
 
 function doGet() {
   return jsonResponse({
@@ -77,20 +78,10 @@ function checkAccessKey(value) {
   }
 }
 
+// Generate all five languages in parallel instead of waiting for five
+// sequential OpenAI requests. This dramatically reduces the chance that the
+// browser request expires while Apps Script is still working.
 function generateArticles(topic) {
-  const articles = {};
-
-  Object.keys(LANGUAGES).forEach(function(lang) {
-    articles[lang] = generateArticle(
-      topic,
-      LANGUAGES[lang]
-    );
-  });
-
-  return articles;
-}
-
-function generateArticle(topic, languageName) {
   const apiKey = PropertiesService
     .getScriptProperties()
     .getProperty('OPENAI_API_KEY');
@@ -99,7 +90,81 @@ function generateArticle(topic, languageName) {
     throw new Error('OPENAI_API_KEY belum diset di Script Properties.');
   }
 
-  const prompt = `
+  const image = findRelevantImage(topic);
+  const languageCodes = Object.keys(LANGUAGES);
+
+  const requests = languageCodes.map(function(lang) {
+    return {
+      url: 'https://api.openai.com/v1/responses',
+      method: 'post',
+      contentType: 'application/json',
+      headers: {
+        Authorization: 'Bearer ' + apiKey
+      },
+      payload: JSON.stringify({
+        model: OPENAI_MODEL,
+        input: buildPrompt(topic, LANGUAGES[lang], image)
+      }),
+      muteHttpExceptions: true
+    };
+  });
+
+  const responses = UrlFetchApp.fetchAll(requests);
+  const articles = {};
+
+  responses.forEach(function(response, index) {
+    const lang = languageCodes[index];
+    const status = response.getResponseCode();
+    const raw = response.getContentText();
+
+    if (status < 200 || status >= 300) {
+      throw new Error('OpenAI error [' + lang + '] (' + status + '): ' + raw);
+    }
+
+    const data = JSON.parse(raw);
+    const output = extractOpenAIText(data);
+
+    if (!output) {
+      throw new Error('OpenAI tidak mengembalikan output teks untuk bahasa ' + lang + '.');
+    }
+
+    const cleaned = output
+      .replace(/^```json\s*/i, '')
+      .replace(/^```\s*/i, '')
+      .replace(/\s*```$/i, '')
+      .trim();
+
+    let article;
+
+    try {
+      article = JSON.parse(cleaned);
+    } catch (error) {
+      throw new Error('Output OpenAI bukan JSON valid untuk bahasa ' + lang + '.');
+    }
+
+    validateArticle(article);
+
+    articles[lang] = {
+      title: String(article.title),
+      description: String(article.description),
+      seoTitle: article.seoTitle ? String(article.seoTitle) : '',
+      seoDescription: article.seoDescription ? String(article.seoDescription) : '',
+      image: image.url || DEFAULT_IMAGE,
+      imageAlt: image.alt || (article.imageAlt ? String(article.imageAlt) : ''),
+      imageSource: image.source || '',
+      author: article.author ? String(article.author) : 'Banggai Wonderland',
+      pubDate: article.pubDate ? String(article.pubDate) : getToday(),
+      tags: Array.isArray(article.tags) ? article.tags.map(String) : ['Banggai', 'Indonesia', 'Travel'],
+      content: String(article.content),
+      preview: createPreview(article.content)
+    };
+  });
+
+  return articles;
+}
+
+function buildPrompt(topic, languageName, image) {
+  return `
 You are the professional travel content writer for Banggai Wonderland.
 
 Website: Banggai Wonderland
@@ -112,6 +177,10 @@ ${topic}
 
 LANGUAGE:
 Write the complete article in ${languageName}.
+
+FEATURED IMAGE:
+Use this image because it was selected specifically from Wikimedia Commons based on the destination/topic:
+${image.url || DEFAULT_IMAGE}
 
 Create a high-quality, natural, SEO-friendly travel article.
 
@@ -127,6 +196,7 @@ Rules:
 - The article must be genuinely useful to travelers.
 - The article body must be Markdown.
 - Do not use HTML.
+- Keep destination names such as Mbuang-Mbuang, Banggai Laut, Luwuk and Banggai unchanged when they are proper place names.
 
 Return ONLY valid JSON with this exact structure:
 {
@@ -134,8 +204,8 @@ Return ONLY valid JSON with this exact structure:
   "description": "Short article description",
   "seoTitle": "SEO title",
   "seoDescription": "SEO meta description",
-  "image": "${DEFAULT_IMAGE}",
-  "imageAlt": "Descriptive image alt text",
+  "image": "${image.url || DEFAULT_IMAGE}",
+  "imageAlt": "Descriptive image alt text in the article language",
   "author": "Banggai Wonderland",
   "pubDate": "${getToday()}",
   "tags": ["Banggai", "Indonesia", "Travel"],
@@ -144,66 +214,132 @@ Return ONLY valid JSON with this exact structure:
 
 Do not wrap the JSON in markdown code fences.
 `;
+}
+
+// Search Wikimedia Commons using the actual topic/destination keywords.
+// The API returns image URLs and optional scaled thumbnails; this lets the CMS
+// choose a real destination image instead of always using one generic photo.
+function findRelevantImage(topic) {
+  const text = String(topic || '').trim();
+  const lower = text.toLowerCase();
+  const queries = [];
+
+  if (lower.indexOf('mbuang') !== -1) {
+    queries.push('Mbuang-Mbuang Banggai Laut');
+    queries.push('Mbuang Mbuang Banggai');
+  }
+
+  queries.push(text + ' Banggai Indonesia');
+
+  for (let i = 0; i < queries.length; i++) {
+    const result = searchWikimediaImages(queries[i]);
+    if (result) return result;
+  }
+
+  return {
+    url: DEFAULT_IMAGE,
+    alt: 'Banggai tropical destination in Indonesia',
+    source: ''
+  };
+}
+
+function searchWikimediaImages(query) {
+  const params = [
+    'action=query',
+    'format=json',
+    'generator=search',
+    'gsrnamespace=6',
+    'gsrlimit=8',
+    'gsrsearch=' + encodeURIComponent(query),
+    'prop=imageinfo',
+    'iiprop=url|mime|size|extmetadata',
+    'iiurlwidth=1600',
+    'origin=*'
+  ].join('&');
 
   const response = UrlFetchApp.fetch(
-    'https://api.openai.com/v1/responses',
+    WIKIMEDIA_API + '?' + params,
     {
-      method: 'post',
-      contentType: 'application/json',
+      method: 'get',
+      muteHttpExceptions: true,
       headers: {
-        Authorization: 'Bearer ' + apiKey
-      },
-      payload: JSON.stringify({
-        model: OPENAI_MODEL,
-        input: prompt
-      }),
-      muteHttpExceptions: true
+        'User-Agent': 'BanggaiWonderlandCMS/1.0'
+      }
     }
   );
 
-  const status = response.getResponseCode();
-  const raw = response.getContentText();
-
-  if (status < 200 || status >= 300) {
-    throw new Error('OpenAI error (' + status + '): ' + raw);
+  if (response.getResponseCode() < 200 || response.getResponseCode() >= 300) {
+    return null;
   }
 
-  const data = JSON.parse(raw);
-  const output = extractOpenAIText(data);
-
-  if (!output) {
-    throw new Error('OpenAI tidak mengembalikan output teks.');
-  }
-
-  const cleaned = output
-    .replace(/^```json\s*/i, '')
-    .replace(/^```\s*/i, '')
-    .replace(/\s*```$/i, '')
-    .trim();
-
-  let article;
-
+  let data;
   try {
-    article = JSON.parse(cleaned);
+    data = JSON.parse(response.getContentText());
   } catch (error) {
-    throw new Error('Output OpenAI bukan JSON valid.');
+    return null;
   }
 
-  validateArticle(article);
+  const pages = data.query && data.query.pages
+    ? Object.keys(data.query.pages).map(function(key) { return data.query.pages[key]; })
+    : [];
 
-  return {
-    title: String(article.title),
-    description: String(article.description),
-    seoTitle: article.seoTitle ? String(article.seoTitle) : '',
-    seoDescription: article.seoDescription ? String(article.seoDescription) : '',
-    image: article.image ? String(article.image) : DEFAULT_IMAGE,
-    imageAlt: article.imageAlt ? String(article.imageAlt) : '',
-    author: article.author ? String(article.author) : 'Banggai Wonderland',
-    pubDate: article.pubDate ? String(article.pubDate) : getToday(),
-    tags: Array.isArray(article.tags) ? article.tags.map(String) : ['Banggai', 'Indonesia', 'Travel'],
-    content: String(article.content),
-    preview: createPreview(article.content)
-  };
+  const normalizedQuery = normalizeSearchText(query);
+  const queryWords = normalizedQuery.split(' ').filter(function(word) {
+    return word.length >= 4;
+  });
+
+  let best = null;
+  let bestScore = -1;
+
+  pages.forEach(function(page) {
+    const info = page.imageinfo && page.imageinfo[0];
+    if (!info || !info.url) return;
+
+    const mime = String(info.mime || '').toLowerCase();
+    if (mime === 'image/svg+xml' || mime.indexOf('image/') !== 0) return;
+
+    const title = normalizeSearchText(page.title || '');
+    let score = 0;
+
+    queryWords.forEach(function(word) {
+      if (title.indexOf(word) !== -1) score += 5;
+    });
+
+    if (title.indexOf('mbuang') !== -1 && normalizedQuery.indexOf('mbuang') !== -1) score += 30;
+    if (title.indexOf('banggai') !== -1 && normalizedQuery.indexOf('banggai') !== -1) score += 10;
+    if (title.indexOf('laut') !== -1 && normalizedQuery.indexOf('laut') !== -1) score += 5;
+
+    if (info.width && info.height) {
+      const pixels = Number(info.width) * Number(info.height);
+      if (pixels >= 1000000) score += 3;
+    }
+
+    if (score > bestScore) {
+      bestScore = score;
+      const metadata = info.extmetadata || {};
+      best = {
+        url: info.thumburl || info.url,
+        alt: metadata.ImageDescription && metadata.ImageDescription.value
+          ? stripHtml(metadata.ImageDescription.value)
+          : String(page.title || 'Banggai destination'),
+        source: info.descriptionurl || ''
+      };
+    }
+  });
+
+  return best;
+}
+
+function normalizeSearchText(value) {
+  return String(value || '')
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, ' ')
+    .replace(/\s+/g, ' ')
+    .trim();
+}
+
+function stripHtml(value) {
+  return String(value || '').replace(/<[^>]*>/g, ' ').replace(/\s+/g, ' ').trim();
 }
 
 function extractOpenAIText(response) {
@@ -236,7 +372,6 @@ function validateArticle(article) {
   const required = [
     'title',
     'description',
-    'image',
     'author',
     'pubDate',
     'content'
@@ -265,6 +400,7 @@ function createPreview(content) {
 
 function publishArticles(articles) {
   const files = [];
+  const translationKey = createTranslationKey(articles.id || articles.en || articles.es || articles.fr || articles.zh);
 
   Object.keys(LANGUAGES).forEach(function(lang) {
     const article = articles[lang];
@@ -279,7 +415,7 @@ function publishArticles(articles) {
     }
 
     const path = 'src/content/blog/' + lang + '/' + getToday() + '-' + slug + '.md';
-    const content = createMarkdown(article);
+    const content = createMarkdown(article, translationKey);
 
     githubCreateFile(
       path,
@@ -297,7 +433,12 @@ function publishArticles(articles) {
   return { files: files };
 }
 
-function createMarkdown(article) {
+function createTranslationKey(article) {
+  const source = article && article.title ? article.title : 'banggai-wonderland-article';
+  return getToday() + '-' + createSlug(source).substring(0, 70);
+}
+
+function createMarkdown(article, translationKey) {
   let markdown = '---\n';
 
   markdown += 'title: "' + yamlEscape(article.title) + '"\n';
@@ -317,8 +458,13 @@ function createMarkdown(article) {
     markdown += 'imageAlt: "' + yamlEscape(article.imageAlt) + '"\n';
   }
 
+  if (article.imageSource) {
+    markdown += 'imageSource: "' + yamlEscape(article.imageSource) + '"\n';
+  }
+
   markdown += 'author: "' + yamlEscape(article.author || 'Banggai Wonderland') + '"\n';
   markdown += 'pubDate: ' + normalizeDate(article.pubDate) + '\n';
+  markdown += 'translationKey: "' + yamlEscape(translationKey) + '"\n';
 
   if (Array.isArray(article.tags) && article.tags.length) {
     markdown += 'tags:\n';
