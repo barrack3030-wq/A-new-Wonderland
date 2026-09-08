@@ -20,6 +20,7 @@ travelTips:
   - 带上换洗衣服和毛巾
   - 使用防滑鞋
   - 不要乱扔垃圾
+youtube: "https://www.youtube.com/watch?v=7_fiYirWPRc&t=18s"
 ---
 
 ## 皮亚拉瀑布的魅力
