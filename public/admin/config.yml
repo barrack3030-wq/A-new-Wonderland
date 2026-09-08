@@ -3,13 +3,16 @@ backend:
   repo: barrack3030-wq/A-new-Wonderland
   branch: main
 
-# Enable local backend for local development (run 'npx decap-server' locally)
 local_backend: true
 
 media_folder: "public/images"
 public_folder: "/images"
 
-# Configure multilingual support (5 languages)
+slug:
+  encoding: "ascii"
+  clean_accents: true
+  sanitize_replacement: "-"
+
 i18n:
   structure: multiple_folders
   locales: [id, en, es, fr, zh]
@@ -71,19 +74,20 @@ collections:
     folder: "src/content/blog"
     create: true
     i18n: true
-    slug: "{{slug}}"
+    slug: "{{slug | localize}}"
     fields:
-      # Shared article media: upload/select the featured image only once in Indonesian.
-      # All translated versions reuse the same image reference.
-      - {label: "Featured Image", name: "image", widget: "image", i18n: false}
+      # Featured image is shared across all language versions.
+      - {label: "Featured Image", name: "image", widget: "image", i18n: duplicate}
       - {label: "Image Alt", name: "imageAlt", widget: "string", required: false, i18n: true}
       - {label: "Title", name: "title", widget: "string", i18n: true}
       - {label: "Description", name: "description", widget: "text", i18n: true}
       - {label: "SEO Title", name: "seoTitle", widget: "string", required: false, i18n: true}
       - {label: "SEO Description", name: "seoDescription", widget: "text", required: false, i18n: true}
-      - {label: "Author", name: "author", widget: "string", i18n: true}
-      - {label: "Publish Date", name: "pubDate", widget: "datetime", i18n: true}
-      - {label: "Tags", name: "tags", widget: "list", required: false, i18n: true}
-      # Body remains fully translatable and continues to support inline images.
-      # Inline images use the shared Media Library and are not duplicated per language.
+      # These values are shared, not translated independently.
+      - {label: "Author", name: "author", widget: "string", i18n: duplicate}
+      - {label: "Publish Date", name: "pubDate", widget: "datetime", i18n: duplicate}
+      - {label: "Tags", name: "tags", widget: "list", required: false, i18n: duplicate}
       - {label: "Body", name: "body", widget: "markdown", i18n: true}
+      # Internal fields used by the website/CMS integration. Keep them out of the editor UI.
+      - {label: "Image Source", name: "imageSource", widget: "hidden", required: false}
+      - {label: "Translation Key", name: "translationKey", widget: "hidden", required: false}
