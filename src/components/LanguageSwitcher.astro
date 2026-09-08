@@ -17,8 +17,6 @@ const languages = [
   { code: 'zh', label: '中文' }
 ];
 
-// Blog translations are linked by translationKey instead of assuming
-// that every language has the same slug.
 const blogPosts = await getCollection('blog');
 
 const pathParts = Astro.url.pathname.split('/').filter(Boolean);
@@ -30,9 +28,63 @@ const currentPost = isBlogPost
   ? blogPosts.find((post) => post.slug === `${pathLang}/${currentSlug}`)
   : undefined;
 
+const normalize = (value: string) =>
+  value
+    .toLowerCase()
+    .normalize('NFD')
+    .replace(/[\u0300-\u036f]/g, '')
+    .replace(/[^a-z0-9]+/g, ' ')
+    .trim();
+
+const getFallbackTranslation = (newLang: string) => {
+  if (!currentPost) return undefined;
+
+  const currentTitle = normalize(currentPost.data.title);
+  const currentDescription = normalize(currentPost.data.description || '');
+  const currentTags = (currentPost.data.tags || []).map((tag) => normalize(tag));
+  const currentWords = currentTitle.split(' ').filter((word) => word.length >= 5);
+  const currentDate = currentPost.data.pubDate?.toISOString().slice(0, 10);
+
+  const candidates = blogPosts.filter((post) => {
+    if (!post.slug.startsWith(`${newLang}/`)) return false;
+    const date = post.data.pubDate?.toISOString().slice(0, 10);
+    return date === currentDate;
+  });
+
+  let best;
+  let bestScore = 0;
+
+  for (const candidate of candidates) {
+    const title = normalize(candidate.data.title);
+    const description = normalize(candidate.data.description || '');
+    const tags = (candidate.data.tags || []).map((tag) => normalize(tag));
+    let score = 0;
+
+    // Strong destination anchors shared across translations.
+    for (const word of currentWords) {
+      if (title.includes(word)) score += 6;
+      if (description.includes(word)) score += 2;
+    }
+
+    for (const tag of currentTags) {
+      if (tags.includes(tag)) score += 8;
+      if (title.includes(tag)) score += 3;
+    }
+
+    if (title.includes('mbuang') && currentTitle.includes('mbuang')) score += 30;
+    if (title.includes('paisu') && currentTitle.includes('paisu')) score += 30;
+    if (title.includes('piala') && currentTitle.includes('piala')) score += 30;
+
+    if (score > bestScore) {
+      bestScore = score;
+      best = candidate;
+    }
+  }
+
+  return bestScore >= 12 ? best : undefined;
+};
+
 const getPath = (newLang: string) => {
-  // For a blog article, find the exact translated entry using translationKey.
-  // This prevents 404s when AI-generated titles create different slugs.
   if (isBlogPost) {
     const translationKey = currentPost?.data?.translationKey;
 
@@ -44,25 +96,20 @@ const getPath = (newLang: string) => {
       );
 
       if (translatedPost) {
-        const translatedSlug = translatedPost.slug
-          .split('/')
-          .slice(1)
-          .join('/');
+        const translatedSlug = translatedPost.slug.split('/').slice(1).join('/');
         return `/${newLang}/blog/${translatedSlug}/`;
       }
     }
 
-    // Legacy articles without translationKey: never send the visitor to a
-    // guessed/nonexistent slug. If the same slug exists, use it; otherwise
-    // safely return to that language's blog index.
-    const sameSlugPost = blogPosts.find(
-      (post) => post.slug === `${newLang}/${currentSlug}`
-    );
-
-    if (sameSlugPost) {
-      return `/${newLang}/blog/${currentSlug}/`;
+    // Legacy articles created before translationKey: identify the matching
+    // translation by date + destination/topic words instead of guessing a slug.
+    const fallbackPost = getFallbackTranslation(newLang);
+    if (fallbackPost) {
+      const translatedSlug = fallbackPost.slug.split('/').slice(1).join('/');
+      return `/${newLang}/blog/${translatedSlug}/`;
     }
 
+    // Never create a guessed 404 URL.
     return `/${newLang}/blog/`;
   }
 
