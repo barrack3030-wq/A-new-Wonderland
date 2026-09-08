@@ -20,6 +20,7 @@ travelTips:
   - 带上你最好的相机
   - 穿舒适的衣服
   - 保持环境清洁
+youtube: "https://www.youtube.com/watch?v=51WQQ4nbepg"
 ---
 
 ## Teduang Beach
