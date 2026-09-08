@@ -24,7 +24,7 @@ const title = 'Banggai Wonderland CMS';
     .grid { display:grid; grid-template-columns:1fr 180px; gap:14px; }
     .image-grid { display:grid; grid-template-columns:1fr 1fr; gap:14px; }
     .row { display:flex; gap:10px; flex-wrap:wrap; margin-top:16px; }
-    button { border:0; border-radius:12px; padding:12px 18px; font-weight:800; cursor:pointer; color:#03121d; background:#65c8f2; }
+    button { border:0; border-radius:12px; padding:12px 18px; font-weight:800; cursor:pointer; color:#03121d; background:#65c8f2; touch-action:manipulation; }
     button.secondary { background:#17364d; color:#dceffc; }
     button:disabled { opacity:.5; cursor:not-allowed; }
     .status { margin-top:14px; color:#9fc0d6; min-height:22px; white-space:pre-wrap; }
@@ -41,7 +41,7 @@ const title = 'Banggai Wonderland CMS';
     .preview.show { display:block; }
     .preview img { width:100%; max-height:280px; object-fit:cover; border-radius:14px; border:1px solid #28465c; }
     .selected { margin-top:10px; padding:10px 12px; border-radius:10px; background:#0b2437; color:#bfe4f7; font-size:13px; word-break:break-all; }
-    @media(max-width:700px){ .grid,.image-grid{grid-template-columns:1fr;} .card{padding:18px;} }
+    @media(max-width:700px){ .grid,.image-grid{grid-template-columns:1fr;} .card{padding:18px;} input{font-size:16px;} }
   </style>
 </head>
 <body>
@@ -55,7 +55,7 @@ const title = 'Banggai Wonderland CMS';
       <div class="grid">
         <div>
           <label for="topic">Article topic / command</label>
-          <input id="topic" placeholder="Contoh: Buat artikel SEO tentang Paisupok Lake untuk wisatawan Australia" />
+          <input id="topic" type="text" autocomplete="off" autocapitalize="sentences" placeholder="Contoh: Buat artikel SEO tentang Paisupok Lake untuk wisatawan Australia" />
         </div>
         <div>
           <label for="model">AI model</label>
@@ -94,8 +94,8 @@ const title = 'Banggai Wonderland CMS';
         <div class="muted small" style="margin-top:7px">Access key tidak disimpan di website.</div>
       </div>
       <div class="row">
-        <button id="generate">Generate Article</button>
-        <button id="clear" class="secondary">Clear</button>
+        <button id="generate" type="button">Generate Article</button>
+        <button id="clear" type="button" class="secondary">Clear</button>
       </div>
       <div id="status" class="status"></div>
     </section>
@@ -103,18 +103,22 @@ const title = 'Banggai Wonderland CMS';
     <section id="result" class="card result">
       <h2>Generated article</h2>
       <div id="articles"></div>
-      <div class="row"><button id="publish">Publish to GitHub</button></div>
+      <div class="row"><button id="publish" type="button">Publish to GitHub</button></div>
       <div id="publishStatus" class="status"></div>
     </section>
   </main>
 
   <script>
-    const ENDPOINT = 'https://script.google.com/macros/s/AKfycbxGMuyFzq0K-gKIPaamp1ClFqo6zYJfNNvZfd0hxeJIJTj0N_DVPywUtkWbo5g0_F08/exec';
+    const ENDPOINT = 'https://script.google.com/macros/s/AKfycbxGMuyFzq0K-gKIPaamp1ClFqo6zJfNNvZfd0hxeJIJTj0N_DVPywUtkWbo5g0_F08/exec';
     const topicEl=document.getElementById('topic'), keyEl=document.getElementById('accessKey'), statusEl=document.getElementById('status');
     const resultEl=document.getElementById('result'), articlesEl=document.getElementById('articles'), publishEl=document.getElementById('publish'), publishStatusEl=document.getElementById('publishStatus');
     const imageFileEl=document.getElementById('imageFile'), imageUrlEl=document.getElementById('imageUrl'), imageStatusEl=document.getElementById('imageStatus');
     const imagePreview=document.getElementById('imagePreview'), imagePreviewImg=document.getElementById('imagePreviewImg'), selectedImageEl=document.getElementById('selectedImage');
-    let generated=null, selectedImage=null;
+    let generated=null, selectedImage=null, topicValue='';
+
+    topicEl.addEventListener('input',()=>{ topicValue=topicEl.value; });
+    topicEl.addEventListener('change',()=>{ topicValue=topicEl.value; });
+    topicEl.addEventListener('blur',()=>{ topicValue=topicEl.value; });
 
     function setStatus(el,text,cls=''){el.className='status '+cls;el.textContent=text;}
     function esc(value=''){return String(value).replace(/[&<>'"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;',"'":'&#39;','"':'&quot;'}[c]));}
@@ -142,7 +146,7 @@ const title = 'Banggai Wonderland CMS';
     });
 
     document.getElementById('useSearchImage').addEventListener('click',async()=>{
-      const accessKey=keyEl.value.trim(), topic=topicEl.value.trim();
+      const accessKey=keyEl.value.trim(), topic=(topicValue||topicEl.value||'').trim();
       if(!accessKey)return setStatus(imageStatusEl,'Masukkan CMS access key terlebih dahulu.','danger');
       if(!topic)return setStatus(imageStatusEl,'Tulis topic terlebih dahulu agar foto dapat dicari.','danger');
       setStatus(imageStatusEl,'Mencari foto berdasarkan topic…');
@@ -156,9 +160,9 @@ const title = 'Banggai Wonderland CMS';
     });
 
     document.getElementById('generate').addEventListener('click',async()=>{
-      const topic=topicEl.value.trim(), accessKey=keyEl.value.trim();
-      if(!topic)return setStatus(statusEl,'Tulis topik atau perintah artikel terlebih dahulu.','danger');
-      if(!accessKey)return setStatus(statusEl,'Masukkan CMS access key terlebih dahulu.','danger');
+      const topic=(topicValue||topicEl.value||'').trim(), accessKey=keyEl.value.trim();
+      if(!topic){ topicEl.focus(); return setStatus(statusEl,'Tulis topik atau perintah artikel terlebih dahulu.','danger'); }
+      if(!accessKey){ keyEl.focus(); return setStatus(statusEl,'Masukkan CMS access key terlebih dahulu.','danger'); }
       setStatus(statusEl,'Generating 5 language versions…'); document.getElementById('generate').disabled=true; resultEl.classList.remove('show');
       try{
         const response=await fetch(ENDPOINT,{method:'POST',headers:{'Content-Type':'text/plain;charset=utf-8'},body:JSON.stringify({action:'generate',accessKey,topic,image:selectedImage})});
@@ -179,7 +183,7 @@ const title = 'Banggai Wonderland CMS';
       finally{publishEl.disabled=false;}
     });
 
-    document.getElementById('clear').addEventListener('click',()=>{topicEl.value='';imageFileEl.value='';imageUrlEl.value='';selectedImage=null;imagePreview.classList.remove('show');resultEl.classList.remove('show');articlesEl.innerHTML='';generated=null;setStatus(statusEl,'');setStatus(imageStatusEl,'');setStatus(publishStatusEl,'');});
+    document.getElementById('clear').addEventListener('click',()=>{topicEl.value='';topicValue='';imageFileEl.value='';imageUrlEl.value='';selectedImage=null;imagePreview.classList.remove('show');resultEl.classList.remove('show');articlesEl.innerHTML='';generated=null;setStatus(statusEl,'');setStatus(imageStatusEl,'');setStatus(publishStatusEl,'');});
   </script>
 </body>
 </html>
