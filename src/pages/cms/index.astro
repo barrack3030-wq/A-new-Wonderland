@@ -46,6 +46,9 @@ const title = 'Banggai Wonderland CMS';
     .upload-ok strong { display:block; margin-bottom:4px; }
     .topic-ok { display:none; margin-top:8px; color:#9ce7b4; font-size:12px; }
     .topic-ok.show { display:block; }
+    .password-wrap { position:relative; }
+    .password-wrap input { padding-right:92px; }
+    .toggle-password { position:absolute; right:6px; top:6px; height:calc(100% - 12px); padding:0 12px; border-radius:9px; background:#17364d; color:#dceffc; font-size:12px; }
     @media(max-width:700px){ .grid,.image-grid{grid-template-columns:1fr;} .card{padding:18px;} input,textarea{font-size:16px;} }
   </style>
 </head>
@@ -100,7 +103,10 @@ const title = 'Banggai Wonderland CMS';
 
       <div style="margin-top:14px">
         <label for="accessKey">CMS access key</label>
-        <input id="accessKey" type="password" autocomplete="off" placeholder="Masukkan access key dari Google Apps Script" />
+        <div class="password-wrap">
+          <input id="accessKey" type="password" autocomplete="off" placeholder="Masukkan access key dari Google Apps Script" />
+          <button id="togglePassword" type="button" class="toggle-password">Lihat</button>
+        </div>
         <div class="muted small" style="margin-top:7px">Access key tidak disimpan di website.</div>
       </div>
       <div class="row">
@@ -125,11 +131,18 @@ const title = 'Banggai Wonderland CMS';
     const imageFileEl=document.getElementById('imageFile'), imageUrlEl=document.getElementById('imageUrl'), imageStatusEl=document.getElementById('imageStatus');
     const imagePreview=document.getElementById('imagePreview'), imagePreviewImg=document.getElementById('imagePreviewImg'), selectedImageEl=document.getElementById('selectedImage');
     const uploadOk=document.getElementById('uploadOk'), uploadOkText=document.getElementById('uploadOkText');
+    const togglePasswordEl=document.getElementById('togglePassword');
     let generated=null, selectedImage=null;
 
     function getTopic(){ return String(topicEl.value || '').replace(/\u200B/g,'').trim(); }
     function refreshTopicState(){ topicOkEl.classList.toggle('show',!!getTopic()); }
     ['input','change','keyup','paste','blur'].forEach(eventName=>topicEl.addEventListener(eventName,()=>{ setTimeout(refreshTopicState,0); }));
+
+    togglePasswordEl.addEventListener('click',()=>{
+      const showing=keyEl.type==='text';
+      keyEl.type=showing?'password':'text';
+      togglePasswordEl.textContent=showing?'Lihat':'Sembunyikan';
+    });
 
     function setStatus(el,text,cls=''){el.className='status '+cls;el.textContent=text;}
     function esc(value=''){return String(value).replace(/[&<>'"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;',"'":'&#39;','"':'&quot;'}[c]));}
@@ -168,7 +181,7 @@ const title = 'Banggai Wonderland CMS';
         }else{payload.imageUrl=url;}
         const response=await fetch(ENDPOINT,{method:'POST',headers:{'Content-Type':'text/plain;charset=utf-8'},body:JSON.stringify(payload)});
         const raw=await response.text();
-        let data; try{data=JSON.parse(raw);}catch(e){throw new Error('CMS tidak mengembalikan respons JSON. Pastikan deployment Google Apps Script sudah versi terbaru.');}
+        let data; try{data=JSON.parse(raw);}catch(e){throw new Error('CMS tidak mengembalikan respons JSON. Google Apps Script kemungkinan masih menjalankan deployment lama.');}
         if(!data.ok)throw new Error(data.error||'Upload failed');
         if(!data.image||!data.image.url)throw new Error('Upload selesai tetapi URL foto tidak diterima CMS.');
         showImage(data.image); showUploadConfirmation(data.image);
