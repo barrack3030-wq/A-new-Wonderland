@@ -7,12 +7,13 @@ import { languages, useTranslations } from '../../utils/i18n';
 // All About Us images are shared by every language version.
 // Upload images to: src/assets/about/
 const aboutImages = Object.entries(
-  import.meta.glob('../../assets/about/*.{jpg,jpeg,png,webp,gif,svg}', {
+  import.meta.glob('../../assets/about/*', {
     eager: true,
     import: 'default',
     query: '?url'
   })
 )
+  .filter(([path]) => /\.(jpe?g|png|webp|gif|svg)$/i.test(path))
   .sort(([a], [b]) => a.localeCompare(b))
   .map(([, image]) => image as string);
 
@@ -114,6 +115,7 @@ const breadcrumbItems = [
                       class="w-full h-full object-cover"
                       loading={index === 0 ? 'eager' : 'lazy'}
                       decoding="async"
+                      data-image-index={index}
                     />
                   </div>
                 ))}
@@ -160,14 +162,55 @@ const breadcrumbItems = [
   <script is:inline>
     const slider = document.getElementById('about-slider');
     if (slider) {
-      const slides = Array.from(slider.querySelectorAll('.about-slide'));
-      const dots = Array.from(slider.querySelectorAll('.about-dot'));
+      const allSlides = Array.from(slider.querySelectorAll('.about-slide'));
+      const allDots = Array.from(slider.querySelectorAll('.about-dot'));
       const prev = slider.querySelector('.about-prev');
       const next = slider.querySelector('.about-next');
+      const images = Array.from(slider.querySelectorAll('img'));
+      let slides = allSlides;
+      let dots = allDots;
       let current = 0;
       let timer;
 
+      const hideBrokenImage = (img) => {
+        const slide = img.closest('.about-slide');
+        if (!slide) return;
+
+        const originalIndex = Number(slide.dataset.slide);
+        img.style.display = 'none';
+        img.alt = '';
+        slide.classList.remove('opacity-100', 'opacity-0', 'z-10', 'z-0');
+        slide.style.display = 'none';
+
+        const dot = slider.querySelector(`.about-dot[data-dot="${originalIndex}"]`);
+        dot?.remove();
+
+        slides = slides.filter((item) => item !== slide);
+        dots = Array.from(slider.querySelectorAll('.about-dot'));
+
+        if (slides.length === 0) {
+          if (prev) prev.style.display = 'none';
+          if (next) next.style.display = 'none';
+          const navigation = slider.querySelector('[aria-label="Image navigation"]');
+          if (navigation) navigation.style.display = 'none';
+          return;
+        }
+
+        if (current >= slides.length) current = 0;
+        showSlide(current);
+        updateControls();
+      };
+
+      const updateControls = () => {
+        const multiple = slides.length > 1;
+        if (prev) prev.style.display = multiple ? '' : 'none';
+        if (next) next.style.display = multiple ? '' : 'none';
+        const navigation = slider.querySelector('[aria-label="Image navigation"]');
+        if (navigation) navigation.style.display = multiple ? '' : 'none';
+      };
+
       const showSlide = (index) => {
+        if (!slides.length) return;
         current = (index + slides.length) % slides.length;
         slides.forEach((slide, i) => {
           slide.classList.toggle('opacity-100', i === current);
@@ -184,14 +227,35 @@ const breadcrumbItems = [
 
       const restart = () => {
         clearInterval(timer);
-        timer = setInterval(() => showSlide(current + 1), 5000);
+        if (slides.length > 1) {
+          timer = setInterval(() => showSlide(current + 1), 5000);
+        }
       };
+
+      images.forEach((img) => {
+        img.addEventListener('error', () => hideBrokenImage(img), { once: true });
+      });
+
+      allDots.forEach((dot) => {
+        dot.addEventListener('click', () => {
+          const target = slides.findIndex((slide) => Number(slide.dataset.slide) === Number(dot.dataset.dot));
+          if (target >= 0) {
+            showSlide(target);
+            restart();
+          }
+        });
+      });
 
       prev?.addEventListener('click', () => { showSlide(current - 1); restart(); });
       next?.addEventListener('click', () => { showSlide(current + 1); restart(); });
-      dots.forEach((dot, i) => dot.addEventListener('click', () => { showSlide(i); restart(); }));
       slider.addEventListener('mouseenter', () => clearInterval(timer));
       slider.addEventListener('mouseleave', restart);
+
+      updateControls();
+      images.forEach((img) => {
+        if (img.complete && img.naturalWidth === 0) hideBrokenImage(img);
+      });
+      showSlide(0);
       restart();
     }
   </script>
