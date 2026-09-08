@@ -9,10 +9,8 @@ import { getAccessInfo } from '../../../utils/accessData';
 export async function getStaticPaths() {
   const destinations = await getCollection('destinations');
   return destinations.map(entry => {
-    // Slug format is: 'id/piala-waterfall'
     const [lang, ...slugParts] = entry.slug.split('/');
     const destSlug = slugParts.join('/');
-    
     return {
       params: { lang, slug: destSlug },
       props: { entry },
@@ -24,6 +22,16 @@ const { entry } = Astro.props;
 const { lang } = Astro.params;
 const t = useTranslations(lang as any);
 const { Content } = await entry.render();
+const allDestinations = await getCollection('destinations');
+
+// Create contextual internal links to other destinations in the same language.
+// These links help visitors discover related places and help search engines understand site structure.
+const relatedDestinations = allDestinations
+  .filter(item => {
+    const [itemLang] = item.slug.split('/');
+    return itemLang === lang && item.slug !== entry.slug;
+  })
+  .slice(0, 4);
 
 const accessText = getAccessInfo(Astro.params.slug as string, lang as string);
 const youtubeUrl = entry.data.youtube;
@@ -33,24 +41,25 @@ const youtubeId = youtubeUrl
       /(?:youtube\.com\/watch\?v=|youtu\.be\/|youtube\.com\/embed\/)([^&?/]+)/
     )?.[1]
   : null;
+
 const breadcrumbItems = [
   { name: 'Home', url: `/${lang}/` },
   { name: t('nav.destinations'), url: `/${lang}/destinations/` },
   { name: entry.data.title, url: `/${lang}/destinations/${Astro.params.slug}/` }
 ];
 
-// Map highlights and activities for schema
 const schema = {
   "@context": "https://schema.org",
   "@type": "TouristAttraction",
   "name": entry.data.title,
   "description": entry.data.description,
   "image": entry.data.image,
+  "url": new URL(`/${lang}/destinations/${Astro.params.slug}/`, Astro.site).href,
   "publicAccess": true
 };
 ---
 
-<BaseLayout 
+<BaseLayout
   title={`${entry.data.title} | Banggai Wonderland`}
   description={entry.data.description}
   seoTitle={entry.data.seoTitle}
@@ -59,17 +68,15 @@ const schema = {
   imageAlt={entry.data.imageAlt}
   schema={schema}
 >
-  
-  <!-- Destination Hero -->
   <section class="relative h-[60vh] min-h-[400px] flex items-end pb-16 pt-32">
     <div class="absolute inset-0 z-0">
       <img src={entry.data.image} alt={entry.data.imageAlt || entry.data.title} class="w-full h-full object-cover" />
       <div class="absolute inset-0 bg-gradient-to-t from-ocean-900 via-ocean-900/60 to-transparent"></div>
     </div>
-    
+
     <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
       <Breadcrumb items={breadcrumbItems} />
-      
+
       <div class="mt-4">
         <span class="inline-block bg-turquoise-500 text-ocean-900 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wide mb-4">
           {entry.data.category}
@@ -85,23 +92,11 @@ const schema = {
     </div>
   </section>
 
-  <!-- Destination Content -->
   <section class="py-16 bg-white">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex flex-col lg:flex-row gap-12">
-        
-        <!-- Main Content (Markdown) -->
         <div class="lg:w-2/3">
-          <div class="prose prose-lg prose-ocean max-w-none 
-            prose-headings:font-serif prose-headings:text-ocean-900 
-            prose-p:text-ocean-700 prose-p:leading-relaxed
-            prose-a:text-turquoise-600 hover:prose-a:text-turquoise-500
-            prose-img:rounded-2xl prose-img:shadow-md">
-                   <div class="prose prose-lg prose-ocean max-w-none 
-            prose-headings:font-serif prose-headings:text-ocean-900 
-            prose-p:text-ocean-700 prose-p:leading-relaxed
-            prose-a:text-turquoise-600 hover:prose-a:text-turquoise-500
-            prose-img:rounded-2xl prose-img:shadow-md">
+          <div class="prose prose-lg prose-ocean max-w-none prose-headings:font-serif prose-headings:text-ocean-900 prose-p:text-ocean-700 prose-p:leading-relaxed prose-a:text-turquoise-600 hover:prose-a:text-turquoise-500 prose-img:rounded-2xl prose-img:shadow-md">
             <Content />
           </div>
 
@@ -110,7 +105,6 @@ const schema = {
               <h2 class="font-serif text-3xl font-bold text-ocean-900 mb-6">
                 Watch Video
               </h2>
-
               <div class="relative aspect-video overflow-hidden rounded-2xl shadow-lg bg-ocean-900">
                 <iframe
                   src={`https://www.youtube.com/embed/${youtubeId}?rel=0`}
@@ -123,13 +117,45 @@ const schema = {
               </div>
             </section>
           )}
-          </div>
 
+          {relatedDestinations.length > 0 && (
+            <section class="mt-14 pt-10 border-t border-sand-200">
+              <h2 class="font-serif text-3xl font-bold text-ocean-900 mb-6">
+                {lang === 'id' ? 'Destinasi Lain di Banggai' :
+                 lang === 'en' ? 'More Destinations in Banggai' :
+                 lang === 'es' ? 'Más destinos en Banggai' :
+                 lang === 'fr' ? 'Autres destinations à Banggai' :
+                 '更多邦盖目的地'}
+              </h2>
+              <div class="grid sm:grid-cols-2 gap-5">
+                {relatedDestinations.map(destination => {
+                  const [, ...slugParts] = destination.slug.split('/');
+                  const href = `/${lang}/destinations/${slugParts.join('/')}/`;
+                  return (
+                    <a href={href} class="group block rounded-2xl overflow-hidden border border-sand-200 bg-sand-50 hover:shadow-lg transition-shadow">
+                      <img
+                        src={destination.data.image}
+                        alt={destination.data.imageAlt || destination.data.title}
+                        loading="lazy"
+                        class="w-full h-40 object-cover group-hover:scale-105 transition-transform duration-500"
+                      />
+                      <div class="p-4">
+                        <h3 class="font-serif text-lg font-bold text-ocean-900 group-hover:text-turquoise-600 transition-colors">
+                          {destination.data.title}
+                        </h3>
+                        <p class="mt-1 text-sm text-ocean-600 line-clamp-2">
+                          {destination.data.description}
+                        </p>
+                      </div>
+                    </a>
+                  );
+                })}
+              </div>
+            </section>
+          )}
         </div>
-        
-        <!-- Sidebar -->
+
         <div class="lg:w-1/3 space-y-8">
-          
           {entry.data.highlights && entry.data.highlights.length > 0 && (
             <div class="bg-sand-50 p-6 rounded-2xl border border-sand-200">
               <h3 class="font-serif text-xl font-bold text-ocean-900 mb-4">Highlights</h3>
@@ -148,7 +174,7 @@ const schema = {
             <div class="bg-sand-50 p-6 rounded-2xl border border-sand-200">
               <h3 class="font-serif text-xl font-bold text-ocean-900 mb-4">Best Time to Visit</h3>
               <div class="flex items-center text-ocean-700">
-                <svg class="w-5 h-5 text-turquoise-500 mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
+                <svg class="w-5 h-5 text-turquoise-500 mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4v-4m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
                 <span class="text-sm font-medium">{entry.data.bestTime}</span>
               </div>
             </div>
@@ -163,7 +189,7 @@ const schema = {
               </div>
             </div>
           )}
-          
+
           <div class="bg-ocean-800 p-8 rounded-2xl shadow-xl text-center relative overflow-hidden">
             <div class="absolute inset-0 bg-gradient-to-br from-ocean-800 to-ocean-600 opacity-90"></div>
             <div class="relative z-10">
@@ -174,7 +200,6 @@ const schema = {
               </a>
             </div>
           </div>
-
         </div>
       </div>
     </div>
