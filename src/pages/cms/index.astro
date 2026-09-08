@@ -11,17 +11,18 @@ const title = 'Banggai Wonderland CMS';
   <style>
     :root { color-scheme: dark; font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
     * { box-sizing: border-box; }
-    body { margin: 0; min-height: 100vh; background: linear-gradient(145deg,#061525,#0b2b46 55%,#071a2a); color: #eef7ff; }
-    .wrap { width: min(960px, 92%); margin: 0 auto; padding: 34px 0 60px; }
-    .brand { margin-bottom: 28px; }
-    .brand h1 { margin: 0; font-size: clamp(28px,5vw,42px); letter-spacing: -.03em; }
-    .brand p { color: #9fc0d6; margin: 8px 0 0; }
-    .card { background: rgba(8,24,39,.86); border: 1px solid rgba(157,207,235,.16); border-radius: 20px; padding: 24px; box-shadow: 0 20px 70px rgba(0,0,0,.28); margin-bottom: 18px; }
-    label { display:block; font-size: 13px; font-weight: 700; color:#b8d5e7; margin: 0 0 8px; }
-    input, textarea, select { width:100%; border:1px solid #28465c; background:#071b2b; color:#f5fbff; border-radius:12px; padding:13px 14px; outline:none; font:inherit; }
-    input:focus, textarea:focus, select:focus { border-color:#56b8ea; box-shadow:0 0 0 3px rgba(86,184,234,.12); }
-    textarea { min-height: 170px; resize: vertical; }
-    .grid { display:grid; grid-template-columns: 1fr 180px; gap:14px; }
+    body { margin: 0; min-height: 100vh; background: linear-gradient(145deg,#061525,#0b2b46 55%,#071a2a); color:#eef7ff; }
+    .wrap { width:min(960px,92%); margin:0 auto; padding:34px 0 60px; }
+    .brand { margin-bottom:28px; }
+    .brand h1 { margin:0; font-size:clamp(28px,5vw,42px); letter-spacing:-.03em; }
+    .brand p { color:#9fc0d6; margin:8px 0 0; }
+    .card { background:rgba(8,24,39,.86); border:1px solid rgba(157,207,235,.16); border-radius:20px; padding:24px; box-shadow:0 20px 70px rgba(0,0,0,.28); margin-bottom:18px; }
+    label { display:block; font-size:13px; font-weight:700; color:#b8d5e7; margin:0 0 8px; }
+    input, textarea { width:100%; border:1px solid #28465c; background:#071b2b; color:#f5fbff; border-radius:12px; padding:13px 14px; outline:none; font:inherit; }
+    input:focus, textarea:focus { border-color:#56b8ea; box-shadow:0 0 0 3px rgba(86,184,234,.12); }
+    textarea { min-height:170px; resize:vertical; }
+    .grid { display:grid; grid-template-columns:1fr 180px; gap:14px; }
+    .image-grid { display:grid; grid-template-columns:1fr 1fr; gap:14px; }
     .row { display:flex; gap:10px; flex-wrap:wrap; margin-top:16px; }
     button { border:0; border-radius:12px; padding:12px 18px; font-weight:800; cursor:pointer; color:#03121d; background:#65c8f2; }
     button.secondary { background:#17364d; color:#dceffc; }
@@ -29,7 +30,6 @@ const title = 'Banggai Wonderland CMS';
     .status { margin-top:14px; color:#9fc0d6; min-height:22px; white-space:pre-wrap; }
     .result { display:none; }
     .result.show { display:block; }
-    .result h2 { margin-top:0; }
     .lang { border-top:1px solid rgba(157,207,235,.12); padding:18px 0; }
     .lang:first-child { border-top:0; padding-top:0; }
     .lang h3 { margin:0 0 8px; }
@@ -37,7 +37,11 @@ const title = 'Banggai Wonderland CMS';
     .danger { color:#ffb2b2; }
     .success { color:#9ce7b4; }
     .small { font-size:12px; }
-    @media(max-width:700px){ .grid{grid-template-columns:1fr;} .card{padding:18px;} }
+    .preview { margin-top:12px; display:none; }
+    .preview.show { display:block; }
+    .preview img { width:100%; max-height:280px; object-fit:cover; border-radius:14px; border:1px solid #28465c; }
+    .selected { margin-top:10px; padding:10px 12px; border-radius:10px; background:#0b2437; color:#bfe4f7; font-size:13px; word-break:break-all; }
+    @media(max-width:700px){ .grid,.image-grid{grid-template-columns:1fr;} .card{padding:18px;} }
   </style>
 </head>
 <body>
@@ -58,6 +62,32 @@ const title = 'Banggai Wonderland CMS';
           <input id="model" value="gpt-5.6-luna" readonly />
         </div>
       </div>
+
+      <div style="margin-top:18px">
+        <label>Featured image</label>
+        <div class="image-grid">
+          <div>
+            <label for="imageFile" class="small">Upload foto dari perangkat</label>
+            <input id="imageFile" type="file" accept="image/jpeg,image/png,image/webp,image/gif,image/svg+xml" />
+            <div class="muted small" style="margin-top:7px">Foto akan disimpan ke GitHub di public/images/blog/.</div>
+          </div>
+          <div>
+            <label for="imageUrl" class="small">Atau ambil foto dari link</label>
+            <input id="imageUrl" type="url" placeholder="https://contoh.com/foto-mbuang-mbuang.jpg" />
+            <div class="muted small" style="margin-top:7px">CMS akan mengunduh foto dan menyimpannya ke GitHub.</div>
+          </div>
+        </div>
+        <div class="row">
+          <button id="uploadImage">Upload / Import Photo</button>
+          <button id="useSearchImage" class="secondary">Auto Search by Topic</button>
+        </div>
+        <div id="imageStatus" class="status"></div>
+        <div id="imagePreview" class="preview">
+          <img id="imagePreviewImg" alt="Selected featured image" />
+          <div id="selectedImage" class="selected"></div>
+        </div>
+      </div>
+
       <div style="margin-top:14px">
         <label for="accessKey">CMS access key</label>
         <input id="accessKey" type="password" autocomplete="off" placeholder="Masukkan access key dari Google Apps Script" />
@@ -73,76 +103,83 @@ const title = 'Banggai Wonderland CMS';
     <section id="result" class="card result">
       <h2>Generated article</h2>
       <div id="articles"></div>
-      <div class="row">
-        <button id="publish">Publish to GitHub</button>
-      </div>
+      <div class="row"><button id="publish">Publish to GitHub</button></div>
       <div id="publishStatus" class="status"></div>
     </section>
   </main>
 
   <script>
     const ENDPOINT = 'https://script.google.com/macros/s/AKfycbxGMuyFzq0K-gKIPaamp1ClFqo6zYJfNNvZfd0hxeJIJTj0N_DVPywUtkWbo5g0_F08/exec';
-    const topicEl = document.getElementById('topic');
-    const keyEl = document.getElementById('accessKey');
-    const statusEl = document.getElementById('status');
-    const resultEl = document.getElementById('result');
-    const articlesEl = document.getElementById('articles');
-    const publishEl = document.getElementById('publish');
-    const publishStatusEl = document.getElementById('publishStatus');
-    let generated = null;
+    const topicEl=document.getElementById('topic'), keyEl=document.getElementById('accessKey'), statusEl=document.getElementById('status');
+    const resultEl=document.getElementById('result'), articlesEl=document.getElementById('articles'), publishEl=document.getElementById('publish'), publishStatusEl=document.getElementById('publishStatus');
+    const imageFileEl=document.getElementById('imageFile'), imageUrlEl=document.getElementById('imageUrl'), imageStatusEl=document.getElementById('imageStatus');
+    const imagePreview=document.getElementById('imagePreview'), imagePreviewImg=document.getElementById('imagePreviewImg'), selectedImageEl=document.getElementById('selectedImage');
+    let generated=null, selectedImage=null;
 
-    function setStatus(el, text, cls='') { el.className = 'status ' + cls; el.textContent = text; }
-    function esc(value='') { return value.replace(/[&<>'"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;',"'":'&#39;','"':'&quot;'}[c])); }
+    function setStatus(el,text,cls=''){el.className='status '+cls;el.textContent=text;}
+    function esc(value=''){return String(value).replace(/[&<>'"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;',"'":'&#39;','"':'&quot;'}[c]));}
+    function showImage(image){selectedImage=image; imagePreviewImg.src=image.url; selectedImageEl.textContent=image.url+(image.source?' · Source: '+image.source:''); imagePreview.classList.add('show');}
 
-    document.getElementById('generate').addEventListener('click', async () => {
-      const topic = topicEl.value.trim();
-      const accessKey = keyEl.value.trim();
-      if (!topic) return setStatus(statusEl, 'Tulis topik atau perintah artikel terlebih dahulu.', 'danger');
-      if (!accessKey) return setStatus(statusEl, 'Masukkan CMS access key terlebih dahulu.', 'danger');
-      setStatus(statusEl, 'Generating 5 language versions…');
-      document.getElementById('generate').disabled = true;
-      resultEl.classList.remove('show');
-      try {
-        const response = await fetch(ENDPOINT, { method:'POST', headers:{'Content-Type':'text/plain;charset=utf-8'}, body:JSON.stringify({action:'generate', accessKey, topic}) });
-        const data = await response.json();
-        if (!data.ok) throw new Error(data.error || 'Generation failed');
-        generated = data.articles;
-        articlesEl.innerHTML = Object.entries(generated).map(([lang,a]) => `
-          <article class="lang">
-            <h3>${esc(lang.toUpperCase())} · ${esc(a.title)}</h3>
-            <div class="muted">${esc(a.description)}</div>
-            <p>${esc(a.preview || '')}</p>
-          </article>`).join('');
-        resultEl.classList.add('show');
-        setStatus(statusEl, 'Article generated. Review the result, then publish.', 'success');
-      } catch (err) {
-        setStatus(statusEl, err.message || 'Generation failed.', 'danger');
-      } finally { document.getElementById('generate').disabled = false; }
+    document.getElementById('uploadImage').addEventListener('click',async()=>{
+      const accessKey=keyEl.value.trim();
+      if(!accessKey)return setStatus(imageStatusEl,'Masukkan CMS access key terlebih dahulu.','danger');
+      const file=imageFileEl.files[0]; const url=imageUrlEl.value.trim();
+      if(!file&&!url)return setStatus(imageStatusEl,'Pilih foto atau masukkan link foto terlebih dahulu.','danger');
+      if(file&&file.size>8*1024*1024)return setStatus(imageStatusEl,'Ukuran foto maksimal 8 MB.','danger');
+      setStatus(imageStatusEl,file?'Mengupload foto ke GitHub…':'Mengambil foto dari link…');
+      document.getElementById('uploadImage').disabled=true;
+      try{
+        let payload={action:'uploadImage',accessKey};
+        if(file){
+          const dataUrl=await new Promise((resolve,reject)=>{const r=new FileReader();r.onload=()=>resolve(r.result);r.onerror=reject;r.readAsDataURL(file);});
+          payload.dataUrl=dataUrl; payload.fileName=file.name;
+        }else{payload.imageUrl=url;}
+        const response=await fetch(ENDPOINT,{method:'POST',headers:{'Content-Type':'text/plain;charset=utf-8'},body:JSON.stringify(payload)});
+        const data=await response.json(); if(!data.ok)throw new Error(data.error||'Upload failed');
+        showImage(data.image); setStatus(imageStatusEl,'Foto siap digunakan sebagai featured image.','success');
+      }catch(err){setStatus(imageStatusEl,err.message||'Upload failed.','danger');}
+      finally{document.getElementById('uploadImage').disabled=false;}
     });
 
-    publishEl.addEventListener('click', async () => {
-      if (!generated) return;
-      const accessKey = keyEl.value.trim();
-      publishEl.disabled = true;
-      setStatus(publishStatusEl, 'Publishing to GitHub…');
-      try {
-        const response = await fetch(ENDPOINT, { method:'POST', headers:{'Content-Type':'text/plain;charset=utf-8'}, body:JSON.stringify({action:'publish', accessKey, articles:generated}) });
-        const data = await response.json();
-        if (!data.ok) throw new Error(data.error || 'Publish failed');
-        setStatus(publishStatusEl, data.message || 'Published successfully.', 'success');
-      } catch (err) {
-        setStatus(publishStatusEl, err.message || 'Publish failed.', 'danger');
-      } finally { publishEl.disabled = false; }
+    document.getElementById('useSearchImage').addEventListener('click',async()=>{
+      const accessKey=keyEl.value.trim(), topic=topicEl.value.trim();
+      if(!accessKey)return setStatus(imageStatusEl,'Masukkan CMS access key terlebih dahulu.','danger');
+      if(!topic)return setStatus(imageStatusEl,'Tulis topic terlebih dahulu agar foto dapat dicari.','danger');
+      setStatus(imageStatusEl,'Mencari foto berdasarkan topic…');
+      document.getElementById('useSearchImage').disabled=true;
+      try{
+        const response=await fetch(ENDPOINT,{method:'POST',headers:{'Content-Type':'text/plain;charset=utf-8'},body:JSON.stringify({action:'searchImage',accessKey,topic})});
+        const data=await response.json(); if(!data.ok)throw new Error(data.error||'Image search failed');
+        showImage(data.image); setStatus(imageStatusEl,'Foto relevan ditemukan.','success');
+      }catch(err){setStatus(imageStatusEl,err.message||'Image search failed.','danger');}
+      finally{document.getElementById('useSearchImage').disabled=false;}
     });
 
-    document.getElementById('clear').addEventListener('click', () => {
-      topicEl.value = '';
-      resultEl.classList.remove('show');
-      articlesEl.innerHTML = '';
-      generated = null;
-      setStatus(statusEl, '');
-      setStatus(publishStatusEl, '');
+    document.getElementById('generate').addEventListener('click',async()=>{
+      const topic=topicEl.value.trim(), accessKey=keyEl.value.trim();
+      if(!topic)return setStatus(statusEl,'Tulis topik atau perintah artikel terlebih dahulu.','danger');
+      if(!accessKey)return setStatus(statusEl,'Masukkan CMS access key terlebih dahulu.','danger');
+      setStatus(statusEl,'Generating 5 language versions…'); document.getElementById('generate').disabled=true; resultEl.classList.remove('show');
+      try{
+        const response=await fetch(ENDPOINT,{method:'POST',headers:{'Content-Type':'text/plain;charset=utf-8'},body:JSON.stringify({action:'generate',accessKey,topic,image:selectedImage})});
+        const data=await response.json(); if(!data.ok)throw new Error(data.error||'Generation failed');
+        generated=data.articles;
+        articlesEl.innerHTML=Object.entries(generated).map(([lang,a])=>`<article class="lang"><h3>${esc(lang.toUpperCase())} · ${esc(a.title)}</h3><div class="muted">${esc(a.description)}</div><p>${esc(a.preview||'')}</p></article>`).join('');
+        resultEl.classList.add('show'); setStatus(statusEl,'Article generated. Review the result, then publish.','success');
+      }catch(err){setStatus(statusEl,err.message||'Generation failed.','danger');}
+      finally{document.getElementById('generate').disabled=false;}
     });
+
+    publishEl.addEventListener('click',async()=>{
+      if(!generated)return; const accessKey=keyEl.value.trim(); publishEl.disabled=true; setStatus(publishStatusEl,'Publishing to GitHub…');
+      try{
+        const response=await fetch(ENDPOINT,{method:'POST',headers:{'Content-Type':'text/plain;charset=utf-8'},body:JSON.stringify({action:'publish',accessKey,articles:generated})});
+        const data=await response.json(); if(!data.ok)throw new Error(data.error||'Publish failed'); setStatus(publishStatusEl,data.message||'Published successfully.','success');
+      }catch(err){setStatus(publishStatusEl,err.message||'Publish failed.','danger');}
+      finally{publishEl.disabled=false;}
+    });
+
+    document.getElementById('clear').addEventListener('click',()=>{topicEl.value='';imageFileEl.value='';imageUrlEl.value='';selectedImage=null;imagePreview.classList.remove('show');resultEl.classList.remove('show');articlesEl.innerHTML='';generated=null;setStatus(statusEl,'');setStatus(imageStatusEl,'');setStatus(publishStatusEl,'');});
   </script>
 </body>
 </html>
