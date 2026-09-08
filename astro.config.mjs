@@ -3,7 +3,7 @@ import tailwind from '@astrojs/tailwind';
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://example.com',
+  site: 'https://banggaiwonderland.my.id',
   integrations: [tailwind()],
   server: {
     port: 3000,
