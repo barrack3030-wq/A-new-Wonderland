@@ -128,8 +128,10 @@ export default async function handler(req, res) {
     if (!m?.chat?.id) return res.status(200).json({ok:true});
     if (!authorized(m)) { await send(m.chat.id, '⛔ Akses ditolak.'); return res.status(200).json({ok:true}); }
     const text = (m.text || '').trim();
-    if (text === '/start' || text === '/help') {
-      await send(m.chat.id, '🌴 Banggai Wonderland AI CMS\n\n/newpost <topik> — buat draft 5 bahasa\n/publish — publish draft ke GitHub\n/discard — hapus draft\n/help — bantuan\n\nContoh:\n/newpost 5 alasan mengapa Banggai adalah hidden paradise Indonesia');
+    if (text === '/id' || text === '/whoami') {
+      await send(m.chat.id, `🆔 Telegram ID\n\nChat ID: ${m.chat.id}\nUser ID: ${m.from?.id ?? '-'}\nUsername: @${m.from?.username ?? '-'}\n\nSimpan Chat ID dan User ID ini untuk konfigurasi Vercel.`);
+    } else if (text === '/start' || text === '/help') {
+      await send(m.chat.id, '🌴 Banggai Wonderland AI CMS\n\n/id — tampilkan Chat ID & User ID\n/newpost <topik> — buat draft 5 bahasa\n/publish — publish draft ke GitHub\n/discard — hapus draft\n/help — bantuan\n\nContoh:\n/newpost 5 alasan mengapa Banggai adalah hidden paradise Indonesia');
     } else if (text.startsWith('/newpost')) {
       const topic = text.replace(/^\/newpost\s*/i, '').trim();
       if (!topic) return send(m.chat.id, 'Format: /newpost <topik artikel>');
