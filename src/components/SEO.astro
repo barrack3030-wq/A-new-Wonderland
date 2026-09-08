@@ -1,4 +1,5 @@
 ---
+import { getCollection } from 'astro:content';
 import { languages } from '../utils/i18n';
 
 interface Props {
@@ -11,11 +12,11 @@ interface Props {
   schema?: any; // Additional schema.org data
 }
 
-const { 
-  title, 
-  description, 
-  seoTitle, 
-  seoDescription, 
+const {
+  title,
+  description,
+  seoTitle,
+  seoDescription,
   ogImage = '/images/og-default.jpg',
   imageAlt,
   schema
@@ -25,31 +26,74 @@ const finalTitle = seoTitle || title;
 const finalDescription = seoDescription || description;
 const finalImageAlt = imageAlt || finalTitle;
 
-// Clean up current URL for canonical and hreflang
-const url = new URL(Astro.url.pathname, Astro.site);
-const currentUrl = url.href;
+const siteUrl = Astro.site || new URL(Astro.url.origin);
+const currentUrl = new URL(Astro.url.pathname, siteUrl).href;
 
-// Generate hreflang links based on current path
 const pathParts = Astro.url.pathname.split('/').filter(Boolean);
 const currentLangCode = pathParts[0] && Object.keys(languages).includes(pathParts[0]) ? pathParts[0] : 'id';
-const pathWithoutLang = pathParts.slice(1).join('/');
+const section = pathParts[1] || '';
 
-const alternateLinks = Object.keys(languages).map(langCode => {
-  const newPath = pathWithoutLang ? `/${langCode}/${pathWithoutLang}/` : `/${langCode}/`;
-  return {
+// Build language alternates from routes that actually exist.
+// Static pages use the same path in every language. Content pages are matched
+// across languages by their section plus image, which stays stable while titles/slugs are translated.
+let alternateLinks: { lang: string; href: string }[] = [];
+
+const isContentSection = ['destinations', 'packages', 'blog'].includes(section);
+
+if (!isContentSection) {
+  const pathWithoutLang = pathParts.slice(1).join('/');
+  alternateLinks = Object.keys(languages).map(langCode => ({
     lang: langCode,
-    href: new URL(newPath, Astro.site).href
-  };
-});
+    href: new URL(pathWithoutLang ? `/${langCode}/${pathWithoutLang}/` : `/${langCode}/`, siteUrl).href
+  }));
+} else {
+  let entries: any[] = [];
+
+  if (section === 'destinations') entries = await getCollection('destinations');
+  if (section === 'packages') entries = await getCollection('packages');
+  if (section === 'blog') entries = await getCollection('blog');
+
+  const currentEntry = entries.find(entry => {
+    const [entryLang, ...slugParts] = entry.slug.split('/');
+    return entryLang === currentLangCode && slugParts.join('/') === pathParts.slice(2).join('/');
+  });
+
+  if (currentEntry) {
+    const currentImage = currentEntry.data?.image;
+    const currentLocation = currentEntry.data?.location;
+
+    alternateLinks = Object.keys(languages)
+      .map(langCode => {
+        const candidates = entries.filter(entry => {
+          const [entryLang] = entry.slug.split('/');
+          if (entryLang !== langCode) return false;
+
+          const sameImage = currentImage && entry.data?.image === currentImage;
+          const sameLocation = currentLocation && entry.data?.location === currentLocation;
+          return sameImage && (!currentLocation || !entry.data?.location || sameLocation);
+        });
+
+        const match = candidates[0];
+        if (!match) return null;
+
+        const [, ...slugParts] = match.slug.split('/');
+        return {
+          lang: langCode,
+          href: new URL(`/${langCode}/${section}/${slugParts.join('/')}/`, siteUrl).href
+        };
+      })
+      .filter(Boolean) as { lang: string; href: string }[];
+  }
+}
 
 // Default TravelAgency Schema
 const baseSchema = {
   "@context": "https://schema.org",
   "@type": "TravelAgency",
   "name": "Banggai Wonderland",
-  "image": new URL('/images/logo.jpg', Astro.site || Astro.url.origin).href,
-  "@id": Astro.site ? Astro.site.href : Astro.url.origin,
-  "url": Astro.site ? Astro.site.href : Astro.url.origin,
+  "image": new URL('/images/logo.jpg', siteUrl).href,
+  "@id": siteUrl.href,
+  "url": siteUrl.href,
   "telephone": "+6285820830530",
   "address": {
     "@type": "PostalAddress",
@@ -71,6 +115,7 @@ const baseSchema = {
 };
 
 const finalSchema = schema ? [baseSchema, schema] : baseSchema;
+const defaultLink = alternateLinks.find(link => link.lang === 'id');
 ---
 
 <!-- SEO Meta Tags -->
@@ -84,14 +129,14 @@ const finalSchema = schema ? [baseSchema, schema] : baseSchema;
 {alternateLinks.map(link => (
   <link rel="alternate" hreflang={link.lang} href={link.href} />
 ))}
-<link rel="alternate" hreflang="x-default" href={new URL(`/id/${pathWithoutLang}`, Astro.site).href} />
+{defaultLink && <link rel="alternate" hreflang="x-default" href={defaultLink.href} />}
 
 <!-- Open Graph / Facebook -->
 <meta property="og:type" content="website" />
 <meta property="og:url" content={currentUrl} />
 <meta property="og:title" content={finalTitle} />
 <meta property="og:description" content={finalDescription} />
-<meta property="og:image" content={new URL(ogImage, Astro.site).href} />
+<meta property="og:image" content={new URL(ogImage, siteUrl).href} />
 <meta property="og:image:alt" content={finalImageAlt} />
 <meta property="og:site_name" content="Banggai Wonderland" />
 
@@ -100,7 +145,7 @@ const finalSchema = schema ? [baseSchema, schema] : baseSchema;
 <meta property="twitter:url" content={currentUrl} />
 <meta property="twitter:title" content={finalTitle} />
 <meta property="twitter:description" content={finalDescription} />
-<meta property="twitter:image" content={new URL(ogImage, Astro.site).href} />
+<meta property="twitter:image" content={new URL(ogImage, siteUrl).href} />
 
 <!-- Schema.org JSON-LD -->
 <script type="application/ld+json" set:html={JSON.stringify(finalSchema)} />
