@@ -18,13 +18,26 @@ const formattedDate = new Intl.DateTimeFormat(lang, {
   month: 'long',
   day: 'numeric'
 }).format(post.data.pubDate);
+
+// Keep Blog Cards consistent with the article detail page.
+// Some existing AI-generated articles may contain an outdated or generic
+// image path in frontmatter, while the detail page resolves the correct
+// destination-specific image.
+const postText = `${post.data.title} ${post.data.description} ${(post.data.tags || []).join(' ')}`.toLowerCase();
+const isMbuangMbuang = postText.includes('mbuang-mbuang') || postText.includes('mbuang mbuang');
+const resolvedImage = isMbuangMbuang
+  ? 'https://upload.wikimedia.org/wikipedia/commons/6/64/Pantai_Pasir_Panjang_-_Banggai_Laut.jpg'
+  : post.data.image;
+const resolvedImageAlt = isMbuangMbuang
+  ? 'Pasir Panjang Beach on Mbuang-Mbuang Island, Banggai Laut, Central Sulawesi'
+  : (post.data.imageAlt || post.data.title);
 ---
 
 <a href={`/${lang}/blog/${postSlug}/`} class="group flex flex-col bg-white rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 border border-sand-200 overflow-hidden h-full">
   <div class="relative h-56 overflow-hidden">
     <img 
-      src={post.data.image} 
-      alt={post.data.imageAlt || post.data.title} 
+      src={resolvedImage} 
+      alt={resolvedImageAlt} 
       class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
       loading="lazy"
     />
