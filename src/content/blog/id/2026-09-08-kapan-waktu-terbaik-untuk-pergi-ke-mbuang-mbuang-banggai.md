@@ -1,19 +1,19 @@
 ---
-title: "Kapan Waktu Terbaik untuk Pergi ke Mbuang-Mbuang, Banggai?"
-description: "Panduan lengkap menentukan waktu terbaik mengunjungi Mbuang-Mbuang di Banggai berdasarkan musim, kondisi laut, cuaca, aktivitas wisata, dan tips perjalanan."
-seoTitle: "Kapan Waktu Terbaik ke Mbuang-Mbuang? Panduan Wisata Banggai"
-seoDescription: "Temukan waktu terbaik untuk pergi ke Mbuang-Mbuang, Banggai. Simak panduan musim, cuaca, kondisi laut, aktivitas, dan tips perjalanan."
-image: "/images/Poganda-Beach-Banggai-IndonesiaJuara-Trip.webp"
-imageAlt: "Pemandangan laut tropis dan pantai indah di Kepulauan Banggai, Indonesia"
-author: "Banggai Wonderland"
+image: /images/mbuang mbuang.jpg
+imageAlt: Pemandangan laut tropis dan pantai indah di Kepulauan Banggai, Indonesia
+title: Kapan Waktu Terbaik untuk Pergi ke Mbuang-Mbuang, Banggai?
+description: Panduan lengkap menentukan waktu terbaik mengunjungi Mbuang-Mbuang di Banggai berdasarkan musim, kondisi laut, cuaca, aktivitas wisata, dan tips perjalanan.
+seoTitle: Kapan Waktu Terbaik ke Mbuang-Mbuang? Panduan Wisata Banggai
+seoDescription: Temukan waktu terbaik untuk pergi ke Mbuang-Mbuang, Banggai. Simak panduan musim, cuaca, kondisi laut, aktivitas, dan tips perjalanan.
+author: Banggai Wonderland
 pubDate: 2026-09-08
 tags:
-  - "Mbuang-Mbuang"
-  - "Banggai"
-  - "Banggai Laut"
-  - "Luwuk"
-  - "Indonesia"
-  - "Travel"
+  - Mbuang-Mbuang
+  - Banggai
+  - Banggai Laut
+  - Luwuk
+  - Indonesia
+  - Travel
 ---
 
 # Kapan Waktu Terbaik untuk Pergi ke Mbuang-Mbuang, Banggai?
