@@ -2,8 +2,11 @@ backend:
   name: github
   repo: barrack3030-wq/A-new-Wonderland
   branch: main
-
-local_backend: true
+  auth_methods: [token]
+  commit_messages:
+    create: 'Create {{collection}} "{{slug}}"'
+    update: 'Update {{collection}} "{{slug}}"'
+    delete: 'Delete {{collection}} "{{slug}}"'
 
 media_folder: "public/images"
 public_folder: "/images"
@@ -69,14 +72,14 @@ collections:
           - {label: "Description", name: "description", widget: "text"}
       - {label: "Body Overview", name: "body", widget: "markdown", i18n: true}
 
-  # Blog is intentionally split into five independent collections.
-  # This keeps Sveltia compatible with the existing translated filenames
-  # while the AI CMS continues to generate all five language files directly.
   - name: "blog_id"
     label: "Blog — Indonesia"
+    label_singular: "Blog Post — Indonesia"
     folder: "src/content/blog/id"
     create: true
     slug: "{{slug}}"
+    media_folder: "/public/images/blog"
+    public_folder: "/images/blog"
     fields:
       - {label: "Featured Image", name: "image", widget: "image"}
       - {label: "Image Alt", name: "imageAlt", widget: "string", required: false}
@@ -93,9 +96,12 @@ collections:
 
   - name: "blog_en"
     label: "Blog — English"
+    label_singular: "Blog Post — English"
     folder: "src/content/blog/en"
     create: true
     slug: "{{slug}}"
+    media_folder: "/public/images/blog"
+    public_folder: "/images/blog"
     fields:
       - {label: "Featured Image", name: "image", widget: "image"}
       - {label: "Image Alt", name: "imageAlt", widget: "string", required: false}
@@ -112,9 +118,12 @@ collections:
 
   - name: "blog_es"
     label: "Blog — Español"
+    label_singular: "Blog Post — Español"
     folder: "src/content/blog/es"
     create: true
     slug: "{{slug}}"
+    media_folder: "/public/images/blog"
+    public_folder: "/images/blog"
     fields:
       - {label: "Featured Image", name: "image", widget: "image"}
       - {label: "Image Alt", name: "imageAlt", widget: "string", required: false}
@@ -131,9 +140,12 @@ collections:
 
   - name: "blog_fr"
     label: "Blog — Français"
+    label_singular: "Blog Post — Français"
     folder: "src/content/blog/fr"
     create: true
     slug: "{{slug}}"
+    media_folder: "/public/images/blog"
+    public_folder: "/images/blog"
     fields:
       - {label: "Featured Image", name: "image", widget: "image"}
       - {label: "Image Alt", name: "imageAlt", widget: "string", required: false}
@@ -150,9 +162,12 @@ collections:
 
   - name: "blog_zh"
     label: "Blog — 中文"
+    label_singular: "Blog Post — 中文"
     folder: "src/content/blog/zh"
     create: true
     slug: "{{slug}}"
+    media_folder: "/public/images/blog"
+    public_folder: "/images/blog"
     fields:
       - {label: "Featured Image", name: "image", widget: "image"}
       - {label: "Image Alt", name: "imageAlt", widget: "string", required: false}
