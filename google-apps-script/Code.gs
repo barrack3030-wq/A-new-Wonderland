@@ -1,16 +1,18 @@
 const OPENAI_MODEL='gpt-5.6-luna';
 const DEEPSEEK_MODEL='deepseek-v4-flash';
 const GEMINI_MODEL='gemini-3.6-flash';
+const GEMINI_FALLBACK_MODEL='gemini-3.5-flash-lite';
 const OPENAI_URL='https://api.openai.com/v1/responses';
 const DEEPSEEK_URL='https://api.deepseek.com/responses';
-const GEMINI_URL='https://generativelanguage.googleapis.com/v1beta/models/'+GEMINI_MODEL+':generateContent';
+const GEMINI_URL_BASE='https://generativelanguage.googleapis.com/v1beta/models/';
+const GEMINI_URL=GEMINI_URL_BASE+GEMINI_MODEL+':generateContent';
 const WIKIMEDIA_API='https://commons.wikimedia.org/w/api.php';
 const DEFAULT_IMAGE='/images/Poganda-Beach-Banggai-IndonesiaJuara-Trip.webp';
 const LANGUAGES={id:'Indonesian',en:'English',es:'Spanish',fr:'French',zh:'Chinese'};
-const MAX_RETRIES=3;
+const MAX_RETRIES=4;
 const BATCH_SIZE=2;
 
-function doGet(){return jsonResponse({ok:true,service:'Banggai Wonderland CMS',version:'6.1-gemini-3.6-offline-editorial'});}
+function doGet(){return jsonResponse({ok:true,service:'Banggai Wonderland CMS',version:'6.2-gemini-resilient-offline-editorial'});}
 
 function doPost(e){
   try{
@@ -44,7 +46,7 @@ function getApiConfig(provider){
   if(provider==='gemini'){
     const key=props.getProperty('GEMINI_API_KEY');
     if(!key)throw new Error('GEMINI_API_KEY belum diset di Script Properties.');
-    return {provider:'gemini',key:key,model:GEMINI_MODEL,url:GEMINI_URL};
+    return {provider:'gemini',key:key,model:GEMINI_MODEL,url:GEMINI_URL,fallbackModel:GEMINI_FALLBACK_MODEL};
   }
   if(provider==='openai'){
     const key=props.getProperty('OPENAI_API_KEY');
@@ -108,9 +110,9 @@ function generateArticles(topic,selectedImage,provider){
     const responses=UrlFetchApp.fetchAll(requests);
     responses.forEach(function(response,index){
       const lang=batch[index],status=response.getResponseCode(),raw=response.getContentText();
-      if(status===429){
-        const retry=aiRequest(cfg,buildRequestPayload(cfg,topic,LANGUAGES[lang],image),'Generate ['+lang+']');
-        processArticle(lang,retry.data,image,articles);
+      if(isTransientStatus(status)){
+        const retry=aiRequestResilient(cfg,buildRequestPayload(cfg,topic,LANGUAGES[lang],image),'Generate ['+lang+']');
+        processArticle(lang,retry.data,retry.image||image,articles);
         return;
       }
       if(status<200||status>=300)throw new Error(providerLabel(cfg.provider)+' error ['+lang+'] ('+status+'): '+raw);
@@ -124,6 +126,8 @@ function generateArticles(topic,selectedImage,provider){
 
 function providerLabel(provider){return provider==='gemini'?'Gemini':provider==='deepseek'?'DeepSeek':'OpenAI';}
 
+function isTransientStatus(status){return [408,429,500,502,503,504].indexOf(Number(status))!==-1;}
+
 function buildRequestPayload(cfg,topic,language,image){
   const prompt=buildPrompt(topic,language,image);
   if(cfg.provider==='gemini'){
@@ -135,29 +139,53 @@ function buildRequestPayload(cfg,topic,language,image){
 function writerRequest(cfg,topic,language,image){
   let url=cfg.url;
   const options={method:'post',contentType:'application/json',headers:{},payload:JSON.stringify(buildRequestPayload(cfg,topic,language,image)),muteHttpExceptions:true};
-  if(cfg.provider==='gemini'){
-    url+='?key='+encodeURIComponent(cfg.key);
-  }else{
-    options.headers={Authorization:'Bearer '+cfg.key};
-  }
+  if(cfg.provider==='gemini')url+='?key='+encodeURIComponent(cfg.key);else options.headers={Authorization:'Bearer '+cfg.key};
   options.url=url;
   return options;
 }
 
-function aiRequest(cfg,payload,label){
-  let last='';
+function cloneGeminiConfig(cfg,model){
+  return {provider:'gemini',key:cfg.key,model:model,url:GEMINI_URL_BASE+model+':generateContent',fallbackModel:''};
+}
+
+function aiRequestResilient(cfg,payload,label){
+  let lastRaw='';
+  let lastStatus=0;
   for(let attempt=1;attempt<=MAX_RETRIES;attempt++){
-    let url=cfg.url;
-    const options={method:'post',contentType:'application/json',headers:{},payload:JSON.stringify(payload),muteHttpExceptions:true};
-    if(cfg.provider==='gemini')url+='?key='+encodeURIComponent(cfg.key);else options.headers={Authorization:'Bearer '+cfg.key};
-    const r=UrlFetchApp.fetch(url,options);
-    const status=r.getResponseCode(),raw=r.getContentText();
-    if(status>=200&&status<300){let data;try{data=JSON.parse(raw);}catch(e){throw new Error(label+': Respons AI tidak valid.');}return {data:data,status:status};}
-    last=raw;
-    if(status!==429||attempt===MAX_RETRIES)throw new Error(label+' error ('+status+'): '+raw);
-    Utilities.sleep(1200*attempt);
+    const result=rawAiFetch(cfg,payload);
+    if(result.status>=200&&result.status<300){
+      let data;try{data=JSON.parse(result.raw);}catch(e){throw new Error(label+': Respons AI tidak valid.');}
+      return {data:data,status:result.status,image:null};
+    }
+    lastRaw=result.raw;lastStatus=result.status;
+    if(!isTransientStatus(result.status)||attempt===MAX_RETRIES)break;
+    const delay=Math.min(30000,Math.pow(2,attempt-1)*1500+Math.floor(Math.random()*800));
+    Utilities.sleep(delay);
   }
-  throw new Error(label+' gagal: '+last);
+
+  if(cfg.provider==='gemini'&&cfg.fallbackModel&&cfg.fallbackModel!==cfg.model){
+    const fallback=cloneGeminiConfig(cfg,cfg.fallbackModel);
+    for(let attempt=1;attempt<=MAX_RETRIES;attempt++){
+      const result=rawAiFetch(fallback,payload);
+      if(result.status>=200&&result.status<300){
+        let data;try{data=JSON.parse(result.raw);}catch(e){throw new Error(label+': Respons AI fallback tidak valid.');}
+        return {data:data,status:result.status,image:null};
+      }
+      lastRaw=result.raw;lastStatus=result.status;
+      if(!isTransientStatus(result.status)||attempt===MAX_RETRIES)break;
+      const delay=Math.min(30000,Math.pow(2,attempt-1)*1500+Math.floor(Math.random()*800));
+      Utilities.sleep(delay);
+    }
+  }
+  throw new Error(label+' error ('+lastStatus+'): '+lastRaw);
+}
+
+function rawAiFetch(cfg,payload){
+  let url=cfg.url;
+  const options={method:'post',contentType:'application/json',headers:{},payload:JSON.stringify(payload),muteHttpExceptions:true};
+  if(cfg.provider==='gemini')url+='?key='+encodeURIComponent(cfg.key);else options.headers={Authorization:'Bearer '+cfg.key};
+  const r=UrlFetchApp.fetch(url,options);
+  return {status:r.getResponseCode(),raw:r.getContentText()};
 }
 
 function buildPrompt(topic,language,image){
@@ -247,7 +275,7 @@ function findRelevantImage(topic){
 
 function searchWikimediaImages(query){
   const params=['action=query','format=json','generator=search','gsrnamespace=6','gsrlimit=10','gsrsearch='+encodeURIComponent(query),'prop=imageinfo','iiprop=url|mime|size|extmetadata','iiurlwidth=1600','origin=*'].join('&');
-  let r;try{r=UrlFetchApp.fetch(WIKIMEDIA_API+'?'+params,{method:'get',muteHttpExceptions:true,headers:{'User-Agent':'BanggaiWonderlandCMS/6.1'}});}catch(e){return null;}
+  let r;try{r=UrlFetchApp.fetch(WIKIMEDIA_API+'?'+params,{method:'get',muteHttpExceptions:true,headers:{'User-Agent':'BanggaiWonderlandCMS/6.2'}});}catch(e){return null;}
   if(r.getResponseCode()<200||r.getResponseCode()>=300)return null;let data;try{data=JSON.parse(r.getContentText());}catch(e){return null;}
   const pages=data.query&&data.query.pages?Object.keys(data.query.pages).map(k=>data.query.pages[k]):[],normalized=normalizeSearchText(query),words=normalized.split(' ').filter(w=>w.length>=4);let best=null,bestScore=-1;
   pages.forEach(function(page){const info=page.imageinfo&&page.imageinfo[0];if(!info||!info.url)return;const mime=String(info.mime||'').toLowerCase();if(mime==='image/svg+xml'||mime.indexOf('image/')!==0)return;const title=normalizeSearchText(page.title||'');let score=0;words.forEach(w=>{if(title.indexOf(w)!==-1)score+=5;});if(title.indexOf('mbuang')!==-1&&normalized.indexOf('mbuang')!==-1)score+=30;if(title.indexOf('paisupok')!==-1&&normalized.indexOf('paisupok')!==-1)score+=30;if(title.indexOf('poganda')!==-1&&normalized.indexOf('poganda')!==-1)score+=30;if(title.indexOf('banggai')!==-1)score+=5;if(info.width&&info.height&&Number(info.width)*Number(info.height)>=1000000)score+=3;if(score>bestScore){bestScore=score;const meta=info.extmetadata||{};best={url:info.thumburl||info.url,alt:meta.ImageDescription&&meta.ImageDescription.value?stripHtml(meta.ImageDescription.value):String(page.title||'Banggai destination'),source:info.descriptionurl||''};}});return best;
@@ -267,7 +295,7 @@ function cleanJsonOutput(v){return String(v||'').replace(/^\s*```json\s*/i,'').r
 function publishArticles(articles){
   const files=[],first=articles.id||articles.en||articles.es||articles.fr||articles.zh;if(!first||!first.title)throw new Error('Artikel utama tidak ditemukan.');
   const translationKey=getToday()+'-'+createSlug(first.title).substring(0,70);
-  Object.keys(LANGUAGES).forEach(function(lang){const article=articles[lang];if(!article||!article.title||!article.content)throw new Error('Artikel bahasa '+lang+' tidak lengkap.');const slug=createSlug(article.title);if(!slug)throw new Error('Slug kosong untuk '+lang);const path='src/content/blog/'+lang+'/'+getToday()+'-'+slug+'.md';githubCreateFile(path,createMarkdown(article,translationKey),'CMS: Add offline-editorial blog article ['+lang+'] '+article.title);files.push({language:lang,path:path,title:article.title});});
+  Object.keys(LANGUAGES).forEach(function(lang){const article=articles[lang];if(!article||!article.title||!article.content)throw new Error('Artikel bahasa '+lang+' tidak lengkap.');const slug=createSlug(article.title);if(!slug)throw new Error('Slug kosong untuk '+lang);const path='src/content/blog/'+lang+'/'+getToday()+'-'+slug+'.md';githubCreateFile(path,createMarkdown(article,translationKey),'CMS: Add resilient offline-editorial blog article ['+lang+'] '+article.title);files.push({language:lang,path:path,title:article.title});});
   return {files:files};
 }
 function createMarkdown(article,translationKey){
