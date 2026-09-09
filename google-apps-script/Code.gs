@@ -3,10 +3,11 @@ const WIKIMEDIA_API = 'https://commons.wikimedia.org/w/api.php';
 const DEFAULT_IMAGE = '/images/Poganda-Beach-Banggai-IndonesiaJuara-Trip.webp';
 const LANGUAGES = { id:'Indonesian', en:'English', es:'Spanish', fr:'French', zh:'Chinese' };
 const RESEARCH_CONTEXT_SIZE = 'medium';
-const MAX_RESEARCH_CHARS = 18000;
+const MAX_RESEARCH_CHARS = 10000;
 const OPENAI_MAX_RETRIES = 3;
+const LANGUAGE_BATCH_SIZE = 2;
 
-function doGet(){ return jsonResponse({ok:true,service:'Banggai Wonderland CMS',version:'2.1-research-stable'}); }
+function doGet(){ return jsonResponse({ok:true,service:'Banggai Wonderland CMS',version:'2.2-fast-stable'}); }
 
 function doPost(e){
   try{
@@ -88,22 +89,48 @@ function generateArticles(topic,selectedImage){
   const langs=Object.keys(LANGUAGES);
   const articles={};
 
-  // Generate one language at a time to avoid a 5-request TPM spike.
-  langs.forEach(function(lang,index){
-    const payload={
-      model:OPENAI_MODEL,
-      input:buildPrompt(topic,LANGUAGES[lang],image,research)
-    };
-    const response=openAIRequest(apiKey,payload,'Generate ['+lang+']');
-    const output=extractOpenAIText(response.data);
-    if(!output) throw new Error('OpenAI tidak mengembalikan output teks untuk '+lang+'.');
-    const cleaned=cleanJsonOutput(output);
-    let article; try{article=JSON.parse(cleaned);}catch(e){throw new Error('Output OpenAI bukan JSON valid untuk '+lang+'.');}
-    validateArticle(article);
-    articles[lang]={title:String(article.title),description:String(article.description),seoTitle:article.seoTitle?String(article.seoTitle):'',seoDescription:article.seoDescription?String(article.seoDescription):'',image:image.url||DEFAULT_IMAGE,imageAlt:article.imageAlt?String(article.imageAlt):'',imageSource:image.source||'',author:article.author?String(article.author):'Banggai Wonderland',pubDate:article.pubDate?String(article.pubDate):getToday(),tags:Array.isArray(article.tags)?article.tags.map(String):['Banggai','Indonesia','Travel'],content:String(article.content),preview:createPreview(article.content)};
-    if(index<langs.length-1) Utilities.sleep(800);
-  });
+  // Process languages in small parallel batches to balance speed and TPM.
+  for(let start=0;start<langs.length;start+=LANGUAGE_BATCH_SIZE){
+    const batch=langs.slice(start,start+LANGUAGE_BATCH_SIZE);
+    const requests=batch.map(function(lang){
+      return {
+        url:'https://api.openai.com/v1/responses',
+        method:'post',
+        contentType:'application/json',
+        headers:{Authorization:'Bearer '+apiKey},
+        payload:JSON.stringify({
+          model:OPENAI_MODEL,
+          input:buildPrompt(topic,LANGUAGES[lang],image,research)
+        }),
+        muteHttpExceptions:true
+      };
+    });
+
+    const responses=UrlFetchApp.fetchAll(requests);
+    responses.forEach(function(response,index){
+      const lang=batch[index], status=response.getResponseCode(), raw=response.getContentText();
+      if(status===429){
+        const retryResponse=openAIRequest(apiKey,{model:OPENAI_MODEL,input:buildPrompt(topic,LANGUAGES[lang],image,research)},'Generate ['+lang+']');
+        processArticleResponse(lang,retryResponse.data,image,articles);
+        return;
+      }
+      if(status<200||status>=300) throw new Error('OpenAI error ['+lang+'] ('+status+'): '+raw);
+      let data; try{data=JSON.parse(raw);}catch(e){throw new Error('Respons OpenAI tidak valid untuk '+lang+'.');}
+      processArticleResponse(lang,data,image,articles);
+    });
+
+    if(start+LANGUAGE_BATCH_SIZE<langs.length) Utilities.sleep(1200);
+  }
   return articles;
+}
+
+function processArticleResponse(lang,data,image,articles){
+  const output=extractOpenAIText(data);
+  if(!output) throw new Error('OpenAI tidak mengembalikan output teks untuk '+lang+'.');
+  const cleaned=cleanJsonOutput(output);
+  let article; try{article=JSON.parse(cleaned);}catch(e){throw new Error('Output OpenAI bukan JSON valid untuk '+lang+'.');}
+  validateArticle(article);
+  articles[lang]={title:String(article.title),description:String(article.description),seoTitle:article.seoTitle?String(article.seoTitle):'',seoDescription:article.seoDescription?String(article.seoDescription):'',image:image.url||DEFAULT_IMAGE,imageAlt:article.imageAlt?String(article.imageAlt):'',imageSource:image.source||'',author:article.author?String(article.author):'Banggai Wonderland',pubDate:article.pubDate?String(article.pubDate):getToday(),tags:Array.isArray(article.tags)?article.tags.map(String):['Banggai','Indonesia','Travel'],content:String(article.content),preview:createPreview(article.content)};
 }
 
 function researchTopic(topic,apiKey){
@@ -138,18 +165,18 @@ function openAIRequest(apiKey,payload,label){
     if(status!==429 || attempt===OPENAI_MAX_RETRIES){
       throw new Error(label+' error ('+status+'): '+raw);
     }
-    const waitMs=1500*attempt;
+    const waitMs=1800*attempt;
     Utilities.sleep(waitMs);
   }
   throw new Error(label+' gagal: '+lastBody);
 }
 
 function buildResearchPrompt(topic){
-  return `You are the research editor for Banggai Wonderland. Research this travel topic before the article is written.\n\nTOPIC:\n${topic}\n\nSearch multiple independent sources. Prioritize official government/tourism sources, reputable travel guides, local news/local websites, and reliable reference sources. Focus only on facts relevant to the topic: exact place names, location, access/transport, approximate travel times, activities, safety, culture/history, local rules, and practical visitor details.\n\nRules:\n- Cross-check important facts where possible.\n- Separate verified facts from estimates, opinions, and uncertainty.\n- Never invent exact prices, schedules, distances, facilities, historical claims, or access conditions.\n- Prefer current information and flag details that may change.\n- Do not pad with generic travel advice.\n\nReturn a compact RESEARCH PACK with:\nA. Verified facts\nB. Practical access/travel info\nC. Distinctive experiences\nD. Safety/culture/environment\nE. Conflicts or uncertainty\nF. 5-10 best sources with title, domain, and URL\n\nDo not write the final article.`;
+  return `You are the research editor for Banggai Wonderland. Research this travel topic before the article is written.\n\nTOPIC:\n${topic}\n\nSearch several relevant independent sources. Prioritize official government/tourism sources, reputable travel guides, and useful local sources. Focus only on facts that materially improve the article: place names, location, access/transport, approximate travel times, activities, safety, culture/history, local rules, and practical visitor details.\n\nRules:\n- Cross-check important facts where possible.\n- Separate verified facts from estimates and uncertainty.\n- Never invent exact prices, schedules, distances, facilities, historical claims, or access conditions.\n- Prefer current information and flag details that may change.\n- Avoid generic travel advice unrelated to the topic.\n\nReturn a compact RESEARCH PACK with:\nA. Verified facts\nB. Practical access/travel info\nC. Distinctive experiences\nD. Safety/culture/environment\nE. Conflicts or uncertainty\nF. 5-8 best sources with title, domain, and URL\n\nDo not write the final article.`;
 }
 
 function buildPrompt(topic,language,image,research){
-  return `You are the senior editorial writer for Banggai Wonderland, a premium travel agency.\n\nTOPIC:\n${topic}\n\nTARGET LANGUAGE:\nWrite the complete article in ${language}.\n\nFEATURED IMAGE:\n${image.url||DEFAULT_IMAGE}\n\nVERIFIED WEB RESEARCH PACK:\n${research}\n\nWrite a genuinely useful, authoritative, immersive long-form travel article based on the research pack. Aim for 1,800–2,500+ words when the subject supports it; never add filler. The article must feel destination-specific, not generic AI copy.\n\nInclude:\n- Strong opening matching search intent.\n- Concrete facts and practical visitor information.\n- Clear H2/H3 structure.\n- Substantial sections for important places.\n- Location, character, real visitor experience, access, practical considerations, and why it is worth visiting when supported by research.\n- Quick facts/table when useful.\n- Practical planning and a realistic itinerary/combo route when supported.\n- Safety, weather, environment and cultural etiquette where relevant.\n- Useful FAQ.\n- Natural Banggai Wonderland CTA.\n\nFACTUALITY:\n- Research pack is the factual foundation.\n- Never invent missing details.\n- If sources disagree, explain the uncertainty.\n- Never present estimates as exact facts.\n- Do not mention AI, prompts, or research process.\n\nSEO:\nUse the main search intent naturally in title, introduction, a relevant heading and body. Use semantic related phrases without keyword stuffing. Produce a compelling meta title, meta description and descriptive image alt text.\n\nSTYLE:\nPremium, warm, specific, confident, informative, immersive, natural. Avoid repetitive cliches such as “hidden gem”, “breathtaking”, “paradise”, and “for those seeking” unless genuinely appropriate.\n\nMARKDOWN:\nMarkdown only, no HTML.\n\nRETURN ONLY VALID JSON:\n{"title":"SEO-friendly article title","description":"Short article description","seoTitle":"SEO title","seoDescription":"SEO meta description","image":"${image.url||DEFAULT_IMAGE}","imageAlt":"Descriptive image alt text","author":"Banggai Wonderland","pubDate":"${getToday()}","tags":["Banggai","Indonesia","Travel"],"content":"Complete long-form Markdown article"}\n\nDo not wrap the JSON in markdown fences.`;
+  return `You are the senior editorial writer for Banggai Wonderland, a premium travel agency.\n\nTOPIC:\n${topic}\n\nTARGET LANGUAGE:\nWrite the complete article in ${language}.\n\nFEATURED IMAGE:\n${image.url||DEFAULT_IMAGE}\n\nVERIFIED WEB RESEARCH PACK:\n${research}\n\nWrite a genuinely useful, authoritative, immersive travel article based on the research pack. Target approximately 1,200–1,800 words when the subject supports it. Never add filler. Make it destination-specific, not generic AI copy.\n\nInclude:\n- Strong opening matching search intent.\n- Concrete facts and practical visitor information.\n- Clear H2/H3 structure.\n- Substantial sections for important places.\n- Location, character, real visitor experience, access, practical considerations, and why it is worth visiting when supported by research.\n- Quick facts/table when useful.\n- Practical planning and a realistic itinerary/combo route when supported.\n- Safety, weather, environment and cultural etiquette where relevant.\n- Useful FAQ.\n- Natural Banggai Wonderland CTA.\n\nFACTUALITY:\n- Research pack is the factual foundation.\n- Never invent missing details.\n- If sources disagree, explain the uncertainty.\n- Never present estimates as exact facts.\n- Do not mention AI, prompts, or research process.\n\nSEO:\nUse the main search intent naturally in title, introduction, a relevant heading and body. Use semantic related phrases without keyword stuffing. Produce a compelling meta title, meta description and descriptive image alt text.\n\nSTYLE:\nPremium, warm, specific, confident, informative, immersive, natural. Avoid repetitive cliches such as “hidden gem”, “breathtaking”, “paradise”, and “for those seeking” unless genuinely appropriate.\n\nMARKDOWN:\nMarkdown only, no HTML.\n\nRETURN ONLY VALID JSON:\n{"title":"SEO-friendly article title","description":"Short article description","seoTitle":"SEO title","seoDescription":"SEO meta description","image":"${image.url||DEFAULT_IMAGE}","imageAlt":"Descriptive image alt text","author":"Banggai Wonderland","pubDate":"${getToday()}","tags":["Banggai","Indonesia","Travel"],"content":"Complete travel article in Markdown"}\n\nDo not wrap the JSON in markdown fences.`;
 }
 
 function findRelevantImage(topic){
@@ -207,7 +234,7 @@ function extractOpenAIText(response){
 function cleanJsonOutput(output){return String(output||'').replace(/^\s*```json\s*/i,'').replace(/^\s*```\s*/i,'').replace(/\s*```\s*$/i,'').trim();}
 function validateArticle(article){
   ['title','description','author','pubDate','content'].forEach(function(field){if(article[field]===undefined||article[field]===null||String(article[field]).trim()==='')throw new Error('Field artikel tidak lengkap: '+field);});
-  if(String(article.content).length<5000)throw new Error('Artikel '+String(article.title||'')+' terlalu pendek. Minimum editorial quality belum terpenuhi.');
+  if(String(article.content).length<3500)throw new Error('Artikel '+String(article.title||'')+' terlalu pendek. Minimum editorial quality belum terpenuhi.');
 }
 function createPreview(content){return String(content||'').replace(/^#{1,6}\s+/gm,'').replace(/[*_`>]/g,'').replace(/\[([^\]]+)\]\([^\)]+\)/g,'$1').replace(/\s+/g,' ').trim().substring(0,420);}
 
