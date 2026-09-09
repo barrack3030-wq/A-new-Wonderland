@@ -1,6 +1,6 @@
 const OPENAI_MODEL='gpt-5.6-luna';
 const DEEPSEEK_MODEL='deepseek-v4-flash';
-const GEMINI_MODEL='gemini-2.5-flash';
+const GEMINI_MODEL='gemini-3.6-flash';
 const OPENAI_URL='https://api.openai.com/v1/responses';
 const DEEPSEEK_URL='https://api.deepseek.com/responses';
 const GEMINI_URL='https://generativelanguage.googleapis.com/v1beta/models/'+GEMINI_MODEL+':generateContent';
@@ -10,7 +10,7 @@ const LANGUAGES={id:'Indonesian',en:'English',es:'Spanish',fr:'French',zh:'Chine
 const MAX_RETRIES=3;
 const BATCH_SIZE=2;
 
-function doGet(){return jsonResponse({ok:true,service:'Banggai Wonderland CMS',version:'6.0-gemini-offline-editorial'});}
+function doGet(){return jsonResponse({ok:true,service:'Banggai Wonderland CMS',version:'6.1-gemini-3.6-offline-editorial'});}
 
 function doPost(e){
   try{
@@ -122,9 +122,7 @@ function generateArticles(topic,selectedImage,provider){
   return articles;
 }
 
-function providerLabel(provider){
-  return provider==='gemini'?'Gemini':provider==='deepseek'?'DeepSeek':'OpenAI';
-}
+function providerLabel(provider){return provider==='gemini'?'Gemini':provider==='deepseek'?'DeepSeek':'OpenAI';}
 
 function buildRequestPayload(cfg,topic,language,image){
   const prompt=buildPrompt(topic,language,image);
@@ -249,28 +247,10 @@ function findRelevantImage(topic){
 
 function searchWikimediaImages(query){
   const params=['action=query','format=json','generator=search','gsrnamespace=6','gsrlimit=10','gsrsearch='+encodeURIComponent(query),'prop=imageinfo','iiprop=url|mime|size|extmetadata','iiurlwidth=1600','origin=*'].join('&');
-  let r;try{r=UrlFetchApp.fetch(WIKIMEDIA_API+'?'+params,{method:'get',muteHttpExceptions:true,headers:{'User-Agent':'BanggaiWonderlandCMS/6.0'}});}catch(e){return null;}
-  if(r.getResponseCode()<200||r.getResponseCode()>=300)return null;
-  let data;try{data=JSON.parse(r.getContentText());}catch(e){return null;}
-  const pages=data.query&&data.query.pages?Object.keys(data.query.pages).map(k=>data.query.pages[k]):[],normalized=normalizeSearchText(query),words=normalized.split(' ').filter(w=>w.length>=4);
-  let best=null,bestScore=-1;
-  pages.forEach(function(page){
-    const info=page.imageinfo&&page.imageinfo[0];if(!info||!info.url)return;
-    const mime=String(info.mime||'').toLowerCase();if(mime==='image/svg+xml'||mime.indexOf('image/')!==0)return;
-    const title=normalizeSearchText(page.title||'');let score=0;
-    words.forEach(w=>{if(title.indexOf(w)!==-1)score+=5;});
-    if(title.indexOf('mbuang')!==-1&&normalized.indexOf('mbuang')!==-1)score+=30;
-    if(title.indexOf('paisupok')!==-1&&normalized.indexOf('paisupok')!==-1)score+=30;
-    if(title.indexOf('poganda')!==-1&&normalized.indexOf('poganda')!==-1)score+=30;
-    if(title.indexOf('banggai')!==-1)score+=5;
-    if(info.width&&info.height&&Number(info.width)*Number(info.height)>=1000000)score+=3;
-    if(score>bestScore){
-      bestScore=score;
-      const meta=info.extmetadata||{};
-      best={url:info.thumburl||info.url,alt:meta.ImageDescription&&meta.ImageDescription.value?stripHtml(meta.ImageDescription.value):String(page.title||'Banggai destination'),source:info.descriptionurl||''};
-    }
-  });
-  return best;
+  let r;try{r=UrlFetchApp.fetch(WIKIMEDIA_API+'?'+params,{method:'get',muteHttpExceptions:true,headers:{'User-Agent':'BanggaiWonderlandCMS/6.1'}});}catch(e){return null;}
+  if(r.getResponseCode()<200||r.getResponseCode()>=300)return null;let data;try{data=JSON.parse(r.getContentText());}catch(e){return null;}
+  const pages=data.query&&data.query.pages?Object.keys(data.query.pages).map(k=>data.query.pages[k]):[],normalized=normalizeSearchText(query),words=normalized.split(' ').filter(w=>w.length>=4);let best=null,bestScore=-1;
+  pages.forEach(function(page){const info=page.imageinfo&&page.imageinfo[0];if(!info||!info.url)return;const mime=String(info.mime||'').toLowerCase();if(mime==='image/svg+xml'||mime.indexOf('image/')!==0)return;const title=normalizeSearchText(page.title||'');let score=0;words.forEach(w=>{if(title.indexOf(w)!==-1)score+=5;});if(title.indexOf('mbuang')!==-1&&normalized.indexOf('mbuang')!==-1)score+=30;if(title.indexOf('paisupok')!==-1&&normalized.indexOf('paisupok')!==-1)score+=30;if(title.indexOf('poganda')!==-1&&normalized.indexOf('poganda')!==-1)score+=30;if(title.indexOf('banggai')!==-1)score+=5;if(info.width&&info.height&&Number(info.width)*Number(info.height)>=1000000)score+=3;if(score>bestScore){bestScore=score;const meta=info.extmetadata||{};best={url:info.thumburl||info.url,alt:meta.ImageDescription&&meta.ImageDescription.value?stripHtml(meta.ImageDescription.value):String(page.title||'Banggai destination'),source:info.descriptionurl||''};}});return best;
 }
 
 function normalizeSearchText(v){return String(v||'').toLowerCase().replace(/[^a-z0-9]+/g,' ').replace(/\s+/g,' ').trim();}
@@ -278,68 +258,23 @@ function stripHtml(v){return String(v||'').replace(/<[^>]*>/g,' ').replace(/\s+/
 function extractAIText(response){
   if(response&&response.output_text)return response.output_text;
   if(response&&Array.isArray(response.output))for(let i=0;i<response.output.length;i++){const item=response.output[i];if(!item.content)continue;for(let j=0;j<item.content.length;j++){if(item.content[j].type==='output_text'&&item.content[j].text)return item.content[j].text;}}
+  if(response&&Array.isArray(response.candidates)&&response.candidates[0]){const parts=response.candidates[0].content&&response.candidates[0].content.parts||[];for(let i=0;i<parts.length;i++){if(parts[i].text)return parts[i].text;}}
   if(response&&response.choices&&response.choices[0]&&response.choices[0].message&&response.choices[0].message.content)return response.choices[0].message.content;
-  if(response&&Array.isArray(response.candidates)){
-    for(let i=0;i<response.candidates.length;i++){
-      const parts=response.candidates[i]&&response.candidates[i].content&&response.candidates[i].content.parts;
-      if(!Array.isArray(parts))continue;
-      const text=parts.map(function(p){return p&&typeof p.text==='string'?p.text:'';}).join('');
-      if(text)return text;
-    }
-  }
   return '';
 }
 function cleanJsonOutput(v){return String(v||'').replace(/^\s*```json\s*/i,'').replace(/^\s*```\s*/i,'').replace(/\s*```\s*$/i,'').trim();}
 
 function publishArticles(articles){
-  const files=[],first=articles.id||articles.en||articles.es||articles.fr||articles.zh;
-  if(!first||!first.title)throw new Error('Artikel utama tidak ditemukan.');
+  const files=[],first=articles.id||articles.en||articles.es||articles.fr||articles.zh;if(!first||!first.title)throw new Error('Artikel utama tidak ditemukan.');
   const translationKey=getToday()+'-'+createSlug(first.title).substring(0,70);
-  Object.keys(LANGUAGES).forEach(function(lang){
-    const article=articles[lang];
-    if(!article||!article.title||!article.content)throw new Error('Artikel bahasa '+lang+' tidak lengkap.');
-    const slug=createSlug(article.title);
-    if(!slug)throw new Error('Slug kosong untuk '+lang);
-    const path='src/content/blog/'+lang+'/'+getToday()+'-'+slug+'.md';
-    githubCreateFile(path,createMarkdown(article,translationKey),'CMS: Add Gemini editorial blog article ['+lang+'] '+article.title);
-    files.push({language:lang,path:path,title:article.title});
-  });
+  Object.keys(LANGUAGES).forEach(function(lang){const article=articles[lang];if(!article||!article.title||!article.content)throw new Error('Artikel bahasa '+lang+' tidak lengkap.');const slug=createSlug(article.title);if(!slug)throw new Error('Slug kosong untuk '+lang);const path='src/content/blog/'+lang+'/'+getToday()+'-'+slug+'.md';githubCreateFile(path,createMarkdown(article,translationKey),'CMS: Add offline-editorial blog article ['+lang+'] '+article.title);files.push({language:lang,path:path,title:article.title});});
   return {files:files};
 }
-
 function createMarkdown(article,translationKey){
-  let m='---\n';
-  m+='title: "'+yamlEscape(article.title)+'"\n';
-  m+='description: "'+yamlEscape(article.description)+'"\n';
-  if(article.seoTitle)m+='seoTitle: "'+yamlEscape(article.seoTitle)+'"\n';
-  if(article.seoDescription)m+='seoDescription: "'+yamlEscape(article.seoDescription)+'"\n';
-  m+='image: "'+yamlEscape(article.image||DEFAULT_IMAGE)+'"\n';
-  if(article.imageAlt)m+='imageAlt: "'+yamlEscape(article.imageAlt)+'"\n';
-  if(article.imageSource)m+='imageSource: "'+yamlEscape(article.imageSource)+'"\n';
-  m+='author: "'+yamlEscape(article.author||'Banggai Wonderland')+'"\n';
-  m+='pubDate: '+normalizeDate(article.pubDate)+'\n';
-  m+='translationKey: "'+yamlEscape(translationKey)+'"\n';
-  if(Array.isArray(article.tags)&&article.tags.length){m+='tags:\n';article.tags.forEach(function(tag){m+='  - "'+yamlEscape(tag)+'"\n';});}
-  return m+'---\n\n'+String(article.content).trim()+'\n';
+  let m='---\n';m+='title: "'+yamlEscape(article.title)+'"\n';m+='description: "'+yamlEscape(article.description)+'"\n';if(article.seoTitle)m+='seoTitle: "'+yamlEscape(article.seoTitle)+'"\n';if(article.seoDescription)m+='seoDescription: "'+yamlEscape(article.seoDescription)+'"\n';m+='image: "'+yamlEscape(article.image||DEFAULT_IMAGE)+'"\n';if(article.imageAlt)m+='imageAlt: "'+yamlEscape(article.imageAlt)+'"\n';if(article.imageSource)m+='imageSource: "'+yamlEscape(article.imageSource)+'"\n';m+='author: "'+yamlEscape(article.author||'Banggai Wonderland')+'"\n';m+='pubDate: '+normalizeDate(article.pubDate)+'\n';m+='translationKey: "'+yamlEscape(translationKey)+'"\n';if(Array.isArray(article.tags)&&article.tags.length){m+='tags:\n';article.tags.forEach(function(tag){m+='  - "'+yamlEscape(tag)+'"\n';});}return m+'---\n\n'+String(article.content).trim()+'\n';
 }
-function githubCreateFile(path,content,message){
-  const p=PropertiesService.getScriptProperties(),token=p.getProperty('GITHUB_TOKEN'),owner=p.getProperty('GITHUB_OWNER'),repo=p.getProperty('GITHUB_REPO'),branch=p.getProperty('GITHUB_BRANCH')||'main';
-  if(!token||!owner||!repo)throw new Error('GitHub Script Properties belum lengkap.');
-  const url='https://api.github.com/repos/'+owner+'/'+repo+'/contents/'+path;
-  const payload={message:message,content:Utilities.base64Encode(Utilities.newBlob(content).getBytes()),branch:branch};
-  const r=UrlFetchApp.fetch(url,{method:'put',contentType:'application/json',headers:{Authorization:'Bearer '+token,Accept:'application/vnd.github+json','X-GitHub-Api-Version':'2022-11-28'},payload:JSON.stringify(payload),muteHttpExceptions:true});
-  if(r.getResponseCode()<200||r.getResponseCode()>=300)throw new Error('GitHub error ('+r.getResponseCode()+'): '+r.getContentText());
-  return JSON.parse(r.getContentText());
-}
-function githubCreateBinaryFile(path,bytes,message){
-  const p=PropertiesService.getScriptProperties(),token=p.getProperty('GITHUB_TOKEN'),owner=p.getProperty('GITHUB_OWNER'),repo=p.getProperty('GITHUB_REPO'),branch=p.getProperty('GITHUB_BRANCH')||'main';
-  if(!token||!owner||!repo)throw new Error('GitHub Script Properties belum lengkap.');
-  const url='https://api.github.com/repos/'+owner+'/'+repo+'/contents/'+path;
-  const payload={message:message,content:Utilities.base64Encode(bytes),branch:branch};
-  const r=UrlFetchApp.fetch(url,{method:'put',contentType:'application/json',headers:{Authorization:'Bearer '+token,Accept:'application/vnd.github+json','X-GitHub-Api-Version':'2022-11-28'},payload:JSON.stringify(payload),muteHttpExceptions:true});
-  if(r.getResponseCode()<200||r.getResponseCode()>=300)throw new Error('GitHub image error ('+r.getResponseCode()+'): '+r.getContentText());
-  return JSON.parse(r.getContentText());
-}
+function githubCreateFile(path,content,message){const p=PropertiesService.getScriptProperties(),token=p.getProperty('GITHUB_TOKEN'),owner=p.getProperty('GITHUB_OWNER'),repo=p.getProperty('GITHUB_REPO'),branch=p.getProperty('GITHUB_BRANCH')||'main';if(!token||!owner||!repo)throw new Error('GitHub Script Properties belum lengkap.');const url='https://api.github.com/repos/'+owner+'/'+repo+'/contents/'+path;const payload={message:message,content:Utilities.base64Encode(Utilities.newBlob(content).getBytes()),branch:branch};const r=UrlFetchApp.fetch(url,{method:'put',contentType:'application/json',headers:{Authorization:'Bearer '+token,Accept:'application/vnd.github+json','X-GitHub-Api-Version':'2022-11-28'},payload:JSON.stringify(payload),muteHttpExceptions:true});if(r.getResponseCode()<200||r.getResponseCode()>=300)throw new Error('GitHub error ('+r.getResponseCode()+'): '+r.getContentText());return JSON.parse(r.getContentText());}
+function githubCreateBinaryFile(path,bytes,message){const p=PropertiesService.getScriptProperties(),token=p.getProperty('GITHUB_TOKEN'),owner=p.getProperty('GITHUB_OWNER'),repo=p.getProperty('GITHUB_REPO'),branch=p.getProperty('GITHUB_BRANCH')||'main';if(!token||!owner||!repo)throw new Error('GitHub Script Properties belum lengkap.');const url='https://api.github.com/repos/'+owner+'/'+repo+'/contents/'+path;const payload={message:message,content:Utilities.base64Encode(bytes),branch:branch};const r=UrlFetchApp.fetch(url,{method:'put',contentType:'application/json',headers:{Authorization:'Bearer '+token,Accept:'application/vnd.github+json','X-GitHub-Api-Version':'2022-11-28'},payload:JSON.stringify(payload),muteHttpExceptions:true});if(r.getResponseCode()<200||r.getResponseCode()>=300)throw new Error('GitHub image error ('+r.getResponseCode()+'): '+r.getContentText());return JSON.parse(r.getContentText());}
 function createSlug(text){return String(text).toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'').replace(/[^a-z0-9]+/g,'-').replace(/^-+|-+$/g,'').substring(0,100);}
 function normalizeDate(v){const t=String(v||'').trim();return /^\d{4}-\d{2}-\d{2}$/.test(t)?t:getToday();}
 function getToday(){return Utilities.formatDate(new Date(),Session.getScriptTimeZone()||'Asia/Makassar','yyyy-MM-dd');}
