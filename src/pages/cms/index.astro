@@ -9,19 +9,16 @@ const title='Banggai Wonderland CMS';
 <meta name="robots" content="noindex,nofollow"/>
 <title>{title}</title>
 <style>
-:root{color-scheme:dark;font-family:Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}*{box-sizing:border-box}body{margin:0;min-height:100vh;background:linear-gradient(145deg,#061525,#0b2b46 55%,#071a2a);color:#eef7ff}.wrap{width:min(1100px,94%);margin:0 auto;padding:34px 0 60px}.brand{margin-bottom:28px}.brand h1{margin:0;font-size:clamp(28px,5vw,42px);letter-spacing:-.03em}.brand p{color:#9fc0d6;margin:8px 0 0}.card{background:rgba(8,24,39,.88);border:1px solid rgba(157,207,235,.16);border-radius:20px;padding:24px;box-shadow:0 20px 70px rgba(0,0,0,.28);margin-bottom:18px}label{display:block;font-size:13px;font-weight:700;color:#b8d5e7;margin:0 0 8px}input,textarea{width:100%;border:1px solid #28465c;background:#071b2b;color:#f5fbff;border-radius:12px;padding:13px 14px;outline:none;font:inherit}input:focus,textarea:focus{border-color:#56b8ea;box-shadow:0 0 0 3px rgba(86,184,234,.12)}textarea{min-height:260px;resize:vertical;line-height:1.65}.meta-grid{display:grid;grid-template-columns:2fr 1fr;gap:14px}.seo-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}.image-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}.row{display:flex;gap:10px;flex-wrap:wrap;margin-top:16px}button{border:0;border-radius:12px;padding:12px 18px;font-weight:800;cursor:pointer;color:#03121d;background:#65c8f2;touch-action:manipulation}button.secondary{background:#17364d;color:#dceffc}button:disabled{opacity:.5;cursor:not-allowed}.status{margin-top:14px;color:#9fc0d6;min-height:22px;white-space:pre-wrap}.danger{color:#ffb2b2}.success{color:#9ce7b4}.muted{color:#86a7bb;font-size:13px}.small{font-size:12px}.divider{border-top:1px solid rgba(157,207,235,.12);margin:22px 0}.result{display:none}.result.show{display:block}.lang{border-top:1px solid rgba(157,207,235,.12);padding:18px 0}.lang:first-child{border-top:0;padding-top:0}.lang h3{margin:0 0 12px}.lang textarea{min-height:360px}.preview{margin-top:12px;display:none}.preview.show{display:block}.preview img{width:100%;max-height:280px;object-fit:cover;border-radius:14px;border:1px solid #28465c}.selected{margin-top:10px;padding:10px 12px;border-radius:10px;background:#0b2437;color:#bfe4f7;font-size:13px;word-break:break-all}.upload-ok{display:none;margin-top:12px;padding:12px 14px;border-radius:12px;border:1px solid rgba(156,231,180,.25);background:rgba(33,83,55,.25);color:#b9f2c9}.upload-ok.show{display:block}.password-wrap{position:relative}.password-wrap input{padding-right:92px}.toggle-password{position:absolute;right:6px;top:6px;height:calc(100% - 12px);padding:0 12px;border-radius:9px;background:#17364d;color:#dceffc;font-size:12px}@media(max-width:800px){.meta-grid,.seo-grid,.image-grid{grid-template-columns:1fr}.card{padding:18px}input,textarea{font-size:16px}}
+:root{color-scheme:dark;font-family:Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}*{box-sizing:border-box}body{margin:0;min-height:100vh;background:linear-gradient(145deg,#061525,#0b2b46 55%,#071a2a);color:#eef7ff}.wrap{width:min(1100px,94%);margin:0 auto;padding:34px 0 60px}.brand{margin-bottom:28px}.brand h1{margin:0;font-size:clamp(28px,5vw,42px);letter-spacing:-.03em}.brand p{color:#9fc0d6;margin:8px 0 0}.card{background:rgba(8,24,39,.88);border:1px solid rgba(157,207,235,.16);border-radius:20px;padding:24px;box-shadow:0 20px 70px rgba(0,0,0,.28);margin-bottom:18px}label{display:block;font-size:13px;font-weight:700;color:#b8d5e7;margin:0 0 8px}input,textarea{width:100%;border:1px solid #28465c;background:#071b2b;color:#f5fbff;border-radius:12px;padding:13px 14px;outline:none;font:inherit}input:focus,textarea:focus{border-color:#56b8ea;box-shadow:0 0 0 3px rgba(86,184,234,.12)}textarea{min-height:300px;resize:vertical;line-height:1.65}.meta-grid{display:grid;grid-template-columns:2fr 1fr;gap:14px}.seo-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}.image-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}.row{display:flex;gap:10px;flex-wrap:wrap;margin-top:16px}button{border:0;border-radius:12px;padding:12px 18px;font-weight:800;cursor:pointer;color:#03121d;background:#65c8f2;touch-action:manipulation}button.secondary{background:#17364d;color:#dceffc}button:disabled{opacity:.5;cursor:not-allowed}.status{margin-top:14px;color:#9fc0d6;min-height:22px;white-space:pre-wrap}.danger{color:#ffb2b2}.success{color:#9ce7b4}.muted{color:#86a7bb;font-size:13px}.divider{border-top:1px solid rgba(157,207,235,.12);margin:22px 0}.result{display:none}.result.show{display:block}.lang{border-top:1px solid rgba(157,207,235,.12);padding:18px 0}.lang:first-child{border-top:0;padding-top:0}.lang textarea{min-height:420px}.preview{margin-top:12px;display:none}.preview.show{display:block}.preview img{width:100%;max-height:280px;object-fit:cover;border-radius:14px;border:1px solid #28465c}.selected{margin-top:10px;padding:10px 12px;border-radius:10px;background:#0b2437;color:#bfe4f7;font-size:13px;word-break:break-all}.upload-ok{display:none;margin-top:12px;padding:12px 14px;border-radius:12px;border:1px solid rgba(156,231,180,.25);background:rgba(33,83,55,.25);color:#b9f2c9}.upload-ok.show{display:block}.password-wrap{position:relative}.password-wrap input{padding-right:92px}.toggle-password{position:absolute;right:6px;top:6px;height:calc(100% - 12px);padding:0 12px;border-radius:9px;background:#17364d;color:#dceffc;font-size:12px}@media(max-width:800px){.meta-grid,.seo-grid,.image-grid{grid-template-columns:1fr}.card{padding:18px}input,textarea{font-size:16px}}
 </style>
 </head>
 <body>
 <main class="wrap">
-<header class="brand">
-<h1>Banggai Wonderland CMS</h1>
-<p>Manual Article → AI Translation → Review → Publish</p>
-</header>
+<header class="brand"><h1>Banggai Wonderland CMS</h1><p>Manual Article → AI Translation → Review → Publish</p></header>
 
 <section class="card">
 <h2 style="margin-top:0">1. Tulis artikel utama</h2>
-<p class="muted">Tulis atau paste artikel Bahasa Indonesia di bawah. AI tidak menulis ulang artikel ini. AI hanya menerjemahkannya ke English, Spanish, French, dan Chinese.</p>
+<p class="muted">Paste artikel Bahasa Indonesia Anda. AI tidak menulis artikel ini; AI hanya menerjemahkannya ke English, Spanish, French, dan Chinese.</p>
 
 <div class="meta-grid">
 <div><label for="title">Judul artikel</label><input id="title" type="text" autocomplete="off" placeholder="Contoh: Panduan Lengkap Mengunjungi Danau Paisupok"/></div>
@@ -57,7 +54,7 @@ const title='Banggai Wonderland CMS';
 
 <section id="result" class="card result">
 <h2 style="margin-top:0">3. Review hasil terjemahan</h2>
-<p class="muted">Periksa hasil AI. Semua kotak di bawah bisa diedit sebelum publish. Bahasa Indonesia adalah sumber asli.</p>
+<p class="muted">Bahasa Indonesia adalah sumber asli. Review dan edit terjemahan sebelum publish.</p>
 <div id="articles"></div>
 <div class="row"><button id="publish" type="button">Publish 5 Languages to GitHub</button></div>
 <div id="publishStatus" class="status"></div>
@@ -66,55 +63,246 @@ const title='Banggai Wonderland CMS';
 
 <script>
 const ENDPOINT='https://script.google.com/macros/s/AKfycbxGMuyFzq0K-gKIPaamp1ClFqo6zYJfNNvZfd0hxeJIJTj0N_DVPywUtkWbo5g0_F08/exec';
-const titleEl=document.getElementById('title'),pubDateEl=document.getElementById('pubDate'),descriptionEl=document.getElementById('description');
-const seoTitleEl=document.getElementById('seoTitle'),seoDescriptionEl=document.getElementById('seoDescription'),tagsEl=document.getElementById('tags');
-const contentEl=document.getElementById('content'),contentStatusEl=document.getElementById('contentStatus'),keyEl=document.getElementById('accessKey');
-const statusEl=document.getElementById('status'),translateEl=document.getElementById('translate'),resultEl=document.getElementById('result'),articlesEl=document.getElementById('articles');
-const publishEl=document.getElementById('publish'),publishStatusEl=document.getElementById('publishStatus');
-const imageFileEl=document.getElementById('imageFile'),imageUrlEl=document.getElementById('imageUrl'),imageStatusEl=document.getElementById('imageStatus');
-const imagePreview=document.getElementById('imagePreview'),imagePreviewImg=document.getElementById('imagePreviewImg'),selectedImageEl=document.getElementById('selectedImage'),uploadOk=document.getElementById('uploadOk'),uploadOkText=document.getElementById('uploadOkText');
-let translatedArticles=null,selectedImage=null;
+const titleEl=document.getElementById('title');
+const pubDateEl=document.getElementById('pubDate');
+const descriptionEl=document.getElementById('description');
+const seoTitleEl=document.getElementById('seoTitle');
+const seoDescriptionEl=document.getElementById('seoDescription');
+const tagsEl=document.getElementById('tags');
+const contentEl=document.getElementById('content');
+const contentStatusEl=document.getElementById('contentStatus');
+const keyEl=document.getElementById('accessKey');
+const statusEl=document.getElementById('status');
+const translateEl=document.getElementById('translate');
+const resultEl=document.getElementById('result');
+const articlesEl=document.getElementById('articles');
+const publishEl=document.getElementById('publish');
+const publishStatusEl=document.getElementById('publishStatus');
+const imageFileEl=document.getElementById('imageFile');
+const imageUrlEl=document.getElementById('imageUrl');
+const imageStatusEl=document.getElementById('imageStatus');
+const imagePreview=document.getElementById('imagePreview');
+const imagePreviewImg=document.getElementById('imagePreviewImg');
+const selectedImageEl=document.getElementById('selectedImage');
+const uploadOk=document.getElementById('uploadOk');
+const uploadOkText=document.getElementById('uploadOkText');
+let translatedArticles=null;
+let selectedImage=null;
 
 pubDateEl.value=new Date().toISOString().slice(0,10);
-function setStatus(el,t,c=''){el.className='status '+c;el.textContent=t}
-function esc(v=''){return String(v).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]}))}
-function splitTags(v){return String(v||'').split(',').map(x=>x.trim()).filter(Boolean)}
-function showImage(img){selectedImage=img;imagePreviewImg.src=img.url;selectedImageEl.textContent=img.url+(img.source?' · Source: '+img.source:'');imagePreview.classList.add('show')}
-function confirmUpload(img){uploadOkText.textContent='File: '+(img.name||img.url.split('/').pop())+' · Tersimpan di GitHub: '+(img.path||'public'+img.url);uploadOk.classList.add('show')}
 
-contentEl.addEventListener('input',()=>{const n=contentEl.value.trim().length;setStatus(contentStatusEl,n?('✓ '+n.toLocaleString('id-ID')+' karakter artikel siap diterjemahkan.','success'):('Isi artikel masih kosong.'));});
-document.getElementById('togglePassword').addEventListener('click',()=>{const show=keyEl.type==='text';keyEl.type=show?'password':'text';document.getElementById('togglePassword').textContent=show?'Lihat':'Sembunyikan'});
+function setStatus(el,text,klass=''){
+  el.className='status'+(klass?' '+klass:'');
+  el.textContent=text||'';
+}
 
-imageFileEl.addEventListener('change',()=>{uploadOk.classList.remove('show');if(imageFileEl.files[0])setStatus(imageStatusEl,'Foto dipilih: '+imageFileEl.files[0].name+'. Tekan Upload / Import Photo.')});
-async function post(payload){const r=await fetch(ENDPOINT,{method:'POST',headers:{'Content-Type':'text/plain;charset=utf-8'},body:JSON.stringify(payload)});const raw=await r.text();let data;try{data=JSON.parse(raw)}catch(e){throw new Error('CMS tidak mengembalikan JSON. Pastikan deployment Apps Script sudah versi terbaru.')};if(!data.ok)throw new Error(data.error||'CMS request failed');return data}
+function esc(value=''){
+  return String(value).replace(/[&<>"']/g,function(ch){
+    return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[ch];
+  });
+}
 
-document.getElementById('uploadImage').addEventListener('click',async()=>{const accessKey=keyEl.value.trim(),file=imageFileEl.files&&imageFileEl.files[0],url=imageUrlEl.value.trim();if(!accessKey)return setStatus(imageStatusEl,'Masukkan CMS access key terlebih dahulu.','danger');if(!file&&!url)return setStatus(imageStatusEl,'Pilih foto atau masukkan link foto.','danger');if(file&&file.size>8*1024*1024)return setStatus(imageStatusEl,'Ukuran foto maksimal 8 MB.','danger');uploadOk.classList.remove('show');setStatus(imageStatusEl,'⏳ Mengupload foto…');const b=document.getElementById('uploadImage');b.disabled=true;try{const p={action:'uploadImage',accessKey};if(file){p.dataUrl=await new Promise((res,rej)=>{const r=new FileReader();r.onload=()=>res(r.result);r.onerror=()=>rej(new Error('File tidak dapat dibaca.'));r.readAsDataURL(file)});p.fileName=file.name}else p.imageUrl=url;const d=await post(p);showImage(d.image);confirmUpload(d.image);setStatus(imageStatusEl,'✓ Foto berhasil terupload.','success')}catch(e){setStatus(imageStatusEl,'✕ '+e.message,'danger')}finally{b.disabled=false}});
+function splitTags(value){
+  return String(value||'').split(',').map(function(v){return v.trim();}).filter(Boolean);
+}
 
-document.getElementById('useSearchImage').addEventListener('click',async()=>{const accessKey=keyEl.value.trim(),t=titleEl.value.trim();if(!accessKey)return setStatus(imageStatusEl,'Masukkan CMS access key terlebih dahulu.','danger');if(!t)return setStatus(imageStatusEl,'Isi judul artikel terlebih dahulu.','danger');setStatus(imageStatusEl,'⏳ Mencari foto berdasarkan judul…');const b=document.getElementById('useSearchImage');b.disabled=true;try{const d=await post({action:'searchImage',accessKey,topic:t});if(!d.image||!d.image.url)throw new Error('Foto tidak ditemukan.');showImage(d.image);setStatus(imageStatusEl,'✓ Foto relevan ditemukan.','success')}catch(e){setStatus(imageStatusEl,'✕ '+e.message,'danger')}finally{b.disabled=false}});
+function showImage(img){
+  selectedImage=img;
+  imagePreviewImg.src=img.url;
+  selectedImageEl.textContent=img.url+(img.source?' · Source: '+img.source:'');
+  imagePreview.classList.add('show');
+}
 
-translateEl.addEventListener('click',async()=>{
-  const accessKey=keyEl.value.trim(),title=titleEl.value.trim(),content=contentEl.value.trim();
-  if(!title){titleEl.focus();setStatus(statusEl,'Judul artikel wajib diisi.','danger');return}
-  if(!content){contentEl.focus();setStatus(statusEl,'Paste artikel Bahasa Indonesia terlebih dahulu.','danger');return}
-  if(content.length<300){contentEl.focus();setStatus(statusEl,'Artikel terlalu pendek. Minimal 300 karakter.','danger');return}
-  if(!accessKey){keyEl.focus();setStatus(statusEl,'Masukkan CMS access key terlebih dahulu.','danger');return}
-  translateEl.disabled=true;resultEl.classList.remove('show');setStatus(statusEl,'⏳ AI sedang menerjemahkan ke 4 bahasa…');
+function confirmUpload(img){
+  uploadOkText.textContent='File: '+(img.name||img.url.split('/').pop())+' · Tersimpan di GitHub: '+(img.path||'public'+img.url);
+  uploadOk.classList.add('show');
+}
+
+contentEl.addEventListener('input',function(){
+  const n=contentEl.value.trim().length;
+  if(n>0){
+    setStatus(contentStatusEl,'✓ '+n.toLocaleString('id-ID')+' karakter artikel siap diterjemahkan.','success');
+  }else{
+    setStatus(contentStatusEl,'Isi artikel masih kosong.');
+  }
+});
+
+document.getElementById('togglePassword').addEventListener('click',function(){
+  const show=keyEl.type==='text';
+  keyEl.type=show?'password':'text';
+  this.textContent=show?'Lihat':'Sembunyikan';
+});
+
+imageFileEl.addEventListener('change',function(){
+  uploadOk.classList.remove('show');
+  if(imageFileEl.files[0])setStatus(imageStatusEl,'Foto dipilih: '+imageFileEl.files[0].name+'. Tekan Upload / Import Photo.');
+});
+
+async function post(payload){
+  const response=await fetch(ENDPOINT,{
+    method:'POST',
+    headers:{'Content-Type':'text/plain;charset=utf-8'},
+    body:JSON.stringify(payload)
+  });
+  const raw=await response.text();
+  let data;
+  try{data=JSON.parse(raw);}catch(error){throw new Error('CMS tidak mengembalikan JSON. Pastikan deployment Apps Script sudah versi terbaru.');}
+  if(!data.ok)throw new Error(data.error||'CMS request failed');
+  return data;
+}
+
+document.getElementById('uploadImage').addEventListener('click',async function(){
+  const accessKey=keyEl.value.trim();
+  const file=imageFileEl.files&&imageFileEl.files[0];
+  const url=imageUrlEl.value.trim();
+  if(!accessKey)return setStatus(imageStatusEl,'Masukkan CMS access key terlebih dahulu.','danger');
+  if(!file&&!url)return setStatus(imageStatusEl,'Pilih foto atau masukkan link foto.','danger');
+  if(file&&file.size>8*1024*1024)return setStatus(imageStatusEl,'Ukuran foto maksimal 8 MB.','danger');
+  uploadOk.classList.remove('show');
+  setStatus(imageStatusEl,'⏳ Mengupload foto…');
+  const button=this;button.disabled=true;
   try{
-    const d=await post({action:'translate',accessKey,title,description:descriptionEl.value.trim(),seoTitle:seoTitleEl.value.trim(),seoDescription:seoDescriptionEl.value.trim(),tags:splitTags(tagsEl.value),pubDate:pubDateEl.value,image:selectedImage,content});
-    translatedArticles=d.articles;renderArticles();resultEl.classList.add('show');setStatus(statusEl,'✓ Terjemahan English, Spanish, French, dan Chinese berhasil dibuat.','success');
-  }catch(e){setStatus(statusEl,'✕ '+e.message,'danger')}
-  finally{translateEl.disabled=false}
+    const payload={action:'uploadImage',accessKey:accessKey};
+    if(file){
+      payload.dataUrl=await new Promise(function(resolve,reject){
+        const reader=new FileReader();
+        reader.onload=function(){resolve(reader.result);};
+        reader.onerror=function(){reject(new Error('File tidak dapat dibaca.'));};
+        reader.readAsDataURL(file);
+      });
+      payload.fileName=file.name;
+    }else{
+      payload.imageUrl=url;
+    }
+    const data=await post(payload);
+    showImage(data.image);
+    confirmUpload(data.image);
+    setStatus(imageStatusEl,'✓ Foto berhasil terupload.','success');
+  }catch(error){
+    setStatus(imageStatusEl,'✕ '+error.message,'danger');
+  }finally{button.disabled=false;}
+});
+
+document.getElementById('useSearchImage').addEventListener('click',async function(){
+  const accessKey=keyEl.value.trim();
+  const topic=titleEl.value.trim();
+  if(!accessKey)return setStatus(imageStatusEl,'Masukkan CMS access key terlebih dahulu.','danger');
+  if(!topic)return setStatus(imageStatusEl,'Isi judul artikel terlebih dahulu.','danger');
+  setStatus(imageStatusEl,'⏳ Mencari foto berdasarkan judul…');
+  const button=this;button.disabled=true;
+  try{
+    const data=await post({action:'searchImage',accessKey:accessKey,topic:topic});
+    if(!data.image||!data.image.url)throw new Error('Foto tidak ditemukan.');
+    showImage(data.image);
+    setStatus(imageStatusEl,'✓ Foto relevan ditemukan.','success');
+  }catch(error){
+    setStatus(imageStatusEl,'✕ '+error.message,'danger');
+  }finally{button.disabled=false;}
+});
+
+translateEl.addEventListener('click',async function(){
+  const accessKey=keyEl.value.trim();
+  const title=titleEl.value.trim();
+  const content=contentEl.value.trim();
+  if(!title){titleEl.focus();setStatus(statusEl,'Judul artikel wajib diisi.','danger');return;}
+  if(!content){contentEl.focus();setStatus(statusEl,'Paste artikel Bahasa Indonesia terlebih dahulu.','danger');return;}
+  if(content.length<300){contentEl.focus();setStatus(statusEl,'Artikel terlalu pendek. Minimal 300 karakter.','danger');return;}
+  if(!accessKey){keyEl.focus();setStatus(statusEl,'Masukkan CMS access key terlebih dahulu.','danger');return;}
+
+  translateEl.disabled=true;
+  resultEl.classList.remove('show');
+  setStatus(statusEl,'⏳ AI sedang menerjemahkan ke 4 bahasa…');
+  try{
+    const data=await post({
+      action:'translate',
+      accessKey:accessKey,
+      title:title,
+      description:descriptionEl.value.trim(),
+      seoTitle:seoTitleEl.value.trim(),
+      seoDescription:seoDescriptionEl.value.trim(),
+      tags:splitTags(tagsEl.value),
+      pubDate:pubDateEl.value,
+      image:selectedImage,
+      content:content
+    });
+    translatedArticles=data.articles;
+    renderArticles();
+    resultEl.classList.add('show');
+    setStatus(statusEl,'✓ Terjemahan English, Spanish, French, dan Chinese berhasil dibuat.','success');
+  }catch(error){
+    setStatus(statusEl,'✕ '+error.message,'danger');
+  }finally{
+    translateEl.disabled=false;
+  }
 });
 
 function renderArticles(){
-  const langs=['id','en','es','fr','zh'];
-  articlesEl.innerHTML=langs.map(lang=>{const a=translatedArticles[lang];const locked=lang==='id';return `<article class="lang"><h3>${lang.toUpperCase()} · ${esc(a.title)}</h3><div class="muted" style="margin-bottom:10px">${locked?'Artikel sumber — tidak diubah AI.':'Hasil terjemahan — silakan review/edit.'}</div><label>Title</label><input data-lang="${lang}" data-field="title" value="${esc(a.title)}" ${locked?'':' '}/><label style="margin-top:12px">Description</label><input data-lang="${lang}" data-field="description" value="${esc(a.description)}"/><label style="margin-top:12px">SEO Title</label><input data-lang="${lang}" data-field="seoTitle" value="${esc(a.seoTitle||'')}"/><label style="margin-top:12px">SEO Description</label><input data-lang="${lang}" data-field="seoDescription" value="${esc(a.seoDescription||'')}"/><label style="margin-top:12px">Article Content</label><textarea data-lang="${lang}" data-field="content">${esc(a.content)}</textarea></article>`}).join('');
-  articlesEl.querySelectorAll('[data-lang][data-field]').forEach(el=>el.addEventListener('input',()=>{const lang=el.dataset.lang,field=el.dataset.field;translatedArticles[lang][field]=el.value}));
+  const languages=['id','en','es','fr','zh'];
+  articlesEl.innerHTML=languages.map(function(lang){
+    const article=translatedArticles[lang];
+    const source=lang==='id';
+    return '<article class="lang">'
+      +'<h3>'+lang.toUpperCase()+' · '+esc(article.title)+'</h3>'
+      +'<div class="muted" style="margin-bottom:10px">'+(source?'Artikel sumber — tidak diubah AI.':'Hasil terjemahan — silakan review/edit.')+'</div>'
+      +'<label>Title</label>'
+      +'<input data-lang="'+lang+'" data-field="title" value="'+esc(article.title)+'">'
+      +'<label style="margin-top:12px">Description</label>'
+      +'<input data-lang="'+lang+'" data-field="description" value="'+esc(article.description)+'">'
+      +'<label style="margin-top:12px">SEO Title</label>'
+      +'<input data-lang="'+lang+'" data-field="seoTitle" value="'+esc(article.seoTitle||'')+'">'
+      +'<label style="margin-top:12px">SEO Description</label>'
+      +'<input data-lang="'+lang+'" data-field="seoDescription" value="'+esc(article.seoDescription||'')+'">'
+      +'<label style="margin-top:12px">Article Content</label>'
+      +'<textarea data-lang="'+lang+'" data-field="content">'+esc(article.content)+'</textarea>'
+      +'</article>';
+  }).join('');
+
+  articlesEl.querySelectorAll('[data-lang][data-field]').forEach(function(element){
+    element.addEventListener('input',function(){
+      const lang=element.dataset.lang;
+      const field=element.dataset.field;
+      translatedArticles[lang][field]=element.value;
+    });
+  });
 }
 
-publishEl.addEventListener('click',async()=>{if(!translatedArticles)return;const accessKey=keyEl.value.trim();if(!accessKey)return setStatus(publishStatusEl,'Masukkan CMS access key terlebih dahulu.','danger');publishEl.disabled=true;setStatus(publishStatusEl,'⏳ Publishing 5 bahasa ke GitHub…');try{const d=await post({action:'publish',accessKey,articles:translatedArticles});setStatus(publishStatusEl,d.message||'✓ Published.','success')}catch(e){setStatus(publishStatusEl,'✕ '+e.message,'danger')}finally{publishEl.disabled=false}});
+publishEl.addEventListener('click',async function(){
+  if(!translatedArticles)return;
+  const accessKey=keyEl.value.trim();
+  if(!accessKey)return setStatus(publishStatusEl,'Masukkan CMS access key terlebih dahulu.','danger');
+  publishEl.disabled=true;
+  setStatus(publishStatusEl,'⏳ Publishing 5 bahasa ke GitHub…');
+  try{
+    const data=await post({action:'publish',accessKey:accessKey,articles:translatedArticles});
+    setStatus(publishStatusEl,data.message||'✓ Published.','success');
+  }catch(error){
+    setStatus(publishStatusEl,'✕ '+error.message,'danger');
+  }finally{
+    publishEl.disabled=false;
+  }
+});
 
-document.getElementById('clear').addEventListener('click',()=>{titleEl.value='';descriptionEl.value='';seoTitleEl.value='';seoDescriptionEl.value='';tagsEl.value='';contentEl.value='';pubDateEl.value=new Date().toISOString().slice(0,10);imageFileEl.value='';imageUrlEl.value='';selectedImage=null;translatedArticles=null;imagePreview.classList.remove('show');uploadOk.classList.remove('show');resultEl.classList.remove('show');articlesEl.innerHTML='';setStatus(statusEl,'');setStatus(contentStatusEl,'');setStatus(imageStatusEl,'');setStatus(publishStatusEl,'')});
+document.getElementById('clear').addEventListener('click',function(){
+  titleEl.value='';
+  descriptionEl.value='';
+  seoTitleEl.value='';
+  seoDescriptionEl.value='';
+  tagsEl.value='';
+  contentEl.value='';
+  pubDateEl.value=new Date().toISOString().slice(0,10);
+  imageFileEl.value='';
+  imageUrlEl.value='';
+  selectedImage=null;
+  translatedArticles=null;
+  imagePreview.classList.remove('show');
+  uploadOk.classList.remove('show');
+  resultEl.classList.remove('show');
+  articlesEl.innerHTML='';
+  setStatus(statusEl,'');
+  setStatus(contentStatusEl,'');
+  setStatus(imageStatusEl,'');
+  setStatus(publishStatusEl,'');
+});
 </script>
 </body>
 </html>
