@@ -118,6 +118,29 @@ function confirmUpload(img){
   uploadOk.classList.add('show');
 }
 
+function attachImageToContent(content,img,alt){
+  const text=String(content||'').trim();
+  const url=img&&img.url?String(img.url).trim():'';
+  if(!url)return text;
+  const safeAlt=String(alt||titleEl.value||'Banggai Wonderland').trim().replace(/[\r\n]+/g,' ');
+  const pattern=/!\[[^\]]*\]\([^\)]+\)/;
+  if(pattern.test(text))return text;
+  return '!['+safeAlt+']('+url+')\n\n'+text;
+}
+
+function ensureAllArticleImages(){
+  if(!translatedArticles||!selectedImage||!selectedImage.url)return;
+  Object.keys(translatedArticles).forEach(function(lang){
+    const article=translatedArticles[lang];
+    if(article){
+      article.image=selectedImage.url;
+      article.imageAlt=article.imageAlt||selectedImage.alt||titleEl.value||'Banggai Wonderland';
+      article.imageSource=article.imageSource||selectedImage.source||'';
+      article.content=attachImageToContent(article.content,selectedImage,article.imageAlt);
+    }
+  });
+}
+
 contentEl.addEventListener('input',function(){
   const n=contentEl.value.trim().length;
   if(n>0){
@@ -177,7 +200,7 @@ document.getElementById('uploadImage').addEventListener('click',async function()
     const data=await post(payload);
     showImage(data.image);
     confirmUpload(data.image);
-    setStatus(imageStatusEl,'✓ Foto berhasil terupload.','success');
+    setStatus(imageStatusEl,'✓ Foto berhasil terupload dan siap ditempel ke artikel.','success');
   }catch(error){
     setStatus(imageStatusEl,'✕ '+error.message,'danger');
   }finally{button.disabled=false;}
@@ -194,7 +217,7 @@ document.getElementById('useSearchImage').addEventListener('click',async functio
     const data=await post({action:'searchImage',accessKey:accessKey,topic:topic});
     if(!data.image||!data.image.url)throw new Error('Foto tidak ditemukan.');
     showImage(data.image);
-    setStatus(imageStatusEl,'✓ Foto relevan ditemukan.','success');
+    setStatus(imageStatusEl,'✓ Foto relevan ditemukan dan siap ditempel ke artikel.','success');
   }catch(error){
     setStatus(imageStatusEl,'✕ '+error.message,'danger');
   }finally{button.disabled=false;}
@@ -226,9 +249,10 @@ translateEl.addEventListener('click',async function(){
       content:content
     });
     translatedArticles=data.articles;
+    ensureAllArticleImages();
     renderArticles();
     resultEl.classList.add('show');
-    setStatus(statusEl,'✓ Terjemahan English, Spanish, French, dan Chinese berhasil dibuat.','success');
+    setStatus(statusEl,'✓ Terjemahan English, Spanish, French, dan Chinese berhasil dibuat. Foto otomatis ditempel ke 5 versi artikel.','success');
   }catch(error){
     setStatus(statusEl,'✕ '+error.message,'danger');
   }finally{
@@ -243,6 +267,7 @@ function renderArticles(){
     const source=lang==='id';
     return '<article class="lang">'
       +'<h3>'+lang.toUpperCase()+' · '+esc(article.title)+'</h3>'
+      +(article.image?'<div style="margin:12px 0"><img src="'+esc(article.image)+'" alt="'+esc(article.imageAlt||article.title)+'" style="width:100%;max-height:280px;object-fit:cover;border-radius:14px;border:1px solid #28465c"></div>':'')
       +'<div class="muted" style="margin-bottom:10px">'+(source?'Artikel sumber — tidak diubah AI.':'Hasil terjemahan — silakan review/edit.')+'</div>'
       +'<label>Title</label>'
       +'<input data-lang="'+lang+'" data-field="title" value="'+esc(article.title)+'">'
@@ -270,11 +295,13 @@ publishEl.addEventListener('click',async function(){
   if(!translatedArticles)return;
   const accessKey=keyEl.value.trim();
   if(!accessKey)return setStatus(publishStatusEl,'Masukkan CMS access key terlebih dahulu.','danger');
+  ensureAllArticleImages();
+  renderArticles();
   publishEl.disabled=true;
   setStatus(publishStatusEl,'⏳ Publishing 5 bahasa ke GitHub…');
   try{
     const data=await post({action:'publish',accessKey:accessKey,articles:translatedArticles});
-    setStatus(publishStatusEl,data.message||'✓ Published.','success');
+    setStatus(publishStatusEl,data.message||'✓ Published dengan featured image terpasang.','success');
   }catch(error){
     setStatus(publishStatusEl,'✕ '+error.message,'danger');
   }finally{
