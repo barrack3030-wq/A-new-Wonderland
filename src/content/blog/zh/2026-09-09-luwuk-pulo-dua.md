@@ -1,17 +1,17 @@
 ---
-title: "初学者完整路线指南：从 Luwuk 机场前往 Pulo Dua"
-description: "了解 Pulo Dua，苏拉威西东部的隐世天堂。你是否曾想象过站在翠绿的山丘之巅，在夕阳西下时俯瞰一片金蓝交织的大海，伴随着令人心旷神怡的涛声？这就是 Pulo Dua。Pulo Dua 位于中苏拉威西省 Banggai 县 Balantak Utara 区，是一个海洋旅游目的地，因其风景与 Labuan Bajo 的 Padar 岛相似而被誉为“苏拉威西的 Padar 岛”。"
-seoTitle: "从 Syukuran Aminuddin Amir (Luwuk) 机场前往中苏拉威西省 Balantak 隐世天堂 Pulo Dua 的完整路线指南。包含针对初学者的交通、费用、贴士和行程信息。"
-seoDescription: "初学者完整路线指南：从 Luwuk 机场前往 Pulo Dua。“苏拉威西的 Padar 岛”——充满异国情调的目的地，拥有翠绿山丘、蔚蓝大海和原始纯净的水下美景。"
-image: "/images/Poganda-Beach-Banggai-IndonesiaJuara-Trip.webp"
-imageAlt: "印尼 Banggai 旅游目的地"
-author: "Banggai Wonderland"
+translationKey: 2026-09-09-rute-lengkap-menuju-pulo-dua-dari-bandara-luwuk-untuk-traveler-pemula
+image: /images/blog/pulo-dua-20260909111709.webp
+imageAlt: 印尼 Banggai 旅游目的地
+title: 初学者完整路线指南：从 Luwuk 机场前往 Pulo Dua
+description: 了解 Pulo Dua，苏拉威西东部的隐世天堂。你是否曾想象过站在翠绿的山丘之巅，在夕阳西下时俯瞰一片金蓝交织的大海，伴随着令人心旷神怡的涛声？这就是 Pulo Dua。Pulo Dua 位于中苏拉威西省 Banggai 县 Balantak Utara 区，是一个海洋旅游目的地，因其风景与 Labuan Bajo 的 Padar 岛相似而被誉为“苏拉威西的 Padar 岛”。
+seoTitle: 从 Syukuran Aminuddin Amir (Luwuk) 机场前往中苏拉威西省 Balantak 隐世天堂 Pulo Dua 的完整路线指南。包含针对初学者的交通、费用、贴士和行程信息。
+seoDescription: 初学者完整路线指南：从 Luwuk 机场前往 Pulo Dua。“苏拉威西的 Padar 岛”——充满异国情调的目的地，拥有翠绿山丘、蔚蓝大海和原始纯净的水下美景。
+author: Banggai Wonderland
 pubDate: 2026-09-09
-translationKey: "2026-09-09-rute-lengkap-menuju-pulo-dua-dari-bandara-luwuk-untuk-traveler-pemula"
 tags:
-  - "Banggai"
-  - "印尼"
-  - "旅游"
+  - Banggai
+  - 印尼
+  - 旅游
 ---
 
 ### 了解 Pulo Dua，苏拉威西东部的隐世天堂
