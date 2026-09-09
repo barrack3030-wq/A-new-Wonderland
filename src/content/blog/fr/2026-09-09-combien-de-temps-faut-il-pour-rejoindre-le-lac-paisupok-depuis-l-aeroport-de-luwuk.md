@@ -1,16 +1,16 @@
 ---
-title: "Combien de temps faut-il pour rejoindre le lac Paisupok depuis l’aéroport de Luwuk ?"
-description: "Découvrez la durée réelle du trajet entre l’aéroport de Luwuk et le lac Paisupok, les différentes étapes du voyage et nos conseils pour organiser cette excursion dans les îles Banggai."
-seoTitle: "Lac Paisupok depuis l’aéroport de Luwuk : durée du trajet"
-seoDescription: "Combien de temps faut-il pour aller au lac Paisupok depuis l’aéroport de Luwuk ? Itinéraire, ferry, voiture et conseils pratiques pour voyager dans les îles Banggai."
-image: "/images/Poganda-Beach-Banggai-IndonesiaJuara-Trip.webp"
-imageAlt: "Paysage tropical des îles Banggai en Indonésie, avec une eau turquoise et une plage paisible"
-author: "Banggai Wonderland"
+image: /images/DSCF7073-5.webp
+imageAlt: Paysage tropical des îles Banggai en Indonésie, avec une eau turquoise et une plage paisible
+title: Combien de temps faut-il pour rejoindre le lac Paisupok depuis l’aéroport de Luwuk ?
+description: Découvrez la durée réelle du trajet entre l’aéroport de Luwuk et le lac Paisupok, les différentes étapes du voyage et nos conseils pour organiser cette excursion dans les îles Banggai.
+seoTitle: 'Lac Paisupok depuis l’aéroport de Luwuk : durée du trajet'
+seoDescription: Combien de temps faut-il pour aller au lac Paisupok depuis l’aéroport de Luwuk ? Itinéraire, ferry, voiture et conseils pratiques pour voyager dans les îles Banggai.
+author: Banggai Wonderland
 pubDate: 2026-09-09
 tags:
-  - "Banggai"
-  - "Indonesia"
-  - "Travel"
+  - Banggai
+  - Indonesia
+  - Travel
 ---
 
 # Combien de temps faut-il pour rejoindre le lac Paisupok depuis l’aéroport de Luwuk ?
