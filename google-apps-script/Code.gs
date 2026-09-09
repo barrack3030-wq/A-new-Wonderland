@@ -125,7 +125,6 @@ function generateArticles(topic,selectedImage,provider){
 }
 
 function providerLabel(provider){return provider==='gemini'?'Gemini':provider==='deepseek'?'DeepSeek':'OpenAI';}
-
 function isTransientStatus(status){return [408,429,500,502,503,504].indexOf(Number(status))!==-1;}
 
 function buildRequestPayload(cfg,topic,language,image){
