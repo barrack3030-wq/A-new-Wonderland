@@ -1,116 +1,46 @@
 ---
-const title = 'Banggai Wonderland CMS';
+const title='Banggai Wonderland CMS';
 ---
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="robots" content="noindex,nofollow" />
-  <title>{title}</title>
-  <style>
-    :root{color-scheme:dark;font-family:Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
-    *{box-sizing:border-box}body{margin:0;min-height:100vh;background:linear-gradient(145deg,#061525,#0b2b46 55%,#071a2a);color:#eef7ff}
-    .wrap{width:min(960px,92%);margin:0 auto;padding:34px 0 60px}.brand{margin-bottom:28px}.brand h1{margin:0;font-size:clamp(28px,5vw,42px);letter-spacing:-.03em}.brand p{color:#9fc0d6;margin:8px 0 0}
-    .card{background:rgba(8,24,39,.86);border:1px solid rgba(157,207,235,.16);border-radius:20px;padding:24px;box-shadow:0 20px 70px rgba(0,0,0,.28);margin-bottom:18px}
-    label{display:block;font-size:13px;font-weight:700;color:#b8d5e7;margin:0 0 8px}input,select{width:100%;border:1px solid #28465c;background:#071b2b;color:#f5fbff;border-radius:12px;padding:13px 14px;outline:none;font:inherit}input:focus,select:focus{border-color:#56b8ea;box-shadow:0 0 0 3px rgba(86,184,234,.12)}
-    .grid{display:grid;grid-template-columns:1fr 220px;gap:14px}.image-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}.row{display:flex;gap:10px;flex-wrap:wrap;margin-top:16px}
-    button{border:0;border-radius:12px;padding:12px 18px;font-weight:800;cursor:pointer;color:#03121d;background:#65c8f2;touch-action:manipulation}button.secondary{background:#17364d;color:#dceffc}button:disabled{opacity:.5;cursor:not-allowed}
-    .status{margin-top:14px;color:#9fc0d6;min-height:22px;white-space:pre-wrap}.result{display:none}.result.show{display:block}.lang{border-top:1px solid rgba(157,207,235,.12);padding:18px 0}.lang:first-child{border-top:0;padding-top:0}.lang h3{margin:0 0 8px}
-    .muted{color:#86a7bb;font-size:13px}.danger{color:#ffb2b2}.success{color:#9ce7b4}.small{font-size:12px}.preview{margin-top:12px;display:none}.preview.show{display:block}.preview img{width:100%;max-height:280px;object-fit:cover;border-radius:14px;border:1px solid #28465c}.selected{margin-top:10px;padding:10px 12px;border-radius:10px;background:#0b2437;color:#bfe4f7;font-size:13px;word-break:break-all}
-    .upload-ok{display:none;margin-top:12px;padding:12px 14px;border-radius:12px;border:1px solid rgba(156,231,180,.25);background:rgba(33,83,55,.25);color:#b9f2c9}.upload-ok.show{display:block}.upload-ok strong{display:block;margin-bottom:4px}.topic-ok{display:none;margin-top:8px;color:#9ce7b4;font-size:12px}.topic-ok.show{display:block}
-    .password-wrap{position:relative}.password-wrap input{padding-right:92px}.toggle-password{position:absolute;right:6px;top:6px;height:calc(100% - 12px);padding:0 12px;border-radius:9px;background:#17364d;color:#dceffc;font-size:12px}
-    .provider-note{margin-top:7px}.badge{display:inline-block;padding:4px 8px;border-radius:999px;background:#14354c;color:#bfe4f7;font-size:11px;font-weight:800}
-    @media(max-width:700px){.grid,.image-grid{grid-template-columns:1fr}.card{padding:18px}input,select{font-size:16px}}
-  </style>
+<meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1.0"/><meta name="robots" content="noindex,nofollow"/>
+<title>{title}</title>
+<style>
+:root{color-scheme:dark;font-family:Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}*{box-sizing:border-box}body{margin:0;min-height:100vh;background:linear-gradient(145deg,#061525,#0b2b46 55%,#071a2a);color:#eef7ff}.wrap{width:min(960px,92%);margin:0 auto;padding:34px 0 60px}.brand{margin-bottom:28px}.brand h1{margin:0;font-size:clamp(28px,5vw,42px);letter-spacing:-.03em}.brand p{color:#9fc0d6;margin:8px 0 0}.card{background:rgba(8,24,39,.86);border:1px solid rgba(157,207,235,.16);border-radius:20px;padding:24px;box-shadow:0 20px 70px rgba(0,0,0,.28);margin-bottom:18px}label{display:block;font-size:13px;font-weight:700;color:#b8d5e7;margin:0 0 8px}input,select{width:100%;border:1px solid #28465c;background:#071b2b;color:#f5fbff;border-radius:12px;padding:13px 14px;outline:none;font:inherit}input:focus,select:focus{border-color:#56b8ea;box-shadow:0 0 0 3px rgba(86,184,234,.12)}.grid{display:grid;grid-template-columns:1fr 180px;gap:14px}.image-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}.row{display:flex;gap:10px;flex-wrap:wrap;margin-top:16px}button{border:0;border-radius:12px;padding:12px 18px;font-weight:800;cursor:pointer;color:#03121d;background:#65c8f2;touch-action:manipulation}button.secondary{background:#17364d;color:#dceffc}button:disabled{opacity:.5;cursor:not-allowed}.status{margin-top:14px;color:#9fc0d6;min-height:22px;white-space:pre-wrap}.result{display:none}.result.show{display:block}.lang{border-top:1px solid rgba(157,207,235,.12);padding:18px 0}.lang:first-child{border-top:0;padding-top:0}.muted{color:#86a7bb;font-size:13px}.danger{color:#ffb2b2}.success{color:#9ce7b4}.small{font-size:12px}.preview{margin-top:12px;display:none}.preview.show{display:block}.preview img{width:100%;max-height:280px;object-fit:cover;border-radius:14px;border:1px solid #28465c}.selected{margin-top:10px;padding:10px 12px;border-radius:10px;background:#0b2437;color:#bfe4f7;font-size:13px;word-break:break-all}.upload-ok{display:none;margin-top:12px;padding:12px 14px;border-radius:12px;border:1px solid rgba(156,231,180,.25);background:rgba(33,83,55,.25);color:#b9f2c9}.upload-ok.show{display:block}.upload-ok strong{display:block;margin-bottom:4px}.topic-ok{display:none;margin-top:8px;color:#9ce7b4;font-size:12px}.topic-ok.show{display:block}.password-wrap{position:relative}.password-wrap input{padding-right:92px}.toggle-password{position:absolute;right:6px;top:6px;height:calc(100% - 12px);padding:0 12px;border-radius:9px;background:#17364d;color:#dceffc;font-size:12px}@media(max-width:700px){.grid,.image-grid{grid-template-columns:1fr}.card{padding:18px}input,select{font-size:16px}}
+</style>
 </head>
-<body>
-  <main class="wrap">
-    <header class="brand"><h1>Banggai Wonderland CMS</h1><p>Private article generator · AI assisted · multilingual</p></header>
-
-    <section class="card">
-      <div class="grid">
-        <div>
-          <label for="topic">Article topic / command</label>
-          <input id="topic" name="topic" type="text" autocomplete="off" autocapitalize="sentences" spellcheck="true" enterkeyhint="done" placeholder="Contoh: Buat artikel SEO tentang Paisupok Lake untuk wisatawan Australia" />
-          <div id="topicOk" class="topic-ok">✓ Topic terbaca dan siap digunakan</div>
-        </div>
-        <div>
-          <label for="provider">AI writer</label>
-          <select id="provider">
-            <option value="openai">OpenAI · GPT-5.6 Luna</option>
-            <option value="deepseek">DeepSeek · V4 Flash</option>
-          </select>
-          <div id="providerNote" class="provider-note muted small"><span class="badge">Web Research: OpenAI</span> Writer: GPT-5.6 Luna</div>
-        </div>
-      </div>
-
-      <div style="margin-top:18px"><label>Featured image</label>
-        <div class="image-grid">
-          <div><label for="imageFile" class="small">Upload foto dari perangkat</label><input id="imageFile" type="file" accept="image/jpeg,image/png,image/webp,image/gif,image/svg+xml" /><div class="muted small" style="margin-top:7px">Foto akan disimpan ke GitHub di public/images/blog/.</div></div>
-          <div><label for="imageUrl" class="small">Atau ambil foto dari link</label><input id="imageUrl" type="url" placeholder="https://contoh.com/foto-mbuang-mbuang.jpg" /><div class="muted small" style="margin-top:7px">CMS akan mengunduh foto dan menyimpannya ke GitHub.</div></div>
-        </div>
-        <div class="row"><button id="uploadImage" type="button">Upload / Import Photo</button><button id="useSearchImage" type="button" class="secondary">Auto Search by Topic</button></div>
-        <div id="imageStatus" class="status"></div>
-        <div id="uploadOk" class="upload-ok"><strong>✓ Foto berhasil terupload</strong><span id="uploadOkText"></span></div>
-        <div id="imagePreview" class="preview"><img id="imagePreviewImg" alt="Selected featured image" /><div id="selectedImage" class="selected"></div></div>
-      </div>
-
-      <div style="margin-top:14px"><label for="accessKey">CMS access key</label>
-        <div class="password-wrap"><input id="accessKey" type="password" autocomplete="off" placeholder="Masukkan access key dari Google Apps Script" /><button id="togglePassword" type="button" class="toggle-password">Lihat</button></div>
-        <div class="muted small" style="margin-top:7px">Access key tidak disimpan di website. API key OpenAI dan DeepSeek juga tidak disimpan di frontend.</div>
-      </div>
-      <div class="row"><button id="generate" type="button">Generate Article</button><button id="clear" type="button" class="secondary">Clear</button></div>
-      <div id="status" class="status"></div>
-    </section>
-
-    <section id="result" class="card result"><h2>Generated article</h2><div id="articles"></div><div class="row"><button id="publish" type="button">Publish to GitHub</button></div><div id="publishStatus" class="status"></div></section>
-  </main>
-
-  <script>
-    const ENDPOINT='https://script.google.com/macros/s/AKfycbxGMuyFzq0K-gKIPaamp1ClFqo6zYJfNNvZfd0hxeJIJTj0N_DVPywUtkWbo5g0_F08/exec';
-    const topicEl=document.getElementById('topic'),keyEl=document.getElementById('accessKey'),providerEl=document.getElementById('provider'),providerNoteEl=document.getElementById('providerNote'),statusEl=document.getElementById('status'),topicOkEl=document.getElementById('topicOk');
-    const resultEl=document.getElementById('result'),articlesEl=document.getElementById('articles'),publishEl=document.getElementById('publish'),publishStatusEl=document.getElementById('publishStatus');
-    const imageFileEl=document.getElementById('imageFile'),imageUrlEl=document.getElementById('imageUrl'),imageStatusEl=document.getElementById('imageStatus');
-    const imagePreview=document.getElementById('imagePreview'),imagePreviewImg=document.getElementById('imagePreviewImg'),selectedImageEl=document.getElementById('selectedImage');
-    const uploadOk=document.getElementById('uploadOk'),uploadOkText=document.getElementById('uploadOkText'),togglePasswordEl=document.getElementById('togglePassword');
-    let generated=null,selectedImage=null;
-
-    function getTopic(){return String(topicEl.value||'').replace(/\u200B/g,'').trim()}
-    function refreshTopicState(){topicOkEl.classList.toggle('show',!!getTopic())}
-    ['input','change','keyup','paste','blur'].forEach(n=>topicEl.addEventListener(n,()=>setTimeout(refreshTopicState,0)));
-    providerEl.addEventListener('change',()=>{providerNoteEl.innerHTML=providerEl.value==='deepseek'?'<span class="badge">Web Research: OpenAI</span> Writer: DeepSeek V4 Flash':'<span class="badge">Web Research: OpenAI</span> Writer: GPT-5.6 Luna';});
-    togglePasswordEl.addEventListener('click',()=>{const showing=keyEl.type==='text';keyEl.type=showing?'password':'text';togglePasswordEl.textContent=showing?'Lihat':'Sembunyikan'});
-    function setStatus(el,text,cls=''){el.className='status '+cls;el.textContent=text}
-    function esc(value=''){return String(value).replace(/[&<>'"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;',"'":'&#39;','"':'&quot;'}[c]))}
-    function showImage(image){selectedImage=image;imagePreviewImg.src=image.url;selectedImageEl.textContent=image.url+(image.source?' · Source: '+image.source:'');imagePreview.classList.add('show')}
-    function showUploadConfirmation(image){const name=image.name||image.url.split('/').pop();const path=image.path||('public'+image.url);uploadOkText.textContent='File: '+name+' · Tersimpan di GitHub: '+path;uploadOk.classList.add('show')}
-
-    imageFileEl.addEventListener('change',()=>{uploadOk.classList.remove('show');if(imageFileEl.files[0])setStatus(imageStatusEl,'Foto dipilih: '+imageFileEl.files[0].name+'. Tekan Upload / Import Photo untuk mengirim ke GitHub.')});
-
-    document.getElementById('uploadImage').addEventListener('click',async()=>{
-      const accessKey=String(keyEl.value||'').trim();if(!accessKey){keyEl.focus();return setStatus(imageStatusEl,'Masukkan CMS access key terlebih dahulu.','danger')}
-      const file=imageFileEl.files&&imageFileEl.files[0],url=String(imageUrlEl.value||'').trim();if(!file&&!url)return setStatus(imageStatusEl,'Pilih foto atau masukkan link foto terlebih dahulu.','danger');if(file&&file.size>8*1024*1024)return setStatus(imageStatusEl,'Ukuran foto maksimal 8 MB.','danger');
-      uploadOk.classList.remove('show');setStatus(imageStatusEl,file?'⏳ Mengupload foto ke GitHub…':'⏳ Mengambil foto dari link dan menyimpannya ke GitHub…');const button=document.getElementById('uploadImage');button.disabled=true;
-      try{let payload={action:'uploadImage',accessKey};if(file){const dataUrl=await new Promise((resolve,reject)=>{const r=new FileReader();r.onload=()=>resolve(r.result);r.onerror=()=>reject(new Error('File tidak dapat dibaca oleh browser.'));r.readAsDataURL(file)});payload.dataUrl=dataUrl;payload.fileName=file.name}else payload.imageUrl=url;const response=await fetch(ENDPOINT,{method:'POST',headers:{'Content-Type':'text/plain;charset=utf-8'},body:JSON.stringify(payload)});const raw=await response.text();let data;try{data=JSON.parse(raw)}catch(e){throw new Error('CMS tidak mengembalikan respons JSON. Google Apps Script kemungkinan masih menjalankan deployment lama.')}if(!data.ok)throw new Error(data.error||'Upload failed');if(!data.image||!data.image.url)throw new Error('Upload selesai tetapi URL foto tidak diterima CMS.');showImage(data.image);showUploadConfirmation(data.image);setStatus(imageStatusEl,'✓ Foto berhasil terupload dan siap digunakan.','success')}
-      catch(err){uploadOk.classList.remove('show');setStatus(imageStatusEl,'✕ '+(err.message||'Upload failed.'),'danger')}finally{button.disabled=false}
-    });
-
-    document.getElementById('useSearchImage').addEventListener('click',async()=>{
-      const accessKey=String(keyEl.value||'').trim(),topic=getTopic();if(!accessKey){keyEl.focus();return setStatus(imageStatusEl,'Masukkan CMS access key terlebih dahulu.','danger')}if(!topic){topicEl.focus();return setStatus(imageStatusEl,'Tulis topic terlebih dahulu agar foto dapat dicari.','danger')}
-      uploadOk.classList.remove('show');setStatus(imageStatusEl,'⏳ Mencari foto berdasarkan topic…');const button=document.getElementById('useSearchImage');button.disabled=true;
-      try{const response=await fetch(ENDPOINT,{method:'POST',headers:{'Content-Type':'text/plain;charset=utf-8'},body:JSON.stringify({action:'searchImage',accessKey,topic})});const raw=await response.text();let data;try{data=JSON.parse(raw)}catch(e){throw new Error('CMS tidak mengembalikan respons JSON.')}if(!data.ok)throw new Error(data.error||'Image search failed');if(!data.image||!data.image.url)throw new Error('Foto tidak ditemukan.');showImage(data.image);setStatus(imageStatusEl,'✓ Foto relevan ditemukan dan dipilih sebagai featured image.','success')}catch(err){setStatus(imageStatusEl,'✕ '+(err.message||'Image search failed.'),'danger')}finally{button.disabled=false}
-    });
-
-    document.getElementById('generate').addEventListener('click',async()=>{
-      const topic=getTopic(),accessKey=String(keyEl.value||'').trim(),provider=providerEl.value;if(!topic){topicEl.focus();setStatus(statusEl,'Tulis topik atau perintah artikel terlebih dahulu.','danger');return}if(!accessKey){keyEl.focus();setStatus(statusEl,'Masukkan CMS access key terlebih dahulu.','danger');return}if(!selectedImage){setStatus(statusEl,'Pilih atau upload featured image terlebih dahulu.','danger');return}
-      setStatus(statusEl,provider==='deepseek'?'⏳ Web research + DeepSeek sedang menulis 5 bahasa…':'⏳ Web research + GPT-5.6 Luna sedang menulis 5 bahasa…');document.getElementById('generate').disabled=true;resultEl.classList.remove('show');
-      try{const response=await fetch(ENDPOINT,{method:'POST',headers:{'Content-Type':'text/plain;charset=utf-8'},body:JSON.stringify({action:'generate',accessKey,topic,image:selectedImage,provider})});const raw=await response.text();let data;try{data=JSON.parse(raw)}catch(e){throw new Error('CMS tidak mengembalikan respons JSON. Pastikan deployment Google Apps Script sudah versi terbaru.')}if(!data.ok)throw new Error(data.error||'Generation failed');generated=data.articles;articlesEl.innerHTML=Object.entries(generated).map(([lang,a])=>`<article class="lang"><h3>${esc(lang.toUpperCase())} · ${esc(a.title)}</h3><div class="muted">${esc(a.description)}</div><p>${esc(a.preview||'')}</p></article>`).join('');resultEl.classList.add('show');setStatus(statusEl,'✓ 5 versi artikel berhasil dibuat. Review hasilnya, lalu publish.','success')}
-      catch(err){setStatus(statusEl,'✕ '+(err.message||'Generation failed.'),'danger')}finally{document.getElementById('generate').disabled=false}
-    });
-
-    publishEl.addEventListener('click',async()=>{if(!generated)return;const accessKey=String(keyEl.value||'').trim();publishEl.disabled=true;setStatus(publishStatusEl,'⏳ Publishing article to GitHub…');try{const response=await fetch(ENDPOINT,{method:'POST',headers:{'Content-Type':'text/plain;charset=utf-8'},body:JSON.stringify({action:'publish',accessKey,articles:generated})});const raw=await response.text();let data;try{data=JSON.parse(raw)}catch(e){throw new Error('CMS tidak mengembalikan respons JSON.')}if(!data.ok)throw new Error(data.error||'Publish failed');setStatus(publishStatusEl,data.message||'✓ Published successfully.','success')}catch(err){setStatus(publishStatusEl,'✕ '+(err.message||'Publish failed.'),'danger')}finally{publishEl.disabled=false}});
-    document.getElementById('clear').addEventListener('click',()=>{topicEl.value='';imageFileEl.value='';imageUrlEl.value='';selectedImage=null;imagePreview.classList.remove('show');uploadOk.classList.remove('show');topicOkEl.classList.remove('show');resultEl.classList.remove('show');articlesEl.innerHTML='';generated=null;setStatus(statusEl,'');setStatus(imageStatusEl,'');setStatus(publishStatusEl,'')});
-  </script>
-</body>
-</html>
+<body><main class="wrap">
+<header class="brand"><h1>Banggai Wonderland CMS</h1><p>Research-backed multilingual article generator</p></header>
+<section class="card">
+<div class="grid"><div><label for="topic">Article topic / command</label><input id="topic" type="text" autocomplete="off" placeholder="Contoh: List Goa yang Harus Kamu Kunjungi di Banggai"/><div id="topicOk" class="topic-ok">✓ Topic siap digunakan</div></div>
+<div><label for="provider">AI provider</label><select id="provider"><option value="deepseek">DeepSeek — V4 Flash</option><option value="openai">OpenAI — GPT-5.6 Luna</option></select></div></div>
+<div style="margin-top:14px"><div class="muted small">DeepSeek sekarang dapat digunakan untuk web research dan penulisan. OpenAI tetap tersedia sebagai alternatif.</div></div>
+<div style="margin-top:18px"><label>Featured image</label><div class="image-grid"><div><label for="imageFile" class="small">Upload foto</label><input id="imageFile" type="file" accept="image/jpeg,image/png,image/webp,image/gif,image/svg+xml"/></div><div><label for="imageUrl" class="small">Atau gunakan link foto</label><input id="imageUrl" type="url" placeholder="https://contoh.com/foto.jpg"/></div></div>
+<div class="row"><button id="uploadImage" type="button">Upload / Import Photo</button><button id="useSearchImage" type="button" class="secondary">Auto Search by Topic</button></div>
+<div id="imageStatus" class="status"></div><div id="uploadOk" class="upload-ok"><strong>✓ Foto berhasil terupload</strong><span id="uploadOkText"></span></div><div id="imagePreview" class="preview"><img id="imagePreviewImg" alt="Selected featured image"/><div id="selectedImage" class="selected"></div></div></div>
+<div style="margin-top:14px"><label for="accessKey">CMS access key</label><div class="password-wrap"><input id="accessKey" type="password" autocomplete="off" placeholder="Masukkan CMS access key"/><button id="togglePassword" type="button" class="toggle-password">Lihat</button></div></div>
+<div class="row"><button id="generate" type="button">Generate Article</button><button id="clear" type="button" class="secondary">Clear</button></div><div id="status" class="status"></div>
+</section>
+<section id="result" class="card result"><h2>Generated article</h2><div id="articles"></div><div class="row"><button id="publish" type="button">Publish to GitHub</button></div><div id="publishStatus" class="status"></div></section>
+</main>
+<script>
+const ENDPOINT='https://script.google.com/macros/s/AKfycbxGMuyFzq0K-gKIPaamp1ClFqo6zYJfNNvZfd0hxeJIJTj0N_DVPywUtkWbo5g0_F08/exec';
+const topicEl=document.getElementById('topic'),providerEl=document.getElementById('provider'),keyEl=document.getElementById('accessKey'),statusEl=document.getElementById('status'),topicOkEl=document.getElementById('topicOk');
+const resultEl=document.getElementById('result'),articlesEl=document.getElementById('articles'),publishEl=document.getElementById('publish'),publishStatusEl=document.getElementById('publishStatus');
+const imageFileEl=document.getElementById('imageFile'),imageUrlEl=document.getElementById('imageUrl'),imageStatusEl=document.getElementById('imageStatus');
+const imagePreview=document.getElementById('imagePreview'),imagePreviewImg=document.getElementById('imagePreviewImg'),selectedImageEl=document.getElementById('selectedImage'),uploadOk=document.getElementById('uploadOk'),uploadOkText=document.getElementById('uploadOkText');
+let generated=null,selectedImage=null;
+function topic(){return String(topicEl.value||'').replace(/\u200B/g,'').trim()}function setStatus(el,t,c=''){el.className='status '+c;el.textContent=t}function esc(v=''){return String(v).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))}
+['input','change','keyup','paste','blur'].forEach(e=>topicEl.addEventListener(e,()=>setTimeout(()=>topicOkEl.classList.toggle('show',!!topic()),0)));
+document.getElementById('togglePassword').addEventListener('click',()=>{const show=keyEl.type==='text';keyEl.type=show?'password':'text';document.getElementById('togglePassword').textContent=show?'Lihat':'Sembunyikan'});
+function showImage(img){selectedImage=img;imagePreviewImg.src=img.url;selectedImageEl.textContent=img.url+(img.source?' · Source: '+img.source:'');imagePreview.classList.add('show')}
+function confirmUpload(img){uploadOkText.textContent='File: '+(img.name||img.url.split('/').pop())+' · Tersimpan di GitHub: '+(img.path||'public'+img.url);uploadOk.classList.add('show')}
+imageFileEl.addEventListener('change',()=>{uploadOk.classList.remove('show');if(imageFileEl.files[0])setStatus(imageStatusEl,'Foto dipilih: '+imageFileEl.files[0].name+'. Tekan Upload / Import Photo.')});
+async function post(payload){const r=await fetch(ENDPOINT,{method:'POST',headers:{'Content-Type':'text/plain;charset=utf-8'},body:JSON.stringify(payload)});const raw=await r.text();let data;try{data=JSON.parse(raw)}catch(e){throw new Error('CMS tidak mengembalikan JSON. Pastikan deployment Apps Script sudah versi terbaru.')};if(!data.ok)throw new Error(data.error||'CMS request failed');return data}
+document.getElementById('uploadImage').addEventListener('click',async()=>{const accessKey=keyEl.value.trim(),file=imageFileEl.files&&imageFileEl.files[0],url=imageUrlEl.value.trim();if(!accessKey)return setStatus(imageStatusEl,'Masukkan CMS access key terlebih dahulu.','danger');if(!file&&!url)return setStatus(imageStatusEl,'Pilih foto atau masukkan link foto.','danger');if(file&&file.size>8*1024*1024)return setStatus(imageStatusEl,'Ukuran foto maksimal 8 MB.','danger');uploadOk.classList.remove('show');setStatus(imageStatusEl,'⏳ Mengupload foto…');const b=document.getElementById('uploadImage');b.disabled=true;try{const p={action:'uploadImage',accessKey};if(file){p.dataUrl=await new Promise((res,rej)=>{const r=new FileReader();r.onload=()=>res(r.result);r.onerror=()=>rej(new Error('File tidak dapat dibaca.'));r.readAsDataURL(file)});p.fileName=file.name}else p.imageUrl=url;const d=await post(p);showImage(d.image);confirmUpload(d.image);setStatus(imageStatusEl,'✓ Foto berhasil terupload.','success')}catch(e){setStatus(imageStatusEl,'✕ '+e.message,'danger')}finally{b.disabled=false}});
+document.getElementById('useSearchImage').addEventListener('click',async()=>{const accessKey=keyEl.value.trim(),t=topic();if(!accessKey)return setStatus(imageStatusEl,'Masukkan CMS access key terlebih dahulu.','danger');if(!t)return setStatus(imageStatusEl,'Tulis topic terlebih dahulu.','danger');setStatus(imageStatusEl,'⏳ Mencari foto berdasarkan topic…');const b=document.getElementById('useSearchImage');b.disabled=true;try{const d=await post({action:'searchImage',accessKey,topic:t});if(!d.image||!d.image.url)throw new Error('Foto tidak ditemukan.');showImage(d.image);setStatus(imageStatusEl,'✓ Foto relevan ditemukan.','success')}catch(e){setStatus(imageStatusEl,'✕ '+e.message,'danger')}finally{b.disabled=false}});
+document.getElementById('generate').addEventListener('click',async()=>{const accessKey=keyEl.value.trim(),t=topic();if(!t)return setStatus(statusEl,'Tulis topik artikel terlebih dahulu.','danger');if(!accessKey)return setStatus(statusEl,'Masukkan CMS access key terlebih dahulu.','danger');if(!selectedImage)return setStatus(statusEl,'Pilih atau upload featured image terlebih dahulu.','danger');const p=providerEl.value;b=document.getElementById('generate');b.disabled=true;resultEl.classList.remove('show');setStatus(statusEl,p==='deepseek'?'⏳ DeepSeek: web research + generate 5 bahasa…':'⏳ OpenAI: web research + generate 5 bahasa…');try{const d=await post({action:'generate',accessKey,topic:t,image:selectedImage,provider:p});generated=d.articles;articlesEl.innerHTML=Object.entries(generated).map(([lang,a])=>`<article class="lang"><h3>${esc(lang.toUpperCase())} · ${esc(a.title)}</h3><div class="muted">${esc(a.description)}</div><p>${esc(a.preview||'')}</p></article>`).join('');resultEl.classList.add('show');setStatus(statusEl,'✓ 5 versi artikel berhasil dibuat.','success')}catch(e){setStatus(statusEl,'✕ '+e.message,'danger')}finally{b.disabled=false}});
+publishEl.addEventListener('click',async()=>{if(!generated)return;const accessKey=keyEl.value.trim();publishEl.disabled=true;setStatus(publishStatusEl,'⏳ Publishing ke GitHub…');try{const d=await post({action:'publish',accessKey,articles:generated});setStatus(publishStatusEl,d.message||'✓ Published.','success')}catch(e){setStatus(publishStatusEl,'✕ '+e.message,'danger')}finally{publishEl.disabled=false}});
+document.getElementById('clear').addEventListener('click',()=>{topicEl.value='';imageFileEl.value='';imageUrlEl.value='';selectedImage=null;generated=null;imagePreview.classList.remove('show');uploadOk.classList.remove('show');topicOkEl.classList.remove('show');resultEl.classList.remove('show');articlesEl.innerHTML='';setStatus(statusEl,'');setStatus(imageStatusEl,'');setStatus(publishStatusEl,'')});
+</script></body></html>
