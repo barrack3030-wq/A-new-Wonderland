@@ -1,0 +1,235 @@
+name: Enhance CMS Markdown editor
+
+on:
+  push:
+    branches: [ main ]
+    paths:
+      - '.github/workflows/cms-markdown-enhancement.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  patch-cms:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Add Markdown-aware editor enhancement
+        shell: python
+        run: |
+          from pathlib import Path
+
+          path = Path('src/pages/cms/index.astro')
+          text = path.read_text(encoding='utf-8')
+          marker = '<!-- CMS_MARKDOWN_ENHANCEMENT -->'
+          if marker in text:
+              print('Enhancement already present')
+              raise SystemExit(0)
+
+          enhancement = r'''<!-- CMS_MARKDOWN_ENHANCEMENT -->
+          <style>
+          .md-tools{display:flex;gap:8px;flex-wrap:wrap;margin:10px 0}
+          .md-tools button{padding:8px 12px;border-radius:9px;font-size:12px}
+          .md-help{color:#86a7bb;font-size:12px;margin:6px 0 10px;line-height:1.5}
+          .md-preview{display:none;margin-top:12px;padding:22px;border:1px solid #28465c;border-radius:14px;background:#061827;color:#dceffc;overflow:auto}
+          .md-preview.show{display:block}
+          .md-preview h1,.md-preview h2,.md-preview h3,.md-preview h4{margin:1.1em 0 .55em;color:#fff}
+          .md-preview p{margin:.7em 0;line-height:1.7}
+          .md-preview ul,.md-preview ol{padding-left:24px;margin:.7em 0}
+          .md-preview blockquote{margin:1em 0;padding-left:14px;border-left:3px solid #65c8f2;color:#a9c8da}
+          .md-preview code{background:#102b40;padding:2px 5px;border-radius:5px}
+          .md-preview pre{background:#04111d;padding:14px;border-radius:10px;overflow:auto}
+          .md-preview table{width:100%;border-collapse:collapse;margin:1em 0;font-size:14px}
+          .md-preview th,.md-preview td{border:1px solid #36556b;padding:9px;text-align:left}
+          .md-preview th{background:#102e44}
+          .md-preview img{max-width:100%;height:auto;border-radius:12px;margin:10px 0}
+          .md-preview a{color:#65c8f2}
+          .md-tabs{display:flex;gap:8px;margin-top:10px}
+          .md-tabs button{background:#17364d;color:#dceffc}
+          .md-tabs button.active{background:#65c8f2;color:#03121d}
+          </style>
+
+          <script>
+          (function(){
+            const textarea=document.getElementById('content');
+            if(!textarea||textarea.dataset.mdEnhanced)return;
+            textarea.dataset.mdEnhanced='1';
+
+            const label=textarea.previousElementSibling;
+            const tools=document.createElement('div');
+            tools.className='md-tools';
+            tools.innerHTML=''
+              +'<button type="button" data-md="h2">H2</button>'
+              +'<button type="button" data-md="h3">H3</button>'
+              +'<button type="button" data-md="bold"><strong>B</strong></button>'
+              +'<button type="button" data-md="italic"><em>I</em></button>'
+              +'<button type="button" data-md="ul">• List</button>'
+              +'<button type="button" data-md="ol">1. List</button>'
+              +'<button type="button" data-md="quote">Quote</button>'
+              +'<button type="button" data-md="table">Table</button>';
+            textarea.parentNode.insertBefore(tools,textarea);
+
+            const help=document.createElement('div');
+            help.className='md-help';
+            help.textContent='Markdown-aware editor: heading (#), bold (**), italic (*), list, quote, links, images, code blocks, dan tabel Markdown akan dipertahankan. Paste dari ChatGPT/Claude/Gemini juga dinormalisasi bila clipboard menyediakan HTML.';
+            textarea.parentNode.insertBefore(help,textarea);
+
+            const tabs=document.createElement('div');
+            tabs.className='md-tabs';
+            tabs.innerHTML='<button type="button" class="active" data-tab="source">Markdown Source</button><button type="button" data-tab="preview">Live Preview</button>';
+            textarea.parentNode.insertBefore(tabs,textarea);
+
+            const preview=document.createElement('div');
+            preview.className='md-preview';
+            textarea.parentNode.appendChild(preview);
+
+            function esc(v){return String(v||'').replace(/[&<>\"]/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','\"':'&quot;'}[c]||c;});}
+            function inline(v){
+              let s=esc(v);
+              s=s.replace(/`([^`]+)`/g,'<code>$1</code>');
+              s=s.replace(/!\[([^\]]*)\]\(([^)]+)\)/g,'<img src="$2" alt="$1">');
+              s=s.replace(/\[([^\]]+)\]\((https?:\/\/[^)]+)\)/g,'<a href="$2" target="_blank" rel="noopener">$1</a>');
+              s=s.replace(/\*\*([^*]+)\*\*/g,'<strong>$1</strong>');
+              s=s.replace(/__([^_]+)__/g,'<strong>$1</strong>');
+              s=s.replace(/(?<!\*)\*([^*]+)\*(?!\*)/g,'<em>$1</em>');
+              s=s.replace(/(?<!_)_([^_]+)_(?!_)/g,'<em>$1</em>');
+              return s;
+            }
+            function table(lines){
+              if(lines.length<2)return '';
+              const cells=function(line){return line.trim().replace(/^\|/,'').replace(/\|$/,'').split('|').map(x=>x.trim());};
+              const head=cells(lines[0]);
+              const sep=cells(lines[1]);
+              if(!sep.every(x=>/^:?-{3,}:?$/.test(x)))return '';
+              let out='<table><thead><tr>'+head.map(x=>'<th>'+inline(x)+'</th>').join('')+'</tr></thead><tbody>';
+              lines.slice(2).forEach(function(line){
+                const row=cells(line); out+='<tr>'+head.map(function(_,i){return '<td>'+inline(row[i]||'')+'</td>';}).join('')+'</tr>';
+              });
+              return out+'</tbody></table>';
+            }
+            function render(md){
+              const lines=String(md||'').replace(/\r\n?/g,'\n').split('\n');
+              let html='',i=0,inCode=false,code=[];
+              while(i<lines.length){
+                const line=lines[i];
+                if(/^```/.test(line)){inCode=!inCode;if(!inCode){html+='<pre><code>'+esc(code.join('\n'))+'</code></pre>';code=[];}i++;continue;}
+                if(inCode){code.push(line);i++;continue;}
+                if(/^\|/.test(line)&&i+1<lines.length&&/^\|/.test(lines[i+1])){
+                  const rows=[line,lines[i+1]];let j=i+2;while(j<lines.length&&/^\|/.test(lines[j])){rows.push(lines[j]);j++;}
+                  const t=table(rows);if(t){html+=t;i=j;continue;}
+                }
+                if(/^#{1,6}\s+/.test(line)){const m=line.match(/^(#{1,6})\s+(.*)$/);html+='<h'+m[1].length+'>'+inline(m[2])+'</h'+m[1].length+'>';i++;continue;}
+                if(/^>\s?/.test(line)){html+='<blockquote>'+inline(line.replace(/^>\s?/,''))+'</blockquote>';i++;continue;}
+                if(/^\s*[-*+]\s+/.test(line)){let items='';while(i<lines.length&&/^\s*[-*+]\s+/.test(lines[i])){items+='<li>'+inline(lines[i].replace(/^\s*[-*+]\s+/,''))+'</li>';i++;}html+='<ul>'+items+'</ul>';continue;}
+                if(/^\s*\d+[.)]\s+/.test(line)){let items='';while(i<lines.length&&/^\s*\d+[.)]\s+/.test(lines[i])){items+='<li>'+inline(lines[i].replace(/^\s*\d+[.)]\s+/,''))+'</li>';i++;}html+='<ol>'+items+'</ol>';continue;}
+                if(!line.trim()){i++;continue;}
+                let p=line;let j=i+1;while(j<lines.length&&lines[j].trim()&&!/^#{1,6}\s+/.test(lines[j])&&!/^\s*[-*+]\s+/.test(lines[j])&&!/^\s*\d+[.)]\s+/.test(lines[j])&&!/^>\s?/.test(lines[j])){p+='\n'+lines[j];j++;}
+                html+='<p>'+inline(p).replace(/\n/g,'<br>')+'</p>';i=j;
+              }
+              return html||'<p class="muted">Preview akan muncul setelah Anda menulis artikel.</p>';
+            }
+
+            function updatePreview(){preview.innerHTML=render(textarea.value);}
+            textarea.addEventListener('input',updatePreview);
+            updatePreview();
+
+            textarea.addEventListener('paste',function(ev){
+              const html=ev.clipboardData&&ev.clipboardData.getData('text/html');
+              const plain=ev.clipboardData&&ev.clipboardData.getData('text/plain');
+              if(!html||html.indexOf('<')===-1)return;
+              const hasTable=/<table[\s>]/i.test(html);
+              const hasRich=/<(h[1-6]|strong|b|em|i|ul|ol|blockquote|pre|a|img)[\s>]/i.test(html);
+              if(!hasTable&&!hasRich)return;
+              ev.preventDefault();
+              const md=htmlToMarkdown(html);
+              const start=textarea.selectionStart,end=textarea.selectionEnd;
+              textarea.value=textarea.value.slice(0,start)+md+textarea.value.slice(end);
+              textarea.selectionStart=textarea.selectionEnd=start+md.length;
+              textarea.dispatchEvent(new Event('input',{bubbles:true}));
+            });
+
+            function htmlToMarkdown(source){
+              const doc=new DOMParser().parseFromString(source,'text/html');
+              function walk(node){
+                if(node.nodeType===3)return node.nodeValue;
+                if(node.nodeType!==1)return '';
+                const tag=node.tagName.toLowerCase(),content=Array.from(node.childNodes).map(walk).join('');
+                if(tag==='h1')return '# '+content.trim()+'\n\n';
+                if(tag==='h2')return '## '+content.trim()+'\n\n';
+                if(tag==='h3')return '### '+content.trim()+'\n\n';
+                if(tag==='h4')return '#### '+content.trim()+'\n\n';
+                if(tag==='h5')return '##### '+content.trim()+'\n\n';
+                if(tag==='h6')return '###### '+content.trim()+'\n\n';
+                if(tag==='strong'||tag==='b')return '**'+content.trim()+'**';
+                if(tag==='em'||tag==='i')return '*'+content.trim()+'*';
+                if(tag==='a')return '['+content.trim()+']('+(node.getAttribute('href')||'')+')';
+                if(tag==='img')return '!['+(node.getAttribute('alt')||'image')+']('+(node.getAttribute('src')||'')+')';
+                if(tag==='br')return '\n';
+                if(tag==='p'||tag==='div')return content.trim()+'\n\n';
+                if(tag==='blockquote')return content.trim().split('\n').map(x=>'> '+x).join('\n')+'\n\n';
+                if(tag==='ul')return Array.from(node.children).map(li=>' - '+walk(li).trim()).join('\n')+'\n\n';
+                if(tag==='ol')return Array.from(node.children).map((li,n)=>(n+1)+'. '+walk(li).trim()).join('\n')+'\n\n';
+                if(tag==='li')return content;
+                if(tag==='pre')return '```\n'+content.trim()+'\n```\n\n';
+                if(tag==='code')return '`'+content+'`';
+                if(tag==='table'){
+                  const rows=Array.from(node.querySelectorAll('tr')).map(tr=>Array.from(tr.children).map(c=>c.textContent.trim().replace(/\|/g,'\\|')));
+                  if(!rows.length)return '';
+                  const header=rows[0],divider=header.map(()=> '---');
+                  return '| '+header.join(' | ')+' |\n| '+divider.join(' | ')+' |\n'+rows.slice(1).map(r=>'| '+header.map((_,i)=>r[i]||'').join(' | ')+' |').join('\n')+'\n\n';
+                }
+                return content;
+              }
+              return walk(doc.body).replace(/\n{3,}/g,'\n\n').trim();
+            }
+
+            tools.querySelectorAll('button[data-md]').forEach(function(btn){
+              btn.addEventListener('click',function(){
+                const type=btn.dataset.md,start=textarea.selectionStart,end=textarea.selectionEnd,sel=textarea.value.slice(start,end);
+                let before='',after='';
+                if(type==='h2'){before='## ';}
+                if(type==='h3'){before='### ';}
+                if(type==='bold'){before='**';after='**';}
+                if(type==='italic'){before='*';after='*';}
+                if(type==='ul'){before='- ';}
+                if(type==='ol'){before='1. ';}
+                if(type==='quote'){before='> ';}
+                if(type==='table'){before='| Column 1 | Column 2 |\n|---|---|\n| Value 1 | Value 2 |\n\n';}
+                const value=type==='table'?before:before+(sel||'text')+after;
+                textarea.value=textarea.value.slice(0,start)+value+textarea.value.slice(end);
+                textarea.focus();textarea.selectionStart=start+value.length;textarea.selectionEnd=start+value.length;
+                textarea.dispatchEvent(new Event('input',{bubbles:true}));
+              });
+            });
+
+            tabs.querySelectorAll('button').forEach(function(btn){
+              btn.addEventListener('click',function(){
+                tabs.querySelectorAll('button').forEach(b=>b.classList.remove('active'));btn.classList.add('active');
+                const previewMode=btn.dataset.tab==='preview';
+                textarea.style.display=previewMode?'none':'';
+                tools.style.display=previewMode?'none':'';
+                help.style.display=previewMode?'none':'';
+                preview.classList.toggle('show',previewMode);
+                updatePreview();
+              });
+            });
+          })();
+          </script>
+          '''
+
+          if '</body>' not in text:
+              raise SystemExit('CMS file has no closing body tag')
+          text = text.replace('</body>', enhancement + '\n</body>', 1)
+          path.write_text(text, encoding='utf-8')
+          print('Markdown enhancement injected')
+
+      - name: Commit CMS enhancement
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add src/pages/cms/index.astro
+          git diff --cached --quiet && echo 'No changes' && exit 0
+          git commit -m 'Make CMS Markdown-aware with rich paste preview'
+          git push
