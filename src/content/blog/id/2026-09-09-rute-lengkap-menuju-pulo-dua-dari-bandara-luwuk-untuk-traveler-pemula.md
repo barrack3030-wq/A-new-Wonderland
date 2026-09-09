@@ -1,17 +1,17 @@
 ---
-title: "Rute Lengkap Menuju Pulo dua dari Bandara Luwuk untuk Traveler Pemula"
-description: "Mengenal Pulo Dua, Surga Tersembunyi di Timur Sulawesi Pernahkah Anda membayangkan berdiri di puncak bukit hijau, memandang hamparan laut biru keemasan saat matahari terbenam, dengan deburan ombak yang menenangkan? Itulah Pulo Dua. Terletak di Kecamatan Balantak Utara, Kabupaten Banggai, Sulawesi Tengah, Pulo Dua adalah destinasi wisata bahari yang dijuluki \"Pulau Padarnya Sulawesi\" karena kemiripan pemandangannya de"
-seoTitle: "Panduan lengkap rute perjalanan dari Bandara Syukuran Aminuddin Amir (Luwuk) menuju surga tersembunyi Pulo Dua di Balantak, Sulawesi Tengah. Dilengkapi info transportasi, biaya, tips, dan itinerary untuk traveler pemula."
-seoDescription: "Rute Lengkap Menuju Pulo Dua dari Bandara Luwuk untuk Traveler Pemula \"Pulau Padarnya Sulawesi\" — destinasi eksotis dengan bukit hijau, laut biru, dan keindahan bawah laut yang masih perawan."
-image: "/images/Poganda-Beach-Banggai-IndonesiaJuara-Trip.webp"
-imageAlt: "Banggai destination in Indonesia"
-author: "Banggai Wonderland"
+translationKey: 2026-09-09-rute-lengkap-menuju-pulo-dua-dari-bandara-luwuk-untuk-traveler-pemula
+image: /images/blog/pulo-dua-20260909110950.webp
+imageAlt: Banggai destination in Indonesia
+title: Rute Lengkap Menuju Pulo dua dari Bandara Luwuk untuk Traveler Pemula
+description: Mengenal Pulo Dua, Surga Tersembunyi di Timur Sulawesi Pernahkah Anda membayangkan berdiri di puncak bukit hijau, memandang hamparan laut biru keemasan saat matahari terbenam, dengan deburan ombak yang menenangkan? Itulah Pulo Dua. Terletak di Kecamatan Balantak Utara, Kabupaten Banggai, Sulawesi Tengah, Pulo Dua adalah destinasi wisata bahari yang dijuluki "Pulau Padarnya Sulawesi" karena kemiripan pemandangannya de
+seoTitle: Panduan lengkap rute perjalanan dari Bandara Syukuran Aminuddin Amir (Luwuk) menuju surga tersembunyi Pulo Dua di Balantak, Sulawesi Tengah. Dilengkapi info transportasi, biaya, tips, dan itinerary untuk traveler pemula.
+seoDescription: Rute Lengkap Menuju Pulo Dua dari Bandara Luwuk untuk Traveler Pemula "Pulau Padarnya Sulawesi" — destinasi eksotis dengan bukit hijau, laut biru, dan keindahan bawah laut yang masih perawan.
+author: Banggai Wonderland
 pubDate: 2026-09-09
-translationKey: "2026-09-09-rute-lengkap-menuju-pulo-dua-dari-bandara-luwuk-untuk-traveler-pemula"
 tags:
-  - "Banggai"
-  - "Indonesia"
-  - "Travel"
+  - Banggai
+  - Indonesia
+  - Travel
 ---
 
 Mengenal Pulo Dua, Surga Tersembunyi di Timur Sulawesi
