@@ -1,17 +1,17 @@
 ---
-title: "Itinéraire complet vers Pulo Dua depuis l'aéroport de Luwuk pour les voyageurs débutants"
-description: "Découvrir Pulo Dua, le paradis caché de l'est de Sulawesi. Avez-vous déjà imaginé vous tenir au sommet d'une colline verdoyante, contempler une étendue de mer bleu doré au coucher du soleil, avec le murmure apaisant des vagues ? C'est cela, Pulo Dua. Située dans le district de Balantak Utara, régence de Banggai, Sulawesi central, Pulo Dua est une destination de tourisme maritime surnommée \"l'île de Padar de Sulawesi\" en raison de la ressemblance de ses paysages ave"
-seoTitle: "Guide complet de l'itinéraire depuis l'aéroport Syukuran Aminuddin Amir (Luwuk) vers le paradis caché de Pulo Dua à Balantak, Sulawesi central. Inclut infos transports, coûts, conseils et itinéraire pour débutants."
-seoDescription: "Itinéraire complet vers Pulo Dua depuis l'aéroport de Luwuk pour les voyageurs débutants. « L'île de Padar de Sulawesi » — une destination exotique avec des collines verdoyantes, une mer bleue et une beauté sous-marine encore préservée."
-image: "/images/Poganda-Beach-Banggai-IndonesiaJuara-Trip.webp"
-imageAlt: "Destination Banggai en Indonésie"
-author: "Banggai Wonderland"
+translationKey: 2026-09-09-rute-lengkap-menuju-pulo-dua-dari-bandara-luwuk-untuk-traveler-pemula
+image: /images/blog/pulo-dua-20260909110950.webp
+imageAlt: Destination Banggai en Indonésie
+title: Itinéraire complet vers Pulo Dua depuis l'aéroport de Luwuk pour les voyageurs débutants
+description: Découvrir Pulo Dua, le paradis caché de l'est de Sulawesi. Avez-vous déjà imaginé vous tenir au sommet d'une colline verdoyante, contempler une étendue de mer bleu doré au coucher du soleil, avec le murmure apaisant des vagues ? C'est cela, Pulo Dua. Située dans le district de Balantak Utara, régence de Banggai, Sulawesi central, Pulo Dua est une destination de tourisme maritime surnommée "l'île de Padar de Sulawesi" en raison de la ressemblance de ses paysages ave
+seoTitle: Guide complet de l'itinéraire depuis l'aéroport Syukuran Aminuddin Amir (Luwuk) vers le paradis caché de Pulo Dua à Balantak, Sulawesi central. Inclut infos transports, coûts, conseils et itinéraire pour débutants.
+seoDescription: Itinéraire complet vers Pulo Dua depuis l'aéroport de Luwuk pour les voyageurs débutants. « L'île de Padar de Sulawesi » — une destination exotique avec des collines verdoyantes, une mer bleue et une beauté sous-marine encore préservée.
+author: Banggai Wonderland
 pubDate: 2026-09-09
-translationKey: "2026-09-09-rute-lengkap-menuju-pulo-dua-dari-bandara-luwuk-untuk-traveler-pemula"
 tags:
-  - "Banggai"
-  - "Indonésie"
-  - "Voyage"
+  - Banggai
+  - Indonésie
+  - Voyage
 ---
 
 Mengenal Pulo Dua, Surga Tersembunyi di Timur Sulawesi
