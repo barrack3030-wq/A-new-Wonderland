@@ -8,31 +8,32 @@ Open Google Apps Script and create a new project. Copy `Code.gs` into the projec
 
 ## 2. Add Script Properties
 
-In Apps Script: Project Settings → Script properties.
+In Apps Script: **Project Settings → Script properties**.
 
 Add:
 
-- `OPENAI_API_KEY` = your OpenAI API key (required for web research)
-- `DEEPSEEK_API_KEY` = your DeepSeek API key (required when DeepSeek is selected as writer)
+- `OPENAI_API_KEY` = your OpenAI API key
+- `DEEPSEEK_API_KEY` = your DeepSeek API key
 - `GITHUB_TOKEN` = a GitHub fine-grained token with **Contents: Read and write** access to `barrack3030-wq/A-new-Wonderland`
+- `GITHUB_OWNER` = `barrack3030-wq`
+- `GITHUB_REPO` = `A-new-Wonderland`
+- `GITHUB_BRANCH` = `main`
 - `CMS_ACCESS_KEY` = create your own long random password for the CMS
 
-Do not put any of these values into the GitHub repository or the frontend.
+Do not put any API key or access key into GitHub or the frontend.
 
-## 3. AI writer options
+## 3. AI provider
 
-The CMS now supports two writing providers:
+The CMS now supports two providers:
 
-- **OpenAI · GPT-5.6 Luna** for article writing
-- **DeepSeek · V4 Flash** for article writing
+- **DeepSeek — V4 Flash**: used for web research and article writing when DeepSeek is selected.
+- **OpenAI — GPT-5.6 Luna**: used for web research and article writing when OpenAI is selected.
 
-Web research is performed by OpenAI because the research step uses OpenAI's built-in web search tool. The selected provider is then used to write the five language versions.
-
-DeepSeek uses the official Responses API endpoint at `https://api.deepseek.com/responses`.
+DeepSeek currently supports the Responses API and built-in `web_search`, so it can perform the research stage independently of OpenAI.
 
 ## 4. Deploy
 
-Deploy → New deployment → Web app.
+Deploy → **New deployment** → **Web app**.
 
 Execute as: **Me**
 
@@ -46,11 +47,9 @@ Copy the Web app URL.
 
 Open `src/pages/cms/index.astro` and make sure the `ENDPOINT` constant contains your Web App URL.
 
-The private CMS will then be available at:
+The private CMS is available at `/cms/`.
 
-`/cms/`
-
-It is intentionally not linked from the public navigation and has `noindex,nofollow`.
+It is intentionally not linked from the public navigation and uses `noindex,nofollow`.
 
 ## 6. Current AI configuration
 
