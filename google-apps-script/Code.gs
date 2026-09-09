@@ -1,14 +1,16 @@
 const OPENAI_MODEL='gpt-5.6-luna';
 const DEEPSEEK_MODEL='deepseek-v4-flash';
+const GEMINI_MODEL='gemini-2.5-flash';
 const OPENAI_URL='https://api.openai.com/v1/responses';
 const DEEPSEEK_URL='https://api.deepseek.com/responses';
+const GEMINI_URL='https://generativelanguage.googleapis.com/v1beta/models/'+GEMINI_MODEL+':generateContent';
 const WIKIMEDIA_API='https://commons.wikimedia.org/w/api.php';
 const DEFAULT_IMAGE='/images/Poganda-Beach-Banggai-IndonesiaJuara-Trip.webp';
 const LANGUAGES={id:'Indonesian',en:'English',es:'Spanish',fr:'French',zh:'Chinese'};
 const MAX_RETRIES=3;
 const BATCH_SIZE=2;
 
-function doGet(){return jsonResponse({ok:true,service:'Banggai Wonderland CMS',version:'5.0-offline-editorial'});}
+function doGet(){return jsonResponse({ok:true,service:'Banggai Wonderland CMS',version:'6.0-gemini-offline-editorial'});}
 
 function doPost(e){
   try{
@@ -19,7 +21,7 @@ function doPost(e){
     if(data.action==='generate'){
       const topic=String(data.topic||'').trim();
       if(!topic)throw new Error('Topic artikel wajib diisi.');
-      return jsonResponse({ok:true,articles:generateArticles(topic,data.image,data.provider||'deepseek')});
+      return jsonResponse({ok:true,articles:generateArticles(topic,data.image,data.provider||'gemini')});
     }
     if(data.action==='publish'){
       if(!data.articles||typeof data.articles!=='object')throw new Error('Data artikel tidak ditemukan.');
@@ -37,11 +39,24 @@ function checkAccessKey(value){
 }
 
 function getApiConfig(provider){
-  provider=String(provider||'deepseek').toLowerCase()==='openai'?'openai':'deepseek';
+  provider=String(provider||'gemini').toLowerCase();
   const props=PropertiesService.getScriptProperties();
-  const key=props.getProperty(provider==='openai'?'OPENAI_API_KEY':'DEEPSEEK_API_KEY');
-  if(!key)throw new Error((provider==='openai'?'OPENAI_API_KEY':'DEEPSEEK_API_KEY')+' belum diset di Script Properties.');
-  return provider==='openai'?{provider:'openai',key:key,model:OPENAI_MODEL,url:OPENAI_URL}:{provider:'deepseek',key:key,model:DEEPSEEK_MODEL,url:DEEPSEEK_URL};
+  if(provider==='gemini'){
+    const key=props.getProperty('GEMINI_API_KEY');
+    if(!key)throw new Error('GEMINI_API_KEY belum diset di Script Properties.');
+    return {provider:'gemini',key:key,model:GEMINI_MODEL,url:GEMINI_URL};
+  }
+  if(provider==='openai'){
+    const key=props.getProperty('OPENAI_API_KEY');
+    if(!key)throw new Error('OPENAI_API_KEY belum diset di Script Properties.');
+    return {provider:'openai',key:key,model:OPENAI_MODEL,url:OPENAI_URL};
+  }
+  if(provider==='deepseek'){
+    const key=props.getProperty('DEEPSEEK_API_KEY');
+    if(!key)throw new Error('DEEPSEEK_API_KEY belum diset di Script Properties.');
+    return {provider:'deepseek',key:key,model:DEEPSEEK_MODEL,url:DEEPSEEK_URL};
+  }
+  throw new Error('AI provider tidak dikenal: '+provider);
 }
 
 function uploadImage(data){
@@ -59,7 +74,8 @@ function uploadImage(data){
     if(!/^https?:\/\//i.test(source))throw new Error('Link foto harus dimulai dengan http:// atau https://.');
     const r=UrlFetchApp.fetch(source,{method:'get',followRedirects:true,muteHttpExceptions:true});
     if(r.getResponseCode()<200||r.getResponseCode()>=300)throw new Error('Tidak dapat mengambil foto dari link ('+r.getResponseCode()+').');
-    blob=r.getBlob();if(blob.getBytes().length>8*1024*1024)throw new Error('Foto dari link berukuran lebih dari 8 MB.');
+    blob=r.getBlob();
+    if(blob.getBytes().length>8*1024*1024)throw new Error('Foto dari link berukuran lebih dari 8 MB.');
     if(String(blob.getContentType()||'').toLowerCase().indexOf('image/')!==0)throw new Error('Link tersebut tidak mengarah ke file gambar.');
     originalName=String(blob.getName()||originalName);
   }else throw new Error('Pilih foto atau masukkan link foto.');
@@ -73,8 +89,13 @@ function uploadImage(data){
 }
 
 function extensionForMime(mime,name){
-  if(mime==='image/jpeg')return'jpg';if(mime==='image/png')return'png';if(mime==='image/webp')return'webp';if(mime==='image/gif')return'gif';if(mime==='image/svg+xml')return'svg';
-  const m=String(name||'').toLowerCase().match(/\.(jpg|jpeg|png|webp|gif|svg)$/);return m?(m[1]==='jpeg'?'jpg':m[1]):'jpg';
+  if(mime==='image/jpeg')return'jpg';
+  if(mime==='image/png')return'png';
+  if(mime==='image/webp')return'webp';
+  if(mime==='image/gif')return'gif';
+  if(mime==='image/svg+xml')return'svg';
+  const m=String(name||'').toLowerCase().match(/\.(jpg|jpeg|png|webp|gif|svg)$/);
+  return m?(m[1]==='jpeg'?'jpg':m[1]):'jpg';
 }
 
 function generateArticles(topic,selectedImage,provider){
@@ -88,27 +109,50 @@ function generateArticles(topic,selectedImage,provider){
     responses.forEach(function(response,index){
       const lang=batch[index],status=response.getResponseCode(),raw=response.getContentText();
       if(status===429){
-        const retry=aiRequest(cfg,{model:cfg.model,input:buildPrompt(topic,LANGUAGES[lang],image)},'Generate ['+lang+']');
+        const retry=aiRequest(cfg,buildRequestPayload(cfg,topic,LANGUAGES[lang],image),'Generate ['+lang+']');
         processArticle(lang,retry.data,image,articles);
-      }else{
-        if(status<200||status>=300)throw new Error((cfg.provider==='deepseek'?'DeepSeek':'OpenAI')+' error ['+lang+'] ('+status+'): '+raw);
-        let data;try{data=JSON.parse(raw);}catch(e){throw new Error('Respons AI tidak valid untuk '+lang+'.');}
-        processArticle(lang,data,image,articles);
+        return;
       }
+      if(status<200||status>=300)throw new Error(providerLabel(cfg.provider)+' error ['+lang+'] ('+status+'): '+raw);
+      let data;try{data=JSON.parse(raw);}catch(e){throw new Error('Respons AI tidak valid untuk '+lang+'.');}
+      processArticle(lang,data,image,articles);
     });
     if(start+batch.length<langs.length)Utilities.sleep(500);
   }
   return articles;
 }
 
+function providerLabel(provider){
+  return provider==='gemini'?'Gemini':provider==='deepseek'?'DeepSeek':'OpenAI';
+}
+
+function buildRequestPayload(cfg,topic,language,image){
+  const prompt=buildPrompt(topic,language,image);
+  if(cfg.provider==='gemini'){
+    return {contents:[{role:'user',parts:[{text:prompt}]}],generationConfig:{temperature:0.7,responseMimeType:'application/json'}};
+  }
+  return {model:cfg.model,input:prompt};
+}
+
 function writerRequest(cfg,topic,language,image){
-  return {url:cfg.url,method:'post',contentType:'application/json',headers:{Authorization:'Bearer '+cfg.key},payload:JSON.stringify({model:cfg.model,input:buildPrompt(topic,language,image)}),muteHttpExceptions:true};
+  let url=cfg.url;
+  const options={method:'post',contentType:'application/json',headers:{},payload:JSON.stringify(buildRequestPayload(cfg,topic,language,image)),muteHttpExceptions:true};
+  if(cfg.provider==='gemini'){
+    url+='?key='+encodeURIComponent(cfg.key);
+  }else{
+    options.headers={Authorization:'Bearer '+cfg.key};
+  }
+  options.url=url;
+  return options;
 }
 
 function aiRequest(cfg,payload,label){
   let last='';
   for(let attempt=1;attempt<=MAX_RETRIES;attempt++){
-    const r=UrlFetchApp.fetch(cfg.url,{method:'post',contentType:'application/json',headers:{Authorization:'Bearer '+cfg.key},payload:JSON.stringify(payload),muteHttpExceptions:true});
+    let url=cfg.url;
+    const options={method:'post',contentType:'application/json',headers:{},payload:JSON.stringify(payload),muteHttpExceptions:true};
+    if(cfg.provider==='gemini')url+='?key='+encodeURIComponent(cfg.key);else options.headers={Authorization:'Bearer '+cfg.key};
+    const r=UrlFetchApp.fetch(url,options);
     const status=r.getResponseCode(),raw=r.getContentText();
     if(status>=200&&status<300){let data;try{data=JSON.parse(raw);}catch(e){throw new Error(label+': Respons AI tidak valid.');}return {data:data,status:status};}
     last=raw;
@@ -171,7 +215,8 @@ RETURN ONLY VALID JSON:
 }
 
 function processArticle(lang,data,image,articles){
-  const output=extractAIText(data);if(!output)throw new Error('AI tidak mengembalikan output teks untuk '+lang+'.');
+  const output=extractAIText(data);
+  if(!output)throw new Error('AI tidak mengembalikan output teks untuk '+lang+'.');
   let article;try{article=JSON.parse(cleanJsonOutput(output));}catch(e){throw new Error('Output AI bukan JSON valid untuk '+lang+'.');}
   validateArticle(article);
   articles[lang]={title:String(article.title),description:String(article.description),seoTitle:String(article.seoTitle||''),seoDescription:String(article.seoDescription||''),image:image.url||DEFAULT_IMAGE,imageAlt:String(article.imageAlt||''),imageSource:String(image.source||''),author:String(article.author||'Banggai Wonderland'),pubDate:String(article.pubDate||getToday()),tags:Array.isArray(article.tags)?article.tags.map(String):['Banggai','Indonesia','Travel'],content:String(article.content),preview:createPreview(article.content)};
@@ -204,10 +249,28 @@ function findRelevantImage(topic){
 
 function searchWikimediaImages(query){
   const params=['action=query','format=json','generator=search','gsrnamespace=6','gsrlimit=10','gsrsearch='+encodeURIComponent(query),'prop=imageinfo','iiprop=url|mime|size|extmetadata','iiurlwidth=1600','origin=*'].join('&');
-  let r;try{r=UrlFetchApp.fetch(WIKIMEDIA_API+'?'+params,{method:'get',muteHttpExceptions:true,headers:{'User-Agent':'BanggaiWonderlandCMS/5.0'}});}catch(e){return null;}
-  if(r.getResponseCode()<200||r.getResponseCode()>=300)return null;let data;try{data=JSON.parse(r.getContentText());}catch(e){return null;}
-  const pages=data.query&&data.query.pages?Object.keys(data.query.pages).map(k=>data.query.pages[k]):[],normalized=normalizeSearchText(query),words=normalized.split(' ').filter(w=>w.length>=4);let best=null,bestScore=-1;
-  pages.forEach(function(page){const info=page.imageinfo&&page.imageinfo[0];if(!info||!info.url)return;const mime=String(info.mime||'').toLowerCase();if(mime==='image/svg+xml'||mime.indexOf('image/')!==0)return;const title=normalizeSearchText(page.title||'');let score=0;words.forEach(w=>{if(title.indexOf(w)!==-1)score+=5;});if(title.indexOf('mbuang')!==-1&&normalized.indexOf('mbuang')!==-1)score+=30;if(title.indexOf('paisupok')!==-1&&normalized.indexOf('paisupok')!==-1)score+=30;if(title.indexOf('poganda')!==-1&&normalized.indexOf('poganda')!==-1)score+=30;if(title.indexOf('banggai')!==-1)score+=5;if(info.width&&info.height&&Number(info.width)*Number(info.height)>=1000000)score+=3;if(score>bestScore){bestScore=score;const meta=info.extmetadata||{};best={url:info.thumburl||info.url,alt:meta.ImageDescription&&meta.ImageDescription.value?stripHtml(meta.ImageDescription.value):String(page.title||'Banggai destination'),source:info.descriptionurl||''};}});return best;
+  let r;try{r=UrlFetchApp.fetch(WIKIMEDIA_API+'?'+params,{method:'get',muteHttpExceptions:true,headers:{'User-Agent':'BanggaiWonderlandCMS/6.0'}});}catch(e){return null;}
+  if(r.getResponseCode()<200||r.getResponseCode()>=300)return null;
+  let data;try{data=JSON.parse(r.getContentText());}catch(e){return null;}
+  const pages=data.query&&data.query.pages?Object.keys(data.query.pages).map(k=>data.query.pages[k]):[],normalized=normalizeSearchText(query),words=normalized.split(' ').filter(w=>w.length>=4);
+  let best=null,bestScore=-1;
+  pages.forEach(function(page){
+    const info=page.imageinfo&&page.imageinfo[0];if(!info||!info.url)return;
+    const mime=String(info.mime||'').toLowerCase();if(mime==='image/svg+xml'||mime.indexOf('image/')!==0)return;
+    const title=normalizeSearchText(page.title||'');let score=0;
+    words.forEach(w=>{if(title.indexOf(w)!==-1)score+=5;});
+    if(title.indexOf('mbuang')!==-1&&normalized.indexOf('mbuang')!==-1)score+=30;
+    if(title.indexOf('paisupok')!==-1&&normalized.indexOf('paisupok')!==-1)score+=30;
+    if(title.indexOf('poganda')!==-1&&normalized.indexOf('poganda')!==-1)score+=30;
+    if(title.indexOf('banggai')!==-1)score+=5;
+    if(info.width&&info.height&&Number(info.width)*Number(info.height)>=1000000)score+=3;
+    if(score>bestScore){
+      bestScore=score;
+      const meta=info.extmetadata||{};
+      best={url:info.thumburl||info.url,alt:meta.ImageDescription&&meta.ImageDescription.value?stripHtml(meta.ImageDescription.value):String(page.title||'Banggai destination'),source:info.descriptionurl||''};
+    }
+  });
+  return best;
 }
 
 function normalizeSearchText(v){return String(v||'').toLowerCase().replace(/[^a-z0-9]+/g,' ').replace(/\s+/g,' ').trim();}
@@ -216,21 +279,67 @@ function extractAIText(response){
   if(response&&response.output_text)return response.output_text;
   if(response&&Array.isArray(response.output))for(let i=0;i<response.output.length;i++){const item=response.output[i];if(!item.content)continue;for(let j=0;j<item.content.length;j++){if(item.content[j].type==='output_text'&&item.content[j].text)return item.content[j].text;}}
   if(response&&response.choices&&response.choices[0]&&response.choices[0].message&&response.choices[0].message.content)return response.choices[0].message.content;
+  if(response&&Array.isArray(response.candidates)){
+    for(let i=0;i<response.candidates.length;i++){
+      const parts=response.candidates[i]&&response.candidates[i].content&&response.candidates[i].content.parts;
+      if(!Array.isArray(parts))continue;
+      const text=parts.map(function(p){return p&&typeof p.text==='string'?p.text:'';}).join('');
+      if(text)return text;
+    }
+  }
   return '';
 }
 function cleanJsonOutput(v){return String(v||'').replace(/^\s*```json\s*/i,'').replace(/^\s*```\s*/i,'').replace(/\s*```\s*$/i,'').trim();}
 
 function publishArticles(articles){
-  const files=[],first=articles.id||articles.en||articles.es||articles.fr||articles.zh;if(!first||!first.title)throw new Error('Artikel utama tidak ditemukan.');
+  const files=[],first=articles.id||articles.en||articles.es||articles.fr||articles.zh;
+  if(!first||!first.title)throw new Error('Artikel utama tidak ditemukan.');
   const translationKey=getToday()+'-'+createSlug(first.title).substring(0,70);
-  Object.keys(LANGUAGES).forEach(function(lang){const article=articles[lang];if(!article||!article.title||!article.content)throw new Error('Artikel bahasa '+lang+' tidak lengkap.');const slug=createSlug(article.title);if(!slug)throw new Error('Slug kosong untuk '+lang);const path='src/content/blog/'+lang+'/'+getToday()+'-'+slug+'.md';githubCreateFile(path,createMarkdown(article,translationKey),'CMS: Add offline-editorial blog article ['+lang+'] '+article.title);files.push({language:lang,path:path,title:article.title});});
+  Object.keys(LANGUAGES).forEach(function(lang){
+    const article=articles[lang];
+    if(!article||!article.title||!article.content)throw new Error('Artikel bahasa '+lang+' tidak lengkap.');
+    const slug=createSlug(article.title);
+    if(!slug)throw new Error('Slug kosong untuk '+lang);
+    const path='src/content/blog/'+lang+'/'+getToday()+'-'+slug+'.md';
+    githubCreateFile(path,createMarkdown(article,translationKey),'CMS: Add Gemini editorial blog article ['+lang+'] '+article.title);
+    files.push({language:lang,path:path,title:article.title});
+  });
   return {files:files};
 }
+
 function createMarkdown(article,translationKey){
-  let m='---\n';m+='title: "'+yamlEscape(article.title)+'"\n';m+='description: "'+yamlEscape(article.description)+'"\n';if(article.seoTitle)m+='seoTitle: "'+yamlEscape(article.seoTitle)+'"\n';if(article.seoDescription)m+='seoDescription: "'+yamlEscape(article.seoDescription)+'"\n';m+='image: "'+yamlEscape(article.image||DEFAULT_IMAGE)+'"\n';if(article.imageAlt)m+='imageAlt: "'+yamlEscape(article.imageAlt)+'"\n';if(article.imageSource)m+='imageSource: "'+yamlEscape(article.imageSource)+'"\n';m+='author: "'+yamlEscape(article.author||'Banggai Wonderland')+'"\n';m+='pubDate: '+normalizeDate(article.pubDate)+'\n';m+='translationKey: "'+yamlEscape(translationKey)+'"\n';if(Array.isArray(article.tags)&&article.tags.length){m+='tags:\n';article.tags.forEach(function(tag){m+='  - "'+yamlEscape(tag)+'"\n';});}return m+'---\n\n'+String(article.content).trim()+'\n';
+  let m='---\n';
+  m+='title: "'+yamlEscape(article.title)+'"\n';
+  m+='description: "'+yamlEscape(article.description)+'"\n';
+  if(article.seoTitle)m+='seoTitle: "'+yamlEscape(article.seoTitle)+'"\n';
+  if(article.seoDescription)m+='seoDescription: "'+yamlEscape(article.seoDescription)+'"\n';
+  m+='image: "'+yamlEscape(article.image||DEFAULT_IMAGE)+'"\n';
+  if(article.imageAlt)m+='imageAlt: "'+yamlEscape(article.imageAlt)+'"\n';
+  if(article.imageSource)m+='imageSource: "'+yamlEscape(article.imageSource)+'"\n';
+  m+='author: "'+yamlEscape(article.author||'Banggai Wonderland')+'"\n';
+  m+='pubDate: '+normalizeDate(article.pubDate)+'\n';
+  m+='translationKey: "'+yamlEscape(translationKey)+'"\n';
+  if(Array.isArray(article.tags)&&article.tags.length){m+='tags:\n';article.tags.forEach(function(tag){m+='  - "'+yamlEscape(tag)+'"\n';});}
+  return m+'---\n\n'+String(article.content).trim()+'\n';
 }
-function githubCreateFile(path,content,message){const p=PropertiesService.getScriptProperties(),token=p.getProperty('GITHUB_TOKEN'),owner=p.getProperty('GITHUB_OWNER'),repo=p.getProperty('GITHUB_REPO'),branch=p.getProperty('GITHUB_BRANCH')||'main';if(!token||!owner||!repo)throw new Error('GitHub Script Properties belum lengkap.');const url='https://api.github.com/repos/'+owner+'/'+repo+'/contents/'+path;const payload={message:message,content:Utilities.base64Encode(Utilities.newBlob(content).getBytes()),branch:branch};const r=UrlFetchApp.fetch(url,{method:'put',contentType:'application/json',headers:{Authorization:'Bearer '+token,Accept:'application/vnd.github+json','X-GitHub-Api-Version':'2022-11-28'},payload:JSON.stringify(payload),muteHttpExceptions:true});if(r.getResponseCode()<200||r.getResponseCode()>=300)throw new Error('GitHub error ('+r.getResponseCode()+'): '+r.getContentText());return JSON.parse(r.getContentText());}
-function githubCreateBinaryFile(path,bytes,message){const p=PropertiesService.getScriptProperties(),token=p.getProperty('GITHUB_TOKEN'),owner=p.getProperty('GITHUB_OWNER'),repo=p.getProperty('GITHUB_REPO'),branch=p.getProperty('GITHUB_BRANCH')||'main';if(!token||!owner||!repo)throw new Error('GitHub Script Properties belum lengkap.');const url='https://api.github.com/repos/'+owner+'/'+repo+'/contents/'+path;const payload={message:message,content:Utilities.base64Encode(bytes),branch:branch};const r=UrlFetchApp.fetch(url,{method:'put',contentType:'application/json',headers:{Authorization:'Bearer '+token,Accept:'application/vnd.github+json','X-GitHub-Api-Version':'2022-11-28'},payload:JSON.stringify(payload),muteHttpExceptions:true});if(r.getResponseCode()<200||r.getResponseCode()>=300)throw new Error('GitHub image error ('+r.getResponseCode()+'): '+r.getContentText());return JSON.parse(r.getContentText());}
+function githubCreateFile(path,content,message){
+  const p=PropertiesService.getScriptProperties(),token=p.getProperty('GITHUB_TOKEN'),owner=p.getProperty('GITHUB_OWNER'),repo=p.getProperty('GITHUB_REPO'),branch=p.getProperty('GITHUB_BRANCH')||'main';
+  if(!token||!owner||!repo)throw new Error('GitHub Script Properties belum lengkap.');
+  const url='https://api.github.com/repos/'+owner+'/'+repo+'/contents/'+path;
+  const payload={message:message,content:Utilities.base64Encode(Utilities.newBlob(content).getBytes()),branch:branch};
+  const r=UrlFetchApp.fetch(url,{method:'put',contentType:'application/json',headers:{Authorization:'Bearer '+token,Accept:'application/vnd.github+json','X-GitHub-Api-Version':'2022-11-28'},payload:JSON.stringify(payload),muteHttpExceptions:true});
+  if(r.getResponseCode()<200||r.getResponseCode()>=300)throw new Error('GitHub error ('+r.getResponseCode()+'): '+r.getContentText());
+  return JSON.parse(r.getContentText());
+}
+function githubCreateBinaryFile(path,bytes,message){
+  const p=PropertiesService.getScriptProperties(),token=p.getProperty('GITHUB_TOKEN'),owner=p.getProperty('GITHUB_OWNER'),repo=p.getProperty('GITHUB_REPO'),branch=p.getProperty('GITHUB_BRANCH')||'main';
+  if(!token||!owner||!repo)throw new Error('GitHub Script Properties belum lengkap.');
+  const url='https://api.github.com/repos/'+owner+'/'+repo+'/contents/'+path;
+  const payload={message:message,content:Utilities.base64Encode(bytes),branch:branch};
+  const r=UrlFetchApp.fetch(url,{method:'put',contentType:'application/json',headers:{Authorization:'Bearer '+token,Accept:'application/vnd.github+json','X-GitHub-Api-Version':'2022-11-28'},payload:JSON.stringify(payload),muteHttpExceptions:true});
+  if(r.getResponseCode()<200||r.getResponseCode()>=300)throw new Error('GitHub image error ('+r.getResponseCode()+'): '+r.getContentText());
+  return JSON.parse(r.getContentText());
+}
 function createSlug(text){return String(text).toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'').replace(/[^a-z0-9]+/g,'-').replace(/^-+|-+$/g,'').substring(0,100);}
 function normalizeDate(v){const t=String(v||'').trim();return /^\d{4}-\d{2}-\d{2}$/.test(t)?t:getToday();}
 function getToday(){return Utilities.formatDate(new Date(),Session.getScriptTimeZone()||'Asia/Makassar','yyyy-MM-dd');}
