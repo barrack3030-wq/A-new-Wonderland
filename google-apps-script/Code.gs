@@ -2,10 +2,11 @@ const OPENAI_MODEL = 'gpt-5.6-luna';
 const WIKIMEDIA_API = 'https://commons.wikimedia.org/w/api.php';
 const DEFAULT_IMAGE = '/images/Poganda-Beach-Banggai-IndonesiaJuara-Trip.webp';
 const LANGUAGES = { id:'Indonesian', en:'English', es:'Spanish', fr:'French', zh:'Chinese' };
-const RESEARCH_CONTEXT_SIZE = 'high';
-const MAX_RESEARCH_CHARS = 42000;
+const RESEARCH_CONTEXT_SIZE = 'medium';
+const MAX_RESEARCH_CHARS = 18000;
+const OPENAI_MAX_RETRIES = 3;
 
-function doGet(){ return jsonResponse({ok:true,service:'Banggai Wonderland CMS',version:'2.0-research'}); }
+function doGet(){ return jsonResponse({ok:true,service:'Banggai Wonderland CMS',version:'2.1-research-stable'}); }
 
 function doPost(e){
   try{
@@ -85,61 +86,70 @@ function generateArticles(topic,selectedImage){
   const image=selectedImage && selectedImage.url ? selectedImage : findRelevantImage(topic);
   const research=researchTopic(topic,apiKey);
   const langs=Object.keys(LANGUAGES);
-  const requests=langs.map(function(lang){
-    return {
-      url:'https://api.openai.com/v1/responses',
-      method:'post',
-      contentType:'application/json',
-      headers:{Authorization:'Bearer '+apiKey},
-      payload:JSON.stringify({
-        model:OPENAI_MODEL,
-        input:buildPrompt(topic,LANGUAGES[lang],image,research)
-      }),
-      muteHttpExceptions:true
-    };
-  });
-  const responses=UrlFetchApp.fetchAll(requests);
   const articles={};
-  responses.forEach(function(response,index){
-    const lang=langs[index], status=response.getResponseCode(), raw=response.getContentText();
-    if(status<200||status>=300) throw new Error('OpenAI error ['+lang+'] ('+status+'): '+raw);
-    let data; try{data=JSON.parse(raw);}catch(e){throw new Error('Respons OpenAI tidak valid untuk '+lang+'.');}
-    const output=extractOpenAIText(data);
+
+  // Generate one language at a time to avoid a 5-request TPM spike.
+  langs.forEach(function(lang,index){
+    const payload={
+      model:OPENAI_MODEL,
+      input:buildPrompt(topic,LANGUAGES[lang],image,research)
+    };
+    const response=openAIRequest(apiKey,payload,'Generate ['+lang+']');
+    const output=extractOpenAIText(response.data);
     if(!output) throw new Error('OpenAI tidak mengembalikan output teks untuk '+lang+'.');
     const cleaned=cleanJsonOutput(output);
     let article; try{article=JSON.parse(cleaned);}catch(e){throw new Error('Output OpenAI bukan JSON valid untuk '+lang+'.');}
     validateArticle(article);
     articles[lang]={title:String(article.title),description:String(article.description),seoTitle:article.seoTitle?String(article.seoTitle):'',seoDescription:article.seoDescription?String(article.seoDescription):'',image:image.url||DEFAULT_IMAGE,imageAlt:article.imageAlt?String(article.imageAlt):'',imageSource:image.source||'',author:article.author?String(article.author):'Banggai Wonderland',pubDate:article.pubDate?String(article.pubDate):getToday(),tags:Array.isArray(article.tags)?article.tags.map(String):['Banggai','Indonesia','Travel'],content:String(article.content),preview:createPreview(article.content)};
+    if(index<langs.length-1) Utilities.sleep(800);
   });
   return articles;
 }
 
 function researchTopic(topic,apiKey){
-  const response=UrlFetchApp.fetch('https://api.openai.com/v1/responses',{
-    method:'post',
-    contentType:'application/json',
-    headers:{Authorization:'Bearer '+apiKey},
-    payload:JSON.stringify({
-      model:OPENAI_MODEL,
-      tools:[{type:'web_search',search_context_size:RESEARCH_CONTEXT_SIZE}],
-      input:buildResearchPrompt(topic)
-    }),
-    muteHttpExceptions:true
-  });
-  const status=response.getResponseCode(), raw=response.getContentText();
-  if(status<200||status>=300) throw new Error('Web research error ('+status+'): '+raw);
-  let data;try{data=JSON.parse(raw);}catch(e){throw new Error('Respons web research tidak valid.');}
-  const text=extractOpenAIText(data);
+  const payload={
+    model:OPENAI_MODEL,
+    tools:[{type:'web_search',search_context_size:RESEARCH_CONTEXT_SIZE}],
+    input:buildResearchPrompt(topic)
+  };
+  const response=openAIRequest(apiKey,payload,'Web research');
+  const text=extractOpenAIText(response.data);
   if(!text) throw new Error('Web research tidak menghasilkan ringkasan.');
   return String(text).substring(0,MAX_RESEARCH_CHARS);
 }
 
+function openAIRequest(apiKey,payload,label){
+  let lastBody='';
+  for(let attempt=1;attempt<=OPENAI_MAX_RETRIES;attempt++){
+    const response=UrlFetchApp.fetch('https://api.openai.com/v1/responses',{
+      method:'post',
+      contentType:'application/json',
+      headers:{Authorization:'Bearer '+apiKey},
+      payload:JSON.stringify(payload),
+      muteHttpExceptions:true
+    });
+    const status=response.getResponseCode();
+    const raw=response.getContentText();
+    if(status>=200&&status<300){
+      let data;try{data=JSON.parse(raw);}catch(e){throw new Error(label+': Respons OpenAI tidak valid.');}
+      return {data:data,status:status};
+    }
+    lastBody=raw;
+    if(status!==429 || attempt===OPENAI_MAX_RETRIES){
+      throw new Error(label+' error ('+status+'): '+raw);
+    }
+    const waitMs=1500*attempt;
+    Utilities.sleep(waitMs);
+  }
+  throw new Error(label+' gagal: '+lastBody);
+}
+
 function buildResearchPrompt(topic){
-  return `You are the research editor for Banggai Wonderland, a premium travel agency focused on Luwuk, Banggai, Banggai Kepulauan, and Banggai Laut, Indonesia.\n\nRESEARCH TOPIC:\n${topic}\n\nPerform deep web research before writing anything. Search multiple independent web sources and prioritize:\n1) official government / tourism sources,\n2) reputable travel publications or established travel guides,\n3) local news and local websites,\n4) Wikimedia or other reliable reference sources when useful.\n\nResearch the exact places, names, locations, access, transport, approximate travel times, activities, safety, local rules, culture/history, and anything else specifically relevant to this topic.\n\nImportant rules:\n- Cross-check important facts across multiple sources where possible.\n- Clearly distinguish verified facts from estimates, opinions, or information that is uncertain.\n- Do NOT invent exact prices, opening hours, distances, schedules, facilities, historical claims, or accessibility claims.\n- Prefer current information and note when information may change.\n- Do not use search-result snippets as if they were verified facts when the underlying page is unavailable.\n- Avoid padding the research with generic travel advice unrelated to the topic.\n\nReturn a concise but detailed RESEARCH PACK for another writer. Include:\nA. Verified facts\nB. Practical travel/access information\nC. Distinctive experiences and details\nD. Safety / etiquette / environmental considerations\nE. Conflicting or uncertain information that must be phrased carefully\nF. Source list with title + domain + URL for the most useful sources\n\nDo not write the final article. This is a factual research pack only.`;
+  return `You are the research editor for Banggai Wonderland. Research this travel topic before the article is written.\n\nTOPIC:\n${topic}\n\nSearch multiple independent sources. Prioritize official government/tourism sources, reputable travel guides, local news/local websites, and reliable reference sources. Focus only on facts relevant to the topic: exact place names, location, access/transport, approximate travel times, activities, safety, culture/history, local rules, and practical visitor details.\n\nRules:\n- Cross-check important facts where possible.\n- Separate verified facts from estimates, opinions, and uncertainty.\n- Never invent exact prices, schedules, distances, facilities, historical claims, or access conditions.\n- Prefer current information and flag details that may change.\n- Do not pad with generic travel advice.\n\nReturn a compact RESEARCH PACK with:\nA. Verified facts\nB. Practical access/travel info\nC. Distinctive experiences\nD. Safety/culture/environment\nE. Conflicts or uncertainty\nF. 5-10 best sources with title, domain, and URL\n\nDo not write the final article.`;
 }
 
 function buildPrompt(topic,language,image,research){
-  return `You are the senior editorial writer for Banggai Wonderland, a premium travel agency.\n\nWebsite: Banggai Wonderland\nSlogan: Discover hidden paradise of Banggai\n\nTOPIC:\n${topic}\n\nTARGET LANGUAGE:\nWrite the complete article in ${language}.\n\nFEATURED IMAGE:\n${image.url||DEFAULT_IMAGE}\n\nVERIFIED WEB RESEARCH PACK:\n${research}\n\nEDITORIAL STANDARD:\nCreate a genuinely useful, authoritative, immersive long-form travel article based on the research pack above.\n\nThe article should normally be around 1,800–2,500+ words when the subject supports that depth. Do not artificially add filler just to reach a word count.\n\nThe article should feel like it was written by someone who understands the destination, not like a generic AI travel template.\n\nCONTENT REQUIREMENTS:\n- Strong opening that answers the reader's intent and creates desire to explore.\n- Give concrete, useful information instead of vague travel language.\n- Use a clear H2/H3 hierarchy.\n- When the topic contains multiple places, give each important place its own substantial section.\n- Explain location, character, what visitors can actually experience, access, practical considerations, and why each place is worth visiting when those facts are available.\n- Add a useful quick-facts section or table when appropriate.\n- Add practical travel planning information.\n- Add a realistic itinerary or suggested way to combine the destination with nearby places when supported by research.\n- Include safety, weather, environmental and cultural etiquette where relevant.\n- Include a concise FAQ section with useful search-intent questions.\n- End with a natural Banggai Wonderland travel-planning CTA, never with exaggerated sales copy.\n\nFACTUALITY:\n- Use the research pack as the factual foundation.\n- Never invent details simply to make the article longer.\n- If sources disagree, explain the uncertainty instead of choosing a made-up answer.\n- Never present estimates as exact facts.\n- Keep official place names unchanged.\n- Do not mention the research process, AI, prompts, or these instructions in the article.\n\nSEO:\n- Write naturally for humans first.\n- Include the primary search intent in the title, introduction, at least one relevant heading, and body naturally.\n- Include semantically related phrases and destination names without keyword stuffing.\n- Produce a compelling meta title and meta description.\n- Use useful descriptive image alt text.\n\nSTYLE:\nPremium, warm, specific, confident, informative, immersive, and natural. Avoid repetitive phrases such as “hidden gem”, “breathtaking”, “paradise”, and “for those seeking” unless genuinely appropriate.\n\nMARKDOWN:\nArticle content must be Markdown only. No HTML. Use real Markdown headings, lists, tables when useful, and short readable paragraphs.\n\nRETURN ONLY VALID JSON:\n{"title":"SEO-friendly article title","description":"Short article description","seoTitle":"SEO title","seoDescription":"SEO meta description","image":"${image.url||DEFAULT_IMAGE}","imageAlt":"Descriptive image alt text","author":"Banggai Wonderland","pubDate":"${getToday()}","tags":["Banggai","Indonesia","Travel"],"content":"Complete long-form Markdown article"}\n\nDo not wrap the JSON in markdown fences.`;
+  return `You are the senior editorial writer for Banggai Wonderland, a premium travel agency.\n\nTOPIC:\n${topic}\n\nTARGET LANGUAGE:\nWrite the complete article in ${language}.\n\nFEATURED IMAGE:\n${image.url||DEFAULT_IMAGE}\n\nVERIFIED WEB RESEARCH PACK:\n${research}\n\nWrite a genuinely useful, authoritative, immersive long-form travel article based on the research pack. Aim for 1,800–2,500+ words when the subject supports it; never add filler. The article must feel destination-specific, not generic AI copy.\n\nInclude:\n- Strong opening matching search intent.\n- Concrete facts and practical visitor information.\n- Clear H2/H3 structure.\n- Substantial sections for important places.\n- Location, character, real visitor experience, access, practical considerations, and why it is worth visiting when supported by research.\n- Quick facts/table when useful.\n- Practical planning and a realistic itinerary/combo route when supported.\n- Safety, weather, environment and cultural etiquette where relevant.\n- Useful FAQ.\n- Natural Banggai Wonderland CTA.\n\nFACTUALITY:\n- Research pack is the factual foundation.\n- Never invent missing details.\n- If sources disagree, explain the uncertainty.\n- Never present estimates as exact facts.\n- Do not mention AI, prompts, or research process.\n\nSEO:\nUse the main search intent naturally in title, introduction, a relevant heading and body. Use semantic related phrases without keyword stuffing. Produce a compelling meta title, meta description and descriptive image alt text.\n\nSTYLE:\nPremium, warm, specific, confident, informative, immersive, natural. Avoid repetitive cliches such as “hidden gem”, “breathtaking”, “paradise”, and “for those seeking” unless genuinely appropriate.\n\nMARKDOWN:\nMarkdown only, no HTML.\n\nRETURN ONLY VALID JSON:\n{"title":"SEO-friendly article title","description":"Short article description","seoTitle":"SEO title","seoDescription":"SEO meta description","image":"${image.url||DEFAULT_IMAGE}","imageAlt":"Descriptive image alt text","author":"Banggai Wonderland","pubDate":"${getToday()}","tags":["Banggai","Indonesia","Travel"],"content":"Complete long-form Markdown article"}\n\nDo not wrap the JSON in markdown fences.`;
 }
 
 function findRelevantImage(topic){
