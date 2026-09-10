@@ -118,25 +118,16 @@ function confirmUpload(img){
   uploadOk.classList.add('show');
 }
 
-function attachImageToContent(content,img,alt){
-  const text=String(content||'').trim();
-  const url=img&&img.url?String(img.url).trim():'';
-  if(!url)return text;
-  const safeAlt=String(alt||titleEl.value||'Banggai Wonderland').trim().replace(/[\r\n]+/g,' ');
-  const pattern=/!\[[^\]]*\]\([^\)]+\)/;
-  if(pattern.test(text))return text;
-  return '!['+safeAlt+']('+url+')\n\n'+text;
-}
-
 function ensureAllArticleImages(){
   if(!translatedArticles||!selectedImage||!selectedImage.url)return;
   Object.keys(translatedArticles).forEach(function(lang){
     const article=translatedArticles[lang];
     if(article){
+      // Featured image is stored only in frontmatter/metadata.
+      // Do NOT inject it into article.content; that creates a second photo.
       article.image=selectedImage.url;
       article.imageAlt=article.imageAlt||selectedImage.alt||titleEl.value||'Banggai Wonderland';
       article.imageSource=article.imageSource||selectedImage.source||'';
-      article.content=attachImageToContent(article.content,selectedImage,article.imageAlt);
     }
   });
 }
@@ -252,7 +243,7 @@ translateEl.addEventListener('click',async function(){
     ensureAllArticleImages();
     renderArticles();
     resultEl.classList.add('show');
-    setStatus(statusEl,'✓ Terjemahan English, Spanish, French, dan Chinese berhasil dibuat. Foto otomatis ditempel ke 5 versi artikel.','success');
+    setStatus(statusEl,'✓ Terjemahan English, Spanish, French, dan Chinese berhasil dibuat. Featured image digunakan sebagai satu-satunya foto utama pada 5 versi artikel.','success');
   }catch(error){
     setStatus(statusEl,'✕ '+error.message,'danger');
   }finally{
