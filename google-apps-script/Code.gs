@@ -9,7 +9,13 @@ const TARGET_LANGUAGES={en:'English',es:'Spanish',fr:'French',zh:'Chinese'};
 const MAX_RETRIES=4;
 const BATCH_SIZE=2;
 
-function doGet(){return jsonResponse({ok:true,service:'Banggai Wonderland CMS',version:'7.0-manual-article-translator'});}
+function doGet(e){
+  try{
+    return jsonResponse({ok:true,service:'Banggai Wonderland CMS',version:'7.1-resilient-json-api',status:'online',timestamp:new Date().toISOString()});
+  }catch(error){
+    return jsonResponse({ok:false,error:error&&error.message?error.message:String(error)});
+  }
+}
 
 function doPost(e){
   try{
@@ -273,7 +279,7 @@ function findRelevantImage(topic){
 
 function searchWikimediaImages(query){
   const params=['action=query','format=json','generator=search','gsrnamespace=6','gsrlimit=10','gsrsearch='+encodeURIComponent(query),'prop=imageinfo','iiprop=url|mime|size|extmetadata','iiurlwidth=1600','origin=*'].join('&');
-  let r;try{r=UrlFetchApp.fetch(WIKIMEDIA_API+'?'+params,{method:'get',muteHttpExceptions:true,headers:{'User-Agent':'BanggaiWonderlandCMS/7.0'}});}catch(e){return null;}
+  let r;try{r=UrlFetchApp.fetch(WIKIMEDIA_API+'?'+params,{method:'get',muteHttpExceptions:true,headers:{'User-Agent':'BanggaiWonderlandCMS/7.1'}});}catch(e){return null;}
   if(r.getResponseCode()<200||r.getResponseCode()>=300)return null;
   let data;try{data=JSON.parse(r.getContentText());}catch(e){return null;}
   const pages=data.query&&data.query.pages?Object.keys(data.query.pages).map(function(k){return data.query.pages[k];}):[];

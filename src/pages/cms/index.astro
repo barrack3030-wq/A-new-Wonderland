@@ -153,14 +153,26 @@ imageFileEl.addEventListener('change',function(){
 });
 
 async function post(payload){
-  const response=await fetch(ENDPOINT,{
-    method:'POST',
-    headers:{'Content-Type':'text/plain;charset=utf-8'},
-    body:JSON.stringify(payload)
-  });
+  const url=ENDPOINT+(ENDPOINT.includes('?')?'&':'?')+'_cms='+Date.now();
+  let response;
+  try{
+    response=await fetch(url,{
+      method:'POST',
+      headers:{'Content-Type':'text/plain;charset=utf-8','Accept':'application/json,text/plain,*/*'},
+      body:JSON.stringify(payload),
+      cache:'no-store',
+      redirect:'follow'
+    });
+  }catch(error){
+    throw new Error('Tidak dapat terhubung ke CMS Apps Script: '+(error&&error.message?error.message:'Network error'));
+  }
   const raw=await response.text();
   let data;
-  try{data=JSON.parse(raw);}catch(error){throw new Error('CMS tidak mengembalikan JSON. Pastikan deployment Apps Script sudah versi terbaru.');}
+  try{data=JSON.parse(raw);}catch(error){
+    const contentType=response.headers.get('content-type')||'unknown';
+    const preview=String(raw||'').replace(/\s+/g,' ').slice(0,220);
+    throw new Error('Apps Script tidak mengembalikan JSON (HTTP '+response.status+', '+contentType+'). '+(preview||'Response kosong')+' — pastikan deployment /exec sudah diperbarui ke versi terbaru.');
+  }
   if(!data.ok)throw new Error(data.error||'CMS request failed');
   return data;
 }
