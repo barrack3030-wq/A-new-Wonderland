@@ -30,9 +30,6 @@ const formattedDate = new Intl.DateTimeFormat(lang, {
 }).format(entry.data.pubDate);
 
 // Destination-aware image resolver for existing articles.
-// Mbuang-Mbuang must use a real Mbuang-Mbuang image rather than a generic
-// Banggai/Poganda placeholder. The selected Wikimedia Commons image is
-// specifically documented as Pasir Panjang Beach on Mbuang Mbuang Island.
 const entryText = `${entry.data.title} ${entry.data.description} ${(entry.data.tags || []).join(' ')}`.toLowerCase();
 const isMbuangMbuang = entryText.includes('mbuang-mbuang') || entryText.includes('mbuang mbuang');
 const resolvedImage = isMbuangMbuang
@@ -95,7 +92,7 @@ const schema = {
           </div>
           <span>•</span>
           <div class="flex items-center">
-            <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
+            <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4v4m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
             {formattedDate}
           </div>
         </div>
@@ -111,7 +108,8 @@ const schema = {
 
       <article class="prose prose-lg prose-ocean max-w-none
         prose-headings:font-serif prose-headings:text-ocean-900
-        prose-p:text-ocean-700 prose-p:leading-relaxed
+        prose-p:text-ocean-700 prose-p:leading-relaxed prose-p:text-justify
+        prose-li:text-ocean-700 prose-li:text-justify
         prose-a:text-turquoise-600 hover:prose-a:text-turquoise-500
         prose-img:rounded-2xl prose-img:shadow-md
         bg-white p-8 md:p-12 rounded-3xl shadow-sm border border-sand-200">
