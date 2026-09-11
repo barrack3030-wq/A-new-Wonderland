@@ -1,0 +1,80 @@
+name: Harden CMS JSON API
+
+on:
+  push:
+    branches: [main]
+
+permissions:
+  contents: write
+
+jobs:
+  harden:
+    if: github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Patch Apps Script JSON health endpoint
+        shell: bash
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          p=Path('google-apps-script/Code.gs')
+          s=p.read_text(encoding='utf-8')
+          old="function doGet(){return jsonResponse({ok:true,service:'Banggai Wonderland CMS',version:'7.0-manual-article-translator'});}"
+          new="""function doGet(e){\n  try{\n    return jsonResponse({ok:true,service:'Banggai Wonderland CMS',version:'7.1-resilient-json-api',status:'online',timestamp:new Date().toISOString()});\n  }catch(error){\n    return jsonResponse({ok:false,error:error&&error.message?error.message:String(error)});\n  }\n}"""
+          if old in s:
+              s=s.replace(old,new)
+          s=s.replace("BanggaiWonderlandCMS/7.0","BanggaiWonderlandCMS/7.1")
+          p.write_text(s,encoding='utf-8')
+          PY
+
+      - name: Patch CMS response handling
+        shell: bash
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          p=Path('src/pages/cms/index.astro')
+          s=p.read_text(encoding='utf-8')
+          old="""async function post(payload){\n  const response=await fetch(ENDPOINT,{\n    method:'POST',\n    headers:{'Content-Type':'text/plain;charset=utf-8'},\n    body:JSON.stringify(payload)\n  });\n  const raw=await response.text();\n  let data;\n  try{data=JSON.parse(raw);}catch(error){throw new Error('CMS tidak mengembalikan JSON. Pastikan deployment Apps Script sudah versi terbaru.');}\n  if(!data.ok)throw new Error(data.error||'CMS request failed');\n  return data;\n}"""
+          new="""async function post(payload){\n  const url=ENDPOINT+(ENDPOINT.includes('?')?'&':'?')+'_cms='+Date.now();\n  let response;\n  try{\n    response=await fetch(url,{\n      method:'POST',\n      headers:{'Content-Type':'text/plain;charset=utf-8','Accept':'application/json,text/plain,*/*'},\n      body:JSON.stringify(payload),\n      cache:'no-store',\n      redirect:'follow'\n    });\n  }catch(error){\n    throw new Error('Tidak dapat terhubung ke CMS Apps Script: '+(error&&error.message?error.message:'Network error'));\n  }\n  const raw=await response.text();\n  let data;\n  try{data=JSON.parse(raw);}catch(error){\n    const contentType=response.headers.get('content-type')||'unknown';\n    const preview=String(raw||'').replace(/\\s+/g,' ').slice(0,220);\n    throw new Error('Apps Script tidak mengembalikan JSON (HTTP '+response.status+', '+contentType+'). '+(preview||'Response kosong')+' — pastikan deployment /exec sudah diperbarui ke versi terbaru.');\n  }\n  if(!data.ok)throw new Error(data.error||'CMS request failed');\n  return data;\n}"""
+          if old not in s:
+              raise SystemExit('Expected CMS post() block not found; aborting without changes.')
+          s=s.replace(old,new)
+          p.write_text(s,encoding='utf-8')
+          PY
+
+      - name: Add deployment note
+        shell: bash
+        run: |
+          cat > google-apps-script/DEPLOYMENT.md <<'EOF'
+          # Banggai Wonderland CMS — Apps Script deployment
+
+          The repository copy of `Code.gs` is now hardened for JSON responses (`7.1-resilient-json-api`).
+
+          After changing `Code.gs`, update the Google Apps Script Web App deployment:
+
+          1. Deploy → Manage deployments.
+          2. Edit the Web App deployment.
+          3. Execute as: Me.
+          4. Who has access: Anyone.
+          5. Select the newest version and Deploy.
+          6. The CMS must use the URL ending in `/exec`, never `/dev`.
+
+          Open the `/exec` URL directly. It should return JSON containing:
+          `"service":"Banggai Wonderland CMS"`, `"version":"7.1-resilient-json-api"`, and `"status":"online"`.
+          EOF
+
+      - name: Commit hardening changes
+        shell: bash
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add google-apps-script/Code.gs google-apps-script/DEPLOYMENT.md src/pages/cms/index.astro
+          if git diff --cached --quiet; then
+            echo 'No hardening changes needed.'
+            exit 0
+          fi
+          git commit -m 'fix: harden CMS JSON response handling'
+          git push
