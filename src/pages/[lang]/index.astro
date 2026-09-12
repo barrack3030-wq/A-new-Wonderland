@@ -20,26 +20,27 @@ const latestBlogs = allBlogs.filter(b => b.id.startsWith(`${lang}/`)).sort((a,b)
 ---
 
 <BaseLayout title="Banggai Wonderland | Discover Hidden Paradise of Banggai">
-  <section class="relative min-h-screen flex items-end overflow-hidden bg-ocean-900">
+  <section id="hero" class="relative min-h-screen flex items-end overflow-hidden bg-ocean-900">
     <div id="hero-media" class="absolute inset-0 will-change-transform">
-      <img src="/images/destinations/paisu-pok-lake-hero.jpg" alt="Paisu Pok Lake, Banggai" class="w-full h-full object-cover object-center scale-[1.02]" />
-      <div class="absolute inset-0 bg-gradient-to-t from-black/75 via-black/20 to-black/15"></div>
-      <div class="absolute inset-x-0 bottom-0 h-40 bg-gradient-to-t from-[#f7f7f5] via-[#f7f7f5]/25 to-transparent opacity-90"></div>
+      <img src="/images/destinations/paisu-pok-lake-hero.jpg" alt="Paisu Pok Lake, Banggai" class="w-full h-full object-cover object-center scale-[1.03]" />
+      <div class="absolute inset-0 bg-black/25"></div>
+      <div class="absolute inset-0 bg-gradient-to-t from-black/82 via-black/35 to-black/25"></div>
+      <div class="absolute inset-x-0 bottom-0 h-[45%] bg-gradient-to-t from-[#f7f7f5] via-[#f7f7f5]/35 to-transparent"></div>
     </div>
     <div class="relative z-10 w-full max-w-7xl mx-auto px-6 sm:px-10 lg:px-12 pb-16 md:pb-24 pt-40">
       <div class="max-w-4xl">
-        <p class="text-white/80 text-xs md:text-sm font-semibold tracking-[0.28em] uppercase mb-6">{t('hero.welcome')}</p>
-        <h1 class="font-serif text-white text-5xl sm:text-6xl md:text-8xl lg:text-[7.5rem] leading-[0.92] tracking-[-0.045em] font-medium mb-8">
-          {t('hero.title.1')}<br/><span class="text-white/80">{t('hero.title.2')}</span>
+        <p class="text-white/85 text-xs md:text-sm font-semibold tracking-[0.28em] uppercase mb-6">{t('hero.welcome')}</p>
+        <h1 class="font-serif text-white text-5xl sm:text-6xl md:text-8xl lg:text-[7.5rem] leading-[0.92] tracking-[-0.045em] font-medium mb-8 drop-shadow-[0_2px_18px_rgba(0,0,0,0.28)]">
+          {t('hero.title.1')}<br/><span class="text-white/90">{t('hero.title.2')}</span>
         </h1>
-        <p class="text-white/85 text-base md:text-xl leading-relaxed max-w-2xl mb-10">{t('hero.desc')}</p>
+        <p class="text-white/90 text-base md:text-xl leading-relaxed max-w-2xl mb-10 drop-shadow-[0_1px_10px_rgba(0,0,0,0.3)]">{t('hero.desc')}</p>
         <div class="flex flex-wrap gap-3">
           <a href={`/${lang}/destinations/`} class="inline-flex items-center justify-center rounded-full bg-white text-ocean-900 px-7 py-3.5 text-sm font-semibold hover:bg-white/90 transition-all hover:-translate-y-0.5">{t('btn.explore')} <span class="ml-2">→</span></a>
-          <a href={`/${lang}/packages/`} class="inline-flex items-center justify-center rounded-full bg-white/10 backdrop-blur-xl border border-white/25 text-white px-7 py-3.5 text-sm font-semibold hover:bg-white/20 transition-all">{t('btn.view_packages')}</a>
+          <a href={`/${lang}/packages/`} class="inline-flex items-center justify-center rounded-full bg-white/10 backdrop-blur-xl border border-white/30 text-white px-7 py-3.5 text-sm font-semibold hover:bg-white/20 transition-all">{t('btn.view_packages')}</a>
         </div>
       </div>
     </div>
-    <div class="absolute bottom-7 right-8 md:right-12 z-10 text-white/60 text-[10px] tracking-[0.25em] uppercase hidden md:block">Banggai · Indonesia</div>
+    <div class="absolute bottom-7 right-8 md:right-12 z-10 text-white/65 text-[10px] tracking-[0.25em] uppercase hidden md:block">Banggai · Indonesia</div>
   </section>
 
   <section class="bg-[#f7f7f5] py-24 md:py-36">
@@ -76,13 +77,17 @@ const latestBlogs = allBlogs.filter(b => b.id.startsWith(`${lang}/`)).sort((a,b)
   <WhatsAppButton />
 
   <script is:inline>
+    const hero = document.getElementById('hero');
     const heroMedia = document.getElementById('hero-media');
-    if (heroMedia) {
+    if (hero && heroMedia) {
       let ticking = false;
       const updateHeroFade = () => {
-        const progress = Math.min(window.scrollY / (window.innerHeight * 0.7), 1);
-        heroMedia.style.opacity = String(1 - progress * 0.72);
-        heroMedia.style.transform = `scale(${1 + progress * 0.025})`;
+        const heroHeight = hero.offsetHeight;
+        const fadeDistance = Math.max(window.innerHeight * 0.95, heroHeight * 0.72);
+        const progress = Math.min(Math.max(window.scrollY / fadeDistance, 0), 1);
+        const eased = progress * progress * (3 - 2 * progress);
+        heroMedia.style.opacity = String(1 - eased * 0.78);
+        heroMedia.style.transform = `scale(${1.03 + eased * 0.035})`;
         ticking = false;
       };
       updateHeroFade();
@@ -92,6 +97,7 @@ const latestBlogs = allBlogs.filter(b => b.id.startsWith(`${lang}/`)).sort((a,b)
           ticking = true;
         }
       }, { passive: true });
+      window.addEventListener('resize', updateHeroFade, { passive: true });
     }
   </script>
 </BaseLayout>
