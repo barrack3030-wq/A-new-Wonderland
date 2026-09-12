@@ -21,9 +21,10 @@ const latestBlogs = allBlogs.filter(b => b.id.startsWith(`${lang}/`)).sort((a,b)
 
 <BaseLayout title="Banggai Wonderland | Discover Hidden Paradise of Banggai">
   <section class="relative min-h-screen flex items-end overflow-hidden bg-ocean-900">
-    <div class="absolute inset-0">
+    <div id="hero-media" class="absolute inset-0 will-change-transform">
       <img src="/images/destinations/paisu-pok-lake-hero.jpg" alt="Paisu Pok Lake, Banggai" class="w-full h-full object-cover object-center scale-[1.02]" />
       <div class="absolute inset-0 bg-gradient-to-t from-black/75 via-black/20 to-black/15"></div>
+      <div class="absolute inset-x-0 bottom-0 h-40 bg-gradient-to-t from-[#f7f7f5] via-[#f7f7f5]/25 to-transparent opacity-90"></div>
     </div>
     <div class="relative z-10 w-full max-w-7xl mx-auto px-6 sm:px-10 lg:px-12 pb-16 md:pb-24 pt-40">
       <div class="max-w-4xl">
@@ -73,4 +74,24 @@ const latestBlogs = allBlogs.filter(b => b.id.startsWith(`${lang}/`)).sort((a,b)
   </section>
 
   <WhatsAppButton />
+
+  <script is:inline>
+    const heroMedia = document.getElementById('hero-media');
+    if (heroMedia) {
+      let ticking = false;
+      const updateHeroFade = () => {
+        const progress = Math.min(window.scrollY / (window.innerHeight * 0.7), 1);
+        heroMedia.style.opacity = String(1 - progress * 0.72);
+        heroMedia.style.transform = `scale(${1 + progress * 0.025})`;
+        ticking = false;
+      };
+      updateHeroFade();
+      window.addEventListener('scroll', () => {
+        if (!ticking) {
+          window.requestAnimationFrame(updateHeroFade);
+          ticking = true;
+        }
+      }, { passive: true });
+    }
+  </script>
 </BaseLayout>
