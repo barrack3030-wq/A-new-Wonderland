@@ -7,114 +7,70 @@ import { languages, useTranslations } from '../../utils/i18n';
 import { getCollection } from 'astro:content';
 
 export async function getStaticPaths() {
-  return Object.keys(languages).map((lang) => ({
-    params: { lang },
-  }));
+  return Object.keys(languages).map((lang) => ({ params: { lang } }));
 }
 
 const { lang } = Astro.params;
 const t = useTranslations(lang as any);
-
-// Fetch featured destinations (hardcoded 4 best spots)
 const featuredSlugs = ['paisu-pok-lake', 'piala-waterfall', 'oyama-beach', 'pulau-dua-balantak'];
 const allDestinations = await getCollection('destinations');
-const featuredDestinations = featuredSlugs
-  .map(slug => allDestinations.find(d => d.slug === `${lang}/${slug}`))
-  .filter(Boolean);
-
-// Fetch latest blog posts (top 3)
+const featuredDestinations = featuredSlugs.map(slug => allDestinations.find(d => d.slug === `${lang}/${slug}`)).filter(Boolean);
 const allBlogs = await getCollection('blog');
-const latestBlogs = allBlogs
-  .filter(b => b.id.startsWith(`${lang}/`))
-  .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf())
-  .slice(0, 3);
+const latestBlogs = allBlogs.filter(b => b.id.startsWith(`${lang}/`)).sort((a,b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()).slice(0,3);
 ---
 
 <BaseLayout title="Banggai Wonderland | Discover Hidden Paradise of Banggai">
-  
-  <!-- Hero Section Localized -->
-  <section class="relative pt-32 pb-20 md:pt-48 md:pb-40 overflow-hidden min-h-[85vh] flex flex-col justify-center items-center">
-    <div class="absolute inset-0 z-0">
-      <img src="/images/destinations/paisu-pok-lake-hero.jpg" alt="Danau Paisu Pok" class="w-full h-full object-cover object-center" />
-      <div class="absolute inset-0 bg-ocean-900/70 backdrop-blur-sm"></div>
-      <div class="absolute inset-0 bg-gradient-to-t from-ocean-900 via-ocean-900/50 to-ocean-900/60"></div>
+  <section class="relative min-h-screen flex items-end overflow-hidden bg-ocean-900">
+    <div class="absolute inset-0">
+      <img src="/images/destinations/paisu-pok-lake-hero.jpg" alt="Paisu Pok Lake, Banggai" class="w-full h-full object-cover object-center scale-[1.02]" />
+      <div class="absolute inset-0 bg-gradient-to-t from-black/75 via-black/20 to-black/15"></div>
     </div>
-        
-    <div class="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-      <span class="inline-block py-1.5 px-5 rounded-full bg-turquoise-500 text-ocean-900 text-sm font-bold tracking-widest mb-6 uppercase shadow-lg">
-        {t('hero.welcome')}
-      </span>
-      <h1 class="text-4xl md:text-6xl lg:text-7xl font-serif font-bold text-white leading-tight mb-6 drop-shadow-2xl">
-        {t('hero.title.1')} <br/><span class="text-turquoise-400 drop-shadow-2xl">{t('hero.title.2')}</span>
-      </h1>
-      <p class="text-lg md:text-xl text-white mb-10 max-w-2xl mx-auto font-sans leading-relaxed drop-shadow-lg font-medium">
-        {t('hero.desc')}
-      </p>
-      <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-6 justify-center">
-        <a href={`/${lang}/destinations/`} class="bg-turquoise-500 text-ocean-900 px-8 py-4 rounded-full font-bold text-base hover:bg-turquoise-400 transition-all duration-300 shadow-lg hover:shadow-turquoise-500/30 hover:-translate-y-1 text-center">
-          {t('btn.explore')}
-        </a>
-        <a href={`/${lang}/packages/`} class="bg-white/10 text-white border border-white/30 px-8 py-4 rounded-full font-bold text-base hover:bg-white/20 transition-all duration-300 backdrop-blur-md hover:-translate-y-1 text-center">
-          {t('btn.view_packages')}
-        </a>
+    <div class="relative z-10 w-full max-w-7xl mx-auto px-6 sm:px-10 lg:px-12 pb-16 md:pb-24 pt-40">
+      <div class="max-w-4xl">
+        <p class="text-white/80 text-xs md:text-sm font-semibold tracking-[0.28em] uppercase mb-6">{t('hero.welcome')}</p>
+        <h1 class="font-serif text-white text-5xl sm:text-6xl md:text-8xl lg:text-[7.5rem] leading-[0.92] tracking-[-0.045em] font-medium mb-8">
+          {t('hero.title.1')}<br/><span class="text-white/80">{t('hero.title.2')}</span>
+        </h1>
+        <p class="text-white/85 text-base md:text-xl leading-relaxed max-w-2xl mb-10">{t('hero.desc')}</p>
+        <div class="flex flex-wrap gap-3">
+          <a href={`/${lang}/destinations/`} class="inline-flex items-center justify-center rounded-full bg-white text-ocean-900 px-7 py-3.5 text-sm font-semibold hover:bg-white/90 transition-all hover:-translate-y-0.5">{t('btn.explore')} <span class="ml-2">→</span></a>
+          <a href={`/${lang}/packages/`} class="inline-flex items-center justify-center rounded-full bg-white/10 backdrop-blur-xl border border-white/25 text-white px-7 py-3.5 text-sm font-semibold hover:bg-white/20 transition-all">{t('btn.view_packages')}</a>
+        </div>
       </div>
+    </div>
+    <div class="absolute bottom-7 right-8 md:right-12 z-10 text-white/60 text-[10px] tracking-[0.25em] uppercase hidden md:block">Banggai · Indonesia</div>
+  </section>
+
+  <section class="bg-[#f7f7f5] py-24 md:py-36">
+    <div class="max-w-7xl mx-auto px-6 sm:px-10 lg:px-12">
+      <div class="max-w-3xl mb-16 md:mb-20">
+        <p class="text-ocean-600 text-xs font-bold tracking-[0.24em] uppercase mb-5">Explore Banggai</p>
+        <h2 class="font-serif text-ocean-900 text-4xl md:text-6xl leading-tight tracking-[-0.035em] font-medium mb-6">Places worth<br class="hidden md:block"/> travelling for.</h2>
+        <p class="text-ocean-600 text-base md:text-lg leading-relaxed max-w-2xl">{t('home.featured.destinations.desc') || 'Discover quiet islands, clear lagoons, hidden waterfalls and untouched coastlines across the Banggai archipelago.'}</p>
+      </div>
+      {featuredDestinations.length > 0 && <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">{featuredDestinations.map(destination => <DestinationCard destination={destination} />)}</div>}
+      <div class="mt-12"><a href={`/${lang}/destinations/`} class="text-ocean-900 text-sm font-semibold border-b border-ocean-900/30 pb-1 hover:border-ocean-900 transition-colors">{t('btn.explore')} <span class="ml-1">→</span></a></div>
     </div>
   </section>
 
-  <!-- Featured Destinations Section -->
-  {featuredDestinations.length > 0 && (
-    <section class="py-20 bg-sand-50">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="text-center mb-16">
-          <h2 class="font-serif text-3xl md:text-5xl font-bold text-ocean-900 mb-4">{t('home.featured.destinations') || 'Featured Destinations'}</h2>
-          <p class="text-lg text-ocean-600 max-w-2xl mx-auto font-medium">
-            {t('home.featured.destinations.desc') || 'Explore the best natural beauties the Banggai archipelago has to offer.'}
-          </p>
-        </div>
-        
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-          {featuredDestinations.map(destination => (
-            <DestinationCard destination={destination} />
-          ))}
-        </div>
-        
-        <div class="mt-12 text-center">
-          <a href={`/${lang}/destinations/`} class="inline-flex items-center text-ocean-800 font-bold hover:text-turquoise-600 transition-colors">
-            {t('btn.explore')}
-            <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
-          </a>
-        </div>
+  <section class="bg-white py-24 md:py-36">
+    <div class="max-w-7xl mx-auto px-6 sm:px-10 lg:px-12">
+      <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-8 mb-16">
+        <div class="max-w-2xl"><p class="text-ocean-600 text-xs font-bold tracking-[0.24em] uppercase mb-5">The Journal</p><h2 class="font-serif text-ocean-900 text-4xl md:text-6xl tracking-[-0.035em] font-medium">Travel deeper.</h2></div>
+        <a href={`/${lang}/blog/`} class="text-ocean-900 text-sm font-semibold border-b border-ocean-900/30 pb-1 self-start md:self-auto">{t('nav.blog')} <span class="ml-1">→</span></a>
       </div>
-    </section>
-  )}
+      {latestBlogs.length > 0 && <div class="grid grid-cols-1 md:grid-cols-3 gap-6">{latestBlogs.map(post => <BlogCard post={post} />)}</div>}
+    </div>
+  </section>
 
-  <!-- Latest Blog Posts Section -->
-  {latestBlogs.length > 0 && (
-    <section class="py-20 bg-white">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="text-center mb-16">
-          <h2 class="font-serif text-3xl md:text-5xl font-bold text-ocean-900 mb-4">{t('home.featured.blog') || 'Travel Stories & Guides'}</h2>
-          <p class="text-lg text-ocean-600 max-w-2xl mx-auto font-medium">
-            {t('home.featured.blog.desc') || 'Discover tips and exciting stories for your next adventure.'}
-          </p>
-        </div>
-        
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {latestBlogs.map(post => (
-            <BlogCard post={post} />
-          ))}
-        </div>
-        
-        <div class="mt-12 text-center">
-          <a href={`/${lang}/blog/`} class="inline-flex items-center text-ocean-800 font-bold hover:text-turquoise-600 transition-colors">
-            {t('nav.blog')}
-            <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
-          </a>
-        </div>
-      </div>
-    </section>
-  )}
+  <section class="bg-ocean-900 text-white py-24 md:py-32">
+    <div class="max-w-5xl mx-auto px-6 text-center">
+      <p class="text-white/55 text-xs font-bold tracking-[0.25em] uppercase mb-6">Banggai Wonderland</p>
+      <h2 class="font-serif text-4xl md:text-7xl leading-tight tracking-[-0.04em] font-medium mb-7">Your next escape<br/>starts here.</h2>
+      <p class="text-white/65 max-w-xl mx-auto leading-relaxed mb-9">Private journeys through the hidden paradise of Banggai, designed around your time, interests and pace.</p>
+      <a href="https://wa.me/6285820830530" target="_blank" rel="noopener noreferrer" class="inline-flex rounded-full bg-white text-ocean-900 px-8 py-4 text-sm font-semibold hover:bg-white/90 transition-all">{t('btn.book')} <span class="ml-2">→</span></a>
+    </div>
+  </section>
 
   <WhatsAppButton />
-
 </BaseLayout>
