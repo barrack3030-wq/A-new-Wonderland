@@ -160,3 +160,8 @@ body:has(#about-slider) main section:has(#about-slider) div[class*="mt-24"][clas
   body:has(#about-slider) main > section:nth-of-type(2) .mt-24 > div[class*="grid"] h3 { min-height:42px !important; padding:9px 15px !important; font-size:.95rem !important; border-radius:999px !important; }
   body:has(#about-slider) main section:has(#about-slider) div[class*="mt-24"][class*="rounded-[2rem]"] { border-radius:1.5rem !important; padding-left:1.25rem !important; padding-right:1.25rem !important; padding-top:3rem !important; padding-bottom:3rem !important; }
 }
+
+/* Homepage desktop-only fix: hide the mobile destination swiper on large screens. */
+@media (min-width:768px) {
+  .mobile-destination-swiper { display:none !important; }
+}
