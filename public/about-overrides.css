@@ -1,0 +1,69 @@
+/* Premium visual treatment for the final About Us welcome panel. */
+body:has(#about-slider) main section:last-of-type {
+  position: relative !important;
+  overflow: hidden !important;
+  isolation: isolate !important;
+  background: #062c3b !important;
+  border: 1px solid rgba(148, 210, 218, 0.18) !important;
+  box-shadow: 0 24px 60px rgba(3, 31, 42, 0.22) !important;
+}
+
+body:has(#about-slider) main section:last-of-type::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -2;
+  background:
+    radial-gradient(circle at 78% 20%, rgba(91, 214, 207, 0.20), transparent 32%),
+    radial-gradient(circle at 12% 90%, rgba(20, 106, 133, 0.30), transparent 38%),
+    linear-gradient(135deg, #062c3b 0%, #0a4051 52%, #062b3a 100%);
+}
+
+body:has(#about-slider) main section:last-of-type::after {
+  content: "";
+  position: absolute;
+  width: 360px;
+  height: 360px;
+  right: -150px;
+  top: -180px;
+  border-radius: 9999px;
+  border: 1px solid rgba(170, 235, 231, 0.14);
+  box-shadow: 0 0 0 55px rgba(170, 235, 231, 0.035), 0 0 0 110px rgba(170, 235, 231, 0.02);
+  z-index: -1;
+}
+
+body:has(#about-slider) main section:last-of-type > div {
+  position: relative;
+  z-index: 2;
+}
+
+body:has(#about-slider) main section:last-of-type p:first-child {
+  color: #9ee7df !important;
+  text-shadow: 0 1px 14px rgba(0, 0, 0, 0.18);
+}
+
+body:has(#about-slider) main section:last-of-type h2 {
+  color: #ffffff !important;
+  text-shadow: 0 3px 18px rgba(0, 0, 0, 0.22);
+  letter-spacing: -0.02em;
+}
+
+body:has(#about-slider) main section:last-of-type p:last-child {
+  color: rgba(239, 250, 250, 0.88) !important;
+  max-width: 760px !important;
+}
+
+@media (max-width: 640px) {
+  body:has(#about-slider) main section:last-of-type {
+    border-radius: 1.5rem !important;
+    margin-left: 0.25rem !important;
+    margin-right: 0.25rem !important;
+  }
+
+  body:has(#about-slider) main section:last-of-type::after {
+    width: 230px;
+    height: 230px;
+    right: -120px;
+    top: -120px;
+  }
+}
