@@ -43,7 +43,7 @@ const allPosts = await getCollection('blog');
 const sameLanguagePosts = allPosts
   .filter(post => post.id !== entry.id && post.slug.startsWith(`${lang}/`))
   .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
-const recommendedPosts = sameLanguagePosts.slice(0, 4);
+const recommendedPosts = sameLanguagePosts.slice(0, 8);
 
 const allDestinations = await getCollection('destinations');
 const languageDestinations = allDestinations.filter(destination => destination.slug.startsWith(`${lang}/`));
@@ -55,7 +55,7 @@ const relatedDestinations = languageDestinations
     return { destination, score };
   })
   .sort((a, b) => b.score - a.score)
-  .slice(0, 3)
+  .slice(0, 8)
   .map(item => item.destination);
 
 const labels = {
@@ -114,7 +114,7 @@ const schema = {
 
         <div class="flex items-center justify-center text-ocean-500 space-x-4 text-sm font-medium">
           <div class="flex items-center">
-            <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7-7h14a7 7 0 017 7z"></path></svg>
+            <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7-7h14a2 2 0 00-2-2V7z"></path></svg>
             {t('blog.by')} {entry.data.author}
           </div>
           <span>•</span>
@@ -159,7 +159,7 @@ const schema = {
               <h2 class="font-serif text-xl font-bold text-ocean-900">{labels.recommended}</h2>
               <span class="h-px flex-1 ml-4 bg-sand-200"></span>
             </div>
-            <div class="space-y-4">
+            <div class="sidebar-scroll sidebar-scroll-light space-y-4 pr-1">
               {recommendedPosts.map(post => {
                 const postSlug = post.slug.replace(`${lang}/`, '');
                 return (
@@ -182,7 +182,7 @@ const schema = {
               <h2 class="font-serif text-xl font-bold text-white">{labels.related}</h2>
               <span class="h-px flex-1 ml-4 bg-white/15"></span>
             </div>
-            <div class="space-y-4">
+            <div class="sidebar-scroll sidebar-scroll-dark space-y-4 pr-1">
               {relatedDestinations.map(destination => {
                 const destinationSlug = destination.slug.replace(`${lang}/`, '');
                 return (
@@ -210,6 +210,55 @@ const schema = {
       </div>
     </div>
   </section>
+
+  <style is:global>
+    .sidebar-scroll {
+      max-height: 420px;
+      overflow-y: auto;
+      overscroll-behavior: contain;
+      scrollbar-width: thin;
+    }
+
+    .sidebar-scroll-light {
+      scrollbar-color: rgba(9, 74, 92, 0.35) transparent;
+    }
+
+    .sidebar-scroll-dark {
+      scrollbar-color: rgba(103, 200, 242, 0.45) transparent;
+    }
+
+    .sidebar-scroll::-webkit-scrollbar {
+      width: 6px;
+    }
+
+    .sidebar-scroll::-webkit-scrollbar-track {
+      background: transparent;
+    }
+
+    .sidebar-scroll-light::-webkit-scrollbar-thumb {
+      background: rgba(9, 74, 92, 0.28);
+      border-radius: 999px;
+    }
+
+    .sidebar-scroll-light::-webkit-scrollbar-thumb:hover {
+      background: rgba(9, 74, 92, 0.45);
+    }
+
+    .sidebar-scroll-dark::-webkit-scrollbar-thumb {
+      background: rgba(103, 200, 242, 0.38);
+      border-radius: 999px;
+    }
+
+    .sidebar-scroll-dark::-webkit-scrollbar-thumb:hover {
+      background: rgba(103, 200, 242, 0.58);
+    }
+
+    @media (max-width: 1023px) {
+      .sidebar-scroll {
+        max-height: 360px;
+      }
+    }
+  </style>
 
   <WhatsAppButton />
 </BaseLayout>
