@@ -60,14 +60,13 @@ const latestBlogs = allBlogs.filter(b => b.id.startsWith(`${lang}/`)).sort((a,b)
       </div>
 
       {featuredDestinations.length > 0 && (
-        <div class="destinations-track px-6 sm:px-10 lg:px-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+        <div class="destinations-track grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
           {featuredDestinations.map(destination => <DestinationCard destination={destination} />)}
         </div>
       )}
 
-      <div class="px-6 sm:px-10 lg:px-12 mt-8 md:mt-12 flex items-center justify-between gap-4">
+      <div class="px-6 sm:px-10 lg:px-12 mt-8 md:mt-12">
         <a href={`/${lang}/destinations/`} class="text-ocean-900 text-sm font-semibold border-b border-ocean-900/30 pb-1 hover:border-ocean-900 transition-colors">{t('btn.explore')} <span class="ml-1">→</span></a>
-        <span class="mobile-swipe-hint text-ocean-500 text-xs font-medium tracking-wide">Swipe →</span>
       </div>
     </div>
   </section>
@@ -109,7 +108,7 @@ const latestBlogs = allBlogs.filter(b => b.id.startsWith(`${lang}/`)).sort((a,b)
       scrollbar-width: none;
     }
 
-    .mobile-swipe-hint {
+    .destinations-track::-webkit-scrollbar {
       display: none;
     }
 
@@ -126,19 +125,15 @@ const latestBlogs = allBlogs.filter(b => b.id.startsWith(`${lang}/`)).sort((a,b)
         scroll-snap-type: x mandatory;
         -webkit-overflow-scrolling: touch;
         touch-action: pan-x;
-        padding-right: 2.5rem;
-        gap: 1rem;
+        gap: 0;
+        padding: 0 6vw;
       }
 
       .destinations-track > * {
-        flex: 0 0 82vw;
+        flex: 0 0 88vw;
         min-width: 0;
-        scroll-snap-align: start;
-      }
-
-      .mobile-swipe-hint {
-        display: inline-flex;
-        align-items: center;
+        scroll-snap-align: center;
+        scroll-snap-stop: always;
       }
     }
   </style>
