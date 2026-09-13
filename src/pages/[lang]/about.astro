@@ -2,10 +2,8 @@
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import Breadcrumb from '../../components/Breadcrumb.astro';
 import WhatsAppButton from '../../components/WhatsAppButton.astro';
-import { languages, useTranslations } from '../../utils/i18n';
+import { languages } from '../../utils/i18n';
 
-// All About Us images are shared by every language version.
-// Upload images to: src/assets/about/
 const aboutImages = Object.entries(
   import.meta.glob('../../assets/about/*', {
     eager: true,
@@ -18,140 +16,183 @@ const aboutImages = Object.entries(
   .map(([, image]) => image as string);
 
 export function getStaticPaths() {
-  return Object.keys(languages).map((lang) => ({
-    params: { lang },
-  }));
+  return Object.keys(languages).map((lang) => ({ params: { lang } }));
 }
 
-const { lang } = Astro.params;
-const t = useTranslations(lang as any);
+const { lang = 'id' } = Astro.params;
 
+const copy = {
+  id: {
+    title: 'Tentang Kami', subtitle: 'Mengenal Banggai Wonderland',
+    storyTitle: 'Temukan sisi Banggai yang jarang dilihat dunia',
+    p1: 'Banggai Wonderland hadir untuk membantu para traveler merasakan salah satu destinasi Indonesia yang paling indah dan masih belum banyak dikenal dengan cara yang lebih personal.',
+    p2: 'Dari perairan biru kehijauan Kepulauan Banggai hingga pantai-pantai tenang, danau tersembunyi, air terjun, desa pesisir, dan tempat-tempat yang berada jauh dari jalur wisata umum, kami percaya pengalaman terbaik sering kali dimulai ketika perjalanan menjadi lebih tidak biasa.',
+    founderTitle: 'Kenali Pemandu Lokal Anda', founderName: 'Aji Zulfikar', founderRole: 'Founder & Local Guide',
+    founder: 'Banggai Wonderland didirikan oleh Aji Zulfikar, pemandu lokal dari Banggai yang berpengalaman mendampingi wisatawan internasional menjelajahi kawasan ini. Pengetahuannya tentang alam, rute, dan kehidupan lokal membantu menciptakan perjalanan yang terasa personal, fleksibel, dan jauh dari pengalaman wisata yang seragam.',
+    founder2: 'Bagi Aji, menjadi guide bukan sekadar mengantar traveler dari satu tempat ke tempat lain. Ini tentang berbagi karakter Banggai, membantu tamu menemukan tempat yang mungkin terlewatkan, dan menciptakan perjalanan yang benar-benar terasa milik mereka.',
+    beyondTitle: 'Travel Beyond the Ordinary',
+    beyond: 'Setiap traveler memiliki cara berbeda dalam menikmati perjalanan. Karena itu, kami merancang private trip yang fleksibel dan dapat disesuaikan dengan minat, waktu, dan ritme perjalanan Anda.',
+    approachTitle: 'Pendekatan Kami',
+    local: 'Pengetahuan Lokal', localText: 'Temukan tempat dan pengalaman yang dikenal melalui pengetahuan lokal, bukan sekadar daftar destinasi.',
+    private: 'Private & Personal', privateText: 'Perjalanan untuk individu, pasangan, keluarga, dan kelompok kecil yang menghargai fleksibilitas.',
+    authentic: 'Pengalaman Autentik', authenticText: 'Banggai bukan hanya tentang pemandangan. Kenali masyarakat, budaya, dan kehidupan lokal di baliknya.',
+    thoughtful: 'Perjalanan yang Dipikirkan dengan Baik', thoughtfulText: 'Kami membantu membuat perjalanan menjelajah Banggai terasa sederhana, nyaman, dan berkesan.',
+    welcomeTitle: 'Selamat Datang di Banggai', welcome: 'Banggai masih relatif belum dikenal dunia — dan justru itulah bagian dari keistimewaannya. Jika Anda mencari destinasi di luar rute Indonesia yang lebih umum, kami mengundang Anda untuk menemukan Banggai bersama orang lokal yang mengenalnya dari dalam.',
+    cta: 'Banggai, experienced locally.'
+  },
+  en: {
+    title: 'About Us', subtitle: 'Get to know Banggai Wonderland',
+    storyTitle: 'Discover the side of Banggai few travelers get to see',
+    p1: 'Banggai Wonderland was created to help travelers experience one of Indonesia’s most beautiful and lesser-known destinations in a more personal way.',
+    p2: 'From the turquoise waters of the Banggai Islands to quiet beaches, hidden lakes, waterfalls, coastal villages, and places far beyond the usual tourist routes, we believe the best experiences often begin where the journey becomes less familiar.',
+    founderTitle: 'Meet Your Local Guide', founderName: 'Aji Zulfikar', founderRole: 'Founder & Local Guide',
+    founder: 'Banggai Wonderland is founded by Aji Zulfikar, a local guide from Banggai with experience accompanying international travelers throughout the region. His knowledge of the landscapes, routes, and local way of life helps create journeys that feel personal, flexible, and far from generic tourism.',
+    founder2: 'For Aji, guiding is about more than taking travelers from one destination to another. It is about sharing the character of Banggai, helping guests discover places they might otherwise miss, and creating a journey that feels truly their own.',
+    beyondTitle: 'Travel Beyond the Ordinary',
+    beyond: 'Every traveler has a different way of experiencing a destination. That is why we design flexible private trips around your interests, time, and pace.',
+    approachTitle: 'Our Approach',
+    local: 'Local Knowledge', localText: 'Discover places and experiences shaped by local knowledge, not simply a list of tourist highlights.',
+    private: 'Private & Personal', privateText: 'Journeys designed for individuals, couples, families, and small private groups who value flexibility.',
+    authentic: 'Authentic Experiences', authenticText: 'Banggai is more than beautiful scenery. Discover the people, culture, and everyday life behind it.',
+    thoughtful: 'Thoughtfully Designed', thoughtfulText: 'We aim to make exploring Banggai simple, comfortable, and memorable from start to finish.',
+    welcomeTitle: 'Welcome to Banggai', welcome: 'Banggai is still relatively unknown to the world — and that is part of what makes it special. If you are looking for somewhere beyond Indonesia’s more familiar destinations, we invite you to discover Banggai with someone who knows it from the inside.',
+    cta: 'Banggai, experienced locally.'
+  },
+  es: {
+    title: 'Sobre Nosotros', subtitle: 'Conozca Banggai Wonderland',
+    storyTitle: 'Descubre el lado de Banggai que pocos viajeros conocen',
+    p1: 'Banggai Wonderland nació para ayudar a los viajeros a descubrir uno de los destinos más bellos y menos conocidos de Indonesia de una forma más personal.',
+    p2: 'Desde las aguas turquesas de las islas Banggai hasta playas tranquilas, lagos escondidos, cascadas y pueblos costeros, creemos que las mejores experiencias comienzan lejos de las rutas habituales.',
+    founderTitle: 'Conoce a tu guía local', founderName: 'Aji Zulfikar', founderRole: 'Fundador y Guía Local',
+    founder: 'Banggai Wonderland fue fundado por Aji Zulfikar, un guía local de Banggai con experiencia acompañando a viajeros internacionales. Su conocimiento de los paisajes, las rutas y la vida local ayuda a crear viajes personales, flexibles y alejados del turismo genérico.',
+    founder2: 'Para Aji, ser guía es mucho más que llevar a los viajeros de un lugar a otro. Es compartir el carácter de Banggai y ayudar a descubrir lugares que de otro modo podrían pasar desapercibidos.',
+    beyondTitle: 'Viaja Más Allá de lo Habitual',
+    beyond: 'Cada viajero tiene una forma diferente de disfrutar un destino. Por eso diseñamos viajes privados y flexibles según tus intereses, tiempo y ritmo.',
+    approachTitle: 'Nuestro Enfoque', local: 'Conocimiento Local', localText: 'Descubre lugares y experiencias basados en el conocimiento local.', private: 'Privado y Personal', privateText: 'Viajes para personas, parejas, familias y pequeños grupos que valoran la flexibilidad.', authentic: 'Experiencias Auténticas', authenticText: 'Conoce a las personas, la cultura y la vida local detrás de los paisajes.', thoughtful: 'Viajes Bien Diseñados', thoughtfulText: 'Hacemos que explorar Banggai sea sencillo, cómodo y memorable.',
+    welcomeTitle: 'Bienvenido a Banggai', welcome: 'Banggai todavía es relativamente desconocido para el mundo, y esa es parte de su encanto. Si buscas un destino más allá de las rutas habituales de Indonesia, descubre Banggai con alguien que lo conoce desde dentro.', cta: 'Banggai, vivido localmente.'
+  },
+  fr: {
+    title: 'À Propos', subtitle: 'Découvrez Banggai Wonderland',
+    storyTitle: 'Découvrez le Banggai que peu de voyageurs connaissent',
+    p1: 'Banggai Wonderland a été créé pour permettre aux voyageurs de découvrir l’une des régions les plus belles et les moins connues d’Indonésie d’une manière plus personnelle.',
+    p2: 'Des eaux turquoise des îles Banggai aux plages paisibles, lacs cachés, cascades et villages côtiers, nous pensons que les plus belles expériences commencent souvent loin des itinéraires classiques.',
+    founderTitle: 'Rencontrez votre guide local', founderName: 'Aji Zulfikar', founderRole: 'Fondateur & Guide Local',
+    founder: 'Banggai Wonderland a été fondé par Aji Zulfikar, guide local de Banggai ayant l’expérience d’accompagner des voyageurs internationaux. Sa connaissance des paysages, des itinéraires et de la vie locale permet de créer des voyages personnels, flexibles et loin du tourisme standardisé.',
+    founder2: 'Pour Aji, être guide signifie bien plus que conduire les voyageurs d’un endroit à l’autre. Il s’agit de partager le caractère de Banggai et de faire découvrir des lieux que l’on pourrait autrement manquer.',
+    beyondTitle: 'Voyagez Autrement', beyond: 'Chaque voyageur découvre une destination à sa manière. Nous créons donc des voyages privés et flexibles selon vos envies, votre temps et votre rythme.',
+    approachTitle: 'Notre Approche', local: 'Connaissance Locale', localText: 'Découvrez des lieux et expériences issus d’une véritable connaissance locale.', private: 'Privé & Personnel', privateText: 'Des voyages pour particuliers, couples, familles et petits groupes qui apprécient la flexibilité.', authentic: 'Expériences Authentiques', authenticText: 'Banggai est plus que ses paysages. Découvrez ses habitants, sa culture et sa vie quotidienne.', thoughtful: 'Voyages Soigneusement Conçus', thoughtfulText: 'Nous voulons rendre votre découverte de Banggai simple, confortable et mémorable.',
+    welcomeTitle: 'Bienvenue à Banggai', welcome: 'Banggai reste encore relativement méconnu du monde — et c’est ce qui fait une partie de son charme. Si vous cherchez une destination loin des itinéraires les plus connus d’Indonésie, découvrez Banggai avec quelqu’un qui le connaît de l’intérieur.', cta: 'Banggai, vécu localement.'
+  },
+  zh: {
+    title: '关于我们', subtitle: '认识 Banggai Wonderland',
+    storyTitle: '发现少有人了解的 Banggai',
+    p1: 'Banggai Wonderland 旨在让旅行者以更私人的方式探索印度尼西亚一个美丽而鲜为人知的目的地。',
+    p2: '从 Banggai 群岛的碧绿海水，到宁静海滩、隐藏湖泊、瀑布和海岸村落，我们相信，真正难忘的体验往往发生在远离常规旅游路线的地方。',
+    founderTitle: '认识您的当地向导', founderName: 'Aji Zulfikar', founderRole: '创始人兼当地向导',
+    founder: 'Banggai Wonderland 由当地向导 Aji Zulfikar 创立。他拥有陪同国际旅行者探索 Banggai 地区的经验，对当地自然景观、路线和生活方式有深入了解，能够为旅行者打造更私人、更灵活的旅程。',
+    founder2: '对 Aji 来说，向导不仅是带游客从一个目的地前往另一个目的地，更是分享 Banggai 的独特魅力，并带您发现可能被常规行程忽略的地方。',
+    beyondTitle: '探索不一样的 Banggai', beyond: '每位旅行者都有自己的旅行方式。因此，我们根据您的兴趣、时间和节奏设计灵活的私人旅程。',
+    approachTitle: '我们的理念', local: '当地知识', localText: '通过真正的当地知识发现特别的地点和体验。', private: '私人且个性化', privateText: '适合个人、情侣、家庭和重视灵活性的小型私人团队。', authentic: '真实体验', authenticText: 'Banggai 不只是美丽的风景，更有当地人、文化和日常生活。', thoughtful: '精心设计', thoughtfulText: '让探索 Banggai 的过程简单、舒适并值得回忆。',
+    welcomeTitle: '欢迎来到 Banggai', welcome: 'Banggai 仍然是一个相对鲜为人知的地方，而这正是它特别的原因。如果您想寻找不同于印度尼西亚热门目的地的旅行体验，欢迎与真正了解 Banggai 的当地人一起探索这里。', cta: '在当地人的视角下体验 Banggai。'
+  }
+};
+
+const t = copy[lang as keyof typeof copy] ?? copy.en;
 const breadcrumbItems = [
-  { name: 'Home', url: `/${lang}/` },
-  { name: t('nav.about'), url: `/${lang}/about/` }
+  { name: lang === 'id' ? 'Beranda' : 'Home', url: `/${lang}/` },
+  { name: t.title, url: `/${lang}/about/` }
 ];
 ---
 
-<BaseLayout 
-  title={`${t('nav.about')} | Banggai Wonderland`}
-  description={t('about.story.p1')}
->
-  <!-- Hero Section -->
-  <section class="relative h-[40vh] min-h-[300px] flex items-center justify-center pt-20">
-    <div class="absolute inset-0 z-0">
-      <div class="absolute inset-0 bg-gradient-to-r from-ocean-800 to-ocean-600 opacity-90"></div>
-    </div>
-    
-    <div class="relative z-10 text-center px-4">
-      <h1 class="text-4xl md:text-5xl lg:text-6xl font-serif font-bold text-white mb-4">
-        {t('about.title')}
-      </h1>
-      <p class="text-ocean-100 text-lg md:text-xl font-medium tracking-wide">
-        {t('about.subtitle')}
-      </p>
+<BaseLayout title={`${t.title} | Banggai Wonderland`} description={t.p1}>
+  <section class="relative min-h-[42vh] flex items-center justify-center pt-20 overflow-hidden bg-ocean-950">
+    <div class="absolute inset-0 bg-gradient-to-br from-ocean-950 via-ocean-800 to-ocean-600"></div>
+    <div class="absolute inset-0 bg-[radial-gradient(circle_at_70%_30%,rgba(45,212,191,0.14),transparent_45%)]"></div>
+    <div class="relative z-10 max-w-4xl mx-auto text-center px-5 py-20">
+      <p class="text-turquoise-300 uppercase tracking-[0.28em] text-xs md:text-sm font-semibold mb-5">Banggai Wonderland</p>
+      <h1 class="text-4xl md:text-6xl lg:text-7xl font-serif font-bold text-white mb-5">{t.title}</h1>
+      <p class="text-ocean-100 text-lg md:text-xl tracking-wide">{t.subtitle}</p>
     </div>
   </section>
 
-  <!-- Content Section -->
-  <section class="py-16 md:py-24 bg-sand-50 relative">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      
-      <div class="mb-12">
-        <Breadcrumb items={breadcrumbItems} />
-      </div>
-      
-      <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-        <!-- Story -->
-        <div class="order-2 lg:order-1">
-          <h2 class="font-serif text-3xl md:text-4xl font-bold text-ocean-900 mb-6">
-            {t('about.story.title')}
-          </h2>
-          <div class="space-y-6 text-ocean-700 text-lg leading-relaxed">
-            <p>{t('about.story.p1')}</p>
-            <p>{t('about.story.p2')}</p>
-          </div>
-          
-          <div class="mt-12">
-            <h3 class="font-serif text-2xl font-bold text-ocean-900 mb-6">
-              {t('about.why.title')}
-            </h3>
-            <ul class="space-y-4">
-              <li class="flex items-start">
-                <div class="bg-turquoise-100 p-1.5 rounded-full mr-4 mt-1">
-                  <svg class="w-5 h-5 text-turquoise-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path></svg>
-                </div>
-                <span class="text-ocean-800 font-medium text-lg">{t('about.why.1')}</span>
-              </li>
-              <li class="flex items-start">
-                <div class="bg-turquoise-100 p-1.5 rounded-full mr-4 mt-1">
-                  <svg class="w-5 h-5 text-turquoise-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path></svg>
-                </div>
-                <span class="text-ocean-800 font-medium text-lg">{t('about.why.2')}</span>
-              </li>
-              <li class="flex items-start">
-                <div class="bg-turquoise-100 p-1.5 rounded-full mr-4 mt-1">
-                  <svg class="w-5 h-5 text-turquoise-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path></svg>
-                </div>
-                <span class="text-ocean-800 font-medium text-lg">{t('about.why.3')}</span>
-              </li>
-            </ul>
+  <section class="py-16 md:py-24 bg-sand-50">
+    <div class="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8">
+      <div class="mb-12"><Breadcrumb items={breadcrumbItems} /></div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-14 lg:gap-20 items-center">
+        <div>
+          <p class="text-turquoise-600 uppercase tracking-[0.2em] text-xs font-bold mb-4">Banggai Wonderland</p>
+          <h2 class="font-serif text-3xl md:text-4xl lg:text-5xl font-bold text-ocean-950 leading-tight mb-7">{t.storyTitle}</h2>
+          <div class="space-y-5 text-ocean-700 text-lg leading-relaxed">
+            <p>{t.p1}</p><p>{t.p2}</p>
           </div>
         </div>
-        
-        <!-- About Us Image Slider -->
-        <div class="order-1 lg:order-2 relative">
-          <div class="absolute inset-0 bg-ocean-100 rounded-[2rem] transform rotate-3"></div>
-          <div class="relative rounded-[2rem] shadow-xl overflow-hidden border border-sand-200 bg-white transform -rotate-2 hover:rotate-0 transition-transform duration-500">
+
+        <div class="relative">
+          <div class="absolute -inset-3 rounded-[2rem] border border-turquoise-200 rotate-2"></div>
+          <div class="relative rounded-[1.75rem] overflow-hidden shadow-2xl bg-ocean-100 border border-white/70">
             {aboutImages.length > 0 ? (
               <div id="about-slider" class="relative aspect-[4/3] w-full bg-ocean-50 group">
                 {aboutImages.map((image, index) => (
-                  <div
-                    class={`about-slide absolute inset-0 transition-opacity duration-700 ${index === 0 ? 'opacity-100 z-10' : 'opacity-0 z-0'}`}
-                    data-slide={index}
-                  >
-                    <img
-                      src={image}
-                      alt={`${t('about.title')} - Banggai Wonderland ${index + 1}`}
-                      class="w-full h-full object-cover"
-                      loading={index === 0 ? 'eager' : 'lazy'}
-                      decoding="async"
-                      data-image-index={index}
-                    />
+                  <div class={`about-slide absolute inset-0 transition-opacity duration-700 ${index === 0 ? 'opacity-100 z-10' : 'opacity-0 z-0'}`} data-slide={index}>
+                    <img src={image} alt={`${t.title} - Banggai Wonderland ${index + 1}`} class="w-full h-full object-cover" loading={index === 0 ? 'eager' : 'lazy'} decoding="async" />
                   </div>
                 ))}
-
                 {aboutImages.length > 1 && (
                   <>
-                    <button type="button" class="about-prev absolute left-4 top-1/2 -translate-y-1/2 z-20 w-11 h-11 rounded-full bg-black/35 hover:bg-black/55 text-white backdrop-blur-sm flex items-center justify-center transition" aria-label="Previous image">
-                      <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
-                    </button>
-                    <button type="button" class="about-next absolute right-4 top-1/2 -translate-y-1/2 z-20 w-11 h-11 rounded-full bg-black/35 hover:bg-black/55 text-white backdrop-blur-sm flex items-center justify-center transition" aria-label="Next image">
-                      <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
-                    </button>
-
-                    <div class="absolute bottom-4 left-1/2 -translate-x-1/2 z-20 flex gap-2" aria-label="Image navigation">
-                      {aboutImages.map((_, index) => (
-                        <button
-                          type="button"
-                          class={`about-dot w-2.5 h-2.5 rounded-full transition-all ${index === 0 ? 'bg-white scale-110' : 'bg-white/50 hover:bg-white/80'}`}
-                          data-dot={index}
-                          aria-label={`Go to image ${index + 1}`}
-                        ></button>
-                      ))}
+                    <button type="button" class="about-prev absolute left-4 top-1/2 -translate-y-1/2 z-20 w-11 h-11 rounded-full bg-black/35 hover:bg-black/55 text-white backdrop-blur-sm flex items-center justify-center transition" aria-label="Previous image">‹</button>
+                    <button type="button" class="about-next absolute right-4 top-1/2 -translate-y-1/2 z-20 w-11 h-11 rounded-full bg-black/35 hover:bg-black/55 text-white backdrop-blur-sm flex items-center justify-center transition" aria-label="Next image">›</button>
+                    <div class="absolute bottom-4 left-1/2 -translate-x-1/2 z-20 flex gap-2">
+                      {aboutImages.map((_, index) => <button type="button" class={`about-dot w-2.5 h-2.5 rounded-full transition-all ${index === 0 ? 'bg-white scale-110' : 'bg-white/50'}`} data-dot={index} aria-label={`Go to image ${index + 1}`}></button>)}
                     </div>
                   </>
                 )}
               </div>
             ) : (
-              <div class="aspect-[4/3] w-full bg-ocean-50 flex items-center justify-center text-ocean-300 font-medium flex-col p-8 text-center">
-                <svg class="w-16 h-16 mb-4 text-turquoise-200" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
-                <span>Upload About Us images to <code>src/assets/about/</code></span>
-              </div>
+              <div class="aspect-[4/3] flex items-center justify-center text-ocean-400 p-8 text-center">Upload About Us images to <code class="ml-1">src/assets/about/</code></div>
             )}
           </div>
         </div>
       </div>
-      
+
+      <div class="mt-24 grid grid-cols-1 lg:grid-cols-[0.8fr_1.2fr] gap-12 items-start">
+        <div class="bg-ocean-950 rounded-[2rem] p-8 md:p-10 text-white shadow-xl">
+          <p class="text-turquoise-300 uppercase tracking-[0.2em] text-xs font-bold mb-4">{t.founderTitle}</p>
+          <h2 class="font-serif text-3xl md:text-4xl font-bold mb-2">{t.founderName}</h2>
+          <p class="text-ocean-200 font-medium">{t.founderRole}</p>
+          <div class="w-14 h-px bg-turquoise-400 my-7"></div>
+          <p class="text-ocean-100 leading-relaxed">{t.founder}</p>
+        </div>
+        <div class="lg:pt-5">
+          <h2 class="font-serif text-3xl md:text-4xl font-bold text-ocean-950 mb-6">{t.beyondTitle}</h2>
+          <p class="text-ocean-700 text-lg leading-relaxed mb-6">{t.beyond}</p>
+          <p class="text-ocean-700 text-lg leading-relaxed">{t.founder2}</p>
+        </div>
+      </div>
+
+      <div class="mt-24">
+        <div class="max-w-2xl mb-12">
+          <p class="text-turquoise-600 uppercase tracking-[0.2em] text-xs font-bold mb-4">Banggai Wonderland</p>
+          <h2 class="font-serif text-3xl md:text-4xl font-bold text-ocean-950">{t.approachTitle}</h2>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+          {[
+            [t.local, t.localText], [t.private, t.privateText], [t.authentic, t.authenticText], [t.thoughtful, t.thoughtfulText]
+          ].map(([title, text]) => (
+            <div class="rounded-2xl bg-white border border-sand-200 p-7 shadow-sm hover:shadow-md transition-shadow">
+              <div class="w-10 h-10 rounded-full bg-turquoise-50 flex items-center justify-center mb-5 text-turquoise-700 font-serif font-bold">✓</div>
+              <h3 class="font-serif text-xl font-bold text-ocean-950 mb-2">{title}</h3>
+              <p class="text-ocean-600 leading-relaxed">{text}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      <div class="mt-24 rounded-[2rem] bg-gradient-to-br from-ocean-900 to-ocean-950 px-7 py-14 md:px-14 md:py-20 text-center shadow-xl">
+        <p class="text-turquoise-300 uppercase tracking-[0.25em] text-xs font-bold mb-5">{t.welcomeTitle}</p>
+        <h2 class="font-serif text-3xl md:text-5xl font-bold text-white mb-6">{t.cta}</h2>
+        <p class="max-w-3xl mx-auto text-ocean-100 text-lg leading-relaxed">{t.welcome}</p>
+      </div>
     </div>
   </section>
 
@@ -162,101 +203,21 @@ const breadcrumbItems = [
   <script is:inline>
     const slider = document.getElementById('about-slider');
     if (slider) {
-      const allSlides = Array.from(slider.querySelectorAll('.about-slide'));
-      const allDots = Array.from(slider.querySelectorAll('.about-dot'));
-      const prev = slider.querySelector('.about-prev');
-      const next = slider.querySelector('.about-next');
-      const images = Array.from(slider.querySelectorAll('img'));
-      let slides = allSlides;
-      let dots = allDots;
       let current = 0;
-      let timer;
-
-      const hideBrokenImage = (img) => {
-        const slide = img.closest('.about-slide');
-        if (!slide) return;
-
-        const originalIndex = Number(slide.dataset.slide);
-        img.style.display = 'none';
-        img.alt = '';
-        slide.classList.remove('opacity-100', 'opacity-0', 'z-10', 'z-0');
-        slide.style.display = 'none';
-
-        const dot = slider.querySelector(`.about-dot[data-dot="${originalIndex}"]`);
-        dot?.remove();
-
-        slides = slides.filter((item) => item !== slide);
-        dots = Array.from(slider.querySelectorAll('.about-dot'));
-
-        if (slides.length === 0) {
-          if (prev) prev.style.display = 'none';
-          if (next) next.style.display = 'none';
-          const navigation = slider.querySelector('[aria-label="Image navigation"]');
-          if (navigation) navigation.style.display = 'none';
-          return;
-        }
-
-        if (current >= slides.length) current = 0;
-        showSlide(current);
-        updateControls();
-      };
-
-      const updateControls = () => {
-        const multiple = slides.length > 1;
-        if (prev) prev.style.display = multiple ? '' : 'none';
-        if (next) next.style.display = multiple ? '' : 'none';
-        const navigation = slider.querySelector('[aria-label="Image navigation"]');
-        if (navigation) navigation.style.display = multiple ? '' : 'none';
-      };
-
-      const showSlide = (index) => {
-        if (!slides.length) return;
+      const slides = Array.from(slider.querySelectorAll('.about-slide'));
+      const dots = Array.from(slider.querySelectorAll('.about-dot'));
+      const show = (index) => {
         current = (index + slides.length) % slides.length;
-        slides.forEach((slide, i) => {
-          slide.classList.toggle('opacity-100', i === current);
-          slide.classList.toggle('opacity-0', i !== current);
-          slide.classList.toggle('z-10', i === current);
-          slide.classList.toggle('z-0', i !== current);
-        });
-        dots.forEach((dot, i) => {
-          dot.classList.toggle('bg-white', i === current);
-          dot.classList.toggle('scale-110', i === current);
-          dot.classList.toggle('bg-white/50', i !== current);
-        });
+        slides.forEach((s, i) => { s.classList.toggle('opacity-100', i === current); s.classList.toggle('opacity-0', i !== current); s.classList.toggle('z-10', i === current); s.classList.toggle('z-0', i !== current); });
+        dots.forEach((d, i) => { d.classList.toggle('bg-white', i === current); d.classList.toggle('scale-110', i === current); d.classList.toggle('bg-white/50', i !== current); });
       };
-
-      const restart = () => {
-        clearInterval(timer);
-        if (slides.length > 1) {
-          timer = setInterval(() => showSlide(current + 1), 5000);
-        }
-      };
-
-      images.forEach((img) => {
-        img.addEventListener('error', () => hideBrokenImage(img), { once: true });
-      });
-
-      allDots.forEach((dot) => {
-        dot.addEventListener('click', () => {
-          const target = slides.findIndex((slide) => Number(slide.dataset.slide) === Number(dot.dataset.dot));
-          if (target >= 0) {
-            showSlide(target);
-            restart();
-          }
-        });
-      });
-
-      prev?.addEventListener('click', () => { showSlide(current - 1); restart(); });
-      next?.addEventListener('click', () => { showSlide(current + 1); restart(); });
+      let timer = setInterval(() => show(current + 1), 5000);
+      const restart = () => { clearInterval(timer); timer = setInterval(() => show(current + 1), 5000); };
+      slider.querySelector('.about-prev')?.addEventListener('click', () => { show(current - 1); restart(); });
+      slider.querySelector('.about-next')?.addEventListener('click', () => { show(current + 1); restart(); });
+      dots.forEach((d, i) => d.addEventListener('click', () => { show(i); restart(); }));
       slider.addEventListener('mouseenter', () => clearInterval(timer));
       slider.addEventListener('mouseleave', restart);
-
-      updateControls();
-      images.forEach((img) => {
-        if (img.complete && img.naturalWidth === 0) hideBrokenImage(img);
-      });
-      showSlide(0);
-      restart();
     }
   </script>
 )}
