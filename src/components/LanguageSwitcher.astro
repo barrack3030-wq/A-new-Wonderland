@@ -4,17 +4,18 @@ import { getLangFromUrl } from '../utils/i18n';
 
 interface Props {
   mobile?: boolean;
+  mobileHeader?: boolean;
 }
 
-const { mobile = false } = Astro.props;
+const { mobile = false, mobileHeader = false } = Astro.props;
 const currentLang = getLangFromUrl(Astro.url);
 
 const languages = [
-  { code: 'id', label: 'ID' },
-  { code: 'en', label: 'EN' },
-  { code: 'es', label: 'ES' },
-  { code: 'fr', label: 'FR' },
-  { code: 'zh', label: '中文' }
+  { code: 'id', label: 'ID', name: 'Indonesia' },
+  { code: 'en', label: 'EN', name: 'English' },
+  { code: 'es', label: 'ES', name: 'Español' },
+  { code: 'fr', label: 'FR', name: 'Français' },
+  { code: 'zh', label: '中文', name: '中文' }
 ];
 
 const blogPosts = await getCollection('blog');
@@ -60,7 +61,6 @@ const getFallbackTranslation = (newLang: string) => {
     const tags = (candidate.data.tags || []).map((tag) => normalize(tag));
     let score = 0;
 
-    // Strong destination anchors shared across translations.
     for (const word of currentWords) {
       if (title.includes(word)) score += 6;
       if (description.includes(word)) score += 2;
@@ -101,15 +101,12 @@ const getPath = (newLang: string) => {
       }
     }
 
-    // Legacy articles created before translationKey: identify the matching
-    // translation by date + destination/topic words instead of guessing a slug.
     const fallbackPost = getFallbackTranslation(newLang);
     if (fallbackPost) {
       const translatedSlug = fallbackPost.slug.split('/').slice(1).join('/');
       return `/${newLang}/blog/${translatedSlug}/`;
     }
 
-    // Never create a guessed 404 URL.
     return `/${newLang}/blog/`;
   }
 
@@ -126,13 +123,32 @@ const getPath = (newLang: string) => {
 };
 ---
 
-{mobile ? (
+{mobileHeader ? (
+  <details class="relative lg:hidden">
+    <summary class="list-none cursor-pointer select-none flex items-center justify-center gap-1.5 min-w-[66px] h-10 px-3 rounded-full border border-ocean-900/15 bg-white/70 text-ocean-900 text-sm font-bold tracking-wide shadow-sm [&::-webkit-details-marker]:hidden">
+      <span>{languages.find((language) => language.code === currentLang)?.label || 'EN'}</span>
+      <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="m6 9 6 6 6-6" /></svg>
+    </summary>
+    <div class="absolute right-0 top-12 w-36 rounded-2xl border border-sand-200 bg-white/98 p-2 shadow-xl backdrop-blur-xl">
+      {languages.map((language) => (
+        <a
+          href={getPath(language.code)}
+          class={`flex items-center justify-between rounded-xl px-3 py-2.5 text-sm font-semibold transition-colors ${currentLang === language.code ? 'bg-ocean-50 text-ocean-900' : 'text-ocean-700 hover:bg-sand-100 hover:text-ocean-900'}`}
+          aria-label={`Change language to ${language.name}`}
+        >
+          <span>{language.name}</span>
+          <span class="text-xs opacity-60">{language.label}</span>
+        </a>
+      ))}
+    </div>
+  </details>
+) : mobile ? (
   <div class="flex items-center space-x-2 flex-wrap gap-y-2">
     {languages.map((lang) => (
       <a
         href={getPath(lang.code)}
         class={`px-2 py-1 text-sm font-medium rounded transition-colors ${currentLang === lang.code ? 'bg-sand-200 text-ocean-900' : 'text-ocean-600 hover:bg-sand-100 hover:text-ocean-900'}`}
-        aria-label={`Change language to ${lang.label}`}
+        aria-label={`Change language to ${lang.name}`}
       >
         {lang.label}
       </a>
@@ -144,7 +160,7 @@ const getPath = (newLang: string) => {
       <a
         href={getPath(lang.code)}
         class={`px-2 py-1 text-xs font-bold rounded transition-colors ${currentLang === lang.code ? 'bg-ocean-50 text-turquoise-600' : 'text-ocean-400 hover:text-ocean-900'}`}
-        aria-label={`Change language to ${lang.label}`}
+        aria-label={`Change language to ${lang.name}`}
       >
         {lang.label}
       </a>
