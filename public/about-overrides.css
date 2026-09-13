@@ -180,3 +180,16 @@ body:has(#about-slider) main section:has(#about-slider) div[class*="mt-24"][clas
     margin-bottom: 2rem !important;
   }
 }
+
+/* Mobile homepage package images: use the real package artwork without changing layout or swipe behavior. */
+@media (max-width:767px) {
+  .mobile-journey-card:nth-child(1) img {
+    content: url('/images/asasa.jpg');
+  }
+  .mobile-journey-card:nth-child(2) img {
+    content: url('/images/Gemini_Generated_Image_gw3tx9gw3tx9gw3t.jpg');
+  }
+  .mobile-journey-card:nth-child(3) img {
+    content: url('/images/Gemini_Generated_Image_xxtet3xxtet3xxte (4).jpg');
+  }
+}
