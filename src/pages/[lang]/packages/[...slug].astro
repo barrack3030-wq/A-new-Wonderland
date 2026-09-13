@@ -29,6 +29,19 @@ const breadcrumbItems = [
   { name: entry.data.title, url: `/${lang}/packages/${Astro.params.slug}/` }
 ];
 
+const activityList = entry.data.activities?.filter(Boolean) ?? [];
+const includedList = entry.data.included?.filter(Boolean) ?? [];
+const includedHighlights = includedList
+  .filter(item => /transport|ferry|kapal|boat|perahu|accommodation|akomodasi|meals|makan|guide|pemandu/i.test(item))
+  .slice(0, 4);
+const activityLabel = ({
+  id: 'Aktivitas',
+  en: 'Activities',
+  es: 'Actividades',
+  fr: 'Activités',
+  zh: '活动'
+} as Record<string, string>)[lang as string] ?? 'Activities';
+
 const schema = {
   "@context": "https://schema.org",
   "@type": "TouristTrip",
@@ -72,7 +85,7 @@ const schema = {
       <div class="mt-4 max-w-4xl">
         <div class="flex flex-wrap gap-3 mb-4">
           <span class="inline-flex items-center bg-turquoise-500 text-ocean-900 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wide">
-            <svg class="w-4 h-4 mr-1.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+            <svg class="w-4 h-4 mr-1.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0z"></path></svg>
             {entry.data.duration}
           </span>
         </div>
@@ -80,8 +93,37 @@ const schema = {
           {entry.data.title}
         </h1>
         <div class="flex items-center text-ocean-100 text-sm md:text-base bg-ocean-900/40 backdrop-blur-md self-start inline-flex px-4 py-2 rounded-full border border-ocean-700">
-          <svg class="w-5 h-5 mr-2 text-turquoise-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+          <svg class="w-5 h-5 mr-2 text-turquoise-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 9 9 0 01-18 0z"></path></svg>
           {entry.data.destination}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-10 md:py-12 bg-sand-50 border-b border-sand-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+        <div class="bg-white rounded-2xl border border-sand-200 p-5 shadow-sm">
+          <p class="text-[11px] uppercase tracking-[0.18em] font-bold text-turquoise-600 mb-2">{t('tour.duration')}</p>
+          <p class="font-serif text-xl font-semibold text-ocean-900">{entry.data.duration}</p>
+        </div>
+        <div class="bg-white rounded-2xl border border-sand-200 p-5 shadow-sm">
+          <p class="text-[11px] uppercase tracking-[0.18em] font-bold text-turquoise-600 mb-2">{t('tour.destinations')}</p>
+          <p class="font-serif text-xl font-semibold text-ocean-900 leading-snug">{entry.data.destination}</p>
+        </div>
+        <div class="bg-white rounded-2xl border border-sand-200 p-5 shadow-sm">
+          <p class="text-[11px] uppercase tracking-[0.18em] font-bold text-turquoise-600 mb-2">{activityLabel}</p>
+          <p class="text-sm text-ocean-700 leading-relaxed">
+            {activityList.length > 0 ? activityList.join(' · ') : entry.data.description}
+          </p>
+        </div>
+        <div class="bg-ocean-900 rounded-2xl p-5 shadow-sm">
+          <p class="text-[11px] uppercase tracking-[0.18em] font-bold text-turquoise-300 mb-2">{t('tour.included')}</p>
+          <div class="flex flex-wrap gap-2">
+            {(includedHighlights.length > 0 ? includedHighlights : includedList.slice(0, 4)).map(item => (
+              <span class="inline-flex rounded-full bg-white/10 border border-white/15 px-2.5 py-1 text-xs text-white/85">{item}</span>
+            ))}
+          </div>
         </div>
       </div>
     </div>
@@ -156,8 +198,8 @@ const schema = {
                 </ul>
               </div>
 
-              <a href={`/${lang}/book/?package=${encodeURIComponent(entry.data.title)}`} class="flex items-center justify-center w-full bg-ocean-900 text-white px-6 py-4 rounded-xl font-bold text-base hover:bg-ocean-800 transition-colors shadow-lg shadow-ocean-900/20">
-                <svg class="w-6 h-6 mr-2" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+              <a href={`/${lang}/book/?package=${encodeURIComponent(entry.data.title)}`} class="flex items-center justify-center w-full bg-[#176b55] text-white px-6 py-4 rounded-xl font-bold text-base hover:bg-[#125743] transition-colors shadow-lg shadow-[#176b55]/20">
+                <svg class="w-6 h-6 mr-2" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.297.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458-.13-.606-.134-.133-.298-.347-.446-.52-.149-.174-.198-.298-.198-.497-.099-.198-.05-.371.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173 0-.371.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 01-8.413Z"/></svg>
                 {t('btn.book')}
               </a>
             </div>
