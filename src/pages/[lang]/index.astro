@@ -20,18 +20,20 @@ const latestBlogs = allBlogs.filter(b => b.id.startsWith(`${lang}/`)).sort((a,b)
 ---
 
 <BaseLayout title="Banggai Wonderland | Discover Hidden Paradise of Banggai">
-  <section class="relative min-h-screen flex items-end overflow-hidden bg-ocean-900">
-    <div id="hero-media" class="absolute inset-0 will-change-transform">
-      <iframe
-        src="https://giphy.com/embed/86bAGxmMCGQU34Y"
-        title="Ocean scene"
-        class="absolute inset-0 w-full h-full border-0"
-        style="border:0;"
-        allow="autoplay; fullscreen"
-        allowFullScreen
-      ></iframe>
-      <div class="absolute inset-0 bg-gradient-to-t from-black/75 via-black/20 to-black/15"></div>
-      <div class="absolute inset-x-0 bottom-0 h-40 bg-gradient-to-t from-[#f7f7f5] via-[#f7f7f5]/25 to-transparent opacity-90"></div>
+  <section class="relative min-h-[100svh] flex items-end overflow-hidden bg-ocean-900">
+    <div id="hero-media" class="absolute inset-0 will-change-transform overflow-hidden">
+      <div class="hero-giphy absolute inset-0 overflow-hidden">
+        <iframe
+          src="https://giphy.com/embed/86bAGxmMCGQU34Y"
+          title="Ocean scene"
+          class="hero-giphy-frame border-0"
+          style="border:0;"
+          allow="autoplay; fullscreen"
+          allowFullScreen
+        ></iframe>
+      </div>
+      <div class="absolute inset-0 bg-gradient-to-t from-black/75 via-black/20 to-black/15 pointer-events-none"></div>
+      <div class="absolute inset-x-0 bottom-0 h-40 bg-gradient-to-t from-[#f7f7f5] via-[#f7f7f5]/25 to-transparent opacity-90 pointer-events-none"></div>
     </div>
     <div class="relative z-10 w-full max-w-7xl mx-auto px-6 sm:px-10 lg:px-12 pb-16 md:pb-24 pt-40">
       <div class="max-w-4xl">
@@ -81,6 +83,26 @@ const latestBlogs = allBlogs.filter(b => b.id.startsWith(`${lang}/`)).sort((a,b)
   </section>
 
   <WhatsAppButton />
+
+  <style>
+    .hero-giphy-frame {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 177.777778vh;
+      height: 100vw;
+      min-width: 100%;
+      min-height: 100%;
+      transform: translate(-50%, -50%);
+    }
+
+    @media (max-width: 767px) {
+      .hero-giphy-frame {
+        width: 177.777778svh;
+        height: 100svw;
+      }
+    }
+  </style>
 
   <script is:inline>
     const heroMedia = document.getElementById('hero-media');
