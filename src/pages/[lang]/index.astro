@@ -51,15 +51,24 @@ const latestBlogs = allBlogs.filter(b => b.id.startsWith(`${lang}/`)).sort((a,b)
     <div class="absolute bottom-7 right-8 md:right-12 z-10 text-white/60 text-[10px] tracking-[0.25em] uppercase hidden md:block">Banggai · Indonesia</div>
   </section>
 
-  <section class="bg-[#f7f7f5] py-24 md:py-36">
-    <div class="max-w-7xl mx-auto px-6 sm:px-10 lg:px-12">
-      <div class="max-w-3xl mb-16 md:mb-20">
+  <section class="bg-[#f7f7f5] py-20 md:py-36">
+    <div class="max-w-7xl mx-auto">
+      <div class="px-6 sm:px-10 lg:px-12 max-w-3xl mb-12 md:mb-20">
         <p class="text-ocean-600 text-xs font-bold tracking-[0.24em] uppercase mb-5">Explore Banggai</p>
         <h2 class="font-serif text-ocean-900 text-4xl md:text-6xl leading-tight tracking-[-0.035em] font-medium mb-6">Places worth<br class="hidden md:block"/> travelling for.</h2>
         <p class="text-ocean-600 text-base md:text-lg leading-relaxed max-w-2xl">{t('home.featured.destinations.desc') || 'Discover quiet islands, clear lagoons, hidden waterfalls and untouched coastlines across the Banggai archipelago.'}</p>
       </div>
-      {featuredDestinations.length > 0 && <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">{featuredDestinations.map(destination => <DestinationCard destination={destination} />)}</div>}
-      <div class="mt-12"><a href={`/${lang}/destinations/`} class="text-ocean-900 text-sm font-semibold border-b border-ocean-900/30 pb-1 hover:border-ocean-900 transition-colors">{t('btn.explore')} <span class="ml-1">→</span></a></div>
+
+      {featuredDestinations.length > 0 && (
+        <div class="destinations-track px-6 sm:px-10 lg:px-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+          {featuredDestinations.map(destination => <DestinationCard destination={destination} />)}
+        </div>
+      )}
+
+      <div class="px-6 sm:px-10 lg:px-12 mt-8 md:mt-12 flex items-center justify-between gap-4">
+        <a href={`/${lang}/destinations/`} class="text-ocean-900 text-sm font-semibold border-b border-ocean-900/30 pb-1 hover:border-ocean-900 transition-colors">{t('btn.explore')} <span class="ml-1">→</span></a>
+        <span class="mobile-swipe-hint text-ocean-500 text-xs font-medium tracking-wide">Swipe →</span>
+      </div>
     </div>
   </section>
 
@@ -96,10 +105,40 @@ const latestBlogs = allBlogs.filter(b => b.id.startsWith(`${lang}/`)).sort((a,b)
       transform: translate(-50%, -50%);
     }
 
+    .destinations-track {
+      scrollbar-width: none;
+    }
+
+    .mobile-swipe-hint {
+      display: none;
+    }
+
     @media (max-width: 767px) {
       .hero-giphy-frame {
         width: 177.777778svh;
         height: 100svw;
+      }
+
+      .destinations-track {
+        display: flex;
+        overflow-x: auto;
+        overscroll-behavior-x: contain;
+        scroll-snap-type: x mandatory;
+        -webkit-overflow-scrolling: touch;
+        touch-action: pan-x;
+        padding-right: 2.5rem;
+        gap: 1rem;
+      }
+
+      .destinations-track > * {
+        flex: 0 0 82vw;
+        min-width: 0;
+        scroll-snap-align: start;
+      }
+
+      .mobile-swipe-hint {
+        display: inline-flex;
+        align-items: center;
       }
     }
   </style>
