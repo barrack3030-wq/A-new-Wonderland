@@ -1,77 +1,63 @@
-/* About Us — final contrast lock */
+/* About Us — final section correction */
 
-/* Global: About page text is always opaque. */
-body:has(#about-slider) main,
-body:has(#about-slider) main * {
-  text-shadow: none !important;
-}
-
-/* HERO: clean white presentation with black/dark typography. */
+/* HERO: white background with fully opaque dark typography. */
 body:has(#about-slider) main > section:first-of-type {
-  position: relative !important;
-  overflow: hidden !important;
   background: #ffffff !important;
   background-image: none !important;
-  opacity: 1 !important;
 }
-
 body:has(#about-slider) main > section:first-of-type > div:first-child,
 body:has(#about-slider) main > section:first-of-type > div:nth-child(2) {
   display: none !important;
 }
+body:has(#about-slider) main > section:first-of-type p:first-child { color: #111111 !important; opacity: 1 !important; }
+body:has(#about-slider) main > section:first-of-type h1 { color: #111111 !important; opacity: 1 !important; }
+body:has(#about-slider) main > section:first-of-type p:last-child { color: #333333 !important; opacity: 1 !important; }
 
-body:has(#about-slider) main > section:first-of-type p:first-child {
+/* STORY GRID: this is the section shown in the screenshot. Keep it white, not dark. */
+body:has(#about-slider) main > section:nth-of-type(2) .grid:has(#about-slider) > div:first-child {
+  position: relative !important;
+  overflow: visible !important;
+  isolation: auto !important;
+  background: #ffffff !important;
+  background-image: none !important;
+  border: 0 !important;
+  box-shadow: none !important;
+  opacity: 1 !important;
+}
+body:has(#about-slider) main > section:nth-of-type(2) .grid:has(#about-slider) > div:first-child::before,
+body:has(#about-slider) main > section:nth-of-type(2) .grid:has(#about-slider) > div:first-child::after {
+  display: none !important;
+}
+body:has(#about-slider) main > section:nth-of-type(2) .grid:has(#about-slider) > div:first-child p {
   color: #111111 !important;
   opacity: 1 !important;
 }
-
-body:has(#about-slider) main > section:first-of-type h1 {
+body:has(#about-slider) main > section:nth-of-type(2) .grid:has(#about-slider) > div:first-child > p:first-child {
   color: #111111 !important;
   opacity: 1 !important;
 }
-
-body:has(#about-slider) main > section:first-of-type p:last-child {
+body:has(#about-slider) main > section:nth-of-type(2) .grid:has(#about-slider) > div:first-child h2 {
+  color: #111111 !important;
+  opacity: 1 !important;
+}
+body:has(#about-slider) main > section:nth-of-type(2) .grid:has(#about-slider) > div:first-child .text-ocean-700 {
   color: #333333 !important;
   opacity: 1 !important;
 }
 
-/* MAIN STORY AREA: white background, dark text, no washed-out typography. */
-body:has(#about-slider) main > section:nth-of-type(2) {
-  background: #ffffff !important;
+/* Story image stays normal and fully visible. */
+body:has(#about-slider) main > section:nth-of-type(2) .grid:has(#about-slider) > div:last-child {
+  background: transparent !important;
   opacity: 1 !important;
 }
-
-body:has(#about-slider) main > section:nth-of-type(2) .mb-12 p {
-  color: #111111 !important;
+body:has(#about-slider) #about-slider,
+body:has(#about-slider) #about-slider img {
   opacity: 1 !important;
+  filter: none !important;
 }
 
-body:has(#about-slider) main > section:nth-of-type(2) .grid > div:first-child + div {
-  opacity: 1 !important;
-}
-
-body:has(#about-slider) main > section:nth-of-type(2) .grid > div:first-child + div p {
-  color: #222222 !important;
-  opacity: 1 !important;
-}
-
-body:has(#about-slider) main > section:nth-of-type(2) .grid > div:first-child + div h2 {
-  color: #111111 !important;
-  opacity: 1 !important;
-}
-
-body:has(#about-slider) main > section:nth-of-type(2) .grid > div:last-child h2 {
-  color: #111111 !important;
-  opacity: 1 !important;
-}
-
-body:has(#about-slider) main > section:nth-of-type(2) .grid > div:last-child p {
-  color: #222222 !important;
-  opacity: 1 !important;
-}
-
-/* Founder card remains deliberately dark so it is visually distinct. */
-body:has(#about-slider) main > section:nth-of-type(2) .grid > div:first-child {
+/* FOUNDER CARD: dark style only for the dedicated founder grid, not the story grid. */
+body:has(#about-slider) main > section:nth-of-type(2) div.mt-24.grid > div:first-child {
   position: relative !important;
   overflow: hidden !important;
   isolation: isolate !important;
@@ -81,9 +67,9 @@ body:has(#about-slider) main > section:nth-of-type(2) .grid > div:first-child {
   box-shadow: 0 24px 55px rgba(3,28,38,.22) !important;
   opacity: 1 !important;
 }
-
-body:has(#about-slider) main > section:nth-of-type(2) .grid > div:first-child::before {
+body:has(#about-slider) main > section:nth-of-type(2) div.mt-24.grid > div:first-child::before {
   content:"" !important;
+  display:block !important;
   position:absolute !important;
   inset:0 !important;
   z-index:-1 !important;
@@ -92,21 +78,16 @@ body:has(#about-slider) main > section:nth-of-type(2) .grid > div:first-child::b
     radial-gradient(circle at 88% 8%,rgba(91,214,207,.12),transparent 34%),
     radial-gradient(circle at 8% 92%,rgba(17,104,128,.18),transparent 38%) !important;
 }
-
-body:has(#about-slider) main > section:nth-of-type(2) .grid > div:first-child p {
+body:has(#about-slider) main > section:nth-of-type(2) div.mt-24.grid > div:first-child p {
   color:#e4f2f4 !important;
   opacity:1 !important;
 }
-body:has(#about-slider) main > section:nth-of-type(2) .grid > div:first-child p:first-child { color:#9de1e2 !important; }
-body:has(#about-slider) main > section:nth-of-type(2) .grid > div:first-child h2 { color:#ffffff !important; opacity:1 !important; }
-body:has(#about-slider) main > section:nth-of-type(2) .grid > div:first-child .text-ocean-200 { color:#cfe8eb !important; opacity:1 !important; }
-body:has(#about-slider) main > section:nth-of-type(2) .grid > div:first-child .bg-turquoise-400 { background-color:#55cfc8 !important; opacity:1 !important; }
+body:has(#about-slider) main > section:nth-of-type(2) div.mt-24.grid > div:first-child p:first-child { color:#9de1e2 !important; }
+body:has(#about-slider) main > section:nth-of-type(2) div.mt-24.grid > div:first-child h2 { color:#ffffff !important; opacity:1 !important; }
+body:has(#about-slider) main > section:nth-of-type(2) div.mt-24.grid > div:first-child .text-ocean-200 { color:#cfe8eb !important; opacity:1 !important; }
+body:has(#about-slider) main > section:nth-of-type(2) div.mt-24.grid > div:first-child .bg-turquoise-400 { background-color:#55cfc8 !important; opacity:1 !important; }
 
-/* Image remains fully visible. */
-body:has(#about-slider) #about-slider,
-body:has(#about-slider) #about-slider img { opacity:1 !important; filter:none !important; }
-
-/* Approach cards: white cards, dark text. */
+/* Approach cards: white, solid, readable. */
 body:has(#about-slider) main > section:nth-of-type(2) .mt-24 > div[class*="grid"] > div {
   background:#ffffff !important;
   border-color:#e8ded1 !important;
@@ -117,7 +98,7 @@ body:has(#about-slider) main > section:nth-of-type(2) .mt-24 > div[class*="grid"
 body:has(#about-slider) main > section:nth-of-type(2) .mt-24 > div[class*="grid"] .bg-turquoise-50 { background:#e6faf7 !important; opacity:1 !important; }
 body:has(#about-slider) main > section:nth-of-type(2) .mt-24 > div[class*="grid"] .text-turquoise-700 { color:#087c73 !important; opacity:1 !important; }
 
-/* Final Welcome panel: dark and readable. */
+/* Welcome panel remains dark and fully readable. */
 body:has(#about-slider) main section:has(#about-slider) div[class*="mt-24"][class*="rounded-[2rem]"] {
   position:relative !important;
   overflow:hidden !important;
@@ -146,6 +127,7 @@ body:has(#about-slider) main section:has(#about-slider) div[class*="mt-24"][clas
 
 @media (max-width:640px) {
   body:has(#about-slider) main > section:first-of-type h1 { font-size:clamp(2.75rem,12vw,4rem) !important; line-height:1.05 !important; }
-  body:has(#about-slider) main > section:nth-of-type(2) .grid > div:first-child { border-radius:1.5rem !important; }
+  body:has(#about-slider) main > section:nth-of-type(2) .grid:has(#about-slider) > div:first-child { padding-right:0 !important; }
+  body:has(#about-slider) main > section:nth-of-type(2) div.mt-24.grid > div:first-child { border-radius:1.5rem !important; }
   body:has(#about-slider) main section:has(#about-slider) div[class*="mt-24"][class*="rounded-[2rem]"] { border-radius:1.5rem !important; padding-left:1.25rem !important; padding-right:1.25rem !important; padding-top:3rem !important; padding-bottom:3rem !important; }
 }
