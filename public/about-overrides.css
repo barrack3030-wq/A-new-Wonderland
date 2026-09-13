@@ -1,6 +1,90 @@
-/* About Us — premium, high-contrast welcome panel */
+/* About Us — premium contrast and section styling */
 
-/* Target the actual Welcome to Banggai card inside the About page. */
+/* HERO: restore the intended deep-ocean presentation. */
+body:has(#about-slider) main > section:first-of-type {
+  position: relative !important;
+  overflow: hidden !important;
+  background: #062f3d !important;
+  background-image: none !important;
+}
+
+body:has(#about-slider) main > section:first-of-type > div:first-child {
+  background: linear-gradient(135deg, #032b3b 0%, #06495b 58%, #0a6672 100%) !important;
+  opacity: 1 !important;
+}
+
+body:has(#about-slider) main > section:first-of-type > div:nth-child(2) {
+  background: radial-gradient(circle at 72% 28%, rgba(77, 220, 210, 0.18), transparent 46%) !important;
+}
+
+body:has(#about-slider) main > section:first-of-type p:first-child {
+  color: #9de1e2 !important;
+  text-shadow: none !important;
+}
+
+body:has(#about-slider) main > section:first-of-type h1 {
+  color: #ffffff !important;
+  text-shadow: none !important;
+}
+
+body:has(#about-slider) main > section:first-of-type p:last-child {
+  color: #e5f4f5 !important;
+  text-shadow: none !important;
+}
+
+/* FOUNDER CARD: dark premium card with strong readable typography. */
+body:has(#about-slider) main > section:nth-of-type(2) .grid > div:first-child {
+  position: relative !important;
+  overflow: hidden !important;
+  isolation: isolate !important;
+  background: #062f3d !important;
+  background-image: linear-gradient(145deg, #073b4c 0%, #062f3d 62%, #052733 100%) !important;
+  border: 1px solid rgba(157, 225, 226, 0.2) !important;
+  box-shadow: 0 24px 55px rgba(3, 28, 38, 0.22) !important;
+}
+
+body:has(#about-slider) main > section:nth-of-type(2) .grid > div:first-child::before {
+  content: "" !important;
+  position: absolute !important;
+  inset: 0 !important;
+  z-index: -1 !important;
+  pointer-events: none !important;
+  background:
+    radial-gradient(circle at 88% 8%, rgba(91, 214, 207, 0.12), transparent 34%),
+    radial-gradient(circle at 8% 92%, rgba(17, 104, 128, 0.18), transparent 38%) !important;
+}
+
+body:has(#about-slider) main > section:nth-of-type(2) .grid > div:first-child h2,
+body:has(#about-slider) main > section:nth-of-type(2) .grid > div:first-child h3 {
+  color: #ffffff !important;
+  text-shadow: none !important;
+}
+
+body:has(#about-slider) main > section:nth-of-type(2) .grid > div:first-child p {
+  color: #e4f2f4 !important;
+  text-shadow: none !important;
+}
+
+body:has(#about-slider) main > section:nth-of-type(2) .grid > div:first-child p:first-child {
+  color: #9de1e2 !important;
+}
+
+body:has(#about-slider) main > section:nth-of-type(2) .grid > div:first-child [class*="text-turquoise"],
+body:has(#about-slider) main > section:nth-of-type(2) .grid > div:first-child [class*="text-teal"] {
+  color: #9de1e2 !important;
+}
+
+/* Keep the main editorial column clean and high contrast. */
+body:has(#about-slider) main > section:nth-of-type(2) .grid > div:last-child h2,
+body:has(#about-slider) main > section:nth-of-type(2) .grid > div:last-child h3 {
+  color: #062f3d !important;
+}
+
+body:has(#about-slider) main > section:nth-of-type(2) .grid > div:last-child p {
+  color: #075f7c !important;
+}
+
+/* WELCOME PANEL: dark, restrained and readable. */
 body:has(#about-slider) main section:has(#about-slider) div[class*="mt-24"][class*="rounded-[2rem]"] {
   position: relative !important;
   overflow: hidden !important;
@@ -13,27 +97,25 @@ body:has(#about-slider) main section:has(#about-slider) div[class*="mt-24"][clas
 }
 
 body:has(#about-slider) main section:has(#about-slider) div[class*="mt-24"][class*="rounded-[2rem]"]::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  z-index: -2;
-  pointer-events: none;
+  content: "" !important;
+  position: absolute !important;
+  inset: 0 !important;
+  z-index: -2 !important;
+  pointer-events: none !important;
   background:
     radial-gradient(circle at 88% 8%, rgba(91, 214, 207, 0.16), transparent 30%),
-    radial-gradient(circle at 8% 92%, rgba(17, 104, 128, 0.18), transparent 34%);
+    radial-gradient(circle at 8% 92%, rgba(17, 104, 128, 0.18), transparent 34%) !important;
 }
 
-/* Remove the old decorative ring that can interfere with the text area. */
 body:has(#about-slider) main section:has(#about-slider) div[class*="mt-24"][class*="rounded-[2rem]"]::after {
   display: none !important;
 }
 
 body:has(#about-slider) main section:has(#about-slider) div[class*="mt-24"][class*="rounded-[2rem]"] > * {
-  position: relative;
-  z-index: 2;
+  position: relative !important;
+  z-index: 2 !important;
 }
 
-/* Strong, consistent contrast. */
 body:has(#about-slider) main section:has(#about-slider) div[class*="mt-24"][class*="rounded-[2rem]"] p:first-child {
   color: #8de2da !important;
   text-shadow: none !important;
@@ -54,6 +136,15 @@ body:has(#about-slider) main section:has(#about-slider) div[class*="mt-24"][clas
 }
 
 @media (max-width: 640px) {
+  body:has(#about-slider) main > section:first-of-type h1 {
+    font-size: clamp(2.75rem, 12vw, 4rem) !important;
+    line-height: 1.05 !important;
+  }
+
+  body:has(#about-slider) main > section:nth-of-type(2) .grid > div:first-child {
+    border-radius: 1.5rem !important;
+  }
+
   body:has(#about-slider) main section:has(#about-slider) div[class*="mt-24"][class*="rounded-[2rem]"] {
     border-radius: 1.5rem !important;
     padding-left: 1.25rem !important;
