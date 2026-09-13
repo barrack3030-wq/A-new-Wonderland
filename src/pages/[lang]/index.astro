@@ -66,7 +66,7 @@ const latestBlogs = allBlogs.filter(b => b.id.startsWith(`${lang}/`)).sort((a,b)
           </div>
 
           <div class="mobile-destination-swiper" data-destination-swiper>
-            <div class="mobile-destination-stage">
+            <div class="mobile-destination-stage" data-swipe-stage>
               {featuredDestinations.map((destination, index) => (
                 <div class="mobile-destination-slide" data-slide={index}>
                   <DestinationCard destination={destination} />
@@ -75,9 +75,9 @@ const latestBlogs = allBlogs.filter(b => b.id.startsWith(`${lang}/`)).sort((a,b)
             </div>
             <div class="mobile-destination-controls">
               <button type="button" class="mobile-destination-arrow" data-prev aria-label="Previous destination">‹</button>
-              <div class="mobile-destination-dots" role="tablist" aria-label="Destinations">
+              <div class="mobile-destination-dots" aria-label="Destination position">
                 {featuredDestinations.map((_, index) => (
-                  <button type="button" class="mobile-destination-dot" data-dot={index} role="tab" aria-label={`Destination ${index + 1}`} aria-selected={index === 0}></button>
+                  <button type="button" class="mobile-destination-dot" data-dot={index} aria-label={`Destination ${index + 1}`} aria-current={index === 0 ? 'true' : 'false'}></button>
                 ))}
               </div>
               <button type="button" class="mobile-destination-arrow" data-next aria-label="Next destination">›</button>
@@ -150,8 +150,10 @@ const latestBlogs = allBlogs.filter(b => b.id.startsWith(`${lang}/`)).sort((a,b)
         width: 100%;
         height: min(118vw, 560px);
         overflow: hidden;
-        touch-action: pan-y;
         border-radius: 1.75rem;
+        touch-action: pan-y;
+        user-select: none;
+        -webkit-user-select: none;
       }
 
       .mobile-destination-slide {
@@ -159,24 +161,23 @@ const latestBlogs = allBlogs.filter(b => b.id.startsWith(`${lang}/`)).sort((a,b)
         inset: 0;
         width: 100%;
         opacity: 0;
-        transform: translateX(105%) scale(0.985);
-        transition: transform 360ms cubic-bezier(.22,.61,.36,1), opacity 280ms ease;
+        transform: translate3d(105%, 0, 0) scale(.985);
+        transition: transform 360ms cubic-bezier(.22,.61,.36,1), opacity 260ms ease;
         pointer-events: none;
         will-change: transform, opacity;
       }
 
       .mobile-destination-slide.active {
         opacity: 1;
-        transform: translateX(0) scale(1);
+        transform: translate3d(0, 0, 0) scale(1);
         pointer-events: auto;
       }
 
       .mobile-destination-slide.prev {
-        transform: translateX(-105%) scale(0.985);
+        transform: translate3d(-105%, 0, 0) scale(.985);
       }
 
-      .mobile-destination-slide.is-dragging,
-      .mobile-destination-slide.is-dragging * {
+      .mobile-destination-slide.is-dragging {
         transition: none !important;
       }
 
@@ -226,7 +227,7 @@ const latestBlogs = allBlogs.filter(b => b.id.startsWith(`${lang}/`)).sort((a,b)
         transition: all 220ms ease;
       }
 
-      .mobile-destination-dot[aria-selected="true"] {
+      .mobile-destination-dot[aria-current="true"] {
         width: 1.5rem;
         background: #062f3d;
       }
@@ -258,72 +259,139 @@ const latestBlogs = allBlogs.filter(b => b.id.startsWith(`${lang}/`)).sort((a,b)
       const dots = Array.from(destinationSwiper.querySelectorAll('[data-dot]'));
       const prevButton = destinationSwiper.querySelector('[data-prev]');
       const nextButton = destinationSwiper.querySelector('[data-next]');
+      const stage = destinationSwiper.querySelector('[data-swipe-stage]');
+
       let current = 0;
       let startX = 0;
-      let currentX = 0;
+      let startY = 0;
+      let deltaX = 0;
       let dragging = false;
+      let horizontalDrag = false;
+      let moved = false;
       let pointerId = null;
 
-      const render = (index, direction = 1, instant = false) => {
-        current = (index + slides.length) % slides.length;
-        slides.forEach((slide, i) => {
-          slide.classList.remove('active', 'prev');
-          if (instant) slide.style.transition = 'none';
-          else slide.style.removeProperty('transition');
-          if (i === current) slide.classList.add('active');
-          else if (i === (current - 1 + slides.length) % slides.length) slide.classList.add('prev');
-          else slide.style.transform = `translateX(${direction > 0 ? 105 : -105}%) scale(.985)`;
-          slide.classList.remove('is-dragging');
+      const clampIndex = (index) => (index + slides.length) % slides.length;
+
+      const setIndicator = () => {
+        dots.forEach((dot, i) => {
+          dot.setAttribute('aria-current', i === current ? 'true' : 'false');
         });
-        dots.forEach((dot, i) => dot.setAttribute('aria-selected', String(i === current)));
       };
 
-      const move = (direction) => render(current + direction, direction);
+      const positionSlides = () => {
+        if (!slides.length) return;
+        slides.forEach((slide, i) => {
+          slide.classList.remove('active', 'prev', 'is-dragging');
+          slide.style.removeProperty('transform');
+          slide.style.removeProperty('opacity');
 
-      prevButton?.addEventListener('click', () => move(-1));
-      nextButton?.addEventListener('click', () => move(1));
-      dots.forEach((dot, i) => dot.addEventListener('click', () => render(i, i > current ? 1 : -1)));
+          if (i === current) {
+            slide.classList.add('active');
+          } else if (i === clampIndex(current - 1)) {
+            slide.classList.add('prev');
+          } else {
+            slide.style.transform = 'translate3d(105%,0,0) scale(.985)';
+          }
+        });
+        setIndicator();
+      };
 
-      const stage = destinationSwiper.querySelector('.mobile-destination-stage');
+      const goTo = (index) => {
+        if (!slides.length) return;
+        current = clampIndex(index);
+        positionSlides();
+      };
+
+      const finishGesture = () => {
+        if (!dragging) return;
+        dragging = false;
+        pointerId = null;
+
+        const width = stage?.clientWidth || 320;
+        const shouldChange = Math.abs(deltaX) > Math.max(55, width * 0.18);
+        const direction = deltaX < 0 ? 1 : -1;
+        const activeSlide = slides[current];
+
+        if (activeSlide) {
+          activeSlide.classList.remove('is-dragging');
+          activeSlide.style.removeProperty('transform');
+          activeSlide.style.removeProperty('opacity');
+        }
+
+        if (horizontalDrag && shouldChange) {
+          goTo(current + direction);
+        } else {
+          positionSlides();
+        }
+
+        deltaX = 0;
+        horizontalDrag = false;
+      };
+
+      positionSlides();
+
+      prevButton?.addEventListener('click', () => goTo(current - 1));
+      nextButton?.addEventListener('click', () => goTo(current + 1));
+      dots.forEach((dot, index) => dot.addEventListener('click', () => goTo(index)));
+
       stage?.addEventListener('pointerdown', (event) => {
         if (event.pointerType === 'mouse' && event.button !== 0) return;
         dragging = true;
+        horizontalDrag = false;
+        moved = false;
         pointerId = event.pointerId;
         startX = event.clientX;
-        currentX = startX;
-        stage.setPointerCapture?.(pointerId);
-        slides[current]?.classList.add('is-dragging');
+        startY = event.clientY;
+        deltaX = 0;
+
+        try { stage.setPointerCapture(event.pointerId); } catch {}
+
+        const activeSlide = slides[current];
+        activeSlide?.classList.add('is-dragging');
       });
 
       stage?.addEventListener('pointermove', (event) => {
         if (!dragging) return;
-        currentX = event.clientX;
-        const delta = currentX - startX;
-        const activeSlide = slides[current];
-        if (activeSlide) {
-          const width = stage.clientWidth || 1;
-          const percent = Math.max(-100, Math.min(100, delta / width * 100));
-          activeSlide.style.transform = `translateX(${percent}%) scale(${1 - Math.min(Math.abs(percent), 40) / 400})`;
-          activeSlide.style.opacity = String(1 - Math.min(Math.abs(percent), 100) / 700);
+
+        const dx = event.clientX - startX;
+        const dy = event.clientY - startY;
+
+        if (!horizontalDrag && Math.abs(dx) < 8 && Math.abs(dy) < 8) return;
+
+        if (!horizontalDrag) {
+          if (Math.abs(dy) > Math.abs(dx)) {
+            finishGesture();
+            return;
+          }
+          horizontalDrag = true;
         }
-      });
 
-      const endDrag = () => {
-        if (!dragging) return;
-        dragging = false;
-        slides[current]?.classList.remove('is-dragging');
-        const delta = currentX - startX;
-        const threshold = Math.max(55, (stage?.clientWidth || 320) * 0.18);
-        if (Math.abs(delta) >= threshold) move(delta < 0 ? 1 : -1);
-        else render(current, 1);
-        pointerId = null;
-      };
+        moved = true;
+        deltaX = dx;
+        event.preventDefault();
 
-      stage?.addEventListener('pointerup', endDrag);
-      stage?.addEventListener('pointercancel', endDrag);
-      stage?.addEventListener('lostpointercapture', endDrag);
+        const activeSlide = slides[current];
+        if (!activeSlide) return;
 
-      render(0, 1, true);
+        const width = stage.clientWidth || 320;
+        const percent = Math.max(-100, Math.min(100, (dx / width) * 100));
+        const scale = 1 - Math.min(Math.abs(percent), 30) / 1000;
+        const opacity = 1 - Math.min(Math.abs(percent), 100) / 900;
+        activeSlide.style.transform = `translate3d(${percent}%,0,0) scale(${scale})`;
+        activeSlide.style.opacity = String(opacity);
+      }, { passive: false });
+
+      stage?.addEventListener('pointerup', finishGesture);
+      stage?.addEventListener('pointercancel', finishGesture);
+      stage?.addEventListener('lostpointercapture', finishGesture);
+
+      stage?.addEventListener('click', (event) => {
+        if (moved) {
+          event.preventDefault();
+          event.stopPropagation();
+          moved = false;
+        }
+      }, true);
     }
   </script>
 </BaseLayout>
