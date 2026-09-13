@@ -87,16 +87,44 @@ body:has(#about-slider) main > section:nth-of-type(2) div.mt-24.grid > div:first
 body:has(#about-slider) main > section:nth-of-type(2) div.mt-24.grid > div:first-child .text-ocean-200 { color:#cfe8eb !important; opacity:1 !important; }
 body:has(#about-slider) main > section:nth-of-type(2) div.mt-24.grid > div:first-child .bg-turquoise-400 { background-color:#55cfc8 !important; opacity:1 !important; }
 
-/* Approach cards: white, solid, readable. */
+/* APPROACH CARDS: remove checkmarks and use compact premium pill titles. */
 body:has(#about-slider) main > section:nth-of-type(2) .mt-24 > div[class*="grid"] > div {
   background:#ffffff !important;
-  border-color:#e8ded1 !important;
+  border:1px solid #e8ded1 !important;
+  border-radius:1.25rem !important;
   opacity:1 !important;
 }
-body:has(#about-slider) main > section:nth-of-type(2) .mt-24 > div[class*="grid"] h3 { color:#111111 !important; opacity:1 !important; }
-body:has(#about-slider) main > section:nth-of-type(2) .mt-24 > div[class*="grid"] p { color:#333333 !important; opacity:1 !important; }
-body:has(#about-slider) main > section:nth-of-type(2) .mt-24 > div[class*="grid"] .bg-turquoise-50 { background:#e6faf7 !important; opacity:1 !important; }
-body:has(#about-slider) main > section:nth-of-type(2) .mt-24 > div[class*="grid"] .text-turquoise-700 { color:#087c73 !important; opacity:1 !important; }
+
+/* Hide the old checkmark circle completely. */
+body:has(#about-slider) main > section:nth-of-type(2) .mt-24 > div[class*="grid"] > div > div:first-child {
+  display:none !important;
+}
+
+/* Title badge inspired by the reference: dark navy, white type, rounded pill. */
+body:has(#about-slider) main > section:nth-of-type(2) .mt-24 > div[class*="grid"] h3 {
+  display:inline-flex !important;
+  align-items:center !important;
+  justify-content:center !important;
+  min-height:46px !important;
+  padding:10px 20px !important;
+  margin:0 0 16px 0 !important;
+  border:1px solid #062f3d !important;
+  border-radius:999px !important;
+  background:#062f3d !important;
+  color:#ffffff !important;
+  font-family:inherit !important;
+  font-size:1rem !important;
+  font-weight:700 !important;
+  line-height:1.2 !important;
+  letter-spacing:.005em !important;
+  box-shadow:0 8px 20px rgba(6,47,61,.14) !important;
+  opacity:1 !important;
+}
+
+body:has(#about-slider) main > section:nth-of-type(2) .mt-24 > div[class*="grid"] p {
+  color:#333333 !important;
+  opacity:1 !important;
+}
 
 /* Welcome panel remains dark and fully readable. */
 body:has(#about-slider) main section:has(#about-slider) div[class*="mt-24"][class*="rounded-[2rem]"] {
@@ -129,5 +157,6 @@ body:has(#about-slider) main section:has(#about-slider) div[class*="mt-24"][clas
   body:has(#about-slider) main > section:first-of-type h1 { font-size:clamp(2.75rem,12vw,4rem) !important; line-height:1.05 !important; }
   body:has(#about-slider) main > section:nth-of-type(2) .grid:has(#about-slider) > div:first-child { padding-right:0 !important; }
   body:has(#about-slider) main > section:nth-of-type(2) div.mt-24.grid > div:first-child { border-radius:1.5rem !important; }
+  body:has(#about-slider) main > section:nth-of-type(2) .mt-24 > div[class*="grid"] h3 { min-height:42px !important; padding:9px 15px !important; font-size:.95rem !important; border-radius:999px !important; }
   body:has(#about-slider) main section:has(#about-slider) div[class*="mt-24"][class*="rounded-[2rem]"] { border-radius:1.5rem !important; padding-left:1.25rem !important; padding-right:1.25rem !important; padding-top:3rem !important; padding-bottom:3rem !important; }
 }
