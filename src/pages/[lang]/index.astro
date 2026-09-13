@@ -60,9 +60,30 @@ const latestBlogs = allBlogs.filter(b => b.id.startsWith(`${lang}/`)).sort((a,b)
       </div>
 
       {featuredDestinations.length > 0 && (
-        <div class="destinations-track grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
-          {featuredDestinations.map(destination => <DestinationCard destination={destination} />)}
-        </div>
+        <>
+          <div class="desktop-destinations-grid px-6 sm:px-10 lg:px-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+            {featuredDestinations.map(destination => <DestinationCard destination={destination} />)}
+          </div>
+
+          <div class="mobile-destination-swiper" data-destination-swiper>
+            <div class="mobile-destination-stage">
+              {featuredDestinations.map((destination, index) => (
+                <div class="mobile-destination-slide" data-slide={index}>
+                  <DestinationCard destination={destination} />
+                </div>
+              ))}
+            </div>
+            <div class="mobile-destination-controls">
+              <button type="button" class="mobile-destination-arrow" data-prev aria-label="Previous destination">‹</button>
+              <div class="mobile-destination-dots" role="tablist" aria-label="Destinations">
+                {featuredDestinations.map((_, index) => (
+                  <button type="button" class="mobile-destination-dot" data-dot={index} role="tab" aria-label={`Destination ${index + 1}`} aria-selected={index === 0}></button>
+                ))}
+              </div>
+              <button type="button" class="mobile-destination-arrow" data-next aria-label="Next destination">›</button>
+            </div>
+          </div>
+        </>
       )}
 
       <div class="px-6 sm:px-10 lg:px-12 mt-8 md:mt-12">
@@ -104,11 +125,7 @@ const latestBlogs = allBlogs.filter(b => b.id.startsWith(`${lang}/`)).sort((a,b)
       transform: translate(-50%, -50%);
     }
 
-    .destinations-track {
-      scrollbar-width: none;
-    }
-
-    .destinations-track::-webkit-scrollbar {
+    .mobile-destination-swiper {
       display: none;
     }
 
@@ -118,22 +135,100 @@ const latestBlogs = allBlogs.filter(b => b.id.startsWith(`${lang}/`)).sort((a,b)
         height: 100svw;
       }
 
-      .destinations-track {
-        display: flex;
-        overflow-x: auto;
-        overscroll-behavior-x: contain;
-        scroll-snap-type: x mandatory;
-        -webkit-overflow-scrolling: touch;
-        touch-action: pan-x;
-        gap: 0;
-        padding: 0 6vw;
+      .desktop-destinations-grid {
+        display: none;
       }
 
-      .destinations-track > * {
-        flex: 0 0 88vw;
-        min-width: 0;
-        scroll-snap-align: center;
-        scroll-snap-stop: always;
+      .mobile-destination-swiper {
+        display: block;
+        width: 100%;
+        padding: 0 1rem;
+      }
+
+      .mobile-destination-stage {
+        position: relative;
+        width: 100%;
+        height: min(118vw, 560px);
+        overflow: hidden;
+        touch-action: pan-y;
+        border-radius: 1.75rem;
+      }
+
+      .mobile-destination-slide {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        opacity: 0;
+        transform: translateX(105%) scale(0.985);
+        transition: transform 360ms cubic-bezier(.22,.61,.36,1), opacity 280ms ease;
+        pointer-events: none;
+        will-change: transform, opacity;
+      }
+
+      .mobile-destination-slide.active {
+        opacity: 1;
+        transform: translateX(0) scale(1);
+        pointer-events: auto;
+      }
+
+      .mobile-destination-slide.prev {
+        transform: translateX(-105%) scale(0.985);
+      }
+
+      .mobile-destination-slide.is-dragging,
+      .mobile-destination-slide.is-dragging * {
+        transition: none !important;
+      }
+
+      .mobile-destination-slide > a {
+        height: 100%;
+        display: block;
+      }
+
+      .mobile-destination-controls {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: .75rem;
+        margin-top: 1rem;
+      }
+
+      .mobile-destination-arrow {
+        width: 2.75rem;
+        height: 2.75rem;
+        border-radius: 999px;
+        border: 1px solid rgba(6,43,61,.12);
+        background: white;
+        color: #062f3d;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.75rem;
+        line-height: 1;
+        box-shadow: 0 8px 24px rgba(6,43,61,.08);
+      }
+
+      .mobile-destination-dots {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: .45rem;
+        flex: 1;
+      }
+
+      .mobile-destination-dot {
+        width: .45rem;
+        height: .45rem;
+        padding: 0;
+        border: 0;
+        border-radius: 999px;
+        background: rgba(6,43,61,.18);
+        transition: all 220ms ease;
+      }
+
+      .mobile-destination-dot[aria-selected="true"] {
+        width: 1.5rem;
+        background: #062f3d;
       }
     }
   </style>
@@ -155,6 +250,80 @@ const latestBlogs = allBlogs.filter(b => b.id.startsWith(`${lang}/`)).sort((a,b)
           ticking = true;
         }
       }, { passive: true });
+    }
+
+    const destinationSwiper = document.querySelector('[data-destination-swiper]');
+    if (destinationSwiper) {
+      const slides = Array.from(destinationSwiper.querySelectorAll('[data-slide]'));
+      const dots = Array.from(destinationSwiper.querySelectorAll('[data-dot]'));
+      const prevButton = destinationSwiper.querySelector('[data-prev]');
+      const nextButton = destinationSwiper.querySelector('[data-next]');
+      let current = 0;
+      let startX = 0;
+      let currentX = 0;
+      let dragging = false;
+      let pointerId = null;
+
+      const render = (index, direction = 1, instant = false) => {
+        current = (index + slides.length) % slides.length;
+        slides.forEach((slide, i) => {
+          slide.classList.remove('active', 'prev');
+          if (instant) slide.style.transition = 'none';
+          else slide.style.removeProperty('transition');
+          if (i === current) slide.classList.add('active');
+          else if (i === (current - 1 + slides.length) % slides.length) slide.classList.add('prev');
+          else slide.style.transform = `translateX(${direction > 0 ? 105 : -105}%) scale(.985)`;
+          slide.classList.remove('is-dragging');
+        });
+        dots.forEach((dot, i) => dot.setAttribute('aria-selected', String(i === current)));
+      };
+
+      const move = (direction) => render(current + direction, direction);
+
+      prevButton?.addEventListener('click', () => move(-1));
+      nextButton?.addEventListener('click', () => move(1));
+      dots.forEach((dot, i) => dot.addEventListener('click', () => render(i, i > current ? 1 : -1)));
+
+      const stage = destinationSwiper.querySelector('.mobile-destination-stage');
+      stage?.addEventListener('pointerdown', (event) => {
+        if (event.pointerType === 'mouse' && event.button !== 0) return;
+        dragging = true;
+        pointerId = event.pointerId;
+        startX = event.clientX;
+        currentX = startX;
+        stage.setPointerCapture?.(pointerId);
+        slides[current]?.classList.add('is-dragging');
+      });
+
+      stage?.addEventListener('pointermove', (event) => {
+        if (!dragging) return;
+        currentX = event.clientX;
+        const delta = currentX - startX;
+        const activeSlide = slides[current];
+        if (activeSlide) {
+          const width = stage.clientWidth || 1;
+          const percent = Math.max(-100, Math.min(100, delta / width * 100));
+          activeSlide.style.transform = `translateX(${percent}%) scale(${1 - Math.min(Math.abs(percent), 40) / 400})`;
+          activeSlide.style.opacity = String(1 - Math.min(Math.abs(percent), 100) / 700);
+        }
+      });
+
+      const endDrag = () => {
+        if (!dragging) return;
+        dragging = false;
+        slides[current]?.classList.remove('is-dragging');
+        const delta = currentX - startX;
+        const threshold = Math.max(55, (stage?.clientWidth || 320) * 0.18);
+        if (Math.abs(delta) >= threshold) move(delta < 0 ? 1 : -1);
+        else render(current, 1);
+        pointerId = null;
+      };
+
+      stage?.addEventListener('pointerup', endDrag);
+      stage?.addEventListener('pointercancel', endDrag);
+      stage?.addEventListener('lostpointercapture', endDrag);
+
+      render(0, 1, true);
     }
   </script>
 </BaseLayout>
