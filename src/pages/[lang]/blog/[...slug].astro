@@ -49,10 +49,11 @@ const allDestinations = await getCollection('destinations');
 const languageDestinations = allDestinations.filter(destination => destination.slug.startsWith(`${lang}/`));
 const relatedDestinations = languageDestinations
   .map(destination => {
-    const text = `${destination.data.title} ${destination.data.description} ${(destination.data.tags || []).join(' ')}`.toLowerCase();
+    const destinationText = `${destination.data.title} ${destination.data.description} ${destination.data.location} ${destination.data.category}`.toLowerCase();
     const score = entryText.includes(destination.data.title.toLowerCase()) ? 3 :
-      (entry.data.tags || []).some(tag => text.includes(String(tag).toLowerCase())) ? 2 : 0;
-    return { destination, score };
+      entryText.includes(destination.data.location.toLowerCase()) ? 2 :
+      entryText.includes(destination.data.category.toLowerCase()) ? 1 : 0;
+    return { destination, score, destinationText };
   })
   .sort((a, b) => b.score - a.score)
   .slice(0, 3)
@@ -114,7 +115,7 @@ const schema = {
 
         <div class="flex items-center justify-center text-ocean-500 space-x-4 text-sm font-medium">
           <div class="flex items-center">
-            <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7-7h14a2 2 0 00-2-2V7z"></path></svg>
+            <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7-7h14"></path></svg>
             {t('blog.by')} {entry.data.author}
           </div>
           <span>•</span>
