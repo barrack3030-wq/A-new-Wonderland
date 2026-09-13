@@ -164,4 +164,19 @@ body:has(#about-slider) main section:has(#about-slider) div[class*="mt-24"][clas
 /* Homepage desktop-only fix: hide the mobile destination swiper on large screens. */
 @media (min-width:768px) {
   .mobile-destination-swiper { display:none !important; }
+
+  /* Keep the desktop hero proportionate on laptop and large desktop screens. */
+  body:has(#home) #home .hero-copy h1 {
+    font-size: clamp(4.75rem, 5.5vw, 6.25rem) !important;
+    line-height: .94 !important;
+    letter-spacing: -.045em !important;
+    margin-bottom: 1.75rem !important;
+  }
+
+  body:has(#home) #home .hero-copy > p:not(.mobile-hero-scroll) {
+    font-size: clamp(1rem, 1.15vw, 1.2rem) !important;
+    line-height: 1.55 !important;
+    max-width: 44rem !important;
+    margin-bottom: 2rem !important;
+  }
 }
