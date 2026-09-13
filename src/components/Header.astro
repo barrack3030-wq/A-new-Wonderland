@@ -18,7 +18,10 @@ const t = useTranslations(lang);
         <a href={`/${lang}/about/`} class="text-[13px] font-medium text-ocean-900/75 hover:text-ocean-900 transition">{t('nav.about')}</a>
       </nav>
       <div class="hidden lg:flex items-center gap-5"><LanguageSwitcher /><a href="https://wa.me/6285820830530" target="_blank" rel="noopener noreferrer" class="rounded-full bg-ocean-900 text-white px-5 py-2.5 text-[13px] font-semibold hover:bg-ocean-800 transition">{t('btn.book')}</a></div>
-      <button id="mobile-menu-btn" type="button" class="lg:hidden text-ocean-900 p-2" aria-label="Toggle menu" aria-expanded="false"><svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path id="menu-icon-path" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.7" d="M4 7h16M4 12h16M4 17h16"/></svg></button>
+      <div class="lg:hidden flex items-center gap-3">
+        <LanguageSwitcher mobileHeader={true} />
+        <button id="mobile-menu-btn" type="button" class="text-ocean-900 p-2" aria-label="Toggle menu" aria-expanded="false"><svg class="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path id="menu-icon-path" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.7" d="M4 7h16M4 12h16M4 17h16"/></svg></button>
+      </div>
     </div>
   </div>
   <div id="mobile-menu" class="hidden lg:hidden bg-white/95 backdrop-blur-2xl border-t border-black/5">
