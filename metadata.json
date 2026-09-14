@@ -3,6 +3,6 @@
   "description": "Premium travel agency website for Banggai Wonderland, discovering the hidden paradise of Banggai.",
   "requestFramePermissions": [],
   "majorCapabilities": [
-    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+    "MAJOR_CAPABILITY_SERVER_SIDE_OPENAI_API"
   ]
 }

@@ -1,7 +1,5 @@
-const GEMINI_MODEL='gemini-3.6-flash';
-const GEMINI_FALLBACK_MODEL='gemini-3.5-flash-lite';
-const GEMINI_URL_BASE='https://generativelanguage.googleapis.com/v1beta/models/';
-const GEMINI_URL=GEMINI_URL_BASE+GEMINI_MODEL+':generateContent';
+const OPENAI_MODEL='gpt-5.6-luna';
+const OPENAI_URL='https://api.openai.com/v1/responses';
 const WIKIMEDIA_API='https://commons.wikimedia.org/w/api.php';
 const DEFAULT_IMAGE='/images/Poganda-Beach-Banggai-IndonesiaJuara-Trip.webp';
 const LANGUAGES={id:'Indonesian',en:'English',es:'Spanish',fr:'French',zh:'Chinese'};
@@ -44,10 +42,10 @@ function checkAccessKey(value){
   if(!value||value!==expected)throw new Error('Access key tidak valid.');
 }
 
-function getGeminiConfig(){
-  const key=PropertiesService.getScriptProperties().getProperty('GEMINI_API_KEY');
-  if(!key)throw new Error('GEMINI_API_KEY belum diset di Script Properties.');
-  return {provider:'gemini',key:key,model:GEMINI_MODEL,url:GEMINI_URL,fallbackModel:GEMINI_FALLBACK_MODEL};
+function getOpenAIConfig(){
+  const key=PropertiesService.getScriptProperties().getProperty('OPENAI_API_KEY');
+  if(!key)throw new Error('OPENAI_API_KEY belum diset di Script Properties.');
+  return {provider:'openai',key:key,model:OPENAI_MODEL,url:OPENAI_URL};
 }
 
 function uploadImage(data){
@@ -99,7 +97,7 @@ function translateArticle(data){
   if(content.length<300)throw new Error('Isi artikel terlalu pendek. Pastikan artikel lengkap sudah ditempel.');
   const image=data.image&&data.image.url?data.image:{url:DEFAULT_IMAGE,source:'',alt:'Banggai destination in Indonesia'};
   const pubDate=normalizeDate(data.pubDate||getToday());
-  const cfg=getGeminiConfig();
+  const cfg=getOpenAIConfig();
   const articles={id:{
     title:title,
     description:description||createPreview(content),
@@ -126,7 +124,7 @@ function translateArticle(data){
         const retry=aiRequestResilient(cfg,buildTranslationPayload(cfg,articles.id,TARGET_LANGUAGES[lang]),'Translate ['+lang+']');
         dataOut=retry.data;
       }else{
-        if(status<200||status>=300)throw new Error('Gemini error ['+lang+'] ('+status+'): '+raw);
+        if(status<200||status>=300)throw new Error('OpenAI error ['+lang+'] ('+status+'): '+raw);
         try{dataOut=JSON.parse(raw);}catch(e){throw new Error('Respons AI tidak valid untuk '+lang+'.');}
       }
       const translated=parseTranslationResponse(dataOut,lang);
@@ -158,13 +156,12 @@ function normalizeTags(tags){
 
 function translatorRequest(cfg,source,targetLanguage){
   const payload=buildTranslationPayload(cfg,source,targetLanguage);
-  let url=cfg.url+'?key='+encodeURIComponent(cfg.key);
-  return {url:url,method:'post',contentType:'application/json',headers:{},payload:JSON.stringify(payload),muteHttpExceptions:true};
+  return {url:cfg.url,method:'post',contentType:'application/json',headers:{Authorization:'Bearer '+cfg.key},payload:JSON.stringify(payload),muteHttpExceptions:true};
 }
 
 function buildTranslationPayload(cfg,source,targetLanguage){
   const prompt=buildTranslationPrompt(source,targetLanguage);
-  return {contents:[{role:'user',parts:[{text:prompt}]}],generationConfig:{temperature:0.2,responseMimeType:'application/json'}};
+  return {model:cfg.model,input:[{role:'user',content:[{type:'input_text',text:prompt}]}],text:{format:{type:'json_object'}},temperature:0.2,store:false};
 }
 
 function buildTranslationPrompt(source,targetLanguage){
@@ -231,19 +228,7 @@ function aiRequestResilient(cfg,payload,label){
   for(let attempt=1;attempt<=MAX_RETRIES;attempt++){
     const result=rawAiFetch(cfg,payload);
     if(result.status>=200&&result.status<300){
-      let data;try{data=JSON.parse(result.raw);}catch(e){throw new Error(label+': Respons AI tidak valid.');}
-      return {data:data,status:result.status};
-    }
-    lastRaw=result.raw;lastStatus=result.status;
-    if(!isTransientStatus(result.status)||attempt===MAX_RETRIES)break;
-    const delay=Math.min(30000,Math.pow(2,attempt-1)*1200+Math.floor(Math.random()*800));
-    Utilities.sleep(delay);
-  }
-  const fallback={provider:'gemini',key:cfg.key,model:GEMINI_FALLBACK_MODEL,url:GEMINI_URL_BASE+GEMINI_FALLBACK_MODEL+':generateContent',fallbackModel:''};
-  for(let attempt=1;attempt<=MAX_RETRIES;attempt++){
-    const result=rawAiFetch(fallback,payload);
-    if(result.status>=200&&result.status<300){
-      let data;try{data=JSON.parse(result.raw);}catch(e){throw new Error(label+': Respons AI fallback tidak valid.');}
+      let data;try{data=JSON.parse(result.raw);}catch(e){throw new Error(label+': Respons OpenAI tidak valid.');}
       return {data:data,status:result.status};
     }
     lastRaw=result.raw;lastStatus=result.status;
@@ -255,10 +240,8 @@ function aiRequestResilient(cfg,payload,label){
 }
 
 function rawAiFetch(cfg,payload){
-  let url=cfg.url;
-  const options={method:'post',contentType:'application/json',headers:{},payload:JSON.stringify(payload),muteHttpExceptions:true};
-  if(cfg.provider==='gemini')url+='?key='+encodeURIComponent(cfg.key);
-  const r=UrlFetchApp.fetch(url,options);
+  const options={method:'post',contentType:'application/json',headers:{Authorization:'Bearer '+cfg.key},payload:JSON.stringify(payload),muteHttpExceptions:true};
+  const r=UrlFetchApp.fetch(cfg.url,options);
   return {status:r.getResponseCode(),raw:r.getContentText()};
 }
 
