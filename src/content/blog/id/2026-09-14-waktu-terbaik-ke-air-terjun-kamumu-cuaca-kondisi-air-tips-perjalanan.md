@@ -15,7 +15,7 @@ tags:
   - "tips perjalanan"
 ---
 
-## textAir Terjun Kamumu dikenal karena aliran airnya yang bertingkat, hutan pinus di sekelilingnya, dan suasana yang sejuk sepanjang hari. Salah satu keunggulan Kamumu dibandingkan banyak air terjun lain di Sulawesi adalah **debit airnya yang cenderung stabil sepanjang tahun**—baik di musim kemarau maupun penghujan. Ini berarti Anda tidak perlu khawatir menemukan air terjun yang mengering saat datang di musim panas.
+Air Terjun Kamumu dikenal karena aliran airnya yang bertingkat, hutan pinus di sekelilingnya, dan suasana yang sejuk sepanjang hari. Salah satu keunggulan Kamumu dibandingkan banyak air terjun lain di Sulawesi adalah **debit airnya yang cenderung stabil sepanjang tahun**—baik di musim kemarau maupun penghujan. Ini berarti Anda tidak perlu khawatir menemukan air terjun yang mengering saat datang di musim panas.
 
 Namun, "bisa dikunjungi kapan saja" bukan berarti "sama saja kapan pun Anda datang." Pengalaman Anda akan sangat dipengaruhi oleh waktu dalam setahun, waktu dalam sehari, dan kondisi cuaca saat itu. Artikel ini membahas ketiganya, plus apa yang perlu Anda persiapkan.
 
