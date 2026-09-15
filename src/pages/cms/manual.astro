@@ -27,14 +27,19 @@ const title='Manual Article CMS';
       <p>Manual Article → Translate Independently → Review → Publish</p>
       <p>Indonesian → English · Chinese · French · German</p>
     </header>
-
-    <div id="manual-cms">
-      <p>Loading Manual Article CMS…</p>
-    </div>
-
+    <div id="manual-cms"><p>Loading Manual Article CMS…</p></div>
     <a class="back" href="/cms/">← Back to Bulk CMS</a>
   </main>
-  <script src="/cms/manual-client.js?v=20260915-2" is:inline></script>
-  <script src="/cms/manual-markdown-fix.js?v=20260915-3" is:inline></script>
+  <script src="/cms/manual-client.js?v=20260915-4" is:inline></script>
+  <script>
+  (()=>{
+    const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+    const inline=s=>{let x=esc(s);x=x.replace(/`([^`\n]+)`/g,'<code>$1</code>');x=x.replace(/\*\*([^*\n]+)\*\*/g,'<strong>$1</strong>').replace(/__([^_\n]+)__/g,'<strong>$1</strong>');x=x.replace(/~~([^~\n]+)~~/g,'<del>$1</del>');x=x.replace(/(?<![\w*])\*([^*\n]+)\*(?!\*)/g,'<em>$1</em>').replace(/(?<![\w_])_([^_\n]+)_(?![\w_])/g,'<em>$1</em>');return x};
+    function md(src){const lines=String(src||'').replace(/\r/g,'').split('\n');let out='',i=0,para=[];const flush=()=>{if(para.length){out+='<p>'+para.map(inline).join('<br>')+'</p>';para=[]}};while(i<lines.length){const line=lines[i];if(!line.trim()){flush();i++;continue}let h=line.match(/^\s*(#{1,6})(?:\s+|(?=[^#]))(.+?)\s*#*\s*$/);if(h){flush();const n=h[1].length;out+=`<h${n}>${inline(h[2])}</h${n}>`;i++;continue}if(/^\s*(```|~~~)/.test(line)){flush();const mark=line.trim().slice(0,3);i++;const code=[];while(i<lines.length&&!lines[i].trim().startsWith(mark))code.push(lines[i++]);if(i<lines.length)i++;out+='<pre><code>'+esc(code.join('\n'))+'</code></pre>';continue}if(/^\s*[-+*]\s+/.test(line)){flush();const a=[];while(i<lines.length&&/^\s*[-+*]\s+/.test(lines[i]))a.push(lines[i++].replace(/^\s*[-+*]\s+/,''));out+='<ul>'+a.map(x=>'<li>'+inline(x)+'</li>').join('')+'</ul>';continue}if(/^\s*\d+[.)]\s+/.test(line)){flush();const a=[];while(i<lines.length&&/^\s*\d+[.)]\s+/.test(lines[i]))a.push(lines[i++].replace(/^\s*\d+[.)]\s+/,''));out+='<ol>'+a.map(x=>'<li>'+inline(x)+'</li>').join('')+'</ol>';continue}if(/^\s*>/.test(line)){flush();const q=[];while(i<lines.length&&/^\s*>/.test(lines[i]))q.push(lines[i++].replace(/^\s*>\s?/,''));out+='<blockquote>'+q.map(inline).join('<br>')+'</blockquote>';continue}if(/^\s*(---+|\*\s*\*\s*\*|___+)\s*$/.test(line)){flush();out+='<hr>';i++;continue}para.push(line);i++}flush();return out}
+    function refresh(btn){const card=btn.closest('.lang');const ta=card&&card.querySelector('textarea[data-field="content"]');const box=card&&card.querySelector('[data-preview-box]');if(ta&&box){box.innerHTML=md(ta.value);box.classList.add('show')}}
+    document.addEventListener('click',e=>{let el=e.target;while(el&&el!==document&&!el.matches?.('[data-preview]'))el=el.parentElement;if(el&&el.matches?.('[data-preview]'))setTimeout(()=>refresh(el),0)},true);
+    const style=document.createElement('style');style.textContent='.preview{font-size:16px!important;line-height:1.8!important}.preview h1{font-size:2.2em!important;line-height:1.15!important;margin:.1em 0 .7em!important;font-weight:800!important}.preview h2{font-size:1.8em!important;line-height:1.2!important;margin:1.2em 0 .6em!important;font-weight:800!important}.preview h3{font-size:1.5em!important;line-height:1.25!important;font-weight:800!important}.preview h4{font-size:1.25em!important;font-weight:800!important}.preview h5{font-size:1.1em!important;font-weight:800!important}.preview strong{font-weight:800!important}.preview del{text-decoration:line-through}.preview pre{overflow:auto;padding:14px;border-radius:10px;background:#020b12;white-space:pre-wrap}.preview code{font-family:ui-monospace,SFMono-Regular,Consolas,monospace}.preview ul,.preview ol{padding-left:1.5em}.preview blockquote{margin:1em 0;padding:.6em 1em;border-left:3px solid #65c8f2;background:#0a2133}.preview hr{border:0;border-top:1px solid #315267;margin:1.5em 0}';document.head.appendChild(style);
+  })();
+  </script>
 </body>
 </html>
