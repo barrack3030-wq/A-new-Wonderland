@@ -1,0 +1,9 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import { getCollection } from 'astro:content';
+export async function getStaticPaths(){const posts=await getCollection('blog');return posts.filter(p=>p.slug.startsWith('de/')).map(entry=>({params:{slug:entry.slug.replace('de/','')},props:{entry}}));}
+const {entry}=Astro.props;const {Content}=await entry.render();
+---
+<BaseLayout title={`${entry.data.title} | Banggai Wonderland Blog`} description={entry.data.description} seoTitle={entry.data.seoTitle} seoDescription={entry.data.seoDescription} ogImage={entry.data.image} imageAlt={entry.data.imageAlt||entry.data.title}>
+<div class="bg-sand-50 pt-32 pb-20 min-h-screen"><div class="max-w-4xl mx-auto px-5"><a href="/de/blog/" class="text-sm font-bold text-ocean-700 hover:text-turquoise-600">← Zurück zum Blog</a><header class="text-center mt-8 mb-10"><div class="flex flex-wrap justify-center gap-2 mb-5">{entry.data.tags?.map(tag=><span class="bg-turquoise-100 text-turquoise-800 text-xs font-bold px-3 py-1 rounded-full">{tag}</span>)}</div><h1 class="font-serif text-4xl md:text-6xl font-bold text-ocean-950 leading-tight">{entry.data.title}</h1><p class="mt-4 text-sm text-ocean-500">{new Intl.DateTimeFormat('de-DE',{year:'numeric',month:'long',day:'numeric'}).format(entry.data.pubDate)} · {entry.data.author}</p></header><img src={entry.data.image} alt={entry.data.imageAlt||entry.data.title} class="w-full rounded-3xl shadow-2xl mb-10"/><article class="prose prose-lg prose-ocean max-w-none bg-white p-7 md:p-12 rounded-3xl border border-sand-200 shadow-sm"><Content/></article></div></div>
+</BaseLayout>
