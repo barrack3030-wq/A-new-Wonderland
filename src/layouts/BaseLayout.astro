@@ -15,7 +15,7 @@ interface Props {
   schema?: any;
 }
 
-const { 
+const {
   title, 
   description = "Premium travel agency website for Banggai Wonderland, discovering the hidden paradise of Banggai.",
   seoTitle,
@@ -39,7 +39,7 @@ const lang = getLangFromUrl(Astro.url);
     <link rel="apple-touch-icon" sizes="180x180" href="/images/logo.png" />
     <link rel="stylesheet" href="/about-overrides.css" />
     <meta name="generator" content={Astro.generator} />
-    
+
     <SEO 
       title={title}
       description={description}
@@ -49,7 +49,14 @@ const lang = getLangFromUrl(Astro.url);
       imageAlt={imageAlt}
       schema={schema}
     />
-    
+
+    <!-- Google AdSense: Auto ads -->
+    <script
+      async
+      src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7663113812743791"
+      crossorigin="anonymous"
+    ></script>
+
     <!-- Google Fonts: Plus Jakarta Sans & Playfair Display -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
