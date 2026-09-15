@@ -9,7 +9,7 @@
     if(tag==='strong'||tag==='b')return '**'+Array.from(node.childNodes).map(inline).join('')+'**';
     if(tag==='em'||tag==='i')return '*'+Array.from(node.childNodes).map(inline).join('')+'*';
     if(tag==='del'||tag==='s'||tag==='strike')return '~~'+Array.from(node.childNodes).map(inline).join('')+'~~';
-    if(tag==='code'&&!['PRE'].includes(node.parentElement?.tagName))return '`'+node.textContent+'`';
+    if(tag==='code'&&node.parentElement?.tagName!=='PRE')return '`'+node.textContent+'`';
     if(tag==='a'){const text=Array.from(node.childNodes).map(inline).join('').trim()||node.href;return '['+text+']('+node.href+(node.title?' "'+node.title.replace(/"/g,'\\"')+'"':'')+')';}
     if(tag==='img')return '!['+(node.alt||'')+']('+(node.src||'')+')';
     return Array.from(node.childNodes).map(inline).join('');
@@ -25,7 +25,7 @@
     if(tag==='hr')return '---\n\n';
     if(tag==='ul'||tag==='ol'){
       let n=0;const out=[];
-      Array.from(node.children).forEach(li=>{if(li.tagName.toLowerCase()!=='li')return;n++;const body=Array.from(li.childNodes).map(x=>x.tagName?.toLowerCase()==='ul'||x.tagName?.toLowerCase()==='ol'?block(x,depth+1):inline(x)).join('').trim();const lines=body.split('\n');out.push((tag==='ol'?n+'. ':'- ')+lines[0]);for(let j=1;j<lines.length;j++)if(lines[j].trim())out.push('  '+lines[j]);});
+      Array.from(node.children).forEach(li=>{if(li.tagName.toLowerCase()!=='li')return;n++;const body=Array.from(li.childNodes).map(x=>['ul','ol'].includes(x.tagName?.toLowerCase())?block(x,depth+1):inline(x)).join('').trim();const lines=body.split('\n');out.push((tag==='ol'?n+'. ':'- ')+lines[0]);for(let j=1;j<lines.length;j++)if(lines[j].trim())out.push('  '+lines[j]);});
       return out.join('\n')+'\n\n';
     }
     if(tag==='table'){
@@ -34,34 +34,25 @@
       const width=Math.max(...rows.map(r=>r.length));rows.forEach(r=>{while(r.length<width)r.push('')});
       return '| '+rows[0].join(' | ')+' |\n| '+rows[0].map(()=> '---').join(' | ')+' |\n'+rows.slice(1).map(r=>'| '+r.join(' | ')+' |').join('\n')+'\n\n';
     }
-    if(tag==='div'||tag==='section'||tag==='article'||tag==='main'||tag==='body')return Array.from(node.childNodes).map(n=>block(n,depth)).join('');
+    if(['div','section','article','main','body'].includes(tag))return Array.from(node.childNodes).map(n=>block(n,depth)).join('');
     return Array.from(node.childNodes).map(inline).join('');
   };
-  const htmlToMarkdown=html=>{
-    const doc=new DOMParser().parseFromString(html,'text/html');
-    let md=Array.from(doc.body.childNodes).map(n=>block(n)).join('');
-    md=md.replace(/\n{3,}/g,'\n\n').replace(/[ \t]+\n/g,'\n').trim();
-    return md;
-  };
+  const htmlToMarkdown=html=>{const doc=new DOMParser().parseFromString(html,'text/html');return Array.from(doc.body.childNodes).map(n=>block(n)).join('').replace(/\n{3,}/g,'\n\n').replace(/[ \t]+\n/g,'\n').trim()};
   const attach=()=>{
-    const ta=document.getElementById('m-content');
-    if(!ta||ta.dataset.smartPaste==='1')return !!ta;
-    ta.dataset.smartPaste='1';
-    ta.addEventListener('paste',e=>{
-      const clip=e.clipboardData;
-      if(!clip)return;
-      const text=clip.getData('text/plain')||'';
-      const html=clip.getData('text/html')||'';
-      if(!html)return;
-      if(hasMarkdown(text))return;
-      const md=htmlToMarkdown(html);
-      if(!md)return;
-      e.preventDefault();
-      const start=ta.selectionStart,end=ta.selectionEnd;
-      ta.setRangeText(md,start,end,'end');
-      ta.dispatchEvent(new Event('input',{bubbles:true}));
+    const fields=document.querySelectorAll('textarea[data-field="content"],#m-content');
+    fields.forEach(ta=>{
+      if(ta.dataset.smartPaste==='1')return;
+      ta.dataset.smartPaste='1';
+      ta.addEventListener('paste',e=>{
+        const clip=e.clipboardData;if(!clip)return;
+        const text=clip.getData('text/plain')||'',html=clip.getData('text/html')||'';
+        if(!html||hasMarkdown(text))return;
+        const md=htmlToMarkdown(html);if(!md)return;
+        e.preventDefault();ta.setRangeText(md,ta.selectionStart,ta.selectionEnd,'end');
+        ta.dispatchEvent(new Event('input',{bubbles:true}));
+      });
     });
-    return true;
   };
-  if(!attach())new MutationObserver(()=>attach()).observe(document.documentElement,{childList:true,subtree:true});
+  attach();
+  new MutationObserver(attach).observe(document.documentElement,{childList:true,subtree:true});
 })();
