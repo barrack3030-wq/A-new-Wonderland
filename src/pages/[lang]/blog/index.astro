@@ -79,7 +79,7 @@ const articleSearchText = (post: typeof posts[number]) =>
               <span class="hidden sm:block h-px flex-1 ml-6 bg-sand-200"></span>
             </div>
 
-            <div class="grid grid-cols-1 xl:grid-cols-[minmax(0,1.52fr)_minmax(0,1fr)] gap-10 xl:gap-12 items-start">
+            <div class="grid grid-cols-1 xl:grid-cols-[minmax(0,1.42fr)_minmax(0,1fr)] gap-10 xl:gap-16 items-start">
               {featuredPost && (
                 <article class="blog-search-item group min-w-0" data-search={articleSearchText(featuredPost)}>
                   <a href={`/${lang}/blog/${featuredPost.slug.split('/').slice(1).join('/')}/`} class="block">
@@ -115,15 +115,15 @@ const articleSearchText = (post: typeof posts[number]) =>
                 </article>
               )}
 
-              <div class="min-w-0 border-t border-sand-200 xl:border-t-0">
+              <div class="min-w-0">
                 {recentPosts.map((post) => (
                   <article
-                    class="blog-search-item group border-b border-sand-200 first:border-t first:border-sand-200 last:border-b-0"
+                    class="blog-search-item group border-b border-sand-200 last:border-b-0 pb-5 mb-5 last:pb-0 last:mb-0"
                     data-search={articleSearchText(post)}
                   >
                     <a
                       href={`/${lang}/blog/${post.slug.split('/').slice(1).join('/')}/`}
-                      class="grid grid-cols-[140px_minmax(0,1fr)] gap-4 xl:gap-5 items-start py-5 first:pt-0 last:pb-0"
+                      class="grid grid-cols-[140px_minmax(0,1fr)] gap-4 xl:gap-5 items-start"
                     >
                       <div class="w-[140px] h-[108px] overflow-hidden rounded-xl bg-ocean-100 shrink-0">
                         <img
@@ -134,7 +134,7 @@ const articleSearchText = (post: typeof posts[number]) =>
                         />
                       </div>
 
-                      <div class="min-w-0 h-[108px] flex flex-col">
+                      <div class="min-w-0 min-h-[108px] flex flex-col">
                         <div class="text-[10px] font-medium text-ocean-500 mb-1.5 leading-none">
                           {new Intl.DateTimeFormat(lang, { year: 'numeric', month: 'short', day: 'numeric' }).format(post.data.pubDate)}
                         </div>
@@ -144,7 +144,7 @@ const articleSearchText = (post: typeof posts[number]) =>
                         <p class="blog-side-excerpt mt-2 text-[11px] leading-[1.45] text-ocean-600">
                           {post.data.description}
                         </p>
-                        <div class="flex flex-wrap gap-1.5 mt-auto pt-2">
+                        <div class="flex flex-wrap gap-1.5 mt-auto pt-3">
                           {post.data.tags?.slice(0, 2).map(tag => (
                             <span class="text-[9px] font-medium text-ocean-600 border border-ocean-200 rounded-full px-2 py-0.5 leading-none">{tag}</span>
                           ))}
