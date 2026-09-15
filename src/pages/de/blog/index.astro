@@ -1,0 +1,9 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import { getCollection } from 'astro:content';
+export async function getStaticPaths(){return [{params:{}}]}
+const posts=(await getCollection('blog')).filter(p=>p.slug.startsWith('de/')).sort((a,b)=>b.data.pubDate.valueOf()-a.data.pubDate.valueOf());
+---
+<BaseLayout title="Blog | Banggai Wonderland" description="Reisegeschichten und praktische Reiseführer für Banggai.">
+<div class="bg-sand-50 pt-32 pb-20 min-h-screen"><div class="max-w-6xl mx-auto px-5"><header class="text-center max-w-3xl mx-auto mb-12"><p class="text-xs font-bold uppercase tracking-[0.28em] text-turquoise-600 mb-4">Banggai Wonderland Journal</p><h1 class="font-serif text-4xl md:text-6xl font-bold text-ocean-950">Reisegeschichten aus Banggai</h1><p class="mt-5 text-ocean-600">Reiseführer, lokale Geschichten und praktische Tipps für deine Reise nach Banggai.</p></header>{posts.length?<div class="grid md:grid-cols-2 lg:grid-cols-3 gap-7">{posts.map(post=>{const slug=post.slug.replace('de/','');return <a href={`/de/blog/${slug}/`} class="group bg-white rounded-2xl overflow-hidden border border-sand-200 shadow-sm"><img src={post.data.image} alt={post.data.imageAlt||post.data.title} class="w-full aspect-[16/10] object-cover group-hover:scale-[1.02] transition-transform"/><div class="p-5"><p class="text-xs text-ocean-500">{new Intl.DateTimeFormat('de-DE',{year:'numeric',month:'long',day:'numeric'}).format(post.data.pubDate)}</p><h2 class="mt-2 font-serif text-xl font-bold text-ocean-950 group-hover:text-turquoise-600">{post.data.title}</h2><p class="mt-2 text-sm text-ocean-600 leading-relaxed">{post.data.description}</p></div></a>})}</div>:<div class="text-center py-20 bg-white rounded-2xl border border-sand-200 text-ocean-600">Noch keine deutschen Blogartikel.</div>}</div></div>
+</BaseLayout>
