@@ -35,52 +35,75 @@ const breadcrumbItems = [
 >
   <div class="bg-sand-50 pt-32 pb-20 min-h-screen">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      
       <Breadcrumb items={breadcrumbItems} />
       
-      <div class="mb-14 max-w-3xl">
-        <p class="text-xs font-bold uppercase tracking-[0.22em] text-turquoise-600 mb-4">Banggai Wonderland Journal</p>
+      <div class="mb-12">
         <h1 class="font-serif text-4xl md:text-5xl font-bold text-ocean-900 mb-4">{t('nav.blog')}</h1>
-        <p class="text-lg text-ocean-600 leading-relaxed">{t('hero.desc')}</p>
-        <a href="/seo-lab/" class="inline-flex items-center mt-5 text-sm font-medium text-ocean-700 hover:text-ocean-900 transition-colors" rel="nofollow">
-          SEO Content Planning <span class="ml-2">→</span>
-        </a>
+        <p class="text-lg text-ocean-600 max-w-2xl">{t('hero.desc')}</p>
       </div>
 
-      {featuredPost ? (
-        <>
-          <section class="mb-16">
-            <div class="flex items-center justify-between mb-6">
-              <div>
-                <p class="text-xs font-bold uppercase tracking-[0.2em] text-ocean-500 mb-1">Featured Guide</p>
-                <h2 class="font-serif text-2xl md:text-3xl font-bold text-ocean-900">Start your journey here</h2>
+      {posts.length > 0 ? (
+        <div class="space-y-16">
+          {featuredPost && (
+            <section>
+              <div class="flex items-center gap-3 mb-6">
+                <span class="h-px w-8 bg-turquoise-500"></span>
+                <p class="text-xs font-bold uppercase tracking-[0.2em] text-ocean-500">Featured Guide</p>
               </div>
-            </div>
-            <BlogCard post={featuredPost} featured />
-          </section>
+
+              <a href={`/${lang}/blog/${featuredPost.slug.split('/').slice(1).join('/')}/`} class="group grid grid-cols-1 lg:grid-cols-2 bg-white rounded-3xl overflow-hidden border border-sand-200 shadow-sm hover:shadow-xl transition-all duration-300">
+                <div class="relative min-h-[280px] lg:min-h-[420px] overflow-hidden">
+                  <img
+                    src={featuredPost.data.image}
+                    alt={featuredPost.data.imageAlt || featuredPost.data.title}
+                    class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                    loading="eager"
+                  />
+                  <div class="absolute inset-0 bg-gradient-to-t from-ocean-950/30 to-transparent"></div>
+                </div>
+                <div class="p-7 sm:p-10 lg:p-12 flex flex-col justify-center">
+                  <div class="flex flex-wrap gap-2 mb-5">
+                    {featuredPost.data.tags?.slice(0, 2).map(tag => (
+                      <span class="text-[10px] font-bold uppercase tracking-wider text-ocean-700 bg-sand-100 px-3 py-1.5 rounded-full">{tag}</span>
+                    ))}
+                  </div>
+                  <div class="text-xs text-ocean-500 uppercase tracking-wider font-semibold mb-4">
+                    {new Intl.DateTimeFormat(lang, { year: 'numeric', month: 'long', day: 'numeric' }).format(featuredPost.data.pubDate)}
+                  </div>
+                  <h2 class="font-serif text-3xl md:text-4xl font-bold text-ocean-900 leading-tight mb-5 group-hover:text-turquoise-600 transition-colors">
+                    {featuredPost.data.title}
+                  </h2>
+                  <p class="text-ocean-600 leading-relaxed mb-8 max-w-xl">
+                    {featuredPost.data.description}
+                  </p>
+                  <span class="inline-flex items-center text-sm uppercase tracking-wider font-bold text-turquoise-600">
+                    {t('blog.read_more')}
+                    <svg class="w-4 h-4 ml-2 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
+                  </span>
+                </div>
+              </a>
+            </section>
+          )}
 
           {remainingPosts.length > 0 && (
             <section>
-              <div class="flex items-end justify-between mb-7">
-                <div>
-                  <p class="text-xs font-bold uppercase tracking-[0.2em] text-ocean-500 mb-1">Travel Guides</p>
-                  <h2 class="font-serif text-2xl md:text-3xl font-bold text-ocean-900">Explore Banggai</h2>
+              <div class="flex items-center justify-between mb-7">
+                <div class="flex items-center gap-3">
+                  <span class="h-px w-8 bg-turquoise-500"></span>
+                  <h2 class="font-serif text-2xl md:text-3xl font-bold text-ocean-900">Travel Guides</h2>
                 </div>
               </div>
               <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7">
-                {remainingPosts.map(post => (
-                  <BlogCard post={post} />
-                ))}
+                {remainingPosts.map(post => <BlogCard post={post} />)}
               </div>
             </section>
           )}
-        </>
+        </div>
       ) : (
         <div class="text-center py-20 bg-white rounded-2xl border border-sand-200">
           <p class="text-ocean-600">No blog posts found for this language yet.</p>
         </div>
       )}
-      
     </div>
   </div>
 
