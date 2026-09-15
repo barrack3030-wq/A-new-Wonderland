@@ -111,8 +111,19 @@ const articles = [
       .plan { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; }
       .step { background: white; border: 1px solid #e3e9ee; border-radius: 16px; padding: 18px; }
       .step strong { display: block; margin-bottom: 6px; }
+      .prompt-card { background: white; border: 1px solid #dce5ec; border-radius: 20px; padding: 24px; box-shadow: 0 10px 34px rgba(15,38,60,.06); }
+      .prompt-head { display: flex; align-items: flex-start; justify-content: space-between; gap: 18px; margin-bottom: 16px; }
+      .prompt-head h2 { margin-bottom: 6px; }
+      .prompt-actions { display: flex; flex-wrap: wrap; gap: 10px; }
+      .btn { display: inline-flex; align-items: center; justify-content: center; min-height: 42px; padding: 10px 16px; border-radius: 10px; text-decoration: none; font-size: 13px; font-weight: 700; border: 1px solid transparent; }
+      .btn-primary { background: #123e61; color: white; }
+      .btn-primary:hover { background: #0b2742; }
+      .btn-secondary { background: #f3f7fa; border-color: #d7e1e8; color: #214866; }
+      .btn-secondary:hover { background: #e9f1f6; }
+      .prompt-box { width: 100%; min-height: 540px; resize: vertical; border: 1px solid #dbe5eb; border-radius: 14px; padding: 18px; background: #f8fafc; color: #17334b; font: 13px/1.65 ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace; outline: none; }
+      .prompt-note { margin: 12px 0 0; color: #708193; font-size: 12px; line-height: 1.6; }
       .footer { margin-top: 38px; color: #778798; font-size: 12px; line-height: 1.6; }
-      @media (max-width: 800px) { .grid, .plan { grid-template-columns: 1fr; } .hero { padding: 26px; border-radius: 18px; } .wrap { width: min(100% - 20px, 1180px); padding-top: 20px; } }
+      @media (max-width: 800px) { .grid, .plan { grid-template-columns: 1fr; } .hero { padding: 26px; border-radius: 18px; } .wrap { width: min(100% - 20px, 1180px); padding-top: 20px; } .prompt-head { flex-direction: column; } .prompt-actions { width: 100%; } .prompt-actions .btn { flex: 1 1 auto; } .prompt-box { min-height: 620px; } }
     </style>
   </head>
   <body>
@@ -173,7 +184,115 @@ const articles = [
         </div>
       </section>
 
+      <section>
+        <div class="prompt-card">
+          <div class="prompt-head">
+            <div>
+              <h2>General AI Article Writing Prompt</h2>
+              <p class="sub">Copy the prompt below into DeepSeek or another AI writer. Replace the bracketed inputs before generating the article.</p>
+            </div>
+            <div class="prompt-actions">
+              <a class="btn btn-primary" href="https://chat.deepseek.com/" target="_blank" rel="noopener noreferrer">Open DeepSeek</a>
+              <button class="btn btn-secondary" type="button" id="copy-prompt">Copy Prompt</button>
+            </div>
+          </div>
+
+          <textarea id="article-prompt" class="prompt-box" readonly>Write a high-quality, original, human-sounding travel article for an international audience.
+
+ARTICLE INPUTS
+Topic: [ARTICLE TOPIC]
+Primary keyword: [PRIMARY KEYWORD]
+Secondary keywords: [SECONDARY KEYWORDS]
+Target audience: [TARGET AUDIENCE]
+Target country/market: [COUNTRY OR MARKET]
+Preferred language: [LANGUAGE]
+Approximate length: [WORD COUNT]
+Location / destination: [LOCATION]
+Known facts or source notes: [FACTS, LINKS, NOTES]
+
+MAIN GOAL
+Create an article that genuinely helps the reader make a travel decision or plan a trip. The article must feel written by a knowledgeable local travel writer, not by a generic AI content generator. Prioritize usefulness, clarity, accuracy, natural storytelling, and search intent.
+
+WRITING REQUIREMENTS
+1. Start with a strong opening that directly addresses the reader's search intent. Do not use a generic introduction.
+2. Write naturally and confidently. Avoid repetitive sentence patterns, filler phrases, exaggerated claims, and robotic wording.
+3. Use the primary keyword naturally in the title, introduction, at least one relevant heading, and the body where appropriate. Never keyword-stuff.
+4. Use secondary keywords only when they fit naturally and improve topical relevance.
+5. Build a clear structure with one H1, logical H2 sections, and H3 subsections when useful.
+6. Make the article easy to scan with short paragraphs, useful lists, tables when appropriate, and practical subheadings.
+7. Give specific, practical information relevant to the topic, such as access, transport, timing, distance, seasons, activities, planning tips, what to bring, what to expect, and common mistakes, but only when the information is supported by the supplied facts or reliable sources.
+8. Never invent prices, schedules, ferry times, opening hours, distances, names, statistics, safety claims, or other specific facts. When a fact cannot be verified, say so clearly or leave it out.
+9. Distinguish verified facts from suggestions or opinions. Do not present assumptions as facts.
+10. When discussing travel conditions such as weather, ferry services, road conditions, or seasonal access, explain that conditions can change and recommend checking current local information before travel when appropriate.
+11. Avoid clichés such as “hidden gem,” “paradise,” “untouched paradise,” “breathtaking,” or similar promotional language unless it is truly justified and used sparingly.
+12. Do not copy or closely imitate another website. The article must be original in wording, structure, examples, and perspective.
+13. Mention the destination and surrounding context naturally. Do not force the brand name into every section.
+14. When Banggai is relevant to the topic, introduce Banggai Wonderland naturally as a local travel resource or private-trip option, without turning the article into an advertisement.
+15. Keep the tone premium, warm, practical, credible, and relaxed. Write for real travelers, not search engines.
+16. Avoid emojis in the article.
+17. Do not add fake quotes, fake testimonials, fake expert opinions, or invented first-hand experiences.
+18. Do not claim that the writer personally visited a place unless first-hand details are explicitly provided in the input.
+
+SEO OUTPUT
+After the article, provide:
+- SEO title: concise, compelling, and aligned with search intent.
+- Meta description: natural and persuasive, suitable for a search result.
+- Suggested URL slug: short, readable, and keyword-relevant.
+- Primary keyword.
+- 5–10 secondary keywords.
+- Search intent: informational, commercial, navigational, or mixed.
+- Suggested internal links: list 3–5 relevant article/topic ideas that should be linked from this article.
+- Suggested image ideas: 3–5 original photo concepts that match the article. Do not suggest generic stock-photo concepts.
+
+QUALITY CHECK
+Before finalizing, review the article and correct:
+- unsupported or invented facts
+- keyword stuffing
+- repetitive wording
+- generic AI introductions
+- excessive promotional language
+- awkward transitions
+- unnecessary repetition of the destination name
+- unclear headings
+- overly long paragraphs
+- claims that should be qualified
+
+FINAL FORMAT
+Return the final article in clean Markdown with:
+# H1 Title
+Opening section
+## H2 sections
+### H3 subsections where needed
+Practical lists or tables where useful
+A natural conclusion
+Then a clearly separated SEO metadata section.
+
+The final article should be genuinely useful even if the reader never buys anything or contacts a travel agency.</textarea>
+          <p class="prompt-note">Tip: For factual travel content, provide the AI with your own verified notes, current schedules, route details, or source links. This improves accuracy and reduces the risk of invented details.</p>
+        </div>
+      </section>
+
       <p class="footer">Internal planning page only. Keep it out of public navigation and the XML sitemap. Article titles are working titles and should be validated against live search demand before publication.</p>
     </main>
+
+    <script>
+      const copyButton = document.querySelector('#copy-prompt');
+      const promptBox = document.querySelector('#article-prompt');
+
+      copyButton?.addEventListener('click', async () => {
+        if (!promptBox) return;
+        try {
+          await navigator.clipboard.writeText(promptBox.value);
+          copyButton.textContent = 'Copied';
+          setTimeout(() => { copyButton.textContent = 'Copy Prompt'; }, 1600);
+        } catch {
+          promptBox.focus();
+          promptBox.select();
+          document.execCommand('copy');
+          copyButton.textContent = 'Copied';
+          setTimeout(() => { copyButton.textContent = 'Copy Prompt'; }, 1600);
+        }
+      });
+    </script>
   </body>
 </html>
