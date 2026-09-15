@@ -115,12 +115,13 @@ const articles = [
       .prompt-head { display: flex; align-items: flex-start; justify-content: space-between; gap: 18px; margin-bottom: 16px; }
       .prompt-head h2 { margin-bottom: 6px; }
       .prompt-actions { display: flex; flex-wrap: wrap; gap: 10px; }
-      .btn { display: inline-flex; align-items: center; justify-content: center; min-height: 42px; padding: 10px 16px; border-radius: 10px; text-decoration: none; font-size: 13px; font-weight: 700; border: 1px solid transparent; }
+      .btn { display: inline-flex; align-items: center; justify-content: center; min-height: 42px; padding: 10px 16px; border-radius: 10px; text-decoration: none; font-size: 13px; font-weight: 700; border: 1px solid transparent; cursor: pointer; }
       .btn-primary { background: #123e61; color: white; }
       .btn-primary:hover { background: #0b2742; }
       .btn-secondary { background: #f3f7fa; border-color: #d7e1e8; color: #214866; }
       .btn-secondary:hover { background: #e9f1f6; }
       .prompt-box { width: 100%; min-height: 540px; resize: vertical; border: 1px solid #dbe5eb; border-radius: 14px; padding: 18px; background: #f8fafc; color: #17334b; font: 13px/1.65 ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace; outline: none; }
+      .image-prompt-box { min-height: 610px; }
       .prompt-note { margin: 12px 0 0; color: #708193; font-size: 12px; line-height: 1.6; }
       .footer { margin-top: 38px; color: #778798; font-size: 12px; line-height: 1.6; }
       @media (max-width: 800px) { .grid, .plan { grid-template-columns: 1fr; } .hero { padding: 26px; border-radius: 18px; } .wrap { width: min(100% - 20px, 1180px); padding-top: 20px; } .prompt-head { flex-direction: column; } .prompt-actions { width: 100%; } .prompt-actions .btn { flex: 1 1 auto; } .prompt-box { min-height: 620px; } }
@@ -272,27 +273,112 @@ The final article should be genuinely useful even if the reader never buys anyth
         </div>
       </section>
 
+      <section>
+        <div class="prompt-card">
+          <div class="prompt-head">
+            <div>
+              <h2>AI Featured Image Prompt</h2>
+              <p class="sub">Use the article title, topic, and highlight to generate a relevant editorial hero image that actually matches the story.</p>
+            </div>
+            <div class="prompt-actions">
+              <a class="btn btn-primary" href="https://chat.deepseek.com/" target="_blank" rel="noopener noreferrer">Open DeepSeek</a>
+              <button class="btn btn-secondary" type="button" id="copy-image-prompt">Copy Image Prompt</button>
+            </div>
+          </div>
+
+          <textarea id="image-prompt" class="prompt-box image-prompt-box" readonly>You are an expert travel editorial art director creating a realistic featured image for a premium travel article.
+
+Based on the article information below, create ONE highly relevant hero image that visually represents the main story and strongest highlight of the article.
+
+ARTICLE INFORMATION
+Title: [ARTICLE TITLE]
+Main Topic: [MAIN TOPIC]
+Primary Keyword: [PRIMARY KEYWORD]
+Article Highlight: [PASTE THE ARTICLE HIGHLIGHT OR SUMMARY HERE]
+Destination / Location: [LOCATION]
+Target Audience: [AUSTRALIA / MALAYSIA / THAILAND / INTERNATIONAL]
+
+IMAGE OBJECTIVE
+Create a compelling editorial travel photograph that immediately communicates what the article is about.
+
+The image must:
+- Focus on the strongest visual idea from the article highlight.
+- Show the actual destination, landscape, activity, or travel experience relevant to the article.
+- Feel authentic, natural, premium, and documentary-like.
+- Look like a professional travel magazine photograph.
+- Use realistic geography, architecture, vegetation, weather, water, and environmental details.
+- Preserve a strong sense of place.
+- Avoid generic “tropical paradise” imagery that could represent any destination.
+- Make the image clearly connected to Banggai Islands when Banggai is the subject.
+- Prioritize visual storytelling over decorative composition.
+
+COMPOSITION
+- Wide horizontal editorial composition.
+- Suitable for a website featured image / blog hero.
+- Strong focal subject.
+- Natural foreground, middle ground, and background depth.
+- Leave some visual breathing room for website cropping.
+- Do not place important subjects too close to the edges.
+- Keep the composition balanced for both desktop and mobile cropping.
+
+VISUAL STYLE
+- Premium travel editorial photography.
+- Photorealistic.
+- Natural lighting.
+- Realistic colors.
+- Subtle cinematic atmosphere.
+- High detail without looking artificial.
+- Sophisticated and understated.
+- Authentic Southeast Asian tropical environment where appropriate.
+
+IMPORTANT ACCURACY RULES
+- Do not invent landmarks that do not exist.
+- Do not mix landscapes from different destinations.
+- Do not create unrealistic water colors, mountains, beaches, buildings, or vegetation.
+- Do not add famous landmarks from other countries.
+- Do not turn a real destination into an exaggerated fantasy landscape.
+- When exact visual details are uncertain, choose a believable documentary-style interpretation rather than inventing specific structures.
+
+AVOID
+- Generic stock-photo appearance.
+- Overly perfect tourism advertisements.
+- Excessive saturation.
+- Fantasy landscapes.
+- Artificial-looking people.
+- Unrealistic boats, roads, buildings, or vehicles.
+- Excessive drone-style perspective unless the article specifically calls for an aerial view.
+- Text, logos, captions, watermarks, or UI elements inside the image.
+
+OUTPUT
+Generate one landscape hero image that best represents the article’s main highlight.</textarea>
+          <p class="prompt-note">Tip: Paste the article's strongest highlight or summary into the prompt. The goal is a visual interpretation of the story, not a generic image based only on the keyword.</p>
+        </div>
+      </section>
+
       <p class="footer">Internal planning page only. Keep it out of public navigation and the XML sitemap. Article titles are working titles and should be validated against live search demand before publication.</p>
     </main>
 
     <script>
       const copyButton = document.querySelector('#copy-prompt');
       const promptBox = document.querySelector('#article-prompt');
+      const copyImageButton = document.querySelector('#copy-image-prompt');
+      const imagePromptBox = document.querySelector('#image-prompt');
 
-      copyButton?.addEventListener('click', async () => {
-        if (!promptBox) return;
+      const copyText = async (button, box, label) => {
+        if (!box || !button) return;
         try {
-          await navigator.clipboard.writeText(promptBox.value);
-          copyButton.textContent = 'Copied';
-          setTimeout(() => { copyButton.textContent = 'Copy Prompt'; }, 1600);
+          await navigator.clipboard.writeText(box.value);
         } catch {
-          promptBox.focus();
-          promptBox.select();
+          box.focus();
+          box.select();
           document.execCommand('copy');
-          copyButton.textContent = 'Copied';
-          setTimeout(() => { copyButton.textContent = 'Copy Prompt'; }, 1600);
         }
-      });
+        button.textContent = 'Copied';
+        setTimeout(() => { button.textContent = label; }, 1600);
+      };
+
+      copyButton?.addEventListener('click', () => copyText(copyButton, promptBox, 'Copy Prompt'));
+      copyImageButton?.addEventListener('click', () => copyText(copyImageButton, imagePromptBox, 'Copy Image Prompt'));
     </script>
   </body>
 </html>
