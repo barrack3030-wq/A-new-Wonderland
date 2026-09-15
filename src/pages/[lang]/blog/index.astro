@@ -20,6 +20,9 @@ const posts = allPosts
   .filter(post => post.slug.startsWith(`${lang}/`))
   .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
 
+const featuredPost = posts[0];
+const remainingPosts = posts.slice(1);
+
 const breadcrumbItems = [
   { name: 'Home', url: `/${lang}/` },
   { name: t('nav.blog'), url: `/${lang}/blog/` }
@@ -35,20 +38,43 @@ const breadcrumbItems = [
       
       <Breadcrumb items={breadcrumbItems} />
       
-      <div class="mb-12">
+      <div class="mb-14 max-w-3xl">
+        <p class="text-xs font-bold uppercase tracking-[0.22em] text-turquoise-600 mb-4">Banggai Wonderland Journal</p>
         <h1 class="font-serif text-4xl md:text-5xl font-bold text-ocean-900 mb-4">{t('nav.blog')}</h1>
-        <p class="text-lg text-ocean-600 max-w-2xl">{t('hero.desc')}</p>
+        <p class="text-lg text-ocean-600 leading-relaxed">{t('hero.desc')}</p>
         <a href="/seo-lab/" class="inline-flex items-center mt-5 text-sm font-medium text-ocean-700 hover:text-ocean-900 transition-colors" rel="nofollow">
           SEO Content Planning <span class="ml-2">→</span>
         </a>
       </div>
 
-      {posts.length > 0 ? (
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {posts.map(post => (
-            <BlogCard post={post} />
-          ))}
-        </div>
+      {featuredPost ? (
+        <>
+          <section class="mb-16">
+            <div class="flex items-center justify-between mb-6">
+              <div>
+                <p class="text-xs font-bold uppercase tracking-[0.2em] text-ocean-500 mb-1">Featured Guide</p>
+                <h2 class="font-serif text-2xl md:text-3xl font-bold text-ocean-900">Start your journey here</h2>
+              </div>
+            </div>
+            <BlogCard post={featuredPost} featured />
+          </section>
+
+          {remainingPosts.length > 0 && (
+            <section>
+              <div class="flex items-end justify-between mb-7">
+                <div>
+                  <p class="text-xs font-bold uppercase tracking-[0.2em] text-ocean-500 mb-1">Travel Guides</p>
+                  <h2 class="font-serif text-2xl md:text-3xl font-bold text-ocean-900">Explore Banggai</h2>
+                </div>
+              </div>
+              <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7">
+                {remainingPosts.map(post => (
+                  <BlogCard post={post} />
+                ))}
+              </div>
+            </section>
+          )}
+        </>
       ) : (
         <div class="text-center py-20 bg-white rounded-2xl border border-sand-200">
           <p class="text-ocean-600">No blog posts found for this language yet.</p>
