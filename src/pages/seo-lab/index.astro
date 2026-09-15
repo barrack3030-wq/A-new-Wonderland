@@ -1,0 +1,179 @@
+---
+const title = 'SEO Lab — Banggai Wonderland';
+const markets = [
+  {
+    name: 'Australia',
+    priority: 'Primary',
+    share: '50%',
+    focus: 'Beyond Bali, diving, remote islands, adventure travel',
+    keywords: [
+      'where to go after Bali',
+      'best destinations beyond Bali',
+      'Bali alternatives',
+      'where to go after Lombok',
+      'Banggai Islands Indonesia',
+      'Banggai Islands travel guide',
+      'Banggai Islands diving',
+      'Banggai Islands snorkeling',
+      'Banggai Islands island hopping',
+      'Paisu Pok Lake Indonesia'
+    ]
+  },
+  {
+    name: 'Malaysia',
+    priority: 'Secondary',
+    share: '35%',
+    focus: 'Regional travel, private trips, island escapes',
+    keywords: [
+      'Banggai Islands Indonesia',
+      'Banggai Islands tour',
+      'pulau Banggai Indonesia',
+      'Kepulauan Banggai',
+      'percutian ke Banggai',
+      'pulau tersembunyi Indonesia',
+      'pulau cantik Indonesia',
+      'snorkeling Banggai',
+      'diving Banggai',
+      'Paisu Pok Indonesia'
+    ]
+  },
+  {
+    name: 'Thailand',
+    priority: 'Test / Niche',
+    share: '15%',
+    focus: 'Diving, hidden islands, snorkeling, adventure',
+    keywords: [
+      'Banggai Islands diving',
+      'Banggai Islands snorkeling',
+      'Banggai island hopping',
+      'hidden islands Indonesia',
+      'remote islands Indonesia',
+      'Paisu Pok Lake',
+      'Banggai Islands travel'
+    ]
+  }
+];
+
+const articles = [
+  ['01', 'Where to Go After Bali? 10 Indonesian Destinations Beyond Bali', 'where to go after Bali', 'Australia', 'Top-of-funnel', 'Pillar'],
+  ['02', 'Bali and Beyond: Where Should You Travel Next in Indonesia?', 'Bali and beyond', 'Australia', 'Top-of-funnel', 'Pillar'],
+  ['03', 'Where to Go After Lombok? Discover Indonesia Beyond the Usual Route', 'where to go after Lombok', 'Australia', 'Top-of-funnel', 'Pillar'],
+  ['04', 'Best Alternatives to Bali for Travelers Who Want Fewer Crowds', 'Bali alternatives', 'Australia', 'Discovery', 'Pillar'],
+  ['05', 'Where to Go After Bali for Diving and Island Adventures?', 'where to go after Bali for diving', 'Australia', 'Discovery', 'Support'],
+  ['06', 'Hidden Islands in Indonesia: 10 Places Beyond the Usual Tourist Route', 'hidden islands in Indonesia', 'Australia / Malaysia', 'Discovery', 'Pillar'],
+  ['07', 'Why Visit Sulawesi After Bali and Lombok?', 'Sulawesi after Bali', 'Australia', 'Discovery', 'Support'],
+  ['08', 'Banggai Islands Travel Guide: A Remote Paradise in Indonesia', 'Banggai Islands travel guide', 'Australia', 'Commercial research', 'Pillar'],
+  ['09', 'Banggai Islands vs Raja Ampat: Which Should You Visit?', 'Banggai Islands vs Raja Ampat', 'Australia', 'Comparison', 'Pillar'],
+  ['10', 'Banggai Islands Diving and Snorkeling Guide', 'Banggai Islands diving', 'Australia / Thailand', 'Commercial research', 'Pillar'],
+  ['11', 'Banggai Islands Island Hopping: What to Expect', 'Banggai Islands island hopping', 'Australia / Malaysia', 'Commercial research', 'Support'],
+  ['12', 'Paisu Pok Lake: How to Visit One of Indonesia’s Clearest Lakes', 'Paisu Pok Lake Indonesia', 'Australia / Malaysia', 'Discovery', 'Pillar'],
+  ['13', 'How to Get to the Banggai Islands from Luwuk', 'how to get to Banggai Islands', 'All', 'Planning', 'Pillar'],
+  ['14', 'How Many Days Do You Need in the Banggai Islands?', 'Banggai Islands itinerary', 'Australia / Malaysia', 'Planning', 'Support'],
+  ['15', 'Banggai Islands 4-Day Itinerary for First-Time Visitors', 'Banggai Islands itinerary 4 days', 'Australia', 'Commercial', 'Conversion'],
+  ['16', 'A Private Island Escape in Banggai: What Is Included?', 'Banggai Islands private tour', 'Australia / Malaysia', 'Commercial', 'Conversion']
+];
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>{title}</title>
+    <meta name="robots" content="noindex, nofollow, noarchive" />
+    <meta name="description" content="Internal SEO planning workspace for Banggai Wonderland. Not part of the public navigation." />
+    <style>
+      :root { font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; color: #10243b; background: #f4f7fa; }
+      * { box-sizing: border-box; }
+      body { margin: 0; }
+      .wrap { width: min(1180px, calc(100% - 32px)); margin: 0 auto; padding: 42px 0 70px; }
+      .hero { background: linear-gradient(135deg, #0b2742, #123e61); color: white; border-radius: 24px; padding: 36px; box-shadow: 0 18px 50px rgba(10,35,58,.16); }
+      .eyebrow { text-transform: uppercase; letter-spacing: .14em; font-size: 11px; opacity: .7; font-weight: 700; }
+      h1 { margin: 8px 0 10px; font-size: clamp(30px, 5vw, 52px); letter-spacing: -.04em; }
+      .hero p { max-width: 780px; line-height: 1.7; margin: 0; color: #d9e7f2; }
+      .warning { margin-top: 20px; display: inline-block; border: 1px solid rgba(255,255,255,.18); border-radius: 999px; padding: 8px 13px; font-size: 12px; color: #d9e7f2; }
+      section { margin-top: 34px; }
+      h2 { font-size: 24px; margin: 0 0 14px; letter-spacing: -.02em; }
+      .sub { color: #5d6d7d; margin: 0 0 18px; line-height: 1.6; }
+      .grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+      .card { background: white; border: 1px solid #e3e9ee; border-radius: 18px; padding: 22px; box-shadow: 0 8px 28px rgba(15,38,60,.05); }
+      .card h3 { margin: 0 0 7px; font-size: 20px; }
+      .meta { color: #607386; font-size: 13px; line-height: 1.55; }
+      .badge { display: inline-block; margin: 0 0 12px; padding: 5px 9px; border-radius: 999px; background: #edf4f8; color: #245878; font-size: 11px; font-weight: 700; }
+      ul { padding-left: 19px; margin: 14px 0 0; }
+      li { margin: 7px 0; font-size: 13px; line-height: 1.4; }
+      .table-wrap { overflow-x: auto; background: white; border: 1px solid #e3e9ee; border-radius: 18px; }
+      table { width: 100%; border-collapse: collapse; min-width: 900px; }
+      th, td { text-align: left; padding: 13px 15px; border-bottom: 1px solid #edf0f3; vertical-align: top; font-size: 13px; }
+      th { background: #f8fafb; font-size: 11px; text-transform: uppercase; letter-spacing: .08em; color: #65778a; }
+      tr:last-child td { border-bottom: 0; }
+      .num { color: #8a9aaa; font-weight: 700; }
+      .title { font-weight: 700; color: #102f4a; }
+      .plan { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; }
+      .step { background: white; border: 1px solid #e3e9ee; border-radius: 16px; padding: 18px; }
+      .step strong { display: block; margin-bottom: 6px; }
+      .footer { margin-top: 38px; color: #778798; font-size: 12px; line-height: 1.6; }
+      @media (max-width: 800px) { .grid, .plan { grid-template-columns: 1fr; } .hero { padding: 26px; border-radius: 18px; } .wrap { width: min(100% - 20px, 1180px); padding-top: 20px; } }
+    </style>
+  </head>
+  <body>
+    <main class="wrap">
+      <header class="hero">
+        <div class="eyebrow">Internal workspace · Banggai Wonderland</div>
+        <h1>SEO Lab & Article Roadmap</h1>
+        <p>A private planning page for researching search intent, building topic clusters, choosing article titles, and gradually turning “Bali / Lombok — where next?” searches into awareness of Banggai Islands.</p>
+        <span class="warning">Not linked from public navigation · noindex / nofollow</span>
+      </header>
+
+      <section>
+        <h2>Target market strategy</h2>
+        <p class="sub">Prioritize travelers who already intend to visit Indonesia. Use destination-discovery searches first, then move them toward Banggai-specific commercial searches.</p>
+        <div class="grid">
+          {markets.map((market) => (
+            <article class="card">
+              <span class="badge">{market.priority} · {market.share}</span>
+              <h3>{market.name}</h3>
+              <p class="meta"><strong>Content focus:</strong> {market.focus}</p>
+              <ul>
+                {market.keywords.map((keyword) => <li>{keyword}</li>)}
+              </ul>
+            </article>
+          ))}
+        </div>
+      </section>
+
+      <section>
+        <h2>Article pipeline</h2>
+        <p class="sub">The sequence intentionally starts with broad discovery topics, moves through destination comparison and planning, then reaches tour-intent pages.</p>
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>#</th><th>Proposed title</th><th>Primary keyword</th><th>Market</th><th>Intent</th><th>Role</th></tr></thead>
+            <tbody>
+              {articles.map((article) => (
+                <tr>
+                  <td class="num">{article[0]}</td>
+                  <td class="title">{article[1]}</td>
+                  <td>{article[2]}</td>
+                  <td>{article[3]}</td>
+                  <td>{article[4]}</td>
+                  <td>{article[5]}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section>
+        <h2>Writing rules</h2>
+        <div class="plan">
+          <div class="step"><strong>1. Answer first</strong><span class="meta">Give the traveler a direct answer in the opening paragraph before introducing Banggai.</span></div>
+          <div class="step"><strong>2. Be genuinely useful</strong><span class="meta">Include routes, time, costs when verified, seasons, logistics, and honest limitations.</span></div>
+          <div class="step"><strong>3. Introduce Banggai naturally</strong><span class="meta">Position it as one strong option, not as an advertisement disguised as an article.</span></div>
+          <div class="step"><strong>4. Internal-link with intent</strong><span class="meta">Discovery articles → destination guides → itinerary → private trip / contact.</span></div>
+        </div>
+      </section>
+
+      <p class="footer">Internal planning page only. Keep it out of public navigation and the XML sitemap. Article titles are working titles and should be validated against live search demand before publication.</p>
+    </main>
+  </body>
+</html>
