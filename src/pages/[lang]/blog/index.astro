@@ -37,11 +37,11 @@ const articleSearchText = (post: typeof posts[number]) =>
   title={`${t('nav.blog')} | Banggai Wonderland`}
   description={`Read travel guides, stories and practical advice for exploring the Banggai Islands.`}
 >
-  <div class="bg-sand-50 pt-28 md:pt-32 pb-20 min-h-screen">
+  <div class="bg-sand-50 pt-28 md:pt-32 pb-20 min-h-screen overflow-x-hidden">
     <div class="max-w-6xl mx-auto px-5 sm:px-6 lg:px-8">
       <Breadcrumb items={breadcrumbItems} />
 
-      <header class="text-center max-w-4xl mx-auto pt-8 md:pt-12 pb-16 md:pb-20">
+      <header class="text-center max-w-4xl mx-auto pt-8 md:pt-12 pb-14 md:pb-18">
         <p class="text-xs font-bold uppercase tracking-[0.28em] text-turquoise-600 mb-5">Banggai Wonderland Journal</p>
         <h1 class="font-serif text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight text-ocean-950 leading-[1.05] mb-6">
           Stories from the Banggai Islands
@@ -79,14 +79,11 @@ const articleSearchText = (post: typeof posts[number]) =>
               <span class="hidden sm:block h-px flex-1 ml-6 bg-sand-200"></span>
             </div>
 
-            <div class="grid grid-cols-1 lg:grid-cols-[1.55fr_1fr] gap-7 lg:gap-8">
+            <div class="grid grid-cols-1 xl:grid-cols-[minmax(0,1.5fr)_minmax(0,1fr)] gap-10 xl:gap-12 items-start">
               {featuredPost && (
-                <article
-                  class="blog-search-item group"
-                  data-search={articleSearchText(featuredPost)}
-                >
-                  <a href={`/${lang}/blog/${featuredPost.slug.split('/').slice(1).join('/')}/`} class="block h-full">
-                    <div class="relative aspect-[4/3] sm:aspect-[16/10] lg:aspect-[4/3] overflow-hidden rounded-2xl bg-ocean-100">
+                <article class="blog-search-item group min-w-0" data-search={articleSearchText(featuredPost)}>
+                  <a href={`/${lang}/blog/${featuredPost.slug.split('/').slice(1).join('/')}/`} class="block">
+                    <div class="relative aspect-[16/10] overflow-hidden rounded-2xl bg-ocean-100">
                       <img
                         src={featuredPost.data.image}
                         alt={featuredPost.data.imageAlt || featuredPost.data.title}
@@ -94,18 +91,18 @@ const articleSearchText = (post: typeof posts[number]) =>
                         loading="eager"
                       />
                     </div>
-                    <div class="pt-5 pr-2">
-                      <div class="flex items-center gap-2 text-[11px] font-medium text-ocean-500 mb-3">
+                    <div class="pt-5">
+                      <div class="flex flex-wrap items-center gap-x-2 gap-y-1 text-[11px] font-medium text-ocean-500 mb-3">
                         <span>{new Intl.DateTimeFormat(lang, { year: 'numeric', month: 'short', day: 'numeric' }).format(featuredPost.data.pubDate)}</span>
                         <span>•</span>
                         <span>{featuredPost.data.tags?.[0] || 'Travel Guide'}</span>
                       </div>
-                      <div class="flex items-start justify-between gap-5">
-                        <div>
+                      <div class="flex items-start gap-4">
+                        <div class="min-w-0">
                           <h3 class="font-serif text-2xl sm:text-3xl font-bold text-ocean-950 leading-tight group-hover:text-turquoise-600 transition-colors">
                             {featuredPost.data.title}
                           </h3>
-                          <p class="mt-3 text-sm leading-relaxed text-ocean-600 max-w-2xl">
+                          <p class="mt-3 text-sm leading-relaxed text-ocean-600 max-w-2xl line-clamp-3">
                             {featuredPost.data.description}
                           </p>
                         </div>
@@ -118,10 +115,10 @@ const articleSearchText = (post: typeof posts[number]) =>
                 </article>
               )}
 
-              <div class="space-y-6">
+              <div class="min-w-0 divide-y divide-sand-200 border-t border-sand-200 xl:border-t-0">
                 {recentPosts.map(post => (
-                  <article class="blog-search-item group border-b border-sand-200 pb-6 last:border-b-0 last:pb-0" data-search={articleSearchText(post)}>
-                    <a href={`/${lang}/blog/${post.slug.split('/').slice(1).join('/')}/`} class="grid grid-cols-[120px_1fr] sm:grid-cols-[150px_1fr] gap-4">
+                  <article class="blog-search-item group py-5 first:pt-0 last:pb-0" data-search={articleSearchText(post)}>
+                    <a href={`/${lang}/blog/${post.slug.split('/').slice(1).join('/')}/`} class="grid grid-cols-[112px_minmax(0,1fr)] sm:grid-cols-[150px_minmax(0,1fr)] gap-4 items-start">
                       <div class="aspect-[4/3] overflow-hidden rounded-xl bg-ocean-100">
                         <img
                           src={post.data.image}
@@ -210,7 +207,6 @@ const articleSearchText = (post: typeof posts[number]) =>
       if (clearButton) clearButton.classList.toggle('hidden', !query);
       if (status) status.textContent = query ? `${visible} article${visible === 1 ? '' : 's'} found` : '';
       if (guidesSection) guidesSection.classList.toggle('hidden', Boolean(query) && visibleGuides === 0);
-      if (noResults) noResults.classList.toggle('hidden', !query || visible === 0 ? false : true);
       if (noResults) noResults.classList.toggle('hidden', !query || visible !== 0);
     }
 
