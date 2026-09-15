@@ -37,15 +37,35 @@ const breadcrumbItems = [
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <Breadcrumb items={breadcrumbItems} />
       
-      <div class="mb-12">
+      <div class="mb-10">
         <h1 class="font-serif text-4xl md:text-5xl font-bold text-ocean-900 mb-4">{t('nav.blog')}</h1>
         <p class="text-lg text-ocean-600 max-w-2xl">{t('hero.desc')}</p>
       </div>
 
+      <div class="mb-12">
+        <label for="blog-search" class="sr-only">Search articles</label>
+        <div class="relative max-w-2xl">
+          <svg class="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-ocean-400 pointer-events-none" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m21 21-4.35-4.35m2.35-5.65a8 8 0 1 1-16 0 8 8 0 0 1 16 0Z"></path>
+          </svg>
+          <input
+            id="blog-search"
+            type="search"
+            placeholder="Search articles..."
+            autocomplete="off"
+            class="w-full rounded-2xl border border-sand-200 bg-white py-4 pl-12 pr-12 text-ocean-900 placeholder:text-ocean-400 shadow-sm outline-none transition focus:border-turquoise-400 focus:ring-4 focus:ring-turquoise-500/10"
+          />
+          <button id="blog-search-clear" type="button" class="hidden absolute right-3 top-1/2 -translate-y-1/2 rounded-full p-2 text-ocean-400 hover:bg-sand-100 hover:text-ocean-700" aria-label="Clear search">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 6l12 12M18 6 6 18"></path></svg>
+          </button>
+        </div>
+        <p id="blog-search-status" class="mt-3 text-sm text-ocean-500" aria-live="polite"></p>
+      </div>
+
       {posts.length > 0 ? (
-        <div class="space-y-16">
+        <div id="blog-results" class="space-y-16">
           {featuredPost && (
-            <section>
+            <section class="blog-search-item" data-search="{`${featuredPost.data.title} ${featuredPost.data.description} ${(featuredPost.data.tags || []).join(' ')}`.toLowerCase()}">
               <div class="flex items-center gap-3 mb-6">
                 <span class="h-px w-8 bg-turquoise-500"></span>
                 <p class="text-xs font-bold uppercase tracking-[0.2em] text-ocean-500">Featured Guide</p>
@@ -86,7 +106,7 @@ const breadcrumbItems = [
           )}
 
           {remainingPosts.length > 0 && (
-            <section>
+            <section id="travel-guides-section">
               <div class="flex items-center justify-between mb-7">
                 <div class="flex items-center gap-3">
                   <span class="h-px w-8 bg-turquoise-500"></span>
@@ -94,7 +114,11 @@ const breadcrumbItems = [
                 </div>
               </div>
               <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7">
-                {remainingPosts.map(post => <BlogCard post={post} />)}
+                {remainingPosts.map(post => (
+                  <div class="blog-search-item" data-search={`${post.data.title} ${post.data.description} ${(post.data.tags || []).join(' ')}`.toLowerCase()}>
+                    <BlogCard post={post} />
+                  </div>
+                ))}
               </div>
             </section>
           )}
@@ -108,4 +132,38 @@ const breadcrumbItems = [
   </div>
 
   <WhatsAppButton />
+
+  <script>
+    const input = document.querySelector('#blog-search');
+    const clearButton = document.querySelector('#blog-search-clear');
+    const status = document.querySelector('#blog-search-status');
+    const items = Array.from(document.querySelectorAll('.blog-search-item'));
+    const featured = items[0];
+    const guidesSection = document.querySelector('#travel-guides-section');
+
+    function filterArticles() {
+      const query = input?.value.trim().toLowerCase() || '';
+      let visible = 0;
+
+      items.forEach((item) => {
+        const searchable = item.getAttribute('data-search') || '';
+        const matches = !query || searchable.includes(query);
+        item.classList.toggle('hidden', !matches);
+        if (matches) visible++;
+      });
+
+      if (clearButton) clearButton.classList.toggle('hidden', !query);
+      if (status) status.textContent = query ? `${visible} article${visible === 1 ? '' : 's'} found` : '';
+      if (guidesSection && query && featured && !featured.classList.contains('hidden')) {
+        guidesSection.classList.remove('hidden');
+      }
+    }
+
+    input?.addEventListener('input', filterArticles);
+    clearButton?.addEventListener('click', () => {
+      if (input) input.value = '';
+      filterArticles();
+      input?.focus();
+    });
+  </script>
 </BaseLayout>
