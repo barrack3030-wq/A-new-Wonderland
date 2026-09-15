@@ -1,6 +1,6 @@
 # Banggai Wonderland CMS — Apps Script deployment
 
-`Code.gs` now supports the existing Bulk workflow plus the separate Manual Article workflow for Indonesian + English + Chinese + French + German.
+`Code.gs` supports the existing Bulk workflow plus the separate Manual Article workflow for Indonesian + English + Spanish + Chinese + French.
 
 After changing `Code.gs`, update the Google Apps Script Web App deployment:
 
@@ -20,8 +20,8 @@ Manual CMS page:
 Manual languages:
 - Indonesian — source article
 - English — Translate English
+- Spanish — Translate Spanish
 - Chinese — Translate Chinese
 - French — Translate French
-- German — Translate German
 
 The existing Bulk workflow remains separate and continues to use Indonesian + English + Spanish + French + Chinese.
