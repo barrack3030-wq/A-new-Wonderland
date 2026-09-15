@@ -10,5 +10,76 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Check repository
-        run: echo "Manual multilingual CMS patch workflow is ready."
+      - name: Patch Apps Script and language registry
+        shell: bash
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          p=Path('google-apps-script/Code.gs'); s=p.read_text()
+          s=s.replace("const TARGET_LANGUAGES={en:'English',es:'Spanish',fr:'French',zh:'Chinese'};", "const TARGET_LANGUAGES={en:'English',es:'Spanish',fr:'French',zh:'Chinese'};\nconst MANUAL_TARGET_LANGUAGES={en:'English',zh:'Chinese',fr:'French',de:'German'};")
+          s=s.replace("    if(data.action==='translate')return jsonResponse({ok:true,articles:translateArticle(data)});", "    if(data.action==='translateManual')return jsonResponse({ok:true,article:translateSingleArticle(data)});\n    if(data.action==='publishManual')return jsonResponse({ok:true,message:'5 versi artikel manual berhasil dipublish ke GitHub.',files:publishManualArticles(data.articles)});\n    if(data.action==='translate')return jsonResponse({ok:true,articles:translateArticle(data)});")
+          if 'function translateSingleArticle' not in s:
+            marker='function normalizeTags(tags){'
+            manual=r'''function translateSingleArticle(data){
+  const lang=String(data.language||'').trim().toLowerCase();
+  if(!MANUAL_TARGET_LANGUAGES[lang])throw new Error('Bahasa manual tidak didukung. Gunakan en, zh, fr, atau de.');
+  const title=String(data.title||'').trim(),description=String(data.description||'').trim(),content=String(data.content||'').trim();
+  if(!title)throw new Error('Judul artikel sumber wajib diisi.');
+  if(!content)throw new Error('Isi artikel sumber wajib diisi.');
+  if(content.length<300)throw new Error('Isi artikel terlalu pendek. Minimal 300 karakter.');
+  const image=data.image&&data.image.url?data.image:{url:DEFAULT_IMAGE,source:'',alt:'Banggai destination in Indonesia'};
+  const source={title:title,description:description||createPreview(content),seoTitle:String(data.seoTitle||title),seoDescription:String(data.seoDescription||description||createPreview(content)),imageAlt:String(data.imageAlt||image.alt||''),tags:normalizeTags(data.tags),content:content};
+  const cfg=getOpenAIConfig();
+  const request=aiRequestResilient(cfg,buildTranslationPayload(cfg,source,MANUAL_TARGET_LANGUAGES[lang]),'Translate manual ['+lang+']');
+  const translated=parseTranslationResponse(request.data,lang);
+  return {title:translated.title||title,description:translated.description||source.description,seoTitle:translated.seoTitle||translated.title||title,seoDescription:translated.seoDescription||translated.description||source.seoDescription,image:image.url||DEFAULT_IMAGE,imageAlt:translated.imageAlt||source.imageAlt,imageSource:String(image.source||''),author:'Banggai Wonderland',pubDate:normalizeDate(data.pubDate||getToday()),tags:translated.tags.length?translated.tags:source.tags,content:translated.content,preview:createPreview(translated.content),language:lang};
+}
+function publishManualArticles(articles){
+  if(!articles||typeof articles!=='object')throw new Error('Data artikel manual tidak ditemukan.');
+  const required=['id','en','zh','fr','de'],first=articles.id;
+  if(!first||!first.title||!first.content)throw new Error('Artikel Bahasa Indonesia tidak ditemukan.');
+  const translationKey=getToday()+'-'+createSlug(first.title).substring(0,70),files=[];
+  required.forEach(function(lang){
+    const article=articles[lang];
+    if(!article||!article.title||!article.content)throw new Error('Artikel bahasa '+lang+' belum lengkap.');
+    const slug=createSlug(article.title);
+    if(!slug)throw new Error('Slug kosong untuk '+lang+'.');
+    const path='src/content/blog/'+lang+'/'+article.pubDate+'-'+slug+'.md';
+    githubCreateFile(path,createMarkdown(article,translationKey),'CMS: Add manual blog article ['+lang+'] '+article.title);
+    files.push({language:lang,path:path,title:article.title});
+  });
+  return files;
+}
+
+'''
+            if marker not in s: raise SystemExit('Code.gs insertion marker not found')
+            s=s.replace(marker,manual+marker,1)
+          s=s.replace("version:'7.1-resilient-json-api'", "version:'8.0-manual-multilang'")
+          p.write_text(s)
+
+          p=Path('src/utils/i18n.ts'); s=p.read_text()
+          if "de: 'DE'" not in s:
+            s=s.replace("  zh: '中文'\n};", "  zh: '中文',\n  de: 'DE'\n};",1)
+          if "'nav.destinations': 'Reiseziele'" not in s:
+            needle='\n};\n\nexport function useTranslations'
+            de="""\n  de: {\n    'nav.destinations': 'Reiseziele', 'nav.packages': 'Reisepakete', 'nav.blog': 'Blog', 'nav.about': 'Über uns', 'nav.contact': 'Kontakt',\n    'btn.book': 'Reise buchen', 'hero.welcome': 'Willkommen im Paradies', 'hero.title.1': 'Entdecke das verborgene Paradies', 'hero.title.2': 'von Banggai',\n    'hero.desc': 'Erlebe besondere Reisen zu unberührten Inseln, kristallklaren Seen und beeindruckenden Wasserfällen in Banggai.', 'btn.explore': 'Reiseziele entdecken', 'btn.view_packages': 'Reisepakete ansehen',\n    'footer.desc': 'Entdecke das verborgene Paradies von Banggai und erlebe die natürlichen Wunder der Region.', 'footer.nav': 'Navigation', 'footer.contact': 'Kontakt', 'footer.follow': 'Folgen',\n    'tour.duration': 'Dauer', 'tour.destinations': 'Reiseziele', 'tour.overview': 'Überblick', 'tour.itinerary': 'Reiseplan', 'tour.included': 'Inklusive', 'tour.excluded': 'Nicht inklusive',\n    'blog.read_more': 'Mehr lesen', 'blog.published': 'Veröffentlicht am', 'blog.by': 'Von', 'blog.back': 'Zurück zum Blog',\n    'about.title': 'Über uns', 'about.subtitle': 'Banggai Wonderland kennenlernen', 'about.story.title': 'Unsere Geschichte',\n    'about.story.p1': 'Aus einer tiefen Liebe zur unberührten Natur von Banggai entstand Banggai Wonderland mit der Mission, dieses verborgene Paradies verantwortungsvoll mit der Welt zu teilen.',\n    'about.story.p2': 'Wir sind lokale Reisebegleiter und Abenteurer mit engem Bezug zu den Inseln, Stränden und Gemeinden von Banggai.', 'about.why.title': 'Warum mit uns reisen?',\n    'about.why.1': 'Erfahrene lokale Guides', 'about.why.2': 'Flexible und persönliche Reisen', 'about.why.3': 'Engagement für nachhaltigen Tourismus',\n    'contact.title': 'Kontakt', 'contact.subtitle': 'Plane deine Traumreise', 'contact.address': 'Adresse', 'contact.address.val': 'Luwuk, Banggai Regency, Central Sulawesi, Indonesien', 'contact.email': 'E-Mail', 'contact.phone': 'Telefon / WhatsApp',\n    'contact.form.name': 'Vollständiger Name', 'contact.form.email': 'E-Mail-Adresse', 'contact.form.message': 'Deine Nachricht', 'contact.form.send': 'Nachricht senden',\n    'nav.gallery': 'Galerie', 'gallery.title': 'Reisegalerie', 'gallery.subtitle': 'Unvergessliche Momente in Banggai', 'gallery.tab.destinations': 'Reiseziele', 'gallery.tab.experiences': 'Reiseerlebnisse',\n    'book.title': 'Buchungsformular', 'book.subtitle': 'Plane dein Abenteuer mit uns', 'book.form.name': 'Vollständiger Name', 'book.form.email': 'E-Mail', 'book.form.phone': 'WhatsApp-Nummer', 'book.form.package': 'Reisepaket auswählen', 'book.form.date': 'Reisedatum', 'book.form.participants': 'Anzahl der Teilnehmer', 'book.form.notes': 'Zusätzliche Hinweise', 'book.form.submit': 'Per WhatsApp buchen', 'book.package.custom': 'Individuelle Reise / Sonstiges',\n    'home.featured.destinations': 'Ausgewählte Reiseziele', 'home.featured.destinations.desc': 'Entdecke die schönsten Naturerlebnisse des Banggai-Archipels.', 'home.featured.blog': 'Reisegeschichten & Guides', 'home.featured.blog.desc': 'Praktische Tipps und Geschichten für dein nächstes Abenteuer.', 'destinations.access': 'Anreise & Transport',\n  },\n"""
+            if needle not in s: raise SystemExit('i18n closing marker not found')
+            s=s.replace(needle,de+'};\n\nexport function useTranslations',1)
+          p.write_text(s)
+
+          p=Path('src/pages/cms/index.astro'); s=p.read_text()
+          if 'href="/cms/manual/"' not in s:
+            anchor='<header class="brand"><h1>Banggai Wonderland CMS</h1><p>Manual Article → AI Translation → Review → Publish</p></header>'
+            replacement=anchor+'<a href="/cms/manual/" style="display:inline-block;margin:-10px 0 18px;padding:10px 14px;border-radius:10px;background:#65c8f2;color:#03121d;font-weight:800;text-decoration:none">Open Manual Article · 5 Languages →</a>'
+            if anchor not in s: raise SystemExit('CMS header marker not found')
+            s=s.replace(anchor,replacement,1)
+          p.write_text(s)
+          PY
+      - name: Commit patch
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add google-apps-script/Code.gs src/utils/i18n.ts src/pages/cms/index.astro
+          git diff --cached --quiet && exit 0
+          git commit -m 'CMS: apply manual multilingual workflow'
+          git push
