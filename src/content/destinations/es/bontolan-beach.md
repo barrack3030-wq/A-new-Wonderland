@@ -2,7 +2,7 @@
 title: "Bontolan Beach"
 description: Bontolan Beach es un destino costero de arena blanca en Bone Baru, en la isla de Banggai, conocido por el esnórquel, los arrecifes de coral y la vida de la aldea.
 seoTitle: "Bontolan Beach: Esnórquel y vida local en la isla de Banggai | Banggai Wonderland"
-seoDescription: Descubre Bontolan Beach en la isla de Banggai: esnórquel, Banggai Cardinal Fish, vida de aldea, acceso, alojamiento y consejos de seguridad.
+seoDescription: "Descubre Bontolan Beach en la isla de Banggai: esnórquel, Banggai Cardinal Fish, vida de aldea, acceso, alojamiento y consejos de seguridad."
 image: /images/bontolan.jpg
 imageAlt: Bontolan Beach, Banggai Island
 location: Banggai Laut
