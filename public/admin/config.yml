@@ -2,7 +2,6 @@ backend:
   name: github
   repo: barrack3030-wq/A-new-Wonderland
   branch: main
-  auth_methods: [token]
   commit_messages:
     create: 'Create {{collection}} "{{slug}}"'
     update: 'Update {{collection}} "{{slug}}"'
@@ -16,7 +15,7 @@ slug:
   clean_accents: true
   sanitize_replacement: "-"
 
-i18n:
+ i18n:
   structure: multiple_folders
   locales: [id, en, es, fr, zh]
   default_locale: id
@@ -28,6 +27,8 @@ collections:
     create: true
     i18n: true
     slug: "{{slug}}"
+    extension: "md"
+    format: "yaml-frontmatter"
     fields:
       - {label: "Title", name: "title", widget: "string", i18n: true}
       - {label: "Description", name: "description", widget: "text", i18n: true}
@@ -37,10 +38,13 @@ collections:
       - {label: "Image Alt", name: "imageAlt", widget: "string", required: false, i18n: true}
       - {label: "Location", name: "location", widget: "string", i18n: true}
       - {label: "Category", name: "category", widget: "select", options: ["Beach", "Waterfall", "Island", "Lake", "Hill", "Cave", "Bay", "Culture"], i18n: true}
+      - {label: "YouTube", name: "youtube", widget: "string", required: false, i18n: true}
       - {label: "Highlights", name: "highlights", widget: "list", required: false, i18n: true}
       - {label: "Activities", name: "activities", widget: "list", required: false, i18n: true}
       - {label: "Best Time to Visit", name: "bestTime", widget: "string", required: false, i18n: true}
       - {label: "Travel Tips", name: "travelTips", widget: "list", required: false, i18n: true}
+      - {label: "Gallery", name: "gallery", widget: "list", required: false, i18n: true}
+      - {label: "Related Destinations", name: "relatedDestinations", widget: "list", required: false, i18n: true}
       - {label: "Body", name: "body", widget: "markdown", i18n: true}
 
   - name: "packages"
@@ -49,6 +53,8 @@ collections:
     create: true
     i18n: true
     slug: "{{slug}}"
+    extension: "md"
+    format: "yaml-frontmatter"
     fields:
       - {label: "Title", name: "title", widget: "string", i18n: true}
       - {label: "Description", name: "description", widget: "text", i18n: true}
@@ -70,6 +76,7 @@ collections:
           - {label: "Day", name: "day", widget: "string"}
           - {label: "Title", name: "title", widget: "string"}
           - {label: "Description", name: "description", widget: "text"}
+      - {label: "Gallery", name: "gallery", widget: "list", required: false, i18n: true}
       - {label: "Body Overview", name: "body", widget: "markdown", i18n: true}
 
   - name: "blog_id"
@@ -78,7 +85,9 @@ collections:
     folder: "src/content/blog/id"
     create: true
     slug: "{{slug}}"
-    media_folder: "/public/images/blog"
+    extension: "md"
+    format: "yaml-frontmatter"
+    media_folder: "public/images/blog"
     public_folder: "/images/blog"
     fields:
       - {label: "Featured Image", name: "image", widget: "image"}
@@ -100,7 +109,9 @@ collections:
     folder: "src/content/blog/en"
     create: true
     slug: "{{slug}}"
-    media_folder: "/public/images/blog"
+    extension: "md"
+    format: "yaml-frontmatter"
+    media_folder: "public/images/blog"
     public_folder: "/images/blog"
     fields:
       - {label: "Featured Image", name: "image", widget: "image"}
@@ -122,7 +133,9 @@ collections:
     folder: "src/content/blog/es"
     create: true
     slug: "{{slug}}"
-    media_folder: "/public/images/blog"
+    extension: "md"
+    format: "yaml-frontmatter"
+    media_folder: "public/images/blog"
     public_folder: "/images/blog"
     fields:
       - {label: "Featured Image", name: "image", widget: "image"}
@@ -144,7 +157,9 @@ collections:
     folder: "src/content/blog/fr"
     create: true
     slug: "{{slug}}"
-    media_folder: "/public/images/blog"
+    extension: "md"
+    format: "yaml-frontmatter"
+    media_folder: "public/images/blog"
     public_folder: "/images/blog"
     fields:
       - {label: "Featured Image", name: "image", widget: "image"}
@@ -166,7 +181,9 @@ collections:
     folder: "src/content/blog/zh"
     create: true
     slug: "{{slug}}"
-    media_folder: "/public/images/blog"
+    extension: "md"
+    format: "yaml-frontmatter"
+    media_folder: "public/images/blog"
     public_folder: "/images/blog"
     fields:
       - {label: "Featured Image", name: "image", widget: "image"}
