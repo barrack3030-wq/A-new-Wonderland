@@ -1,7 +1,7 @@
 ---
 title: Bukit Teletubbies
 description: Bukit Teletubbies adalah salah satu destinasi menakjubkan di Banggai yang menawarkan pemandangan alam memukau dan pengalaman wisata tak terlupakan. Tempat ini memiliki keunikan tersendiri yang wajib dikunjungi.
-seoTitle: Bukit Teletubbies | Banggai Wonderland
+seoTitle: "Bukit Teletubbies | Banggai Wonderland"
 seoDescription: Kunjungi dan eksplorasi keindahan Bukit Teletubbies di Banggai.
 image: /images/bukit teletubis.jpg
 imageAlt: Bukit Teletubbies view

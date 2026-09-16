@@ -1,7 +1,7 @@
 ---
 title: Paisu Batango Lake
 description: Paisu Batango Lake adalah salah satu destinasi menakjubkan di Banggai yang menawarkan pemandangan alam memukau dan pengalaman wisata tak terlupakan. Tempat ini memiliki keunikan tersendiri yang wajib dikunjungi.
-seoTitle: Paisu Batango Lake | Banggai Wonderland
+seoTitle: "Paisu Batango Lake | Banggai Wonderland"
 seoDescription: Kunjungi dan eksplorasi keindahan Paisu Batango Lake di Banggai.
 image: /images/paisu.jpg
 imageAlt: Paisu Batango Lake view

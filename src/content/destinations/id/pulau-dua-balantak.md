@@ -1,7 +1,7 @@
 ---
 title: Pulau Dua Balantak
 description: Pulau Dua Balantak adalah salah satu destinasi menakjubkan di Banggai yang menawarkan pemandangan alam memukau dan pengalaman wisata tak terlupakan. Tempat ini memiliki keunikan tersendiri yang wajib dikunjungi.
-seoTitle: Pulau Dua Balantak | Banggai Wonderland
+seoTitle: "Pulau Dua Balantak | Banggai Wonderland"
 seoDescription: Kunjungi dan eksplorasi keindahan Pulau Dua Balantak di Banggai.
 image: /images/images (2).jpg
 imageAlt: Pulau Dua Balantak view

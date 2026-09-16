@@ -1,7 +1,7 @@
 ---
 title: Mandel Beach
 description: Mandel Beach 是邦盖令人惊叹的目的地之一，提供壮丽的自然景观和难忘的旅行体验。这个地方有它自己的独特之处，必须去看看。
-seoTitle: Mandel Beach | Banggai Wonderland
+seoTitle: "Mandel Beach | Banggai Wonderland"
 seoDescription: 参观并探索美丽的 Mandel Beach di Banggai.
 image: /images/mandel.jpg
 imageAlt: Mandel Beach view

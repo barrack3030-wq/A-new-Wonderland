@@ -1,6 +1,6 @@
 ---
 title: Paisu Pok Lake
-description: |-
+description: "|-"
   Paisu Pok Lake 是印度尼西亚中苏拉威西省班盖群岛最著名的自然景点之一。这里以极其清澈的湖水和宁静的热带环境而闻名，四周被郁郁葱葱的绿色植被环绕。清澈见底的湖水是这里最大的特色，也非常适合自然爱好者和摄影爱好者。
 
   游客可以在湖中游泳、在湖边休息、拍摄风景，或者静静享受这里宁静的自然氛围。在清澈的湖水中游泳，是来到这里最值得体验的活动之一。
@@ -8,7 +8,7 @@ description: |-
   前往 Paisu Pok Lake 需要一定的时间和交通安排，但沿途的风景也是探索班盖群岛的一部分。天气晴朗时前往，可以更好地欣赏湖水的清澈度以及周围的热带景观。
 
   对于希望远离拥挤旅游景点、寻找宁静自然体验的游客来说，Paisu Pok Lake 是探索印度尼西亚东部隐藏自然宝藏的理想目的地
-seoTitle: Paisu Pok Lake | Banggai Wonderland
+seoTitle: "Paisu Pok Lake | Banggai Wonderland"
 seoDescription: Paisu Pok Lake 是印度尼西亚中苏拉威西省班盖群岛最著名的自然景点之一。这里以极其清澈的湖水和宁静的热带环境而闻名，四周被郁郁葱葱的绿色植被环绕。清澈见底的湖水是这里最大的特色，也非常适合自然爱好者和摄影爱好者。
 image: /images/DSCF7073-5.webp
 imageAlt: Paisu Pok Lake view

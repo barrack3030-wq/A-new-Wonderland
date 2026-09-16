@@ -1,7 +1,7 @@
 ---
 title: Kilo 5 Beach
 description: Kilo 5 Beach adalah salah satu destinasi menakjubkan di Banggai yang menawarkan pemandangan alam memukau dan pengalaman wisata tak terlupakan. Tempat ini memiliki keunikan tersendiri yang wajib dikunjungi.
-seoTitle: Kilo 5 Beach | Banggai Wonderland
+seoTitle: "Kilo 5 Beach | Banggai Wonderland"
 seoDescription: Kunjungi dan eksplorasi keindahan Kilo 5 Beach di Banggai.
 image: /images/Pantai-Kilo-5-1.webp
 imageAlt: Kilo 5 Beach view

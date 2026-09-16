@@ -1,7 +1,7 @@
 ---
 title: Mbuang-Mbuang Island
 description: Mbuang-Mbuang Island 是邦盖令人惊叹的目的地之一，提供壮丽的自然景观和难忘的旅行体验。这个地方有它自己的独特之处，必须去看看。
-seoTitle: Mbuang-Mbuang Island | Banggai Wonderland
+seoTitle: "Mbuang-Mbuang Island | Banggai Wonderland"
 seoDescription: 参观并探索美丽的 Mbuang-Mbuang Island di Banggai.
 image: /images/mbuang mbuang.jpg
 imageAlt: Mbuang-Mbuang Island view

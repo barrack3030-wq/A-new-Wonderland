@@ -1,7 +1,7 @@
 ---
 title: Laumarang Waterfall
 description: Laumarang Waterfall es uno de los destinos impresionantes en Banggai que ofrece vistas naturales impresionantes y experiencias de viaje inolvidables. Este lugar tiene su propia singularidad que debe ser visitada.
-seoTitle: Laumarang Waterfall | Banggai Wonderland
+seoTitle: "Laumarang Waterfall | Banggai Wonderland"
 seoDescription: Visita y explora la belleza de Laumarang Waterfall di Banggai.
 image: /images/images.jpg
 imageAlt: Laumarang Waterfall view

@@ -6,7 +6,7 @@ description: 带你探索 Luwuk 与 Banggai 的 10 个精彩目的地，从 Pais
 seoTitle: Luwuk 与 Banggai 最值得一去的 10 个旅游目的地
 seoDescription: 探索印度尼西亚中苏拉威西 Luwuk 与 Banggai 的 10 个精彩去处，包括 Paisupok 湖、Poganda Beach、Mandel Beach、Pulo Dua、Oyama、Kawalu Bay 等自然景观。
 author: aji
-pubDate: 2026-09-08T21:00:00
+pubDate: "2026-09-08T21:00:00"
 tags:
   - Luwuk
   - Banggai

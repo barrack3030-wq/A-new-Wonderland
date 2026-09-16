@@ -1,7 +1,7 @@
 ---
 title: Kamumu Waterfall
 description: Kamumu Waterfall 位于印度尼西亚中苏拉威西省邦盖的 Luwuk 附近，是一处较为原生态的瀑布景点，以多层瀑布、清澈山泉和凉爽的森林环境而闻名。
-seoTitle: Kamumu Waterfall Luwuk | 旅行指南 | Banggai Wonderland
+seoTitle: "Kamumu Waterfall Luwuk | 旅行指南 | Banggai Wonderland"
 seoDescription: 探索 Luwuk 的 Kamumu Waterfall：多层瀑布、清澈山泉、松林环境，以及从 Kamumu 村步行约 15–20 分钟即可抵达的自然景点。
 image: /images/kamumuu.jpg
 imageAlt: 中苏拉威西邦盖 Luwuk 的 Kamumu Waterfall

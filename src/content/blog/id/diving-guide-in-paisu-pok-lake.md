@@ -6,7 +6,7 @@ seoDescription: ''
 image: /images/images (5).jpg
 imageAlt: ''
 author: Diving Expert
-pubDate: 2026-10-15T00:00:00Z
+pubDate: "2026-10-15T00:00:00Z"
 tags:
   - Diving
   - Adventure

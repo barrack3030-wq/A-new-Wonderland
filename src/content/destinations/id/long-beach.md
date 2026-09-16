@@ -1,7 +1,7 @@
 ---
 title: Long Beach
 description: Long Beach adalah salah satu destinasi menakjubkan di Banggai yang menawarkan pemandangan alam memukau dan pengalaman wisata tak terlupakan. Tempat ini memiliki keunikan tersendiri yang wajib dikunjungi.
-seoTitle: Long Beach | Banggai Wonderland
+seoTitle: "Long Beach | Banggai Wonderland"
 seoDescription: Kunjungi dan eksplorasi keindahan Long Beach di Banggai.
 image: /images/long b.jpg
 imageAlt: Long Beach view

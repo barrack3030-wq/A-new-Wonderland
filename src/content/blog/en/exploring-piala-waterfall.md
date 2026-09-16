@@ -6,7 +6,7 @@ seoDescription: ''
 image: /images/piala.jpg
 imageAlt: ''
 author: aji zulfikar
-pubDate: 2026-10-15T00:00:00Z
+pubDate: "2026-10-15T00:00:00Z"
 tags:
   - Waterfall
   - Trekking

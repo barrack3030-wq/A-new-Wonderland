@@ -6,7 +6,7 @@ seoDescription: Ingin melihat kabut di Danau Paisu Pok? Temukan waktu, kondisi c
 image: /images/images (7).jpg
 imageAlt: ''
 author: aji
-pubDate: 2026-09-05T23:43:00
+pubDate: "2026-09-05T23:43:00"
 tags:
   - paisupok
   - kabut danau paisupok

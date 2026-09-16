@@ -1,7 +1,7 @@
 ---
 title: Kamumu Waterfall
 description: Kamumu Waterfall adalah destinasi alam tersembunyi di Luwuk, Banggai, Sulawesi Tengah, dengan air terjun bertingkat, air jernih dan suasana hutan yang sejuk.
-seoTitle: Kamumu Waterfall Luwuk | Panduan Wisata | Banggai Wonderland
+seoTitle: "Kamumu Waterfall Luwuk | Panduan Wisata | Banggai Wonderland"
 seoDescription: Jelajahi Kamumu Waterfall di Luwuk, Banggai — air terjun bertingkat dengan air jernih, hutan pinus dan trekking ringan 15–20 menit dari Desa Kamumu.
 image: /images/kamumuu.jpg
 imageAlt: Kamumu Waterfall di Luwuk Banggai, Sulawesi Tengah

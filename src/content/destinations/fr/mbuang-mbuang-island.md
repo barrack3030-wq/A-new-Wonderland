@@ -1,7 +1,7 @@
 ---
 title: Mbuang-Mbuang Island
 description: Mbuang-Mbuang Island est l'une des destinations magnifiques de Banggai offrant des vues naturelles à couper le souffle et des expériences de voyage inoubliables. Cet endroit a sa propre unicité qui doit être visitée.
-seoTitle: Mbuang-Mbuang Island | Banggai Wonderland
+seoTitle: "Mbuang-Mbuang Island | Banggai Wonderland"
 seoDescription: Visitez et explorez la beauté de Mbuang-Mbuang Island di Banggai.
 image: /images/mbuang mbuang.jpg
 imageAlt: Mbuang-Mbuang Island view

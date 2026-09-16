@@ -1,7 +1,7 @@
 ---
 title: Goa Buloling
 description: Goa Buloling es uno de los destinos impresionantes en Banggai que ofrece vistas naturales impresionantes y experiencias de viaje inolvidables. Este lugar tiene su propia singularidad que debe ser visitada.
-seoTitle: Goa Buloling | Banggai Wonderland
+seoTitle: "Goa Buloling | Banggai Wonderland"
 seoDescription: Visita y explora la belleza de Goa Buloling di Banggai.
 image: /images/buloling_3.webp
 imageAlt: Goa Buloling view

@@ -1,7 +1,7 @@
 ---
 title: Paisu Pok Lake
 description: Paisu Pok Lake merupakan salah satu destinasi alam yang paling terkenal di Banggai Kepulauan, Sulawesi Tengah. Danau ini memiliki air yang sangat jernih dengan suasana tropis yang tenang, dikelilingi pepohonan hijau dan lingkungan alami yang masih terjaga. Kejernihan air menjadi daya tarik utama dan membuat Paisu Pok Lake sangat populer bagi wisatawan yang menyukai fotografi dan wisata alam.
-seoTitle: Paisu Pok Lake | Banggai Wonderland
+seoTitle: "Paisu Pok Lake | Banggai Wonderland"
 seoDescription: Paisu Pok Lake merupakan salah satu destinasi alam yang paling terkenal di Banggai Kepulauan, Sulawesi Tengah. Danau ini memiliki air yang sangat jernih dengan suasana tropis yang tenang, dikelilingi pepohonan hijau dan lingkungan alami yang masih terjaga. Kejernihan air menjadi daya tarik utama dan membuat Paisu Pok Lake sangat populer bagi wisatawan yang menyukai fotografi dan wisata alam.
 image: /images/DSCF7073-5.webp
 imageAlt: Paisu Pok Lake view

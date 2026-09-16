@@ -6,7 +6,7 @@ seoDescription: 'Découvrez cinq raisons pour lesquelles Banggai mérite sa plac
 image: /images/Poganda-Beach-Banggai-IndonesiaJuara-Trip.webp
 imageAlt: 'Poganda Beach, Banggai, Indonésie'
 author: 'aji'
-pubDate: 2026-09-08T21:30:00
+pubDate: "2026-09-08T21:30:00"
 tags:
   - Banggai
   - Luwuk

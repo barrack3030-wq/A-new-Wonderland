@@ -6,7 +6,7 @@ description: A guide to 10 of the best destinations in Luwuk and Banggai, from P
 seoTitle: 10 Best Destinations in Luwuk and Banggai You Should Visit
 seoDescription: Discover 10 of the best places to visit in Luwuk and Banggai, Central Sulawesi, including Paisupok Lake, Poganda Beach, Mandel Beach, Pulo Dua, Oyama, Kawalu Bay, and other natural highlights.
 author: aji
-pubDate: 2026-09-08T21:00:00
+pubDate: "2026-09-08T21:00:00"
 tags:
   - Luwuk
   - Banggai

@@ -6,7 +6,7 @@ seoDescription: 'Temukan 5 alasan mengapa Banggai di Sulawesi Tengah layak diseb
 image: /images/Poganda-Beach-Banggai-IndonesiaJuara-Trip.webp
 imageAlt: 'Poganda Beach, Banggai, Indonesia'
 author: 'aji'
-pubDate: 2026-09-08T21:30:00
+pubDate: "2026-09-08T21:30:00"
 tags:
   - Banggai
   - Luwuk

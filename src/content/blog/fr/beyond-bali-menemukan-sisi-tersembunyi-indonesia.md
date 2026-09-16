@@ -6,7 +6,7 @@ seoDescription: 'Explorez Luwuk et Banggai à Sulawesi central, en Indonésie, e
 image: /images/Poganda-Beach-Banggai-IndonesiaJuara-Trip.webp
 imageAlt: 'Poganda Beach à Banggai, Indonésie'
 author: 'aji'
-pubDate: 2026-09-08T20:00:00
+pubDate: "2026-09-08T20:00:00"
 tags:
   - Banggai
   - Luwuk

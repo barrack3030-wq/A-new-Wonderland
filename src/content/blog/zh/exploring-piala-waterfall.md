@@ -6,7 +6,7 @@ seoDescription: ''
 image: /images/piala.jpg
 imageAlt: ''
 author: Nature Lover
-pubDate: 2026-09-06T14:29:00
+pubDate: "2026-09-06T14:29:00"
 tags:
   - Waterfall
   - Trekking

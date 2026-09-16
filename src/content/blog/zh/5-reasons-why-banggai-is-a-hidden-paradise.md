@@ -6,7 +6,7 @@ seoDescription: '探索 Banggai 成为印度尼西亚隐藏天堂的 5 个理由
 image: /images/Poganda-Beach-Banggai-IndonesiaJuara-Trip.webp
 imageAlt: 'Poganda Beach，印度尼西亚 Banggai'
 author: 'aji'
-pubDate: 2026-09-08T21:30:00
+pubDate: "2026-09-08T21:30:00"
 tags:
   - Banggai
   - Luwuk

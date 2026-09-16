@@ -1,7 +1,7 @@
 ---
 title: Paisu Pok Lake
 description: Paisu Pok Lake is one of the most famous natural attractions in the Banggai Islands, Central Sulawesi. The lake is known for its exceptionally clear water and peaceful tropical surroundings, with lush vegetation and a natural environment that remains relatively untouched. Its crystal-clear water makes Paisu Pok Lake especially appealing to nature lovers and photographers.
-seoTitle: Paisu Pok Lake | Banggai Wonderland
+seoTitle: "Paisu Pok Lake | Banggai Wonderland"
 seoDescription: Paisu Pok Lake is one of the most famous natural attractions in the Banggai Islands, Central Sulawesi. The lake is known for its exceptionally clear water and peaceful tropical surroundings, with lush vegetation and a natural environment that remains relatively untouched. Its crystal-clear water makes Paisu Pok Lake especially appealing to nature lovers and photographers.
 image: /images/DSCF7073-5.webp
 imageAlt: Paisu Pok Lake view

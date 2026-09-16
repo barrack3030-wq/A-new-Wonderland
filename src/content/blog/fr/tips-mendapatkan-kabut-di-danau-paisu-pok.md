@@ -6,7 +6,7 @@ seoDescription: ''
 image: /images/images (6).jpg
 imageAlt: ''
 author: aji
-pubDate: 2026-09-05T23:54:00
+pubDate: "2026-09-05T23:54:00"
 tags: []
 ---
 

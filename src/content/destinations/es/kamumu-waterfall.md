@@ -1,7 +1,7 @@
 ---
 title: Kamumu Waterfall
 description: Kamumu Waterfall es un destino natural escondido de Luwuk, Banggai, en Sulawesi Central, conocido por sus cascadas escalonadas, agua clara y ambiente fresco de bosque.
-seoTitle: Kamumu Waterfall Luwuk | Guía de Viaje | Banggai Wonderland
+seoTitle: "Kamumu Waterfall Luwuk | Guía de Viaje | Banggai Wonderland"
 seoDescription: Descubre Kamumu Waterfall en Luwuk, Banggai — cascadas escalonadas, agua clara, bosque de pinos y una caminata ligera de 15–20 minutos desde el pueblo de Kamumu.
 image: /images/kamumuu.jpg
 imageAlt: Kamumu Waterfall en Luwuk Banggai, Sulawesi Central

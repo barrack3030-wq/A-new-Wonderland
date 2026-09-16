@@ -1,7 +1,7 @@
 ---
 title: Piala Waterfall
 description: A stunning multi-tiered waterfall with natural turquoise pools, hidden in the lush tropical forest of Banggai.
-seoTitle: Piala Waterfall Banggai | Hidden Paradise | Banggai Wonderland
+seoTitle: "Piala Waterfall Banggai | Hidden Paradise | Banggai Wonderland"
 seoDescription: Visit Piala Waterfall in Banggai, enjoy the charm of cascading waterfalls with natural turquoise pools. Book your tour package now.
 image: /images/piala.jpg
 imageAlt: View of Piala Waterfall in Banggai

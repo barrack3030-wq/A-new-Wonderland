@@ -6,7 +6,7 @@ seoDescription: '探索印度尼西亚中苏拉威西的 Luwuk 与 Banggai，发
 image: /images/Poganda-Beach-Banggai-IndonesiaJuara-Trip.webp
 imageAlt: '印度尼西亚 Banggai 的 Poganda Beach'
 author: 'aji'
-pubDate: 2026-09-08T20:00:00
+pubDate: "2026-09-08T20:00:00"
 tags:
   - Banggai
   - Luwuk

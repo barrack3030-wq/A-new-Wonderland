@@ -1,7 +1,7 @@
 ---
 title: Kawalu Bay
 description: Kawalu Bay es uno de los destinos impresionantes en Banggai que ofrece vistas naturales impresionantes y experiencias de viaje inolvidables. Este lugar tiene su propia singularidad que debe ser visitada.
-seoTitle: Kawalu Bay | Banggai Wonderland
+seoTitle: "Kawalu Bay | Banggai Wonderland"
 seoDescription: Visita y explora la belleza de Kawalu Bay di Banggai.
 image: /images/kawalu.webp
 imageAlt: Kawalu Bay view

@@ -1,7 +1,7 @@
 ---
 title: Cascade de Piala
 description: Une magnifique cascade à plusieurs niveaux avec des piscines naturelles turquoise, cachée dans la luxuriante forêt tropicale de Banggai.
-seoTitle: Cascade Piala Banggai | Paradis Caché | Banggai Wonderland
+seoTitle: "Cascade Piala Banggai | Paradis Caché | Banggai Wonderland"
 seoDescription: Visitez la cascade Piala à Banggai, profitez du charme des cascades avec des piscines naturelles turquoise. Réservez votre voyage dès maintenant.
 image: /images/piala.jpg
 imageAlt: Vue de la cascade de Piala à Banggai

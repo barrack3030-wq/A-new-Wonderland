@@ -6,7 +6,7 @@ seoDescription: ''
 image: /images/DSCF7073-5.webp
 imageAlt: ''
 author: Diving Expert
-pubDate: 2026-09-06T14:29:00
+pubDate: "2026-09-06T14:29:00"
 tags:
   - Diving
   - Adventure

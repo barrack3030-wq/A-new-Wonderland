@@ -6,7 +6,7 @@ seoDescription: 'Jelajahi Luwuk dan Banggai, destinasi tersembunyi di Indonesia 
 image: /images/Poganda-Beach-Banggai-IndonesiaJuara-Trip.webp
 imageAlt: 'Poganda Beach di Banggai, Indonesia'
 author: 'aji'
-pubDate: 2026-09-08T20:00:00
+pubDate: "2026-09-08T20:00:00"
 tags:
   - Banggai
   - Luwuk

@@ -1,7 +1,7 @@
 ---
 title: Piala Waterfall
 description: Air terjun bertingkat yang menakjubkan dengan kolam alami berwarna hijau tosca, tersembunyi di rimbunnya hutan tropis Banggai.
-seoTitle: Air Terjun Piala Banggai | Surga Tersembunyi | Banggai Wonderland
+seoTitle: "Air Terjun Piala Banggai | Surga Tersembunyi | Banggai Wonderland"
 seoDescription: Kunjungi Air Terjun Piala di Banggai, nikmati pesona air terjun bertingkat dengan kolam tosca alami. Pesan paket wisata Anda sekarang.
 image: /images/piala.jpg
 imageAlt: Pemandangan Air Terjun Piala Banggai
