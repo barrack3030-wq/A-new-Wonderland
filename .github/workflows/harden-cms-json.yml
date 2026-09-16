@@ -24,6 +24,7 @@ jobs:
 
           # Quote frontmatter scalars containing YAML-significant punctuation.
           # Article bodies are not touched.
+          field_re = re.compile(r'^(\s*[A-Za-z][A-Za-z0-9_-]*:\s*)(.+?)\s*$')
           for path in Path('src/content').rglob('*.md'):
               text = path.read_text(encoding='utf-8')
               if not text.startswith('---\n'):
@@ -36,7 +37,7 @@ jobs:
               changed = False
               out = []
               for line in lines:
-                  match = re.match(r'^(\\s*[A-Za-z][A-Za-z0-9_-]*:\\s*)(.+?)\\s*$', line)
+                  match = field_re.match(line)
                   if not match:
                       out.append(line)
                       continue
@@ -47,7 +48,8 @@ jobs:
                       stripped.startswith('- ')):
                       out.append(line)
                       continue
-                  if ':' in stripped or '|' in stripped or '#' in stripped or stripped.startswith(('http://', 'https://')):
+                  if (':' in stripped or '|' in stripped or '#' in stripped or
+                      stripped.startswith(('http://', 'https://'))):
                       out.append(prefix + json.dumps(stripped, ensure_ascii=False))
                       changed = True
                   else:
