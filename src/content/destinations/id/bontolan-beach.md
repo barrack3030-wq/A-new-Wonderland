@@ -1,8 +1,8 @@
 ---
-title: Bontolan Beach: Snorkeling dan Kehidupan Desa di Pulau Banggai
+title: "Bontolan Beach: Snorkeling dan Kehidupan Desa di Pulau Banggai"
 description: Bontolan Beach di Desa Bone Baru adalah destinasi pantai berpasir putih di Pulau Banggai, dikenal untuk snorkeling, ikan capungan Banggai, dan pemandangan melintasi selat menuju permukiman Toulan.
-seoTitle: Bontolan Beach Banggai | Snorkeling, Akses & Panduan Wisata
-seoDescription: Jelajahi Bontolan Beach di Pulau Banggai: snorkeling, ikan capungan Banggai, fasilitas, harga, akses dari Banggai, penginapan, dan tips keselamatan.
+seoTitle: "Bontolan Beach Banggai | Snorkeling, Akses & Panduan Wisata"
+seoDescription: "Jelajahi Bontolan Beach di Pulau Banggai: snorkeling, ikan capungan Banggai, fasilitas, harga, akses dari Banggai, penginapan, dan tips keselamatan."
 image: /images/bontolan.jpg
 imageAlt: Bontolan Beach di Pulau Banggai
 location: Bone Baru, Banggai Utara, Banggai Laut
