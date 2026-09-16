@@ -1,7 +1,7 @@
 ---
 title: Bontolan Beach
 description: Bontolan Beach 是邦盖岛上的白沙海滩，位于 Bone Baru 村，以浮潜、珊瑚礁、Banggai Cardinal Fish 和当地村落生活而闻名。
-seoTitle: "Bontolan Beach：邦盖岛浮潜与村落生活 | Banggai Wonderland"
+seoTitle: Bontolan Beach：邦盖岛浮潜与村落生活 | Banggai Wonderland
 seoDescription: 探索邦盖岛 Bontolan Beach：浮潜、Banggai Cardinal Fish、村落生活、交通、住宿和安全建议。
 image: /images/bontolan.jpg
 imageAlt: Bontolan Beach, Banggai Island
@@ -31,7 +31,7 @@ Bontolan Beach 是一处白沙海滩，位于**中苏拉威西省 Banggai Laut �
 
 与邦盖群岛许多较偏远的景点相比，Bontolan 可以通过公路较方便地抵达。从 Banggai Laut 县首府驾车大约需要 20 分钟，海滩距离主干道约 30 米。
 
-Bontolan 最重要的特色在海水之下。靠近海岸的珊瑚礁为 **Banggai Cardinal Fish**（*Pterapogon kauderni*）提供栖息环境。这种鱼是印度尼西亚这一地区特有的物种。Bone Baru Village 也曾入选印度尼西亚 2024 年 ADWI 百佳旅游村，并会接待包括乘坐 phinisi 船抵达的外国游客。
+Bontolan 最重要的特色在海水之下。靠近海岸的珊瑚礁为 **Banggai Cardinal Fish**（_Pterapogon kauderni_）提供栖息环境。这种鱼是印度尼西亚这一地区特有的物种。Bone Baru Village 也曾入选印度尼西亚 2024 年 ADWI 百佳旅游村，并会接待包括乘坐 phinisi 船抵达的外国游客。
 
 ## 海洋生物与浮潜体验
 

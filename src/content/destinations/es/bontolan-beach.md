@@ -31,7 +31,7 @@ Bontolan Beach es una playa de arena blanca situada en **Bone Baru Village, Nort
 
 A diferencia de muchas atracciones del archipiélago de Banggai, Bontolan es relativamente fácil de alcanzar por carretera. Está aproximadamente a 20 minutos en vehículo de la capital de Banggai Laut y la playa se encuentra a unos 30 metros de la carretera principal.
 
-Su principal atractivo está bajo el agua. Los arrecifes cercanos a la costa albergan al **Banggai Cardinal Fish** (*Pterapogon kauderni*), una especie endémica de esta parte de Indonesia. Bone Baru también ha sido reconocida entre las 100 mejores aldeas turísticas de Indonesia (ADWI 2024), y recibe visitantes extranjeros, incluidos algunos que llegan en barcos phinisi.
+Su principal atractivo está bajo el agua. Los arrecifes cercanos a la costa albergan al **Banggai Cardinal Fish** (_Pterapogon kauderni_), una especie endémica de esta parte de Indonesia. Bone Baru también ha sido reconocida entre las 100 mejores aldeas turísticas de Indonesia (ADWI 2024), y recibe visitantes extranjeros, incluidos algunos que llegan en barcos phinisi.
 
 ## El arrecife y la experiencia de esnórquel
 
