@@ -1,8 +1,8 @@
 ---
 title: Bontolan Beach
 description: Bontolan Beach est une plage de sable blanc située à Bone Baru, sur l’île de Banggai, connue pour le snorkeling, ses récifs coralliens et la vie du village.
-seoTitle: "Bontolan Beach : snorkeling et vie locale sur l’île de Banggai | Banggai Wonderland"
-seoDescription: "Découvrez Bontolan Beach sur l’île de Banggai : snorkeling, Banggai Cardinal Fish, vie locale, accès, hébergements et conseils de sécurité."
+seoTitle: 'Bontolan Beach : snorkeling et vie locale sur l’île de Banggai | Banggai Wonderland'
+seoDescription: 'Découvrez Bontolan Beach sur l’île de Banggai : snorkeling, Banggai Cardinal Fish, vie locale, accès, hébergements et conseils de sécurité.'
 image: /images/bontolan.jpg
 imageAlt: Bontolan Beach, Banggai Island
 location: Banggai Laut
@@ -31,7 +31,7 @@ Bontolan Beach est une plage de sable blanc située à **Bone Baru Village, Nort
 
 Contrairement à de nombreuses attractions plus isolées de l’archipel de Banggai, Bontolan est accessible par la route. La plage se trouve à environ 20 minutes en voiture de la capitale de Banggai Laut et à seulement 30 mètres de la route principale.
 
-Son principal intérêt se trouve sous l’eau. Les récifs proches du rivage abritent le **Banggai Cardinal Fish** (*Pterapogon kauderni*), une espèce endémique de cette région d’Indonésie. Bone Baru Village a également été reconnue parmi les 100 meilleurs villages touristiques d’Indonésie dans le cadre de l’ADWI 2024 et accueille régulièrement des visiteurs étrangers, notamment certains arrivant en bateau phinisi.
+Son principal intérêt se trouve sous l’eau. Les récifs proches du rivage abritent le **Banggai Cardinal Fish** (_Pterapogon kauderni_), une espèce endémique de cette région d’Indonésie. Bone Baru Village a également été reconnue parmi les 100 meilleurs villages touristiques d’Indonésie dans le cadre de l’ADWI 2024 et accueille régulièrement des visiteurs étrangers, notamment certains arrivant en bateau phinisi.
 
 ## Récifs coralliens et expérience de snorkeling
 
