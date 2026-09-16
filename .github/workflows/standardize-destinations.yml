@@ -5,6 +5,7 @@ on:
     branches: [main]
     paths:
       - 'scripts/standardize-destination-articles.mjs'
+      - '.github/workflows/standardize-destinations.yml'
 
 permissions:
   contents: write
