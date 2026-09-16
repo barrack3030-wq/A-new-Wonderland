@@ -1,6 +1,8 @@
 # Banggai Wonderland CMS — Apps Script deployment
 
-`Code.gs` supports the existing Bulk workflow plus the separate Manual Article workflow for Indonesian + English + Spanish + Chinese + French.
+`Code.gs` is the source for the Google Apps Script Web App backend.
+
+Current repository health version: `8.0-manual-multilang`.
 
 After changing `Code.gs`, update the Google Apps Script Web App deployment:
 
@@ -13,6 +15,8 @@ After changing `Code.gs`, update the Google Apps Script Web App deployment:
 
 Open the `/exec` URL directly. It should return JSON containing:
 `"service":"Banggai Wonderland CMS"`, `"version":"8.0-manual-multilang"`, and `"status":"online"`.
+
+The CMS now performs a startup health check against `/exec` before enabling translation/upload/publish actions. A non-JSON response is reported as a connection/response problem; a real version mismatch is reported separately.
 
 Manual CMS page:
 `/cms/manual/`
