@@ -1,7 +1,7 @@
 ---
 title: 'Bontolan Beach: Snorkeling and Village Life on Banggai Island'
 description: Bontolan Beach in Bone Baru Village is a white-sand coastal destination on Banggai Island, known for snorkeling, Banggai Cardinal Fish and its view across the strait toward Toulan.
-seoTitle: Bontolan Beach Banggai | Snorkeling, Access & Travel Guide
+seoTitle: "Bontolan Beach Banggai | Snorkeling, Access & Travel Guide"
 seoDescription: 'Discover Bontolan Beach on Banggai Island: snorkeling, Banggai Cardinal Fish, facilities, prices, access from Banggai town, accommodation and safety tips.'
 image: /images/bontolan.jpg
 imageAlt: Bontolan Beach on Banggai Island
@@ -24,7 +24,7 @@ travelTips:
   - Use flotation devices if you are not a confident swimmer
   - Bring sun and rain protection and a waterproof bag
   - Respect coral and the local community
-youtube: https://www.youtube.com/watch?v=LEO-F982E6g
+youtube: "https://www.youtube.com/watch?v=LEO-F982E6g"
 ---
 
 ## Bontolan Beach: Snorkeling and Village Life on Banggai Island
