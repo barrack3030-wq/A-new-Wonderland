@@ -1,0 +1,22 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout
+  title="Page Not Found | Banggai Wonderland"
+  description="The page you are looking for could not be found. Explore Banggai Wonderland destinations, private trips and travel guides."
+>
+  <main class="min-h-[70vh] flex items-center justify-center bg-sand-50 px-5 py-24">
+    <section class="max-w-2xl text-center">
+      <p class="text-sm font-bold uppercase tracking-[0.28em] text-turquoise-600 mb-5">404</p>
+      <h1 class="text-4xl md:text-6xl font-serif font-bold text-ocean-900 mb-5">Page not found</h1>
+      <p class="text-ocean-600 text-lg leading-relaxed mb-8">
+        The page may have moved or the address may be incorrect. Explore Banggai Wonderland from one of the links below.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-3 justify-center">
+        <a href="/en/" class="inline-flex items-center justify-center rounded-xl bg-ocean-800 text-white px-6 py-3 font-bold hover:bg-ocean-700 transition-colors">Go to homepage</a>
+        <a href="/en/destinations/" class="inline-flex items-center justify-center rounded-xl border border-ocean-200 bg-white text-ocean-900 px-6 py-3 font-bold hover:border-turquoise-300 transition-colors">Explore destinations</a>
+      </div>
+    </section>
+  </main>
+</BaseLayout>
