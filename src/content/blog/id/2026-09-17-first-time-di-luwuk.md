@@ -5,7 +5,7 @@ imageAlt: Panduan perjalanan Luwuk dan Kepulauan Banggai
 title: Pertama Kali ke Luwuk? Panduan Praktis Memulai Perjalanan ke Banggai
 description: Pertama kali ke Luwuk? Pelajari apa yang perlu disiapkan, tempat menginap, transportasi, uang tunai, dan cara melanjutkan perjalanan ke Kepulauan Banggai dan Paisu Pok.
 seoTitle: Pertama Kali ke Luwuk? Panduan Praktis Memulai Perjalanan ke Banggai
-seoDescription: Panduan praktis pertama kali ke Luwuk: kedatangan, hotel, transportasi, uang tunai, kebutuhan perjalanan, serta cara melanjutkan ke Kepulauan Banggai dan Paisu Pok.
+seoDescription: "Panduan praktis pertama kali ke Luwuk: kedatangan, hotel, transportasi, uang tunai, kebutuhan perjalanan, serta cara melanjutkan ke Kepulauan Banggai dan Paisu Pok."
 author: Banggai Wonderland
 pubDate: 2026-09-17
 tags:
