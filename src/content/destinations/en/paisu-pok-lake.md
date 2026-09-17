@@ -46,7 +46,7 @@ The water color changes during the day. Early in the morning it can look darker,
 
 ## Facilities and Rental Prices
 
-Paisu Pok is managed by the **village government through BUMDes Paisu Batango**. A formal cooperation and revenue-sharing arrangement with the Banggai Kepulauan Tourism Office was finalized in September 2026, according to the supplied research. The provincial tourism office also lists Paisu Pok among the attractions of Luk Panenteng and records basic facilities including a dock, footpath, boats, gazebos, a guard room and a non-permanent prayer room. citeturn596339search1turn596339search3
+Paisu Pok is managed by the **village government through BUMDes Paisu Batango**. According to the supplied research, a formal cooperation and revenue-sharing arrangement with the Banggai Kepulauan Tourism Office was finalized in September 2026. The provincial tourism office also lists basic facilities at Paisu Pok including a dock, footpath, boats, gazebos, a guard room and a non-permanent prayer room.
 
 **Typical reported charges:**
 - Lake entrance: **Rp5,000–10,000 per person**
