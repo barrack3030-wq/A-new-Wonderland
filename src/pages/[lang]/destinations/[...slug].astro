@@ -10,11 +10,7 @@ export async function getStaticPaths() {
   const destinations = await getCollection('destinations');
   return destinations.map(entry => {
     const [lang, ...slugParts] = entry.slug.split('/');
-    const destSlug = slugParts.join('/');
-    return {
-      params: { lang, slug: destSlug },
-      props: { entry },
-    };
+    return { params: { lang, slug: slugParts.join('/') }, props: { entry } };
   });
 }
 
@@ -23,261 +19,99 @@ const { lang } = Astro.params;
 const t = useTranslations(lang as any);
 const { Content } = await entry.render();
 const allDestinations = await getCollection('destinations');
+const allPackages = await getCollection('packages');
+const allBlogs = await getCollection('blog');
+const languageDestinations = allDestinations.filter(item => item.slug.startsWith(`${lang}/`) && item.slug !== entry.slug);
 
-// Create contextual internal links to other destinations in the same language.
-// These links help visitors discover related places and help search engines understand site structure.
-const relatedDestinations = allDestinations
-  .filter(item => {
-    const [itemLang] = item.slug.split('/');
-    return itemLang === lang && item.slug !== entry.slug;
-  })
-  .slice(0, 4);
+const slug = Astro.params.slug as string;
+const slugWords = slug.replace(/-/g, ' ').toLowerCase().split(/\s+/).filter(Boolean);
+const relevance = (text: string) => slugWords.reduce((score, word) => score + (text.toLowerCase().includes(word) ? 1 : 0), 0);
 
-const accessText = getAccessInfo(Astro.params.slug as string, lang as string);
+const relatedDestinations = languageDestinations
+  .map(item => ({ item, score: relevance(`${item.data.title} ${item.data.description} ${item.data.category}`) }))
+  .sort((a,b) => b.score - a.score)
+  .slice(0, 4)
+  .map(x => x.item);
+
+const languagePackages = allPackages.filter(item => item.slug.startsWith(`${lang}/`));
+const relatedPackages = languagePackages
+  .map(item => ({ item, score: relevance(`${item.data.title} ${item.data.description} ${item.data.destination}`) }))
+  .sort((a,b) => b.score - a.score)
+  .slice(0, 3)
+  .map(x => x.item);
+
+const languageBlogs = allBlogs.filter(item => item.slug.startsWith(`${lang}/`));
+const relatedArticles = languageBlogs
+  .map(item => ({ item, score: relevance(`${item.data.title} ${item.data.description} ${(item.data.tags || []).join(' ')}`) }))
+  .sort((a,b) => b.score - a.score)
+  .slice(0, 3)
+  .map(x => x.item);
+
+const accessText = getAccessInfo(slug, lang as string);
 const youtubeUrl = entry.data.youtube;
-
-const youtubeId = youtubeUrl
-  ? youtubeUrl.match(
-      /(?:youtube\.com\/watch\?v=|youtu\.be\/|youtube\.com\/embed\/)([^&?/]+)/
-    )?.[1]
-  : null;
+const youtubeId = youtubeUrl?.match(/(?:youtube\.com\/watch\?v=|youtu\.be\/|youtube\.com\/embed\/)([^&?/]+)/)?.[1] || null;
 
 const breadcrumbItems = [
   { name: 'Home', url: `/${lang}/` },
   { name: t('nav.destinations'), url: `/${lang}/destinations/` },
-  { name: entry.data.title, url: `/${lang}/destinations/${Astro.params.slug}/` }
+  { name: entry.data.title, url: `/${lang}/destinations/${slug}/` }
 ];
 
 const schema = {
-  "@context": "https://schema.org",
-  "@type": "TouristAttraction",
-  "name": entry.data.title,
-  "description": entry.data.description,
-  "image": entry.data.image,
-  "url": new URL(`/${lang}/destinations/${Astro.params.slug}/`, Astro.site).href,
-  "publicAccess": true
+  '@context': 'https://schema.org',
+  '@type': 'TouristAttraction',
+  name: entry.data.title,
+  description: entry.data.description,
+  image: entry.data.image,
+  url: new URL(`/${lang}/destinations/${slug}/`, Astro.site).href,
+  publicAccess: true
 };
 
-const readMoreText =
-  lang === 'id' ? 'Baca Artikel Lengkap' :
-  lang === 'es' ? 'Leer el artículo completo' :
-  lang === 'fr' ? "Lire l’article complet" :
-  lang === 'zh' ? '阅读完整文章' :
-  'Read Full Article';
-
-const hideArticleText =
-  lang === 'id' ? 'Tutup Artikel' :
-  lang === 'es' ? 'Cerrar artículo' :
-  lang === 'fr' ? "Réduire l’article" :
-  lang === 'zh' ? '收起文章' :
-  'Hide Full Article';
+const labels = ({
+  id: { read:'Baca Artikel Lengkap', hide:'Tutup Artikel', related:'Destinasi Terkait', packages:'Paket Private Trip Terkait', articles:'Panduan Perjalanan Terkait', plan:'Rencanakan Perjalanan Ini', video:'Tonton Video' },
+  en: { read:'Read Full Article', hide:'Hide Full Article', related:'Related Destinations', packages:'Related Private Trips', articles:'Related Travel Guides', plan:'Plan This Trip', video:'Watch Video' },
+  es: { read:'Leer el artículo completo', hide:'Cerrar artículo', related:'Destinos relacionados', packages:'Viajes privados relacionados', articles:'Guías de viaje relacionadas', plan:'Planifica este viaje', video:'Ver vídeo' },
+  fr: { read:'Lire l’article complet', hide:'Réduire l’article', related:'Destinations similaires', packages:'Circuits privés associés', articles:'Guides de voyage associés', plan:'Planifier ce voyage', video:'Voir la vidéo' },
+  zh: { read:'阅读完整文章', hide:'收起文章', related:'相关目的地', packages:'相关私人旅行', articles:'相关旅行指南', plan:'规划这次旅行', video:'观看视频' }
+} as Record<string, any>)[lang as string] || { read:'Read Full Article', hide:'Hide Full Article', related:'Related Destinations', packages:'Related Private Trips', articles:'Related Travel Guides', plan:'Plan This Trip', video:'Watch Video' };
 ---
 
-<BaseLayout
-  title={`${entry.data.title} | Banggai Wonderland`}
-  description={entry.data.description}
-  seoTitle={entry.data.seoTitle}
-  seoDescription={entry.data.seoDescription}
-  ogImage={entry.data.image}
-  imageAlt={entry.data.imageAlt}
-  schema={schema}
->
+<BaseLayout title={`${entry.data.title} | Banggai Wonderland`} description={entry.data.description} seoTitle={entry.data.seoTitle} seoDescription={entry.data.seoDescription} ogImage={entry.data.image} imageAlt={entry.data.imageAlt} schema={schema}>
   <section class="relative h-[60vh] min-h-[400px] flex items-end pb-16 pt-32">
-    <div class="absolute inset-0 z-0">
-      <img src={entry.data.image} alt={entry.data.imageAlt || entry.data.title} class="w-full h-full object-cover" />
-      <div class="absolute inset-0 bg-gradient-to-t from-ocean-900 via-ocean-900/60 to-transparent"></div>
-    </div>
-
+    <div class="absolute inset-0 z-0"><img src={entry.data.image} alt={entry.data.imageAlt || entry.data.title} class="w-full h-full object-cover"/><div class="absolute inset-0 bg-gradient-to-t from-ocean-900 via-ocean-900/60 to-transparent"></div></div>
     <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
-      <Breadcrumb items={breadcrumbItems} />
-
-      <div class="mt-4">
-        <span class="inline-block bg-turquoise-500 text-ocean-900 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wide mb-4">
-          {entry.data.category}
-        </span>
-        <h1 class="text-4xl md:text-5xl lg:text-6xl font-serif font-bold text-white mb-4">
-          {entry.data.title}
-        </h1>
-        <div class="flex items-center text-ocean-100 text-sm md:text-base">
-          <svg class="w-5 h-5 mr-2 text-turquoise-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0 8 8 0 01-2.243 2.243z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
-          {entry.data.location}
-        </div>
-      </div>
+      <Breadcrumb items={breadcrumbItems}/>
+      <div class="mt-4"><span class="inline-block bg-turquoise-500 text-ocean-900 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wide mb-4">{entry.data.category}</span><h1 class="text-4xl md:text-5xl lg:text-6xl font-serif font-bold text-white mb-4">{entry.data.title}</h1><div class="flex items-center text-ocean-100 text-sm md:text-base">{entry.data.location}</div></div>
     </div>
   </section>
 
-  <section class="py-16 bg-white">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="flex flex-col lg:flex-row gap-12">
-        <div class="lg:w-2/3">
-          <article class="relative">
-            <div id="destination-article" class="prose prose-lg prose-ocean max-w-none prose-headings:font-serif prose-headings:text-ocean-900 prose-p:text-ocean-700 prose-p:leading-relaxed prose-a:text-turquoise-600 hover:prose-a:text-turquoise-500 prose-img:rounded-2xl prose-img:shadow-md max-h-[760px] overflow-hidden transition-[max-height] duration-700 ease-in-out">
-              <Content />
-            </div>
+  <section class="py-16 bg-white"><div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"><div class="flex flex-col lg:flex-row gap-12">
+    <div class="lg:w-2/3">
+      <article class="relative">
+        <div id="destination-article" class="prose prose-lg prose-ocean max-w-none prose-headings:font-serif prose-headings:text-ocean-900 prose-p:text-ocean-700 prose-p:leading-relaxed prose-a:text-turquoise-600 prose-img:rounded-2xl prose-img:shadow-md max-h-[760px] overflow-hidden transition-[max-height] duration-700 ease-in-out"><Content/></div>
+        <div id="article-fade" class="absolute left-0 right-0 bottom-0 h-40 bg-gradient-to-t from-white via-white/90 to-transparent pointer-events-none"></div>
+        <div class="relative flex justify-center -mt-2 pt-8"><button id="article-toggle" type="button" aria-expanded="false" aria-controls="destination-article" data-expanded-label={labels.hide} class="inline-flex items-center gap-2 rounded-full bg-ocean-900 px-6 py-3 text-sm font-bold text-white shadow-md hover:bg-ocean-800"><span id="article-toggle-label">{labels.read}</span><span id="article-toggle-icon" class="transition-transform">⌄</span></button></div>
+      </article>
 
-            <div id="article-fade" class="absolute left-0 right-0 bottom-0 h-40 bg-gradient-to-t from-white via-white/90 to-transparent pointer-events-none"></div>
+      {youtubeId && <section class="mt-12"><h2 class="font-serif text-3xl font-bold text-ocean-900 mb-6">{labels.video}</h2><div class="relative aspect-video overflow-hidden rounded-2xl shadow-lg bg-ocean-900"><iframe src={`https://www.youtube.com/embed/${youtubeId}?rel=0`} title={`${entry.data.title} video`} loading="lazy" class="absolute inset-0 w-full h-full" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div></section>}
 
-            <div class="relative flex justify-center -mt-2 pt-8">
-              <button
-                id="article-toggle"
-                type="button"
-                aria-expanded="false"
-                aria-controls="destination-article"
-                data-expanded-label={hideArticleText}
-                class="inline-flex items-center justify-center gap-2 rounded-full bg-ocean-900 px-6 py-3 text-sm font-bold text-white shadow-md transition-all hover:bg-ocean-800 hover:-translate-y-0.5 focus:outline-none focus:ring-2 focus:ring-turquoise-500 focus:ring-offset-2"
-              >
-                <span id="article-toggle-label">{readMoreText}</span>
-                <svg id="article-toggle-icon" class="w-4 h-4 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
-              </button>
-            </div>
-          </article>
+      {relatedArticles.length > 0 && <section class="mt-14 pt-10 border-t border-sand-200"><h2 class="font-serif text-3xl font-bold text-ocean-900 mb-6">{labels.articles}</h2><div class="grid sm:grid-cols-3 gap-5">{relatedArticles.map(post => { const parts=post.slug.split('/').slice(1).join('/'); return <a href={`/${lang}/blog/${parts}/`} class="block rounded-2xl border border-sand-200 bg-sand-50 p-5 hover:shadow-lg transition-shadow"><p class="text-xs text-turquoise-600 font-semibold mb-2">Travel Guide</p><h3 class="font-serif text-lg font-bold text-ocean-900">{post.data.title}</h3><p class="mt-2 text-sm text-ocean-600 line-clamp-3">{post.data.description}</p></a>; })}</div></section>}
 
-          {youtubeId && (
-            <section class="mt-12">
-              <h2 class="font-serif text-3xl font-bold text-ocean-900 mb-6">
-                Watch Video
-              </h2>
-              <div class="relative aspect-video overflow-hidden rounded-2xl shadow-lg bg-ocean-900">
-                <iframe
-                  src={`https://www.youtube.com/embed/${youtubeId}?rel=0`}
-                  title={`${entry.data.title} video`}
-                  loading="lazy"
-                  class="absolute inset-0 w-full h-full"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                  allowfullscreen
-                ></iframe>
-              </div>
-              <a
-                href={`https://www.youtube.com/watch?v=${youtubeId}`}
-                target="_blank"
-                rel="noopener noreferrer"
-                class="mt-4 inline-flex items-center justify-center rounded-full bg-ocean-900 px-5 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-ocean-800"
-              >
-                {lang === 'id' ? 'Tonton di YouTube' :
-                 lang === 'es' ? 'Ver en YouTube' :
-                 lang === 'fr' ? 'Voir sur YouTube' :
-                 lang === 'zh' ? '在 YouTube 上观看' :
-                 'Watch on YouTube'}
-              </a>
-            </section>
-          )}
+      {relatedPackages.length > 0 && <section class="mt-14 pt-10 border-t border-sand-200"><h2 class="font-serif text-3xl font-bold text-ocean-900 mb-6">{labels.packages}</h2><div class="grid sm:grid-cols-3 gap-5">{relatedPackages.map(pkg => { const parts=pkg.slug.split('/').slice(1).join('/'); return <a href={`/${lang}/packages/${parts}/`} class="block rounded-2xl border border-sand-200 bg-sand-50 p-5 hover:shadow-lg transition-shadow"><p class="text-xs text-turquoise-600 font-semibold mb-2">{pkg.data.duration}</p><h3 class="font-serif text-lg font-bold text-ocean-900">{pkg.data.title}</h3><p class="mt-2 text-sm text-ocean-600 line-clamp-3">{pkg.data.description}</p></a>; })}</div></section>}
 
-          {relatedDestinations.length > 0 && (
-            <section class="mt-14 pt-10 border-t border-sand-200">
-              <h2 class="font-serif text-3xl font-bold text-ocean-900 mb-6">
-                {lang === 'id' ? 'Destinasi Lain di Banggai' :
-                 lang === 'en' ? 'More Destinations in Banggai' :
-                 lang === 'es' ? 'Más destinos en Banggai' :
-                 lang === 'fr' ? 'Autres destinations à Banggai' :
-                 '更多邦盖目的地'}
-              </h2>
-              <div class="grid sm:grid-cols-2 gap-5">
-                {relatedDestinations.map(destination => {
-                  const [, ...slugParts] = destination.slug.split('/');
-                  const href = `/${lang}/destinations/${slugParts.join('/')}/`;
-                  return (
-                    <a href={href} class="group block rounded-2xl overflow-hidden border border-sand-200 bg-sand-50 hover:shadow-lg transition-shadow">
-                      <img
-                        src={destination.data.image}
-                        alt={destination.data.imageAlt || destination.data.title}
-                        loading="lazy"
-                        class="w-full h-40 object-cover group-hover:scale-105 transition-transform duration-500"
-                      />
-                      <div class="p-4">
-                        <h3 class="font-serif text-lg font-bold text-ocean-900 group-hover:text-turquoise-600 transition-colors">
-                          {destination.data.title}
-                        </h3>
-                        <p class="mt-1 text-sm text-ocean-600 line-clamp-2">
-                          {destination.data.description}
-                        </p>
-                      </div>
-                    </a>
-                  );
-                })}
-              </div>
-            </section>
-          )}
-        </div>
-
-        <div class="lg:w-1/3 space-y-8">
-          {entry.data.highlights && entry.data.highlights.length > 0 && (
-            <div class="bg-sand-50 p-6 rounded-2xl border border-sand-200">
-              <h3 class="font-serif text-xl font-bold text-ocean-900 mb-4">Highlights</h3>
-              <ul class="space-y-3">
-                {entry.data.highlights.map(highlight => (
-                  <li class="flex items-start">
-                    <svg class="w-5 h-5 text-turquoise-500 mr-3 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
-                    <span class="text-ocean-700 text-sm leading-relaxed">{highlight}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          )}
-
-          {entry.data.bestTime && (
-            <div class="bg-sand-50 p-6 rounded-2xl border border-sand-200">
-              <h3 class="font-serif text-xl font-bold text-ocean-900 mb-4">Best Time to Visit</h3>
-              <div class="flex items-center text-ocean-700">
-                <svg class="w-5 h-5 text-turquoise-500 mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4v-4m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
-                <span class="text-sm font-medium">{entry.data.bestTime}</span>
-              </div>
-            </div>
-          )}
-
-          {accessText && (
-            <div class="bg-sand-50 p-6 rounded-2xl border border-sand-200">
-              <h3 class="font-serif text-xl font-bold text-ocean-900 mb-4">{t('destinations.access') || 'Access & Transportation'}</h3>
-              <div class="flex items-start text-ocean-700">
-                <svg class="w-5 h-5 text-turquoise-500 mr-3 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"></path></svg>
-                <span class="text-sm leading-relaxed">{accessText}</span>
-              </div>
-            </div>
-          )}
-
-          <div class="bg-ocean-800 p-8 rounded-2xl shadow-xl text-center relative overflow-hidden">
-            <div class="absolute inset-0 bg-gradient-to-br from-ocean-800 to-ocean-600 opacity-90"></div>
-            <div class="relative z-10">
-              <h3 class="font-serif text-2xl font-bold text-white mb-4">Plan This Trip</h3>
-              <p class="text-ocean-50 text-sm mb-6">Ready to explore {entry.data.title}? Contact our travel experts to include this destination in your package.</p>
-              <a href="https://wa.me/6285820830530" target="_blank" rel="noopener noreferrer" class="block w-full bg-turquoise-500 text-ocean-900 px-6 py-3 rounded-full font-bold text-sm hover:bg-turquoise-400 transition-colors shadow-md">
-                {t('btn.book')}
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
+      {relatedDestinations.length > 0 && <section class="mt-14 pt-10 border-t border-sand-200"><h2 class="font-serif text-3xl font-bold text-ocean-900 mb-6">{labels.related}</h2><div class="grid sm:grid-cols-2 gap-5">{relatedDestinations.map(destination => { const parts=destination.slug.split('/').slice(1).join('/'); return <a href={`/${lang}/destinations/${parts}/`} class="group block rounded-2xl overflow-hidden border border-sand-200 bg-sand-50 hover:shadow-lg transition-shadow"><img src={destination.data.image} alt={destination.data.imageAlt || destination.data.title} loading="lazy" class="w-full h-40 object-cover group-hover:scale-105 transition-transform duration-500"/><div class="p-4"><h3 class="font-serif text-lg font-bold text-ocean-900 group-hover:text-turquoise-600">{destination.data.title}</h3><p class="mt-1 text-sm text-ocean-600 line-clamp-2">{destination.data.description}</p></div></a>; })}</div></section>}
     </div>
-  </section>
 
-  <WhatsAppButton />
-
+    <aside class="lg:w-1/3 space-y-8">
+      {entry.data.highlights?.length > 0 && <div class="bg-sand-50 p-6 rounded-2xl border border-sand-200"><h2 class="font-serif text-xl font-bold text-ocean-900 mb-4">Highlights</h2><ul class="space-y-3">{entry.data.highlights.map(item=><li class="flex items-start text-sm text-ocean-700"><span class="text-turquoise-500 mr-3">✓</span>{item}</li>)}</ul></div>}
+      {entry.data.bestTime && <div class="bg-sand-50 p-6 rounded-2xl border border-sand-200"><h2 class="font-serif text-xl font-bold text-ocean-900 mb-4">Best Time to Visit</h2><p class="text-sm text-ocean-700">{entry.data.bestTime}</p></div>}
+      {accessText && <div class="bg-sand-50 p-6 rounded-2xl border border-sand-200"><h2 class="font-serif text-xl font-bold text-ocean-900 mb-4">{t('destinations.access') || 'Access & Transportation'}</h2><p class="text-sm leading-relaxed text-ocean-700">{accessText}</p></div>}
+      <div class="bg-ocean-800 p-8 rounded-2xl shadow-xl text-center"><h2 class="font-serif text-2xl font-bold text-white mb-4">{labels.plan}</h2><p class="text-ocean-50 text-sm mb-6">Explore {entry.data.title} as part of a private trip around the Banggai Islands.</p><a href={`/${lang}/book/?destination=${encodeURIComponent(entry.data.title)}`} class="block w-full bg-turquoise-500 text-ocean-900 px-6 py-3 rounded-full font-bold text-sm hover:bg-turquoise-400">{t('btn.book')}</a></div>
+    </aside>
+  </div></div></section>
+  <WhatsAppButton/>
   <script>
-    const toggle = document.getElementById('article-toggle');
-    const article = document.getElementById('destination-article');
-    const fade = document.getElementById('article-fade');
-    const label = document.getElementById('article-toggle-label');
-    const icon = document.getElementById('article-toggle-icon');
-
-    if (toggle && article && fade && label && icon) {
-      const expandedLabel = toggle.getAttribute('data-expanded-label') || '';
-      const collapsedLabel = label.textContent || 'Read Full Article';
-
-      toggle.addEventListener('click', () => {
-        const isExpanded = toggle.getAttribute('aria-expanded') === 'true';
-        const nextExpanded = !isExpanded;
-
-        toggle.setAttribute('aria-expanded', String(nextExpanded));
-        article.style.maxHeight = nextExpanded ? `${article.scrollHeight}px` : '';
-        fade.classList.toggle('hidden', nextExpanded);
-        icon.classList.toggle('rotate-180', nextExpanded);
-        label.textContent = nextExpanded
-          ? expandedLabel
-          : collapsedLabel;
-
-        if (!nextExpanded) {
-          toggle.scrollIntoView({ behavior: 'smooth', block: 'center' });
-        }
-      });
-    }
+    const toggle=document.getElementById('article-toggle'); const article=document.getElementById('destination-article'); const fade=document.getElementById('article-fade'); const label=document.getElementById('article-toggle-label'); const icon=document.getElementById('article-toggle-icon');
+    if(toggle&&article&&fade&&label&&icon){const expandedLabel=toggle.getAttribute('data-expanded-label')||'Hide Full Article';const collapsedLabel=label.textContent||'Read Full Article';toggle.addEventListener('click',()=>{const next=toggle.getAttribute('aria-expanded')!=='true';toggle.setAttribute('aria-expanded',String(next));article.style.maxHeight=next?`${article.scrollHeight}px`:'';fade.classList.toggle('hidden',next);icon.classList.toggle('rotate-180',next);label.textContent=next?expandedLabel:collapsedLabel;if(!next)toggle.scrollIntoView({behavior:'smooth',block:'center'});});}
   </script>
 </BaseLayout>
