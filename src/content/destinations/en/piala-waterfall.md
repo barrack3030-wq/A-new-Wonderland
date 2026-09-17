@@ -69,7 +69,7 @@ From **central Luwuk**, drive toward **Kelurahan Hanga-Hanga** in Kecamatan Luwu
 
 A **car or motorbike** can reach the accessible parking area. The final section continues on foot to the waterfall.
 
-Road conditions deserve attention during the rainy season. A **landslide on 24 July 2026** temporarily blocked part of the route toward Piala in Hanga-Hanga, and an excavator was brought in to clear the material. Local reporting also warned visitors to remain alert to possible additional landslides during continued heavy rain. citeturn723395search0
+Road conditions deserve attention during the rainy season. A **landslide on 24 July 2026** temporarily blocked part of the route toward Piala in Hanga-Hanga, and an excavator was brought in to clear the material. Local reporting also warned visitors to remain alert to possible additional landslides during continued heavy rain.
 
 ## Best Time to Visit and Safety
 
