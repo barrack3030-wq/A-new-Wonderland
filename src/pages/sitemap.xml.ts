@@ -1,6 +1,6 @@
 import { getCollection } from 'astro:content';
 
-const site = 'https://banggaiwonderland.my.id';
+const site = 'https://www.banggaiwonderland.my.id';
 const languages = ['id', 'en', 'es', 'fr', 'zh'];
 
 // Keep this list limited to routes that actually exist in src/pages/[lang].
