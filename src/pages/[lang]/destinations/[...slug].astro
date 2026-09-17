@@ -115,6 +115,18 @@ const schema = {
                   allowfullscreen
                 ></iframe>
               </div>
+              <a
+                href={`https://www.youtube.com/watch?v=${youtubeId}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                class="mt-4 inline-flex items-center justify-center rounded-full bg-ocean-900 px-5 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-ocean-800"
+              >
+                {lang === 'id' ? 'Tonton di YouTube' :
+                 lang === 'es' ? 'Ver en YouTube' :
+                 lang === 'fr' ? 'Voir sur YouTube' :
+                 lang === 'zh' ? '在 YouTube 上观看' :
+                 'Watch on YouTube'}
+              </a>
             </section>
           )}
 
