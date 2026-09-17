@@ -22,9 +22,6 @@ const {
   schema
 } = Astro.props;
 
-const finalTitle = seoTitle || title;
-const finalDescription = seoDescription || description;
-const finalImageAlt = imageAlt || finalTitle;
 const siteUrl = Astro.site || new URL(Astro.url.origin);
 const normalizedPath = Astro.url.pathname.endsWith('/') ? Astro.url.pathname : `${Astro.url.pathname}/`;
 const currentUrl = new URL(normalizedPath, siteUrl).href;
@@ -32,6 +29,36 @@ const currentUrl = new URL(normalizedPath, siteUrl).href;
 const pathParts = Astro.url.pathname.split('/').filter(Boolean);
 const currentLangCode = pathParts[0] && Object.keys(languages).includes(pathParts[0]) ? pathParts[0] : 'id';
 const section = pathParts[1] || '';
+
+// The homepage uses a dedicated, localized SEO title and description.
+// Other pages keep their page-specific metadata passed through BaseLayout.
+const homepageSeo: Record<string, { title: string; description: string }> = {
+  en: {
+    title: 'Banggai Islands Travel Guide & Private Trips | Banggai Wonderland',
+    description: 'Discover the Banggai Islands in Central Sulawesi with private trips to Paisu Pok, Piala Waterfall, Pulo Dua, Kamumu and other hidden destinations around Luwuk and Banggai.'
+  },
+  id: {
+    title: 'Wisata Kepulauan Banggai & Private Trip | Banggai Wonderland',
+    description: 'Jelajahi Kepulauan Banggai, Sulawesi Tengah melalui private trip ke Paisu Pok, Air Terjun Piala, Pulo Dua, Kamumu dan destinasi tersembunyi di sekitar Luwuk dan Banggai.'
+  },
+  es: {
+    title: 'Islas Banggai: Viajes Privados y Guía de Viaje | Banggai Wonderland',
+    description: 'Descubre las Islas Banggai en Sulawesi Central con viajes privados a Paisu Pok, la cascada Piala, Pulo Dua, Kamumu y otros destinos cerca de Luwuk y Banggai.'
+  },
+  fr: {
+    title: 'Îles Banggai : Voyages Privés et Guide | Banggai Wonderland',
+    description: 'Découvrez les îles Banggai à Sulawesi central avec des voyages privés vers Paisu Pok, la cascade de Piala, Pulo Dua, Kamumu et d’autres destinations autour de Luwuk et Banggai.'
+  },
+  zh: {
+    title: '邦盖群岛旅行与私人定制之旅 | Banggai Wonderland',
+    description: '探索印度尼西亚中苏拉威西的邦盖群岛，体验前往 Paisu Pok、Piala 瀑布、Pulo Dua、Kamumu 以及 Luwuk 和 Banggai 周边秘境的私人旅行。'
+  }
+};
+
+const isHomepage = !section;
+const effectiveSeoTitle = seoTitle || (isHomepage ? homepageSeo[currentLangCode]?.title : undefined) || title;
+const effectiveDescription = seoDescription || (isHomepage ? homepageSeo[currentLangCode]?.description : undefined) || description;
+const finalImageAlt = imageAlt || effectiveSeoTitle;
 
 // Only emit hreflang links for language versions that actually exist.
 let alternateLinks: { lang: string; href: string }[] = [];
@@ -117,8 +144,8 @@ const finalSchema = schema ? [baseSchema, websiteSchema, schema] : [baseSchema, 
 const defaultLink = alternateLinks.find(link => link.lang === 'en') || alternateLinks.find(link => link.lang === 'id');
 ---
 
-<title>{finalTitle}</title>
-<meta name="description" content={finalDescription} />
+<title>{effectiveSeoTitle}</title>
+<meta name="description" content={effectiveDescription} />
 <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
 <meta name="author" content="Banggai Wonderland" />
 <link rel="canonical" href={currentUrl} />
@@ -130,8 +157,8 @@ const defaultLink = alternateLinks.find(link => link.lang === 'en') || alternate
 
 <meta property="og:type" content="website" />
 <meta property="og:url" content={currentUrl} />
-<meta property="og:title" content={finalTitle} />
-<meta property="og:description" content={finalDescription} />
+<meta property="og:title" content={effectiveSeoTitle} />
+<meta property="og:description" content={effectiveDescription} />
 <meta property="og:image" content={new URL(ogImage, siteUrl).href} />
 <meta property="og:image:alt" content={finalImageAlt} />
 <meta property="og:site_name" content="Banggai Wonderland" />
@@ -142,8 +169,8 @@ const defaultLink = alternateLinks.find(link => link.lang === 'en') || alternate
 
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:url" content={currentUrl} />
-<meta name="twitter:title" content={finalTitle} />
-<meta name="twitter:description" content={finalDescription} />
+<meta name="twitter:title" content={effectiveSeoTitle} />
+<meta name="twitter:description" content={effectiveDescription} />
 <meta name="twitter:image" content={new URL(ogImage, siteUrl).href} />
 
 <script type="application/ld+json" set:html={JSON.stringify(finalSchema)} />
