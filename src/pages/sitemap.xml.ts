@@ -2,7 +2,19 @@ import { getCollection } from 'astro:content';
 
 const site = 'https://banggaiwonderland.my.id';
 const languages = ['id', 'en', 'es', 'fr', 'zh'];
-const staticPages = ['', 'about/', 'destinations/', 'packages/', 'blog/', 'gallery/', 'contact/'];
+
+// Keep this list limited to routes that actually exist in src/pages/[lang].
+// New SEO sections (/tours, /travel-guide) will be added only when their
+// corresponding routes and content are implemented.
+const staticPages = [
+  'about/',
+  'destinations/',
+  'packages/',
+  'blog/',
+  'gallery/',
+  'book/',
+  'contact/'
+];
 
 export async function GET() {
   const destinations = await getCollection('destinations');
@@ -12,6 +24,8 @@ export async function GET() {
   const urls = new Set<string>();
 
   for (const lang of languages) {
+    urls.add(`${site}/${lang}/`);
+
     for (const page of staticPages) {
       urls.add(`${site}/${lang}/${page}`);
     }
@@ -19,17 +33,23 @@ export async function GET() {
 
   for (const entry of destinations) {
     const [lang, ...parts] = entry.slug.split('/');
-    urls.add(`${site}/${lang}/destinations/${parts.join('/')}/`);
+    if (languages.includes(lang) && parts.length) {
+      urls.add(`${site}/${lang}/destinations/${parts.join('/')}/`);
+    }
   }
 
   for (const entry of packages) {
     const [lang, ...parts] = entry.slug.split('/');
-    urls.add(`${site}/${lang}/packages/${parts.join('/')}/`);
+    if (languages.includes(lang) && parts.length) {
+      urls.add(`${site}/${lang}/packages/${parts.join('/')}/`);
+    }
   }
 
   for (const entry of blog) {
     const [lang, ...parts] = entry.slug.split('/');
-    urls.add(`${site}/${lang}/blog/${parts.join('/')}/`);
+    if (languages.includes(lang) && parts.length) {
+      urls.add(`${site}/${lang}/blog/${parts.join('/')}/`);
+    }
   }
 
   const xml = `<?xml version="1.0" encoding="UTF-8"?>\n` +
