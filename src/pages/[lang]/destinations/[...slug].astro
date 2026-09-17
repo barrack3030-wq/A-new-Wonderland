@@ -57,6 +57,20 @@ const schema = {
   "url": new URL(`/${lang}/destinations/${Astro.params.slug}/`, Astro.site).href,
   "publicAccess": true
 };
+
+const readMoreText =
+  lang === 'id' ? 'Baca Artikel Lengkap' :
+  lang === 'es' ? 'Leer el artículo completo' :
+  lang === 'fr' ? "Lire l’article complet" :
+  lang === 'zh' ? '阅读完整文章' :
+  'Read Full Article';
+
+const hideArticleText =
+  lang === 'id' ? 'Tutup Artikel' :
+  lang === 'es' ? 'Cerrar artículo' :
+  lang === 'fr' ? "Réduire l’article" :
+  lang === 'zh' ? '收起文章' :
+  'Hide Full Article';
 ---
 
 <BaseLayout
@@ -85,7 +99,7 @@ const schema = {
           {entry.data.title}
         </h1>
         <div class="flex items-center text-ocean-100 text-sm md:text-base">
-          <svg class="w-5 h-5 mr-2 text-turquoise-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+          <svg class="w-5 h-5 mr-2 text-turquoise-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0 8 8 0 01-6-6z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
           {entry.data.location}
         </div>
       </div>
@@ -96,9 +110,26 @@ const schema = {
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex flex-col lg:flex-row gap-12">
         <div class="lg:w-2/3">
-          <div class="prose prose-lg prose-ocean max-w-none prose-headings:font-serif prose-headings:text-ocean-900 prose-p:text-ocean-700 prose-p:leading-relaxed prose-a:text-turquoise-600 hover:prose-a:text-turquoise-500 prose-img:rounded-2xl prose-img:shadow-md">
-            <Content />
-          </div>
+          <article class="relative">
+            <div id="destination-article" class="prose prose-lg prose-ocean max-w-none prose-headings:font-serif prose-headings:text-ocean-900 prose-p:text-ocean-700 prose-p:leading-relaxed prose-a:text-turquoise-600 hover:prose-a:text-turquoise-500 prose-img:rounded-2xl prose-img:shadow-md max-h-[760px] overflow-hidden transition-[max-height] duration-700 ease-in-out">
+              <Content />
+            </div>
+
+            <div id="article-fade" class="absolute left-0 right-0 bottom-0 h-40 bg-gradient-to-t from-white via-white/90 to-transparent pointer-events-none"></div>
+
+            <div class="relative flex justify-center -mt-2 pt-8">
+              <button
+                id="article-toggle"
+                type="button"
+                aria-expanded="false"
+                aria-controls="destination-article"
+                class="inline-flex items-center justify-center gap-2 rounded-full bg-ocean-900 px-6 py-3 text-sm font-bold text-white shadow-md transition-all hover:bg-ocean-800 hover:-translate-y-0.5 focus:outline-none focus:ring-2 focus:ring-turquoise-500 focus:ring-offset-2"
+              >
+                <span id="article-toggle-label">{readMoreText}</span>
+                <svg id="article-toggle-icon" class="w-4 h-4 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+              </button>
+            </div>
+          </article>
 
           {youtubeId && (
             <section class="mt-12">
@@ -218,4 +249,34 @@ const schema = {
   </section>
 
   <WhatsAppButton />
+
+  <script>
+    const toggle = document.getElementById('article-toggle');
+    const article = document.getElementById('destination-article');
+    const fade = document.getElementById('article-fade');
+    const label = document.getElementById('article-toggle-label');
+    const icon = document.getElementById('article-toggle-icon');
+
+    if (toggle && article && fade && label && icon) {
+      const expandedLabel = toggle.getAttribute('data-expanded-label') || '';
+      const collapsedLabel = label.textContent || 'Read Full Article';
+
+      toggle.addEventListener('click', () => {
+        const isExpanded = toggle.getAttribute('aria-expanded') === 'true';
+        const nextExpanded = !isExpanded;
+
+        toggle.setAttribute('aria-expanded', String(nextExpanded));
+        article.style.maxHeight = nextExpanded ? `${article.scrollHeight}px` : '';
+        fade.classList.toggle('hidden', nextExpanded);
+        icon.classList.toggle('rotate-180', nextExpanded);
+        label.textContent = nextExpanded
+          ? (expandedLabel || 'Hide Full Article')
+          : collapsedLabel;
+
+        if (!nextExpanded) {
+          toggle.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }
+      });
+    }
+  </script>
 </BaseLayout>
