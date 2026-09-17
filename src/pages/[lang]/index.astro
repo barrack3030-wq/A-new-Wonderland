@@ -17,15 +17,40 @@ const allDestinations = await getCollection('destinations');
 const featuredDestinations = featuredSlugs.map(slug => allDestinations.find(d => d.slug === `${lang}/${slug}`)).filter(Boolean);
 const allBlogs = await getCollection('blog');
 const latestBlogs = allBlogs.filter(b => b.id.startsWith(`${lang}/`)).sort((a,b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()).slice(0,3);
+
+const homeSeo = {
+  en: {
+    title: 'Banggai Islands Travel Guide & Private Trips | Banggai Wonderland',
+    description: 'Discover the Banggai Islands in Central Sulawesi with private trips to Paisu Pok, Piala Waterfall, Pulo Dua, Kamumu and other destinations around Luwuk and Banggai.'
+  },
+  id: {
+    title: 'Wisata Kepulauan Banggai & Private Trip | Banggai Wonderland',
+    description: 'Jelajahi Kepulauan Banggai, Sulawesi Tengah melalui private trip ke Paisu Pok, Air Terjun Piala, Pulo Dua, Kamumu dan destinasi menarik di sekitar Luwuk dan Banggai.'
+  },
+  es: {
+    title: 'Viajes a las Islas Banggai y viajes privados | Banggai Wonderland',
+    description: 'Descubre las Islas Banggai en Sulawesi Central con viajes privados a Paisu Pok, la cascada Piala, Pulo Dua, Kamumu y otros destinos de Luwuk y Banggai.'
+  },
+  fr: {
+    title: 'Voyage aux îles Banggai et circuits privés | Banggai Wonderland',
+    description: 'Découvrez les îles Banggai, dans le centre de Sulawesi, avec des voyages privés vers Paisu Pok, la cascade de Piala, Pulo Dua, Kamumu et les environs de Luwuk et Banggai.'
+  },
+  zh: {
+    title: '邦盖群岛旅行与私人旅行 | Banggai Wonderland',
+    description: '探索印度尼西亚中苏拉威西的邦盖群岛，前往 Paisu Pok、Piala 瀑布、Pulo Dua、Kamumu 以及 Luwuk 和 Banggai 周边目的地。'
+  }
+} as const;
+
+const seo = homeSeo[lang as keyof typeof homeSeo] || homeSeo.en;
 ---
 
-<BaseLayout title="Banggai Wonderland | Discover Hidden Paradise of Banggai">
+<BaseLayout title={seo.title} description={seo.description} seoTitle={seo.title} seoDescription={seo.description}>
   <section id="home" class="relative min-h-[100svh] flex items-end overflow-hidden bg-ocean-900">
     <div id="hero-media" class="absolute inset-0 will-change-transform overflow-hidden">
       <div class="hero-giphy absolute inset-0 overflow-hidden">
         <iframe
           src="https://giphy.com/embed/86bAGxmMCGQU34Y"
-          title="Ocean scene"
+          title="Banggai Islands ocean scene"
           class="hero-giphy-frame border-0"
           style="border:0;"
           allow="autoplay; fullscreen"
@@ -55,9 +80,9 @@ const latestBlogs = allBlogs.filter(b => b.id.startsWith(`${lang}/`)).sort((a,b)
   <section id="destinations" class="bg-[#f7f7f5] py-20 md:py-28">
     <div class="max-w-7xl mx-auto">
       <div class="px-6 sm:px-10 lg:px-12 max-w-3xl mb-12 md:mb-14">
-        <p class="text-ocean-600 text-xs font-bold tracking-[0.24em] uppercase mb-5">Explore Banggai</p>
+        <p class="text-ocean-600 text-xs font-bold tracking-[0.24em] uppercase mb-5">Explore Banggai Islands</p>
         <h2 class="font-serif text-ocean-900 text-4xl md:text-6xl leading-tight tracking-[-0.035em] font-medium mb-6">Places worth<br class="hidden md:block"/> travelling for.</h2>
-        <p class="text-ocean-600 text-base md:text-lg leading-relaxed max-w-2xl">{t('home.featured.destinations.desc') || 'Discover quiet islands, clear lagoons, hidden waterfalls and untouched coastlines across the Banggai archipelago.'}</p>
+        <p class="text-ocean-600 text-base md:text-lg leading-relaxed max-w-2xl">{t('home.featured.destinations.desc') || 'Explore the Banggai Islands through quiet beaches, clear lagoons, waterfalls and coastal landscapes around Luwuk, Peleng and the surrounding islands.'}</p>
       </div>
 
       {featuredDestinations.length > 0 && (
@@ -88,20 +113,31 @@ const latestBlogs = allBlogs.filter(b => b.id.startsWith(`${lang}/`)).sort((a,b)
       )}
 
       <div class="px-6 sm:px-10 lg:px-12 mt-8 md:mt-8">
-        <a href={`/${lang}/destinations/`} class="text-ocean-900 text-sm font-semibold border-b border-ocean-900/30 pb-1 hover:border-ocean-900 transition-colors">{t('btn.explore')} <span class="ml-1">→</span></a>
+        <a href={`/${lang}/destinations/`} class="text-ocean-900 text-sm font-semibold border-b border-ocean-900/30 pb-1 hover:border-ocean-900 transition-colors">Explore all Banggai destinations <span class="ml-1">→</span></a>
       </div>
     </div>
   </section>
 
   <section class="mobile-home-section mobile-why">
     <div class="mobile-shell">
-      <p class="mobile-eyebrow">Why Banggai</p>
+      <p class="mobile-eyebrow">Why visit Banggai?</p>
       <h2>Not Bali.<br/>Not Raja Ampat.<br/><span>Something quieter.</span></h2>
-      <p class="mobile-muted">A remote island world where clear lagoons, quiet beaches and hidden places still feel untouched.</p>
+      <p class="mobile-muted">The Banggai Islands offer a different kind of Indonesia travel experience: quiet islands, clear lagoons, coastal roads and hidden places to explore at a slower pace.</p>
       <div class="mobile-benefits">
-        <div><strong>Hidden</strong><span>Quiet islands beyond the usual route.</span></div>
-        <div><strong>Clear</strong><span>Lagoons, beaches and waters made for slow exploration.</span></div>
-        <div><strong>Private</strong><span>Journeys shaped around your pace.</span></div>
+        <div><strong>Hidden</strong><span>Quiet islands and destinations beyond the usual route.</span></div>
+        <div><strong>Clear</strong><span>Lagoons, beaches and coastal waters made for slow exploration.</span></div>
+        <div><strong>Private</strong><span>Flexible journeys shaped around your time and interests.</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="desktop-home-seo bg-white py-20 md:py-24">
+    <div class="max-w-7xl mx-auto px-6 sm:px-10 lg:px-12">
+      <div class="max-w-3xl">
+        <p class="text-ocean-600 text-xs font-bold tracking-[0.24em] uppercase mb-5">Discover the region</p>
+        <h2 class="font-serif text-ocean-900 text-4xl md:text-6xl leading-tight tracking-[-0.035em] font-medium mb-6">Travel beyond the famous places.</h2>
+        <p class="text-ocean-600 text-base md:text-lg leading-relaxed mb-5">Banggai Wonderland helps travellers discover the Banggai Islands from Luwuk and beyond, with practical routes to islands, lagoons, waterfalls and coastal destinations. Start with our <a href={`/${lang}/destinations/paisu-pok-lake/`} class="text-ocean-900 font-semibold underline underline-offset-4">Paisu Pok travel guide</a>, explore <a href={`/${lang}/destinations/piala-waterfall/`} class="text-ocean-900 font-semibold underline underline-offset-4">Piala Waterfall</a>, or see what is possible through our <a href={`/${lang}/packages/`} class="text-ocean-900 font-semibold underline underline-offset-4">private trip packages</a>.</p>
+        <p class="text-ocean-600 text-base md:text-lg leading-relaxed">If you are planning your first visit, our <a href={`/${lang}/blog/`} class="text-ocean-900 font-semibold underline underline-offset-4">Banggai travel stories and guides</a> can help you understand destinations, routes and practical travel considerations before you arrive.</p>
       </div>
     </div>
   </section>
@@ -118,30 +154,30 @@ const latestBlogs = allBlogs.filter(b => b.id.startsWith(`${lang}/`)).sort((a,b)
 
       <div class="mobile-journey-track">
         <a href={`/${lang}/packages/luwuk-stopover/`} class="mobile-journey-card">
-          <img src="/images/packages/luwuk-stopover.webp" alt="Luwuk Stopover" loading="lazy" />
+          <img src="/images/packages/luwuk-stopover.webp" alt="Luwuk Stopover private trip in Banggai" loading="lazy" />
           <div class="mobile-journey-overlay"></div>
           <div class="mobile-journey-copy">
             <span>1 day</span>
             <h3>Luwuk Stopover</h3>
-            <p>A beautiful first taste of Banggai.</p>
+            <p>A short introduction to Banggai from Luwuk.</p>
           </div>
         </a>
         <a href={`/${lang}/packages/luwuk-salakan/`} class="mobile-journey-card">
-          <img src="/images/packages/luwuk-salakan.webp" alt="Luwuk & Salakan Escape" loading="lazy" />
+          <img src="/images/packages/luwuk-salakan.webp" alt="Luwuk and Salakan private trip" loading="lazy" />
           <div class="mobile-journey-overlay"></div>
           <div class="mobile-journey-copy">
             <span>3D2N</span>
             <h3>Luwuk &amp; Salakan Escape</h3>
-            <p>Island life, lagoons and coastal roads.</p>
+            <p>Island landscapes, lagoons and coastal roads.</p>
           </div>
         </a>
         <a href={`/${lang}/packages/ultimate-banggai/`} class="mobile-journey-card">
-          <img src="/images/packages/ultimate-banggai.webp" alt="Ultimate Banggai" loading="lazy" />
+          <img src="/images/packages/ultimate-banggai.webp" alt="Ultimate Banggai private island journey" loading="lazy" />
           <div class="mobile-journey-overlay"></div>
           <div class="mobile-journey-copy">
             <span>Ultimate journey</span>
             <h3>Ultimate Banggai</h3>
-            <p>From Luwuk to the hidden islands of Banggai.</p>
+            <p>A longer route through the hidden islands of Banggai.</p>
           </div>
         </a>
       </div>
@@ -185,7 +221,7 @@ const latestBlogs = allBlogs.filter(b => b.id.startsWith(`${lang}/`)).sort((a,b)
     <div class="max-w-5xl mx-auto px-6 text-center">
       <p class="text-white/55 text-xs font-bold tracking-[0.25em] uppercase mb-6">Banggai Wonderland</p>
       <h2 class="font-serif text-4xl md:text-7xl leading-tight tracking-[-0.04em] font-medium mb-7">Your next escape<br/>starts here.</h2>
-      <p class="text-white/65 max-w-xl mx-auto leading-relaxed mb-9">Private journeys through the hidden paradise of Banggai, designed around your time, interests and pace.</p>
+      <p class="text-white/65 max-w-xl mx-auto leading-relaxed mb-9">Planning a trip to the Banggai Islands? Tell us your dates, interests and preferred pace, and we can discuss a private journey.</p>
       <a href="https://wa.me/6285820830530" target="_blank" rel="noopener noreferrer" class="inline-flex rounded-full bg-white text-ocean-900 px-8 py-4 text-sm font-semibold hover:bg-white/90 transition-all">{t('btn.book')} <span class="ml-2">→</span></a>
     </div>
   </section>
@@ -194,7 +230,7 @@ const latestBlogs = allBlogs.filter(b => b.id.startsWith(`${lang}/`)).sort((a,b)
     <div class="mobile-book-inner">
       <p class="mobile-eyebrow">Banggai Wonderland</p>
       <h2>Your Banggai story starts here.</h2>
-      <p>Private journeys through the hidden paradise of Banggai, designed around your time, interests and pace.</p>
+      <p>Planning a trip to the Banggai Islands? Share your dates, interests and pace with us and discuss a private journey.</p>
       <a href="https://wa.me/6285820830530" target="_blank" rel="noopener noreferrer">Plan my trip <span>→</span></a>
     </div>
   </section>
@@ -228,488 +264,73 @@ const latestBlogs = allBlogs.filter(b => b.id.startsWith(`${lang}/`)).sort((a,b)
     }
 
     @media (max-width: 767px) {
-      html {
-        scroll-behavior: smooth;
-      }
-
-      body {
-        padding-bottom: 5.25rem;
-      }
-
-      .hero-giphy-frame {
-        width: 177.777778svh;
-        height: 100svw;
-      }
-
-      .hero-copy {
-        padding-bottom: 1.5rem;
-      }
-
-      .hero-copy h1 {
-        font-size: clamp(3rem, 14vw, 4.7rem);
-        line-height: .9;
-        max-width: 9ch;
-        margin-bottom: 1.25rem;
-      }
-
-      .hero-copy > p:not(.mobile-hero-scroll) {
-        font-size: .96rem;
-        line-height: 1.6;
-        max-width: 32rem;
-        margin-bottom: 1.5rem;
-      }
-
-      .hero-secondary-cta {
-        display: none !important;
-      }
-
-      .mobile-hero-scroll {
-        display: flex;
-        align-items: center;
-        gap: .5rem;
-        margin-top: 1.35rem;
-        color: rgba(255,255,255,.65);
-        font-size: .68rem;
-        letter-spacing: .18em;
-        text-transform: uppercase;
-      }
-
-      .desktop-destinations-grid,
-      .desktop-journal,
-      .desktop-cta {
-        display: none !important;
-      }
-
-      #destinations {
-        padding-top: 4.75rem;
-        padding-bottom: 4rem;
-        overflow: hidden;
-      }
-
-      #destinations > .max-w-7xl > .px-6.sm\\:px-10.lg\\:px-12.max-w-3xl {
-        margin-bottom: 1.4rem;
-      }
-
-      #destinations h2 {
-        font-size: 2.7rem;
-        line-height: .98;
-        margin-bottom: 1rem;
-      }
-
-      #destinations > .max-w-7xl > .px-6.sm\\:px-10.lg\\:px-12.max-w-3xl > p:last-child {
-        font-size: .94rem;
-        line-height: 1.55;
-      }
-
-      .mobile-destination-swiper {
-        display: block;
-        width: 100%;
-        padding: 0 1rem;
-      }
-
-      .mobile-destination-stage {
-        position: relative;
-        width: 100%;
-        height: min(122vw, 580px);
-        overflow: hidden;
-        border-radius: 1.75rem;
-        touch-action: pan-y;
-        user-select: none;
-        -webkit-user-select: none;
-      }
-
-      .mobile-destination-slide {
-        position: absolute;
-        inset: 0;
-        width: 100%;
-        opacity: 0;
-        transform: translate3d(105%,0,0) scale(.985);
-        transition: transform 360ms cubic-bezier(.22,.61,.36,1), opacity 260ms ease;
-        pointer-events: none;
-        will-change: transform, opacity;
-      }
-
-      .mobile-destination-slide.active {
-        opacity: 1;
-        transform: translate3d(0,0,0) scale(1);
-        pointer-events: auto;
-      }
-
-      .mobile-destination-slide.prev {
-        transform: translate3d(-105%,0,0) scale(.985);
-      }
-
-      .mobile-destination-slide.is-dragging {
-        transition: none !important;
-      }
-
-      .mobile-destination-slide > a {
-        height: 100%;
-        display: block;
-      }
-
-      .mobile-destination-controls {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        gap: .7rem;
-        margin: .9rem 0 0;
-      }
-
-      .mobile-destination-arrow {
-        width: 2.5rem;
-        height: 2.5rem;
-        border-radius: 999px;
-        border: 1px solid rgba(6,43,61,.1);
-        background: white;
-        color: #062f3d;
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-        font-size: 1.5rem;
-        line-height: 1;
-        box-shadow: 0 8px 24px rgba(6,43,61,.06);
-      }
-
-      .mobile-destination-dots {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        gap: .4rem;
-        flex: 1;
-      }
-
-      .mobile-destination-dot {
-        width: .42rem;
-        height: .42rem;
-        padding: 0;
-        border: 0;
-        border-radius: 999px;
-        background: rgba(6,43,61,.18);
-        transition: all 220ms ease;
-      }
-
-      .mobile-destination-dot[aria-current="true"] {
-        width: 1.4rem;
-        background: #062f3d;
-      }
-
-      .mobile-home-section {
-        display: block;
-      }
-
-      .mobile-shell {
-        width: 100%;
-        max-width: 32rem;
-        margin: 0 auto;
-        padding: 0 1.25rem;
-      }
-
-      .mobile-eyebrow {
-        margin: 0 0 .7rem;
-        color: #3d7383;
-        font-size: .66rem;
-        line-height: 1;
-        font-weight: 800;
-        letter-spacing: .22em;
-        text-transform: uppercase;
-      }
-
-      .mobile-section-head {
-        display: flex;
-        justify-content: space-between;
-        align-items: flex-end;
-        gap: 1rem;
-        margin-bottom: 1.2rem;
-      }
-
-      .mobile-section-head h2 {
-        margin: 0;
-        color: #062f3d;
-        font-family: Georgia, 'Times New Roman', serif;
-        font-size: 2.35rem;
-        line-height: .98;
-        letter-spacing: -.035em;
-        font-weight: 500;
-      }
-
-      .mobile-section-head > a {
-        color: #062f3d;
-        font-size: .72rem;
-        font-weight: 700;
-        white-space: nowrap;
-        padding-bottom: .2rem;
-        border-bottom: 1px solid rgba(6,47,61,.18);
-      }
-
-      .mobile-why {
-        background: #062f3d;
-        color: white;
-        padding: 5rem 0 4.8rem;
-      }
-
-      .mobile-why .mobile-eyebrow {
-        color: rgba(255,255,255,.5);
-      }
-
-      .mobile-why h2 {
-        margin: 0;
-        font-family: Georgia, 'Times New Roman', serif;
-        font-size: 2.65rem;
-        line-height: .98;
-        letter-spacing: -.04em;
-        font-weight: 500;
-      }
-
-      .mobile-why h2 span {
-        color: rgba(255,255,255,.55);
-      }
-
-      .mobile-muted {
-        max-width: 28rem;
-        margin: 1.2rem 0 0;
-        color: rgba(255,255,255,.66);
-        font-size: .95rem;
-        line-height: 1.65;
-      }
-
-      .mobile-benefits {
-        display: grid;
-        gap: .9rem;
-        margin-top: 2rem;
-      }
-
-      .mobile-benefits > div {
-        display: grid;
-        grid-template-columns: 5.25rem 1fr;
-        gap: .9rem;
-        align-items: start;
-        padding-top: .9rem;
-        border-top: 1px solid rgba(255,255,255,.12);
-      }
-
-      .mobile-benefits strong {
-        color: white;
-        font-size: .78rem;
-        letter-spacing: .08em;
-        text-transform: uppercase;
-      }
-
-      .mobile-benefits span {
-        color: rgba(255,255,255,.58);
-        font-size: .82rem;
-        line-height: 1.55;
-      }
-
-      .mobile-journeys {
-        background: #f7f7f5;
-        padding: 4.5rem 0 4rem;
-        overflow: hidden;
-      }
-
-      .mobile-journey-track {
-        display: flex;
-        gap: .85rem;
-        overflow-x: auto;
-        margin: 0 -1.25rem;
-        padding: 0 1.25rem .5rem;
-        scrollbar-width: none;
-        scroll-snap-type: x mandatory;
-      }
-
-      .mobile-journey-track::-webkit-scrollbar {
-        display: none;
-      }
-
-      .mobile-journey-card {
-        position: relative;
-        flex: 0 0 84vw;
-        max-width: 28rem;
-        aspect-ratio: .78;
-        overflow: hidden;
-        border-radius: 1.6rem;
-        scroll-snap-align: start;
-        background: #062f3d;
-      }
-
-      .mobile-journey-card img,
-      .mobile-featured-story img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-      }
-
-      .mobile-journey-overlay,
-      .mobile-story-overlay {
-        position: absolute;
-        inset: 0;
-        background: linear-gradient(to top, rgba(0,0,0,.78) 0%, rgba(0,0,0,.22) 48%, rgba(0,0,0,.08) 100%);
-      }
-
-      .mobile-journey-copy {
-        position: absolute;
-        left: 1.1rem;
-        right: 1.1rem;
-        bottom: 1.15rem;
-        color: white;
-      }
-
-      .mobile-journey-copy span,
-      .mobile-story-copy span {
-        display: block;
-        margin-bottom: .45rem;
-        color: rgba(255,255,255,.65);
-        font-size: .62rem;
-        font-weight: 800;
-        letter-spacing: .16em;
-        text-transform: uppercase;
-      }
-
-      .mobile-journey-copy h3,
-      .mobile-story-copy h3 {
-        margin: 0;
-        font-family: Georgia, 'Times New Roman', serif;
-        font-size: 1.9rem;
-        line-height: 1;
-        letter-spacing: -.025em;
-        font-weight: 500;
-      }
-
-      .mobile-journey-copy p,
-      .mobile-story-copy p {
-        margin: .65rem 0 0;
-        color: rgba(255,255,255,.72);
-        font-size: .82rem;
-        line-height: 1.5;
-      }
-
-      .mobile-journal {
-        background: white;
-        padding: 4.3rem 0;
-      }
-
-      .mobile-featured-story {
-        position: relative;
-        display: block;
-        aspect-ratio: .9;
-        overflow: hidden;
-        border-radius: 1.6rem;
-        background: #062f3d;
-      }
-
-      .mobile-story-copy {
-        position: absolute;
-        left: 1.15rem;
-        right: 1.15rem;
-        bottom: 1.1rem;
-        color: white;
-      }
-
-      .mobile-story-copy h3 {
-        font-size: 2rem;
-        line-height: 1.03;
-        max-width: 17ch;
-      }
-
-      .mobile-book {
-        background: #062f3d;
-        color: white;
-        padding: 5rem 1.25rem 6.5rem;
-      }
-
-      .mobile-book-inner {
-        max-width: 32rem;
-        margin: 0 auto;
-        text-align: center;
-      }
-
-      .mobile-book .mobile-eyebrow {
-        color: rgba(255,255,255,.5);
-      }
-
-      .mobile-book h2 {
-        margin: 0 auto;
-        font-family: Georgia, 'Times New Roman', serif;
-        font-size: 2.7rem;
-        line-height: .98;
-        letter-spacing: -.04em;
-        font-weight: 500;
-      }
-
-      .mobile-book p {
-        max-width: 27rem;
-        margin: 1rem auto 1.5rem;
-        color: rgba(255,255,255,.64);
-        font-size: .9rem;
-        line-height: 1.65;
-      }
-
-      .mobile-book a {
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-        min-height: 3.2rem;
-        padding: 0 1.25rem;
-        border-radius: 999px;
-        background: white;
-        color: #062f3d;
-        font-size: .82rem;
-        font-weight: 800;
-      }
-
-      .mobile-book a span {
-        margin-left: .55rem;
-      }
-
-      .mobile-bottom-nav {
-        position: fixed;
-        left: .7rem;
-        right: .7rem;
-        bottom: .65rem;
-        z-index: 60;
-        display: grid;
-        grid-template-columns: repeat(5, 1fr);
-        gap: .2rem;
-        padding: .5rem;
-        border: 1px solid rgba(255,255,255,.55);
-        border-radius: 1.15rem;
-        background: rgba(255,255,255,.9);
-        backdrop-filter: blur(18px);
-        -webkit-backdrop-filter: blur(18px);
-        box-shadow: 0 12px 40px rgba(6,43,61,.18);
-      }
-
-      .mobile-bottom-nav a {
-        min-height: 3.5rem;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        gap: .18rem;
-        border-radius: .8rem;
-        color: #557681;
-        text-decoration: none;
-      }
-
-      .mobile-bottom-nav a:first-child {
-        background: #062f3d;
-        color: white;
-      }
-
-      .mobile-bottom-nav span {
-        font-size: .95rem;
-        line-height: 1;
-      }
-
-      .mobile-bottom-nav small {
-        font-size: .54rem;
-        font-weight: 700;
-        letter-spacing: .02em;
-      }
-
-      .mobile-bottom-nav ~ .fixed {
-        bottom: 5.7rem;
-      }
+      html { scroll-behavior: smooth; }
+      body { padding-bottom: 5.25rem; }
+      .hero-giphy-frame { width: 177.777778svh; height: 100svw; }
+      .hero-copy { padding-bottom: 1.5rem; }
+      .hero-copy h1 { font-size: clamp(3rem, 14vw, 4.7rem); line-height: .9; max-width: 9ch; margin-bottom: 1.25rem; }
+      .hero-copy > p:not(.mobile-hero-scroll) { font-size: .96rem; line-height: 1.6; max-width: 32rem; margin-bottom: 1.5rem; }
+      .hero-secondary-cta { display: none !important; }
+      .mobile-hero-scroll { display: flex; align-items: center; gap: .5rem; margin-top: 1.35rem; color: rgba(255,255,255,.65); font-size: .68rem; letter-spacing: .18em; text-transform: uppercase; }
+      .desktop-destinations-grid, .desktop-journal, .desktop-cta, .desktop-home-seo { display: none !important; }
+      #destinations { padding-top: 4.75rem; padding-bottom: 4rem; overflow: hidden; }
+      #destinations > .max-w-7xl > .px-6.sm\\:px-10.lg\\:px-12.max-w-3xl { margin-bottom: 1.4rem; }
+      #destinations h2 { font-size: 2.7rem; line-height: .98; margin-bottom: 1rem; }
+      #destinations > .max-w-7xl > .px-6.sm\\:px-10.lg\\:px-12.max-w-3xl > p:last-child { font-size: .94rem; line-height: 1.55; }
+      .mobile-destination-swiper { display: block; width: 100%; padding: 0 1rem; }
+      .mobile-destination-stage { position: relative; width: 100%; height: min(122vw, 580px); overflow: hidden; border-radius: 1.75rem; touch-action: pan-y; user-select: none; -webkit-user-select: none; }
+      .mobile-destination-slide { position: absolute; inset: 0; width: 100%; opacity: 0; transform: translate3d(105%,0,0) scale(.985); transition: transform 360ms cubic-bezier(.22,.61,.36,1), opacity 260ms ease; pointer-events: none; will-change: transform, opacity; }
+      .mobile-destination-slide.active { opacity: 1; transform: translate3d(0,0,0) scale(1); pointer-events: auto; }
+      .mobile-destination-slide.prev { transform: translate3d(-105%,0,0) scale(.985); }
+      .mobile-destination-slide.is-dragging { transition: none !important; }
+      .mobile-destination-slide > a { height: 100%; display: block; }
+      .mobile-destination-controls { display: flex; align-items: center; justify-content: space-between; gap: .7rem; margin: .9rem 0 0; }
+      .mobile-destination-arrow { width: 2.5rem; height: 2.5rem; border-radius: 999px; border: 1px solid rgba(6,43,61,.1); background: white; color: #062f3d; display: inline-flex; align-items: center; justify-content: center; font-size: 1.5rem; line-height: 1; box-shadow: 0 8px 24px rgba(6,43,61,.06); }
+      .mobile-destination-dots { display: flex; align-items: center; justify-content: center; gap: .4rem; flex: 1; }
+      .mobile-destination-dot { width: .42rem; height: .42rem; padding: 0; border: 0; border-radius: 999px; background: rgba(6,43,61,.18); transition: all 220ms ease; }
+      .mobile-destination-dot[aria-current="true"] { width: 1.4rem; background: #062f3d; }
+      .mobile-home-section { display: block; }
+      .mobile-shell { width: 100%; max-width: 32rem; margin: 0 auto; padding: 0 1.25rem; }
+      .mobile-eyebrow { margin: 0 0 .7rem; color: #3d7383; font-size: .66rem; line-height: 1; font-weight: 800; letter-spacing: .22em; text-transform: uppercase; }
+      .mobile-section-head { display: flex; justify-content: space-between; align-items: flex-end; gap: 1rem; margin-bottom: 1.2rem; }
+      .mobile-section-head h2 { margin: 0; color: #062f3d; font-family: Georgia, 'Times New Roman', serif; font-size: 2.35rem; line-height: .98; letter-spacing: -.035em; font-weight: 500; }
+      .mobile-section-head > a { color: #062f3d; font-size: .72rem; font-weight: 700; white-space: nowrap; padding-bottom: .2rem; border-bottom: 1px solid rgba(6,47,61,.18); }
+      .mobile-why { background: #062f3d; color: white; padding: 5rem 0 4.8rem; }
+      .mobile-why .mobile-eyebrow { color: rgba(255,255,255,.5); }
+      .mobile-why h2 { margin: 0; font-family: Georgia, 'Times New Roman', serif; font-size: 2.65rem; line-height: .98; letter-spacing: -.04em; font-weight: 500; }
+      .mobile-why h2 span { color: rgba(255,255,255,.55); }
+      .mobile-muted { max-width: 28rem; margin: 1.2rem 0 0; color: rgba(255,255,255,.66); font-size: .95rem; line-height: 1.65; }
+      .mobile-benefits { display: grid; gap: .9rem; margin-top: 2rem; }
+      .mobile-benefits > div { display: grid; grid-template-columns: 5.25rem 1fr; gap: .9rem; align-items: start; padding-top: .9rem; border-top: 1px solid rgba(255,255,255,.12); }
+      .mobile-benefits strong { color: white; font-size: .78rem; letter-spacing: .08em; text-transform: uppercase; }
+      .mobile-benefits span { color: rgba(255,255,255,.58); font-size: .82rem; line-height: 1.55; }
+      .mobile-journeys { background: #f7f7f5; padding: 4.5rem 0 4rem; overflow: hidden; }
+      .mobile-journey-track { display: flex; gap: .85rem; overflow-x: auto; margin: 0 -1.25rem; padding: 0 1.25rem .5rem; scrollbar-width: none; scroll-snap-type: x mandatory; }
+      .mobile-journey-track::-webkit-scrollbar { display: none; }
+      .mobile-journey-card { position: relative; flex: 0 0 84vw; max-width: 28rem; aspect-ratio: .78; overflow: hidden; border-radius: 1.6rem; scroll-snap-align: start; background: #062f3d; }
+      .mobile-journey-card img, .mobile-featured-story img { width: 100%; height: 100%; object-fit: cover; }
+      .mobile-journey-overlay, .mobile-story-overlay { position: absolute; inset: 0; background: linear-gradient(to top, rgba(0,0,0,.78) 0%, rgba(0,0,0,.22) 48%, rgba(0,0,0,.08) 100%); }
+      .mobile-journey-copy { position: absolute; left: 1.1rem; right: 1.1rem; bottom: 1.15rem; color: white; }
+      .mobile-journey-copy span, .mobile-story-copy span { display: block; margin-bottom: .45rem; color: rgba(255,255,255,.65); font-size: .62rem; font-weight: 800; letter-spacing: .16em; text-transform: uppercase; }
+      .mobile-journey-copy h3, .mobile-story-copy h3 { margin: 0; font-family: Georgia, 'Times New Roman', serif; font-size: 1.9rem; line-height: 1; letter-spacing: -.025em; font-weight: 500; }
+      .mobile-journey-copy p, .mobile-story-copy p { margin: .65rem 0 0; color: rgba(255,255,255,.72); font-size: .82rem; line-height: 1.5; }
+      .mobile-journal { background: white; padding: 4.3rem 0; }
+      .mobile-featured-story { position: relative; display: block; aspect-ratio: .9; overflow: hidden; border-radius: 1.6rem; background: #062f3d; }
+      .mobile-story-copy { position: absolute; left: 1.15rem; right: 1.15rem; bottom: 1.1rem; color: white; }
+      .mobile-story-copy h3 { font-size: 2rem; line-height: 1.03; max-width: 17ch; }
+      .mobile-book { background: #062f3d; color: white; padding: 5rem 1.25rem 6.5rem; }
+      .mobile-book-inner { max-width: 32rem; margin: 0 auto; text-align: center; }
+      .mobile-book .mobile-eyebrow { color: rgba(255,255,255,.5); }
+      .mobile-book h2 { margin: 0 auto; font-family: Georgia, 'Times New Roman', serif; font-size: 2.7rem; line-height: .98; letter-spacing: -.04em; font-weight: 500; }
+      .mobile-book p { max-width: 27rem; margin: 1rem auto 1.5rem; color: rgba(255,255,255,.64); font-size: .9rem; line-height: 1.65; }
+      .mobile-book a { display: inline-flex; align-items: center; justify-content: center; min-height: 3.2rem; padding: 0 1.25rem; border-radius: 999px; background: white; color: #062f3d; font-size: .82rem; font-weight: 800; }
+      .mobile-book a span { margin-left: .55rem; }
+      .mobile-bottom-nav { position: fixed; left: .7rem; right: .7rem; bottom: .65rem; z-index: 60; display: grid; grid-template-columns: repeat(5, 1fr); gap: .2rem; padding: .5rem; border: 1px solid rgba(255,255,255,.55); border-radius: 1.15rem; background: rgba(255,255,255,.9); backdrop-filter: blur(18px); -webkit-backdrop-filter: blur(18px); box-shadow: 0 12px 40px rgba(6,43,61,.18); }
+      .mobile-bottom-nav a { min-height: 3.5rem; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: .18rem; border-radius: .8rem; color: #557681; text-decoration: none; }
+      .mobile-bottom-nav a:first-child { background: #062f3d; color: white; }
+      .mobile-bottom-nav span { font-size: .95rem; line-height: 1; }
+      .mobile-bottom-nav small { font-size: .54rem; font-weight: 700; letter-spacing: .02em; }
+      .mobile-bottom-nav ~ .fixed { bottom: 5.7rem; }
     }
   </style>
 
@@ -739,7 +360,6 @@ const latestBlogs = allBlogs.filter(b => b.id.startsWith(`${lang}/`)).sort((a,b)
       const prevButton = destinationSwiper.querySelector('[data-prev]');
       const nextButton = destinationSwiper.querySelector('[data-next]');
       const stage = destinationSwiper.querySelector('[data-swipe-stage]');
-
       let current = 0;
       let startX = 0;
       let startY = 0;
@@ -747,14 +367,8 @@ const latestBlogs = allBlogs.filter(b => b.id.startsWith(`${lang}/`)).sort((a,b)
       let dragging = false;
       let horizontalDrag = false;
       let moved = false;
-      let pointerId = null;
-
       const clampIndex = (index) => (index + slides.length) % slides.length;
-
-      const setIndicator = () => {
-        dots.forEach((dot, i) => dot.setAttribute('aria-current', i === current ? 'true' : 'false'));
-      };
-
+      const setIndicator = () => dots.forEach((dot, i) => dot.setAttribute('aria-current', i === current ? 'true' : 'false'));
       const positionSlides = () => {
         if (!slides.length) return;
         slides.forEach((slide, i) => {
@@ -767,65 +381,38 @@ const latestBlogs = allBlogs.filter(b => b.id.startsWith(`${lang}/`)).sort((a,b)
         });
         setIndicator();
       };
-
-      const goTo = (index) => {
-        if (!slides.length) return;
-        current = clampIndex(index);
-        positionSlides();
-      };
-
+      const goTo = (index) => { if (!slides.length) return; current = clampIndex(index); positionSlides(); };
       const finishGesture = () => {
         if (!dragging) return;
         dragging = false;
-        pointerId = null;
         const width = stage?.clientWidth || 320;
         const shouldChange = Math.abs(deltaX) > Math.max(55, width * 0.18);
         const direction = deltaX < 0 ? 1 : -1;
-        const activeSlide = slides[current];
-        activeSlide?.classList.remove('is-dragging');
-        if (activeSlide) {
-          activeSlide.style.removeProperty('transform');
-          activeSlide.style.removeProperty('opacity');
-        }
-        if (horizontalDrag && shouldChange) goTo(current + direction);
-        else positionSlides();
+        slides[current]?.classList.remove('is-dragging');
+        if (horizontalDrag && shouldChange) goTo(current + direction); else positionSlides();
         deltaX = 0;
         horizontalDrag = false;
       };
-
       positionSlides();
       prevButton?.addEventListener('click', () => goTo(current - 1));
       nextButton?.addEventListener('click', () => goTo(current + 1));
       dots.forEach((dot, index) => dot.addEventListener('click', () => goTo(index)));
-
       stage?.addEventListener('pointerdown', (event) => {
         if (event.pointerType === 'mouse' && event.button !== 0) return;
-        dragging = true;
-        horizontalDrag = false;
-        moved = false;
-        pointerId = event.pointerId;
-        startX = event.clientX;
-        startY = event.clientY;
-        deltaX = 0;
+        dragging = true; horizontalDrag = false; moved = false; startX = event.clientX; startY = event.clientY; deltaX = 0;
         try { stage.setPointerCapture(event.pointerId); } catch {}
         slides[current]?.classList.add('is-dragging');
       });
-
       stage?.addEventListener('pointermove', (event) => {
         if (!dragging) return;
         const dx = event.clientX - startX;
         const dy = event.clientY - startY;
         if (!horizontalDrag && Math.abs(dx) < 8 && Math.abs(dy) < 8) return;
         if (!horizontalDrag) {
-          if (Math.abs(dy) > Math.abs(dx)) {
-            finishGesture();
-            return;
-          }
+          if (Math.abs(dy) > Math.abs(dx)) { finishGesture(); return; }
           horizontalDrag = true;
         }
-        moved = true;
-        deltaX = dx;
-        event.preventDefault();
+        moved = true; deltaX = dx; event.preventDefault();
         const activeSlide = slides[current];
         if (!activeSlide) return;
         const width = stage.clientWidth || 320;
@@ -835,16 +422,11 @@ const latestBlogs = allBlogs.filter(b => b.id.startsWith(`${lang}/`)).sort((a,b)
         activeSlide.style.transform = `translate3d(${percent}%,0,0) scale(${scale})`;
         activeSlide.style.opacity = String(opacity);
       }, { passive: false });
-
       stage?.addEventListener('pointerup', finishGesture);
       stage?.addEventListener('pointercancel', finishGesture);
       stage?.addEventListener('lostpointercapture', finishGesture);
       stage?.addEventListener('click', (event) => {
-        if (moved) {
-          event.preventDefault();
-          event.stopPropagation();
-          moved = false;
-        }
+        if (moved) { event.preventDefault(); event.stopPropagation(); moved = false; }
       }, true);
     }
   </script>
