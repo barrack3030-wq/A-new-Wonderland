@@ -34,7 +34,7 @@ youtube: "https://www.youtube.com/watch?v=3HTD8j1C_Vk"
 
 Pompon Beach is a white-sand beach in **Desa Lalong, Kecamatan Tinangkung Utara, Kabupaten Banggai Kepulauan, Central Sulawesi**, on **Peleng Island**. It is also written as **Pantai Ponpon** and sometimes called **Bone Pompon**. The beach sits approximately **90 kilometers from the regency capital Salakan**, a journey of about **2.5 hours by road** through the hills of Peleng. It was formally inaugurated as a village tourism destination in **December 2022** by the Regent of Banggai Kepulauan and is managed by the village government through its BUMDes.
 
-The beach is known for its **fine white sand, long shoreline, and clear water**—but its real draw is underwater. The **coral reef begins close to shore**, and the water is clear enough for snorkeling and diving with good visibility. It is one of the more accessible snorkeling beaches on Peleng Island, and the destination is listed among Banggai Kepulauan’s featured attractions. citeturn306743search12turn306743search14
+The beach is known for its **fine white sand, long shoreline, and clear water**—but its real draw is underwater. The **coral reef begins close to shore**, and the water is clear enough for snorkeling and diving with good visibility. It is one of the more accessible snorkeling beaches on Peleng Island and is officially listed among Banggai Kepulauan’s featured tourist attractions.
 
 ## The Beach and the Shoreline
 
@@ -42,7 +42,7 @@ Pompon is a **long, gently curving beach** backed by a mix of coconut palms and 
 
 The beach has simple **wooden seating facing the sea**, and a few **photo spots** have been set up by the local manager, including one called **Sandal Jodoh**. Food stalls operated by village residents sell snacks and drinks, and local cooks prepare simple meals on request.
 
-The beach is **not a wilderness**. It is a village destination used by local families and weekend visitors. During holidays it can become busy, while weekdays are generally quieter. Local tourism authorities reported that visitor numbers at Pompon increased sharply during the 2025 Eid holiday period. citeturn306743search0
+The beach is **not a wilderness**. It is a village destination used by local families and weekend visitors. During holidays it can become busy, while weekdays are generally quieter.
 
 ## Snorkeling and Diving at Pompon
 
@@ -50,11 +50,11 @@ The main reason to visit Pompon is the **reef**. It starts just offshore and is 
 
 **Snorkeling** can be done directly from the beach. **Diving** is also possible; the reef slopes gently and can suit beginner divers, although there is no full dive center on site. Travelers should bring their own equipment or arrange gear through a local guide or tour operator in Luwuk or Salakan.
 
-**Boat rides** and **water bicycles** are available through local operators, offering a different view of the coastline. Fishing and camping are also recognized uses of the destination in a 2025 academic assessment of its tourism suitability and carrying capacity. citeturn306743search5
+**Boat rides** and **water bicycles** are available through local operators, offering a different view of the coastline. Fishing and camping are also recognized uses of the destination in tourism studies.
 
 ## Facilities and Fees
 
-Pompon Beach is described in recent destination sources as having **no official entrance fee and no formal opening hours**. However, current visitor reports indicate that local services and facilities can vary, so travelers should confirm arrangements when they arrive.
+Pompon Beach is described in recent destination sources as having **no official entrance fee and no formal opening hours**. However, local services and facilities can vary, so travelers should confirm arrangements when they arrive.
 
 Facilities are **simple and village-run**:
 
@@ -63,7 +63,7 @@ Facilities are **simple and village-run**:
 - **Food stalls** selling snacks, drinks and simple meals
 - **Parking area**
 
-Recent visitor accounts also mention **toilets, gazebos and showers**, although water availability can vary seasonally. Bring your own snorkeling and diving gear rather than relying on on-site rental. citeturn306743search2
+Visitor reports also mention **toilets, gazebos and showers**, although water availability can vary seasonally. Bring your own snorkeling and diving gear rather than relying on on-site rental.
 
 ## How to Get to Pompon Beach
 
