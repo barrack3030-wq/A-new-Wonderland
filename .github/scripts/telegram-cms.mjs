@@ -66,14 +66,7 @@ function markdown(article, draft) {
 }
 
 async function createDraft(chatId, topic) {
-  const prompt = `You are the editorial AI for Banggai Wonderland, a premium international travel website about Luwuk and Banggai, Indonesia.
-
-Create one professional, human-sounding, SEO-friendly destination article about: ${topic}
-
-Generate five semantically aligned versions: Indonesian (id), English (en), Spanish (es), French (fr), and Chinese (zh). Each version should read naturally for its audience, not like a literal machine translation. Focus on useful travel information and genuine destination appeal. Do not invent exact prices, opening hours, schedules, permits, statistics, or uncertain facts. Avoid generic AI filler and exaggerated claims. Use Markdown headings in the body. Do not include YAML frontmatter in the body. Use this existing shared featured image for every language: ${IMAGE}. Do not invent other image paths.
-
-Return JSON only with exactly this structure:
-{"slug":"english-kebab-case","image":"${IMAGE}","imageAlt":"shared image alt text","author":"aji","pubDate":"${new Date().toISOString()}","articles":{"id":{"title":"","description":"","seoTitle":"","seoDescription":"","tags":[],"body":""},"en":{"title":"","description":"","seoTitle":"","seoDescription":"","tags":[],"body":""},"es":{"title":"","description":"","seoTitle":"","seoDescription":"","tags":[],"body":""},"fr":{"title":"","description":"","seoTitle":"","seoDescription":"","tags":[],"body":""},"zh":{"title":"","description":"","seoTitle":"","seoDescription":"","tags":[],"body":""}}}`;
+  const prompt = `You are the editorial AI for Banggai Wonderland, a premium international travel website about Luwuk and Banggai, Indonesia.\n\nCreate one professional, human-sounding, SEO-friendly destination article about: ${topic}\n\nGenerate five semantically aligned versions: Indonesian (id), English (en), Spanish (es), French (fr), and Chinese (zh). Each version should read naturally for its audience, not like a literal machine translation. Focus on useful travel information and genuine destination appeal. Do not invent exact prices, opening hours, schedules, permits, statistics, or uncertain facts. Avoid generic AI filler and exaggerated claims. Use Markdown headings in the body. Do not include YAML frontmatter in the body. Use this existing shared featured image for every language: ${IMAGE}. Do not invent other image paths.\n\nReturn JSON only with exactly this structure:\n{"slug":"english-kebab-case","image":"${IMAGE}","imageAlt":"shared image alt text","author":"aji","pubDate":"${new Date().toISOString()}","articles":{"id":{"title":"","description":"","seoTitle":"","seoDescription":"","tags":[],"body":""},"en":{"title":"","description":"","seoTitle":"","seoDescription":"","tags":[],"body":""},"es":{"title":"","description":"","seoTitle":"","seoDescription":"","tags":[],"body":""},"fr":{"title":"","description":"","seoTitle":"","seoDescription":"","tags":[],"body":""},"zh":{"title":"","description":"","seoTitle":"","seoDescription":"","tags":[],"body":""}}}`;
   const draft = await openai(prompt);
   if (!draft.articles || !LANGS.every(lang => draft.articles[lang])) throw new Error('Invalid multilingual article structure');
   draft.slug = slugify(draft.slug || draft.articles.en.title);
@@ -138,7 +131,7 @@ async function handleMessage(message, state) {
       await fs.writeFile(path, markdown(draft.articles[lang], draft));
     }
     delete state.drafts[chatId];
-    await tg('sendMessage', { chat_id: chatId, text: `🎉 Published: ${draft.slug}\n\n5 bahasa sudah ditulis ke repository. GitHub Actions akan menyimpan perubahan dan Vercel akan melakukan deployment.` });
+    await tg('sendMessage', { chat_id: chatId, text: `🎉 Published: ${draft.slug}\n\n5 bahasa sudah ditulis ke repository. GitHub Actions akan menjalankan build dan deployment ke GitHub Pages.` });
     return;
   }
 
