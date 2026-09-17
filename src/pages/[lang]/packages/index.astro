@@ -7,51 +7,117 @@ import { getCollection } from 'astro:content';
 import { languages, useTranslations } from '../../../utils/i18n';
 
 export function getStaticPaths() {
-  return Object.keys(languages).map((lang) => ({
-    params: { lang },
-  }));
+  return Object.keys(languages).map((lang) => ({ params: { lang } }));
 }
 
 const { lang } = Astro.params;
 const t = useTranslations(lang as any);
-
 const allPackages = await getCollection('packages');
 const packages = allPackages.filter(pkg => pkg.slug.startsWith(`${lang}/`));
 
+const copy = ({
+  en: {
+    title: 'Banggai Islands Private Trips',
+    description: 'Explore Banggai Islands private trip packages from Luwuk, with flexible routes to Paisu Pok, Salakan, Peleng and other destinations in Central Sulawesi.',
+    intro: 'Choose a private trip around the Banggai Islands based on your available time, interests and preferred pace. Our existing routes connect Luwuk with island destinations and natural attractions across the region.',
+    guide: 'For inspiration, compare the itineraries below and then explore the destination guides for practical information before planning your trip.'
+  },
+  id: {
+    title: 'Paket Private Trip Kepulauan Banggai',
+    description: 'Jelajahi Kepulauan Banggai melalui paket private trip dari Luwuk dengan rute menuju Paisu Pok, Salakan, Peleng dan destinasi lain di Sulawesi Tengah.',
+    intro: 'Pilih perjalanan private di Kepulauan Banggai sesuai waktu, minat, dan ritme perjalanan Anda. Rute yang tersedia menghubungkan Luwuk dengan berbagai destinasi pulau dan wisata alam.',
+    guide: 'Bandingkan itinerary di bawah ini dan baca panduan destinasi untuk informasi praktis sebelum menyusun perjalanan.'
+  },
+  es: {
+    title: 'Viajes Privados por las Islas Banggai',
+    description: 'Descubre las Islas Banggai con viajes privados desde Luwuk hacia Paisu Pok, Salakan, Peleng y otros destinos de Sulawesi Central.',
+    intro: 'Elige un viaje privado según tu tiempo disponible, intereses y ritmo preferido. Las rutas conectan Luwuk con islas y paisajes naturales de Banggai.',
+    guide: 'Compara los itinerarios y consulta las guías de destinos para preparar tu viaje.'
+  },
+  fr: {
+    title: 'Circuits privés dans les îles Banggai',
+    description: 'Découvrez les îles Banggai avec des circuits privés depuis Luwuk vers Paisu Pok, Salakan, Peleng et d’autres destinations du centre de Sulawesi.',
+    intro: 'Choisissez un voyage privé selon votre temps, vos centres d’intérêt et votre rythme. Les itinéraires relient Luwuk aux îles et paysages naturels de Banggai.',
+    guide: 'Comparez les itinéraires puis consultez les guides des destinations pour préparer votre voyage.'
+  },
+  zh: {
+    title: '邦盖群岛私人旅行线路',
+    description: '从 Luwuk 出发探索邦盖群岛，前往 Paisu Pok、Salakan、Peleng 以及印度尼西亚中苏拉威西的其他目的地。',
+    intro: '根据时间、兴趣和旅行节奏选择邦盖群岛私人旅行线路。现有路线连接 Luwuk 与多个岛屿和自然景观。',
+    guide: '先比较以下行程，再查看目的地旅行指南，了解实用信息。'
+  }
+} as const)[lang as keyof typeof copy] || {
+  title: 'Banggai Islands Private Trips',
+  description: 'Explore private trips across the Banggai Islands from Luwuk.',
+  intro: 'Choose a private trip based on your available time and interests.',
+  guide: 'Compare itineraries and read destination guides before planning.'
+};
+
 const breadcrumbItems = [
   { name: 'Home', url: `/${lang}/` },
-  { name: t('nav.packages'), url: `/${lang}/packages/` }
+  { name: copy.title, url: `/${lang}/packages/` }
 ];
+
+const schema = {
+  '@context': 'https://schema.org',
+  '@type': 'CollectionPage',
+  name: copy.title,
+  description: copy.description,
+  url: new URL(`/${lang}/packages/`, Astro.site).href,
+  mainEntity: {
+    '@type': 'ItemList',
+    numberOfItems: packages.length,
+    itemListElement: packages.map((pkg, index) => {
+      const [, ...parts] = pkg.slug.split('/');
+      return {
+        '@type': 'ListItem',
+        position: index + 1,
+        name: pkg.data.title,
+        url: new URL(`/${lang}/packages/${parts.join('/')}/`, Astro.site).href
+      };
+    })
+  }
+};
 ---
 
-<BaseLayout 
-  title={`${t('nav.packages')} | Banggai Wonderland`}
-  description={`Explore our exclusive tour packages in Banggai Wonderland.`}
+<BaseLayout
+  title={`${copy.title} | Banggai Wonderland`}
+  description={copy.description}
+  seoTitle={`${copy.title} | Banggai Wonderland`}
+  seoDescription={copy.description}
+  schema={schema}
 >
   <div class="bg-sand-50 pt-32 pb-20 min-h-screen">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      
       <Breadcrumb items={breadcrumbItems} />
-      
-      <div class="mb-12">
-        <h1 class="font-serif text-4xl md:text-5xl font-bold text-ocean-900 mb-4">{t('nav.packages')}</h1>
-        <p class="text-lg text-ocean-600 max-w-2xl">{t('hero.desc')}</p>
-      </div>
+      <header class="mb-12 max-w-3xl">
+        <p class="text-turquoise-600 text-xs font-bold tracking-[0.22em] uppercase mb-4">Banggai Islands · Indonesia</p>
+        <h1 class="font-serif text-4xl md:text-6xl font-medium tracking-[-0.035em] text-ocean-900 mb-5">{copy.title}</h1>
+        <p class="text-lg text-ocean-600 leading-relaxed mb-4">{copy.intro}</p>
+        <p class="text-base text-ocean-600 leading-relaxed">{copy.guide}</p>
+      </header>
 
-      <div class="space-y-8">
-        {packages.length > 0 ? (
-          packages.map(pkg => (
-            <PackageCard pkg={pkg} />
-          ))
-        ) : (
-          <div class="text-center py-20 bg-white rounded-2xl border border-sand-200">
-            <p class="text-ocean-600">No packages found for this language yet.</p>
+      {packages.length > 0 ? (
+        <>
+          <div class="space-y-8">
+            {packages.map(pkg => <PackageCard pkg={pkg} />)}
           </div>
-        )}
-      </div>
-      
+          <div class="mt-14 pt-8 border-t border-sand-200">
+            <div class="grid md:grid-cols-2 gap-8">
+              <div>
+                <h2 class="font-serif text-2xl font-bold text-ocean-900 mb-3">Explore the destinations</h2>
+                <p class="text-sm leading-relaxed text-ocean-600">Learn more about Paisu Pok, Piala Waterfall, Pulo Dua, Kamumu, Luwuk and other Banggai destinations before choosing a route.</p>
+              </div>
+              <div class="flex md:justify-end items-center">
+                <a href={`/${lang}/destinations/`} class="inline-flex items-center justify-center rounded-full bg-ocean-900 text-white px-6 py-3 text-sm font-semibold hover:bg-ocean-800 transition-colors">{t('btn.explore')} <span class="ml-2">→</span></a>
+              </div>
+            </div>
+          </div>
+        </>
+      ) : (
+        <div class="text-center py-20 bg-white rounded-2xl border border-sand-200"><p class="text-ocean-600">No packages found for this language yet.</p></div>
+      )}
     </div>
   </div>
-
   <WhatsAppButton />
 </BaseLayout>
