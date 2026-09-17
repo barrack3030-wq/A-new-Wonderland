@@ -2,10 +2,10 @@
 translationKey: first-time-in-luwuk-banggai-trip
 image: /images/blog/images-16-20260916142820.jpg
 imageAlt: Guía de viaje de Luwuk y las islas Banggai
-title: ¿Es tu primera vez en Luwuk? Guía práctica para comenzar tu viaje por Banggai
-description: ¿Visitas Luwuk por primera vez? Descubre qué preparar, dónde alojarte, cómo desplazarte y cómo continuar hacia las islas Banggai y Paisu Pok.
-seoTitle: ¿Es tu primera vez en Luwuk? Guía práctica para comenzar tu viaje por Banggai
-seoDescription: Guía práctica para tu primer viaje a Luwuk: llegada, alojamiento, transporte, efectivo, preparativos y cómo continuar hacia las islas Banggai y Paisu Pok.
+title: "¿Es tu primera vez en Luwuk? Guía práctica para comenzar tu viaje por Banggai"
+description: "¿Visitas Luwuk por primera vez? Descubre qué preparar, dónde alojarte, cómo desplazarte y cómo continuar hacia las islas Banggai y Paisu Pok."
+seoTitle: "¿Es tu primera vez en Luwuk? Guía práctica para comenzar tu viaje por Banggai"
+seoDescription: "Guía práctica para tu primer viaje a Luwuk: llegada, alojamiento, transporte, efectivo, preparativos y cómo continuar hacia las islas Banggai y Paisu Pok."
 author: Banggai Wonderland
 pubDate: 2026-09-17
 tags:
@@ -311,7 +311,7 @@ Una vez que esas cosas están organizadas, puedes relajarte y disfrutar el viaje
 
 El mejor enfoque es simple:
 
-**Planifica las cosas importantes y deja algo de espacio para lo inesperado.**
+**Planifica las cosas importantes y deja un poco de espacio para lo inesperado.**
 
 Reserva tu primer hotel.
 
