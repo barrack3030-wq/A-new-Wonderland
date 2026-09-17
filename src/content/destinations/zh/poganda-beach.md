@@ -1,6 +1,6 @@
 ---
 title: Poganda Beach
- description: 邦盖普伦岛的波甘达海滩拥有白色细沙、平静的绿松石海水、近岸浅礁以及靠近 Paisu Pok 湖的简易村落设施。
+description: 邦盖普伦岛的波甘达海滩拥有白色细沙、平静的绿松石海水、近岸浅礁以及靠近 Paisu Pok 湖的简易村落设施。
 seoTitle: "邦盖波甘达海滩 | 浮潜与普伦岛海滩指南"
 seoDescription: 普伦岛的波甘达海滩拥有白沙、平静海水和2–4米深的珊瑚礁。了解门票、交通、浮潜和当地住宿。
 image: /images/Poganda-Beach-Banggai-IndonesiaJuara-Trip.webp
