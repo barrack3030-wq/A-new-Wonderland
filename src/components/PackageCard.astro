@@ -16,7 +16,7 @@ const pkgSlug = slugParts.slice(1).join('/');
 ---
 
 <a href={`/${lang}/packages/${pkgSlug}/`} class="group flex flex-col md:flex-row bg-white rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 border border-sand-200 overflow-hidden mb-8">
-  <div class="relative md:w-2/5 h-64 md:h-auto overflow-hidden">
+  <div class="relative md:w-[34%] h-56 md:h-72 overflow-hidden">
     <img 
       src={pkg.data.image} 
       alt={pkg.data.imageAlt || pkg.data.title} 
@@ -30,7 +30,7 @@ const pkgSlug = slugParts.slice(1).join('/');
     </div>
   </div>
   
-  <div class="p-6 md:p-8 flex-grow flex flex-col md:w-3/5">
+  <div class="p-6 md:p-7 flex-grow flex flex-col md:w-[66%]">
     <h3 class="font-serif text-2xl md:text-3xl font-bold text-ocean-900 mb-2 group-hover:text-turquoise-600 transition-colors">
       {pkg.data.title}
     </h3>
