@@ -1,6 +1,6 @@
 ---
 title: Paisu Pok Lake
-description: |
+description: "|"
   Paisu Pok Lake es uno de los destinos naturales más conocidos de las Islas Banggai, en Sulawesi Central. El lago destaca por sus aguas extremadamente cristalinas y su tranquila atmósfera tropical, rodeada de vegetación verde y un entorno natural todavía bien conservado. Sus aguas transparentes lo convierten en un lugar especialmente atractivo para los amantes de la naturaleza y la fotografía.
 
   Los visitantes pueden nadar, relajarse junto al lago, tomar fotografías o simplemente disfrutar de la tranquilidad del lugar. Nadar en sus aguas cristalinas es una de las experiencias más especiales.
