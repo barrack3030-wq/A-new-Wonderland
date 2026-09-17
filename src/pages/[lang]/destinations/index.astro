@@ -15,42 +15,112 @@ export function getStaticPaths() {
 const { lang } = Astro.params;
 const t = useTranslations(lang as any);
 
-// Fetch all destinations and filter by current language
 const allDestinations = await getCollection('destinations');
 const destinations = allDestinations.filter(dest => dest.slug.startsWith(`${lang}/`));
 
+const pageCopy = {
+  en: {
+    title: 'Banggai Islands Destinations',
+    description: 'Explore beaches, clear lakes, waterfalls, lagoons and island landscapes across the Banggai Islands, from Luwuk and Banggai to Peleng and the surrounding islands.',
+    intro: 'Explore the Banggai Islands one destination at a time. This guide brings together places across Luwuk, Banggai Island, Peleng Island and the wider Banggai archipelago, with practical information to help you plan your route.',
+    guide: 'Start with Paisu Pok for its clear freshwater lake, discover Piala Waterfall near Luwuk, or explore Pulo Dua and other coastal destinations when planning a longer Banggai journey.',
+    cta: 'Planning a trip? Explore our private trip packages.'
+  },
+  id: {
+    title: 'Destinasi Wisata Kepulauan Banggai',
+    description: 'Jelajahi pantai, danau jernih, air terjun, laguna, dan lanskap kepulauan di Banggai, dari Luwuk dan Banggai hingga Pulau Peleng dan pulau-pulau sekitarnya.',
+    intro: 'Jelajahi Kepulauan Banggai dari satu destinasi ke destinasi lain. Panduan ini mengumpulkan tempat wisata di Luwuk, Pulau Banggai, Pulau Peleng, dan wilayah kepulauan Banggai dengan informasi praktis untuk membantu menyusun perjalanan.',
+    guide: 'Mulai dari Danau Paisu Pok yang terkenal dengan air tawarnya yang jernih, kunjungi Air Terjun Piala di sekitar Luwuk, atau masukkan Pulo Dua dan destinasi pesisir lain ke dalam perjalanan Banggai yang lebih panjang.',
+    cta: 'Merencanakan perjalanan? Lihat paket private trip kami.'
+  },
+  es: {
+    title: 'Destinos de las Islas Banggai',
+    description: 'Explora playas, lagos de agua dulce, cascadas, lagunas y paisajes insulares de las Islas Banggai, desde Luwuk y Banggai hasta Peleng y las islas cercanas.',
+    intro: 'Explora las Islas Banggai destino por destino. Esta guía reúne lugares de Luwuk, Banggai, Peleng y el resto del archipiélago para ayudarte a organizar tu ruta.',
+    guide: 'Empieza por Paisu Pok, descubre la cascada Piala cerca de Luwuk o incluye Pulo Dua y otros destinos costeros en un viaje más largo por Banggai.',
+    cta: '¿Estás planeando un viaje? Explora nuestros viajes privados.'
+  },
+  fr: {
+    title: 'Destinations des îles Banggai',
+    description: 'Découvrez les plages, lacs d’eau douce, cascades, lagons et paysages insulaires des îles Banggai, de Luwuk et Banggai à Peleng et aux îles voisines.',
+    intro: 'Découvrez les îles Banggai destination par destination. Ce guide rassemble des lieux à Luwuk, Banggai, Peleng et dans le reste de l’archipel pour vous aider à préparer votre itinéraire.',
+    guide: 'Commencez par Paisu Pok et son lac d’eau douce limpide, découvrez la cascade de Piala près de Luwuk, ou ajoutez Pulo Dua et d’autres sites côtiers à un voyage plus long.',
+    cta: 'Vous préparez un voyage ? Découvrez nos circuits privés.'
+  },
+  zh: {
+    title: '邦盖群岛旅游目的地',
+    description: '探索邦盖群岛的海滩、清澈淡水湖、瀑布、泻湖和岛屿景观，从 Luwuk、Banggai 到 Peleng 及周边岛屿。',
+    intro: '按目的地探索邦盖群岛。本指南汇集 Luwuk、Banggai Island、Peleng Island 以及更广泛邦盖群岛的景点和实用旅行信息，帮助你规划路线。',
+    guide: '可以从拥有清澈淡水的 Paisu Pok 开始，前往 Luwuk 附近的 Piala 瀑布，也可以将 Pulo Dua 和其他海岸目的地加入更长的邦盖旅行。',
+    cta: '正在计划旅行？查看我们的私人旅行线路。'
+  }
+} as const;
+
+const copy = pageCopy[lang as keyof typeof pageCopy] || pageCopy.en;
+
 const breadcrumbItems = [
   { name: 'Home', url: `/${lang}/` },
-  { name: t('nav.destinations'), url: `/${lang}/destinations/` }
+  { name: copy.title, url: `/${lang}/destinations/` }
 ];
+
+const schema = {
+  '@context': 'https://schema.org',
+  '@type': 'CollectionPage',
+  name: copy.title,
+  description: copy.description,
+  url: new URL(`/${lang}/destinations/`, Astro.site).href,
+  mainEntity: {
+    '@type': 'ItemList',
+    numberOfItems: destinations.length,
+    itemListElement: destinations.map((destination, index) => {
+      const [, ...slugParts] = destination.slug.split('/');
+      return {
+        '@type': 'ListItem',
+        position: index + 1,
+        name: destination.data.title,
+        url: new URL(`/${lang}/destinations/${slugParts.join('/')}/`, Astro.site).href
+      };
+    })
+  }
+};
 ---
 
-<BaseLayout 
-  title={`${t('nav.destinations')} | Banggai Wonderland`}
-  description={`Explore all premium destinations in Banggai Wonderland.`}
+<BaseLayout
+  title={`${copy.title} | Banggai Wonderland`}
+  description={copy.description}
+  seoTitle={`${copy.title} | Banggai Wonderland`}
+  seoDescription={copy.description}
+  schema={schema}
 >
   <div class="bg-sand-50 pt-32 pb-20 min-h-screen">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      
       <Breadcrumb items={breadcrumbItems} />
-      
-      <div class="mb-12">
-        <h1 class="font-serif text-4xl md:text-5xl font-bold text-ocean-900 mb-4">{t('nav.destinations')}</h1>
-        <p class="text-lg text-ocean-600 max-w-2xl">{t('hero.desc')}</p>
-      </div>
+
+      <header class="mb-12 max-w-3xl">
+        <p class="text-turquoise-600 text-xs font-bold tracking-[0.22em] uppercase mb-4">Banggai Islands · Indonesia</p>
+        <h1 class="font-serif text-4xl md:text-6xl font-medium tracking-[-0.035em] text-ocean-900 mb-5">{copy.title}</h1>
+        <p class="text-lg text-ocean-600 leading-relaxed mb-4">{copy.intro}</p>
+        <p class="text-base text-ocean-600 leading-relaxed">{copy.guide}</p>
+      </header>
 
       {destinations.length > 0 ? (
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {destinations.map(destination => (
-            <DestinationCard destination={destination} />
-          ))}
-        </div>
+        <>
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {destinations.map(destination => (
+              <DestinationCard destination={destination} />
+            ))}
+          </div>
+
+          <div class="mt-14 pt-8 border-t border-sand-200 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+            <p class="text-sm text-ocean-600 max-w-xl">{copy.cta}</p>
+            <a href={`/${lang}/packages/`} class="inline-flex items-center justify-center rounded-full bg-ocean-900 text-white px-6 py-3 text-sm font-semibold hover:bg-ocean-800 transition-colors">{t('btn.view_packages')} <span class="ml-2">→</span></a>
+          </div>
+        </>
       ) : (
         <div class="text-center py-20 bg-white rounded-2xl border border-sand-200">
           <p class="text-ocean-600">No destinations found for this language yet.</p>
         </div>
       )}
-      
     </div>
   </div>
 
