@@ -1,4 +1,4 @@
-const site = 'https://banggaiwonderland.my.id';
+const site = 'https://www.banggaiwonderland.my.id';
 
 export function GET() {
   const body = [
