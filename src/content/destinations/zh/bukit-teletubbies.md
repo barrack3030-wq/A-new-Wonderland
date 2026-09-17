@@ -1,6 +1,6 @@
 ---
 title: Luwuk 天线宝宝山丘
- description: Luwuk 天线宝宝山丘位于 Lumpoknyo 村，距离 Luwuk 市中心以北约 12 公里，是一片起伏的绿色草坡。了解交通、摄影、露营、最佳季节以及出行准备。
+description: Luwuk 天线宝宝山丘位于 Lumpoknyo 村，距离 Luwuk 市中心以北约 12 公里，是一片起伏的绿色草坡。了解交通、摄影、露营、最佳季节以及出行准备。
 seoTitle: "Luwuk 天线宝宝山丘：俯瞰 Banggai 的绿色丘陵"
 seoDescription: "Banggai Luwuk 天线宝宝山丘旅行指南：位置、道路状况、露营、摄影、最佳游览时间以及游客出发前需要准备的物品。"
 image: /images/bukit teletubis.jpg
