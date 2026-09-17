@@ -4,7 +4,7 @@ image: /images/blog/images-16-20260916142820.jpg
 imageAlt: Guía de viaje de Luwuk y las islas Banggai
 title: ¿Es tu primera vez en Luwuk? Guía para comenzar tu viaje por Banggai
 description: ¿Visitas Luwuk por primera vez? Descubre cómo empezar, organizar tu estancia, llegar a las islas Banggai e incluir lugares como Paisu Pok en tu viaje.
-seoTitle: Primera vez en Luwuk: guía para comenzar tu viaje por Banggai
+seoTitle: "Primera vez en Luwuk: guía para comenzar tu viaje por Banggai"
 seoDescription: ¿Planeas tu primer viaje a Luwuk? Descubre cómo empezar, llegar a las islas Banggai y planificar una ruta hacia lugares como Paisu Pok.
 author: Banggai Wonderland
 pubDate: 2026-09-17
