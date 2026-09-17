@@ -15,7 +15,7 @@ slug:
   clean_accents: true
   sanitize_replacement: "-"
 
- i18n:
+i18n:
   structure: multiple_folders
   locales: [id, en, es, fr, zh]
   default_locale: id
