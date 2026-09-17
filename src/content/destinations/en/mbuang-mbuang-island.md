@@ -1,5 +1,5 @@
 ---
-title: "Mbuang-Mbuang: The Remote Island with a Stingless Jellyfish Lake"
+title: "Mbuang-Mbuang Island"
 description: "Mbuang-Mbuang is a remote island village in Banggai Laut known for Danau Paisu Batongan, a landlocked saltwater lagoon with stingless jellyfish, plus protected marine habitats and white-sand beaches."
 seoTitle: "Mbuang-Mbuang Island | Jellyfish Lake Banggai Laut Guide"
 seoDescription: "Mbuang-Mbuang in Banggai Laut is a remote island with a stingless jellyfish lake, giant clam garden and white-sand beaches. Complete travel guide to access and stays."
@@ -26,7 +26,7 @@ travelTips:
 youtube: "https://www.youtube.com/watch?v=sRkhqbTYvnk"
 ---
 
-# Mbuang-Mbuang: The Remote Island with a Stingless Jellyfish Lake
+# Mbuang-Mbuang Island
 
 Mbuang-Mbuang is not a beach, a resort, or a day trip. It is a **remote island village** in **Banggai Laut Regency, Central Sulawesi, Indonesia**. Administratively, it is **Desa Mbuang-Mbuang**, in **Bokan Kepulauan District**, on the small island of **Pulau Salue Kecil**.
 
