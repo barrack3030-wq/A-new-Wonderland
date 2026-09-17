@@ -1,32 +1,92 @@
 ---
-title: Mokokawa Waterfall
-description: Mokokawa Waterfall 是邦盖令人惊叹的目的地之一，提供壮丽的自然景观和难忘的旅行体验。这个地方有它自己的独特之处，必须去看看。
-seoTitle: "Mokokawa Waterfall | Banggai Wonderland"
-seoDescription: 参观并探索美丽的 Mokokawa Waterfall di Banggai.
-image: /images/Air-Terjun-Mukokawa-Source-Instagram-@kulturdomestik.webp
-imageAlt: Mokokawa Waterfall view
-location: Banggai
-category: 瀑布
+title: "Mokokawa Waterfall 瀑布"
+description: "Mokokawa Waterfall 是邦盖附近一处层层叠落的石灰岩瀑布，拥有清凉水池、森林步道和安静的自然环境。"
+seoTitle: "Mokokawa Waterfall Luwuk | 邦盖森林瀑布旅行指南"
+seoDescription: "Mokokawa Waterfall 位于 Luwuk 附近，以层层叠落的石灰岩地形著称，需要经过森林徒步。了解交通、费用、步道和实用建议。"
+image: "/images/Air-Terjun-Mukokawa-Source-Instagram-@kulturdomestik.webp"
+imageAlt: "中苏拉威西邦盖 Luwuk 的 Mokokawa 瀑布，清水沿层叠石灰岩流下，周围是茂密热带森林。"
+location: "Hanga-Hanga / Tontouan, Luwuk, Banggai"
+category: "瀑布"
 highlights:
-  - 异国情调的自然风光
-  - 适合Instagram拍照的地点
-  - 宁静郁郁葱葱的氛围
+  - "层叠石灰岩瀑布"
+  - "清凉清澈的天然水池"
+  - "约30至45分钟森林徒步"
+  - "安静、开发程度较低的自然环境"
 activities:
-  - 自然探索
-  - 摄影
-  - 放松
-bestTime: All year round
+  - "探索瀑布"
+  - "在天然水池游泳"
+  - "森林徒步"
+  - "摄影与露营"
+bestTime: "旱季上午"
 travelTips:
-  - 带上你最好的相机
-  - 穿舒适的衣服
-  - 保持环境清洁
-youtube: "https://www.youtube.com/watch?v=Cly7QK6hYO0"
+  - "穿防滑、结实的鞋子"
+  - "携带饮用水、零食和驱虫用品"
+  - "准备换洗衣物以便下水"
+  - "携带现金支付停车和当地费用"
 ---
 
-## Mokokawa Waterfall
+# Mokokawa Waterfall 瀑布
 
-Mokokawa Waterfall 是邦盖令人惊叹的目的地之一，提供壮丽的自然景观和难忘的旅行体验。这个地方有它自己的独特之处，必须去看看。
+Mokokawa Waterfall 位于**中苏拉威西邦盖县 Luwuk** 上方的森林山地，是一座具有明显**层叠石灰岩台阶**的瀑布。它不同于 Piala 或 Laumarang 那种单一落差的瀑布，水流沿着一层层岩石向下流动，形成阶梯状景观。
 
-### 丛林背后瀑布的魅力
+多数资料将其位置描述为 **Kelurahan Hanga-Hanga, Kecamatan Luwuk Selatan**，游客通常经由 **Desa Tontouan** 前往。从 Luwuk 出发，需要公路行程，再进行约 **30–45 分钟的森林徒步**。
 
-Mokokawa瀑布可能有点难以进入，但它的美丽值得努力。在茂密的次生林中湍急的水流提供了一种独特的冒险氛围。
+## 层叠瀑布与天然水池
+
+Mokokawa 通常被描述为约 **25–30 米高**，但落差并不是一次完成，而是分布在多个石灰岩层级之间。水流经过不同岩石台阶，形成**多个小水池**，底部还有较大的天然水池。
+
+瀑布水质**清澈而冰凉**，浓密的森林树冠让这里即使在白天也保持阴凉。层叠石灰岩是 Mokokawa 最明显的视觉特色之一。
+
+瀑布区域手机信号并不稳定，基础设施很少，因此整体氛围相对安静。
+
+## 前往 Mokokawa 的徒步路线
+
+车辆可以到达的道路结束后，最后一段需要步行约 **30–45 分钟**，途中会穿过森林和小溪。路线并不属于技术型登山，但树根、岩石以及雨后的泥泞路段可能比较滑。
+
+来自 Tontouan 一带的当地交通可以帮助游客通过较为崎岖的道路，森林路段也可以安排当地向导。
+
+## 如何从 Luwuk 前往
+
+从 Luwuk 市中心前往 **Hanga-Hanga / Tontouan** 一带。部分资料将 Mokokawa 直接定位于 Hanga-Hanga，也有报道强调从 Tontouan 进入。
+
+道路部分路段较为崎岖且未铺装，Tontouan–Mokokawa 路线也已有道路改善项目的报道，因此实际交通条件可能随时间变化。
+
+车辆可以行驶到可通行区域，之后需要徒步完成最后一段。天气潮湿时，建议使用当地向导。
+
+## 最佳旅行时间
+
+**上午**比较适合前往，因为气温更凉爽，而且森林步道有充足日照。一般来说，**旱季**更方便，因为降雨会让道路和徒步路线变得更加困难。
+
+## 建议携带什么？
+
+建议携带**防滑鞋、饮用水、零食、驱虫用品、防晒或防雨用品、换洗衣物以及现金**。
+
+这里没有常规旅游景区那样完整的设施。现有报道显示，**正式设施很少或没有**，标识有限，手机信号也不可靠。门票可能根据当地情况变化，停车费用也可能另计。
+
+瀑布附近一些平坦区域可以露营，但需要自行携带完整装备和补给。
+
+## 常见问题
+
+### Mokokawa 是否与 Nambo 的同名瀑布相同？
+
+不是。本指南介绍的是位于 **Hanga-Hanga / Tontouan，Luwuk 区域**的 Mokokawa。邦盖其他地区也可能出现相似名称，因此出发前请确认路线。
+
+### 徒步需要多长时间？
+
+道路结束后，徒步大约需要 **30–45 分钟**。下雨后部分路段可能泥泞。
+
+### 可以在 Mokokawa 游泳吗？
+
+游客会在天然水池中游泳，但现场**没有救生员**。下水前应确认当地水深和实际水况。
+
+### 需要门票吗？
+
+现有资料显示，费用可能从**免费或自愿捐款到约10,000印尼盾**不等，停车费可能另收。建议到访当天确认当地价格。
+
+### 需要向导吗？
+
+不一定强制，但**来自 Tontouan 的当地向导**可以帮助寻找森林路线并安排当地交通。
+
+## 相关目的地
+
+**Piala Waterfall** 和 **Laumarang Waterfall** 是 Luwuk 周边的其他瀑布。**Kilo 5 Beach** 是附近的海岸选择，而 Peleng 岛的 **Paisu Pok Lake** 是更大型的淡水目的地，可从 Luwuk 通过海路前往。
