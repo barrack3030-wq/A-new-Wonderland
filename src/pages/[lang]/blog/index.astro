@@ -6,247 +6,63 @@ import Breadcrumb from '../../../components/Breadcrumb.astro';
 import { getCollection } from 'astro:content';
 import { languages, useTranslations } from '../../../utils/i18n';
 
-export function getStaticPaths() {
-  return Object.keys(languages).map((lang) => ({
-    params: { lang },
-  }));
-}
-
+export function getStaticPaths() { return Object.keys(languages).map((lang) => ({ params: { lang } })); }
 const { lang } = Astro.params;
 const t = useTranslations(lang as any);
-
 const allPosts = await getCollection('blog');
-const posts = allPosts
-  .filter(post => post.slug.startsWith(`${lang}/`))
-  .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
-
+const posts = allPosts.filter(post => post.slug.startsWith(`${lang}/`)).sort((a,b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
 const featuredPost = posts[0];
-const recentPosts = posts.slice(1, 4);
+const recentPosts = posts.slice(1,4);
 const remainingPosts = posts.slice(4);
+const articleSearchText = (post: typeof posts[number]) => `${post.data.title} ${post.data.description} ${(post.data.tags || []).join(' ')}`.toLowerCase();
 
-const breadcrumbItems = [
-  { name: 'Home', url: `/${lang}/` },
-  { name: t('nav.blog'), url: `/${lang}/blog/` }
-];
+const copy = ({
+  en: { title:'Banggai Islands Travel Guide', description:'Travel guides, practical route information and local stories for exploring the Banggai Islands, Luwuk, Peleng and surrounding islands in Central Sulawesi.', intro:'Use the Banggai Wonderland journal to research destinations, routes, seasons and practical ideas before your private trip. Start with a destination guide, then connect it with the relevant itinerary.', guides:'Destination guides and practical travel information' },
+  id: { title:'Panduan Wisata Kepulauan Banggai', description:'Panduan perjalanan, informasi rute, dan cerita lokal untuk menjelajahi Kepulauan Banggai, Luwuk, Peleng, dan pulau-pulau sekitarnya di Sulawesi Tengah.', intro:'Gunakan jurnal Banggai Wonderland untuk mencari informasi destinasi, rute, musim, dan persiapan perjalanan sebelum private trip. Mulai dari panduan destinasi lalu hubungkan dengan itinerary yang sesuai.', guides:'Panduan destinasi dan informasi perjalanan' },
+  es: { title:'Guía de viaje de las Islas Banggai', description:'Guías de viaje, rutas prácticas e historias locales para explorar las Islas Banggai, Luwuk, Peleng y las islas cercanas de Sulawesi Central.', intro:'Consulta el diario de Banggai Wonderland para investigar destinos, rutas y temporadas antes de tu viaje privado.', guides:'Guías de destinos e información práctica' },
+  fr: { title:'Guide de voyage des îles Banggai', description:'Guides pratiques, itinéraires et récits locaux pour découvrir les îles Banggai, Luwuk, Peleng et les îles voisines du centre de Sulawesi.', intro:'Consultez le journal Banggai Wonderland pour préparer votre voyage privé et comprendre les destinations, itinéraires et saisons.', guides:'Guides des destinations et informations pratiques' },
+  zh: { title:'邦盖群岛旅行指南', description:'探索邦盖群岛、Luwuk、Peleng 及周边岛屿的旅行指南、路线信息和当地旅行故事。', intro:'通过 Banggai Wonderland 旅行日志了解目的地、路线和季节信息，为私人旅行做好准备。', guides:'目的地指南与实用旅行信息' }
+} as const)[lang as keyof typeof copy] || { title:'Banggai Islands Travel Guide', description:'Travel guides for the Banggai Islands.', intro:'Practical travel information for Banggai.', guides:'Travel Guides' };
 
-const articleSearchText = (post: typeof posts[number]) =>
-  `${post.data.title} ${post.data.description} ${(post.data.tags || []).join(' ')}`.toLowerCase();
+const breadcrumbItems = [{ name:'Home', url:`/${lang}/` }, { name:copy.title, url:`/${lang}/blog/` }];
+const schema = { '@context':'https://schema.org', '@type':'CollectionPage', name:copy.title, description:copy.description, url:new URL(`/${lang}/blog/`, Astro.site).href, mainEntity:{ '@type':'ItemList', numberOfItems:posts.length, itemListElement:posts.map((post,index)=>({ '@type':'ListItem', position:index+1, name:post.data.title, url:new URL(`/${lang}/blog/${post.slug.split('/').slice(1).join('/')}/`, Astro.site).href })) } };
 ---
 
-<BaseLayout
-  title={`${t('nav.blog')} | Banggai Wonderland`}
-  description={`Read travel guides, stories and practical advice for exploring the Banggai Islands.`}
->
+<BaseLayout title={`${copy.title} | Banggai Wonderland`} description={copy.description} seoTitle={`${copy.title} | Banggai Wonderland`} seoDescription={copy.description} schema={schema}>
   <div class="bg-sand-50 pt-28 md:pt-32 pb-20 min-h-screen overflow-x-hidden">
     <div class="max-w-6xl mx-auto px-5 sm:px-6 lg:px-8">
       <Breadcrumb items={breadcrumbItems} />
-
-      <header class="text-center max-w-4xl mx-auto pt-8 md:pt-12 pb-14 md:pb-18">
+      <header class="text-center max-w-4xl mx-auto pt-8 md:pt-12 pb-12">
         <p class="text-xs font-bold uppercase tracking-[0.28em] text-turquoise-600 mb-5">Banggai Wonderland Journal</p>
-        <h1 class="font-serif text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight text-ocean-950 leading-[1.05] mb-6">
-          Stories from the Banggai Islands
-        </h1>
-        <p class="text-base md:text-lg text-ocean-600 leading-relaxed max-w-2xl mx-auto">
-          Travel guides, local stories and practical ideas for discovering Banggai beyond the usual route.
-        </p>
+        <h1 class="font-serif text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight text-ocean-950 leading-[1.05] mb-6">{copy.title}</h1>
+        <p class="text-base md:text-lg text-ocean-600 leading-relaxed max-w-3xl mx-auto mb-4">{copy.intro}</p>
+        <p class="text-sm md:text-base text-ocean-500 leading-relaxed max-w-3xl mx-auto">{copy.description}</p>
       </header>
 
       <div class="mb-14 max-w-2xl mx-auto">
         <label for="blog-search" class="sr-only">Search articles</label>
-        <div class="relative">
-          <svg class="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-ocean-400 pointer-events-none" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m21 21-4.35-4.35m2.35-5.65a8 8 0 1 1-16 0 8 8 0 0 1 16 0Z"></path>
-          </svg>
-          <input
-            id="blog-search"
-            type="search"
-            placeholder="Search articles..."
-            autocomplete="off"
-            class="w-full rounded-xl border border-sand-300 bg-white py-3.5 pl-12 pr-12 text-sm text-ocean-900 placeholder:text-ocean-400 shadow-sm outline-none transition focus:border-turquoise-400 focus:ring-4 focus:ring-turquoise-500/10"
-          />
-          <button id="blog-search-clear" type="button" class="hidden absolute right-3 top-1/2 -translate-y-1/2 rounded-full p-2 text-ocean-400 hover:bg-sand-100 hover:text-ocean-700" aria-label="Clear search">
-            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 6l12 12M18 6 6 18"></path></svg>
-          </button>
-        </div>
+        <div class="relative"><svg class="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-ocean-400 pointer-events-none" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m21 21-4.35-4.35m2.35-5.65a8 8 0 1 1-16 0 8 8 0 0 1 16 0Z"></path></svg><input id="blog-search" type="search" placeholder="Search articles..." autocomplete="off" class="w-full rounded-xl border border-sand-300 bg-white py-3.5 pl-12 pr-12 text-sm text-ocean-900 placeholder:text-ocean-400 shadow-sm outline-none transition focus:border-turquoise-400 focus:ring-4 focus:ring-turquoise-500/10"/><button id="blog-search-clear" type="button" class="hidden absolute right-3 top-1/2 -translate-y-1/2 rounded-full p-2 text-ocean-400 hover:bg-sand-100 hover:text-ocean-700" aria-label="Clear search"><svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 6l12 12M18 6 6 18"></path></svg></button></div>
         <p id="blog-search-status" class="mt-3 text-center text-xs text-ocean-500 min-h-4" aria-live="polite"></p>
       </div>
 
-      {posts.length > 0 ? (
-        <div id="blog-results">
-          <section aria-labelledby="recent-posts-heading">
-            <div class="flex items-center justify-between mb-7">
-              <h2 id="recent-posts-heading" class="text-xl md:text-2xl font-bold text-ocean-950">Recent blog posts</h2>
-              <span class="hidden sm:block h-px flex-1 ml-6 bg-sand-200"></span>
-            </div>
-
-            <div class="grid grid-cols-1 xl:grid-cols-[minmax(0,1.42fr)_minmax(0,1fr)] gap-10 xl:gap-16 items-start">
-              {featuredPost && (
-                <article class="blog-search-item group min-w-0" data-search={articleSearchText(featuredPost)}>
-                  <a href={`/${lang}/blog/${featuredPost.slug.split('/').slice(1).join('/')}/`} class="block">
-                    <div class="relative aspect-[16/10] overflow-hidden rounded-2xl bg-ocean-100">
-                      <img
-                        src={featuredPost.data.image}
-                        alt={featuredPost.data.imageAlt || featuredPost.data.title}
-                        class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-[1.03]"
-                        loading="eager"
-                      />
-                    </div>
-                    <div class="pt-5">
-                      <div class="flex flex-wrap items-center gap-x-2 gap-y-1 text-[11px] font-medium text-ocean-500 mb-3">
-                        <span>{new Intl.DateTimeFormat(lang, { year: 'numeric', month: 'short', day: 'numeric' }).format(featuredPost.data.pubDate)}</span>
-                        <span>•</span>
-                        <span>{featuredPost.data.tags?.[0] || 'Travel Guide'}</span>
-                      </div>
-                      <div class="flex items-start gap-4">
-                        <div class="min-w-0">
-                          <h3 class="font-serif text-2xl sm:text-3xl font-bold text-ocean-950 leading-tight group-hover:text-turquoise-600 transition-colors">
-                            {featuredPost.data.title}
-                          </h3>
-                          <p class="mt-3 text-sm leading-relaxed text-ocean-600 max-w-2xl line-clamp-3">
-                            {featuredPost.data.description}
-                          </p>
-                        </div>
-                        <span class="hidden sm:flex shrink-0 w-9 h-9 rounded-full border border-ocean-200 items-center justify-center text-ocean-700 transition-all group-hover:border-turquoise-400 group-hover:text-turquoise-600 group-hover:translate-x-1" aria-hidden="true">
-                          ↗
-                        </span>
-                      </div>
-                    </div>
-                  </a>
-                </article>
-              )}
-
-              <div class="min-w-0">
-                {recentPosts.map((post) => (
-                  <article
-                    class="blog-search-item group border-b border-sand-200 last:border-b-0 pb-5 mb-5 last:pb-0 last:mb-0"
-                    data-search={articleSearchText(post)}
-                  >
-                    <a
-                      href={`/${lang}/blog/${post.slug.split('/').slice(1).join('/')}/`}
-                      class="grid grid-cols-[140px_minmax(0,1fr)] gap-4 xl:gap-5 items-start"
-                    >
-                      <div class="w-[140px] h-[108px] overflow-hidden rounded-xl bg-ocean-100 shrink-0">
-                        <img
-                          src={post.data.image}
-                          alt={post.data.imageAlt || post.data.title}
-                          class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-                          loading="lazy"
-                        />
-                      </div>
-
-                      <div class="min-w-0 min-h-[108px] flex flex-col">
-                        <div class="text-[10px] font-medium text-ocean-500 mb-1.5 leading-none">
-                          {new Intl.DateTimeFormat(lang, { year: 'numeric', month: 'short', day: 'numeric' }).format(post.data.pubDate)}
-                        </div>
-                        <h3 class="blog-side-title font-semibold text-[15px] leading-[1.25] text-ocean-950 group-hover:text-turquoise-600 transition-colors">
-                          {post.data.title}
-                        </h3>
-                        <p class="blog-side-excerpt mt-2 text-[11px] leading-[1.45] text-ocean-600">
-                          {post.data.description}
-                        </p>
-                        <div class="flex flex-wrap gap-1.5 mt-auto pt-3">
-                          {post.data.tags?.slice(0, 2).map(tag => (
-                            <span class="text-[9px] font-medium text-ocean-600 border border-ocean-200 rounded-full px-2 py-0.5 leading-none">{tag}</span>
-                          ))}
-                        </div>
-                      </div>
-                    </a>
-                  </article>
-                ))}
-              </div>
-            </div>
-          </section>
-
-          {remainingPosts.length > 0 && (
-            <section id="travel-guides-section" class="mt-20">
-              <div class="flex items-center justify-between mb-7">
-                <h2 class="text-xl md:text-2xl font-bold text-ocean-950">Travel Guides</h2>
-                <span class="h-px flex-1 ml-6 bg-sand-200"></span>
-              </div>
-              <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-7 gap-y-10">
-                {remainingPosts.map(post => (
-                  <div class="blog-search-item" data-search={articleSearchText(post)}>
-                    <BlogCard post={post} />
-                  </div>
-                ))}
-              </div>
-            </section>
-          )}
-
-          <div id="blog-no-results" class="hidden text-center py-16">
-            <p class="text-lg font-semibold text-ocean-900">No articles found</p>
-            <p class="mt-2 text-sm text-ocean-500">Try a different search term.</p>
+      {posts.length > 0 ? <div id="blog-results">
+        {featuredPost && <section aria-labelledby="recent-posts-heading">
+          <div class="flex items-center justify-between mb-7"><h2 id="recent-posts-heading" class="text-xl md:text-2xl font-bold text-ocean-950">Recent travel guides</h2><span class="hidden sm:block h-px flex-1 ml-6 bg-sand-200"></span></div>
+          <div class="grid grid-cols-1 xl:grid-cols-[minmax(0,1.42fr)_minmax(0,1fr)] gap-10 xl:gap-16 items-start">
+            <article class="blog-search-item group min-w-0" data-search={articleSearchText(featuredPost)}><a href={`/${lang}/blog/${featuredPost.slug.split('/').slice(1).join('/')}/`} class="block"><div class="relative aspect-[16/10] overflow-hidden rounded-2xl bg-ocean-100"><img src={featuredPost.data.image} alt={featuredPost.data.imageAlt || featuredPost.data.title} class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-[1.03]" loading="eager"/></div><div class="pt-5"><div class="flex flex-wrap items-center gap-x-2 gap-y-1 text-[11px] font-medium text-ocean-500 mb-3"><span>{new Intl.DateTimeFormat(lang,{year:'numeric',month:'short',day:'numeric'}).format(featuredPost.data.pubDate)}</span><span>•</span><span>{featuredPost.data.tags?.[0] || 'Travel Guide'}</span></div><h3 class="font-serif text-2xl sm:text-3xl font-bold text-ocean-950 leading-tight group-hover:text-turquoise-600 transition-colors">{featuredPost.data.title}</h3><p class="mt-3 text-sm leading-relaxed text-ocean-600 max-w-2xl line-clamp-3">{featuredPost.data.description}</p></div></a></article>
+            <div class="min-w-0">{recentPosts.map(post=><article class="blog-search-item group border-b border-sand-200 last:border-b-0 pb-5 mb-5 last:pb-0 last:mb-0" data-search={articleSearchText(post)}><a href={`/${lang}/blog/${post.slug.split('/').slice(1).join('/')}/`} class="grid grid-cols-[140px_minmax(0,1fr)] gap-4 xl:gap-5 items-start"><div class="w-[140px] h-[108px] overflow-hidden rounded-xl bg-ocean-100 shrink-0"><img src={post.data.image} alt={post.data.imageAlt || post.data.title} class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy"/></div><div class="min-w-0 min-h-[108px] flex flex-col"><div class="text-[10px] font-medium text-ocean-500 mb-1.5">{new Intl.DateTimeFormat(lang,{year:'numeric',month:'short',day:'numeric'}).format(post.data.pubDate)}</div><h3 class="blog-side-title font-semibold text-[15px] leading-[1.25] text-ocean-950 group-hover:text-turquoise-600 transition-colors">{post.data.title}</h3><p class="blog-side-excerpt mt-2 text-[11px] leading-[1.45] text-ocean-600">{post.data.description}</p><div class="flex flex-wrap gap-1.5 mt-auto pt-3">{post.data.tags?.slice(0,2).map(tag=><span class="text-[9px] font-medium text-ocean-600 border border-ocean-200 rounded-full px-2 py-0.5 leading-none">{tag}</span>)}</div></div></a></article>)}</div>
           </div>
-        </div>
-      ) : (
-        <div class="text-center py-20 bg-white rounded-2xl border border-sand-200">
-          <p class="text-ocean-600">No blog posts found for this language yet.</p>
-        </div>
-      )}
+        </section>}
+        {remainingPosts.length > 0 && <section id="travel-guides-section" class="mt-20"><div class="flex items-center justify-between mb-7"><h2 class="text-xl md:text-2xl font-bold text-ocean-950">{copy.guides}</h2><span class="h-px flex-1 ml-6 bg-sand-200"></span></div><div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-7 gap-y-10">{remainingPosts.map(post=><div class="blog-search-item" data-search={articleSearchText(post)}><BlogCard post={post}/></div>)}</div></section>}
+        <div id="blog-no-results" class="hidden text-center py-16"><p class="text-lg font-semibold text-ocean-900">No articles found</p><p class="mt-2 text-sm text-ocean-500">Try a different search term.</p></div>
+      </div> : <div class="text-center py-20 bg-white rounded-2xl border border-sand-200"><p class="text-ocean-600">No blog posts found for this language yet.</p></div>}
     </div>
   </div>
-
   <WhatsAppButton />
-
   <script>
-    const input = document.querySelector('#blog-search');
-    const clearButton = document.querySelector('#blog-search-clear');
-    const status = document.querySelector('#blog-search-status');
-    const items = Array.from(document.querySelectorAll('.blog-search-item'));
-    const guidesSection = document.querySelector('#travel-guides-section');
-    const noResults = document.querySelector('#blog-no-results');
-
-    function filterArticles() {
-      const query = input?.value.trim().toLowerCase() || '';
-      let visible = 0;
-      let visibleGuides = 0;
-
-      items.forEach((item) => {
-        const searchable = item.getAttribute('data-search') || '';
-        const matches = !query || searchable.includes(query);
-        item.classList.toggle('hidden', !matches);
-        if (matches) {
-          visible++;
-          if (item.closest('#travel-guides-section')) visibleGuides++;
-        }
-      });
-
-      if (clearButton) clearButton.classList.toggle('hidden', !query);
-      if (status) status.textContent = query ? `${visible} article${visible === 1 ? '' : 's'} found` : '';
-      if (guidesSection) guidesSection.classList.toggle('hidden', Boolean(query) && visibleGuides === 0);
-      if (noResults) noResults.classList.toggle('hidden', !query || visible !== 0);
-    }
-
-    input?.addEventListener('input', filterArticles);
-    clearButton?.addEventListener('click', () => {
-      if (input) input.value = '';
-      filterArticles();
-      input?.focus();
-    });
+    const input=document.querySelector('#blog-search'); const clearButton=document.querySelector('#blog-search-clear'); const status=document.querySelector('#blog-search-status'); const items=Array.from(document.querySelectorAll('.blog-search-item')); const guidesSection=document.querySelector('#travel-guides-section'); const noResults=document.querySelector('#blog-no-results');
+    function filterArticles(){const query=input?.value.trim().toLowerCase()||'';let visible=0;let visibleGuides=0;items.forEach(item=>{const searchable=item.getAttribute('data-search')||'';const matches=!query||searchable.includes(query);item.classList.toggle('hidden',!matches);if(matches){visible++;if(item.closest('#travel-guides-section'))visibleGuides++;}});if(clearButton)clearButton.classList.toggle('hidden',!query);if(status)status.textContent=query?`${visible} article${visible===1?'':'s'} found`:'';if(guidesSection)guidesSection.classList.toggle('hidden',Boolean(query)&&visibleGuides===0);if(noResults)noResults.classList.toggle('hidden',!query||visible!==0)}
+    input?.addEventListener('input',filterArticles);clearButton?.addEventListener('click',()=>{if(input)input.value='';filterArticles();input?.focus()});
   </script>
-
-  <style>
-    .blog-side-title,
-    .blog-side-excerpt {
-      display: -webkit-box;
-      -webkit-box-orient: vertical;
-      overflow: hidden;
-    }
-
-    .blog-side-title {
-      -webkit-line-clamp: 2;
-      line-clamp: 2;
-    }
-
-    .blog-side-excerpt {
-      -webkit-line-clamp: 2;
-      line-clamp: 2;
-    }
-
-    @media (max-width: 1279px) and (min-width: 640px) {
-      .blog-side-title {
-        font-size: 0.95rem;
-      }
-    }
-  </style>
+  <style>.blog-side-title,.blog-side-excerpt{display:-webkit-box;-webkit-box-orient:vertical;overflow:hidden}.blog-side-title{-webkit-line-clamp:2;line-clamp:2}.blog-side-excerpt{-webkit-line-clamp:2;line-clamp:2}</style>
 </BaseLayout>
