@@ -1,6 +1,6 @@
 ---
 title: Kawalu Bay
- description: Kawalu Bay 是印度尼西亚中苏拉威西省邦盖群岛的一处宁静海湾，以清澈的蓝绿色海水、红树林、绿色丘陵、浮板、浮潜和浅水珊瑚礁潜水而闻名。
+description: Kawalu Bay 是印度尼西亚中苏拉威西省邦盖群岛的一处宁静海湾，以清澈的蓝绿色海水、红树林、绿色丘陵、浮板、浮潜和浅水珊瑚礁潜水而闻名。
 seoTitle: "Kawalu Bay：邦盖群岛的蓝绿色海水与红树林"
 seoDescription: "探索邦盖群岛的 Kawalu Bay：蓝绿色海水、红树林、浮潜、立式桨板、浅水潜水、乘船方式、最佳游览时间和实用旅行建议。"
 image: /images/kawalu.webp
