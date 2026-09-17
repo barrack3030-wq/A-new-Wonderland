@@ -9,12 +9,7 @@ export async function getStaticPaths() {
   const posts = await getCollection('blog');
   return posts.map(entry => {
     const [lang, ...slugParts] = entry.slug.split('/');
-    const postSlug = slugParts.join('/');
-
-    return {
-      params: { lang, slug: postSlug },
-      props: { entry },
-    };
+    return { params: { lang, slug: slugParts.join('/') }, props: { entry } };
   });
 }
 
@@ -22,22 +17,9 @@ const { entry } = Astro.props;
 const { lang } = Astro.params;
 const t = useTranslations(lang as any);
 const { Content } = await entry.render();
-
-const formattedDate = new Intl.DateTimeFormat(lang, {
-  year: 'numeric',
-  month: 'long',
-  day: 'numeric'
-}).format(entry.data.pubDate);
-
-// Destination-aware image resolver for existing articles.
-const entryText = `${entry.data.title} ${entry.data.description} ${(entry.data.tags || []).join(' ')}`.toLowerCase();
-const isMbuangMbuang = entryText.includes('mbuang-mbuang') || entryText.includes('mbuang mbuang');
-const resolvedImage = isMbuangMbuang
-  ? 'https://upload.wikimedia.org/wikipedia/commons/6/64/Pantai_Pasir_Panjang_-_Banggai_Laut.jpg'
-  : entry.data.image;
-const resolvedImageAlt = isMbuangMbuang
-  ? 'Pasir Panjang Beach on Mbuang-Mbuang Island, Banggai Laut, Central Sulawesi'
-  : (entry.data.imageAlt || entry.data.title);
+const formattedDate = new Intl.DateTimeFormat(lang, { year: 'numeric', month: 'long', day: 'numeric' }).format(entry.data.pubDate);
+const resolvedImage = entry.data.image;
+const resolvedImageAlt = entry.data.imageAlt || entry.data.title;
 
 const allPosts = await getCollection('blog');
 const sameLanguagePosts = allPosts
@@ -49,9 +31,8 @@ const allDestinations = await getCollection('destinations');
 const languageDestinations = allDestinations.filter(destination => destination.slug.startsWith(`${lang}/`));
 const relatedDestinations = languageDestinations
   .map(destination => {
-    const score = entryText.includes(destination.data.title.toLowerCase()) ? 3 :
-      entryText.includes(destination.data.location.toLowerCase()) ? 2 :
-      entryText.includes(destination.data.category.toLowerCase()) ? 1 : 0;
+    const text = `${entry.data.title} ${entry.data.description} ${(entry.data.tags || []).join(' ')}`.toLowerCase();
+    const score = text.includes(destination.data.title.toLowerCase()) ? 3 : text.includes(destination.data.location.toLowerCase()) ? 2 : text.includes(destination.data.category.toLowerCase()) ? 1 : 0;
     return { destination, score };
   })
   .sort((a, b) => b.score - a.score)
@@ -66,62 +47,38 @@ const labels = {
   zh: { recommended: '推荐文章', related: '相关目的地', allDestinations: '查看所有目的地', moreArticles: '更多文章' },
 }[lang as 'id' | 'en' | 'es' | 'fr' | 'zh'] || { recommended: 'Recommended Articles', related: 'Related Destinations', allDestinations: 'View All Destinations', moreArticles: 'More Articles' };
 
+const postUrl = new URL(`/${lang}/blog/${Astro.params.slug}/`, Astro.site || Astro.url.origin).href;
 const breadcrumbItems = [
   { name: 'Home', url: `/${lang}/` },
   { name: t('nav.blog'), url: `/${lang}/blog/` },
   { name: entry.data.title, url: `/${lang}/blog/${Astro.params.slug}/` }
 ];
-
 const schema = {
-  "@context": "https://schema.org",
-  "@type": "BlogPosting",
-  "headline": entry.data.title,
-  "description": entry.data.description,
-  "image": resolvedImage,
-  "author": {
-    "@type": "Person",
-    "name": entry.data.author
-  },
-  "datePublished": entry.data.pubDate.toISOString()
+  '@context': 'https://schema.org',
+  '@type': 'BlogPosting',
+  headline: entry.data.title,
+  description: entry.data.description,
+  image: resolvedImage,
+  url: postUrl,
+  mainEntityOfPage: { '@type': 'WebPage', '@id': postUrl },
+  author: { '@type': 'Person', name: entry.data.author },
+  publisher: { '@type': 'Organization', name: 'Banggai Wonderland' },
+  datePublished: entry.data.pubDate.toISOString(),
+  inLanguage: lang
 };
 ---
 
-<BaseLayout
-  title={`${entry.data.title} | Banggai Wonderland Blog`}
-  description={entry.data.description}
-  seoTitle={entry.data.seoTitle}
-  seoDescription={entry.data.seoDescription}
-  ogImage={resolvedImage}
-  imageAlt={resolvedImageAlt}
-  schema={schema}
->
+<BaseLayout title={`${entry.data.title} | Banggai Wonderland Blog`} description={entry.data.description} seoTitle={entry.data.seoTitle} seoDescription={entry.data.seoDescription} ogImage={resolvedImage} imageAlt={resolvedImageAlt} schema={schema}>
   <div class="bg-sand-50 pt-32 pb-16">
     <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
       <Breadcrumb items={breadcrumbItems} />
-
       <div class="mt-8 mb-10 text-center">
         <div class="flex flex-wrap justify-center gap-2 mb-6">
-          {entry.data.tags?.map(tag => (
-            <span class="bg-turquoise-100 text-turquoise-800 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">
-              {tag}
-            </span>
-          ))}
+          {entry.data.tags?.map(tag => <span class="bg-turquoise-100 text-turquoise-800 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">{tag}</span>)}
         </div>
-
-        <h1 class="blog-post-title text-4xl md:text-5xl lg:text-6xl font-serif font-bold text-ocean-900 mb-6 leading-tight">
-          {entry.data.title}
-        </h1>
-
+        <h1 class="blog-post-title text-4xl md:text-5xl lg:text-6xl font-serif font-bold text-ocean-900 mb-6 leading-tight">{entry.data.title}</h1>
         <div class="flex items-center justify-center text-ocean-500 space-x-4 text-sm font-medium">
-          <div class="flex items-center">
-            <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0z"></path></svg>
-            {t('blog.by')} {entry.data.author}
-          </div>
-          <span>•</span>
-          <div class="flex items-center">
-            <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4v4H5V7m3 11h8"></path></svg>
-            {formattedDate}
-          </div>
+          <div>{t('blog.by')} {entry.data.author}</div><span>•</span><div>{formattedDate}</div>
         </div>
       </div>
     </div>
@@ -134,140 +91,52 @@ const schema = {
           <div class="rounded-3xl overflow-hidden shadow-2xl mb-12 -mt-8 relative z-10">
             <img src={resolvedImage} alt={resolvedImageAlt} class="w-full h-auto object-cover max-h-[600px]" />
           </div>
-
-          <article class="blog-post-content prose prose-lg prose-ocean max-w-none
-            prose-headings:font-serif prose-headings:text-ocean-900
-            prose-p:text-ocean-700 prose-p:leading-relaxed prose-p:text-justify
-            prose-li:text-ocean-700 prose-li:text-justify
-            prose-a:text-turquoise-600 hover:prose-a:text-turquoise-500
-            prose-img:rounded-2xl prose-img:shadow-md
-            bg-white p-8 md:p-12 rounded-3xl shadow-sm border border-sand-200">
+          <article class="blog-post-content prose prose-lg prose-ocean max-w-none prose-headings:font-serif prose-headings:text-ocean-900 prose-p:text-ocean-700 prose-p:leading-relaxed prose-p:text-justify prose-li:text-ocean-700 prose-a:text-turquoise-600 hover:prose-a:text-turquoise-500 prose-img:rounded-2xl prose-img:shadow-md bg-white p-8 md:p-12 rounded-3xl shadow-sm border border-sand-200">
             <Content />
           </article>
-
-          <div class="mt-12 text-center">
-            <a href={`/${lang}/blog/`} class="inline-flex items-center text-ocean-900 font-bold hover:text-turquoise-600 transition-colors">
-              <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16l-4-4m0 0l4-4m-4 4h18"></path></svg>
-              {t('blog.back')}
-            </a>
-          </div>
+          <div class="mt-12 text-center"><a href={`/${lang}/blog/`} class="inline-flex items-center text-ocean-900 font-bold hover:text-turquoise-600 transition-colors">← {t('blog.back')}</a></div>
         </main>
 
         <aside class="lg:sticky lg:top-28 space-y-6">
           <section class="bg-white rounded-3xl border border-sand-200 shadow-sm p-5">
-            <div class="flex items-center justify-between mb-5">
-              <h2 class="font-serif text-xl font-bold text-ocean-900">{labels.recommended}</h2>
-              <span class="h-px flex-1 ml-4 bg-sand-200"></span>
-            </div>
+            <div class="flex items-center justify-between mb-5"><h2 class="font-serif text-xl font-bold text-ocean-900">{labels.recommended}</h2><span class="h-px flex-1 ml-4 bg-sand-200"></span></div>
             <div class="sidebar-scroll sidebar-scroll-light space-y-4 pr-1">
               {recommendedPosts.map(post => {
                 const postSlug = post.slug.replace(`${lang}/`, '');
-                return (
-                  <a href={`/${lang}/blog/${postSlug}/`} class="group block">
-                    <div class="flex gap-3">
-                      <img src={post.data.image} alt={post.data.imageAlt || post.data.title} class="w-24 h-20 object-cover rounded-xl shrink-0" loading="lazy" />
-                      <div class="min-w-0">
-                        <h3 class="text-sm font-bold text-ocean-900 leading-snug group-hover:text-turquoise-600 transition-colors line-clamp-3">{post.data.title}</h3>
-                        <p class="mt-1 text-xs text-ocean-500">{new Intl.DateTimeFormat(lang, { year: 'numeric', month: 'short', day: 'numeric' }).format(post.data.pubDate)}</p>
-                      </div>
-                    </div>
-                  </a>
-                );
+                return <a href={`/${lang}/blog/${postSlug}/`} class="group block"><div class="flex gap-3"><img src={post.data.image} alt={post.data.imageAlt || post.data.title} class="w-24 h-20 object-cover rounded-xl shrink-0" loading="lazy" /><div class="min-w-0"><h3 class="text-sm font-bold text-ocean-900 leading-snug group-hover:text-turquoise-600 transition-colors line-clamp-3">{post.data.title}</h3><p class="mt-1 text-xs text-ocean-500">{new Intl.DateTimeFormat(lang, { year: 'numeric', month: 'short', day: 'numeric' }).format(post.data.pubDate)}</p></div></div></a>;
               })}
             </div>
           </section>
-
           <section class="bg-white rounded-3xl border border-sand-200 shadow-sm p-5">
-            <div class="flex items-center justify-between mb-5">
-              <h2 class="font-serif text-xl font-bold text-ocean-900">{labels.related}</h2>
-              <span class="h-px flex-1 ml-4 bg-sand-200"></span>
-            </div>
+            <div class="flex items-center justify-between mb-5"><h2 class="font-serif text-xl font-bold text-ocean-900">{labels.related}</h2><span class="h-px flex-1 ml-4 bg-sand-200"></span></div>
             <div class="sidebar-scroll sidebar-scroll-light space-y-4 pr-1">
               {relatedDestinations.map(destination => {
                 const destinationSlug = destination.slug.replace(`${lang}/`, '');
-                return (
-                  <a href={`/${lang}/destinations/${destinationSlug}/`} class="group block">
-                    <div class="flex gap-3">
-                      <img src={destination.data.image} alt={destination.data.imageAlt || destination.data.title} class="w-24 h-20 object-cover rounded-xl shrink-0" loading="lazy" />
-                      <div class="min-w-0">
-                        <h3 class="text-sm font-bold text-ocean-900 leading-snug group-hover:text-turquoise-600 transition-colors line-clamp-3">{destination.data.title}</h3>
-                        <p class="mt-1 text-xs text-ocean-500">{destination.data.location}</p>
-                      </div>
-                    </div>
-                  </a>
-                );
+                return <a href={`/${lang}/destinations/${destinationSlug}/`} class="group block"><div class="flex gap-3"><img src={destination.data.image} alt={destination.data.imageAlt || destination.data.title} class="w-24 h-20 object-cover rounded-xl shrink-0" loading="lazy" /><div class="min-w-0"><h3 class="text-sm font-bold text-ocean-900 leading-snug group-hover:text-turquoise-600 transition-colors line-clamp-3">{destination.data.title}</h3><p class="mt-1 text-xs text-ocean-500">{destination.data.location}</p></div></div></a>;
               })}
             </div>
             <a href={`/${lang}/destinations/`} class="mt-5 inline-flex text-sm font-bold text-ocean-900 hover:text-turquoise-600 transition-colors">{labels.allDestinations} →</a>
           </section>
-
-          {sameLanguagePosts.length > 4 && (
-            <a href={`/${lang}/blog/`} class="block bg-turquoise-50 border border-turquoise-100 rounded-3xl px-5 py-4 text-sm font-bold text-ocean-900 hover:border-turquoise-300 transition-colors">
-              {labels.moreArticles} →
-            </a>
-          )}
+          {sameLanguagePosts.length > 4 && <a href={`/${lang}/blog/`} class="block bg-turquoise-50 border border-turquoise-100 rounded-3xl px-5 py-4 text-sm font-bold text-ocean-900 hover:border-turquoise-300 transition-colors">{labels.moreArticles} →</a>}
         </aside>
       </div>
     </div>
   </section>
 
   <style is:global>
-    .sidebar-scroll {
-      max-height: 420px;
-      overflow-y: auto;
-      overscroll-behavior: contain;
-      scrollbar-width: thin;
-    }
-
-    .sidebar-scroll-light {
-      scrollbar-color: rgba(9, 74, 92, 0.35) transparent;
-    }
-
-    .sidebar-scroll::-webkit-scrollbar {
-      width: 6px;
-    }
-
-    .sidebar-scroll::-webkit-scrollbar-track {
-      background: transparent;
-    }
-
-    .sidebar-scroll-light::-webkit-scrollbar-thumb {
-      background: rgba(9, 74, 92, 0.28);
-      border-radius: 999px;
-    }
-
-    .sidebar-scroll-light::-webkit-scrollbar-thumb:hover {
-      background: rgba(9, 74, 92, 0.45);
-    }
-
-    @media (max-width: 1023px) {
-      .sidebar-scroll {
-        max-height: 360px;
-      }
-    }
-
-    /* Mobile-only blog article refinements. Desktop/tablet remain unchanged. */
+    .sidebar-scroll { max-height: 420px; overflow-y: auto; overscroll-behavior: contain; scrollbar-width: thin; }
+    .sidebar-scroll-light { scrollbar-color: rgba(9, 74, 92, 0.35) transparent; }
+    .sidebar-scroll::-webkit-scrollbar { width: 6px; }
+    .sidebar-scroll::-webkit-scrollbar-track { background: transparent; }
+    .sidebar-scroll-light::-webkit-scrollbar-thumb { background: rgba(9, 74, 92, 0.28); border-radius: 999px; }
+    .sidebar-scroll-light::-webkit-scrollbar-thumb:hover { background: rgba(9, 74, 92, 0.45); }
+    @media (max-width: 1023px) { .sidebar-scroll { max-height: 360px; } }
     @media (max-width: 767px) {
-      .blog-post-title {
-        font-size: clamp(2rem, 9vw, 2.35rem);
-        line-height: 1.02;
-        letter-spacing: -0.015em;
-        margin-bottom: 1.5rem;
-      }
-
-      .blog-post-content {
-        padding: 1.75rem 1.35rem;
-      }
-
-      .blog-post-content :where(p, li) {
-        text-align: left;
-      }
-
-      .blog-post-content :where(p) {
-        line-height: 1.7;
-      }
+      .blog-post-title { font-size: clamp(2rem, 9vw, 2.35rem); line-height: 1.02; letter-spacing: -0.015em; margin-bottom: 1.5rem; }
+      .blog-post-content { padding: 1.75rem 1.35rem; }
+      .blog-post-content :where(p, li) { text-align: left; }
+      .blog-post-content :where(p) { line-height: 1.7; }
     }
   </style>
-
   <WhatsAppButton />
 </BaseLayout>
