@@ -30,13 +30,13 @@ youtube: "https://www.youtube.com/watch?v=51WQQ4nbepg"
 
 ## Teduang Beach: The Love Beach of the Banggai Islands
 
-Teduang Beach—**Pantai Teduang**, known locally as **Pantai Cinta**—is a white-sand beach in **Ambelang Village, Tinangkung District, Banggai Islands Regency, Central Sulawesi**. It sits inside a **sheltered bay** not far from **Salakan**, the regency capital. The bay keeps the water unusually calm, with minimal waves and currents and a clear greenish colour. Official Banggai Islands planning documents list Teduang Beach and Teduang Ambelang among the regency's tourism destinations. citeturn164828search13turn164828search16
+Teduang Beach—**Pantai Teduang**, known locally as **Pantai Cinta**—is a white-sand beach in **Ambelang Village, Tinangkung District, Banggai Islands Regency, Central Sulawesi**. It sits inside a **sheltered bay** not far from **Salakan**, the regency capital. The bay keeps the water unusually calm, with minimal waves and currents and a clear greenish colour.
 
 The beach is small and low-key. There is no large resort complex or formal tourism gate. Its defining attraction is beneath the surface.
 
 ## The Underwater Stone Art: Hearts and Flowers
 
-Teduang's signature attraction is a set of **stone arrangements on the seabed**—including **hearts, flower petals and other symbols**. These are not natural formations. They were deliberately arranged by the local beach manager, creating an underwater attraction that can be seen in calm, clear water. citeturn164828search1turn164828search17
+Teduang's signature attraction is a set of **stone arrangements on the seabed**—including **hearts, flower petals and other symbols**. These are not natural formations. They were deliberately arranged by the local beach manager, creating an underwater attraction that can be seen in calm, clear water.
 
 This is why locals call it **Pantai Cinta**, or Love Beach. The heart shapes have made the beach especially popular with couples and photographers. The surrounding shallow reef also supports **tropical fish and coral**, so visitors can combine the man-made underwater art with ordinary marine life in the same swim.
 
@@ -46,17 +46,17 @@ This is why locals call it **Pantai Cinta**, or Love Beach. The heart shapes hav
 
 **Snorkeling** can be done directly from the beach. The stone shapes are the main attraction, while nearby coral and reef fish add a natural layer to the experience. Bring your own mask and snorkel because on-site gear rental is not consistently documented.
 
-**Canoeing** is another option in the calm bay. Older travel reports list canoe rental at around **Rp10,000**. citeturn164828search1
+**Canoeing** is another option in the calm bay. Older travel reports list canoe rental at around **Rp10,000**.
 
 ## Facilities and Practical Details
 
-Teduang is a **managed beach with basic facilities**. Travel reports describe simple bungalows or resting structures, food vendors, and canoe services. Older reports list bungalow rental at around **Rp5,000** and canoe rental around **Rp10,000**, but current local charges should be confirmed on arrival. citeturn164828search1
+Teduang is a **managed beach with basic facilities**. Travel reports describe simple bungalows or resting structures, food vendors, and canoe services. Older reports list bungalow rental at around **Rp5,000** and canoe rental around **Rp10,000**, but current local charges should be confirmed on arrival.
 
 Opening-hour information is inconsistent. Some travel listings give **08:00–17:00**, while local arrangements may vary. There is no large formal ticketing complex, so bring small cash and confirm any current local fees.
 
 ## How to Get to Teduang Beach
 
-Teduang is in **Ambelang Village**, close to **Salakan**. Travel sources describe the beach as roughly **15 minutes from central Salakan** by road, with the destination located along the Trans Banggai Kepulauan route. citeturn164828search1turn164828search3
+Teduang is in **Ambelang Village**, close to **Salakan**. Travel sources describe the beach as roughly **15 minutes from central Salakan** by road, with the destination located along the Trans Banggai Kepulauan route.
 
 For travellers coming from **Luwuk**, the journey involves sea transport to the Banggai Islands and then a road transfer toward Salakan and Ambelang. Ferry schedules and sea conditions can change, so confirm the current crossing before departure.
 
@@ -66,7 +66,7 @@ There is no consistently documented public transport directly to the beach. A re
 
 The **dry season (roughly May to October)** generally offers calmer seas and clearer water. **Morning** is a good time for snorkeling and photography because the beach is quieter and the light is softer.
 
-**Sunset** is another attraction. The small green hill behind the beach offers a higher viewpoint over the bay, and local travel coverage has highlighted the sunset and the heart-shaped underwater concept as photographic features. citeturn164828search1
+**Sunset** is another attraction. The small green hill behind the beach offers a higher viewpoint over the bay, and the heart-shaped underwater concept is a distinctive photographic feature.
 
 ## What to Bring and What to Expect
 
@@ -90,7 +90,7 @@ Yes. Snorkeling is possible directly from the beach. The water is usually calm a
 
 ### How do you get to Teduang from Salakan?
 
-Teduang is about a **short 15-minute drive from central Salakan** according to travel sources. A private vehicle, rental vehicle, local driver or tour is the practical option. citeturn164828search1
+Teduang is about a **short 15-minute drive from central Salakan** according to travel sources. A private vehicle, rental vehicle, local driver or tour is the practical option.
 
 ### Is there accommodation at Teduang Beach?
 
