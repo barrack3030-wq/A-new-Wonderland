@@ -9,7 +9,7 @@ interface Props {
   seoDescription?: string;
   ogImage?: string;
   imageAlt?: string;
-  schema?: any; // Additional schema.org data
+  schema?: any;
 }
 
 const {
@@ -25,7 +25,6 @@ const {
 const finalTitle = seoTitle || title;
 const finalDescription = seoDescription || description;
 const finalImageAlt = imageAlt || finalTitle;
-
 const siteUrl = Astro.site || new URL(Astro.url.origin);
 const normalizedPath = Astro.url.pathname.endsWith('/') ? Astro.url.pathname : `${Astro.url.pathname}/`;
 const currentUrl = new URL(normalizedPath, siteUrl).href;
@@ -34,19 +33,23 @@ const pathParts = Astro.url.pathname.split('/').filter(Boolean);
 const currentLangCode = pathParts[0] && Object.keys(languages).includes(pathParts[0]) ? pathParts[0] : 'id';
 const section = pathParts[1] || '';
 
-// Build language alternates from routes that actually exist.
+// Only emit hreflang links for language versions that actually exist.
 let alternateLinks: { lang: string; href: string }[] = [];
-const isContentSection = ['destinations', 'packages', 'blog'].includes(section);
+const contentSections = ['destinations', 'packages', 'blog'];
 
-if (!isContentSection) {
-  const pathWithoutLang = pathParts.slice(1).join('/');
+if (!section) {
   alternateLinks = Object.keys(languages).map(langCode => ({
     lang: langCode,
-    href: new URL(pathWithoutLang ? `/${langCode}/${pathWithoutLang}/` : `/${langCode}/`, siteUrl).href
+    href: new URL(`/${langCode}/`, siteUrl).href
+  }));
+} else if (!contentSections.includes(section)) {
+  // Core routes currently share the same route structure across supported languages.
+  alternateLinks = Object.keys(languages).map(langCode => ({
+    lang: langCode,
+    href: new URL(`/${langCode}/${pathParts.slice(1).join('/')}/`, siteUrl).href
   }));
 } else {
   let entries: any[] = [];
-
   if (section === 'destinations') entries = await getCollection('destinations');
   if (section === 'packages') entries = await getCollection('packages');
   if (section === 'blog') entries = await getCollection('blog');
@@ -65,15 +68,12 @@ if (!isContentSection) {
         const candidates = entries.filter(entry => {
           const [entryLang] = entry.slug.split('/');
           if (entryLang !== langCode) return false;
-
           const sameImage = currentImage && entry.data?.image === currentImage;
           const sameLocation = currentLocation && entry.data?.location === currentLocation;
           return sameImage && (!currentLocation || !entry.data?.location || sameLocation);
         });
-
         const match = candidates[0];
         if (!match) return null;
-
         const [, ...slugParts] = match.slug.split('/');
         return {
           lang: langCode,
@@ -89,65 +89,45 @@ const localeMap: Record<string, string> = {
   en: 'en_US',
   es: 'es_ES',
   fr: 'fr_FR',
-  zh: 'zh_CN'
+  zh: 'zh_CN',
+  it: 'it_IT'
 };
 
 const baseSchema = {
-  "@context": "https://schema.org",
-  "@type": "TravelAgency",
-  "name": "Banggai Wonderland",
-  "image": new URL('/images/logo.png', siteUrl).href,
-  "@id": siteUrl.href,
-  "url": siteUrl.href,
-  "telephone": "+6285820830530",
-  "address": {
-    "@type": "PostalAddress",
-    "streetAddress": "Luwuk",
-    "addressLocality": "Banggai",
-    "addressRegion": "Central Sulawesi",
-    "addressCountry": "ID"
-  },
-  "geo": {
-    "@type": "GeoCoordinates",
-    "latitude": -0.9478,
-    "longitude": 122.7842
-  },
-  "sameAs": [
-    "https://instagram.com/banggaiwonderland",
-    "https://facebook.com/banggaiwonderland"
-  ],
-  "description": "Premium travel agency for exploring the hidden paradise of Banggai.",
-  "mainEntityOfPage": currentUrl
+  '@context': 'https://schema.org',
+  '@type': 'TravelAgency',
+  name: 'Banggai Wonderland',
+  image: new URL('/images/logo.png', siteUrl).href,
+  '@id': siteUrl.href,
+  url: siteUrl.href,
+  telephone: '+6285820830530',
+  description: 'Travel experiences and private trips in Banggai Islands, Indonesia.',
+  mainEntityOfPage: currentUrl
 };
 
 const websiteSchema = {
-  "@context": "https://schema.org",
-  "@type": "WebSite",
-  "name": "Banggai Wonderland",
-  "url": siteUrl.href,
-  "inLanguage": currentLangCode
+  '@context': 'https://schema.org',
+  '@type': 'WebSite',
+  name: 'Banggai Wonderland',
+  url: siteUrl.href,
+  inLanguage: currentLangCode
 };
 
 const finalSchema = schema ? [baseSchema, websiteSchema, schema] : [baseSchema, websiteSchema];
-const defaultLink = alternateLinks.find(link => link.lang === 'id');
+const defaultLink = alternateLinks.find(link => link.lang === 'en') || alternateLinks.find(link => link.lang === 'id');
 ---
 
-<!-- SEO Meta Tags -->
 <title>{finalTitle}</title>
 <meta name="description" content={finalDescription} />
 <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
 <meta name="author" content="Banggai Wonderland" />
-
-<!-- Canonical -->
 <link rel="canonical" href={currentUrl} />
 
-<!-- Hreflang Tags for Internationalization -->
 {alternateLinks.map(link => (
   <link rel="alternate" hreflang={link.lang} href={link.href} />
 ))}
 {defaultLink && <link rel="alternate" hreflang="x-default" href={defaultLink.href} />}
 
-<!-- Open Graph / Facebook -->
 <meta property="og:type" content="website" />
 <meta property="og:url" content={currentUrl} />
 <meta property="og:title" content={finalTitle} />
@@ -155,19 +135,15 @@ const defaultLink = alternateLinks.find(link => link.lang === 'id');
 <meta property="og:image" content={new URL(ogImage, siteUrl).href} />
 <meta property="og:image:alt" content={finalImageAlt} />
 <meta property="og:site_name" content="Banggai Wonderland" />
-<meta property="og:locale" content={localeMap[currentLangCode] || 'id_ID'} />
-{alternateLinks
-  .filter(link => link.lang !== currentLangCode)
-  .map(link => (
-    <meta property="og:locale:alternate" content={localeMap[link.lang] || link.lang} />
-  ))}
+<meta property="og:locale" content={localeMap[currentLangCode] || 'en_US'} />
+{alternateLinks.filter(link => link.lang !== currentLangCode).map(link => (
+  <meta property="og:locale:alternate" content={localeMap[link.lang] || link.lang} />
+))}
 
-<!-- Twitter / X -->
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:url" content={currentUrl} />
 <meta name="twitter:title" content={finalTitle} />
 <meta name="twitter:description" content={finalDescription} />
 <meta name="twitter:image" content={new URL(ogImage, siteUrl).href} />
 
-<!-- Schema.org JSON-LD -->
 <script type="application/ld+json" set:html={JSON.stringify(finalSchema)} />
