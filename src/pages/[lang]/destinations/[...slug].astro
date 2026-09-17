@@ -22,28 +22,43 @@ const allDestinations = await getCollection('destinations');
 const allPackages = await getCollection('packages');
 const allBlogs = await getCollection('blog');
 const languageDestinations = allDestinations.filter(item => item.slug.startsWith(`${lang}/`) && item.slug !== entry.slug);
-
 const slug = Astro.params.slug as string;
+
+// Prefer explicitly curated relationships from frontmatter. Fall back to
+// lightweight relevance matching only when a page has no curated links.
+const normalizeRelatedSlug = (value: string) => {
+  const clean = value.replace(/^\//, '').replace(/\/$/, '');
+  return clean.startsWith(`${lang}/`) ? clean.slice(lang.length + 1) : clean;
+};
+
+const curatedRelatedSlugs = (entry.data.relatedDestinations || []).map(normalizeRelatedSlug);
+const curatedRelated = curatedRelatedSlugs
+  .map(targetSlug => languageDestinations.find(item => item.slug === `${lang}/${targetSlug}`))
+  .filter((item): item is typeof languageDestinations[number] => Boolean(item))
+  .slice(0, 4);
+
 const slugWords = slug.replace(/-/g, ' ').toLowerCase().split(/\s+/).filter(Boolean);
 const relevance = (text: string) => slugWords.reduce((score, word) => score + (text.toLowerCase().includes(word) ? 1 : 0), 0);
 
-const relatedDestinations = languageDestinations
-  .map(item => ({ item, score: relevance(`${item.data.title} ${item.data.description} ${item.data.category}`) }))
-  .sort((a,b) => b.score - a.score)
-  .slice(0, 4)
-  .map(x => x.item);
+const relatedDestinations = curatedRelated.length > 0
+  ? curatedRelated
+  : languageDestinations
+      .map(item => ({ item, score: relevance(`${item.data.title} ${item.data.description} ${item.data.category}`) }))
+      .sort((a, b) => b.score - a.score)
+      .slice(0, 4)
+      .map(x => x.item);
 
 const languagePackages = allPackages.filter(item => item.slug.startsWith(`${lang}/`));
 const relatedPackages = languagePackages
   .map(item => ({ item, score: relevance(`${item.data.title} ${item.data.description} ${item.data.destination}`) }))
-  .sort((a,b) => b.score - a.score)
+  .sort((a, b) => b.score - a.score)
   .slice(0, 3)
   .map(x => x.item);
 
 const languageBlogs = allBlogs.filter(item => item.slug.startsWith(`${lang}/`));
 const relatedArticles = languageBlogs
   .map(item => ({ item, score: relevance(`${item.data.title} ${item.data.description} ${(item.data.tags || []).join(' ')}`) }))
-  .sort((a,b) => b.score - a.score)
+  .sort((a, b) => b.score - a.score)
   .slice(0, 3)
   .map(x => x.item);
 
@@ -63,8 +78,7 @@ const schema = {
   name: entry.data.title,
   description: entry.data.description,
   image: entry.data.image,
-  url: new URL(`/${lang}/destinations/${slug}/`, Astro.site).href,
-  publicAccess: true
+  url: new URL(`/${lang}/destinations/${slug}/`, Astro.site).href
 };
 
 const labels = ({
@@ -103,7 +117,7 @@ const labels = ({
     </div>
 
     <aside class="lg:w-1/3 space-y-8">
-      {entry.data.highlights?.length > 0 && <div class="bg-sand-50 p-6 rounded-2xl border border-sand-200"><h2 class="font-serif text-xl font-bold text-ocean-900 mb-4">Highlights</h2><ul class="space-y-3">{entry.data.highlights.map(item=><li class="flex items-start text-sm text-ocean-700"><span class="text-turquoise-500 mr-3">✓</span>{item}</li>)}</ul></div>}
+      {entry.data.highlights?.length > 0 && <div class="bg-sand-50 p-6 rounded-2xl border border-sand-200"><h2 class="font-serif text-xl font-bold text-ocean-900 mb-4">Highlights</h2><ul class="space-y-3">{entry.data.highlights.map(item=><li class="flex items-start text-sm text-ocean-700"><span class="text-turquoise-500 mr-3" aria-hidden="true">✓</span>{item}</li>)}</ul></div>}
       {entry.data.bestTime && <div class="bg-sand-50 p-6 rounded-2xl border border-sand-200"><h2 class="font-serif text-xl font-bold text-ocean-900 mb-4">Best Time to Visit</h2><p class="text-sm text-ocean-700">{entry.data.bestTime}</p></div>}
       {accessText && <div class="bg-sand-50 p-6 rounded-2xl border border-sand-200"><h2 class="font-serif text-xl font-bold text-ocean-900 mb-4">{t('destinations.access') || 'Access & Transportation'}</h2><p class="text-sm leading-relaxed text-ocean-700">{accessText}</p></div>}
       <div class="bg-ocean-800 p-8 rounded-2xl shadow-xl text-center"><h2 class="font-serif text-2xl font-bold text-white mb-4">{labels.plan}</h2><p class="text-ocean-50 text-sm mb-6">Explore {entry.data.title} as part of a private trip around the Banggai Islands.</p><a href={`/${lang}/book/?destination=${encodeURIComponent(entry.data.title)}`} class="block w-full bg-turquoise-500 text-ocean-900 px-6 py-3 rounded-full font-bold text-sm hover:bg-turquoise-400">{t('btn.book')}</a></div>
