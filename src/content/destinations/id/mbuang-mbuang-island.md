@@ -1,5 +1,5 @@
 ---
-title: "Mbuang-Mbuang: Pulau Terpencil dengan Danau Ubur-Ubur Tak Menyengat"
+title: "Pulau Mbuang-Mbuang"
 description: "Mbuang-Mbuang adalah desa pulau terpencil di Banggai Laut dengan Danau Paisu Batongan, danau air asin tertutup yang dihuni ubur-ubur tak menyengat, serta taman kima, pantai putih dan kawasan laut yang dikelola masyarakat."
 seoTitle: "Mbuang-Mbuang | Danau Ubur-Ubur Banggai Laut"
 seoDescription: "Mbuang-Mbuang di Banggai Laut adalah pulau terpencil dengan danau ubur-ubur tak menyengat, taman kima raksasa dan pantai pasir putih. Panduan akses dan penginapan."
@@ -26,7 +26,7 @@ travelTips:
 youtube: "https://www.youtube.com/watch?v=sRkhqbTYvnk"
 ---
 
-# Mbuang-Mbuang: Pulau Terpencil dengan Danau Ubur-Ubur Tak Menyengat
+# Pulau Mbuang-Mbuang
 
 Mbuang-Mbuang bukan pantai, resor, atau perjalanan sehari. Ini adalah **desa pulau terpencil** di **Kabupaten Banggai Laut, Sulawesi Tengah, Indonesia**. Secara administratif, Mbuang-Mbuang merupakan **Desa Mbuang-Mbuang**, Kecamatan **Bokan Kepulauan**, di pulau kecil **Pulau Salue Kecil**.
 
