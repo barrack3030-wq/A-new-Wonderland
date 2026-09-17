@@ -29,13 +29,13 @@ travelTips:
 
 Mokokawa Waterfall is a **terraced waterfall** in the forested hills above **Luwuk, Banggai Regency, Central Sulawesi**. Unlike the single-drop cascades at Piala or Laumarang, Mokokawa is defined by its **layered limestone shelves**—water flows over a series of rock steps rather than falling vertically from a cliff.
 
-Most sources place it in **Kelurahan Hanga-Hanga, Kecamatan Luwuk Selatan**, reached via **Desa Tontouan**. The journey from Luwuk combines a road trip with a **30–45 minute forest trek**. Recent published accounts consistently describe Mokokawa as a natural destination with terraced rock formations and a quiet forest atmosphere. citeturn698208search2turn698208search5
+Most sources place it in **Kelurahan Hanga-Hanga, Kecamatan Luwuk Selatan**, reached via **Desa Tontouan**. The journey from Luwuk combines a road trip with a **30–45 minute forest trek**. Recent published guides also emphasize its terraced rock formations and quiet forest setting.
 
 ## The Terraced Cascade and the Pools
 
 Mokokawa is usually described as approximately **25–30 meters high**, but the drop is divided across multiple limestone tiers rather than one vertical wall. Water spreads across the rock shelves and forms **small pools at different levels**, with a larger pool at the base.
 
-The water is **clear and cold**, while the dense canopy keeps the area shaded and cool. The terraced limestone formation is one of the waterfall's defining visual features. citeturn698208search1turn698208search8
+The water is **clear and cold**, while the dense canopy keeps the area shaded and cool. The terraced limestone formation is one of the waterfall's defining visual features.
 
 There is no dependable mobile signal at the falls, and the limited infrastructure helps preserve the quiet atmosphere reported by visitors.
 
@@ -47,7 +47,7 @@ Local transport from the Tontouan area can help visitors reach the rougher road 
 
 ## How to Get There from Luwuk
 
-From central Luwuk, travel toward the **Hanga-Hanga / Tontouan** area. Published sources place Mokokawa in Hanga-Hanga, Luwuk Selatan, while other reports describe the approach through Tontouan. citeturn698208search2turn698208search3
+From central Luwuk, travel toward the **Hanga-Hanga / Tontouan** area. Published sources place Mokokawa in Hanga-Hanga, Luwuk Selatan, while other reports describe the approach through Tontouan.
 
 Road conditions have been described as rough and partly unpaved. A road improvement project has also been reported for the Tontouan–Mokokawa route, so access conditions may change over time.
 
