@@ -31,7 +31,7 @@ youtube: "https://www.youtube.com/watch?v=P6PO7BwgQa0"
 
 Long Beach—locally known as **Pantai Pasir Panjang**—is a white-sand beach on **Banggai Island in Banggai Laut Regency, Central Sulawesi**. It sits next to **Oyama Beach** and, like Oyama, is **reachable only by boat**, typically from the villages of **Popisi** or **Lokotoy**. There is no road access, no entrance fee, and no formal infrastructure. What you get instead is a quiet, undeveloped shoreline with clear water and direct access to the sea.
 
-Long Beach is frequently included in boat trips around the Banggai Laut coast. Current travel information also lists it beside Oyama Beach as a boat-access destination with free entry, 24/7 access and snorkeling from the beach. citeturn529526search0
+Long Beach is commonly included in boat trips around the Banggai Laut coast together with nearby beaches such as Oyama.
 
 ## The Beach and the Water
 
@@ -55,7 +55,7 @@ Long Beach is **not accessible by road**. The usual approach is to arrange a **l
 
 Most visitors include Long Beach in a **boat day** that also stops at **Oyama Beach**, and sometimes **Tanjung Gundul** or **Teluk Lalong**. This makes Long Beach easier to experience as part of a coastal itinerary rather than as a standalone destination.
 
-Boat prices and departure times are not fixed and can change with weather, fuel costs and local availability. **Agree the price before leaving** and confirm with your host what is currently possible. The crossing from Popisi or Lokotoy is short, at roughly **15 minutes in a small boat**, according to the travel notes provided for this destination.
+Boat prices and departure times are not fixed and can change with weather, fuel costs and local availability. **Agree the price before leaving** and confirm with your host what is currently possible. The crossing from Popisi or Lokotoy is short, at roughly **15 minutes in a small boat**, according to the destination research.
 
 ## Seasonal Cautions
 
