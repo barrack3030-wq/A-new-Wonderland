@@ -1,0 +1,43 @@
+/* Homepage visual refinements */
+
+/* Keep the CTA headline on one line without losing a visual word space. */
+.desktop-cta h2 br {
+  display: inline-block !important;
+  width: 0 !important;
+  margin-right: .24em !important;
+  vertical-align: baseline !important;
+}
+
+/* Sharper, cleaner social icon treatment. */
+.instagram-link {
+  width: 2.75rem !important;
+  height: 2.75rem !important;
+  flex: 0 0 2.75rem !important;
+  border: 1px solid rgba(255,255,255,.14) !important;
+  box-shadow: none !important;
+}
+
+.instagram-link svg {
+  width: 1.35rem !important;
+  height: 1.35rem !important;
+  shape-rendering: geometricPrecision;
+}
+
+@media (min-width: 768px) {
+  .desktop-cta {
+    padding-top: 4.5rem !important;
+    padding-bottom: 4.75rem !important;
+  }
+
+  .desktop-cta h2 {
+    white-space: nowrap !important;
+    font-size: clamp(3.5rem, 5vw, 5.4rem) !important;
+    line-height: .98 !important;
+    letter-spacing: -.045em !important;
+    margin-bottom: 1.5rem !important;
+  }
+
+  .desktop-cta p {
+    margin-bottom: 1.65rem !important;
+  }
+}
