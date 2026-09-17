@@ -9,12 +9,7 @@ export async function getStaticPaths() {
   const packages = await getCollection('packages');
   return packages.map(entry => {
     const [lang, ...slugParts] = entry.slug.split('/');
-    const pkgSlug = slugParts.join('/');
-    
-    return {
-      params: { lang, slug: pkgSlug },
-      props: { entry },
-    };
+    return { params: { lang, slug: slugParts.join('/') }, props: { entry } };
   });
 }
 
@@ -22,193 +17,77 @@ const { entry } = Astro.props;
 const { lang } = Astro.params;
 const t = useTranslations(lang as any);
 const { Content } = await entry.render();
+const activityList = entry.data.activities?.filter(Boolean) ?? [];
+const includedList = entry.data.included?.filter(Boolean) ?? [];
+const includedHighlights = includedList.filter(item => /transport|ferry|kapal|boat|perahu|accommodation|akomodasi|meals|makan|guide|pemandu/i.test(item)).slice(0, 4);
+const activityLabel = ({ id: 'Aktivitas', en: 'Activities', es: 'Actividades', fr: 'Activités', zh: '活动' } as Record<string, string>)[lang as string] ?? 'Activities';
+
+const allPackages = await getCollection('packages');
+const sameLanguagePackages = allPackages.filter(pkg => pkg.id !== entry.id && pkg.slug.startsWith(`${lang}/`)).slice(0, 4);
+const allDestinations = await getCollection('destinations');
+const sameLanguageDestinations = allDestinations.filter(destination => destination.slug.startsWith(`${lang}/`));
+const packageText = `${entry.data.title} ${entry.data.description} ${entry.data.destination} ${(entry.data.activities || []).join(' ')}`.toLowerCase();
+const relatedDestinations = sameLanguageDestinations.map(destination => {
+  const text = `${destination.data.title} ${destination.data.location}`.toLowerCase();
+  return { destination, score: packageText.includes(destination.data.title.toLowerCase()) ? 3 : packageText.includes(text) ? 2 : packageText.includes(destination.data.location.toLowerCase()) ? 1 : 0 };
+}).sort((a, b) => b.score - a.score).slice(0, 6).map(item => item.destination);
 
 const breadcrumbItems = [
   { name: 'Home', url: `/${lang}/` },
   { name: t('nav.packages'), url: `/${lang}/packages/` },
   { name: entry.data.title, url: `/${lang}/packages/${Astro.params.slug}/` }
 ];
-
-const activityList = entry.data.activities?.filter(Boolean) ?? [];
-const includedList = entry.data.included?.filter(Boolean) ?? [];
-const includedHighlights = includedList
-  .filter(item => /transport|ferry|kapal|boat|perahu|accommodation|akomodasi|meals|makan|guide|pemandu/i.test(item))
-  .slice(0, 4);
-const activityLabel = ({
-  id: 'Aktivitas',
-  en: 'Activities',
-  es: 'Actividades',
-  fr: 'Activités',
-  zh: '活动'
-} as Record<string, string>)[lang as string] ?? 'Activities';
-
+const packageUrl = new URL(`/${lang}/packages/${Astro.params.slug}/`, Astro.site || Astro.url.origin).href;
 const schema = {
-  "@context": "https://schema.org",
-  "@type": "TouristTrip",
-  "name": entry.data.title,
-  "description": entry.data.description,
-  "image": entry.data.image,
-  "itinerary": {
-    "@type": "ItemList",
-    "itemListElement": entry.data.itinerary?.map((item, index) => ({
-      "@type": "ListItem",
-      "position": index + 1,
-      "item": {
-        "@type": "TouristAttraction",
-        "name": item.title,
-        "description": item.description
-      }
-    }))
-  }
+  '@context': 'https://schema.org',
+  '@type': 'TouristTrip',
+  name: entry.data.title,
+  description: entry.data.description,
+  image: entry.data.image,
+  url: packageUrl,
+  touristType: 'Leisure travelers',
+  itinerary: entry.data.itinerary?.length ? {
+    '@type': 'ItemList',
+    itemListElement: entry.data.itinerary.map((item, index) => ({ '@type': 'ListItem', position: index + 1, name: item.title, description: item.description }))
+  } : undefined
 };
 ---
 
-<BaseLayout 
-  title={`${entry.data.title} | Banggai Wonderland`}
-  description={entry.data.description}
-  seoTitle={entry.data.seoTitle}
-  seoDescription={entry.data.seoDescription}
-  ogImage={entry.data.image}
-  imageAlt={entry.data.imageAlt}
-  schema={schema}
->
-  
+<BaseLayout title={`${entry.data.title} | Banggai Wonderland`} description={entry.data.description} seoTitle={entry.data.seoTitle} seoDescription={entry.data.seoDescription} ogImage={entry.data.image} imageAlt={entry.data.imageAlt} schema={schema}>
   <section class="relative h-[60vh] min-h-[450px] flex items-end pb-16 pt-32">
-    <div class="absolute inset-0 z-0">
-      <img src={entry.data.image} alt={entry.data.imageAlt || entry.data.title} class="w-full h-full object-cover" />
-      <div class="absolute inset-0 bg-gradient-to-t from-ocean-700 via-ocean-800/40 to-transparent"></div>
-    </div>
-    
+    <div class="absolute inset-0 z-0"><img src={entry.data.image} alt={entry.data.imageAlt || entry.data.title} class="w-full h-full object-cover" loading="eager" /><div class="absolute inset-0 bg-gradient-to-t from-ocean-700 via-ocean-800/40 to-transparent"></div></div>
     <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
       <Breadcrumb items={breadcrumbItems} />
-      
       <div class="mt-4 max-w-4xl">
-        <div class="flex flex-wrap gap-3 mb-4">
-          <span class="inline-flex items-center bg-turquoise-500 text-ocean-900 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wide">
-            <svg class="w-4 h-4 mr-1.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0z"></path></svg>
-            {entry.data.duration}
-          </span>
-        </div>
-        <h1 class="text-4xl md:text-5xl lg:text-6xl font-serif font-bold text-white mb-6 leading-tight">
-          {entry.data.title}
-        </h1>
-        <div class="flex items-center text-ocean-100 text-sm md:text-base bg-ocean-900/40 backdrop-blur-md self-start inline-flex px-4 py-2 rounded-full border border-ocean-700">
-          <svg class="w-5 h-5 mr-2 text-turquoise-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 9 9 0 01-18 0z"></path></svg>
-          {entry.data.destination}
-        </div>
+        <span class="inline-flex items-center bg-turquoise-500 text-ocean-900 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wide">{entry.data.duration}</span>
+        <h1 class="text-4xl md:text-5xl lg:text-6xl font-serif font-bold text-white mt-4 mb-6 leading-tight">{entry.data.title}</h1>
+        <div class="inline-flex items-center text-ocean-100 text-sm md:text-base bg-ocean-900/40 backdrop-blur-md px-4 py-2 rounded-full border border-ocean-700">{entry.data.destination}</div>
       </div>
     </div>
   </section>
 
-  <section class="py-10 md:py-12 bg-sand-50 border-b border-sand-200">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-        <div class="bg-white rounded-2xl border border-sand-200 p-5 shadow-sm">
-          <p class="text-[11px] uppercase tracking-[0.18em] font-bold text-turquoise-600 mb-2">{t('tour.duration')}</p>
-          <p class="font-serif text-xl font-semibold text-ocean-900">{entry.data.duration}</p>
-        </div>
-        <div class="bg-white rounded-2xl border border-sand-200 p-5 shadow-sm">
-          <p class="text-[11px] uppercase tracking-[0.18em] font-bold text-turquoise-600 mb-2">{t('tour.destinations')}</p>
-          <p class="font-serif text-xl font-semibold text-ocean-900 leading-snug">{entry.data.destination}</p>
-        </div>
-        <div class="bg-white rounded-2xl border border-sand-200 p-5 shadow-sm">
-          <p class="text-[11px] uppercase tracking-[0.18em] font-bold text-turquoise-600 mb-2">{activityLabel}</p>
-          <p class="text-sm text-ocean-700 leading-relaxed">
-            {activityList.length > 0 ? activityList.join(' · ') : entry.data.description}
-          </p>
-        </div>
-        <div class="bg-white rounded-2xl border border-sand-200 p-5 shadow-sm">
-          <p class="text-[11px] uppercase tracking-[0.18em] font-bold text-turquoise-600 mb-2">{t('tour.included')}</p>
-          <div class="flex flex-wrap gap-2">
-            {(includedHighlights.length > 0 ? includedHighlights : includedList.slice(0, 4)).map(item => (
-              <span class="inline-flex rounded-full bg-sand-50 border border-sand-200 px-2.5 py-1 text-xs text-ocean-900 font-medium">{item}</span>
-            ))}
-          </div>
-        </div>
-      </div>
+  <section class="py-10 md:py-12 bg-sand-50 border-b border-sand-200"><div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"><div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+    <div class="bg-white rounded-2xl border border-sand-200 p-5 shadow-sm"><p class="text-[11px] uppercase tracking-[0.18em] font-bold text-turquoise-600 mb-2">{t('tour.duration')}</p><p class="font-serif text-xl font-semibold text-ocean-900">{entry.data.duration}</p></div>
+    <div class="bg-white rounded-2xl border border-sand-200 p-5 shadow-sm"><p class="text-[11px] uppercase tracking-[0.18em] font-bold text-turquoise-600 mb-2">{t('tour.destinations')}</p><p class="font-serif text-xl font-semibold text-ocean-900 leading-snug">{entry.data.destination}</p></div>
+    <div class="bg-white rounded-2xl border border-sand-200 p-5 shadow-sm"><p class="text-[11px] uppercase tracking-[0.18em] font-bold text-turquoise-600 mb-2">{activityLabel}</p><p class="text-sm text-ocean-700 leading-relaxed">{activityList.length > 0 ? activityList.join(' · ') : entry.data.description}</p></div>
+    <div class="bg-white rounded-2xl border border-sand-200 p-5 shadow-sm"><p class="text-[11px] uppercase tracking-[0.18em] font-bold text-turquoise-600 mb-2">{t('tour.included')}</p><div class="flex flex-wrap gap-2">{(includedHighlights.length > 0 ? includedHighlights : includedList.slice(0, 4)).map(item => <span class="inline-flex rounded-full bg-sand-50 border border-sand-200 px-2.5 py-1 text-xs text-ocean-900 font-medium">{item}</span>)}</div></div>
+  </div></div></section>
+
+  <section class="py-16 bg-white"><div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"><div class="flex flex-col lg:flex-row gap-12 lg:gap-16">
+    <div class="lg:w-2/3 space-y-12">
+      <div class="prose prose-lg prose-ocean max-w-none prose-headings:font-serif prose-headings:text-ocean-900 prose-p:text-ocean-700 prose-p:leading-relaxed"><Content /></div>
+      {entry.data.itinerary && entry.data.itinerary.length > 0 && <div class="pt-8 border-t border-sand-200"><h2 class="font-serif text-3xl font-bold text-ocean-900 mb-8">{t('tour.itinerary')}</h2><div class="space-y-6">{entry.data.itinerary.map((item, index) => <div class="flex"><div class="flex flex-col items-center mr-6"><div class="w-12 h-12 bg-ocean-50 rounded-full flex items-center justify-center border-2 border-turquoise-200 shadow-sm z-10"><span class="font-bold text-ocean-900 text-sm">{index + 1}</span></div>{index !== entry.data.itinerary.length - 1 && <div class="w-0.5 h-full bg-sand-200 mt-2"></div>}</div><div class="pb-8 pt-2 flex-grow"><span class="text-xs font-bold tracking-wider text-turquoise-600 uppercase block mb-1">{item.day}</span><h3 class="font-serif text-xl font-bold text-ocean-900 mb-3">{item.title}</h3><p class="text-ocean-600 leading-relaxed">{item.description}</p></div></div>)}</div></div>}
+
+      {relatedDestinations.length > 0 && <section class="pt-8 border-t border-sand-200"><h2 class="font-serif text-3xl font-bold text-ocean-900 mb-6">{lang === 'id' ? 'Destinasi dalam Perjalanan' : lang === 'fr' ? 'Destinations du Voyage' : lang === 'es' ? 'Destinos del Viaje' : lang === 'zh' ? '行程中的目的地' : 'Destinations in This Journey'}</h2><div class="grid grid-cols-1 sm:grid-cols-2 gap-4">{relatedDestinations.slice(0,4).map(destination => { const slug = destination.slug.replace(`${lang}/`, ''); return <a href={`/${lang}/destinations/${slug}/`} class="group flex gap-3 rounded-2xl border border-sand-200 p-3 hover:border-turquoise-300 transition-colors"><img src={destination.data.image} alt={destination.data.imageAlt || destination.data.title} class="w-24 h-20 object-cover rounded-xl" loading="lazy" /><span class="font-bold text-ocean-900 group-hover:text-turquoise-600 self-center">{destination.data.title}</span></a>; })}</div></section>}
+
+      {sameLanguagePackages.length > 0 && <section class="pt-8 border-t border-sand-200"><h2 class="font-serif text-3xl font-bold text-ocean-900 mb-6">{lang === 'id' ? 'Paket Lainnya' : lang === 'fr' ? 'Autres Voyages' : lang === 'es' ? 'Otros Viajes' : lang === 'zh' ? '其他行程' : 'More Private Trips'}</h2><div class="grid grid-cols-1 sm:grid-cols-2 gap-4">{sameLanguagePackages.map(pkg => { const slug = pkg.slug.replace(`${lang}/`, ''); return <a href={`/${lang}/packages/${slug}/`} class="block rounded-2xl border border-sand-200 p-4 hover:border-turquoise-300 transition-colors"><h3 class="font-bold text-ocean-900">{pkg.data.title}</h3><p class="text-sm text-ocean-600 mt-1">{pkg.data.duration}</p></a>; })}</div></section>}
     </div>
-  </section>
 
-  <section class="py-16 bg-white">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="flex flex-col lg:flex-row gap-12 lg:gap-16">
-        
-        <div class="lg:w-2/3 space-y-12">
-          
-          <!-- Content Overview -->
-          <div class="prose prose-lg prose-ocean max-w-none 
-            prose-headings:font-serif prose-headings:text-ocean-900 
-            prose-p:text-ocean-700 prose-p:leading-relaxed">
-            <Content />
-          </div>
-
-          <!-- Itinerary -->
-          {entry.data.itinerary && entry.data.itinerary.length > 0 && (
-            <div class="pt-8 border-t border-sand-200">
-              <h2 class="font-serif text-3xl font-bold text-ocean-900 mb-8">{t('tour.itinerary')}</h2>
-              <div class="space-y-6">
-                {entry.data.itinerary.map((item, index) => (
-                  <div class="flex">
-                    <div class="flex flex-col items-center mr-6">
-                      <div class="w-12 h-12 bg-ocean-50 rounded-full flex items-center justify-center border-2 border-turquoise-200 shadow-sm z-10">
-                        <span class="font-bold text-ocean-900 text-sm">{index + 1}</span>
-                      </div>
-                      {index !== entry.data.itinerary.length - 1 && (
-                        <div class="w-0.5 h-full bg-sand-200 mt-2"></div>
-                      )}
-                    </div>
-                    <div class="pb-8 pt-2 flex-grow">
-                      <span class="text-xs font-bold tracking-wider text-turquoise-600 uppercase block mb-1">{item.day}</span>
-                      <h3 class="font-serif text-xl font-bold text-ocean-900 mb-3">{item.title}</h3>
-                      <p class="text-ocean-600 leading-relaxed">{item.description}</p>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
-          )}
-
-        </div>
-        
-        <div class="lg:w-1/3">
-          <div class="sticky top-32 space-y-8">
-            
-            <div class="bg-sand-50 p-6 sm:p-8 rounded-3xl border border-sand-200 shadow-sm">
-              <div class="mb-8">
-                <h3 class="font-serif text-xl font-bold text-ocean-900 mb-4">{t('tour.included')}</h3>
-                <ul class="space-y-3">
-                  {entry.data.included?.map(item => (
-                    <li class="flex items-start">
-                      <svg class="w-5 h-5 text-turquoise-500 mr-3 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
-                      <span class="text-ocean-700 text-sm">{item}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-
-              <div class="mb-8">
-                <h3 class="font-serif text-xl font-bold text-ocean-900 mb-4">{t('tour.excluded')}</h3>
-                <ul class="space-y-3">
-                  {entry.data.excluded?.map(item => (
-                    <li class="flex items-start">
-                      <svg class="w-5 h-5 text-red-400 mr-3 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
-                      <span class="text-ocean-700 text-sm">{item}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-
-              <a href={`/${lang}/book/?package=${encodeURIComponent(entry.data.title)}`} class="flex items-center justify-center w-full bg-[#176b55] text-white px-6 py-4 rounded-xl font-bold text-base hover:bg-[#125743] transition-colors shadow-lg shadow-[#176b55]/20">
-                <svg class="w-6 h-6 mr-2" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.198.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198.298.347.446.52.149.174.198.298.298.497.099.198.05.371-.025.52-.075.149-.669 1.612-.916 2.207-.242.579-.487.5-.669.51-.173-.008-.371-.01-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c0 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 01-8.413Z"/></svg>
-                {t('btn.book')}
-              </a>
-            </div>
-
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
+    <div class="lg:w-1/3"><div class="sticky top-32"><div class="bg-sand-50 p-6 sm:p-8 rounded-3xl border border-sand-200 shadow-sm">
+      <div class="mb-8"><h3 class="font-serif text-xl font-bold text-ocean-900 mb-4">{t('tour.included')}</h3><ul class="space-y-3">{entry.data.included?.map(item => <li class="flex items-start"><span class="text-turquoise-500 mr-3">✓</span><span class="text-ocean-700 text-sm">{item}</span></li>)}</ul></div>
+      <div class="mb-8"><h3 class="font-serif text-xl font-bold text-ocean-900 mb-4">{t('tour.excluded')}</h3><ul class="space-y-3">{entry.data.excluded?.map(item => <li class="flex items-start"><span class="text-red-400 mr-3">×</span><span class="text-ocean-700 text-sm">{item}</span></li>)}</ul></div>
+      <a href={`/${lang}/book/?package=${encodeURIComponent(entry.data.title)}`} class="flex items-center justify-center w-full bg-[#176b55] text-white px-6 py-4 rounded-xl font-bold text-base hover:bg-[#125743] transition-colors">{t('btn.book')}</a>
+    </div></div></div>
+  </div></div></section>
   <WhatsAppButton />
 </BaseLayout>
