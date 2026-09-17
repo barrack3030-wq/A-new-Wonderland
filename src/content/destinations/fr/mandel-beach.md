@@ -2,7 +2,7 @@
 title: Mandel Beach
 description: Mandel Beach est une plage paisible de sable blanc sur l'île de Peleng, dans les Banggai Kepulauan, connue pour ses eaux turquoise, ses collines vertes, ses levers de soleil et son faible niveau d'aménagement.
 seoTitle: "Mandel Beach Peleng | Guide des plages de Banggai"
-seoDescription: Découvrez Mandel Beach sur l'île de Peleng, Banggai: 2 km de sable blanc et d'eau turquoise, accès depuis Salakan, tarif et conseils pratiques.
+seoDescription: "Découvrez Mandel Beach sur l'île de Peleng, Banggai: 2 km de sable blanc et d'eau turquoise, accès depuis Salakan, tarif et conseils pratiques."
 image: /images/mandel.jpg
 imageAlt: Longue plage de sable blanc de Mandel Beach sur l'île de Peleng avec eau turquoise, collines vertes et palmiers.
 location: Île de Peleng, Banggai Kepulauan
