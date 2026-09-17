@@ -23,7 +23,7 @@ excluded:
 itinerary:
   - day: Day 1
     title: Arrival
-    description: |
+    description: "|"
       Arrival at Luwuk Airport
       Airport pickup and welcome
       Transfer to the port
@@ -33,7 +33,7 @@ itinerary:
       Dinner and overnight
   - day: Day 2
     title: Explore Destinations Crystal Lakes & Hidden Beaches
-    description: |
+    description: "|"
       Breakfast
       Visit Paisu Pok Lake
       Swimming and relaxation
@@ -45,7 +45,7 @@ itinerary:
       Return to accommodation
   - day: Day 3
     title: Island & Underwater Adventure
-    description: |
+    description: "|"
       Breakfast
       Island-hopping by local boat
       Explore hidden beaches and islands
@@ -54,7 +54,7 @@ itinerary:
       Return to accommodation
   - day: Day 4
     title: Day 4 — Peleng to Luwuk
-    description: |
+    description: "|"
       Breakfast and check-out
       Morning exploration, depending on schedule
       Transfer to the port
