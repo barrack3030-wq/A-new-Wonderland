@@ -193,3 +193,130 @@ body:has(#about-slider) main section:has(#about-slider) div[class*="mt-24"][clas
     content: url('/images/Gemini_Generated_Image_xxtet3xxtet3xxte (4).jpg');
   }
 }
+
+/* Homepage desktop refinement: centered editorial headings, single-line titles, tighter vertical rhythm. */
+@media (min-width:768px) {
+  body:has(#home) #destinations {
+    padding-top: 4.5rem !important;
+    padding-bottom: 4.25rem !important;
+  }
+
+  body:has(#home) #destinations > .max-w-7xl > .max-w-3xl {
+    max-width: 100% !important;
+    margin: 0 auto 2rem !important;
+    text-align: center !important;
+  }
+
+  body:has(#home) #destinations > .max-w-7xl > .max-w-3xl h2 {
+    display: block !important;
+    width: max-content !important;
+    max-width: 100% !important;
+    margin: 0 auto 1rem !important;
+    white-space: nowrap !important;
+    font-size: clamp(2.9rem, 4.1vw, 4.35rem) !important;
+    line-height: 1 !important;
+  }
+
+  body:has(#home) #destinations > .max-w-7xl > .max-w-3xl h2 br {
+    display: none !important;
+  }
+
+  body:has(#home) #destinations > .max-w-7xl > .max-w-3xl > p:last-child {
+    max-width: 46rem !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+
+  body:has(#home) .desktop-home-seo {
+    padding-top: 4.5rem !important;
+    padding-bottom: 4.75rem !important;
+  }
+
+  body:has(#home) .desktop-home-seo > .max-w-7xl > .max-w-3xl {
+    max-width: 64rem !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    text-align: center !important;
+  }
+
+  body:has(#home) .desktop-home-seo h2 {
+    width: max-content !important;
+    max-width: 100% !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    white-space: nowrap !important;
+    font-size: clamp(2.8rem, 4vw, 4.25rem) !important;
+    line-height: 1 !important;
+  }
+
+  body:has(#home) .desktop-home-seo p {
+    max-width: 58rem !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+
+  body:has(#home) .desktop-journal {
+    padding-top: 4.5rem !important;
+    padding-bottom: 5rem !important;
+  }
+
+  body:has(#home) .desktop-journal > .max-w-7xl > .flex {
+    position: relative !important;
+    display: block !important;
+    margin-bottom: 2.5rem !important;
+  }
+
+  body:has(#home) .desktop-journal > .max-w-7xl > .flex > div {
+    max-width: none !important;
+    text-align: center !important;
+  }
+
+  body:has(#home) .desktop-journal h2 {
+    width: max-content !important;
+    max-width: 100% !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    white-space: nowrap !important;
+    font-size: clamp(2.8rem, 4vw, 4.25rem) !important;
+    line-height: 1 !important;
+  }
+
+  body:has(#home) .desktop-journal > .max-w-7xl > .flex > a {
+    position: absolute !important;
+    right: 0 !important;
+    bottom: .2rem !important;
+  }
+
+  body:has(#home) .desktop-cta {
+    padding-top: 4.25rem !important;
+    padding-bottom: 4.75rem !important;
+  }
+
+  body:has(#home) .desktop-cta h2 {
+    width: max-content !important;
+    max-width: 100% !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    white-space: nowrap !important;
+    font-size: clamp(2.8rem, 4.2vw, 4.6rem) !important;
+    line-height: 1 !important;
+  }
+
+  body:has(#home) .desktop-cta h2 br {
+    display: none !important;
+  }
+
+  body:has(#home) .desktop-cta p {
+    margin-bottom: 1.75rem !important;
+  }
+}
+
+/* Prevent long editorial headings from overflowing on smaller desktop widths. */
+@media (min-width:768px) and (max-width:1100px) {
+  body:has(#home) #destinations > .max-w-7xl > .max-w-3xl h2,
+  body:has(#home) .desktop-home-seo h2,
+  body:has(#home) .desktop-journal h2,
+  body:has(#home) .desktop-cta h2 {
+    font-size: clamp(2.5rem, 4vw, 3.5rem) !important;
+  }
+}
