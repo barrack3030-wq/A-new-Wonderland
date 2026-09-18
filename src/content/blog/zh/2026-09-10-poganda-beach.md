@@ -13,7 +13,7 @@ tags:
   - "旅行"
 ---
 
-# Poganda Beach：拥有邦盖海景的异国情调海滩
+## Poganda Beach：拥有邦盖海景的异国情调海滩
 
 Poganda Beach 是位于中苏拉威西省邦盖海县（Kabupaten Banggai Laut）的海滩之一，因其原始纯净的自然环境和清澈透亮的海景而逐渐受到游客的青睐。该海滩位于佩伦岛（Pulau Peleng）的东海岸，佩伦岛是邦盖群岛（Kepulauan Banggai）中仅次于邦盖岛（Pulau Banggai）的第二大岛屿。
 
