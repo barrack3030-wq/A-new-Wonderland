@@ -1,7 +1,7 @@
 ---
 title: Luwuk Stopover
 description: Experience the best of Luwuk Stopover with our exclusive tour package.
-seoTitle: "Luwuk Stopover Tour Package | Banggai Wonderland"
+seoTitle: 'Luwuk Stopover Tour Package | Banggai Wonderland'
 seoDescription: Book the Luwuk Stopover tour package to explore the hidden paradise of Banggai.
 image: /images/asasa.jpg
 imageAlt: Luwuk Stopover
