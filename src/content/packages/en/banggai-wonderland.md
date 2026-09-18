@@ -1,7 +1,7 @@
 ---
 title: Banggai Wonderland
 description: Experience the best of Banggai Wonderland with our exclusive tour package.
-seoTitle: "Banggai Wonderland Tour Package | Banggai Wonderland"
+seoTitle: 'Banggai Wonderland Tour Package | Banggai Wonderland'
 seoDescription: Book the Banggai Wonderland tour package to explore the hidden paradise of Banggai.
 image: /images/wonder.jpg
 imageAlt: Banggai Wonderland
