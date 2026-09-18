@@ -29,7 +29,7 @@ itinerary:
     description: Visit the most iconic spots in Banggai and enjoy nature.
 ---
 
-# Luwuk & Salakan Escape
+## Luwuk & Salakan Escape
 
 **3 Días 2 Noches**
 _Luwuk • Salakan • Peleng_
