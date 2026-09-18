@@ -13,7 +13,8 @@ interface Props {
 }
 
 const { title, description, seoTitle, seoDescription, ogImage = '/images/og-default.jpg', imageAlt, schema } = Astro.props;
-const siteUrl = Astro.site || new URL(Astro.url.origin);
+// Canonical production origin: keep every canonical, hreflang, OG URL, and schema URL on the same non-www host.
+const siteUrl = new URL('https://banggaiwonderland.my.id');
 const normalizedPath = Astro.url.pathname.endsWith('/') ? Astro.url.pathname : `${Astro.url.pathname}/`;
 const currentUrl = new URL(normalizedPath, siteUrl).href;
 const pathParts = Astro.url.pathname.split('/').filter(Boolean);
