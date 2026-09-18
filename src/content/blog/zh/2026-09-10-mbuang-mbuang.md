@@ -14,7 +14,7 @@ tags:
 
 ![Apakah Bulan September Waktu yang Tepat Pergi ke Mbuang-Mbuang?](/images/blog/1000603141-20260910201805.jpg)
 
-# 九月是前往 Mbuang-Mbuang 的合适时机吗？
+## 九月是前往 Mbuang-Mbuang 的合适时机吗？
 
 简短的回答是：**是的，非常合适——这可能是最好的月份之一。**但并非没有任何注意事项。让我们逐一剖析，而不仅仅是句*“因为现在是旱季”*。
 
