@@ -20,6 +20,8 @@ const currentUrl = new URL(normalizedPath, siteUrl).href;
 const pathParts = Astro.url.pathname.split('/').filter(Boolean);
 const currentLangCode = pathParts[0] && Object.keys(languages).includes(pathParts[0]) ? pathParts[0] : 'id';
 const section = pathParts[1] || '';
+// Booking query parameters only prefill the form; they are not separate SEO pages.
+const isParameterizedBookingUrl = section === 'book' && Astro.url.searchParams.toString().length > 0;
 
 const homepageSeo: Record<string, { title: string; description: string }> = {
   en: { title: 'Banggai Islands Travel Guide & Private Trips | Banggai Wonderland', description: 'Discover the Banggai Islands in Central Sulawesi with private trips to Paisu Pok, Piala Waterfall, Pulo Dua, Kamumu and other hidden destinations around Luwuk and Banggai.' },
@@ -83,7 +85,7 @@ const defaultLink = alternateLinks.find(link => link.lang === 'en') || alternate
 ---
 <title>{effectiveSeoTitle}</title>
 <meta name="description" content={effectiveDescription} />
-<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+<meta name="robots" content={isParameterizedBookingUrl ? 'noindex, follow' : 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1'} />
 <meta name="author" content="Banggai Wonderland" />
 <link rel="canonical" href={currentUrl} />
 {alternateLinks.map(link => <link rel="alternate" hreflang={link.lang} href={link.href} />)}
