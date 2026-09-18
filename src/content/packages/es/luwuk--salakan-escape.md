@@ -1,7 +1,7 @@
 ---
 title: Luwuk & Salakan Escape
 description: Experience the best of Luwuk & Salakan Escape with our exclusive tour package.
-seoTitle: "Luwuk & Salakan Escape Tour Package | Banggai Wonderland"
+seoTitle: 'Paquete Turístico Luwuk & Salakan Escape | Banggai Wonderland'
 seoDescription: Book the Luwuk & Salakan Escape tour package to explore the hidden paradise of Banggai.
 image: /images/Gemini_Generated_Image_gw3tx9gw3tx9gw3t.jpg
 imageAlt: Luwuk & Salakan Escape
