@@ -23,7 +23,7 @@ excluded:
 itinerary: []
 ---
 
-# Luwuk Stopover
+## Luwuk Stopover
 
 **2天1夜**
 _Luwuk City • Salodik_
