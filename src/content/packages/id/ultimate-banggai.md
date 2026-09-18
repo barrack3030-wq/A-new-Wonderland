@@ -1,7 +1,7 @@
 ---
 title: Ultimate Banggai
 description: Experience the best of Ultimate Banggai with our exclusive tour package.
-seoTitle: "Ultimate Banggai Tour Package | Banggai Wonderland"
+seoTitle: 'Paket Wisata Ultimate Banggai | Banggai Wonderland'
 seoDescription: Book the Ultimate Banggai tour package to explore the hidden paradise of Banggai.
 image: /images/Gemini_Generated_Image_xxtet3xxtet3xxte (4).jpg
 imageAlt: Ultimate Banggai
