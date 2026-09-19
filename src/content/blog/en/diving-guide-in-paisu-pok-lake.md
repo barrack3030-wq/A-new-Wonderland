@@ -12,7 +12,7 @@ tags:
   - Adventure
 ---
 
-# A Guide to Exploring Paisu Pok Lake: Discover Banggai’s Crystal-Clear Hidden Gem
+# Diving Guide to Paisu Pok Lake in Banggai
 
 **Imagine swimming through crystal-clear freshwater, looking down at submerged trees, rocks, and an underwater landscape that seems almost unreal. Welcome to Paisu Pok Lake, one of Banggai’s most extraordinary hidden gems.**
 
