@@ -26,7 +26,7 @@ travelTips:
 youtube: "https://www.youtube.com/watch?v=2vtdbJRPZMw"
 ---
 
-# Paisu Pok Lake: The Clear Blue Lake of the Banggai Islands
+# Paisu Pok Lake: A Clear Lake in the Banggai Islands
 
 Paisu Pok Lake is a **freshwater lake in Desa Luk Panenteng, Kecamatan Bulagi Utara, Kabupaten Banggai Kepulauan, Central Sulawesi**, on **Peleng Island**. It covers approximately **1.2 hectares**, with a depth commonly reported at **5 to 15 meters**, and sits at the foot of green hills surrounded by coconut palms and dense forest.
 
