@@ -1,8 +1,8 @@
 ---
 title: Banggai Wonderland
-description: Experience the best of Banggai Wonderland with our exclusive tour package.
-seoTitle: 'Banggai Wonderland Tour Package | Banggai Wonderland'
-seoDescription: Book the Banggai Wonderland tour package to explore the hidden paradise of Banggai.
+description: Explore Banggai on a 4-day private tour from Luwuk to Paisu Pok, Peleng and the surrounding islands.
+seoTitle: 'Banggai Tour Package | 4-Day Private Trip'
+seoDescription: Explore Banggai on a 4-day private tour from Luwuk to Paisu Pok, Peleng and the surrounding islands, with local guide, accommodation and island experiences.
 image: /images/wonder.jpg
 imageAlt: Banggai Wonderland
 duration: 4 Days 3 Nights
