@@ -131,6 +131,7 @@ const langEl=document.getElementById('language');
 const blogEl=document.getElementById('blog');
 const loadEl=document.getElementById('loadBlogs');
 const openEl=document.getElementById('openBlog');
+const resetEl=document.getElementById('reset');
 const pathEl=document.getElementById('path');
 const titleEl=document.getElementById('title');
 const dateEl=document.getElementById('pubDate');
@@ -210,6 +211,52 @@ function renderBlogs(blogs){
   }).join('');
   openEl.disabled=true;
 }
+async function githubGetJson(url){
+  const response=await fetch(url,{method:'GET',headers:{Accept:'application/vnd.github+json'},cache:'no-store'});
+  if(!response.ok)throw new Error('GitHub API HTTP '+response.status);
+  return response.json();
+}
+function parseFrontmatterClient(raw){
+  const text=String(raw||'').replace(/\r\n?/g,'\n');
+  let fm='',body=text;
+  if(text.indexOf('---\n')===0){
+    const end=text.indexOf('\n---',4);
+    if(end!==-1){fm=text.substring(4,end);body=text.substring(end+4).replace(/^\n+/,'');}
+  }
+  const data={tags:[]};let tags=false;
+  fm.split('\n').forEach(function(line){
+    if(/^tags:\s*$/.test(line.trim())){tags=true;return;}
+    if(tags&&/^\s+-\s+/.test(line)){data.tags.push(line.replace(/^\s+-\s+/,'').replace(/^["']|["']$/g,''));return;}
+    if(tags&&line.trim()&&!/^\s+-\s+/.test(line))tags=false;
+    const m=line.match(/^([A-Za-z][A-Za-z0-9_]*)\s*:\s*(.*)$/);
+    if(m){
+      let v=m[2].trim();
+      if((v.startsWith('"')&&v.endsWith('"'))||(v.startsWith("'")&&v.endsWith("'")))v=v.slice(1,-1).replace(/\\("|\\)/g,'$1');
+      data[m[1]]=v;
+    }
+  });
+  return{
+    title:data.title||'',
+    description:data.description||'',
+    seoTitle:data.seoTitle||'',
+    seoDescription:data.seoDescription||'',
+    image:data.image||'',
+    imageAlt:data.imageAlt||'',
+    pubDate:/^\d{4}-\d{2}-\d{2}$/.test(String(data.pubDate||''))?data.pubDate:'',
+    tags:data.tags||[],
+    translationKey:data.translationKey||'',
+    content:body.trim()
+  };
+}
+async function fallbackListBlogs(){
+  const lang=langEl.value;
+  const url='https://api.github.com/repos/barrack3030-wq/A-new-Wonderland/contents/src/content/blog/'+encodeURIComponent(lang)+'?ref=main';
+  const items=await githubGetJson(url);
+  if(!Array.isArray(items))throw new Error('Folder blog tidak dapat dibaca dari GitHub.');
+  return items.filter(function(item){return item.type==='file'&&/\.md$/i.test(item.name);}).map(function(item){
+    return {language:lang,path:item.path,name:item.name,title:item.name.replace(/\.md$/,'').replace(/^\d{4}-\d{2}-\d{2}-/,'').replace(/-/g,' '),sha:item.sha};
+  }).sort(function(a,b){return String(b.name).localeCompare(String(a.name));});
+}
 async function loadBlogs(){
   const key=document.getElementById('accessKey').value.trim();
   if(!key){setStatus(saveStatusEl,'Masukkan CMS access key di bagian CMS utama terlebih dahulu.','danger');return;}
@@ -219,8 +266,20 @@ async function loadBlogs(){
     const data=await post({action:'listBlogs',accessKey:key,language:langEl.value});
     renderBlogs(data.blogs||[]);
     setStatus(saveStatusEl,'✓ '+((data.blogs||[]).length)+' artikel ditemukan.','success');
-  }catch(e){setStatus(saveStatusEl,'✕ '+e.message,'danger');}
-  finally{loadEl.disabled=false;}
+  }catch(e){
+    const msg=String(e&&e.message||e);
+    if(/Action tidak dikenal|listBlogs/i.test(msg)){
+      try{
+        const blogs=await fallbackListBlogs();
+        renderBlogs(blogs);
+        setStatus(saveStatusEl,'✓ '+blogs.length+' artikel ditemukan dari GitHub. Mode fallback aktif.','success');
+      }catch(fallbackError){
+        setStatus(saveStatusEl,'✕ Gagal memuat blog. Apps Script tidak mengenal listBlogs dan GitHub fallback juga gagal: '+fallbackError.message,'danger');
+      }
+    }else{
+      setStatus(saveStatusEl,'✕ '+msg,'danger');
+    }
+  }finally{loadEl.disabled=false;}
 }
 function resetEditor(){
   [titleEl,dateEl,descEl,seoTitleEl,seoDescEl,tagsEl,imageUrlEl,imageAltEl].forEach(function(el){el.value='';});
@@ -247,8 +306,30 @@ openEl.addEventListener('click',async function(){
     setFeatured(b.image||'',b.imageAlt||b.title||'Featured image');
     editor.value(b.content||'');saveEl.disabled=false;
     setStatus(saveStatusEl,'✓ Artikel berhasil dimuat.','success');
-  }catch(e){setStatus(saveStatusEl,'✕ '+e.message,'danger');}
-  finally{openEl.disabled=false;}
+  }catch(e){
+    const msg=String(e&&e.message||e);
+    if(/Action tidak dikenal|getBlog/i.test(msg)){
+      try{
+        const raw=await fetch('https://raw.githubusercontent.com/barrack3030-wq/A-new-Wonderland/main/'+path,{cache:'no-store'}).then(function(r){
+          if(!r.ok)throw new Error('GitHub raw HTTP '+r.status);
+          return r.text();
+        });
+        const b=parseFrontmatterClient(raw);
+        b.path=path;
+        currentPath=path;
+        pathEl.style.display='block';pathEl.textContent='File: '+path;
+        titleEl.value=b.title||'';dateEl.value=b.pubDate||'';descEl.value=b.description||'';
+        seoTitleEl.value=b.seoTitle||'';seoDescEl.value=b.seoDescription||'';tagsEl.value=(b.tags||[]).join(', ');
+        setFeatured(b.image||'',b.imageAlt||b.title||'Featured image');
+        editor.value(b.content||'');saveEl.disabled=false;
+        setStatus(saveStatusEl,'✓ Artikel berhasil dimuat dari GitHub. Mode fallback aktif.','success');
+      }catch(fallbackError){
+        setStatus(saveStatusEl,'✕ Gagal membuka artikel: '+fallbackError.message,'danger');
+      }
+    }else{
+      setStatus(saveStatusEl,'✕ '+msg,'danger');
+    }
+  }finally{openEl.disabled=false;}
 });
 document.getElementById('uploadFeatured').addEventListener('click',async function(){
   const file=imageFileEl.files&&imageFileEl.files[0],key=document.getElementById('accessKey').value.trim();
