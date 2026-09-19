@@ -27,7 +27,7 @@ travelTips:
 youtube: "https://www.youtube.com/watch?v=zcwUg-FHlcw"
 ---
 
-# Pantai Oyama: Pantai Pasir Putih yang Hanya Bisa Dicapai dengan Perahu
+# Pantai Oyama: Pasir Putih di Banggai Laut
 
 Pantai Oyama adalah pantai berpasir putih di **ujung utara Pulau Banggai, Kabupaten Banggai Laut, Sulawesi Tengah**. Lokasinya berada di kawasan **Lokotoy / Pasir Putih, Kecamatan Banggai Utara**, meskipun nama desa tepatnya bervariasi antar sumber—sebagian menyebut Desa Lokotoy, sebagian lain Desa Pasir Putih. Yang konsisten adalah latarnya: pasir putih halus, air pirus yang tenang, dan hutan bakau besar tepat di belakang garis pantai.
 
