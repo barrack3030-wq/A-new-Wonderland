@@ -1,10 +1,10 @@
 ---
 title: Luwuk Stopover
-description: Experience the best of Luwuk Stopover with our exclusive tour package.
+description: Paket wisata 2 hari 1 malam untuk menjelajahi Luwuk dan Salodik, termasuk Piala Waterfall, pesisir Luwuk, transportasi privat, dan pemandu lokal.
 seoTitle: 'Paket Wisata Luwuk & Salakan | Banggai Wonderland'
-seoDescription: Book the Luwuk Stopover tour package to explore the hidden paradise of Banggai.
+seoDescription: Paket wisata Luwuk 2 hari 1 malam dengan Piala Waterfall, pesisir Luwuk, Salodik, transportasi privat, dan pemandu lokal.
 image: /images/asasa.jpg
-imageAlt: Luwuk Stopover
+imageAlt: Piala Waterfall and coastal scenery on a Luwuk Stopover trip in Banggai, Indonesia
 duration: 2 Days 1 Night
 destination: Luwuk City, Salodik
 activities:
