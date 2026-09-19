@@ -27,7 +27,7 @@ travelTips:
 youtube: "https://www.youtube.com/watch?v=zcwUg-FHlcw"
 ---
 
-# Playa Oyama: Una escapada de arena blanca a la que solo se llega en barco
+# Playa Oyama: Arena Blanca en las Islas Banggai
 
 Oyama Beach es una playa de arena blanca en el **extremo norte de la isla de Banggai, en Banggai Laut, Sulawesi Central**. Se encuentra en la zona de **Lokotoy / Pasir Putih, distrito de Banggai Utara**, aunque las fuentes varían sobre el nombre exacto de la aldea: algunas indican Desa Lokotoy y otras Desa Pasir Putih. Lo que sí coincide es el entorno: arena blanca fina, agua turquesa tranquila y un gran bosque de manglares justo detrás de la costa.
 
