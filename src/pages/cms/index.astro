@@ -116,6 +116,7 @@ publishEl.addEventListener('click',async function(){if(!healthState.ok){setStatu
 document.getElementById('clear').addEventListener('click',()=>{[titleEl,descriptionEl,seoTitleEl,seoDescriptionEl,tagsEl,contentEl,keyEl,imageUrlEl].forEach(el=>el.value='');pubDateEl.value=new Date().toISOString().slice(0,10);translatedArticles=null;selectedImage=null;resultEl.classList.remove('show');articlesEl.innerHTML='';uploadOk.classList.remove('show');imagePreview.classList.remove('show');setStatus(statusEl,'');setStatus(contentStatusEl,'');setStatus(imageStatusEl,'');setStatus(publishStatusEl,'');});
 getHealth().then(ok=>{if(ok){translateEl.disabled=false;publishEl.disabled=false;}});
 
+</script>
 <script src="https://cdn.jsdelivr.net/npm/easymde@2.18.0/dist/easymde.min.js"></script>
 <script>
 (function(){
