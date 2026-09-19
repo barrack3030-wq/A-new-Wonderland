@@ -1,8 +1,8 @@
 ---
 title: Luwuk Stopover
-description: Experience the best of Luwuk Stopover with our exclusive tour package.
-seoTitle: 'Luwuk Stopover Tour Package | Banggai Wonderland'
-seoDescription: Book the Luwuk Stopover tour package to explore the hidden paradise of Banggai.
+description: Explore Luwuk and Salodik on a 2-day private tour package in Banggai, with airport pickup, local guide, waterfalls and coastal views.
+seoTitle: 'Luwuk Banggai Tour Package | 2-Day Private Trip'
+seoDescription: 'Explore Luwuk and Salodik on a 2-day private tour from Luwuk Airport, with Piala Waterfall, coastal views, local guide and private transportation.'
 image: /images/asasa.jpg
 imageAlt: Luwuk Stopover
 duration: 2 Days 1 Night
