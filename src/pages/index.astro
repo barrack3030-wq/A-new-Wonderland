@@ -1,17 +1,57 @@
 ---
-// Redirect root URL (/) to default language (/id/) using relative path
-// to prevent absolute URL issues with placeholder 'site' config during deployment.
+/*
+ * Keep the root URL as the default-language redirect.
+ * This file is intentionally limited to redirect-page SEO metadata;
+ * the actual homepage remains at /id/.
+ */
 ---
 <!DOCTYPE html>
 <html lang="id">
 <head>
   <meta charset="UTF-8">
-  <title>Banggai Wonderland</title>
-  <meta http-equiv="refresh" content="0;url=/id/" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Banggai Islands Travel | Private Trips in Indonesia</title>
+  <meta name="description" content="Discover the Banggai Islands in Indonesia with private trips from Luwuk to Paisu Pok, Salakan, Peleng and other destinations.">
+  <meta name="robots" content="noindex, follow">
+  <link rel="canonical" href="https://banggaiwonderland.my.id/id/">
+  <link rel="alternate" hreflang="id" href="https://banggaiwonderland.my.id/id/">
+  <link rel="alternate" hreflang="en" href="https://banggaiwonderland.my.id/en/">
+  <link rel="alternate" hreflang="es" href="https://banggaiwonderland.my.id/es/">
+  <link rel="alternate" hreflang="fr" href="https://banggaiwonderland.my.id/fr/">
+  <link rel="alternate" hreflang="zh" href="https://banggaiwonderland.my.id/zh/">
+  <link rel="alternate" hreflang="x-default" href="https://banggaiwonderland.my.id/en/">
+
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://banggaiwonderland.my.id/id/">
+  <meta property="og:title" content="Banggai Islands Travel | Private Trips in Indonesia">
+  <meta property="og:description" content="Discover the Banggai Islands in Indonesia with private trips from Luwuk to Paisu Pok, Salakan, Peleng and other destinations.">
+  <meta property="og:image" content="https://banggaiwonderland.my.id/images/og-default.jpg">
+  <meta property="og:image:alt" content="Banggai Wonderland travel in the Banggai Islands">
+  <meta property="og:site_name" content="Banggai Wonderland">
+  <meta property="og:locale" content="id_ID">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:url" content="https://banggaiwonderland.my.id/id/">
+  <meta name="twitter:title" content="Banggai Islands Travel | Private Trips in Indonesia">
+  <meta name="twitter:description" content="Discover the Banggai Islands in Indonesia with private trips from Luwuk to Paisu Pok, Salakan, Peleng and other destinations.">
+  <meta name="twitter:image" content="https://banggaiwonderland.my.id/images/og-default.jpg">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "TravelAgency",
+    "name": "Banggai Wonderland",
+    "url": "https://banggaiwonderland.my.id/id/",
+    "telephone": "+6285820830530",
+    "image": "https://banggaiwonderland.my.id/images/logo.png",
+    "description": "Travel experiences and private trips in the Banggai Islands, Indonesia."
+  }
+  </script>
+
+  <meta http-equiv="refresh" content="0;url=/id/">
   <script>window.location.replace("/id/");</script>
 </head>
 <body>
   <p>Redirecting to <a href="/id/">Banggai Wonderland...</a></p>
 </body>
 </html>
-
