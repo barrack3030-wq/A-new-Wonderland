@@ -1,7 +1,7 @@
 ---
 title: "Playa Oyama"
 description: "Playa Oyama es una playa de arena blanca en el extremo norte de la isla de Banggai, con agua turquesa tranquila y un gran manglar detrás de la costa."
-seoTitle: "Oyama Beach Banggai | Playa de acceso en barco en Banggai Laut"
+seoTitle: "Oyama Beach Banggai | Banggai Laut Travel Guide"
 seoDescription: "Oyama Beach, en la isla de Banggai, ofrece arena blanca, agua tranquila y manglares. Solo se llega en barco desde Lokotoy o Popisi. Entrada gratuita."
 image: "/images/698024319f723539c41d303baa496f2e.jpg"
 imageAlt: "Línea de costa de arena blanca de Oyama Beach en la isla de Banggai, con agua turquesa y manglares detrás, Banggai Laut, Sulawesi Central."
