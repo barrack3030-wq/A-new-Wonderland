@@ -172,8 +172,8 @@ function wrapSelection(before,after,placeholder){
 }
 function insertYouTube(){
   const url=window.prompt('Masukkan URL YouTube:','https://www.youtube.com/watch?v=');
-  if(url&&/^https?:\\/\\/(www\\.)?(youtube\\.com|youtu\\.be)\\//i.test(url)){
-    insertText('[Watch video on YouTube]('+url+')\\n\\n');
+  if(url&&/^https?:\/\/(www\.)?(youtube\.com|youtu\.be)\//i.test(url)){
+    insertText('[Watch video on YouTube]('+url+')\n\n');
     setStatus(contentStatusEl,'✓ Link YouTube disisipkan ke posisi cursor.','success');
   }
 }
@@ -276,7 +276,7 @@ inlineImageFileEl.addEventListener('change',async function(){
     const data=await post({action:'uploadImage',accessKey:key,dataUrl:dataUrl,fileName:file.name});
     if(!data.image||!data.image.url)throw new Error('Respons upload gambar tidak valid.');
     const alt=data.image.alt||titleEl.value||'Article image';
-    insertText('!['+alt+']('+data.image.url+')\\n\\n');
+    insertText('!['+alt+']('+data.image.url+')\n\n');
     setStatus(imageStatusEl,'✓ Gambar disisipkan ke posisi cursor.','success');
   }catch(e){setStatus(imageStatusEl,'✕ '+e.message,'danger');}
   finally{this.value='';}
