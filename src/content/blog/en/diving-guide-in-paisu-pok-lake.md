@@ -1,10 +1,10 @@
 ---
 title: Diving Guide in Paisu Pok Lake
 description: Discover more about Diving Guide in Paisu Pok Lake in Banggai Wonderland.
-seoTitle: ''
-seoDescription: ''
+seoTitle: 'Diving Guide at Paisu Pok Lake | Banggai Wonderland'
+seoDescription: 'A practical guide to diving and exploring Paisu Pok Lake on Peleng Island, covering water conditions, activities, access and travel tips in Banggai Islands.'
 image: /images/DSCF7073-5.webp
-imageAlt: ''
+imageAlt: 'Paisu Pok Lake on Peleng Island, showing exceptionally clear water and submerged trees in the Banggai Islands.'
 author: Diving Expert
 pubDate: "2026-10-15T00:00:00Z"
 tags:
