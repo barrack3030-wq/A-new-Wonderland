@@ -1,10 +1,10 @@
 ---
 title: Panduan Menyelam di Danau Paisu Pok
 description: Discover more about Panduan Menyelam di Danau Paisu Pok in Banggai Wonderland.
-seoTitle: 'Diving Guide at Paisu Pok Lake | Banggai Wonderland'
-seoDescription: ''
+seoTitle: 'Panduan Menyelam di Danau Paisu Pok | Banggai Wonderland'
+seoDescription: 'Panduan menyelam dan menikmati dunia bawah air Danau Paisu Pok di Pulau Peleng, termasuk kondisi air, aktivitas, akses, dan tips perjalanan di Banggai Kepulauan.'
 image: /images/images (5).jpg
-imageAlt: ''
+imageAlt: 'Danau Paisu Pok di Pulau Peleng dengan air yang sangat jernih dan pepohonan terendam di bawah permukaan.'
 author: Diving Expert
 pubDate: "2026-10-15T00:00:00Z"
 tags:
