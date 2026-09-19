@@ -1,10 +1,10 @@
 ---
 title: Menjelajahi Air Terjun Piala
 description: Discover more about Menjelajahi Air Terjun Piala in Banggai Wonderland.
-seoTitle: ''
-seoDescription: ''
+seoTitle: 'Air Terjun Piala Luwuk | Panduan Wisata Banggai'
+seoDescription: 'Panduan Air Terjun Piala di Luwuk, Banggai, Sulawesi Tengah, dengan informasi lokasi, pengalaman wisata, dan tips perjalanan.'
 image: /images/piala.jpg
-imageAlt: ''
+imageAlt: 'Air Terjun Piala di Luwuk, Banggai, dikelilingi hutan tropis hijau'
 author: Nature Lover
 pubDate: "2026-10-15T00:00:00Z"
 tags:
