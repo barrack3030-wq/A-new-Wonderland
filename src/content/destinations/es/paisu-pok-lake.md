@@ -1,7 +1,7 @@
 ---
 title: "Paisu Pok Lake"
 description: "Paisu Pok Lake es un lago de agua dulce de Luk Panenteng, en la isla de Peleng, conocido por sus aguas cristalinas, árboles sumergidos y entorno tropical."
-seoTitle: "Paisu Pok Lake Banggai | Lago cristalino de la isla de Peleng"
+seoTitle: "Paisu Pok Lake Banggai | Peleng Island Travel Guide"
 seoDescription: "Paisu Pok Lake en Peleng es un lago de agua dulce muy claro con árboles sumergidos y reflejos de espejo. Guía de acceso, tarifas, alquileres y alojamiento."
 image: "/images/DSCF7073-5.webp"
 imageAlt: "Agua azul verdosa y cristalina de Paisu Pok Lake con árboles muertos sumergidos y palmeras reflejadas en Luk Panenteng, isla de Peleng, Banggai Kepulauan, Sulawesi Central."
