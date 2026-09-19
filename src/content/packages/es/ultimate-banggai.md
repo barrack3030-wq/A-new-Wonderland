@@ -1,10 +1,10 @@
 ---
 title: Ultimate Banggai
-description: Experience the best of Ultimate Banggai with our exclusive tour package.
-seoTitle: 'Paquete Turístico Ultimate Banggai | Banggai Wonderland'
-seoDescription: Book the Ultimate Banggai tour package to explore the hidden paradise of Banggai.
+description: Viaje privado de 6 días por las islas Banggai desde Luwuk, con Salakan, Peleng, Banggai Laut, Kamumu, Salodik y Pulo Dua.
+seoTitle: 'Ultimate Banggai: Viaje Privado de 6 Días | Islas Banggai'
+seoDescription: Descubre las islas Banggai en 6 días desde Luwuk, con Salakan, Peleng, Banggai Laut, Kamumu, Salodik y Pulo Dua.
 image: /images/Gemini_Generated_Image_xxtet3xxtet3xxte (4).jpg
-imageAlt: Ultimate Banggai
+imageAlt: Viaje privado de 6 días por las islas Banggai desde Luwuk hasta Salakan, Peleng, Banggai Laut y Pulo Dua.
 duration: 6 Days 5 Nights
 destination: All Banggai Islands, Sombori
 activities:
