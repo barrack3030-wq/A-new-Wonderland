@@ -12,6 +12,10 @@ export function getStaticPaths() {
 
 const { lang } = Astro.params;
 const t = useTranslations(lang as any);
+const contactSeoTitle = ({
+  id: 'Kontak Banggai Wonderland | Kepulauan Banggai',
+  en: 'Contact Banggai Wonderland | Banggai Islands'
+} as Record<string, string>)[lang as string];
 
 const breadcrumbItems = [
   { name: 'Home', url: `/${lang}/` },
