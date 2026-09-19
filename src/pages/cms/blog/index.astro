@@ -1,5 +1,24 @@
 ---
+import { getCollection } from 'astro:content';
+
 const title = 'Banggai Wonderland Blog CMS';
+const allBlogPosts = await getCollection('blog');
+const blogManifest = allBlogPosts.map((post) => ({
+  language: post.id.split('/')[0],
+  path: 'src/content/blog/' + post.id,
+  name: post.id.split('/').pop() || post.id,
+  title: post.data.title,
+  description: post.data.description,
+  seoTitle: post.data.seoTitle || '',
+  seoDescription: post.data.seoDescription || '',
+  image: post.data.image || '',
+  imageAlt: post.data.imageAlt || '',
+  pubDate: post.data.pubDate instanceof Date ? post.data.pubDate.toISOString().slice(0, 10) : String(post.data.pubDate || ''),
+  tags: post.data.tags || [],
+  translationKey: post.data.translationKey || '',
+  content: post.body || ''
+}));
+const blogManifestJson = JSON.stringify(blogManifest).replace(/</g, '\u003c');
 ---
 <!doctype html>
 <html lang="id">
@@ -124,6 +143,7 @@ Gunakan toolbar untuk heading, bold, italic, Small/Large text, link, list, quote
 </section>
 </main>
 
+<script type="application/json" id="blogManifest" set:html={blogManifestJson}></script>
 <script src="https://cdn.jsdelivr.net/npm/easymde@2.18.0/dist/easymde.min.js"></script>
 <script>
 const ENDPOINT='https://script.google.com/macros/s/AKfycbxGMuyFzq0K-gKIPaamp1ClFqo6zYJfNNvZfd0hxeJIJTj0N_DVPywUtkWbo5g0_F08/exec';
@@ -131,7 +151,6 @@ const langEl=document.getElementById('language');
 const blogEl=document.getElementById('blog');
 const loadEl=document.getElementById('loadBlogs');
 const openEl=document.getElementById('openBlog');
-const resetEl=document.getElementById('reset');
 const pathEl=document.getElementById('path');
 const titleEl=document.getElementById('title');
 const dateEl=document.getElementById('pubDate');
@@ -149,6 +168,8 @@ const inlineImageFileEl=document.getElementById('inlineImageFile');
 const contentStatusEl=document.getElementById('contentStatus');
 const saveEl=document.getElementById('save');
 const saveStatusEl=document.getElementById('saveStatus');
+const blogManifestEl=document.getElementById('blogManifest');
+const BLOG_MANIFEST=blogManifestEl?JSON.parse(blogManifestEl.textContent||'[]'):[];
 let currentPath='';
 
 function setStatus(el,text,kind){
@@ -206,66 +227,25 @@ async function post(payload){
 function renderBlogs(blogs){
   blogEl.innerHTML='<option value="">Pilih artikel...</option>'+blogs.map(function(b){
     const safePath=String(b.path).replace(/"/g,'&quot;');
-    const safeTitle=String(b.title).replace(/[&<>]/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;'}[c];});
-    return '<option value="'+safePath+'">'+safeTitle+'</option>';
+    const safeTitle=String(b.title||b.name||'Untitled').replace(/[&<>]/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;'}[c];});
+    const label=b.pubDate?String(b.pubDate)+' — '+safeTitle:safeTitle;
+    return '<option value="'+safePath+'">'+label.replace(/"/g,'&quot;')+'</option>';
   }).join('');
   openEl.disabled=true;
 }
-async function githubGetJson(url){
-  const response=await fetch(url,{method:'GET',headers:{Accept:'application/vnd.github+json'},cache:'no-store'});
-  if(!response.ok)throw new Error('GitHub API HTTP '+response.status);
-  return response.json();
+function getBlogsForLanguage(){
+  return BLOG_MANIFEST.filter(function(b){return String(b.language||'').toLowerCase()===langEl.value;})
+    .sort(function(a,b){return String(b.pubDate||b.name).localeCompare(String(a.pubDate||a.name));});
 }
-function parseFrontmatterClient(raw){
-  const text=String(raw||'').replace(/\r\n?/g,'\n');
-  let fm='',body=text;
-  if(text.indexOf('---\n')===0){
-    const end=text.indexOf('\n---',4);
-    if(end!==-1){fm=text.substring(4,end);body=text.substring(end+4).replace(/^\n+/,'');}
-  }
-  const data={tags:[]};let tags=false;
-  fm.split('\n').forEach(function(line){
-    if(/^tags:\s*$/.test(line.trim())){tags=true;return;}
-    if(tags&&/^\s+-\s+/.test(line)){data.tags.push(line.replace(/^\s+-\s+/,'').replace(/^["']|["']$/g,''));return;}
-    if(tags&&line.trim()&&!/^\s+-\s+/.test(line))tags=false;
-    const m=line.match(/^([A-Za-z][A-Za-z0-9_]*)\s*:\s*(.*)$/);
-    if(m){
-      let v=m[2].trim();
-      if((v.startsWith('"')&&v.endsWith('"'))||(v.startsWith("'")&&v.endsWith("'")))v=v.slice(1,-1).replace(/\\("|\\)/g,'$1');
-      data[m[1]]=v;
-    }
-  });
-  return{
-    title:data.title||'',
-    description:data.description||'',
-    seoTitle:data.seoTitle||'',
-    seoDescription:data.seoDescription||'',
-    image:data.image||'',
-    imageAlt:data.imageAlt||'',
-    pubDate:/^\d{4}-\d{2}-\d{2}$/.test(String(data.pubDate||''))?data.pubDate:'',
-    tags:data.tags||[],
-    translationKey:data.translationKey||'',
-    content:body.trim()
-  };
-}
-async function fallbackListBlogs(){
-  const lang=langEl.value;
-  const url='https://api.github.com/repos/barrack3030-wq/A-new-Wonderland/contents/src/content/blog/'+encodeURIComponent(lang)+'?ref=main';
-  const items=await githubGetJson(url);
-  if(!Array.isArray(items))throw new Error('Folder blog tidak dapat dibaca dari GitHub.');
-  return items.filter(function(item){return item.type==='file'&&/\.md$/i.test(item.name);}).map(function(item){
-    return {language:lang,path:item.path,name:item.name,title:item.name.replace(/\.md$/,'').replace(/^\d{4}-\d{2}-\d{2}-/,'').replace(/-/g,' '),sha:item.sha};
-  }).sort(function(a,b){return String(b.name).localeCompare(String(a.name));});
-}
-async function loadBlogs(){
+function loadBlogs(){
   loadEl.disabled=true;
-  setStatus(saveStatusEl,'Memuat daftar blog dari GitHub...');
+  setStatus(saveStatusEl,'Memuat daftar blog...');
   try{
-    const blogs=await fallbackListBlogs();
+    const blogs=getBlogsForLanguage();
     renderBlogs(blogs);
     setStatus(saveStatusEl,'✓ '+blogs.length+' artikel ditemukan.','success');
   }catch(e){
-    setStatus(saveStatusEl,'✕ Gagal memuat daftar blog dari GitHub: '+e.message,'danger');
+    setStatus(saveStatusEl,'✕ Gagal memuat daftar blog: '+e.message,'danger');
   }finally{loadEl.disabled=false;}
 }
 function resetEditor(){
@@ -278,27 +258,18 @@ function resetEditor(){
 loadEl.addEventListener('click',loadBlogs);
 langEl.addEventListener('change',loadBlogs);
 blogEl.addEventListener('change',function(){openEl.disabled=!blogEl.value;});
-openEl.addEventListener('click',async function(){
+openEl.addEventListener('click',function(){
   const path=blogEl.value;
   if(!path){setStatus(saveStatusEl,'Pilih artikel terlebih dahulu.','danger');return;}
-  openEl.disabled=true;setStatus(saveStatusEl,'Membuka artikel dari GitHub...');
-  try{
-    const raw=await fetch('https://raw.githubusercontent.com/barrack3030-wq/A-new-Wonderland/main/'+path+'?_='+Date.now(),{cache:'no-store'}).then(function(r){
-      if(!r.ok)throw new Error('GitHub raw HTTP '+r.status);
-      return r.text();
-    });
-    const b=parseFrontmatterClient(raw);
-    b.path=path;
-    currentPath=path;
-    pathEl.style.display='block';pathEl.textContent='File: '+path;
-    titleEl.value=b.title||'';dateEl.value=b.pubDate||'';descEl.value=b.description||'';
-    seoTitleEl.value=b.seoTitle||'';seoDescEl.value=b.seoDescription||'';tagsEl.value=(b.tags||[]).join(', ');
-    setFeatured(b.image||'',b.imageAlt||b.title||'Featured image');
-    editor.value(b.content||'');saveEl.disabled=false;
-    setStatus(saveStatusEl,'✓ Artikel berhasil dimuat dari GitHub.','success');
-  }catch(e){
-    setStatus(saveStatusEl,'✕ Gagal membuka artikel: '+e.message,'danger');
-  }finally{openEl.disabled=false;}
+  const b=BLOG_MANIFEST.find(function(item){return item.path===path;});
+  if(!b){setStatus(saveStatusEl,'Artikel tidak ditemukan di manifest GitHub.','danger');return;}
+  currentPath=b.path;
+  pathEl.style.display='block';pathEl.textContent='File: '+currentPath;
+  titleEl.value=b.title||'';dateEl.value=b.pubDate||'';descEl.value=b.description||'';
+  seoTitleEl.value=b.seoTitle||'';seoDescEl.value=b.seoDescription||'';tagsEl.value=(b.tags||[]).join(', ');
+  setFeatured(b.image||'',b.imageAlt||b.title||'Featured image');
+  editor.value(b.content||'');saveEl.disabled=false;
+  setStatus(saveStatusEl,'✓ Artikel berhasil dimuat.','success');
 });
 document.getElementById('uploadFeatured').addEventListener('click',async function(){
   const file=imageFileEl.files&&imageFileEl.files[0],key=document.getElementById('accessKey').value.trim();
