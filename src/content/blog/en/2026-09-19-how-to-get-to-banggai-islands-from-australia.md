@@ -194,7 +194,7 @@ There are daily nonstop flights from Sydney to Denpasar and Jakarta, while Sydne
 
 The practical destination to search for after the international leg is **Luwuk (LUW)**.
 
-For a detailed city-specific guide, see [How to Get to the Banggai Islands from Sydney](/en/blog/how-to-get-to-banggai-islands-from-sydney/).
+For a detailed city-specific guide, see [How to Get to the Banggai Islands from Sydney](/en/blog/2026-09-19-how-to-get-to-banggai-islands-from-sydney/).
 
 ## Other Australian Cities
 
