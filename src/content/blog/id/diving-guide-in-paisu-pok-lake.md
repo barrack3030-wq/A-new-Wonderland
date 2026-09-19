@@ -12,7 +12,7 @@ tags:
   - Adventure
 ---
 
-# Panduan Menyelam di Danau Paisu Pok: Menjelajahi Dunia Bawah Air yang Jernih di Banggai
+# Panduan Menyelam di Danau Paisu Pok | Banggai
 
 **Bayangkan menyelam ke dalam air sebening kaca, melihat pepohonan yang terendam, bebatuan, dan dasar danau tanpa harus pergi ke laut. Selamat datang di Danau Paisu Pok, salah satu permata tersembunyi Kepulauan Banggai.**
 
