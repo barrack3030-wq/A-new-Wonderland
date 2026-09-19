@@ -26,7 +26,7 @@ travelTips:
 youtube: "https://www.youtube.com/watch?v=2vtdbJRPZMw"
 ---
 
-# Paisu Pok Lake: El Lago Azul y Cristalino de las Islas Banggai
+# Paisu Pok Lake: Lago Cristalino de las Islas Banggai
 
 Paisu Pok Lake es un **lago de agua dulce en Desa Luk Panenteng, Kecamatan Bulagi Utara, Kabupaten Banggai Kepulauan**, en la **isla de Peleng**. Tiene aproximadamente **1,2 hectáreas** y una profundidad generalmente citada de **5 a 15 metros**, al pie de colinas verdes rodeadas de palmeras y bosque tropical.
 
