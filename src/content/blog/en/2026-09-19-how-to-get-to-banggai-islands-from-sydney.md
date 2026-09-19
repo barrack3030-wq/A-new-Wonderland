@@ -218,7 +218,7 @@ This is particularly useful when the trip involves several islands.
 
 For travellers who want this logistical support, see our [Banggai tour packages](/en/packages/).
 
-For a broader route guide covering Australia, see [How to Get to the Banggai Islands from Australia](/en/blog/how-to-get-to-banggai-islands-from-australia/).
+For a broader route guide covering Australia, see [How to Get to the Banggai Islands from Australia](/en/blog/2026-09-19-how-to-get-to-banggai-islands-from-australia/).
 
 ## Common Planning Mistakes
 
