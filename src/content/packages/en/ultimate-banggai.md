@@ -1,10 +1,10 @@
 ---
 title: Ultimate Banggai
 description: Explore the Banggai Islands on a 6-day private tour from Luwuk through Salakan, Peleng, Banggai Laut, Kamumu, Salodik and Pulo Dua.
-seoTitle: 'Banggai Islands Tour Package | Ultimate Banggai'
+seoTitle: 'Ultimate Banggai: 6-Day Private Tour | Banggai Islands'
 seoDescription: Explore the Banggai Islands on a 6-day private tour covering Paisu Pok, Peleng, Banggai Laut, Kamumu, Salodik and Pulo Dua.
 image: /images/Gemini_Generated_Image_xxtet3xxtet3xxte (4).jpg
-imageAlt: Ultimate Banggai
+imageAlt: 6-day private journey through the Banggai Islands from Luwuk to Salakan, Peleng, Banggai Laut and Pulo Dua.
 duration: 6 Days 5 Nights
 destination: All Banggai Islands, Sombori
 activities:
