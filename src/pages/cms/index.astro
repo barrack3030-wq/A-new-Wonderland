@@ -10,13 +10,70 @@ const title='Banggai Wonderland CMS';
 <title>{title}</title>
 <style>
 :root{color-scheme:dark;font-family:Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}*{box-sizing:border-box}body{margin:0;min-height:100vh;background:linear-gradient(145deg,#061525,#0b2b46 55%,#071a2a);color:#eef7ff}.wrap{width:min(1100px,94%);margin:0 auto;padding:34px 0 60px}.brand{margin-bottom:28px}.brand h1{margin:0;font-size:clamp(28px,5vw,42px);letter-spacing:-.03em}.brand p{color:#9fc0d6;margin:8px 0 0}.card{background:rgba(8,24,39,.88);border:1px solid rgba(157,207,235,.16);border-radius:20px;padding:24px;box-shadow:0 20px 70px rgba(0,0,0,.28);margin-bottom:18px}label{display:block;font-size:13px;font-weight:700;color:#b8d5e7;margin:0 0 8px}input,textarea{width:100%;border:1px solid #28465c;background:#071b2b;color:#f5fbff;border-radius:12px;padding:13px 14px;outline:none;font:inherit}input:focus,textarea:focus{border-color:#56b8ea;box-shadow:0 0 0 3px rgba(86,184,234,.12)}textarea{min-height:300px;resize:vertical;line-height:1.65}.meta-grid{display:grid;grid-template-columns:2fr 1fr;gap:14px}.seo-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}.image-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}.row{display:flex;gap:10px;flex-wrap:wrap;margin-top:16px}button{border:0;border-radius:12px;padding:12px 18px;font-weight:800;cursor:pointer;color:#03121d;background:#65c8f2;touch-action:manipulation}button.secondary{background:#17364d;color:#dceffc}button:disabled{opacity:.5;cursor:not-allowed}.status{margin-top:14px;color:#9fc0d6;min-height:22px;white-space:pre-wrap}.danger{color:#ffb2b2}.success{color:#9ce7b4}.muted{color:#86a7bb;font-size:13px}.divider{border-top:1px solid rgba(157,207,235,.12);margin:22px 0}.result{display:none}.result.show{display:block}.lang{border-top:1px solid rgba(157,207,235,.12);padding:18px 0}.lang:first-child{border-top:0;padding-top:0}.lang textarea{min-height:420px}.preview{margin-top:12px;display:none}.preview.show{display:block}.preview img{width:100%;max-height:280px;object-fit:cover;border-radius:14px;border:1px solid #28465c}.selected{margin-top:10px;padding:10px 12px;border-radius:10px;background:#0b2437;color:#bfe4f7;font-size:13px;word-break:break-all}.upload-ok{display:none;margin-top:12px;padding:12px 14px;border-radius:12px;border:1px solid rgba(156,231,180,.25);background:rgba(33,83,55,.25);color:#b9f2c9}.upload-ok.show{display:block}.password-wrap{position:relative}.password-wrap input{padding-right:92px}.toggle-password{position:absolute;right:6px;top:6px;height:calc(100% - 12px);padding:0 12px;border-radius:9px;background:#17364d;color:#dceffc;font-size:12px}@media(max-width:800px){.meta-grid,.seo-grid,.image-grid{grid-template-columns:1fr}.card{padding:18px}input,textarea{font-size:16px}}
+
+.editor-grid{display:grid;grid-template-columns:2fr 1fr;gap:14px}
+.editor-seo-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.editor-image-box{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.editor-current-path{margin-top:8px;padding:9px 12px;border-radius:10px;background:#0b2437;color:#bfe4f7;font-size:12px;word-break:break-all}
+.editor-status{margin-top:12px;min-height:22px;color:#9fc0d6;white-space:pre-wrap}
+.editor-actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:16px}
+.EasyMDEContainer{margin-top:8px}
+.EasyMDEContainer .CodeMirror{min-height:520px;background:#071b2b;color:#f5fbff;border-color:#28465c;border-radius:0 0 12px 12px}
+.editor-image-preview{margin-top:12px;display:none}
+.editor-image-preview.show{display:block}
+.editor-image-preview img{width:100%;max-height:320px;object-fit:cover;border-radius:14px;border:1px solid #28465c}
+@media(max-width:800px){.editor-grid,.editor-seo-grid,.editor-image-box{grid-template-columns:1fr}}
+
 </style>
-</head>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/easymde@2.18.0/dist/easymde.min.css"/>\n</head>
 <body>
 <main class="wrap">
 <header class="brand"><h1>Banggai Wonderland CMS</h1><p>Manual Article → AI Translation → Review → Publish</p></header>
+
+<section class="card" id="blogEditorSection">
+<h2 style="margin-top:0">1. Edit Blog</h2>
+<p class="muted">Pilih artikel yang sudah ada, edit metadata SEO, featured image, isi artikel, gambar di tengah artikel, link YouTube, heading, format teks, tabel, dan lainnya. Saat disimpan, URL artikel tidak berubah.</p>
+<div class="editor-grid">
+  <div><label for="editLanguage">Bahasa</label><select id="editLanguage" style="width:100%;border:1px solid #28465c;background:#071b2b;color:#f5fbff;border-radius:12px;padding:13px 14px;font:inherit"><option value="id">Bahasa Indonesia</option><option value="en">English</option><option value="es">Spanish</option><option value="fr">French</option><option value="zh">Chinese</option></select></div>
+  <div><label for="editPost">Artikel</label><select id="editPost" style="width:100%;border:1px solid #28465c;background:#071b2b;color:#f5fbff;border-radius:12px;padding:13px 14px;font:inherit"><option value="">Klik "Load Blog" terlebih dahulu</option></select></div>
+</div>
+<div class="row"><button id="loadBlogs" type="button" class="secondary">Load Blog</button><button id="openBlog" type="button" disabled>Open Selected Blog</button></div>
+<div id="editPath" class="editor-current-path" style="display:none"></div>
+
+<div class="editor-grid" style="margin-top:16px">
+  <div><label for="editTitle">Judul artikel</label><input id="editTitle" type="text" placeholder="Judul artikel"/></div>
+  <div><label for="editPubDate">Tanggal publish</label><input id="editPubDate" type="date"/></div>
+</div>
+<div style="margin-top:14px"><label for="editDescription">Deskripsi / excerpt</label><input id="editDescription" type="text" placeholder="Ringkasan artikel"/></div>
+<div class="editor-seo-grid" style="margin-top:14px">
+  <div><label for="editSeoTitle">SEO Title</label><input id="editSeoTitle" type="text" placeholder="SEO title"/></div>
+  <div><label for="editSeoDescription">SEO Description</label><input id="editSeoDescription" type="text" placeholder="SEO meta description"/></div>
+</div>
+<div style="margin-top:14px"><label for="editTags">Tags <span class="muted">(pisahkan dengan koma)</span></label><input id="editTags" type="text" placeholder="Banggai, Travel, Indonesia"/></div>
+
+<div class="divider"></div>
+<h3 style="margin-top:0">Featured image</h3>
+<div class="editor-image-box">
+  <div><label for="editImageFile">Upload gambar baru</label><input id="editImageFile" type="file" accept="image/jpeg,image/png,image/webp,image/gif,image/svg+xml"/></div>
+  <div><label for="editImageUrl">Path / URL gambar</label><input id="editImageUrl" type="text" placeholder="/images/blog/foto.webp"/></div>
+</div>
+<div style="margin-top:14px"><label for="editImageAlt">Image Alt</label><input id="editImageAlt" type="text" placeholder="Deskripsi gambar"/></div>
+<div class="editor-actions"><button id="uploadFeaturedEdit" type="button" class="secondary">Upload & Set Featured Image</button></div>
+<div id="editImageStatus" class="editor-status"></div>
+<div id="editImagePreview" class="editor-image-preview"><img id="editImagePreviewImg" alt="Current featured image"/></div>
+
+<div class="divider"></div>
+<h3 style="margin-top:0">Konten artikel</h3>
+<p class="muted">Editor visual Markdown. Heading, bold/italic, Small/Large, link, tabel, quote, list, gambar, preview, fullscreen, dan YouTube tersedia dari toolbar.</p>
+<textarea id="editContent" placeholder="Isi artikel dalam Markdown..."></textarea>
+<input id="editInlineImageFile" type="file" accept="image/jpeg,image/png,image/webp,image/gif,image/svg+xml" style="display:none"/>
+<div id="editContentStatus" class="editor-status"></div>
+<div class="editor-actions"><button id="saveBlog" type="button" disabled>Save Blog Changes</button><button id="resetBlogEditor" type="button" class="secondary">Reset Editor</button></div>
+<div id="editSaveStatus" class="editor-status"></div>
+</section>
+
 <section class="card">
-<h2 style="margin-top:0">1. Tulis artikel utama</h2>
+<h2 style="margin-top:0">2. Tulis artikel utama</h2>
 <p class="muted">Paste artikel Bahasa Indonesia Anda. AI tidak menulis artikel ini; AI hanya menerjemahkannya ke English, Spanish, French, dan Chinese.</p>
 <div class="meta-grid"><div><label for="title">Judul artikel</label><input id="title" type="text" autocomplete="off" placeholder="Contoh: Panduan Lengkap Mengunjungi Danau Paisupok"/></div><div><label for="pubDate">Tanggal publish</label><input id="pubDate" type="date"/></div></div>
 <div style="margin-top:14px"><label for="description">Deskripsi / excerpt</label><input id="description" type="text" placeholder="Ringkasan singkat artikel untuk blog dan SEO"/></div>
@@ -58,6 +115,71 @@ function renderArticles(){if(!translatedArticles)return;const order=['id','en','
 publishEl.addEventListener('click',async function(){if(!healthState.ok){setStatus(publishStatusEl,'Apps Script belum lolos health check.','danger');return;}if(!translatedArticles)return setStatus(publishStatusEl,'Belum ada hasil terjemahan untuk dipublish.','danger');ensureAllArticleImages();publishEl.disabled=true;setStatus(publishStatusEl,'⏳ Publishing 5 bahasa ke GitHub…');try{const data=await post({action:'publish',accessKey:keyEl.value.trim(),articles:translatedArticles});setStatus(publishStatusEl,'✓ Publish berhasil. '+data.message,'success');}catch(error){setStatus(publishStatusEl,'✕ '+error.message,'danger');}finally{publishEl.disabled=false;}});
 document.getElementById('clear').addEventListener('click',()=>{[titleEl,descriptionEl,seoTitleEl,seoDescriptionEl,tagsEl,contentEl,keyEl,imageUrlEl].forEach(el=>el.value='');pubDateEl.value=new Date().toISOString().slice(0,10);translatedArticles=null;selectedImage=null;resultEl.classList.remove('show');articlesEl.innerHTML='';uploadOk.classList.remove('show');imagePreview.classList.remove('show');setStatus(statusEl,'');setStatus(contentStatusEl,'');setStatus(imageStatusEl,'');setStatus(publishStatusEl,'');});
 getHealth().then(ok=>{if(ok){translateEl.disabled=false;publishEl.disabled=false;}});
+
+<script src="https://cdn.jsdelivr.net/npm/easymde@2.18.0/dist/easymde.min.js"></script>
+<script>
+(function(){
+  const langEl=document.getElementById('editLanguage');
+  const postEl=document.getElementById('editPost');
+  const loadEl=document.getElementById('loadBlogs');
+  const openEl=document.getElementById('openBlog');
+  const pathEl=document.getElementById('editPath');
+  const titleEl2=document.getElementById('editTitle');
+  const dateEl2=document.getElementById('editPubDate');
+  const descriptionEl2=document.getElementById('editDescription');
+  const seoTitleEl2=document.getElementById('editSeoTitle');
+  const seoDescriptionEl2=document.getElementById('editSeoDescription');
+  const tagsEl2=document.getElementById('editTags');
+  const imageFileEl2=document.getElementById('editImageFile');
+  const imageUrlEl2=document.getElementById('editImageUrl');
+  const imageAltEl2=document.getElementById('editImageAlt');
+  const imageStatusEl2=document.getElementById('editImageStatus');
+  const imagePreview2=document.getElementById('editImagePreview');
+  const imagePreviewImg2=document.getElementById('editImagePreviewImg');
+  const contentEl2=document.getElementById('editContent');
+  const contentStatusEl2=document.getElementById('editContentStatus');
+  const saveEl=document.getElementById('saveBlog');
+  const saveStatusEl=document.getElementById('editSaveStatus');
+  const resetEl=document.getElementById('resetBlogEditor');
+  const inlineImageFileEl=document.getElementById('editInlineImageFile');
+  let currentPath='';
+  let pendingImageMode='inline';
+
+  const editor=new EasyMDE({
+    element:contentEl2,
+    spellChecker:false,
+    autosave:{enabled:false},
+    status:['words','lines'],
+    renderingConfig:{singleLineBreaks:false,sanitized:true},
+    toolbar:[
+      'bold','italic','heading',{name:'small-text',action:function(ed){wrapSelection('<small>','</small>','small text');},className:'fa fa-minus',title:'Small text'},
+      {name:'large-text',action:function(ed){wrapSelection('<span style="font-size:1.15em">','</span>','large text');},className:'fa fa-plus',title:'Large text'},
+      'quote','unordered-list','ordered-list','link',
+      {name:'youtube',action:function(ed){insertYouTube();},className:'fa fa-youtube-play',title:'Insert YouTube link'},
+      {name:'upload-image',action:function(ed){pendingImageMode='inline';inlineImageFileEl.click();},className:'fa fa-picture-o',title:'Upload and insert image'},
+      'table','horizontal-rule','preview','side-by-side','fullscreen','guide'
+    ]
+  });
+
+  function setStatus(el,text,klass){el.className='editor-status'+(klass==='danger'?' danger':klass==='success'?' success':'');el.textContent=text||'';}
+  function tags(v){return String(v||'').split(',').map(function(x){return x.trim();}).filter(Boolean);}
+  function setFeatured(url,alt){imageUrlEl2.value=url||'';imageAltEl2.value=alt||imageAltEl2.value||'';if(url){imagePreviewImg2.src=url;imagePreviewImg2.alt=alt||'Featured image';imagePreview2.classList.add('show');}}
+  function wrapSelection(before,after,placeholder){const cm=editor.codemirror,start=cm.getCursor('from'),end=cm.getCursor('to'),selected=cm.getSelection(),value=before+(selected||placeholder||'text')+(after||'');cm.replaceSelection(value);cm.focus();}
+  function insertText(text){editor.codemirror.replaceSelection(text);editor.codemirror.focus();}
+  function insertYouTube(){const url=window.prompt('Masukkan URL YouTube:','https://www.youtube.com/watch?v=');if(url&&/^https?:\\/\\/(www\\.)?(youtube\\.com|youtu\\.be)\\//i.test(url)){insertText('[Watch video on YouTube]('+url+')\\n\\n');setStatus(contentStatusEl2,'✓ Link YouTube disisipkan ke posisi cursor.','success');}}
+  function renderPosts(posts){postEl.innerHTML='<option value="">Pilih artikel...</option>'+posts.map(function(p){return'<option value="'+String(p.path).replace(/"/g,'&quot;')+'">'+String(p.title).replace(/[&<>]/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;'}[c];})+'</option>';}).join('');openEl.disabled=true;}
+  function clearEditor(){[titleEl2,dateEl2,descriptionEl2,seoTitleEl2,seoDescriptionEl2,tagsEl2,imageUrlEl2,imageAltEl2].forEach(function(el){el.value='';});editor.value('');currentPath='';pathEl.style.display='none';pathEl.textContent='';imagePreview2.classList.remove('show');saveEl.disabled=true;postEl.value='';openEl.disabled=true;setStatus(imageStatusEl2,'');setStatus(contentStatusEl2,'');setStatus(saveStatusEl,'');}
+  loadEl.addEventListener('click',async function(){const key=keyEl.value.trim();if(!healthState.ok)return setStatus(saveStatusEl,'Periksa koneksi Apps Script terlebih dahulu.','danger');if(!key)return setStatus(saveStatusEl,'Masukkan CMS access key terlebih dahulu.','danger');loadEl.disabled=true;setStatus(saveStatusEl,'Memuat daftar blog...');try{const data=await post({action:'listBlogs',accessKey:key,language:langEl.value});renderPosts(data.blogs||[]);setStatus(saveStatusEl,'✓ '+((data.blogs||[]).length)+' artikel ditemukan.','success');}catch(error){setStatus(saveStatusEl,'✕ '+error.message,'danger');}finally{loadEl.disabled=false;}});
+  postEl.addEventListener('change',function(){openEl.disabled=!postEl.value;});
+  openEl.addEventListener('click',async function(){const key=keyEl.value.trim(),path=postEl.value;if(!healthState.ok)return setStatus(saveStatusEl,'Periksa koneksi Apps Script terlebih dahulu.','danger');if(!key)return setStatus(saveStatusEl,'Masukkan CMS access key terlebih dahulu.','danger');if(!path)return setStatus(saveStatusEl,'Pilih artikel terlebih dahulu.','danger');openEl.disabled=true;setStatus(saveStatusEl,'Membuka artikel...');try{const data=await post({action:'getBlog',accessKey:key,path:path}),b=data.blog||{};currentPath=b.path||path;pathEl.style.display='block';pathEl.textContent='File: '+currentPath;titleEl2.value=b.title||'';dateEl2.value=b.pubDate||'';descriptionEl2.value=b.description||'';seoTitleEl2.value=b.seoTitle||'';seoDescriptionEl2.value=b.seoDescription||'';tagsEl2.value=(b.tags||[]).join(', ');setFeatured(b.image||'',b.imageAlt||b.title||'Featured image');editor.value(b.content||'');saveEl.disabled=false;setStatus(saveStatusEl,'✓ Artikel berhasil dimuat.','success');}catch(error){setStatus(saveStatusEl,'✕ '+error.message,'danger');}finally{openEl.disabled=false;}});
+  async function uploadImageFile(file,mode){const key=keyEl.value.trim();if(!healthState.ok)return setStatus(imageStatusEl2,'Periksa koneksi Apps Script terlebih dahulu.','danger');if(!key)return setStatus(imageStatusEl2,'Masukkan CMS access key terlebih dahulu.','danger');if(!file)return setStatus(imageStatusEl2,'Pilih gambar terlebih dahulu.','danger');if(file.size>8*1024*1024)return setStatus(imageStatusEl2,'Ukuran gambar maksimal 8 MB.','danger');const button=mode==='featured'?document.getElementById('uploadFeaturedEdit'):null;if(button)button.disabled=true;setStatus(imageStatusEl2,'Mengupload gambar...');try{const dataUrl=await new Promise(function(resolve,reject){const reader=new FileReader();reader.onload=function(){resolve(reader.result);};reader.onerror=function(){reject(new Error('File tidak dapat dibaca.'));};reader.readAsDataURL(file);});const data=await post({action:'uploadImage',accessKey:key,dataUrl:dataUrl,fileName:file.name});if(!data.image||!data.image.url)throw new Error('Respons upload gambar tidak valid.');if(mode==='featured'){setFeatured(data.image.url,data.image.alt||titleEl2.value||'Featured image');}else{const alt=data.image.alt||titleEl2.value||'Article image';insertText('!['+alt+']('+data.image.url+')\\n\\n');}setStatus(imageStatusEl2,'✓ Gambar siap digunakan di artikel.','success');}catch(error){setStatus(imageStatusEl2,'✕ '+error.message,'danger');}finally{if(button)button.disabled=false;}}
+  document.getElementById('uploadFeaturedEdit').addEventListener('click',function(){uploadImageFile(imageFileEl2.files&&imageFileEl2.files[0],'featured');});
+  inlineImageFileEl.addEventListener('change',function(){const file=inlineImageFileEl.files&&inlineImageFileEl.files[0];if(file)uploadImageFile(file,'inline');inlineImageFileEl.value='';});
+  editor.codemirror.on('change',function(){const n=editor.value().trim().length;setStatus(contentStatusEl2,n?n.toLocaleString('id-ID')+' karakter artikel.':'Isi artikel masih kosong.');});
+  saveEl.addEventListener('click',async function(){const key=keyEl.value.trim();if(!healthState.ok)return setStatus(saveStatusEl,'Periksa koneksi Apps Script terlebih dahulu.','danger');if(!key)return setStatus(saveStatusEl,'Masukkan CMS access key terlebih dahulu.','danger');if(!currentPath)return setStatus(saveStatusEl,'Belum ada artikel yang dibuka.','danger');if(!titleEl2.value.trim())return setStatus(saveStatusEl,'Judul artikel wajib diisi.','danger');const content=editor.value().trim();if(!content)return setStatus(saveStatusEl,'Isi artikel wajib diisi.','danger');saveEl.disabled=true;setStatus(saveStatusEl,'Menyimpan perubahan ke GitHub...');try{const data=await post({action:'updateBlog',accessKey:key,path:currentPath,article:{title:titleEl2.value,description:descriptionEl2.value,seoTitle:seoTitleEl2.value,seoDescription:seoDescriptionEl2.value,pubDate:dateEl2.value,image:imageUrlEl2.value,imageAlt:imageAltEl2.value,tags:tags(tagsEl2.value),content:content}});setStatus(saveStatusEl,'✓ '+((data.blog&&data.blog.message)||'Blog berhasil diperbarui.')+' Perubahan sudah masuk GitHub.','success');}catch(error){setStatus(saveStatusEl,'✕ '+error.message,'danger');}finally{saveEl.disabled=false;}});
+  resetEl.addEventListener('click',clearEditor);
+})();
 </script>
+
 </body>
 </html>
