@@ -104,7 +104,11 @@ const breadcrumbItems = [
 ];
 ---
 
-<BaseLayout title={`${t.title} | Banggai Wonderland`} description={t.p1}>
+<BaseLayout
+  title={`${t.title} | Banggai Wonderland`}
+  description={t.p1}
+  seoTitle={lang === 'en' ? 'About Banggai Wonderland | Banggai Islands, Indonesia' : undefined}
+>
   <section class="relative min-h-[42vh] flex items-center justify-center pt-20 overflow-hidden bg-ocean-950">
     <div class="absolute inset-0 bg-gradient-to-br from-ocean-950 via-ocean-800 to-ocean-600"></div>
     <div class="absolute inset-0 bg-[radial-gradient(circle_at_70%_30%,rgba(45,212,191,0.14),transparent_45%)]"></div>
