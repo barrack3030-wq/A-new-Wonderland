@@ -16,6 +16,10 @@ const contactSeoTitle = ({
   id: 'Kontak Banggai Wonderland | Kepulauan Banggai',
   en: 'Contact Banggai Wonderland | Banggai Islands'
 } as Record<string, string>)[lang as string];
+const contactSeoDescription = ({
+  id: 'Hubungi Banggai Wonderland untuk merencanakan private trip di Kepulauan Banggai, termasuk Luwuk, Paisu Pok, Pulo Dua, dan destinasi pulau lainnya.',
+  en: 'Contact Banggai Wonderland to plan a private trip in the Banggai Islands, including Luwuk, Paisu Pok, Pulo Dua and other island destinations.'
+} as Record<string, string>)[lang as string];
 
 const breadcrumbItems = [
   { name: 'Home', url: `/${lang}/` },
@@ -27,6 +31,7 @@ const breadcrumbItems = [
   title={`${t('nav.contact')} | Banggai Wonderland`}
   description={t('contact.subtitle')}
   seoTitle={contactSeoTitle}
+  seoDescription={contactSeoDescription}
 >
   <!-- Hero Section -->
   <section class="relative h-[30vh] min-h-[250px] flex items-center justify-center pt-20">
