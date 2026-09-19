@@ -1,7 +1,7 @@
 ---
 title: Panduan Menyelam di Danau Paisu Pok
 description: Discover more about Panduan Menyelam di Danau Paisu Pok in Banggai Wonderland.
-seoTitle: ''
+seoTitle: 'Diving Guide at Paisu Pok Lake | Banggai Wonderland'
 seoDescription: ''
 image: /images/images (5).jpg
 imageAlt: ''
