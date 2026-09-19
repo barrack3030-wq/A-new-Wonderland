@@ -1,10 +1,10 @@
 ---
 title: Exploring Piala Waterfall
 description: Discover more about Exploring Piala Waterfall in Banggai Wonderland.
-seoTitle: ''
-seoDescription: ''
+seoTitle: 'Piala Waterfall Luwuk | Banggai Travel Guide'
+seoDescription: 'Guide to Piala Waterfall near Luwuk, Banggai, Central Sulawesi, with location, things to do and practical travel tips.'
 image: /images/piala.jpg
-imageAlt: ''
+imageAlt: 'Piala Waterfall near Luwuk, Banggai, surrounded by tropical forest'
 author: aji zulfikar
 pubDate: "2026-10-15T00:00:00Z"
 tags:
