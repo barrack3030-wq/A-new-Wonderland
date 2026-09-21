@@ -1,8 +1,8 @@
 ---
-title: Banggai Wonderland
-description: Experience the best of Banggai Wonderland with our exclusive tour package.
-seoTitle: '邦盖仙境旅游套餐 | Banggai Wonderland'
-seoDescription: Book the Banggai Wonderland tour package to explore the hidden paradise of Banggai.
+title: 邦盖群岛4天3夜私人旅行
+description: 4天3夜邦盖群岛私人旅行，从Luwuk前往Paisu Pok、Peleng及周边岛屿。
+seoTitle: '邦盖群岛4天3夜私人旅行 | Banggai Wonderland'
+seoDescription: 4天3夜邦盖群岛私人旅行，探索Paisu Pok、Peleng及精选自然景点。
 image: /images/wonder.jpg
 imageAlt: Banggai Wonderland
 duration: 4 Days 3 Nights
