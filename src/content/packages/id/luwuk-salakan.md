@@ -1,7 +1,7 @@
 ---
 title: Luwuk & Salakan Escape
 description: Private 3-day trip connecting Luwuk and Salakan, with local island scenery, coastal stops and flexible exploration in Banggai.
-seoTitle: 'Private Trip Luwuk Salakan 3 Hari 2 Malam | Banggai Wonderland'
+seoTitle: 'Private Trip Luwuk Salakan 3D2N | Banggai Wonderland'
 seoDescription: 'Explore Luwuk and Salakan on a private Banggai trip with local transport, coastal stops and flexible island travel.'
 image: /images/packages/luwuk-salakan.webp
 imageAlt: Luwuk and Salakan private trip
