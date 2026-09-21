@@ -94,7 +94,8 @@ const schema = {
         <p class="text-turquoise-600 text-xs font-bold tracking-[0.22em] uppercase mb-4">Banggai Islands · Indonesia</p>
         <h1 class="font-serif text-4xl md:text-6xl font-medium tracking-[-0.035em] text-ocean-900 mb-5">{copy.title}</h1>
         <p class="text-lg text-ocean-600 leading-relaxed mb-4">{copy.intro}</p>
-        <p class="text-base text-ocean-600 leading-relaxed">{copy.guide}</p>
+        <p class="text-base text-ocean-600 leading-relaxed mb-5">{copy.guide}</p>
+        <a href={`/${lang}/jasa-tour-luwuk-banggai/`} class="inline-flex items-center text-sm font-semibold text-ocean-900 underline underline-offset-4 hover:text-turquoise-600 transition-colors">{lang === 'id' ? 'Butuh itinerary custom dari Luwuk? Lihat jasa tour Luwuk Banggai' : lang === 'es' ? '¿Necesitas una ruta personalizada desde Luwuk? Ver servicios de tour' : lang === 'fr' ? 'Besoin d’un itinéraire personnalisé depuis Luwuk ? Voir nos services' : lang === 'zh' ? '需要从 Luwuk 定制路线？查看旅游服务' : 'Need a custom route from Luwuk? Explore our tour services'} →</a>
       </header>
 
       {packages.length > 0 ? (
