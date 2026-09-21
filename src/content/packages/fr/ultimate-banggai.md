@@ -1,8 +1,8 @@
 ---
-title: Ultimate Banggai
-description: Experience the best of Ultimate Banggai with our exclusive tour package.
-seoTitle: 'Circuit Ultimate Banggai | Banggai Wonderland'
-seoDescription: Book the Ultimate Banggai tour package to explore the hidden paradise of Banggai.
+title: Ultimate Banggai 6 jours 5 nuits
+description: Voyage privé de 6 jours et 5 nuits dans les îles Banggai depuis Luwuk, avec Salakan, Peleng, Banggai Laut, Kamumu, Salodik et Pulo Dua.
+seoTitle: 'Ultimate Banggai 6 jours 5 nuits | Îles Banggai'
+seoDescription: Explorez les îles Banggai pendant 6 jours et 5 nuits depuis Luwuk, avec Salakan, Peleng, Banggai Laut, Kamumu, Salodik et Pulo Dua.
 image: /images/Gemini_Generated_Image_xxtet3xxtet3xxte (4).jpg
 imageAlt: Ultimate Banggai
 duration: 6 Days 5 Nights
