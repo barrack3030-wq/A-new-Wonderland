@@ -1,7 +1,7 @@
 ---
 title: "Itinerary Luwuk: Cara Merencanakan 1, 3, 4 dan 5 Hari di Banggai"
 description: "Panduan itinerary Luwuk dan Banggai untuk 1, 3, 4 atau 5 hari, mencakup Air Terjun Piala, Kilo Lima, Paisu Pok, Peleng dan Salakan."
-seoTitle: "Itinerary Luwuk 1, 3, 4 & 5 Hari: Paisu Pok dan Banggai"
+seoTitle: "Itinerary Luwuk 1, 3, 4 & 5 Hari | Banggai Tour Guide"
 seoDescription: "Panduan perjalanan Luwuk dan Banggai untuk 1, 3, 4 atau 5 hari, mencakup Piala Waterfall, Kilo Lima, Paisu Pok, Peleng, Salakan, serta tips transportasi."
 image: "/images/Poganda-Beach-Banggai-IndonesiaJuara-Trip.webp"
 imageAlt: "Pemandangan pesisir tropis di Banggai, Indonesia"
