@@ -13,6 +13,7 @@ const t = useTranslations(lang);
       <nav class="hidden lg:flex items-center gap-8">
         <a href={`/${lang}/destinations/`} class="text-[13px] font-medium text-ocean-900/75 hover:text-ocean-900 transition">{t('nav.destinations')}</a>
         <a href={`/${lang}/packages/`} class="text-[13px] font-medium text-ocean-900/75 hover:text-ocean-900 transition">{t('nav.packages')}</a>
+        <a href={`/${lang}/jasa-tour-luwuk-banggai/`} class="text-[13px] font-medium text-ocean-900/75 hover:text-ocean-900 transition">{lang === 'id' ? 'Jasa Tour' : lang === 'es' ? 'Servicios de Tour' : lang === 'fr' ? 'Services de Tour' : lang === 'zh' ? '旅游服务' : 'Tour Services'}</a>
         <a href={`/${lang}/gallery/`} class="text-[13px] font-medium text-ocean-900/75 hover:text-ocean-900 transition">{t('nav.gallery')}</a>
         <a href={`/${lang}/blog/`} class="text-[13px] font-medium text-ocean-900/75 hover:text-ocean-900 transition">{t('nav.blog')}</a>
         <a href={`/${lang}/about/`} class="text-[13px] font-medium text-ocean-900/75 hover:text-ocean-900 transition">{t('nav.about')}</a>
@@ -26,7 +27,7 @@ const t = useTranslations(lang);
   </div>
   <div id="mobile-menu" class="hidden lg:hidden bg-white/95 backdrop-blur-2xl border-t border-black/5">
     <div class="px-5 pt-4 pb-7 space-y-1">
-      <a href={`/${lang}/destinations/`} class="block py-3 text-base font-medium">{t('nav.destinations')}</a><a href={`/${lang}/packages/`} class="block py-3 text-base font-medium">{t('nav.packages')}</a><a href={`/${lang}/gallery/`} class="block py-3 text-base font-medium">{t('nav.gallery')}</a><a href={`/${lang}/blog/`} class="block py-3 text-base font-medium">{t('nav.blog')}</a><a href={`/${lang}/about/`} class="block py-3 text-base font-medium">{t('nav.about')}</a>
+      <a href={`/${lang}/destinations/`} class="block py-3 text-base font-medium">{t('nav.destinations')}</a><a href={`/${lang}/packages/`} class="block py-3 text-base font-medium">{t('nav.packages')}</a><a href={`/${lang}/jasa-tour-luwuk-banggai/`} class="block py-3 text-base font-medium">{lang === 'id' ? 'Jasa Tour Luwuk Banggai' : lang === 'es' ? 'Servicios de Tour' : lang === 'fr' ? 'Services de Tour' : lang === 'zh' ? '旅游服务' : 'Tour Services'}</a><a href={`/${lang}/gallery/`} class="block py-3 text-base font-medium">{t('nav.gallery')}</a><a href={`/${lang}/blog/`} class="block py-3 text-base font-medium">{t('nav.blog')}</a><a href={`/${lang}/about/`} class="block py-3 text-base font-medium">{t('nav.about')}</a>
       <div class="pt-4 mt-2 border-t border-black/5"><LanguageSwitcher mobile={true} /></div>
       <a href="https://wa.me/6285820830530" target="_blank" rel="noopener noreferrer" class="mt-5 block text-center rounded-full bg-ocean-900 text-white py-3.5 font-semibold">Travel with us</a>
     </div>
