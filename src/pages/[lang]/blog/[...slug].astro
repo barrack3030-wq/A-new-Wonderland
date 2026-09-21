@@ -29,6 +29,19 @@ const recommendedPosts = sameLanguagePosts.slice(0, 8);
 
 const allDestinations = await getCollection('destinations');
 const languageDestinations = allDestinations.filter(destination => destination.slug.startsWith(`${lang}/`));
+const destinationLinkData = languageDestinations.map(destination => {
+  const destinationSlug = destination.slug.replace(`${lang}/`, '');
+  const title = destination.data.title;
+  const aliases = [
+    title,
+    title.replace(/\b(Beach|Lake|Waterfall|Island|Bay|Cave)\b/gi, '').replace(/\s+/g, ' ').trim(),
+    destinationSlug.split('-').map(part => part.charAt(0).toUpperCase() + part.slice(1)).join(' ')
+      .replace(/\b(Beach|Lake|Waterfall|Island|Bay|Cave)\b/gi, '').replace(/\s+/g, ' ').trim()
+  ];
+  if (destinationSlug.includes('pulau-dua')) aliases.push('Pulo Dua', 'Pulau Dua');
+  return { aliases: [...new Set(aliases)].filter(alias => alias.length >= 4), url: `/${lang}/destinations/${destinationSlug}/`, title };
+}).sort((a, b) => Math.max(...b.aliases.map(x => x.length)) - Math.max(...a.aliases.map(x => x.length)));
+
 const relatedDestinations = languageDestinations
   .map(destination => {
     const text = `${entry.data.title} ${entry.data.description} ${(entry.data.tags || []).join(' ')}`.toLowerCase();
@@ -91,7 +104,7 @@ const schema = {
           <div class="rounded-3xl overflow-hidden shadow-2xl mb-12 -mt-8 relative z-10">
             <img src={resolvedImage} alt={resolvedImageAlt} class="w-full h-auto object-cover max-h-[600px]" />
           </div>
-          <article class="blog-post-content prose prose-lg prose-ocean max-w-none prose-headings:font-serif prose-headings:text-ocean-900 prose-p:text-ocean-700 prose-p:leading-relaxed prose-p:text-justify prose-li:text-ocean-700 prose-a:text-turquoise-600 hover:prose-a:text-turquoise-500 prose-img:rounded-2xl prose-img:shadow-md bg-white p-8 md:p-12 rounded-3xl shadow-sm border border-sand-200">
+          <article id="blog-post-content" class="blog-post-content prose prose-lg prose-ocean max-w-none prose-headings:font-serif prose-headings:text-ocean-900 prose-p:text-ocean-700 prose-p:leading-relaxed prose-p:text-justify prose-li:text-ocean-700 prose-a:text-turquoise-600 hover:prose-a:text-turquoise-500 prose-img:rounded-2xl prose-img:shadow-md bg-white p-8 md:p-12 rounded-3xl shadow-sm border border-sand-200">
             <Content />
           </article>
           <div class="mt-12 text-center"><a href={`/${lang}/blog/`} class="inline-flex items-center text-ocean-900 font-bold hover:text-turquoise-600 transition-colors">← {t('blog.back')}</a></div>
@@ -122,6 +135,72 @@ const schema = {
       </div>
     </div>
   </section>
+
+  <script define:vars={{ destinationLinkData }}>
+    const root = document.getElementById('blog-post-content');
+    const destinations = destinationLinkData;
+
+    if (root && Array.isArray(destinations) && destinations.length) {
+      const skipTags = new Set(['A', 'CODE', 'PRE', 'SCRIPT', 'STYLE', 'H1', 'H2', 'H3', 'H4', 'H5', 'H6']);
+      const aliases = destinations.flatMap(item => item.aliases.map(alias => ({ ...item, alias })))
+        .sort((a, b) => b.alias.length - a.alias.length);
+
+      const escapeRegExp = value => value.replace(/[.*+?^$()|[\\]\\]/g, '\\  <style is:global>
+    .destination-inline-link {
+      color: inherit;
+      text-decoration-line: underline;
+      text-decoration-color: rgba(20, 184, 166, 0.55);
+      text-decoration-thickness: 1px;
+      text-underline-offset: 3px;
+      transition: color .2s ease, text-decoration-color .2s ease;
+    }
+    .destination-inline-link:hover {
+      color: rgb(13, 148, 136);
+      text-decoration-color: currentColor;
+    }
+    .sidebar-scroll');
+      const pattern = new RegExp('\\b(' + aliases.map(item => escapeRegExp(item.alias)).join('|') + ')\\b', 'gi');
+
+      const walker = document.createTreeWalker(root, NodeFilter.SHOW_TEXT);
+      const textNodes = [];
+      let current;
+      while ((current = walker.nextNode())) {
+        if (!current.parentElement || skipTags.has(current.parentElement.tagName)) continue;
+        textNodes.push(current);
+      }
+
+      for (const node of textNodes) {
+        const text = node.nodeValue || '';
+        pattern.lastIndex = 0;
+        if (!pattern.test(text)) continue;
+        pattern.lastIndex = 0;
+
+        const fragment = document.createDocumentFragment();
+        let lastIndex = 0;
+        let match;
+
+        while ((match = pattern.exec(text))) {
+          const alias = match[0];
+          const destination = aliases.find(item => item.alias.toLowerCase() === alias.toLowerCase());
+          if (!destination) continue;
+          if (match.index > lastIndex) fragment.appendChild(document.createTextNode(text.slice(lastIndex, match.index)));
+
+          const link = document.createElement('a');
+          link.href = destination.url;
+          link.textContent = alias;
+          link.className = 'destination-inline-link';
+          link.title = 'Explore ' + destination.title;
+          fragment.appendChild(link);
+          lastIndex = match.index + alias.length;
+        }
+
+        if (lastIndex > 0) {
+          if (lastIndex < text.length) fragment.appendChild(document.createTextNode(text.slice(lastIndex)));
+          node.parentNode?.replaceChild(fragment, node);
+        }
+      }
+    }
+  </script>
 
   <style is:global>
     .sidebar-scroll { max-height: 420px; overflow-y: auto; overscroll-behavior: contain; scrollbar-width: thin; }
