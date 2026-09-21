@@ -1,6 +1,6 @@
 ---
-title: Banggai Wonderland
-description: Explore Banggai on a 4-day private tour from Luwuk to Paisu Pok, Peleng and the surrounding islands.
+title: Banggai 4-Day Private Tour
+description: Explore Banggai on a 4-day private tour from Luwuk to Paisu Pok, Peleng and surrounding islands, with local guide and accommodation.
 seoTitle: 'Banggai Tour Package | 4-Day Private Trip'
 seoDescription: Explore Banggai on a 4-day private tour from Luwuk to Paisu Pok, Peleng and the surrounding islands, with local guide, accommodation and island experiences.
 image: /images/wonder.jpg
