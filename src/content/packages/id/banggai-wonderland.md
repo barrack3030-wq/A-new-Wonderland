@@ -1,8 +1,8 @@
 ---
-title: Banggai Wonderland
-description: Experience the best of Banggai Wonderland with our exclusive tour package.
+title: Paket Wisata Banggai 4 Hari 3 Malam
+description: Paket wisata Banggai 4 hari 3 malam untuk menjelajahi Paisu Pok, Pulau Peleng dan destinasi pilihan di Kepulauan Banggai.
 seoTitle: 'Paket Wisata Banggai 4 Hari 3 Malam | Banggai Wonderland'
-seoDescription: Book the Banggai Wonderland tour package to explore the hidden paradise of Banggai.
+seoDescription: Paket wisata Banggai 4 hari 3 malam untuk menjelajahi Paisu Pok, Pulau Peleng, pantai tersembunyi dan destinasi pilihan di Kepulauan Banggai.
 image: /images/wonder.jpg
 imageAlt: Banggai Wonderland
 duration: 4 Days 3 Nights
@@ -64,7 +64,7 @@ itinerary:
       End of
 ---
 
-## Overview
+## Paket Wisata Banggai 4 Hari 3 Malam
 
 Welcome to the **Banggai Wonderland** package. This carefully curated tour is designed to give you the ultimate experience in Banggai Wonderland.
 
