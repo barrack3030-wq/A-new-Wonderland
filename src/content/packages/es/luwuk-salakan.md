@@ -1,8 +1,8 @@
 ---
-title: Escapada Luwuk y Salakan
+title: Viaje Privado Luwuk Salakan 3 Días 2 Noches
 description: Viaje privado de 3 días entre Luwuk y Salakan, con trayecto marítimo, costa, gastronomía local y tiempo para explorar las islas Banggai.
-seoTitle: 'Viaje Privado Luwuk a Salakan | Banggai Wonderland'
-seoDescription: 'Descubre Luwuk y Salakan en un viaje privado por Banggai con transporte local y una ruta flexible.'
+seoTitle: 'Viaje Privado Luwuk Salakan 3 Días 2 Noches | Banggai Wonderland'
+seoDescription: 'Descubre Luwuk y Salakan en un viaje privado de 3 días y 2 noches por Banggai, con transporte local y una ruta flexible.'
 image: /images/packages/luwuk-salakan.webp
 imageAlt: Viaje privado entre Luwuk y Salakan
 duration: 3 Días 2 Noches
