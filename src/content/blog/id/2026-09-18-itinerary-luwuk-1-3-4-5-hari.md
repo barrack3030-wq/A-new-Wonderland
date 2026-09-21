@@ -1,5 +1,5 @@
 ---
-title: "Itinerary Luwuk: Cara Merencanakan 1, 3, 4 dan 5 Hari di Banggai"
+title: "Itinerary Luwuk 1, 3, 4 & 5 Hari di Banggai"
 description: "Panduan itinerary Luwuk dan Banggai untuk 1, 3, 4 atau 5 hari, mencakup Air Terjun Piala, Kilo Lima, Paisu Pok, Peleng dan Salakan."
 seoTitle: "Itinerary Luwuk 1, 3, 4 & 5 Hari | Banggai Tour Guide"
 seoDescription: "Panduan perjalanan Luwuk dan Banggai untuk 1, 3, 4 atau 5 hari, mencakup Piala Waterfall, Kilo Lima, Paisu Pok, Peleng, Salakan, serta tips transportasi."
@@ -15,7 +15,7 @@ tags:
   - "Travel"
 ---
 
-# Itinerary Luwuk: Cara Merencanakan 1, 3, 4 dan 5 Hari di Banggai
+# Itinerary Luwuk 1, 3, 4 & 5 Hari di Banggai
 
 Luwuk adalah salah satu gerbang utama menuju wilayah Banggai di Sulawesi Tengah, Indonesia. Bagi banyak wisatawan, Luwuk menjadi titik awal sebelum melanjutkan perjalanan ke Salakan, Pulau Peleng, Paisu Pok, dan destinasi lain di Kepulauan Banggai.
 
