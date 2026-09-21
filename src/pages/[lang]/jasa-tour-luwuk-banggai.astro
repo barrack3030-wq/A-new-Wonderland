@@ -209,7 +209,7 @@ const c = copy[currentLang] || copy.en;
 
 const packages = await getCollection('packages');
 const currentPackages = packages.filter(pkg => pkg.slug.startsWith(currentLang + '/'));
-const preferredPackageSlugs = ['luwuk-stopover', 'luwuk-salakan', 'banggai-wonderland', 'ultimate-banggai'];
+const preferredPackageSlugs = ['luwuk-one-day', 'luwuk-stopover', 'luwuk-salakan', 'banggai-wonderland', 'banggai-5d4n', 'ultimate-banggai'];
 const selectedPackages = preferredPackageSlugs
   .map(slug => currentPackages.find(pkg => pkg.slug === currentLang + '/' + slug))
   .filter(Boolean);
