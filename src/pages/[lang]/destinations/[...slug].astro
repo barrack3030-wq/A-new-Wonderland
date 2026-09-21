@@ -82,12 +82,12 @@ const schema = {
 };
 
 const labels = ({
-  id: { read:'Baca Artikel Lengkap', hide:'Tutup Artikel', related:'Destinasi Terkait', packages:'Paket Private Trip Terkait', articles:'Panduan Perjalanan Terkait', plan:'Rencanakan Perjalanan Ini', video:'Tonton Video' },
-  en: { read:'Read Full Article', hide:'Hide Full Article', related:'Related Destinations', packages:'Related Private Trips', articles:'Related Travel Guides', plan:'Plan This Trip', video:'Watch Video' },
-  es: { read:'Leer el artículo completo', hide:'Cerrar artículo', related:'Destinos relacionados', packages:'Viajes privados relacionados', articles:'Guías de viaje relacionadas', plan:'Planifica este viaje', video:'Ver vídeo' },
-  fr: { read:'Lire l’article complet', hide:'Réduire l’article', related:'Destinations similaires', packages:'Circuits privés associés', articles:'Guides de voyage associés', plan:'Planifier ce voyage', video:'Voir la vidéo' },
-  zh: { read:'阅读完整文章', hide:'收起文章', related:'相关目的地', packages:'相关私人旅行', articles:'相关旅行指南', plan:'规划这次旅行', video:'观看视频' }
-} as Record<string, any>)[lang as string] || { read:'Read Full Article', hide:'Hide Full Article', related:'Related Destinations', packages:'Related Private Trips', articles:'Related Travel Guides', plan:'Plan This Trip', video:'Watch Video' };
+  id: { read:'Baca Artikel Lengkap', hide:'Tutup Artikel', related:'Destinasi Terkait', packages:'Paket Private Trip Terkait', articles:'Panduan Perjalanan Terkait', plan:'Rencanakan Perjalanan Ini', video:'Tonton Video', service:'Jasa Tour Luwuk Banggai' },
+  en: { read:'Read Full Article', hide:'Hide Full Article', related:'Related Destinations', packages:'Related Private Trips', articles:'Related Travel Guides', plan:'Plan This Trip', video:'Watch Video', service:'Luwuk Banggai Tour Services' },
+  es: { read:'Leer el artículo completo', hide:'Cerrar artículo', related:'Destinos relacionados', packages:'Viajes privados relacionados', articles:'Guías de viaje relacionadas', plan:'Planifica este viaje', video:'Ver vídeo', service:'Servicios de tour Luwuk Banggai' },
+  fr: { read:'Lire l’article complet', hide:'Réduire l’article', related:'Destinations similaires', packages:'Circuits privés associés', articles:'Guides de voyage associés', plan:'Planifier ce voyage', video:'Voir la vidéo', service:'Services de tour à Luwuk Banggai' },
+  zh: { read:'阅读完整文章', hide:'收起文章', related:'相关目的地', packages:'相关私人旅行', articles:'相关旅行指南', plan:'规划这次旅行', video:'观看视频', service:'Luwuk Banggai 旅游服务' }
+} as Record<string, any>)[lang as string] || { read:'Read Full Article', hide:'Hide Full Article', related:'Related Destinations', packages:'Related Private Trips', articles:'Related Travel Guides', plan:'Plan This Trip', video:'Watch Video', service:'Luwuk Banggai Tour Services' };
 ---
 
 <BaseLayout title={`${entry.data.title} | Banggai Wonderland`} description={entry.data.description} seoTitle={entry.data.seoTitle} seoDescription={entry.data.seoDescription} ogImage={entry.data.image} imageAlt={entry.data.imageAlt} schema={schema}>
@@ -120,7 +120,7 @@ const labels = ({
       {entry.data.highlights?.length > 0 && <div class="bg-sand-50 p-6 rounded-2xl border border-sand-200"><h2 class="font-serif text-xl font-bold text-ocean-900 mb-4">Highlights</h2><ul class="space-y-3">{entry.data.highlights.map(item=><li class="flex items-start text-sm text-ocean-700"><span class="text-turquoise-500 mr-3" aria-hidden="true">✓</span>{item}</li>)}</ul></div>}
       {entry.data.bestTime && <div class="bg-sand-50 p-6 rounded-2xl border border-sand-200"><h2 class="font-serif text-xl font-bold text-ocean-900 mb-4">Best Time to Visit</h2><p class="text-sm text-ocean-700">{entry.data.bestTime}</p></div>}
       {accessText && <div class="bg-sand-50 p-6 rounded-2xl border border-sand-200"><h2 class="font-serif text-xl font-bold text-ocean-900 mb-4">{t('destinations.access') || 'Access & Transportation'}</h2><p class="text-sm leading-relaxed text-ocean-700">{accessText}</p></div>}
-      <div class="bg-ocean-800 p-8 rounded-2xl shadow-xl text-center"><h2 class="font-serif text-2xl font-bold text-white mb-4">{labels.plan}</h2><p class="text-ocean-50 text-sm mb-6">Explore {entry.data.title} as part of a private trip around the Banggai Islands.</p><a href={`/${lang}/book/?destination=${encodeURIComponent(entry.data.title)}`} class="block w-full bg-turquoise-500 text-ocean-900 px-6 py-3 rounded-full font-bold text-sm hover:bg-turquoise-400">{t('btn.book')}</a></div>
+      <div class="bg-ocean-800 p-8 rounded-2xl shadow-xl text-center"><h2 class="font-serif text-2xl font-bold text-white mb-4">{labels.plan}</h2><p class="text-ocean-50 text-sm mb-6">Explore {entry.data.title} as part of a private trip around the Banggai Islands.</p><a href={`/${lang}/book/?destination=${encodeURIComponent(entry.data.title)}`} class="block w-full bg-turquoise-500 text-ocean-900 px-6 py-3 rounded-full font-bold text-sm hover:bg-turquoise-400">{t('btn.book')}</a><a href={`/${lang}/jasa-tour-luwuk-banggai/`} class="mt-4 inline-flex text-sm font-semibold text-white/85 underline underline-offset-4 hover:text-white">{labels.service} →</a></div>
     </aside>
   </div></div></section>
   <WhatsAppButton/>
