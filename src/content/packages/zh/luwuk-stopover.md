@@ -1,8 +1,8 @@
 ---
-title: Luwuk Stopover
-description: Experience the best of Luwuk Stopover with our exclusive tour package.
-seoTitle: 'Luwuk Stopover 旅游套餐 | Banggai Wonderland'
-seoDescription: Book the Luwuk Stopover tour package to explore the hidden paradise of Banggai.
+title: Luwuk 2天1夜私人旅行
+description: 2天1夜Luwuk私人旅行，探索Salodik和Piala Waterfall，并包含私人交通和当地向导。
+seoTitle: 'Luwuk 2天1夜私人旅行 | Banggai Wonderland'
+seoDescription: 2天1夜Luwuk与Salodik私人旅行，包含Piala Waterfall、海岸景观、私人交通和当地向导。
 image: /images/asasa.jpg
 imageAlt: Luwuk Stopover
 duration: 2 Days 1 Night
