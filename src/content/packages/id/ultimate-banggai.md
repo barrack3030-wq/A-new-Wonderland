@@ -1,7 +1,7 @@
 ---
 title: Ultimate Banggai
 description: Jelajahi Kepulauan Banggai dalam private trip 6 hari dari Luwuk melalui Salakan, Peleng, Banggai Laut, Kamumu, Salodik dan Pulo Dua.
-seoTitle: 'Ultimate Banggai: Paket Wisata 6 Hari | Banggai Islands'
+seoTitle: 'Paket Wisata Banggai 6 Hari 5 Malam | Ultimate Banggai'
 seoDescription: Jelajahi Banggai selama 6 hari melalui Salakan, Peleng, Banggai Laut, Kamumu, Salodik dan Pulo Dua, dengan perjalanan privat dari Luwuk.
 image: /images/Gemini_Generated_Image_xxtet3xxtet3xxte (4).jpg
 imageAlt: Perjalanan private 6 hari menjelajahi Kepulauan Banggai dari Luwuk hingga Salakan, Peleng, Banggai Laut dan Pulo Dua.
