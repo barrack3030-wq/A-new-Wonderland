@@ -123,6 +123,8 @@ Harga-harga ini dapat berubah, jadi sebaiknya **konfirmasi dengan penyedia jasa 
 
 ### Jadi, Berapa Hari yang Anda Butuhkan?
 
+Untuk perjalanan yang perlu menyesuaikan durasi dengan koneksi kapal dan rute antarpulau, Anda dapat melihat <a href="/id/jasa-tour-luwuk-banggai/">jasa tour Luwuk Banggai</a> sebagai titik awal untuk menyusun private trip.
+
 Tidak ada jawaban tunggal yang berlaku untuk semua orang. Jika Anda hanya ingin melihat Paisu Pok Lake dan beberapa destinasi di Luwuk, **3 hari sudah cukup**. Jika Anda ingin menjelajahi lebih banyak pulau dan menikmati perjalanan tanpa terburu-buru, **4–5 hari adalah durasi yang ideal**. Dan jika Anda ingin benar-benar memahami Banggai—termasuk Banggai Laut, desa-desa pesisir, dan spot snorkeling yang tersembunyi—**6–7 hari atau lebih** akan memberi Anda pengalaman yang jauh lebih kaya.
 
 Yang terpenting adalah **menyesuaikan durasi dengan jadwal transportasi**, bukan hanya dengan daftar tempat yang ingin dikunjungi. Banggai adalah wilayah yang luas dengan konektivitas yang terbatas. Perencanaan yang realistis akan membuat perjalanan Anda jauh lebih menyenangkan.
