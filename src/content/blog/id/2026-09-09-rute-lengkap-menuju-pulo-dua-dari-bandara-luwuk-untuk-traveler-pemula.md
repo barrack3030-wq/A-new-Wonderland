@@ -187,6 +187,8 @@ Informasikan itinerary kepada keluarga atau teman
 Bawa uang tunai cukup — ATM terbatas di Luwuk, belum ada di Pulo Dua
 
 Kesimpulan: Apakah Pulo Dua Layak Dikunjungi?
+
+Bagi traveler yang ingin menggabungkan Pulo Dua dengan destinasi lain dari Luwuk, [jasa tour Luwuk Banggai](/id/jasa-tour-luwuk-banggai/) dapat menjadi titik awal untuk membahas rute dan kebutuhan perjalanan.
 Pulo Dua adalah destinasi yang sangat layak dikunjungi—terutama bagi Anda yang mencari ketenangan, keindahan alam yang masih perawan, dan pengalaman berbeda dari destinasi wisata mainstream.
 
 Ya, perjalanannya memang panjang dan membutuhkan persiapan ekstra. Tapi setiap tetes peluh di perjalanan akan terbayar lunas saat Anda berdiri di puncak bukit Pulo Dua, menyaksikan matahari terbenam di antara dua semenanjung, dengan laut biru membentang sejauh mata memandang.
