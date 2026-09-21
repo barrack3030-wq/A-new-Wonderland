@@ -1,8 +1,8 @@
 ---
-title: "Berapa Hari Ideal untuk Liburan ke Banggai? Panduan Durasi Trip"
-description: "Bingung mau liburan ke Banggai berapa hari? Panduan durasi trip 3D2N hingga 7 hari, itinerary, dan estimasi biaya untuk wisatawan."
-seoTitle: "Berapa Hari Ideal untuk Liburan ke Banggai? Panduan Durasi Trip"
-seoDescription: "Bingung mau liburan ke Banggai berapa hari? Panduan durasi trip 3D2N hingga 7 hari, itinerary, dan estimasi biaya untuk wisatawan."
+title: "Berapa Hari Ideal Liburan ke Banggai? Panduan 3D2N hingga 6D5N"
+description: "Panduan memilih durasi liburan ke Banggai dari 3D2N hingga 6D5N, dengan contoh itinerary, rute, transportasi, dan tips perjalanan."
+seoTitle: "Berapa Hari Ideal Liburan ke Banggai? Panduan 3D2N hingga 6D5N"
+seoDescription: "Panduan memilih durasi liburan ke Banggai dari 3D2N hingga 6D5N, dengan contoh itinerary, rute, transportasi, dan tips perjalanan."
 image: "/images/blog/mbuang-mbuang-banggai-laut-20260914165440.webp"
 imageAlt: "Berapa Hari Ideal untuk Liburan ke Banggai? Panduan Durasi Trip"
 author: "Banggai Wonderland"
@@ -64,7 +64,9 @@ Ada beberapa paket tour 4D3N yang tersedia, dengan itinerary yang mencakup Paisu
 
 #### 5 Hari 4 Malam: Untuk yang Ingin Menjelajah Lebih Dalam
 
-**5D4N memberi Anda ruang untuk bernapas.** Anda bisa menggabungkan Luwuk, Peleng, dan mungkin Banggai Laut dalam satu perjalanan. Ini adalah durasi yang cocok jika Anda ingin:
+**5D4N memberi Anda ruang untuk bernapas.** Anda bisa menggabungkan Luwuk, Peleng, dan mungkin Banggai Laut dalam satu perjalanan.
+
+Untuk perjalanan privat yang ingin menggabungkan Luwuk, Salakan, Peleng, dan destinasi lain dengan rute yang lebih panjang, Anda dapat mempertimbangkan [Paket Wisata Banggai 6 Hari 5 Malam](/id/packages/ultimate-banggai/) sebagai pilihan perjalanan multi-hari. Ini adalah durasi yang cocok jika Anda ingin:
 
  - Menginap dua malam di Peleng untuk eksplorasi yang lebih santai.
  - Menyeberang ke Salakan (Banggai Laut) untuk melihat sisi kepulauan yang berbeda.
