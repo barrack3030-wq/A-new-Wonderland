@@ -34,6 +34,8 @@ Panduan ini menyajikan **itinerary Luwuk 1, 3, 4 dan 5 hari** untuk wisatawan ya
 
 Jika tujuan utama Anda adalah Paisu Pok, empat atau lima hari akan membuat perjalanan lebih nyaman.
 
+Untuk perjalanan singkat dengan itinerary yang sudah disiapkan, Anda juga dapat melihat **[Paket Wisata Luwuk 2 Hari 1 Malam](/id/packages/luwuk-stopover/)**. Untuk rute yang menghubungkan Luwuk dan Salakan, tersedia **[Private Trip Luwuk Salakan 3 Hari 2 Malam](/id/packages/luwuk-salakan/)**.
+
 # Itinerary Luwuk 1 Hari
 
 Itinerary satu hari paling baik difokuskan di sekitar Luwuk. Perjalanan ke Peleng atau Salakan dan kembali pada hari yang sama tidak disarankan karena jarak dan waktu tempuhnya.
@@ -64,7 +66,7 @@ Kembali ke hotel dan makan malam di Luwuk.
 
 # Itinerary Luwuk 3 Hari
 
-**Itinerary Luwuk 3 hari** cocok untuk wisatawan yang ingin menikmati Luwuk sekaligus mengunjungi Paisu Pok.
+**Itinerary Luwuk 3 hari** cocok untuk wisatawan yang ingin menikmati Luwuk sekaligus mengunjungi Paisu Pok. Versi perjalanan yang lebih terstruktur tersedia melalui **[Private Trip Luwuk Salakan 3 Hari 2 Malam](/id/packages/luwuk-salakan/)**.
 
 Karena perjalanan ke pulau dapat memakan waktu beberapa jam, transportasi sebaiknya diatur terlebih dahulu.
 
@@ -112,7 +114,7 @@ Jika penerbangan Anda pagi, sebaiknya jangan menambahkan perjalanan jarak jauh.
 
 # Itinerary Luwuk 4 Hari
 
-Empat hari memberikan keseimbangan yang lebih baik antara waktu perjalanan dan waktu menikmati destinasi. Daripada melakukan Paisu Pok sebagai perjalanan panjang dari Luwuk, Anda dapat menginap satu malam di Peleng.
+Empat hari memberikan keseimbangan yang lebih baik antara waktu perjalanan dan waktu menikmati destinasi. Untuk paket dengan rute yang sudah disusun, lihat **[Paket Wisata Banggai 4 Hari 3 Malam](/id/packages/banggai-wonderland/)**. Daripada melakukan Paisu Pok sebagai perjalanan panjang dari Luwuk, Anda dapat menginap satu malam di Peleng.
 
 ## Hari 1: Tiba di Luwuk
 
@@ -150,7 +152,7 @@ Jika memungkinkan, habiskan malam terakhir di Luwuk.
 
 # Itinerary Luwuk 5 Hari
 
-**Itinerary Luwuk 5 hari** memungkinkan Anda menghubungkan Luwuk, Salakan, dan Peleng. Ini adalah pilihan yang baik bagi wisatawan yang ingin melihat lebih banyak wilayah Banggai.
+**Itinerary Luwuk 5 hari** memungkinkan Anda menghubungkan Luwuk, Salakan, dan Peleng. Rute ini dapat dijadikan acuan untuk perjalanan custom yang lebih panjang sebelum memilih paket yang sesuai. Ini adalah pilihan yang baik bagi wisatawan yang ingin melihat lebih banyak wilayah Banggai.
 
 ## Hari 1: Luwuk ke Salakan
 
