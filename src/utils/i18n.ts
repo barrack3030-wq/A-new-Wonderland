@@ -22,7 +22,7 @@ export const uiTranslations = {
     'nav.about': 'Tentang Kami',
     'nav.contact': 'Kontak',
     'btn.book': 'Pesan Sekarang',
-    'hero.welcome': 'Selamat Datang di Surga',
+    'hero.welcome': 'SISI TENANG INDONESIA',
     'hero.title.1': 'Temukan Surga Tersembunyi',
     'hero.title.2': 'di Banggai',
     'hero.desc': 'Rasakan pengalaman liburan premium melintasi pulau-pulau perawan, danau sejernih kristal, dan air terjun megah di Banggai Wonderland.',
