@@ -1,0 +1,407 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Breadcrumb from '../../components/Breadcrumb.astro';
+import WhatsAppButton from '../../components/WhatsAppButton.astro';
+import { languages } from '../../utils/i18n';
+import { getCollection } from 'astro:content';
+
+export function getStaticPaths() {
+  return Object.keys(languages).map((lang) => ({ params: { lang } }));
+}
+
+const { lang } = Astro.params;
+const currentLang = (lang || 'en') as keyof typeof languages;
+
+const copy = {
+  id: {
+    title: 'Jasa Tour Luwuk Banggai',
+    description: 'Jasa tour Luwuk Banggai untuk private trip Kepulauan Banggai, mulai dari Luwuk menuju Salakan, Peleng, Paisu Pok, Pulo Dua dan destinasi pilihan lainnya.',
+    eyebrow: 'Private Trip · Luwuk · Kepulauan Banggai',
+    h1: 'Jasa Tour Luwuk Banggai untuk Private Trip Kepulauan Banggai',
+    intro: 'Banggai Wonderland membantu Anda menyusun perjalanan dari Luwuk ke Kepulauan Banggai dengan itinerary yang fleksibel, rute yang disesuaikan, dan pendampingan lokal.',
+    primaryCta: 'Konsultasi via WhatsApp',
+    secondaryCta: 'Lihat Paket Wisata',
+    servicesTitle: 'Layanan Tour dari Luwuk',
+    services: [
+      ['Private trip', 'Perjalanan privat untuk pasangan, keluarga, sahabat, atau kelompok kecil.'],
+      ['Rute custom', 'Susun kombinasi Luwuk, Salakan, Peleng, Banggai Laut dan destinasi lain sesuai waktu yang tersedia.'],
+      ['Transportasi perjalanan', 'Bantuan mengatur transportasi darat dan perjalanan laut sesuai itinerary dan kondisi lapangan.'],
+      ['Local guide', 'Pendampingan lokal untuk membantu perjalanan lebih terarah dan mudah disesuaikan.']
+    ],
+    routeTitle: 'Rute dan Destinasi yang Bisa Digabungkan',
+    routeText: 'Mulai dari Luwuk, perjalanan dapat dikembangkan menjadi short trip hingga perjalanan beberapa hari ke pulau-pulau Banggai. Tidak semua destinasi harus dimasukkan dalam satu itinerary; rute dipilih berdasarkan durasi, minat, jadwal kapal, dan kondisi perjalanan.',
+    processTitle: 'Cara Kerja Private Trip',
+    process: [
+      ['01', 'Kirim rencana perjalanan', 'Sampaikan tanggal, jumlah peserta, lama perjalanan, dan destinasi yang ingin dikunjungi.'],
+      ['02', 'Susun rute', 'Kami bantu memilih kombinasi destinasi dan urutan perjalanan yang masuk akal.'],
+      ['03', 'Sesuaikan detail', 'Transportasi, penginapan, aktivitas, dan kebutuhan perjalanan dibahas sebelum keberangkatan.'],
+      ['04', 'Berangkat dari Luwuk', 'Setelah detail disepakati, perjalanan dijalankan dengan penyesuaian terhadap kondisi lokal.']
+    ],
+    packageTitle: 'Pilihan Paket Private Trip',
+    packageText: 'Gunakan paket berikut sebagai titik awal, lalu konsultasikan penyesuaian itinerary sesuai kebutuhan Anda.',
+    destinationTitle: 'Destinasi Populer',
+    faqTitle: 'Pertanyaan Umum',
+    faqs: [
+      ['Berapa hari ideal untuk trip Luwuk Banggai?', 'Durasi bergantung pada jumlah pulau dan aktivitas yang ingin dimasukkan. Untuk perjalanan singkat tersedia rute 1–2 hari, sedangkan rute kepulauan dapat dibuat beberapa hari.'],
+      ['Apakah itinerary bisa custom?', 'Ya. Itinerary dapat dibahas berdasarkan tanggal, jumlah peserta, minat, dan urutan destinasi yang diinginkan.'],
+      ['Apakah trip dimulai dari Luwuk?', 'Banyak rute dapat dimulai dari Luwuk, terutama ketika kedatangan Anda melalui Bandara Syukuran Aminuddin Amir.'],
+      ['Apakah perjalanan laut selalu berjalan sesuai jadwal?', 'Jadwal dan urutan perjalanan laut dapat dipengaruhi oleh cuaca, kondisi laut, operator, dan situasi lokal sehingga itinerary perlu tetap fleksibel.'],
+      ['Bagaimana cara booking?', 'Hubungi Banggai Wonderland melalui WhatsApp untuk mengirim tanggal perjalanan, jumlah peserta, dan kebutuhan itinerary.']
+    ],
+    closingTitle: 'Rencanakan Perjalanan Banggai Anda',
+    closingText: 'Beri tahu kami tanggal perjalanan dan destinasi yang ingin Anda prioritaskan. Kami akan membantu menyusun rute private trip yang sesuai dengan waktu dan gaya perjalanan Anda.'
+  },
+  en: {
+    title: 'Luwuk Banggai Tour Services',
+    description: 'Luwuk Banggai tour services for private trips across the Banggai Islands, from Luwuk to Salakan, Peleng, Paisu Pok, Pulo Dua and selected destinations.',
+    eyebrow: 'Private Trips · Luwuk · Banggai Islands',
+    h1: 'Luwuk Banggai Tour Services for Private Trips',
+    intro: 'Banggai Wonderland helps travellers plan journeys from Luwuk into the Banggai Islands with flexible itineraries, route planning and local assistance.',
+    primaryCta: 'Talk on WhatsApp',
+    secondaryCta: 'View Tour Packages',
+    servicesTitle: 'Tour Services from Luwuk',
+    services: [
+      ['Private trips', 'Private journeys for couples, families, friends and small groups.'],
+      ['Custom routes', 'Combine Luwuk, Salakan, Peleng, Banggai Laut and other destinations around your available time.'],
+      ['Trip logistics', 'Assistance with land transport and sea travel according to the itinerary and local conditions.'],
+      ['Local guide', 'Local assistance to keep the journey practical, clear and adaptable.']
+    ],
+    routeTitle: 'Routes and Destinations',
+    routeText: 'Starting in Luwuk, a trip can range from a short stopover to a multi-day island journey. The itinerary is shaped around your available time, interests, boat schedules and local conditions rather than forcing every destination into one route.',
+    processTitle: 'How the Private Trip Works',
+    process: [
+      ['01', 'Share your plan', 'Send your travel dates, group size, trip length and preferred destinations.'],
+      ['02', 'Build the route', 'We help combine destinations and arrange a practical travel sequence.'],
+      ['03', 'Refine the details', 'Transport, accommodation, activities and trip requirements are discussed before departure.'],
+      ['04', 'Start from Luwuk', 'Once the details are agreed, the journey runs with sensible adjustments for local conditions.']
+    ],
+    packageTitle: 'Private Trip Packages',
+    packageText: 'Use these packages as starting points, then discuss itinerary adjustments around your needs.',
+    destinationTitle: 'Popular Destinations',
+    faqTitle: 'Frequently Asked Questions',
+    faqs: [
+      ['How many days should I plan for Luwuk Banggai?', 'It depends on how many islands and activities you want to include. Short routes can fit 1–2 days, while island-focused trips can be planned over several days.'],
+      ['Can the itinerary be customized?', 'Yes. The itinerary can be discussed around your dates, group size, interests and preferred destination order.'],
+      ['Do trips start from Luwuk?', 'Many routes can start from Luwuk, especially when arriving through Syukuran Aminuddin Amir Airport.'],
+      ['Will sea travel always run on schedule?', 'Sea schedules and route order can be affected by weather, sea conditions, operators and local circumstances, so flexibility is important.'],
+      ['How do I book?', 'Contact Banggai Wonderland on WhatsApp with your dates, group size and itinerary needs.']
+    ],
+    closingTitle: 'Plan Your Banggai Journey',
+    closingText: 'Tell us your travel dates and the places you want to prioritize. We can help shape a private trip around your time and travel style.'
+  },
+  es: {
+    title: 'Servicios de Tour en Luwuk Banggai',
+    description: 'Servicios de tour en Luwuk Banggai para viajes privados por las islas Banggai, desde Luwuk hasta Salakan, Peleng, Paisu Pok y Pulo Dua.',
+    eyebrow: 'Viajes privados · Luwuk · Islas Banggai',
+    h1: 'Servicios de Tour en Luwuk Banggai para Viajes Privados',
+    intro: 'Banggai Wonderland ayuda a planificar viajes desde Luwuk hacia las islas Banggai con itinerarios flexibles y asistencia local.',
+    primaryCta: 'Consultar por WhatsApp',
+    secondaryCta: 'Ver paquetes',
+    servicesTitle: 'Servicios de Tour desde Luwuk',
+    services: [
+      ['Viajes privados', 'Viajes privados para parejas, familias, amigos y grupos pequeños.'],
+      ['Rutas personalizadas', 'Combina Luwuk, Salakan, Peleng, Banggai Laut y otros destinos según tu tiempo.'],
+      ['Logística de viaje', 'Ayuda con transporte terrestre y marítimo según el itinerario y las condiciones locales.'],
+      ['Guía local', 'Asistencia local para mantener el viaje claro, práctico y flexible.']
+    ],
+    routeTitle: 'Rutas y Destinos',
+    routeText: 'Desde Luwuk, el viaje puede ser una escapada corta o una ruta de varias islas. El itinerario se adapta al tiempo, los intereses, los horarios marítimos y las condiciones locales.',
+    processTitle: 'Cómo Funciona el Viaje Privado',
+    process: [
+      ['01', 'Comparte tu plan', 'Envía fechas, número de viajeros, duración y destinos preferidos.'],
+      ['02', 'Diseñamos la ruta', 'Ayudamos a combinar destinos y ordenar el recorrido.'],
+      ['03', 'Ajustamos los detalles', 'Comentamos transporte, alojamiento, actividades y necesidades antes de salir.'],
+      ['04', 'Salida desde Luwuk', 'Con los detalles acordados, el viaje se adapta a las condiciones locales.']
+    ],
+    packageTitle: 'Paquetes de Viaje Privado',
+    packageText: 'Usa estos paquetes como punto de partida y consulta los cambios que necesites.',
+    destinationTitle: 'Destinos Populares',
+    faqTitle: 'Preguntas Frecuentes',
+    faqs: [
+      ['¿Cuántos días necesito para Luwuk Banggai?', 'Depende de las islas y actividades que quieras incluir. Hay rutas cortas de 1–2 días y viajes de varias jornadas.'],
+      ['¿Se puede personalizar el itinerario?', 'Sí. Podemos adaptarlo a tus fechas, número de viajeros, intereses y orden de destinos.'],
+      ['¿Los viajes comienzan en Luwuk?', 'Muchas rutas pueden comenzar en Luwuk, especialmente para viajeros que llegan al aeropuerto de Syukuran Aminuddin Amir.'],
+      ['¿Los horarios marítimos son siempre fijos?', 'Pueden cambiar por el clima, las condiciones del mar, los operadores y las circunstancias locales.'],
+      ['¿Cómo reservo?', 'Contacta con Banggai Wonderland por WhatsApp y envía tus fechas, número de viajeros y necesidades.']
+    ],
+    closingTitle: 'Planifica tu Viaje a Banggai',
+    closingText: 'Cuéntanos tus fechas y los destinos prioritarios para crear un viaje privado acorde con tu tiempo y estilo.'
+  },
+  fr: {
+    title: 'Services de Tour à Luwuk Banggai',
+    description: 'Services de tour à Luwuk Banggai pour des voyages privés dans les îles Banggai, de Luwuk à Salakan, Peleng, Paisu Pok et Pulo Dua.',
+    eyebrow: 'Voyages privés · Luwuk · Îles Banggai',
+    h1: 'Services de Tour à Luwuk Banggai pour Voyages Privés',
+    intro: 'Banggai Wonderland aide les voyageurs à organiser des circuits depuis Luwuk vers les îles Banggai avec un itinéraire flexible et une assistance locale.',
+    primaryCta: 'Contacter sur WhatsApp',
+    secondaryCta: 'Voir les circuits',
+    servicesTitle: 'Services de Tour depuis Luwuk',
+    services: [
+      ['Voyages privés', 'Des voyages privés pour couples, familles, amis et petits groupes.'],
+      ['Itinéraires personnalisés', 'Combinez Luwuk, Salakan, Peleng, Banggai Laut et d’autres destinations selon votre temps.'],
+      ['Logistique', 'Aide pour les transports terrestres et maritimes selon l’itinéraire et les conditions locales.'],
+      ['Guide local', 'Une assistance locale pour garder un voyage pratique et adaptable.']
+    ],
+    routeTitle: 'Routes et Destinations',
+    routeText: 'Depuis Luwuk, le voyage peut être une courte escapade ou un itinéraire de plusieurs jours entre les îles. Le parcours s’adapte au temps disponible, aux intérêts, aux horaires maritimes et aux conditions locales.',
+    processTitle: 'Comment Fonctionne le Voyage Privé',
+    process: [
+      ['01', 'Partagez votre projet', 'Envoyez vos dates, le nombre de voyageurs, la durée et les destinations souhaitées.'],
+      ['02', 'Construisons la route', 'Nous combinons les destinations dans un ordre de voyage pratique.'],
+      ['03', 'Ajustons les détails', 'Transport, hébergement, activités et besoins sont définis avant le départ.'],
+      ['04', 'Départ de Luwuk', 'Une fois le parcours confirmé, le voyage reste adaptable aux conditions locales.']
+    ],
+    packageTitle: 'Circuits Privés',
+    packageText: 'Utilisez ces circuits comme base puis échangez avec nous pour les ajuster.',
+    destinationTitle: 'Destinations Populaires',
+    faqTitle: 'Questions Fréquentes',
+    faqs: [
+      ['Combien de jours prévoir pour Luwuk Banggai ?', 'Cela dépend des îles et activités souhaitées. Des itinéraires courts de 1 à 2 jours et des voyages de plusieurs jours sont possibles.'],
+      ['L’itinéraire peut-il être personnalisé ?', 'Oui. Il peut être adapté aux dates, au groupe, aux intérêts et à l’ordre des destinations.'],
+      ['Les voyages commencent-ils à Luwuk ?', 'De nombreux itinéraires commencent à Luwuk, notamment pour les voyageurs arrivant à l’aéroport Syukuran Aminuddin Amir.'],
+      ['Les horaires maritimes sont-ils fixes ?', 'Ils peuvent varier selon la météo, l’état de la mer, les opérateurs et les conditions locales.'],
+      ['Comment réserver ?', 'Contactez Banggai Wonderland sur WhatsApp avec vos dates, le nombre de voyageurs et vos besoins.']
+    ],
+    closingTitle: 'Préparez votre Voyage à Banggai',
+    closingText: 'Indiquez-nous vos dates et les destinations prioritaires afin de construire un voyage privé adapté à votre temps et à votre style.'
+  },
+  zh: {
+    title: 'Luwuk Banggai 旅游服务',
+    description: '提供从 Luwuk 出发的邦盖群岛私人旅行服务，可前往 Salakan、Peleng、Paisu Pok、Pulo Dua 等目的地。',
+    eyebrow: '私人旅行 · Luwuk · 邦盖群岛',
+    h1: 'Luwuk Banggai 私人旅行与定制旅游服务',
+    intro: 'Banggai Wonderland 协助游客从 Luwuk 前往邦盖群岛，提供灵活行程规划和当地协助。',
+    primaryCta: 'WhatsApp 咨询',
+    secondaryCta: '查看旅游套餐',
+    servicesTitle: 'Luwuk 出发的旅游服务',
+    services: [
+      ['私人旅行', '适合情侣、家庭、朋友和小型团队的私人行程。'],
+      ['定制路线', '根据时间安排组合 Luwuk、Salakan、Peleng、Banggai Laut 等目的地。'],
+      ['行程交通协助', '根据路线和当地情况安排陆路及海上交通。'],
+      ['当地向导', '提供当地协助，让行程更清晰并可根据情况调整。']
+    ],
+    routeTitle: '路线与目的地',
+    routeText: '从 Luwuk 出发，可以安排短途停留，也可以进行多日海岛旅行。路线会根据旅行时间、兴趣、船期和当地情况进行调整。',
+    processTitle: '私人旅行如何安排',
+    process: [
+      ['01', '发送旅行计划', '告诉我们日期、人数、旅行时长和想去的目的地。'],
+      ['02', '规划路线', '根据时间和兴趣组合目的地并安排合理顺序。'],
+      ['03', '确认细节', '出发前讨论交通、住宿、活动及其他旅行需求。'],
+      ['04', '从 Luwuk 出发', '确认后按照当地天气、海况和实际情况进行合理调整。']
+    ],
+    packageTitle: '私人旅行套餐',
+    packageText: '先参考以下套餐，再根据您的需求咨询定制路线。',
+    destinationTitle: '热门目的地',
+    faqTitle: '常见问题',
+    faqs: [
+      ['Luwuk Banggai 适合安排几天？', '取决于想去的岛屿和活动。短途可以安排 1–2 天，海岛路线则可以安排多日行程。'],
+      ['可以定制行程吗？', '可以。行程可根据日期、人数、兴趣和目的地顺序进行讨论与调整。'],
+      ['旅行是否从 Luwuk 开始？', '很多路线可以从 Luwuk 开始，尤其适合从 Syukuran Aminuddin Amir 机场抵达的游客。'],
+      ['海上交通时间是否固定？', '天气、海况、运营方和当地情况都可能影响船期，因此行程需要保留一定弹性。'],
+      ['如何预订？', '通过 WhatsApp 联系 Banggai Wonderland，并发送日期、人数和行程需求。']
+    ],
+    closingTitle: '开始规划您的邦盖之旅',
+    closingText: '告诉我们旅行日期以及优先想去的目的地，我们将协助您根据时间和旅行方式安排私人行程。'
+  }
+} as const;
+
+const c = copy[currentLang] || copy.en;
+
+const packages = await getCollection('packages');
+const currentPackages = packages.filter(pkg => pkg.slug.startsWith(currentLang + '/'));
+const preferredPackageSlugs = ['luwuk-stopover', 'luwuk-salakan', 'banggai-wonderland', 'ultimate-banggai'];
+const selectedPackages = preferredPackageSlugs
+  .map(slug => currentPackages.find(pkg => pkg.slug === currentLang + '/' + slug))
+  .filter(Boolean);
+
+const destinationData = await getCollection('destinations');
+const preferredDestinations = ['paisu-pok-lake', 'piala-waterfall', 'oyama-beach', 'pulau-dua-balantak'];
+const selectedDestinations = preferredDestinations
+  .map(slug => destinationData.find(item => item.slug === currentLang + '/' + slug))
+  .filter(Boolean);
+
+const schema = {
+  '@context': 'https://schema.org',
+  '@type': 'Service',
+  name: c.title,
+  description: c.description,
+  serviceType: currentLang === 'id' ? 'Jasa tour dan private trip Luwuk Banggai' : 'Luwuk Banggai private tour service',
+  areaServed: [
+    { '@type': 'Place', name: 'Luwuk' },
+    { '@type': 'Place', name: 'Banggai Islands' }
+  ],
+  provider: {
+    '@type': 'TravelAgency',
+    name: 'Banggai Wonderland',
+    url: 'https://banggaiwonderland.my.id/'
+  },
+  url: new URL('/' + currentLang + '/jasa-tour-luwuk-banggai/', Astro.site).href
+};
+
+const breadcrumbItems = [
+  { name: 'Home', url: '/' + currentLang + '/' },
+  { name: c.title, url: '/' + currentLang + '/jasa-tour-luwuk-banggai/' }
+];
+---
+
+<BaseLayout
+  title={c.title + ' | Banggai Wonderland'}
+  description={c.description}
+  seoTitle={c.title + ' | Banggai Wonderland'}
+  seoDescription={c.description}
+  ogImage="/images/Poganda-Beach-Banggai-IndonesiaJuara-Trip.webp"
+  imageAlt={currentLang === 'id' ? 'Pantai Poganda di Kepulauan Banggai' : 'Poganda Beach in the Banggai Islands'}
+  schema={schema}
+>
+  <main class="bg-sand-50 pt-28">
+    <div class="max-w-7xl mx-auto px-5 sm:px-8 lg:px-12 py-8">
+      <Breadcrumb items={breadcrumbItems} />
+    </div>
+
+    <section class="relative overflow-hidden bg-ocean-900 text-white">
+      <div class="absolute inset-0">
+        <img src="/images/Poganda-Beach-Banggai-IndonesiaJuara-Trip.webp" alt={currentLang === 'id' ? 'Pantai Poganda Kepulauan Banggai' : 'Poganda Beach, Banggai Islands'} class="w-full h-full object-cover opacity-45" loading="eager" />
+        <div class="absolute inset-0 bg-ocean-900/65"></div>
+      </div>
+      <div class="relative max-w-7xl mx-auto px-5 sm:px-8 lg:px-12 py-20 md:py-28">
+        <div class="max-w-4xl">
+          <p class="text-white/65 text-xs font-bold tracking-[0.24em] uppercase mb-5">{c.eyebrow}</p>
+          <h1 class="font-serif text-4xl sm:text-5xl md:text-7xl leading-[0.98] tracking-[-0.04em] font-medium mb-7">{c.h1}</h1>
+          <p class="text-white/80 text-base md:text-xl leading-relaxed max-w-3xl mb-9">{c.intro}</p>
+          <div class="flex flex-wrap gap-3">
+            <a href="https://wa.me/6285820830530" target="_blank" rel="noopener noreferrer" class="inline-flex items-center rounded-full bg-white text-ocean-900 px-6 py-3.5 text-sm font-semibold">{c.primaryCta} <span class="ml-2">→</span></a>
+            <a href={'/' + currentLang + '/packages/'} class="inline-flex items-center rounded-full border border-white/25 bg-white/10 text-white px-6 py-3.5 text-sm font-semibold">{c.secondaryCta}</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-white py-16 md:py-24">
+      <div class="max-w-7xl mx-auto px-5 sm:px-8 lg:px-12">
+        <div class="max-w-3xl mb-10">
+          <p class="text-turquoise-600 text-xs font-bold tracking-[0.22em] uppercase mb-4">Banggai Wonderland</p>
+          <h2 class="font-serif text-3xl md:text-5xl text-ocean-900 tracking-[-0.03em] font-medium mb-4">{c.servicesTitle}</h2>
+        </div>
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-5">
+          {c.services.map(([title, text], index) => (
+            <article class="rounded-2xl border border-sand-200 bg-sand-50 p-6">
+              <span class="text-xs font-bold tracking-[0.16em] text-turquoise-700">0{index + 1}</span>
+              <h3 class="font-serif text-xl text-ocean-900 mt-5 mb-3">{title}</h3>
+              <p class="text-sm leading-relaxed text-ocean-600">{text}</p>
+            </article>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-sand-50 py-16 md:py-24">
+      <div class="max-w-7xl mx-auto px-5 sm:px-8 lg:px-12 grid lg:grid-cols-[1.1fr_.9fr] gap-12 items-start">
+        <div>
+          <p class="text-turquoise-600 text-xs font-bold tracking-[0.22em] uppercase mb-4">Explore the region</p>
+          <h2 class="font-serif text-3xl md:text-5xl text-ocean-900 tracking-[-0.03em] font-medium mb-5">{c.routeTitle}</h2>
+          <p class="text-ocean-600 leading-relaxed max-w-2xl">{c.routeText}</p>
+        </div>
+        <div class="rounded-3xl bg-ocean-900 text-white p-7 md:p-9">
+          <p class="text-white/55 text-xs font-bold tracking-[0.2em] uppercase mb-4">Start in Luwuk</p>
+          <div class="grid grid-cols-2 gap-3 text-sm">
+            <a href={'/' + currentLang + '/destinations/paisu-pok-lake/'} class="rounded-xl border border-white/15 bg-white/5 px-4 py-3 hover:bg-white/10">Paisu Pok</a>
+            <a href={'/' + currentLang + '/destinations/piala-waterfall/'} class="rounded-xl border border-white/15 bg-white/5 px-4 py-3 hover:bg-white/10">Piala Waterfall</a>
+            <a href={'/' + currentLang + '/destinations/oyama-beach/'} class="rounded-xl border border-white/15 bg-white/5 px-4 py-3 hover:bg-white/10">Oyama Beach</a>
+            <a href={'/' + currentLang + '/destinations/pulau-dua-balantak/'} class="rounded-xl border border-white/15 bg-white/5 px-4 py-3 hover:bg-white/10">Pulo Dua</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-white py-16 md:py-24">
+      <div class="max-w-7xl mx-auto px-5 sm:px-8 lg:px-12">
+        <div class="max-w-3xl mb-12">
+          <p class="text-turquoise-600 text-xs font-bold tracking-[0.22em] uppercase mb-4">Flexible planning</p>
+          <h2 class="font-serif text-3xl md:text-5xl text-ocean-900 tracking-[-0.03em] font-medium mb-4">{c.processTitle}</h2>
+        </div>
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+          {c.process.map(([number, title, text]) => (
+            <article class="border-t border-ocean-900/15 pt-5">
+              <span class="text-sm font-bold text-turquoise-700">{number}</span>
+              <h3 class="font-serif text-2xl text-ocean-900 mt-4 mb-3">{title}</h3>
+              <p class="text-sm text-ocean-600 leading-relaxed">{text}</p>
+            </article>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-sand-50 py-16 md:py-24">
+      <div class="max-w-7xl mx-auto px-5 sm:px-8 lg:px-12">
+        <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-5 mb-10">
+          <div class="max-w-3xl">
+            <p class="text-turquoise-600 text-xs font-bold tracking-[0.22em] uppercase mb-4">Choose a starting point</p>
+            <h2 class="font-serif text-3xl md:text-5xl text-ocean-900 tracking-[-0.03em] font-medium mb-4">{c.packageTitle}</h2>
+            <p class="text-ocean-600 leading-relaxed">{c.packageText}</p>
+          </div>
+          <a href={'/' + currentLang + '/packages/'} class="text-sm font-semibold text-ocean-900 underline underline-offset-4">All packages →</a>
+        </div>
+        <div class="grid md:grid-cols-2 gap-5">
+          {selectedPackages.map(pkg => (
+            <a href={'/' + currentLang + '/packages/' + pkg.slug.split('/').slice(1).join('/') + '/'} class="group rounded-3xl bg-white border border-sand-200 p-6 hover:-translate-y-0.5 transition-transform">
+              <div class="flex items-start justify-between gap-4">
+                <div>
+                  <p class="text-[11px] font-bold tracking-[0.18em] uppercase text-turquoise-700">{pkg.data.duration}</p>
+                  <h3 class="font-serif text-2xl text-ocean-900 mt-2">{pkg.data.title}</h3>
+                  <p class="text-sm text-ocean-600 leading-relaxed mt-3">{pkg.data.description}</p>
+                </div>
+                <span class="text-ocean-900 text-xl">↗</span>
+              </div>
+            </a>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-white py-16 md:py-24">
+      <div class="max-w-7xl mx-auto px-5 sm:px-8 lg:px-12">
+        <div class="max-w-3xl mb-10">
+          <p class="text-turquoise-600 text-xs font-bold tracking-[0.22em] uppercase mb-4">Destination guides</p>
+          <h2 class="font-serif text-3xl md:text-5xl text-ocean-900 tracking-[-0.03em] font-medium">{c.destinationTitle}</h2>
+        </div>
+        <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
+          {selectedDestinations.map(destination => (
+            <a href={'/' + currentLang + '/destinations/' + destination.slug.split('/').slice(1).join('/') + '/'} class="group overflow-hidden rounded-2xl border border-sand-200 bg-sand-50">
+              <img src={destination.data.image} alt={destination.data.imageAlt || destination.data.title} class="w-full h-48 object-cover" loading="lazy" />
+              <div class="p-5">
+                <h3 class="font-serif text-xl text-ocean-900">{destination.data.title}</h3>
+                <p class="text-xs text-ocean-500 mt-1">{destination.data.location}</p>
+              </div>
+            </a>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-sand-50 py-16 md:py-24">
+      <div class="max-w-4xl mx-auto px-5 sm:px-8">
+        <p class="text-turquoise-600 text-xs font-bold tracking-[0.22em] uppercase mb-4">FAQ</p>
+        <h2 class="font-serif text-3xl md:text-5xl text-ocean-900 tracking-[-0.03em] font-medium mb-8">{c.faqTitle}</h2>
+        <div class="space-y-3">
+          {c.faqs.map(([question, answer]) => (
+            <details class="group rounded-2xl bg-white border border-sand-200 px-5 py-4">
+              <summary class="cursor-pointer list-none pr-6 font-semibold text-ocean-900">{question}</summary>
+              <p class="text-sm text-ocean-600 leading-relaxed pt-3">{answer}</p>
+            </details>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-ocean-900 text-white py-20 md:py-24">
+      <div class="max-w-4xl mx-auto px-5 sm:px-8 text-center">
+        <p class="text-white/50 text-xs font-bold tracking-[0.24em] uppercase mb-5">Banggai Wonderland</p>
+        <h2 class="font-serif text-4xl md:text-6xl leading-tight tracking-[-0.04em] font-medium mb-5">{c.closingTitle}</h2>
+        <p class="max-w-2xl mx-auto text-white/70 leading-relaxed mb-8">{c.closingText}</p>
+        <a href="https://wa.me/6285820830530" target="_blank" rel="noopener noreferrer" class="inline-flex rounded-full bg-white text-ocean-900 px-7 py-3.5 text-sm font-semibold">{c.primaryCta} <span class="ml-2">→</span></a>
+      </div>
+    </section>
+  </main>
+
+  <WhatsAppButton />
+</BaseLayout>
