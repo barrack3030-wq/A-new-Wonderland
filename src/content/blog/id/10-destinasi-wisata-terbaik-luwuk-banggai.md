@@ -146,6 +146,8 @@ Ambil waktu untuk berjalan di tepi pantai, menikmati angin, dan membiarkan suasa
 
 ## Destinasi mana yang paling cocok untuk Anda?
 
+Kalau Anda ingin menggabungkan beberapa destinasi tersebut tanpa menyusun koneksi transportasi sendiri, Anda dapat melihat <a href="/id/jasa-tour-luwuk-banggai/">jasa tour Luwuk Banggai</a> untuk opsi private trip dari Luwuk.
+
 Sepuluh destinasi di atas menunjukkan satu hal penting: **Banggai bukan hanya tentang satu tempat ikonik.**
 
 Kekuatan kawasan ini justru ada pada kombinasi banyak pengalaman.
