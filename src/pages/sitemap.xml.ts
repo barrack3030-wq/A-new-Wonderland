@@ -3,9 +3,6 @@ import { getCollection } from 'astro:content';
 const site = 'https://banggaiwonderland.my.id';
 const languages = ['id', 'en', 'es', 'fr', 'zh'];
 
-// Keep this list limited to routes that actually exist in src/pages/[lang].
-// New SEO sections (/tours, /travel-guide) will be added only when their
-// corresponding routes and content are implemented.
 const staticPages = [
   'about/',
   'destinations/',
@@ -13,7 +10,8 @@ const staticPages = [
   'blog/',
   'gallery/',
   'book/',
-  'contact/'
+  'contact/',
+  'jasa-tour-luwuk-banggai/'
 ];
 
 export async function GET() {
