@@ -98,6 +98,22 @@ const schema = {
         <a href={`/${lang}/jasa-tour-luwuk-banggai/`} class="inline-flex items-center text-sm font-semibold text-ocean-900 underline underline-offset-4 hover:text-turquoise-600 transition-colors">{lang === 'id' ? 'Butuh itinerary custom dari Luwuk? Lihat jasa tour Luwuk Banggai' : lang === 'es' ? '¿Necesitas una ruta personalizada desde Luwuk? Ver servicios de tour' : lang === 'fr' ? 'Besoin d’un itinéraire personnalisé depuis Luwuk ? Voir nos services' : lang === 'zh' ? '需要从 Luwuk 定制路线？查看旅游服务' : 'Need a custom route from Luwuk? Explore our tour services'} →</a>
       </header>
 
+      <section class="mb-12 rounded-3xl border border-sand-200 bg-white p-6 md:p-8">
+        <div class="max-w-3xl">
+          <p class="text-turquoise-600 text-xs font-bold tracking-[0.22em] uppercase mb-3">Trip duration</p>
+          <h2 class="font-serif text-2xl md:text-3xl font-medium text-ocean-900 mb-3">{lang === 'id' ? 'Pilih Paket Berdasarkan Durasi' : lang === 'es' ? 'Elige tu viaje según la duración' : lang === 'fr' ? 'Choisissez votre circuit selon la durée' : lang === 'zh' ? '按旅行天数选择路线' : 'Choose a Trip by Duration'}</h2>
+          <p class="text-sm leading-relaxed text-ocean-600 mb-5">{lang === 'id' ? 'Mulai dari itinerary singkat di Luwuk hingga perjalanan beberapa hari melintasi Kepulauan Banggai.' : lang === 'es' ? 'Desde escapadas cortas en Luwuk hasta viajes de varios días por las islas Banggai.' : lang === 'fr' ? 'Des courtes escapades à Luwuk aux voyages de plusieurs jours dans les îles Banggai.' : lang === 'zh' ? '从 Luwuk 短途旅行到多日邦盖群岛路线，选择适合时间的行程。' : 'From short Luwuk trips to multi-day journeys across the Banggai Islands.'}</p>
+        </div>
+        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-3">
+          <a href={"/" + lang + "/blog/2026-09-18-itinerary-luwuk-1-3-4-5-hari/"} class="rounded-2xl border border-sand-200 px-5 py-4 hover:border-turquoise-400 transition-colors"><span class="block text-xs font-bold uppercase tracking-[0.16em] text-turquoise-700">1 Day</span><span class="block text-sm font-semibold text-ocean-900 mt-1">{lang === 'id' ? 'Itinerary Luwuk 1 Hari' : 'Luwuk 1-Day Itinerary'}</span></a>
+          <a href={"/" + lang + "/packages/luwuk-stopover/"} class="rounded-2xl border border-sand-200 px-5 py-4 hover:border-turquoise-400 transition-colors"><span class="block text-xs font-bold uppercase tracking-[0.16em] text-turquoise-700">2D1N</span><span class="block text-sm font-semibold text-ocean-900 mt-1">{lang === 'id' ? 'Paket Wisata Luwuk 2 Hari 1 Malam' : 'Luwuk 2 Days 1 Night'}</span></a>
+          <a href={"/" + lang + "/packages/luwuk-salakan/"} class="rounded-2xl border border-sand-200 px-5 py-4 hover:border-turquoise-400 transition-colors"><span class="block text-xs font-bold uppercase tracking-[0.16em] text-turquoise-700">3D2N</span><span class="block text-sm font-semibold text-ocean-900 mt-1">{lang === 'id' ? 'Private Trip Luwuk Salakan' : 'Luwuk Salakan Private Trip'}</span></a>
+          <a href={"/" + lang + "/packages/banggai-wonderland/"} class="rounded-2xl border border-sand-200 px-5 py-4 hover:border-turquoise-400 transition-colors"><span class="block text-xs font-bold uppercase tracking-[0.16em] text-turquoise-700">4D3N</span><span class="block text-sm font-semibold text-ocean-900 mt-1">{lang === 'id' ? 'Paket Wisata Banggai 4 Hari 3 Malam' : 'Banggai 4 Days 3 Nights'}</span></a>
+          <a href={"/" + lang + "/blog/2026-09-18-itinerary-luwuk-1-3-4-5-hari/"} class="rounded-2xl border border-sand-200 px-5 py-4 hover:border-turquoise-400 transition-colors"><span class="block text-xs font-bold uppercase tracking-[0.16em] text-turquoise-700">5D4N</span><span class="block text-sm font-semibold text-ocean-900 mt-1">{lang === 'id' ? 'Itinerary Banggai 5 Hari' : 'Banggai 5-Day Itinerary'}</span></a>
+          <a href={"/" + lang + "/packages/ultimate-banggai/"} class="rounded-2xl border border-sand-200 px-5 py-4 hover:border-turquoise-400 transition-colors"><span class="block text-xs font-bold uppercase tracking-[0.16em] text-turquoise-700">6D5N</span><span class="block text-sm font-semibold text-ocean-900 mt-1">{lang === 'id' ? 'Paket Wisata Banggai 6 Hari 5 Malam' : 'Banggai 6 Days 5 Nights'}</span></a>
+        </div>
+      </section>
+
       {packages.length > 0 ? (
         <>
           <div class="space-y-8">
