@@ -14,9 +14,15 @@ const { lang } = Astro.params;
 const t = useTranslations(lang as any);
 const featuredSlugs = ['paisu-pok-lake', 'piala-waterfall', 'oyama-beach', 'pulau-dua-balantak'];
 const allDestinations = await getCollection('destinations');
-const featuredDestinations = featuredSlugs.map(slug => allDestinations.find(d => d.slug === `${lang}/${slug}`)).filter(Boolean);
+const featuredDestinations = featuredSlugs
+  .map(slug => allDestinations.find(d => d.slug === `${lang}/${slug}`))
+  .filter(Boolean);
+
 const allBlogs = await getCollection('blog');
-const latestBlogs = allBlogs.filter(b => b.id.startsWith(`${lang}/`)).sort((a,b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()).slice(0,3);
+const latestBlogs = allBlogs
+  .filter(b => b.id.startsWith(`${lang}/`))
+  .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf())
+  .slice(0, 3);
 
 const homeSeo = {
   en: {
@@ -45,293 +51,349 @@ const seo = homeSeo[lang as keyof typeof homeSeo] || homeSeo.en;
 ---
 
 <BaseLayout title={seo.title} description={seo.description} seoTitle={seo.title} seoDescription={seo.description}>
-  <section id="home" class="relative min-h-[100svh] flex items-end overflow-hidden bg-ocean-900">
-    <div id="hero-media" class="absolute inset-0 will-change-transform overflow-hidden">
-      <div class="hero-giphy absolute inset-0 overflow-hidden">
+  <main class="home-page">
+    <section id="home" class="bw-hero">
+      <div id="hero-media" class="bw-hero-media" aria-hidden="true">
         <iframe
           src="https://giphy.com/embed/86bAGxmMCGQU34Y"
           title="Banggai Islands ocean scene"
-          class="hero-giphy-frame border-0"
-          style="border:0;"
+          class="bw-hero-frame"
           allow="autoplay; fullscreen"
           allowFullScreen
         ></iframe>
       </div>
-      <div class="absolute inset-0 bg-gradient-to-t from-black/75 via-black/20 to-black/15 pointer-events-none"></div>
-      <div class="absolute inset-x-0 bottom-0 h-40 bg-gradient-to-t from-[#f7f7f5] via-[#f7f7f5]/25 to-transparent opacity-90 pointer-events-none"></div>
-    </div>
-    <div class="relative z-10 w-full max-w-7xl mx-auto px-6 sm:px-10 lg:px-12 pb-16 md:pb-24 pt-40">
-      <div class="max-w-4xl hero-copy">
-        <p class="text-white/80 text-xs md:text-sm font-semibold tracking-[0.28em] uppercase mb-6">{t('hero.welcome')}</p>
-        <h1 class="font-serif text-white text-5xl sm:text-6xl md:text-[4.5rem] lg:text-[5.25rem] leading-[0.95] tracking-[-0.04em] font-medium mb-8">
-          {t('hero.title.1')}<br/><span class="text-white/80">{t('hero.title.2')}</span>
-        </h1>
-        <p class="text-white/85 text-[15px] md:text-[17px] leading-[1.65] max-w-[46ch] mb-10 font-normal">{t('hero.desc')}</p>
-        <div class="flex flex-wrap gap-3">
-          <a href={`/${lang}/destinations/`} class="inline-flex items-center justify-center rounded-full bg-white text-ocean-900 px-7 py-3.5 text-sm font-semibold hover:bg-white/90 transition-all hover:-translate-y-0.5">{t('btn.explore')} <span class="ml-2">→</span></a>
-          <a href={`/${lang}/packages/`} class="hero-secondary-cta inline-flex items-center justify-center rounded-full bg-white/10 backdrop-blur-xl border border-white/25 text-white px-7 py-3.5 text-sm font-semibold hover:bg-white/20 transition-all">{t('btn.view_packages')}</a>
+      <div class="bw-hero-shade"></div>
+      <div class="bw-hero-bottom"></div>
+
+      <div class="bw-hero-top">
+        <span>BANGGAI · INDONESIA</span>
+        <span>PRIVATE JOURNEYS</span>
+      </div>
+
+      <div class="bw-hero-content">
+        <p class="bw-eyebrow bw-eyebrow-light">{t('hero.welcome')}</p>
+        <h1>{t('hero.title.1')}<br/><em>{t('hero.title.2')}</em></h1>
+        <p class="bw-hero-description">{t('hero.desc')}</p>
+        <div class="bw-hero-actions">
+          <a href={`/${lang}/packages/`} class="bw-button bw-button-light">{t('btn.view_packages')} <span>↗</span></a>
+          <a href={`/${lang}/destinations/`} class="bw-text-link bw-text-link-light">{t('btn.explore')} <span>→</span></a>
         </div>
-        <p class="mobile-hero-scroll">Scroll to explore <span>↓</span></p>
-      </div>
-    </div>
-    <div class="absolute bottom-7 right-8 md:right-12 z-10 text-white/60 text-[10px] tracking-[0.25em] uppercase hidden md:block">Banggai · Indonesia</div>
-  </section>
-
-  <section id="destinations" class="bg-[#f7f7f5] py-20 md:py-28">
-    <div class="max-w-7xl mx-auto">
-      <div class="px-6 sm:px-10 lg:px-12 max-w-3xl mb-12 md:mb-14">
-        <p class="text-ocean-600 text-xs font-bold tracking-[0.24em] uppercase mb-5">Explore Banggai Islands</p>
-        <h2 class="font-serif text-ocean-900 text-[2rem] md:text-[3.5rem] leading-[1.04] tracking-[-0.035em] font-medium mb-6 max-w-[12ch]">Places worth<br class="hidden md:block"/> travelling for.</h2>
-        <p class="text-ocean-600 text-base md:text-lg leading-relaxed max-w-2xl">{t('home.featured.destinations.desc') || 'Explore the Banggai Islands through quiet beaches, clear lagoons, waterfalls and coastal landscapes around Luwuk, Peleng and the surrounding islands.'}</p>
       </div>
 
-      {featuredDestinations.length > 0 && (
-        <>
-          <div class="desktop-destinations-grid px-6 sm:px-10 lg:px-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
-            {featuredDestinations.map(destination => <DestinationCard destination={destination} />)}
-          </div>
+      <a href="#destinations" class="bw-scroll">SCROLL TO EXPLORE <span>↓</span></a>
+      <div class="bw-hero-index">01 / 05</div>
+    </section>
 
-          <div class="mobile-destination-swiper" data-destination-swiper>
-            <div class="mobile-destination-stage" data-swipe-stage>
-              {featuredDestinations.map((destination, index) => (
-                <div class="mobile-destination-slide" data-slide={index}>
-                  <DestinationCard destination={destination} />
-                </div>
-              ))}
-            </div>
-            <div class="mobile-destination-controls">
-              <button type="button" class="mobile-destination-arrow" data-prev aria-label="Previous destination">‹</button>
-              <div class="mobile-destination-dots" aria-label="Destination position">
-                {featuredDestinations.map((_, index) => (
-                  <button type="button" class="mobile-destination-dot" data-dot={index} aria-label={`Destination ${index + 1}`} aria-current={index === 0 ? 'true' : 'false'}></button>
-                ))}
-              </div>
-              <button type="button" class="mobile-destination-arrow" data-next aria-label="Next destination">›</button>
-            </div>
-          </div>
-        </>
-      )}
-
-      <div class="px-6 sm:px-10 lg:px-12 mt-8 md:mt-8">
-        <a href={`/${lang}/destinations/`} class="text-ocean-900 text-sm font-semibold border-b border-ocean-900/30 pb-1 hover:border-ocean-900 transition-colors">Explore all Banggai destinations <span class="ml-1">→</span></a>
-      </div>
-    </div>
-  </section>
-
-  <section class="mobile-home-section mobile-why">
-    <div class="mobile-shell">
-      <p class="mobile-eyebrow">Why visit Banggai?</p>
-      <h2>Not Bali.<br/>Not Raja Ampat.<br/><span>Something quieter.</span></h2>
-      <p class="mobile-muted">The Banggai Islands offer a different kind of Indonesia travel experience: quiet islands, clear lagoons, coastal roads and hidden places to explore at a slower pace.</p>
-      <div class="mobile-benefits">
-        <div><strong>Hidden</strong><span>Quiet islands and destinations beyond the usual route.</span></div>
-        <div><strong>Clear</strong><span>Lagoons, beaches and coastal waters made for slow exploration.</span></div>
-        <div><strong>Private</strong><span>Flexible journeys shaped around your time and interests.</span></div>
-      </div>
-    </div>
-  </section>
-
-  <section class="desktop-home-seo bg-white py-20 md:py-24">
-    <div class="max-w-7xl mx-auto px-6 sm:px-10 lg:px-12">
-      <div class="max-w-3xl">
-        <p class="text-ocean-600 text-xs font-bold tracking-[0.24em] uppercase mb-5">Discover the region</p>
-        <h2 class="font-serif text-ocean-900 text-4xl md:text-6xl leading-tight tracking-[-0.035em] font-medium mb-6">Travel beyond the famous places.</h2>
-        <p class="text-ocean-600 text-base md:text-lg leading-relaxed mb-5">Banggai Wonderland helps travellers discover the Banggai Islands from Luwuk and beyond, with practical routes to islands, lagoons, waterfalls and coastal destinations. Start with our <a href={`/${lang}/destinations/paisu-pok-lake/`} class="text-ocean-900 font-semibold underline underline-offset-4">Paisu Pok travel guide</a>, explore <a href={`/${lang}/destinations/piala-waterfall/`} class="text-ocean-900 font-semibold underline underline-offset-4">Piala Waterfall</a>, or see what is possible through our <a href={`/${lang}/packages/`} class="text-ocean-900 font-semibold underline underline-offset-4">private trip packages</a>.</p>
-        <p class="text-ocean-600 text-base md:text-lg leading-relaxed">If you are planning your first visit, our <a href={`/${lang}/blog/`} class="text-ocean-900 font-semibold underline underline-offset-4">Banggai travel stories and guides</a> can help you understand destinations, routes and practical travel considerations before you arrive.</p>
-        <p class="text-ocean-600 text-base md:text-lg leading-relaxed mt-5">For travellers looking for a <a href={`/${lang}/jasa-tour-luwuk-banggai/`} class="text-ocean-900 font-semibold underline underline-offset-4">Luwuk Banggai tour service</a>, explore our private-trip planning page to see available routes and how a custom journey can be arranged from Luwuk.</p>
-      </div>
-    </div>
-  </section>
-
-  <section id="mobile-journeys" class="mobile-home-section mobile-journeys">
-    <div class="mobile-shell">
-      <div class="mobile-section-head">
-        <div>
-          <p class="mobile-eyebrow">Choose your escape</p>
-          <h2>Journeys made for Banggai.</h2>
-        </div>
-        <a href={`/${lang}/packages/`}>View all →</a>
-      </div>
-
-      <div class="mobile-journey-track">
-        <a href={`/${lang}/packages/luwuk-stopover/`} class="mobile-journey-card">
-          <img src="/images/packages/luwuk-stopover.webp" alt="Luwuk Stopover private trip in Banggai" loading="lazy" />
-          <div class="mobile-journey-overlay"></div>
-          <div class="mobile-journey-copy">
-            <span>1 day</span>
-            <h3>Luwuk Stopover</h3>
-            <p>A short introduction to Banggai from Luwuk.</p>
-          </div>
-        </a>
-        <a href={`/${lang}/packages/luwuk-salakan/`} class="mobile-journey-card">
-          <img src="/images/packages/luwuk-salakan.webp" alt="Luwuk and Salakan private trip" loading="lazy" />
-          <div class="mobile-journey-overlay"></div>
-          <div class="mobile-journey-copy">
-            <span>3D2N</span>
-            <h3>Luwuk &amp; Salakan Escape</h3>
-            <p>Island landscapes, lagoons and coastal roads.</p>
-          </div>
-        </a>
-        <a href={`/${lang}/packages/ultimate-banggai/`} class="mobile-journey-card">
-          <img src="/images/packages/ultimate-banggai.webp" alt="Ultimate Banggai private island journey" loading="lazy" />
-          <div class="mobile-journey-overlay"></div>
-          <div class="mobile-journey-copy">
-            <span>Ultimate journey</span>
-            <h3>Ultimate Banggai</h3>
-            <p>A longer route through the hidden islands of Banggai.</p>
-          </div>
-        </a>
-      </div>
-    </div>
-  </section>
-
-  <section class="desktop-journal bg-white py-20 md:py-28">
-    <div class="max-w-7xl mx-auto px-6 sm:px-10 lg:px-12">
-      <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-8 mb-12">
-        <div class="max-w-2xl"><p class="text-ocean-600 text-xs font-bold tracking-[0.24em] uppercase mb-5">The Journal</p><h2 class="font-serif text-ocean-900 text-4xl md:text-6xl tracking-[-0.035em] font-medium">Travel deeper.</h2></div>
-        <a href={`/${lang}/blog/`} class="text-ocean-900 text-sm font-semibold border-b border-ocean-900/30 pb-1 self-start md:self-auto">{t('nav.blog')} <span class="ml-1">→</span></a>
-      </div>
-      {latestBlogs.length > 0 && <div class="grid grid-cols-1 md:grid-cols-3 gap-6">{latestBlogs.map(post => <BlogCard post={post} />)}</div>}
-    </div>
-  </section>
-
-  {latestBlogs.length > 0 && (
-    <section id="mobile-journal" class="mobile-home-section mobile-journal">
-      <div class="mobile-shell">
-        <div class="mobile-section-head">
+    <section id="destinations" class="bw-section bw-destinations">
+      <div class="bw-container">
+        <div class="bw-intro-row">
           <div>
-            <p class="mobile-eyebrow">The Journal</p>
-            <h2>Travel deeper.</h2>
+            <p class="bw-eyebrow">THE BANGGAI ISLANDS</p>
+            <h2>Not Bali. Not Raja Ampat.<br/><em>Something quieter.</em></h2>
           </div>
-          <a href={`/${lang}/blog/`}>All stories →</a>
+          <p class="bw-intro-copy">A different side of Indonesia: clear lagoons, quiet islands and coastal roads made for travelling slowly.</p>
         </div>
-        <a href={`/${lang}/blog/${latestBlogs[0].slug.split('/').slice(1).join('/')}/`} class="mobile-featured-story">
-          <img src={latestBlogs[0].data.image} alt={latestBlogs[0].data.title} loading="lazy" />
-          <div class="mobile-story-overlay"></div>
-          <div class="mobile-story-copy">
-            <span>{latestBlogs[0].data.pubDate.toLocaleDateString(lang, { year: 'numeric', month: 'short', day: 'numeric' })}</span>
-            <h3>{latestBlogs[0].data.title}</h3>
-            <p>Read the story →</p>
+
+        {featuredDestinations.length > 0 && (
+          <div class="bw-destination-grid">
+            {featuredDestinations.slice(0, 3).map((destination, index) => (
+              <div class={`bw-destination-item item-${index + 1}`}>
+                <DestinationCard destination={destination} />
+                <span class="bw-card-number">0{index + 1}</span>
+              </div>
+            ))}
           </div>
-        </a>
+        )}
+
+        <div class="bw-section-footer">
+          <span>PLACES WORTH TRAVELLING FOR</span>
+          <a href={`/${lang}/destinations/`} class="bw-text-link">Explore all destinations <span>→</span></a>
+        </div>
       </div>
     </section>
-  )}
 
-  <section class="desktop-cta bg-ocean-900 text-white py-20 md:py-24">
-    <div class="max-w-5xl mx-auto px-6 text-center">
-      <p class="text-white/55 text-xs font-bold tracking-[0.25em] uppercase mb-6">Banggai Wonderland</p>
-      <h2 class="font-serif text-4xl md:text-7xl leading-tight tracking-[-0.04em] font-medium mb-7">Your next escape<br/>starts here.</h2>
-      <p class="text-white/65 max-w-xl mx-auto leading-relaxed mb-9">Planning a trip to the Banggai Islands? Tell us your dates, interests and preferred pace, and we can discuss a private journey.</p>
-      <a href="https://wa.me/6285820830530" target="_blank" rel="noopener noreferrer" class="inline-flex rounded-full bg-white text-ocean-900 px-8 py-4 text-sm font-semibold hover:bg-white/90 transition-all">{t('btn.book')} <span class="ml-2">→</span></a>
-    </div>
-  </section>
+    <section class="bw-proof">
+      <div class="bw-container bw-proof-grid">
+        <div class="bw-proof-title">
+          <p class="bw-eyebrow bw-eyebrow-light">THE PROOF</p>
+          <h2>Banggai has<br/><em>more than you think.</em></h2>
+        </div>
+        <div class="bw-stat">
+          <strong>20<span>+</span></strong>
+          <p>islands, beaches,<br/>lagoons & waterfalls</p>
+        </div>
+        <div class="bw-stat">
+          <strong>01</strong>
+          <p>local team,<br/>one-to-one planning</p>
+        </div>
+        <div class="bw-proof-note">
+          <p>We design private journeys from Luwuk into the Banggai Islands, with routes built around your pace rather than a fixed group schedule.</p>
+          <a href={`/${lang}/jasa-tour-luwuk-banggai/`} class="bw-text-link bw-text-link-light">See how we travel <span>→</span></a>
+        </div>
+      </div>
+    </section>
 
-  <section id="mobile-book" class="mobile-home-section mobile-book">
-    <div class="mobile-book-inner">
-      <p class="mobile-eyebrow">Banggai Wonderland</p>
-      <h2>Your Banggai story starts here.</h2>
-      <p>Planning a trip to the Banggai Islands? Share your dates, interests and pace with us and discuss a private journey.</p>
-      <a href="https://wa.me/6285820830530" target="_blank" rel="noopener noreferrer">Plan my trip <span>→</span></a>
-    </div>
-  </section>
+    <section class="bw-section bw-way">
+      <div class="bw-container bw-way-grid">
+        <div>
+          <p class="bw-eyebrow">THE WAY OF TRAVELING</p>
+          <h2>Travel slowly.<br/><em>See more.</em></h2>
+        </div>
+        <div class="bw-way-list">
+          <div><span>01</span><strong>Slow boat</strong><p>Let the islands set the rhythm.</p></div>
+          <div><span>02</span><strong>Local stay</strong><p>Stay closer to the people and places.</p></div>
+          <div><span>03</span><strong>Flexible pace</strong><p>Less rushing. More time in each place.</p></div>
+          <div><span>04</span><strong>Private only</strong><p>A journey arranged around your trip.</p></div>
+        </div>
+      </div>
+    </section>
 
-  <nav class="mobile-bottom-nav" aria-label="Mobile navigation">
+    <section class="bw-section bw-journeys">
+      <div class="bw-container">
+        <div class="bw-section-heading">
+          <div>
+            <p class="bw-eyebrow">PRIVATE JOURNEYS</p>
+            <h2>Choose your way<br/><em>through Banggai.</em></h2>
+          </div>
+          <a href={`/${lang}/packages/`} class="bw-text-link">View all journeys <span>→</span></a>
+        </div>
+
+        <div class="bw-journey-grid">
+          <a href={`/${lang}/packages/luwuk-stopover/`} class="bw-journey-card">
+            <img src="/images/packages/luwuk-stopover.webp" alt="Luwuk private trip" loading="lazy"/>
+            <div class="bw-journey-shade"></div>
+            <div class="bw-journey-copy"><span>02 DAYS · 01 NIGHT</span><h3>Luwuk Stopover</h3><p>A short escape built around Luwuk and its coast.</p></div>
+          </a>
+          <a href={`/${lang}/packages/banggai-wonderland/`} class="bw-journey-card">
+            <img src="/images/packages/banggai-wonderland.webp" alt="Banggai Wonderland private trip" loading="lazy"/>
+            <div class="bw-journey-shade"></div>
+            <div class="bw-journey-copy"><span>04 DAYS · 03 NIGHTS</span><h3>Banggai Wonderland</h3><p>An island journey to the places you came for.</p></div>
+          </a>
+          <a href={`/${lang}/packages/ultimate-banggai/`} class="bw-journey-card">
+            <img src="/images/packages/ultimate-banggai.webp" alt="Ultimate Banggai private trip" loading="lazy"/>
+            <div class="bw-journey-shade"></div>
+            <div class="bw-journey-copy"><span>06 DAYS · 05 NIGHTS</span><h3>Ultimate Banggai</h3><p>Go deeper across the islands, without backtracking.</p></div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="bw-journal">
+      <div class="bw-container">
+        <div class="bw-section-heading bw-journal-heading">
+          <div>
+            <p class="bw-eyebrow bw-eyebrow-light">THE JOURNAL</p>
+            <h2>Travel deeper.</h2>
+          </div>
+          <a href={`/${lang}/blog/`} class="bw-text-link bw-text-link-light">All stories <span>→</span></a>
+        </div>
+
+        {latestBlogs.length > 0 && (
+          <div class="bw-journal-grid">
+            {latestBlogs.map((post, index) => (
+              <a href={`/${lang}/blog/${post.slug.split('/').slice(1).join('/')}/`} class={`bw-story story-${index + 1}`}>
+                <img src={post.data.image} alt={post.data.title} loading="lazy"/>
+                <div class="bw-story-overlay"></div>
+                <div class="bw-story-copy">
+                  <span>{post.data.pubDate.toLocaleDateString(lang, { year: 'numeric', month: 'short', day: 'numeric' })}</span>
+                  <h3>{post.data.title}</h3>
+                  <p>Read the story →</p>
+                </div>
+              </a>
+            ))}
+          </div>
+        )}
+      </div>
+    </section>
+
+    <section class="bw-knowledge">
+      <div class="bw-container bw-knowledge-grid">
+        <div>
+          <p class="bw-eyebrow">PLAN WITH CONFIDENCE</p>
+          <h2>Know where<br/><em>you are going.</em></h2>
+        </div>
+        <div class="bw-knowledge-copy">
+          <p>Start with our practical guides for destinations, routes and trip planning across Luwuk and the Banggai Islands.</p>
+          <div class="bw-knowledge-links">
+            <a href={`/${lang}/destinations/paisu-pok-lake/`}>Paisu Pok guide <span>↗</span></a>
+            <a href={`/${lang}/destinations/piala-waterfall/`}>Piala Waterfall <span>↗</span></a>
+            <a href={`/${lang}/blog/`}>Banggai travel journal <span>↗</span></a>
+            <a href={`/${lang}/jasa-tour-luwuk-banggai/`}>Luwuk Banggai tour service <span>↗</span></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="bw-cta">
+      <div class="bw-container bw-cta-inner">
+        <p class="bw-eyebrow bw-eyebrow-light">BANGGAI WONDERLAND</p>
+        <h2>Your Banggai story<br/><em>starts here.</em></h2>
+        <p>Tell us your dates, interests and preferred pace. We will shape the route with you.</p>
+        <a href="https://wa.me/6285820830530" target="_blank" rel="noopener noreferrer" class="bw-button bw-button-light">{t('btn.book')} <span>→</span></a>
+      </div>
+    </section>
+  </main>
+
+  <nav class="bw-mobile-nav" aria-label="Mobile navigation">
     <a href="#home"><span>⌂</span><small>Home</small></a>
     <a href="#destinations"><span>◉</span><small>Places</small></a>
-    <a href="#mobile-journeys"><span>↗</span><small>Journeys</small></a>
-    <a href="#mobile-journal"><span>▤</span><small>Journal</small></a>
-    <a href="#mobile-book"><span>→</span><small>Book</small></a>
+    <a href="#journeys"><span>↗</span><small>Journeys</small></a>
+    <a href="#journal"><span>▤</span><small>Journal</small></a>
+    <a href="#contact"><span>→</span><small>Book</small></a>
   </nav>
 
   <WhatsAppButton />
 
   <style>
-    .hero-giphy-frame {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      width: 177.777778vh;
-      height: 100vw;
-      min-width: 100%;
-      min-height: 100%;
-      transform: translate(-50%, -50%);
+    .home-page { background: #f7f7f5; color: #062f3d; }
+    .bw-container { width: min(1180px, calc(100% - 64px)); margin: 0 auto; }
+    .bw-eyebrow { margin: 0 0 20px; color: #4f7b88; font-family: 'Plus Jakarta Sans', sans-serif; font-size: 10px; font-weight: 700; letter-spacing: .24em; text-transform: uppercase; }
+    .bw-eyebrow-light { color: rgba(255,255,255,.48); }
+    .bw-hero { position: relative; min-height: 100svh; display: flex; align-items: flex-end; overflow: hidden; background: #062f3d; color: white; }
+    .bw-hero-media { position: absolute; inset: 0; transform-origin: center; will-change: transform, opacity; }
+    .bw-hero-frame { position: absolute; left: 50%; top: 50%; width: 177.777778vh; height: 100vw; min-width: 100%; min-height: 100%; transform: translate(-50%, -50%); border: 0; }
+    .bw-hero-shade { position: absolute; inset: 0; background: linear-gradient(180deg, rgba(0,0,0,.16) 0%, rgba(0,0,0,.12) 38%, rgba(0,0,0,.74) 100%); }
+    .bw-hero-bottom { position: absolute; inset: auto 0 0; height: 22%; background: linear-gradient(180deg, transparent, rgba(247,247,245,.08)); }
+    .bw-hero-top { position: absolute; top: 30px; left: 0; right: 0; display: flex; justify-content: space-between; padding: 0 40px; color: rgba(255,255,255,.72); font-size: 9px; font-weight: 700; letter-spacing: .22em; }
+    .bw-hero-content { position: relative; z-index: 2; width: min(1180px, calc(100% - 64px)); margin: 0 auto; padding: 150px 0 74px; }
+    .bw-hero-content h1 { margin: 0; max-width: 880px; font-family: 'Playfair Display', serif; font-size: clamp(4rem, 8.2vw, 7.4rem); font-weight: 500; line-height: .9; letter-spacing: -.05em; }
+    .bw-hero-content h1 em { color: rgba(255,255,255,.63); font-style: normal; }
+    .bw-hero-description { max-width: 510px; margin: 34px 0 28px; color: rgba(255,255,255,.78); font-family: 'Plus Jakarta Sans', sans-serif; font-size: 15px; line-height: 1.7; }
+    .bw-hero-actions { display: flex; gap: 24px; align-items: center; flex-wrap: wrap; }
+    .bw-button { display: inline-flex; align-items: center; gap: 11px; min-height: 50px; padding: 0 23px; border-radius: 999px; font-family: 'Plus Jakarta Sans', sans-serif; font-size: 12px; font-weight: 700; text-decoration: none; transition: .3s ease; }
+    .bw-button:hover { transform: translateY(-2px); }
+    .bw-button-light { background: white; color: #062f3d; }
+    .bw-text-link { display: inline-flex; align-items: center; gap: 9px; color: #062f3d; font-family: 'Plus Jakarta Sans', sans-serif; font-size: 12px; font-weight: 700; text-decoration: none; border-bottom: 1px solid rgba(6,47,61,.22); padding-bottom: 4px; }
+    .bw-text-link span { transition: transform .3s ease; }
+    .bw-text-link:hover span { transform: translateX(4px); }
+    .bw-text-link-light { color: rgba(255,255,255,.86); border-color: rgba(255,255,255,.24); }
+    .bw-scroll { position: absolute; left: 40px; bottom: 28px; z-index: 2; color: rgba(255,255,255,.45); font-size: 9px; font-weight: 700; letter-spacing: .2em; text-decoration: none; }
+    .bw-scroll span { margin-left: 8px; }
+    .bw-hero-index { position: absolute; right: 40px; bottom: 28px; z-index: 2; color: rgba(255,255,255,.4); font-size: 9px; letter-spacing: .15em; }
+    .bw-section { padding: 120px 0; }
+    .bw-destinations { background: #f7f7f5; }
+    .bw-intro-row { display: grid; grid-template-columns: 1.35fr .65fr; gap: 80px; align-items: end; margin-bottom: 58px; }
+    .bw-intro-row h2, .bw-section-heading h2, .bw-way h2, .bw-proof h2, .bw-knowledge h2, .bw-cta h2 { margin: 0; font-family: 'Playfair Display', serif; font-size: clamp(3rem, 5.2vw, 5.1rem); line-height: .96; letter-spacing: -.045em; font-weight: 500; }
+    .bw-intro-row h2 em, .bw-section-heading h2 em, .bw-way h2 em, .bw-proof h2 em, .bw-knowledge h2 em, .bw-cta h2 em { color: #7f9aa2; font-style: normal; }
+    .bw-intro-copy { max-width: 365px; margin: 0 0 6px; color: #65848d; font-size: 15px; line-height: 1.7; }
+    .bw-destination-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; align-items: end; }
+    .bw-destination-item { position: relative; }
+    .bw-destination-item.item-2 { padding-bottom: 62px; }
+    .bw-destination-item.item-3 { padding-bottom: 118px; }
+    .bw-destination-item :global(a) { border-radius: 0; box-shadow: none; border: 0; }
+    .bw-destination-item :global(.group) { border-radius: 0 !important; }
+    .bw-destination-item :global(.group > div) { aspect-ratio: 0.76 !important; border-radius: 0 !important; }
+    .bw-destination-item :global(.group > div > span) { left: 18px !important; top: 18px !important; }
+    .bw-card-number { position: absolute; top: 14px; right: 14px; z-index: 2; color: rgba(255,255,255,.72); font-size: 9px; font-weight: 700; letter-spacing: .15em; }
+    .bw-section-footer { display: flex; justify-content: space-between; align-items: center; margin-top: 42px; padding-top: 18px; border-top: 1px solid rgba(6,47,61,.12); color: #6c8990; font-size: 9px; font-weight: 700; letter-spacing: .2em; }
+    .bw-proof { padding: 115px 0; background: #062f3d; color: white; }
+    .bw-proof-grid { display: grid; grid-template-columns: 1.4fr .6fr .6fr 1fr; gap: 44px; align-items: end; }
+    .bw-proof-title h2 { font-size: clamp(3rem, 5vw, 4.8rem); }
+    .bw-stat { padding-left: 28px; border-left: 1px solid rgba(255,255,255,.16); }
+    .bw-stat strong { display: block; font-family: 'Playfair Display', serif; font-size: 4.5rem; line-height: 1; font-weight: 500; }
+    .bw-stat strong span { color: rgba(255,255,255,.45); }
+    .bw-stat p, .bw-proof-note p { margin: 12px 0 0; color: rgba(255,255,255,.52); font-size: 12px; line-height: 1.7; }
+    .bw-proof-note { align-self: center; }
+    .bw-proof-note p { margin: 0 0 22px; font-size: 13px; }
+    .bw-way { background: white; }
+    .bw-way-grid { display: grid; grid-template-columns: .9fr 1.1fr; gap: 100px; }
+    .bw-way-list { border-top: 1px solid rgba(6,47,61,.13); }
+    .bw-way-list > div { display: grid; grid-template-columns: 48px 1fr 1fr; gap: 18px; align-items: center; padding: 19px 0; border-bottom: 1px solid rgba(6,47,61,.13); }
+    .bw-way-list span { color: #88a0a7; font-size: 9px; font-weight: 700; letter-spacing: .12em; }
+    .bw-way-list strong { font-size: 14px; }
+    .bw-way-list p { margin: 0; color: #78939b; font-size: 12px; }
+    .bw-journeys { background: #f7f7f5; }
+    .bw-section-heading { display: flex; justify-content: space-between; gap: 40px; align-items: flex-end; margin-bottom: 50px; }
+    .bw-journey-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+    .bw-journey-card, .bw-story { position: relative; overflow: hidden; display: block; background: #062f3d; text-decoration: none; color: white; }
+    .bw-journey-card { aspect-ratio: .78; }
+    .bw-journey-card img, .bw-story img { width: 100%; height: 100%; object-fit: cover; transition: transform .8s cubic-bezier(.2,.7,.2,1); }
+    .bw-journey-card:hover img, .bw-story:hover img { transform: scale(1.045); }
+    .bw-journey-shade, .bw-story-overlay { position: absolute; inset: 0; background: linear-gradient(to top, rgba(0,0,0,.76), rgba(0,0,0,.08) 62%); }
+    .bw-journey-copy, .bw-story-copy { position: absolute; left: 24px; right: 24px; bottom: 22px; }
+    .bw-journey-copy span, .bw-story-copy span { display: block; margin-bottom: 8px; color: rgba(255,255,255,.55); font-size: 9px; font-weight: 700; letter-spacing: .16em; }
+    .bw-journey-copy h3, .bw-story-copy h3 { margin: 0; font-family: 'Playfair Display', serif; font-size: 2rem; line-height: 1; font-weight: 500; letter-spacing: -.03em; }
+    .bw-journey-copy p, .bw-story-copy p { margin: 10px 0 0; color: rgba(255,255,255,.65); font-size: 11px; line-height: 1.55; max-width: 28ch; }
+    .bw-journal { padding: 120px 0; background: #071d27; color: white; }
+    .bw-journal-heading { margin-bottom: 45px; }
+    .bw-journal-heading h2 { color: white; }
+    .bw-journal-grid { display: grid; grid-template-columns: 1.25fr .75fr .75fr; gap: 18px; align-items: stretch; }
+    .bw-story-1 { min-height: 520px; }
+    .bw-story-2, .bw-story-3 { min-height: 420px; }
+    .bw-story-copy h3 { max-width: 19ch; }
+    .bw-knowledge { background: white; padding: 100px 0; }
+    .bw-knowledge-grid { display: grid; grid-template-columns: .8fr 1.2fr; gap: 100px; }
+    .bw-knowledge-copy > p { max-width: 510px; margin: 0 0 28px; color: #6c8991; font-size: 15px; line-height: 1.75; }
+    .bw-knowledge-links { display: grid; grid-template-columns: 1fr 1fr; border-top: 1px solid rgba(6,47,61,.13); }
+    .bw-knowledge-links a { display: flex; justify-content: space-between; gap: 20px; padding: 15px 0; color: #062f3d; text-decoration: none; font-size: 12px; font-weight: 700; border-bottom: 1px solid rgba(6,47,61,.13); }
+    .bw-knowledge-links a:nth-child(odd) { padding-right: 25px; }
+    .bw-knowledge-links a:nth-child(even) { padding-left: 25px; border-left: 1px solid rgba(6,47,61,.13); }
+    .bw-cta { padding: 120px 0 135px; background: #062f3d; color: white; text-align: center; }
+    .bw-cta-inner { max-width: 900px; }
+    .bw-cta h2 { color: white; font-size: clamp(3.3rem, 6vw, 6rem); }
+    .bw-cta p { max-width: 480px; margin: 24px auto 30px; color: rgba(255,255,255,.57); font-size: 14px; line-height: 1.7; }
+    .bw-mobile-nav { display: none; }
+    @media (max-width: 900px) {
+      .bw-container, .bw-hero-content { width: min(100% - 40px, 680px); }
+      .bw-hero-top { padding: 0 20px; }
+      .bw-scroll { left: 20px; }
+      .bw-hero-index { right: 20px; }
+      .bw-intro-row, .bw-proof-grid, .bw-way-grid, .bw-knowledge-grid { grid-template-columns: 1fr; gap: 42px; }
+      .bw-destination-grid, .bw-journey-grid { grid-template-columns: 1fr 1fr; }
+      .bw-destination-item.item-2, .bw-destination-item.item-3 { padding-bottom: 0; }
+      .bw-destination-item:nth-child(3) { display: none; }
+      .bw-proof-grid { gap: 28px; }
+      .bw-stat { border-left: 0; border-top: 1px solid rgba(255,255,255,.16); padding: 22px 0 0; }
+      .bw-proof-note { max-width: 560px; }
+      .bw-journal-grid { grid-template-columns: 1fr 1fr; }
+      .bw-story-1 { grid-column: 1 / -1; min-height: 460px; }
     }
-
-    .mobile-home-section,
-    .mobile-bottom-nav,
-    .mobile-hero-scroll {
-      display: none;
-    }
-
     @media (max-width: 767px) {
-      html { scroll-behavior: smooth; }
-      body { padding-bottom: 5.25rem; }
-      .hero-giphy-frame { width: 177.777778svh; height: 100svw; }
-      .hero-copy { padding-bottom: 1.5rem; }
-      .hero-copy h1 { font-size: clamp(3rem, 13vw, 4.7rem); line-height: .92; max-width: 9.5ch; margin-bottom: 1.25rem; font-family: 'Playfair Display', serif; font-weight: 500; }
-      .hero-copy > p:not(.mobile-hero-scroll) { font-size: .96rem; line-height: 1.6; max-width: 32rem; margin-bottom: 1.5rem; }
-      .hero-secondary-cta { display: none !important; }
-      .mobile-hero-scroll { display: flex; align-items: center; gap: .5rem; margin-top: 1.35rem; color: rgba(255,255,255,.65); font-size: .68rem; letter-spacing: .18em; text-transform: uppercase; }
-      .desktop-destinations-grid, .desktop-journal, .desktop-cta, .desktop-home-seo { display: none !important; }
-      #destinations { padding-top: 4.75rem; padding-bottom: 4rem; overflow: hidden; }
-      #destinations > .max-w-7xl > .px-6.sm\\:px-10.lg\\:px-12.max-w-3xl { margin-bottom: 1.4rem; }
-      #destinations h2 { font-size: 2.7rem; line-height: .98; margin-bottom: 1rem; }
-      #destinations > .max-w-7xl > .px-6.sm\\:px-10.lg\\:px-12.max-w-3xl > p:last-child { font-size: .94rem; line-height: 1.55; }
-      .mobile-destination-swiper { display: block; width: 100%; padding: 0 1rem; }
-      .mobile-destination-stage { position: relative; width: 100%; height: min(122vw, 580px); overflow: hidden; border-radius: 1.75rem; touch-action: pan-y; user-select: none; -webkit-user-select: none; }
-      .mobile-destination-slide { position: absolute; inset: 0; width: 100%; opacity: 0; transform: translate3d(105%,0,0) scale(.985); transition: transform 360ms cubic-bezier(.22,.61,.36,1), opacity 260ms ease; pointer-events: none; will-change: transform, opacity; }
-      .mobile-destination-slide.active { opacity: 1; transform: translate3d(0,0,0) scale(1); pointer-events: auto; }
-      .mobile-destination-slide.prev { transform: translate3d(-105%,0,0) scale(.985); }
-      .mobile-destination-slide.is-dragging { transition: none !important; }
-      .mobile-destination-slide > a { height: 100%; display: block; }
-      .mobile-destination-controls { display: flex; align-items: center; justify-content: space-between; gap: .7rem; margin: .9rem 0 0; }
-      .mobile-destination-arrow { width: 2.5rem; height: 2.5rem; border-radius: 999px; border: 1px solid rgba(6,43,61,.1); background: white; color: #062f3d; display: inline-flex; align-items: center; justify-content: center; font-size: 1.5rem; line-height: 1; box-shadow: 0 8px 24px rgba(6,43,61,.06); }
-      .mobile-destination-dots { display: flex; align-items: center; justify-content: center; gap: .4rem; flex: 1; }
-      .mobile-destination-dot { width: .42rem; height: .42rem; padding: 0; border: 0; border-radius: 999px; background: rgba(6,43,61,.18); transition: all 220ms ease; }
-      .mobile-destination-dot[aria-current="true"] { width: 1.4rem; background: #062f3d; }
-      .mobile-home-section { display: block; }
-      .mobile-shell { width: 100%; max-width: 32rem; margin: 0 auto; padding: 0 1.25rem; }
-      .mobile-eyebrow { margin: 0 0 .7rem; color: #3d7383; font-size: .66rem; line-height: 1; font-weight: 600; letter-spacing: .22em; text-transform: uppercase; font-family: 'Plus Jakarta Sans', sans-serif; }
-      .mobile-section-head { display: flex; justify-content: space-between; align-items: flex-end; gap: 1rem; margin-bottom: 1.2rem; }
-      .mobile-section-head h2 { margin: 0; color: #062f3d; font-family: 'Playfair Display', serif; font-size: 2.35rem; line-height: .98; letter-spacing: -.035em; font-weight: 500; }
-      .mobile-section-head > a { color: #062f3d; font-size: .72rem; font-weight: 700; white-space: nowrap; padding-bottom: .2rem; border-bottom: 1px solid rgba(6,47,61,.18); }
-      .mobile-why { background: #062f3d; color: white; padding: 5rem 0 4.8rem; }
-      .mobile-why .mobile-eyebrow { color: rgba(255,255,255,.5); }
-      .mobile-why h2 { margin: 0; font-family: 'Playfair Display', serif; font-size: 2.65rem; line-height: .98; letter-spacing: -.04em; font-weight: 500; }
-      .mobile-why h2 span { color: rgba(255,255,255,.55); }
-      .mobile-muted { max-width: 28rem; margin: 1.2rem 0 0; color: rgba(255,255,255,.66); font-size: .95rem; line-height: 1.65; }
-      .mobile-benefits { display: grid; gap: .9rem; margin-top: 2rem; }
-      .mobile-benefits > div { display: grid; grid-template-columns: 5.25rem 1fr; gap: .9rem; align-items: start; padding-top: .9rem; border-top: 1px solid rgba(255,255,255,.12); }
-      .mobile-benefits strong { color: white; font-size: .78rem; letter-spacing: .08em; text-transform: uppercase; }
-      .mobile-benefits span { color: rgba(255,255,255,.58); font-size: .82rem; line-height: 1.55; }
-      .mobile-journeys { background: #f7f7f5; padding: 4.5rem 0 4rem; overflow: hidden; }
-      .mobile-journey-track { display: flex; gap: .85rem; overflow-x: auto; margin: 0 -1.25rem; padding: 0 1.25rem .5rem; scrollbar-width: none; scroll-snap-type: x mandatory; }
-      .mobile-journey-track::-webkit-scrollbar { display: none; }
-      .mobile-journey-card { position: relative; flex: 0 0 84vw; max-width: 28rem; aspect-ratio: .78; overflow: hidden; border-radius: 1.6rem; scroll-snap-align: start; background: #062f3d; }
-      .mobile-journey-card img, .mobile-featured-story img { width: 100%; height: 100%; object-fit: cover; }
-      .mobile-journey-overlay, .mobile-story-overlay { position: absolute; inset: 0; background: linear-gradient(to top, rgba(0,0,0,.78) 0%, rgba(0,0,0,.22) 48%, rgba(0,0,0,.08) 100%); }
-      .mobile-journey-copy { position: absolute; left: 1.1rem; right: 1.1rem; bottom: 1.15rem; color: white; }
-      .mobile-journey-copy span, .mobile-story-copy span { display: block; margin-bottom: .45rem; color: rgba(255,255,255,.65); font-size: .62rem; font-weight: 800; letter-spacing: .16em; text-transform: uppercase; }
-      .mobile-journey-copy h3, .mobile-story-copy h3 { margin: 0; font-family: 'Playfair Display', serif; font-size: 1.9rem; line-height: 1; letter-spacing: -.025em; font-weight: 500; }
-      .mobile-journey-copy p, .mobile-story-copy p { margin: .65rem 0 0; color: rgba(255,255,255,.72); font-size: .82rem; line-height: 1.5; }
-      .mobile-journal { background: white; padding: 4.3rem 0; }
-      .mobile-featured-story { position: relative; display: block; aspect-ratio: .9; overflow: hidden; border-radius: 1.6rem; background: #062f3d; }
-      .mobile-story-copy { position: absolute; left: 1.15rem; right: 1.15rem; bottom: 1.1rem; color: white; }
-      .mobile-story-copy h3 { font-size: 2rem; line-height: 1.03; max-width: 17ch; }
-      .mobile-book { background: #062f3d; color: white; padding: 5rem 1.25rem 6.5rem; }
-      .mobile-book-inner { max-width: 32rem; margin: 0 auto; text-align: center; }
-      .mobile-book .mobile-eyebrow { color: rgba(255,255,255,.5); }
-      .mobile-book h2 { margin: 0 auto; font-family: 'Playfair Display', serif; font-size: 2.7rem; line-height: .98; letter-spacing: -.04em; font-weight: 500; }
-      .mobile-book p { max-width: 27rem; margin: 1rem auto 1.5rem; color: rgba(255,255,255,.64); font-size: .9rem; line-height: 1.65; }
-      .mobile-book a { display: inline-flex; align-items: center; justify-content: center; min-height: 3.2rem; padding: 0 1.25rem; border-radius: 999px; background: white; color: #062f3d; font-size: .82rem; font-weight: 800; }
-      .mobile-book a span { margin-left: .55rem; }
-      .mobile-bottom-nav { position: fixed; left: .7rem; right: .7rem; bottom: .65rem; z-index: 60; display: grid; grid-template-columns: repeat(5, 1fr); gap: .2rem; padding: .5rem; border: 1px solid rgba(255,255,255,.55); border-radius: 1.15rem; background: rgba(255,255,255,.9); backdrop-filter: blur(18px); -webkit-backdrop-filter: blur(18px); box-shadow: 0 12px 40px rgba(6,43,61,.18); }
-      .mobile-bottom-nav a { min-height: 3.5rem; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: .18rem; border-radius: .8rem; color: #557681; text-decoration: none; }
-      .mobile-bottom-nav a:first-child { background: #062f3d; color: white; }
-      .mobile-bottom-nav span { font-size: .95rem; line-height: 1; }
-      .mobile-bottom-nav small { font-size: .54rem; font-weight: 700; letter-spacing: .02em; }
-      .mobile-bottom-nav ~ .fixed { bottom: 5.7rem; }
+      body { padding-bottom: 5.4rem; }
+      .bw-container, .bw-hero-content { width: calc(100% - 32px); }
+      .bw-hero { min-height: 92svh; }
+      .bw-hero-content { padding: 135px 0 52px; }
+      .bw-hero-content h1 { font-size: clamp(3.2rem, 15vw, 5.2rem); line-height: .91; max-width: 8.6ch; }
+      .bw-hero-description { margin: 23px 0; font-size: 13px; line-height: 1.65; max-width: 34ch; }
+      .bw-hero-actions { gap: 16px; }
+      .bw-button { min-height: 46px; padding: 0 18px; font-size: 11px; }
+      .bw-hero-top { top: 20px; font-size: 7px; letter-spacing: .16em; }
+      .bw-hero-index { display: none; }
+      .bw-scroll { left: 16px; bottom: 16px; font-size: 7px; }
+      .bw-section { padding: 76px 0; }
+      .bw-intro-row { gap: 22px; margin-bottom: 30px; }
+      .bw-intro-row h2, .bw-section-heading h2, .bw-way h2, .bw-proof h2, .bw-knowledge h2, .bw-cta h2 { font-size: clamp(2.65rem, 12vw, 4rem); line-height: .96; }
+      .bw-intro-copy { font-size: 13px; line-height: 1.65; }
+      .bw-destination-grid { grid-template-columns: 1fr; gap: 12px; }
+      .bw-destination-item:nth-child(2) { display: none; }
+      .bw-destination-item :global(.group > div) { aspect-ratio: .83 !important; }
+      .bw-section-footer { margin-top: 25px; display: block; }
+      .bw-section-footer > span { display: block; margin-bottom: 18px; }
+      .bw-proof { padding: 78px 0; }
+      .bw-proof-grid { gap: 28px; }
+      .bw-stat strong { font-size: 3.5rem; }
+      .bw-way-grid { gap: 34px; }
+      .bw-way-list > div { grid-template-columns: 34px 1fr; gap: 10px; }
+      .bw-way-list p { grid-column: 2; margin-top: -4px; }
+      .bw-section-heading { margin-bottom: 30px; display: block; }
+      .bw-section-heading > a { margin-top: 20px; }
+      .bw-journey-grid { display: flex; overflow-x: auto; gap: 12px; margin-right: -16px; padding-right: 16px; scrollbar-width: none; scroll-snap-type: x mandatory; }
+      .bw-journey-grid::-webkit-scrollbar { display: none; }
+      .bw-journey-card { flex: 0 0 82vw; max-width: 330px; scroll-snap-align: start; }
+      .bw-journal { padding: 78px 0; }
+      .bw-journal-grid { display: flex; overflow-x: auto; gap: 12px; margin-right: -16px; padding-right: 16px; scrollbar-width: none; scroll-snap-type: x mandatory; }
+      .bw-journal-grid::-webkit-scrollbar { display: none; }
+      .bw-story, .bw-story-1, .bw-story-2, .bw-story-3 { flex: 0 0 82vw; min-height: 430px; scroll-snap-align: start; }
+      .bw-knowledge { padding: 74px 0; }
+      .bw-knowledge-links { grid-template-columns: 1fr; }
+      .bw-knowledge-links a, .bw-knowledge-links a:nth-child(odd), .bw-knowledge-links a:nth-child(even) { padding: 14px 0; border-left: 0; }
+      .bw-cta { padding: 82px 0 110px; }
+      .bw-cta p { font-size: 13px; }
+      .bw-mobile-nav { position: fixed; display: grid; grid-template-columns: repeat(5, 1fr); left: 8px; right: 8px; bottom: 8px; z-index: 70; padding: 6px; gap: 2px; border: 1px solid rgba(255,255,255,.55); border-radius: 18px; background: rgba(255,255,255,.91); backdrop-filter: blur(18px); -webkit-backdrop-filter: blur(18px); box-shadow: 0 15px 45px rgba(6,43,61,.2); }
+      .bw-mobile-nav a { min-height: 54px; display: flex; flex-direction: column; justify-content: center; align-items: center; gap: 3px; color: #5b7983; text-decoration: none; border-radius: 12px; }
+      .bw-mobile-nav a:first-child { background: #062f3d; color: white; }
+      .bw-mobile-nav span { font-size: 14px; line-height: 1; }
+      .bw-mobile-nav small { font-family: 'Plus Jakarta Sans', sans-serif; font-size: 8px; font-weight: 700; }
     }
   </style>
 
@@ -339,96 +401,19 @@ const seo = homeSeo[lang as keyof typeof homeSeo] || homeSeo.en;
     const heroMedia = document.getElementById('hero-media');
     if (heroMedia) {
       let ticking = false;
-      const updateHeroFade = () => {
-        const progress = Math.min(window.scrollY / (window.innerHeight * 0.7), 1);
-        heroMedia.style.opacity = String(1 - progress * 0.72);
-        heroMedia.style.transform = `scale(${1 + progress * 0.025})`;
+      const updateHero = () => {
+        const progress = Math.min(window.scrollY / (window.innerHeight * 0.72), 1);
+        heroMedia.style.opacity = String(1 - progress * 0.7);
+        heroMedia.style.transform = `scale(${1 + progress * 0.035})`;
         ticking = false;
       };
-      updateHeroFade();
+      updateHero();
       window.addEventListener('scroll', () => {
         if (!ticking) {
-          window.requestAnimationFrame(updateHeroFade);
+          requestAnimationFrame(updateHero);
           ticking = true;
         }
       }, { passive: true });
-    }
-
-    const destinationSwiper = document.querySelector('[data-destination-swiper]');
-    if (destinationSwiper) {
-      const slides = Array.from(destinationSwiper.querySelectorAll('[data-slide]'));
-      const dots = Array.from(destinationSwiper.querySelectorAll('[data-dot]'));
-      const prevButton = destinationSwiper.querySelector('[data-prev]');
-      const nextButton = destinationSwiper.querySelector('[data-next]');
-      const stage = destinationSwiper.querySelector('[data-swipe-stage]');
-      let current = 0;
-      let startX = 0;
-      let startY = 0;
-      let deltaX = 0;
-      let dragging = false;
-      let horizontalDrag = false;
-      let moved = false;
-      const clampIndex = (index) => (index + slides.length) % slides.length;
-      const setIndicator = () => dots.forEach((dot, i) => dot.setAttribute('aria-current', i === current ? 'true' : 'false'));
-      const positionSlides = () => {
-        if (!slides.length) return;
-        slides.forEach((slide, i) => {
-          slide.classList.remove('active', 'prev', 'is-dragging');
-          slide.style.removeProperty('transform');
-          slide.style.removeProperty('opacity');
-          if (i === current) slide.classList.add('active');
-          else if (i === clampIndex(current - 1)) slide.classList.add('prev');
-          else slide.style.transform = 'translate3d(105%,0,0) scale(.985)';
-        });
-        setIndicator();
-      };
-      const goTo = (index) => { if (!slides.length) return; current = clampIndex(index); positionSlides(); };
-      const finishGesture = () => {
-        if (!dragging) return;
-        dragging = false;
-        const width = stage?.clientWidth || 320;
-        const shouldChange = Math.abs(deltaX) > Math.max(55, width * 0.18);
-        const direction = deltaX < 0 ? 1 : -1;
-        slides[current]?.classList.remove('is-dragging');
-        if (horizontalDrag && shouldChange) goTo(current + direction); else positionSlides();
-        deltaX = 0;
-        horizontalDrag = false;
-      };
-      positionSlides();
-      prevButton?.addEventListener('click', () => goTo(current - 1));
-      nextButton?.addEventListener('click', () => goTo(current + 1));
-      dots.forEach((dot, index) => dot.addEventListener('click', () => goTo(index)));
-      stage?.addEventListener('pointerdown', (event) => {
-        if (event.pointerType === 'mouse' && event.button !== 0) return;
-        dragging = true; horizontalDrag = false; moved = false; startX = event.clientX; startY = event.clientY; deltaX = 0;
-        try { stage.setPointerCapture(event.pointerId); } catch {}
-        slides[current]?.classList.add('is-dragging');
-      });
-      stage?.addEventListener('pointermove', (event) => {
-        if (!dragging) return;
-        const dx = event.clientX - startX;
-        const dy = event.clientY - startY;
-        if (!horizontalDrag && Math.abs(dx) < 8 && Math.abs(dy) < 8) return;
-        if (!horizontalDrag) {
-          if (Math.abs(dy) > Math.abs(dx)) { finishGesture(); return; }
-          horizontalDrag = true;
-        }
-        moved = true; deltaX = dx; event.preventDefault();
-        const activeSlide = slides[current];
-        if (!activeSlide) return;
-        const width = stage.clientWidth || 320;
-        const percent = Math.max(-100, Math.min(100, (dx / width) * 100));
-        const scale = 1 - Math.min(Math.abs(percent), 30) / 1000;
-        const opacity = 1 - Math.min(Math.abs(percent), 100) / 900;
-        activeSlide.style.transform = `translate3d(${percent}%,0,0) scale(${scale})`;
-        activeSlide.style.opacity = String(opacity);
-      }, { passive: false });
-      stage?.addEventListener('pointerup', finishGesture);
-      stage?.addEventListener('pointercancel', finishGesture);
-      stage?.addEventListener('lostpointercapture', finishGesture);
-      stage?.addEventListener('click', (event) => {
-        if (moved) { event.preventDefault(); event.stopPropagation(); moved = false; }
-      }, true);
     }
   </script>
 </BaseLayout>
