@@ -1,6 +1,6 @@
 ---
-title: Luwuk Stopover
-description: Paket wisata 2 hari 1 malam untuk menjelajahi Luwuk dan Salodik, termasuk Piala Waterfall, pesisir Luwuk, transportasi privat, dan pemandu lokal.
+title: Paket Wisata Luwuk 2 Hari 1 Malam
+description: Paket wisata Luwuk 2 hari 1 malam untuk menjelajahi Piala Waterfall, pesisir Luwuk, Salodik, serta destinasi sekitar Luwuk dengan transportasi privat dan pemandu lokal.
 seoTitle: 'Paket Wisata Luwuk 2 Hari 1 Malam | Banggai Wonderland'
 seoDescription: Paket wisata Luwuk 2 hari 1 malam dengan Piala Waterfall, pesisir Luwuk, Salodik, transportasi privat, dan pemandu lokal.
 image: /images/asasa.jpg
@@ -23,7 +23,7 @@ excluded:
 itinerary: []
 ---
 
-## Luwuk Stopover
+## Paket Wisata Luwuk 2 Hari 1 Malam
 
 **2 Hari 1 Malam**
 _Luwuk City • Salodik_
