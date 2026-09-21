@@ -144,11 +144,11 @@ Untuk pengalaman yang memuaskan, minimal 3 hari 2 malam. Jika ingin menjelajahi 
 
 ### Apakah bisa liburan ke Banggai hanya dalam 2 hari?
 
-Bisa, tetapi sangat terbatas. Anda kemungkinan hanya bisa mengunjungi satu destinasi utama seperti Paisu Pok Lake atau air terjun di sekitar Luwuk. Sebagian besar waktu akan habis di perjalanan.
+Bisa, tetapi sangat terbatas. Anda kemungkinan hanya bisa mengunjungi satu destinasi utama seperti Paisu Pok Lake atau air terjun di sekitar Luwuk. Sebagian besar waktu akan habis di perjalanan. Untuk itinerary yang sudah disusun di sekitar Luwuk, lihat [Paket Wisata Luwuk 2 Hari 1 Malam](/id/packages/luwuk-stopover/).
 
 ### Berapa biaya trip ke Banggai untuk 3 hari?
 
-Paket private trip 3D2N mulai dari sekitar Rp4.500.000 per orang untuk grup 4 orang, hingga Rp8.500.000 untuk solo traveler. Biaya ini biasanya sudah mencakup transportasi, akomodasi, dan sebagian makan.
+Paket private trip 3D2N yang sesuai untuk rute Luwuk dan Salakan dapat dilihat pada [Private Trip Luwuk Salakan 3 Hari 2 Malam](/id/packages/luwuk-salakan/). Harga dan cakupan perjalanan sebaiknya dikonfirmasi sebelum booking.
 
 ### Apakah Paisu Pok Lake bisa dikunjungi sebagai day trip dari Luwuk?
 
@@ -156,7 +156,7 @@ Secara teknis bisa, tetapi tidak disarankan. Perjalanan dari Luwuk ke Paisu Pok 
 
 ### Apa saja yang bisa dilihat dalam 4 hari di Banggai?
 
-Dengan 4 hari, Anda bisa mengunjungi air terjun di sekitar Luwuk (Salodik atau Piala), menyeberang ke Peleng untuk Paisu Pok Lake dan Paisu Batango Lagoon, serta menikmati pantai seperti Poganda Beach.
+Dengan 4 hari, Anda bisa mengunjungi air terjun di sekitar Luwuk (Salodik atau Piala), menyeberang ke Peleng untuk Paisu Pok Lake dan Paisu Batango Lagoon, serta menikmati pantai seperti Poganda Beach. Rute paket yang sudah disusun tersedia pada [Paket Wisata Banggai 4 Hari 3 Malam](/id/packages/banggai-wonderland/).
 
 ### Kapan waktu terbaik untuk liburan ke Banggai?
 
