@@ -1,8 +1,8 @@
 ---
-title: Ultimate Banggai
-description: Experience the best of Ultimate Banggai with our exclusive tour package.
-seoTitle: 'Ultimate Banggai 旅游套餐 | Banggai Wonderland'
-seoDescription: Book the Ultimate Banggai tour package to explore the hidden paradise of Banggai.
+title: 邦盖群岛6天5夜私人旅行
+description: 6天5夜邦盖群岛私人旅行，从Luwuk经过Salakan、Peleng、Banggai Laut、Kamumu、Salodik和Pulo Dua。
+seoTitle: '邦盖群岛6天5夜私人旅行 | Ultimate Banggai'
+seoDescription: 6天5夜邦盖群岛私人旅行，覆盖Paisu Pok、Peleng、Banggai Laut、Kamumu、Salodik和Pulo Dua。
 image: /images/Gemini_Generated_Image_xxtet3xxtet3xxte (4).jpg
 imageAlt: Ultimate Banggai
 duration: 6 Days 5 Nights
