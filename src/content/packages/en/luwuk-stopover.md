@@ -1,6 +1,6 @@
 ---
-title: Luwuk Stopover
-description: Explore Luwuk and Salodik on a 2-day private tour package in Banggai, with airport pickup, local guide, waterfalls and coastal views.
+title: Luwuk 2-Day Private Tour
+description: Explore Luwuk and Salodik on a 2-day private tour in Banggai, with airport pickup, local guide, Piala Waterfall and coastal views.
 seoTitle: 'Luwuk Banggai Tour Package | 2-Day Private Trip'
 seoDescription: 'Explore Luwuk and Salodik on a 2-day private tour from Luwuk Airport, with Piala Waterfall, coastal views, local guide and private transportation.'
 image: /images/asasa.jpg
