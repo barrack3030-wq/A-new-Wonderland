@@ -23,7 +23,7 @@ const includedHighlights = includedList.filter(item => /transport|ferry|kapal|bo
 const activityLabel = ({ id: 'Aktivitas', en: 'Activities', es: 'Actividades', fr: 'Activités', zh: '活动' } as Record<string, string>)[lang as string] ?? 'Activities';
 
 const allPackages = await getCollection('packages');
-const sameLanguagePackages = allPackages.filter(pkg => pkg.id !== entry.id && pkg.slug.startsWith(`${lang}/`)).slice(0, 4);
+const sameLanguagePackages = allPackages.filter(pkg => pkg.id !== entry.id && pkg.slug.startsWith(`${lang}/`)).slice(0, 6);
 const allDestinations = await getCollection('destinations');
 const sameLanguageDestinations = allDestinations.filter(destination => destination.slug.startsWith(`${lang}/`));
 const packageText = `${entry.data.title} ${entry.data.description} ${entry.data.destination} ${(entry.data.activities || []).join(' ')}`.toLowerCase();
