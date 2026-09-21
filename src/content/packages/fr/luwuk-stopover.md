@@ -1,8 +1,8 @@
 ---
-title: Luwuk Stopover
-description: Experience the best of Luwuk Stopover with our exclusive tour package.
-seoTitle: 'Forfait de Voyage Luwuk Stopover | Banggai Wonderland'
-seoDescription: Book the Luwuk Stopover tour package to explore the hidden paradise of Banggai.
+title: Circuit privé Luwuk 2 jours 1 nuit
+Circuit privé de 2 jours et 1 nuit pour découvrir Luwuk et Salodik, avec cascade de Piala, côte de Luwuk, transport privé et guide local.
+seoTitle: 'Circuit privé Luwuk 2 jours 1 nuit | Banggai Wonderland'
+Découvrez Luwuk et Salodik en 2 jours et 1 nuit avec la cascade de Piala, les paysages côtiers, un transport privé et un guide local.
 image: /images/asasa.jpg
 imageAlt: Luwuk Stopover
 duration: 2 Days 1 Night
