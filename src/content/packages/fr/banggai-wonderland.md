@@ -1,8 +1,8 @@
 ---
-title: Banggai Wonderland
-description: Experience the best of Banggai Wonderland with our exclusive tour package.
-seoTitle: 'Forfait de Voyage Banggai Wonderland | Banggai Wonderland'
-seoDescription: Book the Banggai Wonderland tour package to explore the hidden paradise of Banggai.
+title: Circuit privé Banggai 4 jours 3 nuits
+Circuit privé de 4 jours et 3 nuits pour découvrir Paisu Pok, Peleng et plusieurs destinations des îles Banggai.
+seoTitle: 'Circuit privé Banggai 4 jours 3 nuits | Banggai Wonderland'
+Découvrez les îles Banggai en 4 jours et 3 nuits avec Paisu Pok, Peleng et des paysages naturels sélectionnés.
 image: /images/wonder.jpg
 imageAlt: Banggai Wonderland
 duration: 4 Days 3 Nights
