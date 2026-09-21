@@ -87,6 +87,7 @@ const schema = {
       <div class="mb-8"><h3 class="font-serif text-xl font-bold text-ocean-900 mb-4">{t('tour.included')}</h3><ul class="space-y-3">{entry.data.included?.map(item => <li class="flex items-start"><span class="text-turquoise-500 mr-3">✓</span><span class="text-ocean-700 text-sm">{item}</span></li>)}</ul></div>
       <div class="mb-8"><h3 class="font-serif text-xl font-bold text-ocean-900 mb-4">{t('tour.excluded')}</h3><ul class="space-y-3">{entry.data.excluded?.map(item => <li class="flex items-start"><span class="text-red-400 mr-3">×</span><span class="text-ocean-700 text-sm">{item}</span></li>)}</ul></div>
       <a href={`/${lang}/book/?package=${encodeURIComponent(entry.data.title)}`} class="flex items-center justify-center w-full bg-[#176b55] text-white px-6 py-4 rounded-xl font-bold text-base hover:bg-[#125743] transition-colors">{t('btn.book')}</a>
+      <a href={`/${lang}/jasa-tour-luwuk-banggai/`} class="mt-4 block text-center text-sm font-semibold text-ocean-900 underline underline-offset-4 hover:text-turquoise-600 transition-colors">{lang === 'id' ? 'Lihat Jasa Tour Luwuk Banggai' : lang === 'es' ? 'Ver servicios de tour Luwuk Banggai' : lang === 'fr' ? 'Voir les services de tour à Luwuk Banggai' : lang === 'zh' ? '查看 Luwuk Banggai 旅游服务' : 'View Luwuk Banggai tour services'} →</a>
     </div></div></div>
   </div></div></section>
   <WhatsAppButton />
