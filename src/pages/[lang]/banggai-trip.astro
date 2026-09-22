@@ -50,7 +50,7 @@ const schema = {
         <p class="text-turquoise-600 text-xs font-bold tracking-[0.22em] uppercase mb-4">Luwuk Banggai Trip</p>
         <h2 class="font-serif text-3xl md:text-5xl text-ocean-900 mb-6">Banggai Trip dari Luwuk ke Kepulauan Banggai</h2>
         <p class="text-ocean-600 leading-relaxed mb-5">Banggai Trip dapat dimulai dari Luwuk dan dilanjutkan menuju berbagai destinasi di Kepulauan Banggai serta Banggai Laut. Perjalanan dapat dibuat singkat untuk menikmati satu atau dua destinasi, atau diperpanjang untuk rute antarpulau.</p>
-        <p class="text-ocean-600 leading-relaxed">Karakter perjalanan Banggai berbeda dari destinasi wisata yang terpusat di satu kota. Jarak antarpulau, jadwal transportasi laut, kondisi cuaca, dan waktu perjalanan perlu diperhitungkan ketika menyusun itinerary.</p>
+        <p class="text-ocean-600 leading-relaxed">Karakter perjalanan Banggai berbeda dari destinasi wisata yang terpusat di satu kota. Jarak antarpulau, jadwal transportasi laut, kondisi cuaca, dan waktu perjalanan perlu diperhitungkan ketika menyusun itinerary. Untuk gambaran layanan yang lebih luas, lihat <a href="/id/banggai-travel/" class="font-semibold text-turquoise-700 underline underline-offset-4">Banggai Travel</a>; untuk perjalanan bersama, lihat <a href="/id/banggai-open-trip/" class="font-semibold text-turquoise-700 underline underline-offset-4">Banggai Open Trip</a>.</p>
       </div>
     </section>
 
@@ -148,6 +148,24 @@ const schema = {
             ['Apa yang perlu dipertimbangkan saat island hopping?', 'Jadwal transportasi laut, cuaca, kondisi laut, waktu transit, dan jarak antardestinasi perlu diperhitungkan.'],
             ['Bagaimana cara konsultasi Banggai Trip?', 'Kirim tanggal perjalanan, jumlah peserta, durasi, dan destinasi yang diinginkan melalui WhatsApp untuk membahas rute yang sesuai.']
           ].map(([q,a]) => <details class="rounded-2xl bg-white border border-sand-200 px-5 py-4"><summary class="cursor-pointer list-none font-semibold text-ocean-900">{q}</summary><p class="pt-3 text-sm text-ocean-600 leading-relaxed">{a}</p></details>)}
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-white py-12 md:py-16 border-t border-sand-200">
+      <div class="max-w-6xl mx-auto px-5 sm:px-8 lg:px-12">
+        <p class="text-turquoise-600 text-xs font-bold tracking-[0.22em] uppercase mb-4">Banggai Travel Cluster</p>
+        <div class="grid md:grid-cols-2 gap-5">
+          <a href="/id/banggai-travel/" class="rounded-2xl border border-sand-200 bg-sand-50 p-6 group">
+            <p class="text-xs font-semibold text-turquoise-700 mb-2">Hub utama</p>
+            <h2 class="font-serif text-2xl text-ocean-900 mb-2 group-hover:text-turquoise-700">Banggai Travel</h2>
+            <p class="text-sm text-ocean-600 leading-relaxed">Lihat gambaran layanan travel, private trip, custom tour, dan pilihan perjalanan ke Banggai.</p>
+          </a>
+          <a href="/id/banggai-open-trip/" class="rounded-2xl border border-sand-200 bg-sand-50 p-6 group">
+            <p class="text-xs font-semibold text-turquoise-700 mb-2">Perjalanan bersama</p>
+            <h2 class="font-serif text-2xl text-ocean-900 mb-2 group-hover:text-turquoise-700">Banggai Open Trip</h2>
+            <p class="text-sm text-ocean-600 leading-relaxed">Cari informasi open trip, jadwal keberangkatan, rute, dan persiapan perjalanan bersama.</p>
+          </a>
         </div>
       </div>
     </section>
