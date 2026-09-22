@@ -147,4 +147,6 @@ Luwuk bukan sekadar tempat tiba. Luwuk adalah gerbang utama yang menghubungkan d
 
 Pilih rute yang tepat, konfirmasi kapal sebelum berangkat, dan berikan waktu yang cukup untuk perjalanan darat dan laut.
 
+Untuk menyusun perjalanan berdasarkan durasi dan rute, lihat panduan [Banggai Trip & Banggai Tour](/id/banggai-trip/). Untuk pilihan layanan yang lebih luas, kunjungi [Banggai Travel](/id/banggai-travel/) atau cek [Banggai Open Trip](/id/banggai-open-trip/) bila ingin bergabung dengan perjalanan bersama.
+
 **Mulai dari Luwuk. Ikuti pulau-pulaunya. Temukan hidden paradise of Banggai.**
