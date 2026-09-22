@@ -198,6 +198,8 @@ Karena pada akhirnya, perjalanan terbaik bukan selalu tentang tempat yang paling
 
 Kadang, perjalanan terbaik adalah ketika Anda menemukan tempat yang sebelumnya bahkan tidak pernah Anda bayangkan.
 
+Untuk mengubah daftar destinasi ini menjadi itinerary, lihat panduan [Banggai Trip & Banggai Tour](/id/banggai-trip/). Anda juga dapat melihat [Banggai Travel](/id/banggai-travel/) untuk pilihan private dan custom trip, atau [Banggai Open Trip](/id/banggai-open-trip/) untuk perjalanan bersama.
+
 **Welcome to Banggai Wonderland.**
 
 **Discover the hidden paradise of Banggai.**
