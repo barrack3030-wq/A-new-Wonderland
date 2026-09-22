@@ -8,7 +8,8 @@
     "build": "astro build",
     "preview": "astro preview --port 3000 --host 0.0.0.0",
     "astro": "astro",
-    "lint": "tsc --noEmit"
+    "lint": "tsc --noEmit",
+    "prebuild": "node scripts/validate-frontmatter.mjs"
   },
   "dependencies": {
     "@astrojs/tailwind": "^5.1.4",
