@@ -72,7 +72,7 @@ const seo = homeSeo[lang as keyof typeof homeSeo] || homeSeo.en;
 
       <div class="bw-hero-content">
         <p class="bw-eyebrow bw-eyebrow-light">{t('hero.welcome')}</p>
-        <h1>{t('hero.title.1')}<br/><em>{t('hero.title.2')}</em></h1>
+        <h1><span>{t('hero.title.1')}</span> <em>{t('hero.title.2')}</em></h1>
         <p class="bw-hero-description">{t('hero.desc')}</p>
         <div class="bw-hero-actions">
           <a href={`/${lang}/jasa-tour-luwuk-banggai/#packages`} class="bw-button bw-button-light">{t('btn.view_packages')} <span>↗</span></a>
@@ -256,8 +256,8 @@ const seo = homeSeo[lang as keyof typeof homeSeo] || homeSeo.en;
     .bw-hero-bottom { position: absolute; inset: auto 0 0; height: 22%; background: linear-gradient(180deg, transparent, rgba(247,247,245,.08)); }
     .bw-hero-top { position: absolute; top: 30px; left: 0; right: 0; display: flex; justify-content: space-between; padding: 0 40px; color: rgba(255,255,255,.72); font-size: 9px; font-weight: 700; letter-spacing: .22em; }
     .bw-hero-content { position: relative; z-index: 2; width: min(1180px, calc(100% - 64px)); margin: 0 auto; padding: 150px 0 74px; }
-    .bw-hero-content h1 { margin: 0; max-width: 880px; font-family: 'Playfair Display', serif; font-size: clamp(4rem, 8.2vw, 7.4rem); font-weight: 500; line-height: .9; letter-spacing: -.05em; }
-    .bw-hero-content h1 em { color: rgba(255,255,255,.63); font-style: normal; }
+    .bw-hero-content h1 { margin: 0; max-width: 1120px; font-family: 'Playfair Display', serif; font-size: clamp(3.4rem, 5.6vw, 5.75rem); font-weight: 500; line-height: .94; letter-spacing: -.045em; text-wrap: balance; }
+    .bw-hero-content h1 span { color: white; } .bw-hero-content h1 em { color: rgba(255,255,255,.63); font-style: normal; }
     .bw-hero-description { max-width: 510px; margin: 34px 0 28px; color: rgba(255,255,255,.78); font-family: 'Plus Jakarta Sans', sans-serif; font-size: 15px; line-height: 1.7; }
     .bw-hero-actions { display: flex; gap: 24px; align-items: center; flex-wrap: wrap; }
     .bw-button { display: inline-flex; align-items: center; gap: 11px; min-height: 50px; padding: 0 23px; border-radius: 999px; font-family: 'Plus Jakarta Sans', sans-serif; font-size: 12px; font-weight: 700; text-decoration: none; transition: .3s ease; }
@@ -353,7 +353,7 @@ const seo = homeSeo[lang as keyof typeof homeSeo] || homeSeo.en;
       .bw-container, .bw-hero-content { width: calc(100% - 32px); }
       .bw-hero { min-height: 92svh; }
       .bw-hero-content { padding: 135px 0 52px; }
-      .bw-hero-content h1 { font-size: clamp(3.2rem, 15vw, 5.2rem); line-height: .91; max-width: 8.6ch; }
+      .bw-hero-content h1 { font-size: clamp(2.65rem, 11.5vw, 4.15rem); line-height: .94; max-width: 100%; letter-spacing: -.045em; text-wrap: balance; }
       .bw-hero-description { margin: 23px 0; font-size: 13px; line-height: 1.65; max-width: 34ch; }
       .bw-hero-actions { gap: 16px; }
       .bw-button { min-height: 46px; padding: 0 18px; font-size: 11px; }
