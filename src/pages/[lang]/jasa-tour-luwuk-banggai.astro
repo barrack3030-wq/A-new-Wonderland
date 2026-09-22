@@ -294,7 +294,7 @@ const breadcrumbItems = [
       </div>
     </section>
 
-    <section class="bg-sand-50 py-16 md:py-24">
+    <section id="packages" class="bg-sand-50 py-16 md:py-24">
       <div class="max-w-7xl mx-auto px-5 sm:px-8 lg:px-12 grid lg:grid-cols-[1.1fr_.9fr] gap-12 items-start">
         <div>
           <p class="text-turquoise-600 text-xs font-bold tracking-[0.22em] uppercase mb-4">Explore the region</p>
@@ -339,7 +339,7 @@ const breadcrumbItems = [
             <h2 class="font-serif text-3xl md:text-5xl text-ocean-900 tracking-[-0.03em] font-medium mb-4">{c.packageTitle}</h2>
             <p class="text-ocean-600 leading-relaxed">{c.packageText}</p>
           </div>
-          <a href={'/' + currentLang + '/packages/'} class="text-sm font-semibold text-ocean-900 underline underline-offset-4">All packages →</a>
+          <a href="#packages" class="text-sm font-semibold text-ocean-900 underline underline-offset-4">View packages →</a>
         </div>
         <div class="grid md:grid-cols-2 gap-5">
           {selectedPackages.map(pkg => (
