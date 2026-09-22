@@ -60,3 +60,5 @@ Perjalanan menuju Danau Paisu Pok terdiri dari beberapa tahapan. Berikut adalah 
 **Langkah 4: Dari Leme-Leme ke Luk Panenteng.** Setelah tiba di Pulau Peleng, perjalanan darat menuju Luk Panenteng memakan waktu sekitar 1 jam. Anda dapat menyewa skuter dari *homestay* setempat atau menggunakan taksi lokal.
 
 Perlu diketahui bahwa **jadwal feri dapat berubah sewaktu-waktu** dan pemesanan secara *online* tidak tersedia. Pastikan Anda memeriksa jadwal terbaru dengan pihak *homestay* atau penyedia layanan perjalanan sebelum berangkat.
+
+Paisu Pok dapat dimasukkan ke dalam [Banggai Trip & Banggai Tour](/id/banggai-trip/), baik sebagai bagian dari itinerary private maupun perjalanan beberapa hari dari Luwuk. Untuk melihat pilihan perjalanan lainnya, kunjungi [Banggai Travel](/id/banggai-travel/).
