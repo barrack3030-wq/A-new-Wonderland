@@ -69,3 +69,5 @@ itinerary:
 Welcome to the **Banggai Wonderland** package. This carefully curated tour is designed to give you the ultimate experience in Banggai Wonderland.
 
 Whether you are looking for an adventurous escape or a relaxing getaway, this package has it all. Enjoy breathtaking views, pristine beaches, and crystal-clear lakes.
+
+Untuk melihat pilihan perjalanan dan rute lain, lihat [Banggai Travel](/id/banggai-travel/) atau panduan [Banggai Trip & Banggai Tour](/id/banggai-trip/).
