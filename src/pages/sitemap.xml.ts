@@ -11,7 +11,10 @@ const staticPages = [
   'gallery/',
   'book/',
   'contact/',
-  'jasa-tour-luwuk-banggai/',
+  'jasa-tour-luwuk-banggai/'
+];
+
+const idOnlyStaticPages = [
   'banggai-travel/',
   'banggai-trip/',
   'banggai-open-trip/'
@@ -29,6 +32,12 @@ export async function GET() {
 
     for (const page of staticPages) {
       urls.add(`${site}/${lang}/${page}`);
+    }
+
+    if (lang === 'id') {
+      for (const page of idOnlyStaticPages) {
+        urls.add(`${site}/id/${page}`);
+      }
     }
   }
 
