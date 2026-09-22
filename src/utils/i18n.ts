@@ -24,7 +24,7 @@ export const uiTranslations = {
     'btn.book': 'Pesan Sekarang',
     'hero.welcome': 'SISI TENANG INDONESIA',
     'hero.title.1': 'Temukan Surga Tersembunyi di Banggai Bersama Kami',
-    'hero.title.2': 'Temukan Banggai.',
+    'hero.title.2': '',
     'hero.desc': 'Private trip menyusuri pulau-pulau tersembunyi, laguna sebening kaca, dan pesisir tropis Kepulauan Banggai.',
     'btn.explore': 'Eksplor Destinasi',
     'btn.view_packages': 'Lihat Paket',
