@@ -2,7 +2,7 @@
 title: Ultimate Banggai 6 Días 5 Noches
 description: Viaje privado de 6 días por las islas Banggai desde Luwuk, con Salakan, Peleng, Banggai Laut, Kamumu, Salodik y Pulo Dua.
 seoTitle: 'Ultimate Banggai: Viaje Privado de 6 Días 5 Noches | Islas Banggai'
-Descubre las islas Banggai en 6 días y 5 noches desde Luwuk, con Salakan, Peleng, Banggai Laut, Kamumu, Salodik y Pulo Dua.
+seoDescription: 'Descubre las islas Banggai en 6 días y 5 noches desde Luwuk, con Salakan, Peleng, Banggai Laut, Kamumu, Salodik y Pulo Dua.'
 image: /images/Gemini_Generated_Image_xxtet3xxtet3xxte (4).jpg
 imageAlt: Viaje privado de 6 días por las islas Banggai desde Luwuk hasta Salakan, Peleng, Banggai Laut y Pulo Dua.
 duration: 6 Days 5 Nights
