@@ -1,0 +1,195 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Breadcrumb from '../../components/Breadcrumb.astro';
+import WhatsAppButton from '../../components/WhatsAppButton.astro';
+
+export function getStaticPaths() {
+  return [{ params: { lang: 'id' } }];
+}
+
+const title = 'Banggai Travel, Banggai Trip & Open Trip | Banggai Wonderland';
+const description = 'Banggai Travel untuk private trip, Banggai Trip, Banggai Open Trip dan paket wisata Luwuk hingga Kepulauan Banggai. Jelajahi Paisu Pok, Peleng, Salakan, Pulo Dua dan destinasi pilihan lainnya.';
+const url = new URL('/id/banggai-travel/', Astro.site).href;
+
+const schema = {
+  '@context': 'https://schema.org',
+  '@type': 'TravelAgency',
+  name: 'Banggai Wonderland',
+  url: 'https://banggaiwonderland.my.id/',
+  description,
+  areaServed: [
+    { '@type': 'Place', name: 'Luwuk' },
+    { '@type': 'Place', name: 'Banggai Islands' },
+    { '@type': 'Place', name: 'Banggai Laut' }
+  ],
+  knowsAbout: [
+    'Banggai Travel',
+    'Banggai Trip',
+    'Banggai Open Trip',
+    'Banggai Tour',
+    'Luwuk Banggai Tour',
+    'Paket Wisata Banggai',
+    'Private Trip Banggai',
+    'Banggai Islands'
+  ]
+};
+---
+
+<BaseLayout
+  title={title}
+  description={description}
+  seoTitle={title}
+  seoDescription={description}
+  ogImage="/images/Poganda-Beach-Banggai-IndonesiaJuara-Trip.webp"
+  imageAlt="Poganda Beach in the Banggai Islands"
+  schema={schema}
+>
+  <div class="bg-sand-50 pt-28">
+    <div class="max-w-7xl mx-auto px-5 sm:px-8 lg:px-12 py-8">
+      <Breadcrumb items={[{ name: 'Home', url: '/id/' }, { name: 'Banggai Travel', url: '/id/banggai-travel/' }]} />
+    </div>
+
+    <section class="relative overflow-hidden bg-ocean-900 text-white">
+      <div class="absolute inset-0">
+        <img src="/images/Poganda-Beach-Banggai-IndonesiaJuara-Trip.webp" alt="Poganda Beach, Banggai Islands" class="w-full h-full object-cover opacity-45" loading="eager" />
+        <div class="absolute inset-0 bg-ocean-900/65"></div>
+      </div>
+      <div class="relative max-w-7xl mx-auto px-5 sm:px-8 lg:px-12 py-20 md:py-28">
+        <p class="text-white/65 text-xs font-bold tracking-[0.24em] uppercase mb-5">Banggai Travel · Banggai Trip · Open Trip</p>
+        <h1 class="font-serif text-4xl sm:text-5xl md:text-7xl leading-[0.98] tracking-[-0.04em] font-medium max-w-4xl mb-7">Banggai Travel, Trip & Open Trip</h1>
+        <p class="text-white/80 text-base md:text-xl leading-relaxed max-w-3xl mb-9">Jelajahi Luwuk dan Kepulauan Banggai melalui private trip, custom itinerary, island hopping, dan pilihan Banggai Open Trip yang disusun berdasarkan waktu dan destinasi yang ingin Anda kunjungi.</p>
+        <div class="flex flex-wrap gap-3">
+          <a href="https://wa.me/6285820830530" target="_blank" rel="noopener noreferrer" class="inline-flex items-center rounded-full bg-white text-ocean-900 px-6 py-3.5 text-sm font-semibold">Konsultasi via WhatsApp <span class="ml-2">→</span></a>
+          <a href="/id/packages/" class="inline-flex items-center rounded-full border border-white/25 bg-white/10 text-white px-6 py-3.5 text-sm font-semibold">Lihat Paket Wisata</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-white py-16 md:py-24">
+      <div class="max-w-7xl mx-auto px-5 sm:px-8 lg:px-12">
+        <div class="max-w-3xl mb-10">
+          <p class="text-turquoise-600 text-xs font-bold tracking-[0.22em] uppercase mb-4">Discover Hidden Paradise of Banggai</p>
+          <h2 class="font-serif text-3xl md:text-5xl text-ocean-900 tracking-[-0.03em] font-medium mb-5">Banggai Travel untuk Perjalanan ke Kepulauan Banggai</h2>
+          <p class="text-ocean-600 leading-relaxed">Banggai Wonderland adalah layanan perjalanan lokal yang membantu wisatawan merencanakan perjalanan dari Luwuk menuju destinasi di Kepulauan Banggai dan Banggai Laut. Rute dapat dibuat untuk perjalanan singkat, private trip beberapa hari, maupun perjalanan antarpulau dengan itinerary yang lebih panjang.</p>
+        </div>
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-5">
+          {[
+            ['Banggai Trip', 'Rencanakan perjalanan berdasarkan durasi, minat, dan destinasi prioritas.'],
+            ['Banggai Open Trip', 'Pilihan perjalanan bersama untuk wisatawan yang ingin bergabung dengan rute tertentu.'],
+            ['Private Trip', 'Itinerary privat untuk pasangan, keluarga, teman, atau kelompok kecil.'],
+            ['Custom Tour', 'Gabungkan Luwuk, Salakan, Peleng, Banggai Laut dan destinasi lain sesuai kebutuhan.']
+          ].map(([heading, text], i) => (
+            <article class="rounded-2xl border border-sand-200 bg-sand-50 p-6">
+              <span class="text-xs font-bold tracking-[0.16em] text-turquoise-700">0{i + 1}</span>
+              <h3 class="font-serif text-xl text-ocean-900 mt-5 mb-3">{heading}</h3>
+              <p class="text-sm leading-relaxed text-ocean-600">{text}</p>
+            </article>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-sand-50 py-16 md:py-24">
+      <div class="max-w-7xl mx-auto px-5 sm:px-8 lg:px-12 grid lg:grid-cols-[1.05fr_.95fr] gap-12 items-start">
+        <div>
+          <p class="text-turquoise-600 text-xs font-bold tracking-[0.22em] uppercase mb-4">Luwuk sebagai gateway</p>
+          <h2 class="font-serif text-3xl md:text-5xl text-ocean-900 tracking-[-0.03em] font-medium mb-5">Banggai Tour dari Luwuk</h2>
+          <p class="text-ocean-600 leading-relaxed max-w-2xl mb-6">Banyak perjalanan ke Banggai dimulai dari Luwuk. Dari sini, itinerary dapat berkembang menuju Salakan, Peleng, Banggai Laut dan berbagai pantai, danau, air terjun serta pulau kecil di sekitarnya. Urutan perjalanan disesuaikan dengan durasi, jadwal transportasi laut, cuaca, dan kondisi lokal.</p>
+          <div class="flex flex-wrap gap-2">
+            {['Luwuk', 'Salakan', 'Peleng', 'Banggai Laut', 'Paisu Pok', 'Pulo Dua', 'Piala', 'Salodik'].map(item => (
+              <span class="rounded-full bg-white border border-sand-200 px-4 py-2 text-sm text-ocean-700">{item}</span>
+            ))}
+          </div>
+        </div>
+        <div class="rounded-3xl bg-ocean-900 text-white p-7 md:p-9">
+          <p class="text-white/55 text-xs font-bold tracking-[0.2em] uppercase mb-4">Contoh durasi</p>
+          <div class="space-y-4">
+            <div class="flex justify-between gap-4 border-b border-white/10 pb-4"><span>1 Day</span><span class="text-white/60">Luwuk Stopover</span></div>
+            <div class="flex justify-between gap-4 border-b border-white/10 pb-4"><span>3D2N</span><span class="text-white/60">Luwuk & Salakan</span></div>
+            <div class="flex justify-between gap-4 border-b border-white/10 pb-4"><span>4D3N</span><span class="text-white/60">Banggai Wonderland</span></div>
+            <div class="flex justify-between gap-4"><span>Custom</span><span class="text-white/60">Multi-island route</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-white py-16 md:py-24">
+      <div class="max-w-7xl mx-auto px-5 sm:px-8 lg:px-12">
+        <div class="max-w-3xl mb-10">
+          <p class="text-turquoise-600 text-xs font-bold tracking-[0.22em] uppercase mb-4">Banggai Islands</p>
+          <h2 class="font-serif text-3xl md:text-5xl text-ocean-900 tracking-[-0.03em] font-medium mb-4">Destinasi yang Bisa Masuk Itinerary</h2>
+          <p class="text-ocean-600 leading-relaxed">Tidak semua destinasi harus dikunjungi dalam satu perjalanan. Pilih beberapa tempat sesuai waktu yang tersedia.</p>
+        </div>
+        <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
+          {[
+            ['Paisu Pok', '/id/destinations/paisu-pok-lake/', '/images/Paisu-Pok.webp'],
+            ['Piala', '/id/destinations/piala-waterfall/', '/images/Piala-Waterfall.webp'],
+            ['Pulo Dua', '/id/destinations/pulau-dua-balantak/', '/images/Pulo-Dua.webp'],
+            ['Oyama', '/id/destinations/oyama-beach/', '/images/Oyama-Beach.webp']
+          ].map(([name, href, image]) => (
+            <a href={href} class="group overflow-hidden rounded-2xl border border-sand-200 bg-sand-50">
+              <img src={image} alt={name + ', Banggai Indonesia'} class="w-full h-48 object-cover" loading="lazy" />
+              <div class="p-5">
+                <h3 class="font-serif text-xl text-ocean-900">{name}</h3>
+                <p class="text-xs text-ocean-500 mt-1">Kepulauan Banggai, Sulawesi Tengah</p>
+              </div>
+            </a>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-sand-50 py-16 md:py-24">
+      <div class="max-w-4xl mx-auto px-5 sm:px-8">
+        <p class="text-turquoise-600 text-xs font-bold tracking-[0.22em] uppercase mb-4">Travel planning</p>
+        <h2 class="font-serif text-3xl md:text-5xl text-ocean-900 tracking-[-0.03em] font-medium mb-8">Cara Merencanakan Banggai Trip</h2>
+        <div class="grid md:grid-cols-2 gap-5">
+          {[
+            ['01', 'Tentukan durasi', 'Pilih perjalanan singkat, 3–4 hari, atau itinerary multi-island.'],
+            ['02', 'Pilih destinasi', 'Prioritaskan tempat yang paling sesuai dengan minat dan waktu perjalanan.'],
+            ['03', 'Susun rute', 'Atur urutan Luwuk, pulau tujuan, transportasi dan waktu perjalanan.'],
+            ['04', 'Konfirmasi detail', 'Bahas tanggal, jumlah peserta, transportasi, penginapan dan aktivitas sebelum berangkat.']
+          ].map(([number, heading, text]) => (
+            <article class="rounded-2xl bg-white border border-sand-200 p-6">
+              <span class="text-sm font-bold text-turquoise-700">{number}</span>
+              <h3 class="font-serif text-2xl text-ocean-900 mt-4 mb-3">{heading}</h3>
+              <p class="text-sm text-ocean-600 leading-relaxed">{text}</p>
+            </article>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-white py-16 md:py-24">
+      <div class="max-w-4xl mx-auto px-5 sm:px-8">
+        <p class="text-turquoise-600 text-xs font-bold tracking-[0.22em] uppercase mb-4">FAQ</p>
+        <h2 class="font-serif text-3xl md:text-5xl text-ocean-900 tracking-[-0.03em] font-medium mb-8">Pertanyaan tentang Banggai Travel & Open Trip</h2>
+        <div class="space-y-3">
+          {[
+            ['Apa itu Banggai Travel?', 'Banggai Travel adalah layanan perjalanan yang membantu wisatawan merencanakan perjalanan ke Luwuk, Kepulauan Banggai dan Banggai Laut, termasuk private trip dan itinerary custom.'],
+            ['Apa itu Banggai Open Trip?', 'Banggai Open Trip adalah konsep perjalanan bersama yang memungkinkan peserta bergabung dengan rute atau keberangkatan tertentu. Ketersediaan trip mengikuti jadwal yang dibuka.'],
+            ['Berapa hari ideal untuk Banggai Trip?', 'Durasi tergantung destinasi. Perjalanan singkat dapat dibuat 1 hari, sementara rute Salakan, Peleng dan pulau lainnya membutuhkan waktu lebih panjang.'],
+            ['Apakah bisa private trip Banggai?', 'Bisa. Private trip dapat disusun untuk pasangan, keluarga, teman atau kelompok kecil dengan rute yang disesuaikan.'],
+            ['Bagaimana cara menuju Kepulauan Banggai?', 'Banyak wisatawan memulai perjalanan dari Luwuk. Setelah itu, perjalanan dapat dilanjutkan menggunakan transportasi darat dan laut sesuai destinasi dan kondisi perjalanan.'],
+            ['Kapan waktu terbaik untuk Banggai Trip?', 'Waktu perjalanan perlu mempertimbangkan cuaca, kondisi laut dan jadwal transportasi. Karena kondisi lokal dapat berubah, itinerary sebaiknya tetap fleksibel.']
+          ].map(([question, answer]) => (
+            <details class="group rounded-2xl bg-sand-50 border border-sand-200 px-5 py-4">
+              <summary class="cursor-pointer list-none pr-6 font-semibold text-ocean-900">{question}</summary>
+              <p class="text-sm text-ocean-600 leading-relaxed pt-3">{answer}</p>
+            </details>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-ocean-900 text-white py-20 md:py-24">
+      <div class="max-w-4xl mx-auto px-5 sm:px-8 text-center">
+        <p class="text-white/50 text-xs font-bold tracking-[0.24em] uppercase mb-5">Banggai Wonderland</p>
+        <h2 class="font-serif text-4xl md:text-6xl leading-tight tracking-[-0.04em] font-medium mb-5">Siap Merencanakan Banggai Trip?</h2>
+        <p class="max-w-2xl mx-auto text-white/70 leading-relaxed mb-8">Kirim tanggal perjalanan, jumlah peserta, dan destinasi yang ingin diprioritaskan. Kami bantu menyusun rute yang sesuai dengan waktu perjalanan Anda.</p>
+        <a href="https://wa.me/6285820830530" target="_blank" rel="noopener noreferrer" class="inline-flex rounded-full bg-white text-ocean-900 px-7 py-3.5 text-sm font-semibold">Konsultasi via WhatsApp <span class="ml-2">→</span></a>
+      </div>
+    </section>
+  </div>
+  <WhatsAppButton />
+</BaseLayout>
