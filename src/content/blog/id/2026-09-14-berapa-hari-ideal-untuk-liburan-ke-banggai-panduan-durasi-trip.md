@@ -150,6 +150,8 @@ Bisa, tetapi sangat terbatas. Anda kemungkinan hanya bisa mengunjungi satu desti
 
 Paket private trip 3D2N yang sesuai untuk rute Luwuk dan Salakan dapat dilihat pada [Private Trip Luwuk Salakan 3 Hari 2 Malam](/id/packages/luwuk-salakan/). Harga dan cakupan perjalanan sebaiknya dikonfirmasi sebelum booking.
 
+Untuk membandingkan pilihan durasi dan rute secara lebih lengkap, lihat [Banggai Trip & Banggai Tour](/id/banggai-trip/) atau [Banggai Travel](/id/banggai-travel/).
+
 ### Apakah Paisu Pok Lake bisa dikunjungi sebagai day trip dari Luwuk?
 
 Secara teknis bisa, tetapi tidak disarankan. Perjalanan dari Luwuk ke Paisu Pok memakan waktu sekitar 3–4 jam sekali jalan (termasuk feri dan perjalanan darat). Menginap minimal satu malam di Peleng memberi pengalaman yang jauh lebih memuaskan.
