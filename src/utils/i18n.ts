@@ -23,7 +23,7 @@ export const uiTranslations = {
     'nav.contact': 'Kontak',
     'btn.book': 'Pesan Sekarang',
     'hero.welcome': 'SISI TENANG INDONESIA',
-    'hero.title.1': 'Lebih jauh dari yang biasa.',
+    'hero.title.1': 'Jelajahi lebih jauh.',
     'hero.title.2': 'Temukan Banggai.',
     'hero.desc': 'Private trip menyusuri pulau-pulau tersembunyi, laguna sebening kaca, dan pesisir tropis Kepulauan Banggai.',
     'btn.explore': 'Eksplor Destinasi',
