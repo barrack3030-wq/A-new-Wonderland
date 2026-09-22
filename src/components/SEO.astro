@@ -40,6 +40,26 @@ let alternateLinks: { lang: string; href: string }[] = [];
 const contentSections = ['destinations', 'packages', 'blog'];
 const idOnlySections = ['banggai-travel', 'banggai-trip', 'banggai-open-trip'];
 
+const manualBlogTranslationKeys: Record<string, string> = {
+  'cara-ke-paisu-pok-dari-luwuk': '2026-09-18-cara-ke-paisu-pok-dari-luwuk',
+  'how-to-get-to-paisu-pok-from-luwuk': '2026-09-18-cara-ke-paisu-pok-dari-luwuk',
+  'como-llegar-a-paisu-pok-desde-luwuk': '2026-09-18-cara-ke-paisu-pok-dari-luwuk',
+  'comment-se-rendre-a-paisu-pok-depuis-luwuk': '2026-09-18-cara-ke-paisu-pok-dari-luwuk',
+  'how-to-get-to-banggai-islands-from-luwuk': '2026-09-18-cara-menuju-kepulauan-banggai-dari-luwuk',
+  'cara-menuju-kepulauan-banggai-dari-luwuk': '2026-09-18-cara-menuju-kepulauan-banggai-dari-luwuk',
+  'como-llegar-islas-banggai-desde-luwuk': '2026-09-18-cara-menuju-kepulauan-banggai-dari-luwuk',
+  'comment-rejoindre-les-iles-banggai-depuis-luwuk': '2026-09-18-cara-menuju-kepulauan-banggai-dari-luwuk',
+  'luwuk-itinerary-1-3-4-5-days': '2026-09-18-itinerary-luwuk-1-3-4-5-hari',
+  'itinerary-luwuk-1-3-4-5-hari': '2026-09-18-itinerary-luwuk-1-3-4-5-hari',
+  'itinerario-luwuk-1-3-4-5-dias': '2026-09-18-itinerary-luwuk-1-3-4-5-hari',
+  'itineraire-luwuk-1-3-4-5-jours': '2026-09-18-itinerary-luwuk-1-3-4-5-hari',
+  'danau-paisu-pok-panduan-wisata-lengkap': '2026-09-18-danau-paisu-pok-panduan-wisata-lengkap',
+  'paisu-pok-lake-complete-travel-guide': '2026-09-18-danau-paisu-pok-panduan-wisata-lengkap',
+  'lago-paisu-pok-guia-de-viaje-completa': '2026-09-18-danau-paisu-pok-panduan-wisata-lengkap',
+  'lac-paisu-pok-guide-de-voyage-complet': '2026-09-18-danau-paisu-pok-panduan-wisata-lengkap',
+  'paisu-pok-hu-wan-zheng-lu-xing-gong-lue': '2026-09-18-danau-paisu-pok-panduan-wisata-lengkap',
+};
+
 if (!section) {
   alternateLinks = Object.keys(languages).map(langCode => ({ lang: langCode, href: new URL(`/${langCode}/`, siteUrl).href }));
 } else if (idOnlySections.includes(section)) {
@@ -78,26 +98,6 @@ if (!section) {
     }).filter(Boolean) as { lang: string; href: string }[];
   }
 }
-
-const manualBlogTranslationKeys: Record<string, string> = {
-  'cara-ke-paisu-pok-dari-luwuk': '2026-09-18-cara-ke-paisu-pok-dari-luwuk',
-  'how-to-get-to-paisu-pok-from-luwuk': '2026-09-18-cara-ke-paisu-pok-dari-luwuk',
-  'como-llegar-a-paisu-pok-desde-luwuk': '2026-09-18-cara-ke-paisu-pok-dari-luwuk',
-  'comment-se-rendre-a-paisu-pok-depuis-luwuk': '2026-09-18-cara-ke-paisu-pok-dari-luwuk',
-  'how-to-get-to-banggai-islands-from-luwuk': '2026-09-18-cara-menuju-kepulauan-banggai-dari-luwuk',
-  'cara-menuju-kepulauan-banggai-dari-luwuk': '2026-09-18-cara-menuju-kepulauan-banggai-dari-luwuk',
-  'como-llegar-islas-banggai-desde-luwuk': '2026-09-18-cara-menuju-kepulauan-banggai-dari-luwuk',
-  'comment-rejoindre-les-iles-banggai-depuis-luwuk': '2026-09-18-cara-menuju-kepulauan-banggai-dari-luwuk',
-  'luwuk-itinerary-1-3-4-5-days': '2026-09-18-itinerary-luwuk-1-3-4-5-hari',
-  'itinerary-luwuk-1-3-4-5-hari': '2026-09-18-itinerary-luwuk-1-3-4-5-hari',
-  'itinerario-luwuk-1-3-4-5-dias': '2026-09-18-itinerary-luwuk-1-3-4-5-hari',
-  'itineraire-luwuk-1-3-4-5-jours': '2026-09-18-itinerary-luwuk-1-3-4-5-hari',
-  'danau-paisu-pok-panduan-wisata-lengkap': '2026-09-18-danau-paisu-pok-panduan-wisata-lengkap',
-  'paisu-pok-lake-complete-travel-guide': '2026-09-18-danau-paisu-pok-panduan-wisata-lengkap',
-  'lago-paisu-pok-guia-de-viaje-completa': '2026-09-18-danau-paisu-pok-panduan-wisata-lengkap',
-  'lac-paisu-pok-guide-de-voyage-complet': '2026-09-18-danau-paisu-pok-panduan-wisata-lengkap',
-  'paisu-pok-hu-wan-zheng-lu-xing-gong-lue': '2026-09-18-danau-paisu-pok-panduan-wisata-lengkap',
-};
 
 const localeMap: Record<string, string> = { id: 'id_ID', en: 'en_US', es: 'es_ES', fr: 'fr_FR', zh: 'zh_CN' };
 const baseSchema = {
