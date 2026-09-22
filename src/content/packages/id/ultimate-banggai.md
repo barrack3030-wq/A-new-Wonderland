@@ -247,3 +247,5 @@ Itinerary ini melibatkan perjalanan laut dan destinasi alam. Jadwal dapat beruba
 Destinasi atau aktivitas tertentu dapat diganti apabila diperlukan demi keselamatan dan kelancaran perjalanan.
 
 **Keselamatan, kenyamanan dan pengalaman terbaik wisatawan selalu menjadi prioritas utama.**
+
+Untuk melihat bagaimana paket ini dibandingkan dengan pilihan rute Banggai lainnya, baca [Banggai Trip & Banggai Tour](/id/banggai-trip/) dan [Banggai Travel](/id/banggai-travel/).
