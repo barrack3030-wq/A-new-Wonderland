@@ -1,8 +1,8 @@
 ---
 title: Paquete Turístico Banggai 4 Días 3 Noches
-Paquete turístico privado de 4 días y 3 noches para explorar Paisu Pok, Peleng y otros destinos de las islas Banggai.
+description: Paquete turístico privado de 4 días y 3 noches para explorar Paisu Pok, Peleng y otros destinos de las islas Banggai.
 seoTitle: 'Paquete Turístico Banggai 4 Días 3 Noches | Banggai Wonderland'
-Explora las islas Banggai en un viaje privado de 4 días y 3 noches con Paisu Pok, Peleng y destinos naturales seleccionados.
+seoDescription: 'Explora las islas Banggai en un viaje privado de 4 días y 3 noches con Paisu Pok, Peleng y destinos naturales seleccionados.'
 image: /images/wonder.jpg
 imageAlt: Banggai Wonderland
 duration: 4 Days 3 Nights
