@@ -11,7 +11,10 @@ const staticPages = [
   'gallery/',
   'book/',
   'contact/',
-  'jasa-tour-luwuk-banggai/'
+  'jasa-tour-luwuk-banggai/',
+  'banggai-travel/',
+  'banggai-trip/',
+  'banggai-open-trip/'
 ];
 
 export async function GET() {

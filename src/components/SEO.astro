@@ -38,9 +38,13 @@ const finalImageAlt = imageAlt || effectiveSeoTitle;
 
 let alternateLinks: { lang: string; href: string }[] = [];
 const contentSections = ['destinations', 'packages', 'blog'];
+const idOnlySections = ['banggai-travel', 'banggai-trip', 'banggai-open-trip'];
 
 if (!section) {
   alternateLinks = Object.keys(languages).map(langCode => ({ lang: langCode, href: new URL(`/${langCode}/`, siteUrl).href }));
+} else if (idOnlySections.includes(section)) {
+  // These SEO landing pages currently exist only in Indonesian. Never emit hreflang URLs that do not exist.
+  alternateLinks = currentLangCode === 'id' ? [{ lang: 'id', href: currentUrl }] : [];
 } else if (!contentSections.includes(section)) {
   alternateLinks = Object.keys(languages).map(langCode => ({ lang: langCode, href: new URL(`/${langCode}/${pathParts.slice(1).join('/')}/`, siteUrl).href }));
 } else {
