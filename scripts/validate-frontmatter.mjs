@@ -42,11 +42,7 @@ function parseFrontmatter(raw, path) {
     const line = fm[i];
     if (!line.trim() || line.trimStart().startsWith('#')) continue;
 
-    if (/^\s/.test(line)) {
-      if (/^\s+-\s+/.test(line) || blockKey) continue;
-      errors.push(path + ':' + (i + 2) + ': unexpected indented frontmatter line');
-      continue;
-    }
+    if (/^\s/.test(line)) continue;
 
     const match = line.match(/^([A-Za-z][A-Za-z0-9_-]*):(?:\s|$)/);
     if (!match) {
