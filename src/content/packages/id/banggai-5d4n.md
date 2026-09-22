@@ -52,6 +52,8 @@ itinerary:
 
 Paket ini dirancang untuk wisatawan yang ingin menggabungkan Luwuk dengan perjalanan kepulauan tanpa membuat itinerary terlalu padat. Fokus utamanya adalah Salakan, Peleng dan Paisu Pok dengan waktu yang cukup untuk perjalanan laut dan darat.
 
+Untuk gambaran pilihan rute yang lebih luas, lihat [Banggai Trip & Banggai Tour](/id/banggai-trip/) atau halaman [Banggai Travel](/id/banggai-travel/).
+
 ## Itinerary 5 Hari 4 Malam
 
 ### Hari 1 — Luwuk ke Salakan
