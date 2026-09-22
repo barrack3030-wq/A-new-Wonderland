@@ -67,8 +67,10 @@ if (!section) {
       const match = entries.find(entry => {
         const [entryLang, ...slugParts] = entry.slug.split('/');
         if (entryLang !== langCode) return false;
-        if (translationKey && entry.data?.translationKey) return entry.data.translationKey === translationKey;
-        return slugParts.join('/') === currentSlug;
+        const entrySlug = slugParts.join('/');
+        const entryTranslationKey = entry.data?.translationKey || (section === 'blog' ? manualBlogTranslationKeys[entrySlug] : undefined);
+        if (translationKey && entryTranslationKey) return entryTranslationKey === translationKey;
+        return entrySlug === currentSlug;
       });
       if (!match) return null;
       const [, ...slugParts] = match.slug.split('/');
