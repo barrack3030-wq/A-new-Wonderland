@@ -86,6 +86,8 @@ Perjalanan 4 hari di **Banggai Kepulauan** akan lebih nyaman bila Anda melihatny
 
 Kuncinya bukan menambahkan sebanyak mungkin destinasi, tetapi memberi cukup waktu untuk koneksi kapal dan perjalanan darat.
 
+Itinerary 4 hari ini juga dapat dijadikan dasar untuk menyusun [Banggai Trip & Banggai Tour](/id/banggai-trip/) yang lebih fleksibel. Lihat [Banggai Travel](/id/banggai-travel/) untuk pilihan private dan custom trip, atau [Banggai Open Trip](/id/banggai-open-trip/) untuk format perjalanan bersama.
+
 **Mulai dari Luwuk. Ikuti alur kepulauan. Discover Hidden Paradise of Banggai.**
 
 ## SEO Metadata
