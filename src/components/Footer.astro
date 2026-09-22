@@ -19,7 +19,7 @@ const t = useTranslations(lang);
         <h3 class="font-serif text-lg font-semibold mb-5 text-white">{t('footer.nav')}</h3>
         <ul class="space-y-2.5">
           <li><a href={`/${lang}/destinations/`} class="text-ocean-100 hover:text-turquoise-400 text-sm transition-colors">{t('nav.destinations')}</a></li>
-          <li><a href={`/${lang}/packages/`} class="text-ocean-100 hover:text-turquoise-400 text-sm transition-colors">{t('nav.packages')}</a></li>
+          <li><a href={`/${lang}/jasa-tour-luwuk-banggai/`} class="text-ocean-100 hover:text-turquoise-400 text-sm transition-colors">{lang === 'id' ? 'Paket & Jasa Tour' : lang === 'es' ? 'Paquetes y Tours' : lang === 'fr' ? 'Forfaits & Tours' : lang === 'zh' ? '套餐与旅游服务' : 'Packages & Tours'}</a></li>
           <li><a href={`/${lang}/blog/`} class="text-ocean-100 hover:text-turquoise-400 text-sm transition-colors">{t('nav.blog')}</a></li>
           <li><a href={`/${lang}/about/`} class="text-ocean-100 hover:text-turquoise-400 text-sm transition-colors">{t('nav.about')}</a></li>
           <li><a href={`/${lang}/contact/`} class="text-ocean-100 hover:text-turquoise-400 text-sm transition-colors">{t('nav.contact')}</a></li>
