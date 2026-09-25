@@ -1,8 +1,8 @@
 ---
 title: Teduang Beach
 description: Teduang Beach near Salakan is a calm, sheltered bay with clear water and distinctive man-made heart and flower stone arrangements on the seabed.
-seoTitle: "Teduang Beach Banggai | Pantai Cinta Guide"
-seoDescription: Teduang Beach in Banggai Islands offers calm bay water, man-made heart-shaped stone art on the seabed, and easy access from Salakan. Guide to fees and activities.
+seoTitle: "Teduang Beach Banggai: Love Beach, Snorkeling & Guide"
+seoDescription: "Teduang Beach, the Love Beach near Salakan, has calm water, heart-shaped underwater stones and snorkeling. See access, activities and travel tips."
 image: /images/images (4).jpg
 imageAlt: Calm greenish water of Teduang Beach in Ambelang, Banggai Islands, with heart-shaped stone arrangements visible beneath the surface, Central Sulawesi.
 location: Ambelang, Tinangkung, Banggai Islands Regency, Central Sulawesi
@@ -28,9 +28,9 @@ travelTips:
 youtube: "https://www.youtube.com/watch?v=51WQQ4nbepg"
 ---
 
-## Teduang Beach: The Love Beach of the Banggai Islands
+## Teduang Beach Banggai: Love Beach, Snorkeling and Travel Guide
 
-Teduang Beach—**Pantai Teduang**, known locally as **Pantai Cinta**—is a white-sand beach in **Ambelang Village, Tinangkung District, Banggai Islands Regency, Central Sulawesi**. It sits inside a **sheltered bay** not far from **Salakan**, the regency capital. The bay keeps the water unusually calm, with minimal waves and currents and a clear greenish colour.
+Teduang Beach—**Pantai Teduang**, known locally as **Pantai Cinta**—is a white-sand beach in **Ambelang Village, Tinangkung District, Banggai Islands Regency, Central Sulawesi**. This guide covers how to get to Teduang Beach, snorkeling, the underwater heart-shaped stones, facilities, and the best time to visit. It sits inside a **sheltered bay** not far from **Salakan**, the regency capital. The bay keeps the water unusually calm, with minimal waves and currents and a clear greenish colour.
 
 The beach is small and low-key. There is no large resort complex or formal tourism gate. Its defining attraction is beneath the surface.
 
@@ -54,7 +54,7 @@ Teduang is a **managed beach with basic facilities**. Travel reports describe si
 
 Opening-hour information is inconsistent. Some travel listings give **08:00–17:00**, while local arrangements may vary. There is no large formal ticketing complex, so bring small cash and confirm any current local fees.
 
-## How to Get to Teduang Beach
+## How to Get to Teduang Beach from Salakan
 
 Teduang is in **Ambelang Village**, close to **Salakan**. Travel sources describe the beach as roughly **15 minutes from central Salakan** by road, with the destination located along the Trans Banggai Kepulauan route.
 
