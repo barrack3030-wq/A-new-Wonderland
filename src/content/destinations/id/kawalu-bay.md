@@ -1,8 +1,8 @@
 ---
 title: Kawalu Bay
 description: Teluk tenang dengan air toska, hutan mangrove, dan perbukitan hijau di Kepulauan Banggai, Sulawesi Tengah. Panduan Kawalu Bay mencakup snorkeling, paddleboarding, diving, akses perahu, dan waktu terbaik berkunjung.
-seoTitle: "Kawalu Bay: Air Toska dan Mangrove di Kepulauan Banggai"
-seoDescription: "Panduan Kawalu Bay di Kepulauan Banggai: air toska, mangrove, snorkeling, paddleboarding, diving dangkal, akses perahu, waktu terbaik, dan tips perjalanan."
+seoTitle: "Kawalu Bay, Kepulauan Banggai: Panduan Wisata & Akses"
+seoDescription: "Panduan Kawalu Bay di Kepulauan Banggai: cara berkunjung, akses perahu, snorkeling, diving dangkal, waktu terbaik, dan tips perjalanan."
 image: /images/kawalu.webp
 imageAlt: Kawalu Bay dengan air toska, mangrove, dan perbukitan hijau
 location: Banggai Kepulauan, Sulawesi Tengah
@@ -27,9 +27,9 @@ travelTips:
   - Periksa cuaca dan kondisi laut sebelum berangkat
 ---
 
-## Kawalu Bay: Air Toska dan Mangrove di Kepulauan Banggai
+## Kawalu Bay, Kepulauan Banggai: Panduan Wisata dan Apa yang Perlu Diketahui
 
-Kawalu Bay adalah teluk tenang dengan air berwarna toska di **Kepulauan Banggai, Sulawesi Tengah, Indonesia**. Teluk ini dikenal karena permukaannya yang tenang, garis pantai yang dikelilingi mangrove, dan perbukitan hijau di sekitarnya. Kombinasi tersebut menjadikannya salah satu lanskap bahari yang menarik untuk dijelajahi melalui perjalanan perahu lokal.
+Kawalu Bay adalah teluk tenang dengan air berwarna toska di **Kepulauan Banggai, Sulawesi Tengah, Indonesia**. Panduan ini membahas lokasi Kawalu Bay, cara berkunjung, akses perahu, snorkeling, diving, waktu terbaik, dan hal yang perlu dibawa. Teluk ini dikenal karena permukaannya yang tenang, garis pantai yang dikelilingi mangrove, dan perbukitan hijau di sekitarnya. Kombinasi tersebut menjadikannya salah satu lanskap bahari yang menarik untuk dijelajahi melalui perjalanan perahu lokal.
 
 Kawalu Bay biasanya dikunjungi bersama destinasi Kepulauan Banggai lainnya, seperti **Paisu Pok Lake** dan **Paisu Batango Spring**. Untuk mengunjungi teluk ini, wisatawan umumnya mengatur perjalanan melalui homestay, penginapan, atau pemandu lokal.
 
@@ -57,9 +57,9 @@ Bagi penyelam, Kawalu Bay lebih cocok dipahami sebagai lokasi **diving terumbu d
 
 Salah satu daya tariknya adalah ikan badut atau **Nemo**, khususnya *Amphiprion ocellaris*, yang hidup di antara anemon laut. Kedalaman yang relatif dangkal membuat area ini dapat menarik bagi penyelam pemula yang melakukan penyelaman bersama pemandu dan mengikuti kondisi laut pada hari tersebut.
 
-## Cara Mengunjungi Kawalu Bay
+## Cara ke Kawalu Bay
 
-Kawalu Bay **bukan destinasi yang biasanya dicapai langsung melalui jalan darat**. Cara paling praktis adalah memasukkannya ke dalam perjalanan **perahu lokal** yang diatur melalui penginapan atau pemandu.
+Kawalu Bay **bukan destinasi yang biasanya dicapai langsung melalui jalan darat**, sehingga pengaturan koneksi perahu menjadi bagian penting dari perjalanan. Cara paling praktis adalah memasukkannya ke dalam perjalanan **perahu lokal** yang diatur melalui penginapan atau pemandu.
 
 Wisatawan yang tinggal di Kepulauan Banggai dapat mendiskusikan rute dengan homestay atau guesthouse dan menyebutkan destinasi yang ingin dikunjungi dalam satu hari. Pemandu lokal juga berguna untuk mengetahui jalur mangrove, titik snorkeling, lokasi masuk diving, serta waktu dengan kondisi air yang lebih baik.
 
