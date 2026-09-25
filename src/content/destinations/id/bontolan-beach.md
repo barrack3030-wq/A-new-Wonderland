@@ -1,8 +1,8 @@
 ---
-title: 'Bontolan Beach'
+title: 'Pantai Bontolan (Bontolan Beach)'
 description: Bontolan Beach di Desa Bone Baru adalah destinasi pantai berpasir putih di Pulau Banggai, dikenal untuk snorkeling, ikan capungan Banggai, dan pemandangan melintasi selat menuju permukiman Toulan.
-seoTitle: "Bontolan Beach Banggai | Snorkeling, Akses & Panduan Wisata"
-seoDescription: 'Jelajahi Bontolan Beach di Pulau Banggai: snorkeling, ikan capungan Banggai, fasilitas, harga, akses dari Banggai, penginapan, dan tips keselamatan.'
+seoTitle: "Pantai Bontolan Banggai: Snorkeling, Akses & Panduan Wisata"
+seoDescription: 'Panduan Pantai Bontolan di Banggai Laut: snorkeling, ikan capungan Banggai, harga, fasilitas, cara ke, penginapan, dan tips keselamatan.'
 image: /images/bontolan.jpg
 imageAlt: Bontolan Beach di Pulau Banggai
 location: Bone Baru, Banggai Utara, Banggai Laut
@@ -24,12 +24,16 @@ travelTips:
   - Gunakan alat apung jika tidak yakin berenang
   - Bawa perlindungan dari matahari dan hujan serta tas tahan air
   - Hormati terumbu karang dan masyarakat setempat
+relatedDestinations:
+  - oyama-beach
+  - long-beach
+  - paisu-pok-lake
 youtube: "https://www.youtube.com/watch?v=LEO-F982E6g"
 ---
 
-## Bontolan Beach: Snorkeling dan Kehidupan Desa di Pulau Banggai
+## Pantai Bontolan Banggai: Snorkeling, Akses dan Panduan Wisata
 
-Bontolan Beach merupakan destinasi pantai berpasir putih di **Desa Bone Baru, Kecamatan Banggai Utara, Kabupaten Banggai Laut, Sulawesi Tengah**. Pantai ini berada di **Pulau Banggai**, bukan Pulau Peleng, dan menghadap selat sempit dengan pemandangan menuju permukiman Toulan. Berbeda dari banyak objek wisata di Kepulauan Banggai, Bontolan dapat dicapai melalui jalan darat. Jaraknya sekitar 20 menit berkendara dari ibu kota Kabupaten Banggai Laut, sementara pantai berada sekitar 30 meter dari jalan utama.
+Pantai Bontolan (Bontolan Beach) merupakan destinasi pantai berpasir putih di **Desa Bone Baru, Kecamatan Banggai Utara, Kabupaten Banggai Laut, Sulawesi Tengah**. Panduan ini membahas cara ke Pantai Bontolan, snorkeling, ikan capungan Banggai, fasilitas, biaya, dan pilihan penginapan. Pantai ini berada di **Pulau Banggai**, bukan Pulau Peleng, dan menghadap selat sempit dengan pemandangan menuju permukiman Toulan. Berbeda dari banyak objek wisata di Kepulauan Banggai, Bontolan dapat dicapai melalui jalan darat. Jaraknya sekitar 20 menit berkendara dari ibu kota Kabupaten Banggai Laut, sementara pantai berada sekitar 30 meter dari jalan utama.
 
 Daya tarik utama Bontolan adalah terumbu karang di lepas pantainya yang menjadi habitat **ikan capungan Banggai** (_Pterapogon kauderni_), ikan endemik yang hanya ditemukan di wilayah Indonesia ini. Desa Bone Baru juga pernah masuk dalam Top 100 Desa Wisata Indonesia melalui ADWI 2024 dan secara rutin menerima wisatawan asing, termasuk sebagian yang datang menggunakan kapal phinisi.
 
