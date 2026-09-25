@@ -1,8 +1,8 @@
 ---
 title: Kawalu Bay
 description: Kawalu Bay is a calm turquoise bay in the Banggai Islands, known for clear water, mangrove-lined shores, green hills, snorkeling, paddleboarding, and shallow reef diving.
-seoTitle: "Kawalu Bay: Turquoise Water and Mangroves in the Banggai Islands"
-seoDescription: "Explore Kawalu Bay in the Banggai Islands: turquoise water, mangroves, snorkeling, paddleboarding, shallow diving, boat access, best time to visit, and practical travel tips."
+seoTitle: "Kawalu Bay, Banggai Islands: Travel Guide, Access & Snorkeling"
+seoDescription: "Kawalu Bay in the Banggai Islands: how to visit, boat access, snorkeling, shallow diving, best time to go, and practical travel tips."
 image: /images/kawalu.webp
 imageAlt: Kawalu Bay with turquoise water, mangroves, and green hills
 location: Banggai Islands, Central Sulawesi
@@ -27,9 +27,9 @@ travelTips:
   - Check weather and sea conditions before departure
 ---
 
-## Kawalu Bay: Turquoise Water and Mangroves in the Banggai Islands
+## Kawalu Bay, Banggai Islands: Travel Guide and What to Expect
 
-Kawalu Bay is a calm, turquoise bay in the **Banggai Islands of Central Sulawesi, Indonesia**. It is known for mirror-like water, mangrove-lined shores, and green hills surrounding the bay. The combination creates one of the region's most appealing marine landscapes and is best experienced as part of a local boat trip.
+Kawalu Bay is a calm, turquoise bay in the **Banggai Islands of Central Sulawesi, Indonesia**. This guide covers where Kawalu Bay is, how to get there, boat access, snorkeling, diving, the best time to visit, and what to bring. It is known for mirror-like water, mangrove-lined shores, and green hills surrounding the bay. The combination creates one of the region's most appealing marine landscapes and is best experienced as part of a local boat trip.
 
 Travelers often visit Kawalu Bay together with other Banggai Islands destinations such as **Paisu Pok Lake** and **Paisu Batango Spring**. Local accommodation or a guide can usually help arrange the boat trip and coordinate the day's route.
 
@@ -57,9 +57,9 @@ For divers, Kawalu Bay is better understood as a **shallow reef diving site** ra
 
 One of the attractions is clownfish, or **Nemo**, particularly *Amphiprion ocellaris*, living among sea anemones. The relatively shallow depth can make the site appealing to beginner divers when conditions are suitable and the dive is conducted with appropriate guidance.
 
-## How to Visit Kawalu Bay
+## How to Get to Kawalu Bay
 
-Kawalu Bay is **not normally reached directly by road**. The practical way to experience it is as part of a **local boat trip** arranged through accommodation or a local guide.
+Kawalu Bay is **not normally reached directly by road**, so planning the boat connection is the most important part of the visit. The practical way to experience it is as part of a **local boat trip** arranged through accommodation or a local guide.
 
 Travelers staying in the Banggai Islands can discuss the route with a homestay or guesthouse and combine several destinations in one day. A local guide can also help with mangrove channels, snorkeling spots, diving entry points, and timing the visit around better water conditions.
 
