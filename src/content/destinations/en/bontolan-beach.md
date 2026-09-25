@@ -1,8 +1,8 @@
 ---
 title: 'Bontolan Beach'
 description: Bontolan Beach in Bone Baru Village is a white-sand coastal destination on Banggai Island, known for snorkeling, Banggai Cardinal Fish and its view across the strait toward Toulan.
-seoTitle: "Bontolan Beach Banggai | Snorkeling, Access & Travel Guide"
-seoDescription: 'Discover Bontolan Beach on Banggai Island: snorkeling, Banggai Cardinal Fish, facilities, prices, access from Banggai town, accommodation and safety tips.'
+seoTitle: "Bontolan Beach, Banggai Laut: Snorkeling & Travel Guide"
+seoDescription: 'Bontolan Beach in Banggai Laut: snorkeling, Banggai Cardinal Fish, entrance fees, road access from Banggai town, accommodation and safety tips.'
 image: /images/bontolan.jpg
 imageAlt: Bontolan Beach on Banggai Island
 location: Bone Baru, North Banggai, Banggai Laut
@@ -24,12 +24,16 @@ travelTips:
   - Use flotation devices if you are not a confident swimmer
   - Bring sun and rain protection and a waterproof bag
   - Respect coral and the local community
+relatedDestinations:
+  - oyama-beach
+  - long-beach
+  - paisu-pok-lake
 youtube: "https://www.youtube.com/watch?v=LEO-F982E6g"
 ---
 
-## Bontolan Beach: Snorkeling and Village Life on Banggai Island
+## Bontolan Beach, Banggai Laut: Snorkeling, Access and Travel Guide
 
-Bontolan Beach is a white-sand coastal destination in **Bone Baru Village, North Banggai District, Banggai Laut Regency, Central Sulawesi**. It sits on **Banggai Island**—not Peleng Island—and faces a narrow strait with views toward the Toulan village cluster. Unlike many attractions in the Banggai archipelago, Bontolan is reachable by road: it is approximately 20 minutes by vehicle from the Banggai Laut regency capital, with the beach itself about 30 meters from the main road.
+Bontolan Beach is a white-sand coastal destination in **Bone Baru Village, North Banggai District, Banggai Laut Regency, Central Sulawesi**. This guide covers how to get to Bontolan Beach, snorkeling, Banggai Cardinal Fish, facilities, entrance fees, nearby accommodation, and safety tips. It sits on **Banggai Island**—not Peleng Island—and faces a narrow strait with views toward the Toulan village cluster. Unlike many attractions in the Banggai archipelago, Bontolan is reachable by road: it is approximately 20 minutes by vehicle from the Banggai Laut regency capital, with the beach itself about 30 meters from the main road.
 
 The beach is best known for its offshore coral reefs, which support the **Banggai Cardinal Fish** (_Pterapogon kauderni_), an endemic species found only in this part of Indonesia. Bone Baru Village has been recognised as one of Indonesia's Top 100 Tourism Villages (ADWI 2024), and it regularly receives foreign visitors, including some arriving by phinisi boat.
 
