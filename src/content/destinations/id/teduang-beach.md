@@ -1,8 +1,8 @@
 ---
 title: Pantai Teduang
 description: Pantai Teduang dekat Salakan adalah teluk tenang dengan air jernih serta susunan batu berbentuk hati dan bunga di dasar laut.
-seoTitle: "Pantai Teduang Banggai | Pantai Cinta & Snorkeling"
-seoDescription: Pantai Teduang di Kepulauan Banggai menawarkan air teluk yang tenang, seni batu berbentuk hati di dasar laut, dan akses mudah dari Salakan. Panduan tiket dan aktivitas.
+seoTitle: "Pantai Teduang Banggai: Pantai Cinta, Snorkeling & Cara ke"
+seoDescription: "Pantai Teduang, atau Pantai Cinta dekat Salakan, punya air tenang, batu berbentuk hati di bawah laut dan snorkeling. Cek akses dan tips wisata."
 image: /images/images (4).jpg
 imageAlt: Air kehijauan tenang Pantai Teduang di Ambelang, Kepulauan Banggai, dengan susunan batu berbentuk hati terlihat di bawah permukaan, Sulawesi Tengah.
 location: Ambelang, Tinangkung, Kabupaten Banggai Kepulauan, Sulawesi Tengah
@@ -28,9 +28,9 @@ travelTips:
 youtube: "https://www.youtube.com/watch?v=51WQQ4nbepg"
 ---
 
-## Pantai Teduang: Pantai Cinta di Kepulauan Banggai
+## Pantai Teduang Banggai: Pantai Cinta, Snorkeling dan Panduan Wisata
 
-Pantai Teduang—dikenal lokal sebagai **Pantai Cinta**—adalah pantai berpasir putih di **Desa Ambelang, Kecamatan Tinangkung, Kabupaten Banggai Kepulauan, Sulawesi Tengah**. Pantai ini berada di dalam **teluk yang terlindung**, tidak jauh dari **Salakan**, ibu kota kabupaten. Bentuk teluk membuat airnya tenang seperti danau, dengan ombak kecil, arus relatif ringan, dan warna hijau kebiruan yang jernih.
+Pantai Teduang—dikenal lokal sebagai **Pantai Cinta**—adalah pantai berpasir putih di **Desa Ambelang, Kecamatan Tinangkung, Kabupaten Banggai Kepulauan, Sulawesi Tengah**. Panduan ini membahas cara menuju Teduang dari Salakan, snorkeling, susunan batu berbentuk hati, fasilitas, dan waktu terbaik berkunjung. Pantai ini berada di dalam **teluk yang terlindung**, tidak jauh dari **Salakan**, ibu kota kabupaten. Bentuk teluk membuat airnya tenang seperti danau, dengan ombak kecil, arus relatif ringan, dan warna hijau kebiruan yang jernih.
 
 Pantainya kecil dan sederhana. Tidak ada kompleks resor besar atau gerbang wisata yang mewah. Daya tarik utamanya justru berada di bawah permukaan air.
 
@@ -54,7 +54,7 @@ Teduang merupakan **pantai yang dikelola dengan fasilitas dasar**. Sumber perjal
 
 Informasi jam buka tidak sepenuhnya konsisten. Beberapa daftar perjalanan mencantumkan **08.00–17.00**, sementara pengaturan lokal dapat berbeda. Tidak ada kompleks tiket formal, jadi bawa uang tunai pecahan kecil dan konfirmasi biaya yang berlaku.
 
-## Cara Menuju Pantai Teduang
+## Cara Menuju Pantai Teduang dari Salakan
 
 Teduang berada di **Desa Ambelang**, dekat **Salakan**. Sumber perjalanan menyebut lokasi ini sekitar **15 menit dari pusat Salakan** melalui jalan darat dan berada di jalur Trans Banggai Kepulauan.
 
