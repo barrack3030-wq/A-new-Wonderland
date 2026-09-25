@@ -1,8 +1,8 @@
 ---
 title: "Pantai Oyama"
 description: "Pantai Oyama adalah pantai pasir putih di ujung utara Pulau Banggai dengan air tenang dan hutan bakau, yang hanya dapat dicapai dengan perahu."
-seoTitle: "Pantai Oyama Banggai Laut | Pantai Pasir Putih Akses Perahu"
-seoDescription: "Pantai Oyama di Pulau Banggai menawarkan pasir putih, air tenang, dan hutan bakau. Hanya bisa dicapai dengan perahu dari Lokotoy atau Popisi. Gratis."
+seoTitle: "Pantai Oyama Banggai Laut: Cara ke, Perahu & Snorkeling"
+seoDescription: "Pantai Oyama Banggai Laut: pasir putih, air pirus, akses perahu dari Lokotoy atau Popisi, snorkeling, waktu terbaik dan tips perjalanan."
 image: "/images/698024319f723539c41d303baa496f2e.jpg"
 imageAlt: "Garis pantai pasir putih Pantai Oyama di Pulau Banggai dengan air pirus dan hutan bakau di belakang, Banggai Laut, Sulawesi Tengah."
 location: "Banggai Utara, Banggai Laut"
@@ -27,9 +27,9 @@ travelTips:
 youtube: "https://www.youtube.com/watch?v=zcwUg-FHlcw"
 ---
 
-# Pantai Oyama: Pasir Putih di Banggai Laut
+# Pantai Oyama Banggai Laut: Akses Perahu, Snorkeling dan Panduan Wisata
 
-Pantai Oyama adalah pantai berpasir putih di **ujung utara Pulau Banggai, Kabupaten Banggai Laut, Sulawesi Tengah**. Lokasinya berada di kawasan **Lokotoy / Pasir Putih, Kecamatan Banggai Utara**, meskipun nama desa tepatnya bervariasi antar sumber—sebagian menyebut Desa Lokotoy, sebagian lain Desa Pasir Putih. Yang konsisten adalah latarnya: pasir putih halus, air pirus yang tenang, dan hutan bakau besar tepat di belakang garis pantai.
+Pantai Oyama adalah pantai berpasir putih di **ujung utara Pulau Banggai, Kabupaten Banggai Laut, Sulawesi Tengah**. Panduan ini membahas cara menuju Pantai Oyama, akses perahu dari Lokotoy atau Popisi, snorkeling, waktu terbaik, dan persiapan perjalanan. Lokasinya berada di kawasan **Lokotoy / Pasir Putih, Kecamatan Banggai Utara**, meskipun nama desa tepatnya bervariasi antar sumber—sebagian menyebut Desa Lokotoy, sebagian lain Desa Pasir Putih. Yang konsisten adalah latarnya: pasir putih halus, air pirus yang tenang, dan hutan bakau besar tepat di belakang garis pantai.
 
 Pantai ini **tidak dapat diakses melalui jalan darat**. Ujung utara Pulau Banggai terpotong oleh bakau, sehingga satu-satunya cara masuk adalah dengan perahu—biasanya penyeberangan singkat dari desa **Lokotoy** atau **Popisi**. Ini adalah kendala praktis utama, sekaligus alasan Oyama tetap lebih sepi dibandingkan pantai seperti Bontolan atau Kilo 5.
 
@@ -49,7 +49,7 @@ Dua **spot diving** terkait dengan area Oyama: **Batu Alay** dan **Batu Karang**
 
 **Sewa speedboat** tersedia di area ini, dengan tarif yang dilaporkan mulai sekitar **Rp1–1,5 juta** per perahu. Untuk sekadar mencapai Oyama dari Lokotoy atau Popisi, penyeberangannya singkat—sekitar 3 km—dan pada 2020–2021 biayanya sekitar **Rp150.000 per perahu dari Lokotoy** atau **Rp50.000 per perahu dari Popisi**. Harga dapat berubah, dan wisatawan sebaiknya mengonfirmasi secara lokal.
 
-## Cara Menuju Pantai Oyama
+## Cara Menuju Pantai Oyama: Lokotoy atau Popisi
 
 Tidak ada jalan darat ke Oyama. Pendekatan standarnya adalah:
 
