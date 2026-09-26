@@ -38,103 +38,117 @@ Jika Anda ingin menjelajahi **Luwuk dan Kepulauan Banggai** tanpa terburu-buru, 
 
 ## Day 1 — Luwuk → Piala Waterfall → Salakan
 
-**11:30** tiba di Luwuk Airport, pickup dan pengambilan bagasi.  
-**12:00–13:00** perjalanan menuju Piala Waterfall.  
-**13:00–14:00** mengunjungi Piala Waterfall.  
-**14:00–14:45** makan siang.  
-**14:45–15:30** menuju pelabuhan.  
-**15:30–16:00** boarding.  
-**16:00** target ferry Luwuk–Salakan.  
-**±20:00–20:30** tiba di Salakan, transfer dan check-in.  
-**21:00** makan malam dan istirahat.
+| Waktu | Aktivitas |
+|---|---|
+| 11:30 | tiba di Luwuk Airport, pickup dan pengambilan bagasi. |
+| 12:00–13:00 | perjalanan menuju Piala Waterfall. |
+| 13:00–14:00 | mengunjungi Piala Waterfall. |
+| 14:00–14:45 | makan siang. |
+| 14:45–15:30 | menuju pelabuhan. |
+| 15:30–16:00 | boarding. |
+| 16:00 | target ferry Luwuk–Salakan. |
+| ±20:00–20:30 | tiba di Salakan, transfer dan check-in. |
+| 21:00 | makan malam dan istirahat. |
+| Menginap: | Sidapore / Wisma Alfren, tergantung ketersediaan kamar. |
 
-**Menginap:** Sidapore / Wisma Alfren, tergantung ketersediaan kamar.
 
 ## Day 2 — Paisu Pok, Paisu Batango, Kawalu Bay & Poganda
 
-**06:30** sarapan.  
-**07:00** berangkat dari Salakan.  
-**±10:00** tiba di Paisu Pok.  
-**10:00–11:30** eksplorasi Paisu Pok.  
-**11:30–12:30** makan siang.  
-**12:30–13:30** Paisu Batango.  
-**13:30–15:00** Kawalu Bay.  
-**15:00–16:30** Poganda Beach.  
-**16:30–19:30** kembali ke Salakan.  
-**20:00** makan malam dan istirahat.
+| Waktu | Aktivitas |
+|---|---|
+| 06:30 | sarapan. |
+| 07:00 | berangkat dari Salakan. |
+| ±10:00 | tiba di Paisu Pok. |
+| 10:00–11:30 | eksplorasi Paisu Pok. |
+| 11:30–12:30 | makan siang. |
+| 12:30–13:30 | Paisu Batango. |
+| 13:30–15:00 | Kawalu Bay. |
+| 15:00–16:30 | Poganda Beach. |
+| 16:30–19:30 | kembali ke Salakan. |
+| 20:00 | makan malam dan istirahat. |
+| Menginap: | Sidapore / Wisma Alfren. |
 
-**Menginap:** Sidapore / Wisma Alfren.
 
 ## Day 3 — Tebing → Mbuang-Mbuang → Bontolan
 
-**06:30** sarapan.  
-**07:00** berangkat.  
-**08:30–09:30** Tebing.  
-**09:30–10:30** transfer menuju Mbuang-Mbuang.  
-**10:30–13:00** Mbuang-Mbuang dan area jellyfish.  
-**13:00–14:00** makan siang.  
-**14:00–16:00** Bontolan.  
-**16:00–18:00** kembali ke Salakan.  
-**19:00** makan malam.
+| Waktu | Aktivitas |
+|---|---|
+| 06:30 | sarapan. |
+| 07:00 | berangkat. |
+| 08:30–09:30 | Tebing. |
+| 09:30–10:30 | transfer menuju Mbuang-Mbuang. |
+| 10:30–13:00 | Mbuang-Mbuang dan area jellyfish. |
+| 13:00–14:00 | makan siang. |
+| 14:00–16:00 | Bontolan. |
+| 16:00–18:00 | kembali ke Salakan. |
+| 19:00 | makan malam. |
+| Menginap: | Sidapore / Wisma Alfren. |
 
-**Menginap:** Sidapore / Wisma Alfren.
 
 ## Day 4 — Tebing → Oyama → Long Beach → Bontolan
 
-**06:30** sarapan.  
-**07:00** berangkat.  
-**08:30–09:30** Tebing.  
-**09:30–11:30** Oyama Beach.  
-**11:30–13:00** Long Beach.  
-**13:00–14:00** makan siang.  
-**14:00–16:00** Bontolan.  
-**16:00–18:00** kembali ke Salakan.  
-**19:00** makan malam.
+| Waktu | Aktivitas |
+|---|---|
+| 06:30 | sarapan. |
+| 07:00 | berangkat. |
+| 08:30–09:30 | Tebing. |
+| 09:30–11:30 | Oyama Beach. |
+| 11:30–13:00 | Long Beach. |
+| 13:00–14:00 | makan siang. |
+| 14:00–16:00 | Bontolan. |
+| 16:00–18:00 | kembali ke Salakan. |
+| 19:00 | makan malam. |
+| Menginap: | Sidapore / Wisma Alfren. |
 
-**Menginap:** Sidapore / Wisma Alfren.
 
 ## Day 5 — Pompon Beach → Mandel Beach → Luwuk
 
-**06:00** sarapan dan check-out.  
-**07:00–09:00** Pompon Beach.  
-**09:00–11:00** Mandel Beach.  
-**11:00–12:00** makan siang.  
-**12:00–14:30** kembali ke Salakan.  
-**14:30–15:30** buffer dan persiapan boarding.  
-**16:00** target ferry Salakan–Luwuk.  
-**±20:00–20:30** tiba di Luwuk.  
-**20:30–21:00** transfer dan check-in.  
-**21:00** makan malam.
+| Waktu | Aktivitas |
+|---|---|
+| 06:00 | sarapan dan check-out. |
+| 07:00–09:00 | Pompon Beach. |
+| 09:00–11:00 | Mandel Beach. |
+| 11:00–12:00 | makan siang. |
+| 12:00–14:30 | kembali ke Salakan. |
+| 14:30–15:30 | buffer dan persiapan boarding. |
+| 16:00 | target ferry Salakan–Luwuk. |
+| ±20:00–20:30 | tiba di Luwuk. |
+| 20:30–21:00 | transfer dan check-in. |
+| 21:00 | makan malam. |
+| Menginap: | Swiss-Belinn Luwuk. |
 
-**Menginap:** Swiss-Belinn Luwuk.
 
 ## Day 6 — Full-Day Pulo Dua
 
-**06:00** sarapan.  
-**06:30** berangkat dari Luwuk.  
-**±09:30** tiba di area keberangkatan boat.  
-**09:45** berangkat menuju Pulo Dua.  
-**10:00–15:00** island hopping, snorkeling dan berenang.  
-**12:00–13:00** makan siang.  
-**15:00–15:30** kembali dengan boat.  
-**15:30–18:30** perjalanan kembali ke Luwuk.  
-**±19:00** tiba di hotel dan istirahat.
+| Waktu | Aktivitas |
+|---|---|
+| 06:00 | sarapan. |
+| 06:30 | berangkat dari Luwuk. |
+| ±09:30 | tiba di area keberangkatan boat. |
+| 09:45 | berangkat menuju Pulo Dua. |
+| 10:00–15:00 | island hopping, snorkeling dan berenang. |
+| 12:00–13:00 | makan siang. |
+| 15:00–15:30 | kembali dengan boat. |
+| 15:30–18:30 | perjalanan kembali ke Luwuk. |
+| ±19:00 | tiba di hotel dan istirahat. |
+| Menginap: | Swiss-Belinn Luwuk. |
 
-**Menginap:** Swiss-Belinn Luwuk.
 
 ## Day 7 — Kamumu Waterfall → Salodik Waterfall → Luwuk
 
-**07:00** sarapan.  
-**07:30** berangkat dari Luwuk.  
-**08:30–10:30** Kamumu Waterfall.  
-**10:30–11:00** perjalanan menuju Salodik.  
-**11:00–12:30** Salodik Waterfall.  
-**12:30–13:30** makan siang.  
-**13:30–14:30** kembali ke Luwuk.  
-**14:30–17:30** waktu bebas di Luwuk.  
-**18:00** makan malam.
+| Waktu | Aktivitas |
+|---|---|
+| 07:00 | sarapan. |
+| 07:30 | berangkat dari Luwuk. |
+| 08:30–10:30 | Kamumu Waterfall. |
+| 10:30–11:00 | perjalanan menuju Salodik. |
+| 11:00–12:30 | Salodik Waterfall. |
+| 12:30–13:30 | makan siang. |
+| 13:30–14:30 | kembali ke Luwuk. |
+| 14:30–17:30 | waktu bebas di Luwuk. |
+| 18:00 | makan malam. |
+| Menginap: | Swiss-Belinn Luwuk. |
 
-**Menginap:** Swiss-Belinn Luwuk.
 
 ## Akomodasi
 
