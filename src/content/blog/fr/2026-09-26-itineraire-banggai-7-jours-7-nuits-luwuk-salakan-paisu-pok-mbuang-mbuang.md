@@ -38,103 +38,117 @@ Pour découvrir **Luwuk et les îles Banggai** sans courir, cet itinéraire de 7
 
 ## Jour 1 — Luwuk → Piala Waterfall → Salakan
 
-**11h30** arrivée à l’aéroport de Luwuk, accueil et bagages.  
-**12h00–13h00** route vers Piala Waterfall.  
-**13h00–14h00** visite de Piala Waterfall.  
-**14h00–14h45** déjeuner.  
-**14h45–15h30** transfert vers le port.  
-**15h30–16h00** embarquement.  
-**16h00** départ prévu du ferry Luwuk–Salakan.  
-**±20h00–20h30** arrivée à Salakan, transfert et check-in.  
-**21h00** dîner et repos.
+| Heure | Activité |
+|---|---|
+| 11h30 | arrivée à l’aéroport de Luwuk, accueil et bagages. |
+| 12h00–13h00 | route vers Piala Waterfall. |
+| 13h00–14h00 | visite de Piala Waterfall. |
+| 14h00–14h45 | déjeuner. |
+| 14h45–15h30 | transfert vers le port. |
+| 15h30–16h00 | embarquement. |
+| 16h00 | départ prévu du ferry Luwuk–Salakan. |
+| ±20h00–20h30 | arrivée à Salakan, transfert et check-in. |
+| 21h00 | dîner et repos. |
+| Nuit : | Sidapore / Wisma Alfren, selon disponibilité. |
 
-**Nuit :** Sidapore / Wisma Alfren, selon disponibilité.
 
 ## Jour 2 — Paisu Pok, Paisu Batango, Kawalu Bay et Poganda
 
-**06h30** petit-déjeuner.  
-**07h00** départ de Salakan.  
-**±10h00** arrivée à Paisu Pok.  
-**10h00–11h30** découverte de Paisu Pok.  
-**11h30–12h30** déjeuner.  
-**12h30–13h30** Paisu Batango.  
-**13h30–15h00** Kawalu Bay.  
-**15h00–16h30** Poganda Beach.  
-**16h30–19h30** retour à Salakan.  
-**20h00** dîner et repos.
+| Heure | Activité |
+|---|---|
+| 06h30 | petit-déjeuner. |
+| 07h00 | départ de Salakan. |
+| ±10h00 | arrivée à Paisu Pok. |
+| 10h00–11h30 | découverte de Paisu Pok. |
+| 11h30–12h30 | déjeuner. |
+| 12h30–13h30 | Paisu Batango. |
+| 13h30–15h00 | Kawalu Bay. |
+| 15h00–16h30 | Poganda Beach. |
+| 16h30–19h30 | retour à Salakan. |
+| 20h00 | dîner et repos. |
+| Nuit : | Sidapore / Wisma Alfren. |
 
-**Nuit :** Sidapore / Wisma Alfren.
 
 ## Jour 3 — Tebing → Mbuang-Mbuang → Bontolan
 
-**06h30** petit-déjeuner.  
-**07h00** départ.  
-**08h30–09h30** Tebing.  
-**09h30–10h30** transfert vers Mbuang-Mbuang.  
-**10h30–13h00** découverte de Mbuang-Mbuang et de la zone des méduses.  
-**13h00–14h00** déjeuner.  
-**14h00–16h00** Bontolan.  
-**16h00–18h00** retour à Salakan.  
-**19h00** dîner.
+| Heure | Activité |
+|---|---|
+| 06h30 | petit-déjeuner. |
+| 07h00 | départ. |
+| 08h30–09h30 | Tebing. |
+| 09h30–10h30 | transfert vers Mbuang-Mbuang. |
+| 10h30–13h00 | découverte de Mbuang-Mbuang et de la zone des méduses. |
+| 13h00–14h00 | déjeuner. |
+| 14h00–16h00 | Bontolan. |
+| 16h00–18h00 | retour à Salakan. |
+| 19h00 | dîner. |
+| Nuit : | Sidapore / Wisma Alfren. |
 
-**Nuit :** Sidapore / Wisma Alfren.
 
 ## Jour 4 — Tebing → Oyama → Long Beach → Bontolan
 
-**06h30** petit-déjeuner.  
-**07h00** départ.  
-**08h30–09h30** Tebing.  
-**09h30–11h30** Oyama Beach.  
-**11h30–13h00** Long Beach.  
-**13h00–14h00** déjeuner.  
-**14h00–16h00** Bontolan.  
-**16h00–18h00** retour à Salakan.  
-**19h00** dîner.
+| Heure | Activité |
+|---|---|
+| 06h30 | petit-déjeuner. |
+| 07h00 | départ. |
+| 08h30–09h30 | Tebing. |
+| 09h30–11h30 | Oyama Beach. |
+| 11h30–13h00 | Long Beach. |
+| 13h00–14h00 | déjeuner. |
+| 14h00–16h00 | Bontolan. |
+| 16h00–18h00 | retour à Salakan. |
+| 19h00 | dîner. |
+| Nuit : | Sidapore / Wisma Alfren. |
 
-**Nuit :** Sidapore / Wisma Alfren.
 
 ## Jour 5 — Pompon Beach → Mandel Beach → Luwuk
 
-**06h00** petit-déjeuner et check-out.  
-**07h00–09h00** Pompon Beach.  
-**09h00–11h00** Mandel Beach.  
-**11h00–12h00** déjeuner.  
-**12h00–14h30** retour à Salakan.  
-**14h30–15h30** marge et préparation à l’embarquement.  
-**16h00** départ prévu du ferry Salakan–Luwuk.  
-**±20h00–20h30** arrivée à Luwuk.  
-**20h30–21h00** transfert et check-in.  
-**21h00** dîner.
+| Heure | Activité |
+|---|---|
+| 06h00 | petit-déjeuner et check-out. |
+| 07h00–09h00 | Pompon Beach. |
+| 09h00–11h00 | Mandel Beach. |
+| 11h00–12h00 | déjeuner. |
+| 12h00–14h30 | retour à Salakan. |
+| 14h30–15h30 | marge et préparation à l’embarquement. |
+| 16h00 | départ prévu du ferry Salakan–Luwuk. |
+| ±20h00–20h30 | arrivée à Luwuk. |
+| 20h30–21h00 | transfert et check-in. |
+| 21h00 | dîner. |
+| Nuit : | Swiss-Belinn Luwuk. |
 
-**Nuit :** Swiss-Belinn Luwuk.
 
 ## Jour 6 — Pulo Dua toute la journée
 
-**06h00** petit-déjeuner.  
-**06h30** départ de Luwuk.  
-**±09h30** arrivée au point de départ du bateau.  
-**09h45** départ pour Pulo Dua.  
-**10h00–15h00** island hopping, snorkeling et baignade.  
-**12h00–13h00** déjeuner.  
-**15h00–15h30** retour en bateau.  
-**15h30–18h30** retour à Luwuk.  
-**±19h00** arrivée à l’hôtel et repos.
+| Heure | Activité |
+|---|---|
+| 06h00 | petit-déjeuner. |
+| 06h30 | départ de Luwuk. |
+| ±09h30 | arrivée au point de départ du bateau. |
+| 09h45 | départ pour Pulo Dua. |
+| 10h00–15h00 | island hopping, snorkeling et baignade. |
+| 12h00–13h00 | déjeuner. |
+| 15h00–15h30 | retour en bateau. |
+| 15h30–18h30 | retour à Luwuk. |
+| ±19h00 | arrivée à l’hôtel et repos. |
+| Nuit : | Swiss-Belinn Luwuk. |
 
-**Nuit :** Swiss-Belinn Luwuk.
 
 ## Jour 7 — Kamumu Waterfall → Salodik Waterfall → Luwuk
 
-**07h00** petit-déjeuner.  
-**07h30** départ de Luwuk.  
-**08h30–10h30** Kamumu Waterfall.  
-**10h30–11h00** transfert vers Salodik.  
-**11h00–12h30** Salodik Waterfall.  
-**12h30–13h30** déjeuner.  
-**13h30–14h30** retour à Luwuk.  
-**14h30–17h30** temps libre à Luwuk.  
-**18h00** dîner.
+| Heure | Activité |
+|---|---|
+| 07h00 | petit-déjeuner. |
+| 07h30 | départ de Luwuk. |
+| 08h30–10h30 | Kamumu Waterfall. |
+| 10h30–11h00 | transfert vers Salodik. |
+| 11h00–12h30 | Salodik Waterfall. |
+| 12h30–13h30 | déjeuner. |
+| 13h30–14h30 | retour à Luwuk. |
+| 14h30–17h30 | temps libre à Luwuk. |
+| 18h00 | dîner. |
+| Nuit : | Swiss-Belinn Luwuk. |
 
-**Nuit :** Swiss-Belinn Luwuk.
 
 ## Hébergement
 
