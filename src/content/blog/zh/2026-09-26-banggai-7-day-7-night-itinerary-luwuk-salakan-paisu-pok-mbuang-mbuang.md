@@ -38,6 +38,8 @@ tags:
 
 ## 第1天 — Luwuk → Piala Waterfall → Salakan
 
+![Piala Waterfall](/images/piala.jpg)
+
 | 时间 | 活动 |
 |---|---|
 | 11:30 | 抵达Luwuk机场，接机并领取行李。 |
@@ -51,6 +53,14 @@ tags:
 | 21:00 | 晚餐与休息。 |
 | 住宿： | Sidapore / Wisma Alfren，以房间供应情况为准。 |
 ## 第2天 — Paisu Pok、Paisu Batango、Kawalu Bay 与 Poganda
+
+![Paisu Pok Lake](/images/blog/dji-0992-2-20260915111011.webp)
+
+![Paisu Batango](/images/paisu.jpg)
+
+![Kawalu Bay](/images/kawalu.webp)
+
+![Poganda Beach](/images/Poganda-Beach-Banggai-IndonesiaJuara-Trip.webp)
 
 | 时间 | 活动 |
 |---|---|
@@ -67,6 +77,10 @@ tags:
 | 住宿： | Sidapore / Wisma Alfren。 |
 ## 第3天 — Tebing → Mbuang-Mbuang → Bontolan
 
+![Mbuang-Mbuang](/images/mbuang mbuang.jpg)
+
+![Bontolan Beach](/images/bontolan.jpg)
+
 | 时间 | 活动 |
 |---|---|
 | 06:30 | 早餐。 |
@@ -81,6 +95,12 @@ tags:
 | 住宿： | Sidapore / Wisma Alfren。 |
 ## 第4天 — Tebing → Oyama → Long Beach → Bontolan
 
+![Oyama Beach](/images/698024319f723539c41d303baa496f2e.jpg)
+
+![Long Beach](/images/long b.jpg)
+
+![Bontolan Beach](/images/bontolan.jpg)
+
 | 时间 | 活动 |
 |---|---|
 | 06:30 | 早餐。 |
@@ -94,6 +114,10 @@ tags:
 | 19:00 | 晚餐。 |
 | 住宿： | Sidapore / Wisma Alfren。 |
 ## 第5天 — Pompon Beach → Mandel Beach → Luwuk
+
+![Pompon Beach](/images/images (1).jpg)
+
+![Mandel Beach](/images/mandel.jpg)
 
 | 时间 | 活动 |
 |---|---|
@@ -110,6 +134,8 @@ tags:
 | 住宿： | Swiss-Belinn Luwuk。 |
 ## 第6天 — Pulo Dua 全天行程
 
+![Pulo Dua](/images/blog/pulo-dua-20260909110950.webp)
+
 | 时间 | 活动 |
 |---|---|
 | 06:00 | 早餐。 |
@@ -123,6 +149,10 @@ tags:
 | 约19:00 | 抵达酒店休息。 |
 | 住宿： | Swiss-Belinn Luwuk。 |
 ## 第7天 — Kamumu Waterfall → Salodik Waterfall → Luwuk
+
+![Kamumu Waterfall](/images/kamumuu.jpg)
+
+![Salodik Waterfall](/images/images (3).jpg)
 
 | 时间 | 活动 |
 |---|---|
