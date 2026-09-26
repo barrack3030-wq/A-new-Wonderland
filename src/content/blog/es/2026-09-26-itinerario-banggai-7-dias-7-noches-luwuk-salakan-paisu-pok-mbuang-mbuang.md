@@ -38,6 +38,8 @@ Si quieres explorar **Luwuk y las Islas Banggai** sin prisas, esta ruta de 7 dí
 
 ## Día 1 — Luwuk → Piala Waterfall → Salakan
 
+![Piala Waterfall](/images/piala.jpg)
+
 | Hora | Actividad |
 |---|---|
 | 11:30 | llegada al aeropuerto de Luwuk, recogida y equipaje. |
@@ -53,6 +55,14 @@ Si quieres explorar **Luwuk y las Islas Banggai** sin prisas, esta ruta de 7 dí
 
 
 ## Día 2 — Paisu Pok, Paisu Batango, Kawalu Bay y Poganda
+
+![Paisu Pok Lake](/images/blog/dji-0992-2-20260915111011.webp)
+
+![Paisu Batango](/images/paisu.jpg)
+
+![Kawalu Bay](/images/kawalu.webp)
+
+![Poganda Beach](/images/Poganda-Beach-Banggai-IndonesiaJuara-Trip.webp)
 
 | Hora | Actividad |
 |---|---|
@@ -71,6 +81,10 @@ Si quieres explorar **Luwuk y las Islas Banggai** sin prisas, esta ruta de 7 dí
 
 ## Día 3 — Tebing → Mbuang-Mbuang → Bontolan
 
+![Mbuang-Mbuang](/images/mbuang mbuang.jpg)
+
+![Bontolan Beach](/images/bontolan.jpg)
+
 | Hora | Actividad |
 |---|---|
 | 06:30 | desayuno. |
@@ -87,6 +101,12 @@ Si quieres explorar **Luwuk y las Islas Banggai** sin prisas, esta ruta de 7 dí
 
 ## Día 4 — Tebing → Oyama → Long Beach → Bontolan
 
+![Oyama Beach](/images/698024319f723539c41d303baa496f2e.jpg)
+
+![Long Beach](/images/long b.jpg)
+
+![Bontolan Beach](/images/bontolan.jpg)
+
 | Hora | Actividad |
 |---|---|
 | 06:30 | desayuno. |
@@ -102,6 +122,10 @@ Si quieres explorar **Luwuk y las Islas Banggai** sin prisas, esta ruta de 7 dí
 
 
 ## Día 5 — Pompon Beach → Mandel Beach → Luwuk
+
+![Pompon Beach](/images/images (1).jpg)
+
+![Mandel Beach](/images/mandel.jpg)
 
 | Hora | Actividad |
 |---|---|
@@ -120,6 +144,8 @@ Si quieres explorar **Luwuk y las Islas Banggai** sin prisas, esta ruta de 7 dí
 
 ## Día 6 — Pulo Dua de día completo
 
+![Pulo Dua](/images/blog/pulo-dua-20260909110950.webp)
+
 | Hora | Actividad |
 |---|---|
 | 06:00 | desayuno. |
@@ -135,6 +161,10 @@ Si quieres explorar **Luwuk y las Islas Banggai** sin prisas, esta ruta de 7 dí
 
 
 ## Día 7 — Kamumu Waterfall → Salodik Waterfall → Luwuk
+
+![Kamumu Waterfall](/images/kamumuu.jpg)
+
+![Salodik Waterfall](/images/images (3).jpg)
 
 | Hora | Actividad |
 |---|---|
