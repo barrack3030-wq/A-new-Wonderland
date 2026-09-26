@@ -7,107 +7,395 @@ export function getStaticPaths() {
   return [{ params: { lang: 'id' } }];
 }
 
-const title = 'Banggai Open Trip | Open Trip Banggai & Luwuk';
-const description = 'Banggai Open Trip dari Luwuk ke Paisu Pok, Peleng, Salakan, Pulo Dua, dan destinasi pilihan. Cek jadwal serta rute perjalanan yang tersedia.';
+const title = 'Open Trip Banggai 2026 | Small Group 4–8 Peserta';
+const description = 'Open Trip Banggai 2026 untuk 4–8 peserta. Jelajahi Paisu Pok, Paisu Batango, Kawalu Bay, Poganda, Mbuang-Mbuang, Peleng, Pulo Dua, dan Luwuk bersama Banggai Wonderland.';
 const schema = {
   '@context': 'https://schema.org',
   '@type': 'TouristTrip',
-  name: 'Banggai Open Trip',
+  name: 'Open Trip Banggai 2026',
   description,
   touristType: ['Solo travelers', 'Couples', 'Small groups'],
   itinerary: {
     '@type': 'ItemList',
-    itemListElement: ['Luwuk','Salakan','Peleng','Paisu Pok','Pulo Dua'].map((name, index) => ({
-      '@type': 'ListItem', position: index + 1, name
-    }))
+    itemListElement: [
+      'Paisu Pok','Paisu Batango','Kawalu Bay','Poganda','Mbuang-Mbuang',
+      'Bontolan','Oyama','Long Beach','Pulo Dua','Luwuk'
+    ].map((name, index) => ({ '@type': 'ListItem', position: index + 1, name }))
   }
 };
 ---
-<BaseLayout title={title} description={description} seoTitle={title} seoDescription={description} ogImage="/images/Poganda-Beach-Banggai-IndonesiaJuara-Trip.webp" imageAlt="Banggai Open Trip">
+
+<BaseLayout
+  title={title}
+  description={description}
+  seoTitle={title}
+  seoDescription={description}
+  ogImage="/images/DSCF7073-5.webp"
+  imageAlt="Danau Paisu Pok dengan air biru-hijau jernih di Pulau Peleng, Banggai Kepulauan"
+>
   <div class="bg-sand-50 pt-28">
     <div class="max-w-7xl mx-auto px-5 sm:px-8 lg:px-12 py-8">
-      <Breadcrumb items={[{ name: 'Home', url: '/id/' }, { name: 'Banggai Travel', url: '/id/banggai-travel/' }, { name: 'Banggai Open Trip', url: '/id/banggai-open-trip/' }]} />
+      <Breadcrumb items={[
+        { name: 'Home', url: '/id/' },
+        { name: 'Banggai Travel', url: '/id/banggai-travel/' },
+        { name: 'Banggai Open Trip', url: '/id/banggai-open-trip/' }
+      ]} />
     </div>
+
     <section class="relative overflow-hidden bg-ocean-900 text-white">
-      <img src="/images/Poganda-Beach-Banggai-IndonesiaJuara-Trip.webp" alt="Banggai Open Trip, Kepulauan Banggai" class="absolute inset-0 w-full h-full object-cover opacity-40" loading="eager" />
-      <div class="absolute inset-0 bg-ocean-900/70"></div>
+      <img
+        src="/images/DSCF7073-5.webp"
+        alt="Danau Paisu Pok, Pulau Peleng, Banggai Kepulauan"
+        class="absolute inset-0 w-full h-full object-cover"
+        loading="eager"
+        fetchpriority="high"
+      />
+      <div class="absolute inset-0 bg-ocean-950/70"></div>
+      <div class="absolute inset-0 bg-gradient-to-r from-ocean-950/85 via-ocean-900/55 to-ocean-900/20"></div>
+
       <div class="relative max-w-7xl mx-auto px-5 sm:px-8 lg:px-12 py-20 md:py-28">
-        <p class="text-white/60 text-xs font-bold tracking-[0.24em] uppercase mb-5">Open Trip Banggai · Luwuk Banggai</p>
-        <h1 class="font-serif text-4xl sm:text-5xl md:text-7xl leading-[0.98] tracking-[-0.04em] font-medium max-w-4xl mb-7">Banggai Open Trip</h1>
-        <p class="text-white/80 text-base md:text-xl leading-relaxed max-w-3xl mb-9">Jelajahi Kepulauan Banggai dalam perjalanan bersama dari Luwuk menuju pulau, pantai, dan destinasi alam pilihan. Jadwal, rute, dan ketersediaan peserta mengikuti keberangkatan yang dibuka.</p>
+        <p class="text-white/70 text-xs font-bold tracking-[0.24em] uppercase mb-5">Open Trip Banggai · 2026</p>
+        <h1 class="font-serif text-4xl sm:text-5xl md:text-7xl leading-[0.98] tracking-[-0.04em] font-medium max-w-4xl mb-7">
+          Eksplorasi Banggai dalam Small Group 4–8 Peserta
+        </h1>
+        <p class="text-white/85 text-base md:text-xl leading-relaxed max-w-3xl mb-9">
+          Jelajahi Banggai tanpa harus menyusun seluruh perjalanan sendiri. Pilih durasi yang sesuai,
+          bergabung dengan grup kecil, dan nikmati rute dari Luwuk menuju Paisu Pok, Peleng,
+          Mbuang-Mbuang, Pulo Dua, dan destinasi pilihan lainnya.
+        </p>
         <div class="flex flex-wrap gap-3">
-          <a href="https://wa.me/6285820830530" target="_blank" rel="noopener noreferrer" class="rounded-full bg-white text-ocean-900 px-6 py-3.5 text-sm font-semibold">Tanya Jadwal Open Trip →</a>
-          <a href="/id/banggai-travel/" class="rounded-full border border-white/25 bg-white/10 px-6 py-3.5 text-sm font-semibold">Banggai Travel</a>
+          <a href="https://wa.me/6285820830530" target="_blank" rel="noopener noreferrer"
+             class="rounded-full bg-white text-ocean-900 px-6 py-3.5 text-sm font-semibold">
+            Tanya Jadwal Open Trip →
+          </a>
+          <a href="/id/banggai-travel/" class="rounded-full border border-white/25 bg-white/10 px-6 py-3.5 text-sm font-semibold">
+            Banggai Travel
+          </a>
         </div>
       </div>
     </section>
+
+    <section class="bg-white py-14 md:py-20">
+      <div class="max-w-7xl mx-auto px-5 sm:px-8 lg:px-12">
+        <div class="grid md:grid-cols-4 gap-4">
+          {[
+            ['4–8', 'Peserta per grup'],
+            ['Luwuk', 'Meeting point utama'],
+            ['Paisu Pok', 'Destinasi inti'],
+            ['4 pilihan', 'Durasi perjalanan']
+          ].map(([value, label]) => (
+            <div class="rounded-2xl border border-sand-200 bg-sand-50 px-5 py-5">
+              <p class="font-serif text-2xl text-ocean-900">{value}</p>
+              <p class="text-sm text-ocean-600 mt-1">{label}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
     <section class="bg-white py-16 md:py-24">
       <div class="max-w-4xl mx-auto px-5 sm:px-8">
         <p class="text-turquoise-600 text-xs font-bold tracking-[0.22em] uppercase mb-4">Open Trip Banggai</p>
-        <h2 class="font-serif text-3xl md:text-5xl text-ocean-900 mb-6">Apa itu Banggai Open Trip?</h2>
-        <p class="text-ocean-600 leading-relaxed mb-5">Banggai Open Trip adalah format perjalanan bersama yang memungkinkan peserta dari kelompok berbeda bergabung dalam rute yang sama. Format ini dapat menjadi pilihan bagi wisatawan yang bepergian sendiri, berdua, atau dalam kelompok kecil.</p>
-        <p class="text-ocean-600 leading-relaxed">Karena perjalanan Kepulauan Banggai melibatkan transportasi laut dan destinasi yang berjauhan, itinerary perlu disesuaikan dengan jadwal kapal, cuaca, kondisi laut, dan waktu yang tersedia. Untuk melihat pilihan perjalanan yang lebih luas, kunjungi <a href="/id/banggai-travel/" class="font-semibold text-turquoise-700 underline underline-offset-4">Banggai Travel</a> atau lihat panduan <a href="/id/banggai-trip/" class="font-semibold text-turquoise-700 underline underline-offset-4">Banggai Trip & Banggai Tour</a>.</p>
+        <h2 class="font-serif text-3xl md:text-5xl text-ocean-900 mb-6">Perjalanan bersama, rute sudah kami siapkan</h2>
+        <p class="text-ocean-600 leading-relaxed mb-5">
+          Banggai Wonderland membuka program <strong>Open Trip Banggai 2026</strong> dengan konsep
+          <strong>small group 4 hingga 8 peserta per keberangkatan</strong>. Program ini dibuat untuk
+          Anda yang ingin menjelajahi Banggai tanpa harus menyusun seluruh perjalanan sendiri.
+        </p>
+        <p class="text-ocean-600 leading-relaxed mb-5">
+          Rute berfokus pada Banggai Islands dan Peleng, dengan <strong>Paisu Pok, Paisu Batango,
+          Kawalu Bay, dan Poganda</strong> sebagai rangkaian utama. Program yang lebih panjang dapat
+          dilanjutkan menuju <strong>Mbuang-Mbuang, Bontolan, Oyama, Long Beach, Pulo Dua</strong>,
+          serta destinasi di sekitar Luwuk.
+        </p>
+        <p class="text-ocean-600 leading-relaxed">
+          Karena beberapa rute menggunakan transportasi darat, ferry, dan boat, itinerary dapat
+          menyesuaikan kondisi cuaca, laut, serta operasional transportasi setempat.
+        </p>
       </div>
     </section>
+
     <section class="bg-sand-50 py-16 md:py-24">
       <div class="max-w-7xl mx-auto px-5 sm:px-8 lg:px-12">
-        <h2 class="font-serif text-3xl md:text-5xl text-ocean-900 mb-10">Destinasi yang Bisa Masuk Rute</h2>
-        <div class="grid sm:grid-cols-2 lg:grid-cols-5 gap-4">
-          {['Luwuk','Salakan','Peleng','Paisu Pok','Pulo Dua'].map((item, i) => (
-            <article class="rounded-2xl bg-white border border-sand-200 p-6">
-              <span class="text-xs font-bold text-turquoise-700">0{i+1}</span>
-              <h3 class="font-serif text-xl text-ocean-900 mt-4 mb-2">{item}</h3>
-              <p class="text-sm text-ocean-600 leading-relaxed">Destinasi yang dapat dipertimbangkan sesuai rute dan durasi keberangkatan.</p>
+        <div class="max-w-3xl mb-10">
+          <p class="text-turquoise-600 text-xs font-bold tracking-[0.22em] uppercase mb-4">Pilihan Program</p>
+          <h2 class="font-serif text-3xl md:text-5xl text-ocean-900 mb-4">Pilih durasi yang paling sesuai</h2>
+          <p class="text-ocean-600 leading-relaxed">
+            Semua program menggunakan konsep small group 4–8 peserta. Semakin panjang durasinya,
+            semakin luas kawasan Banggai yang dapat dijelajahi.
+          </p>
+        </div>
+
+        <div class="overflow-x-auto rounded-2xl border border-sand-200 bg-white">
+          <table class="w-full min-w-[820px] text-left border-collapse">
+            <thead class="bg-ocean-900 text-white">
+              <tr>
+                <th class="px-5 py-4 text-sm font-semibold">Program</th>
+                <th class="px-5 py-4 text-sm font-semibold">Durasi</th>
+                <th class="px-5 py-4 text-sm font-semibold">Fokus</th>
+                <th class="px-5 py-4 text-sm font-semibold">Destinasi Utama</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-sand-200 text-ocean-700">
+              {[
+                ['Banggai Islands Escape','4D3N','Paisu Pok & sekitarnya','Paisu Pok, Paisu Batango, Kawalu Bay, Poganda'],
+                ['Paisu Pok & Peleng','5D4N','Paisu Pok + eksplorasi Peleng','Paisu Pok, Paisu Batango, Kawalu Bay, Poganda, Oyama, Long Beach'],
+                ['Banggai Explorer','6D5N','Peleng & Mbuang-Mbuang','Paisu Pok, Paisu Batango, Kawalu Bay, Poganda, Mbuang-Mbuang, Bontolan'],
+                ['Banggai Wonderland','7D7N','Eksplorasi Banggai lebih lengkap','Paisu Pok, Paisu Batango, Kawalu Bay, Poganda, Mbuang-Mbuang, Bontolan, Oyama, Long Beach, Pulo Dua, Luwuk']
+              ].map(([program, duration, focus, destinations]) => (
+                <tr>
+                  <td class="px-5 py-5 align-top font-semibold text-ocean-900">{program}</td>
+                  <td class="px-5 py-5 align-top font-semibold">{duration}</td>
+                  <td class="px-5 py-5 align-top">{focus}</td>
+                  <td class="px-5 py-5 align-top leading-relaxed">{destinations}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-white py-16 md:py-24">
+      <div class="max-w-5xl mx-auto px-5 sm:px-8">
+        <div class="grid md:grid-cols-2 gap-6">
+          {[
+            {
+              n:'01', t:'Banggai Islands Escape — 4D3N',
+              d:'Pilihan paling singkat untuk Anda yang ingin mengunjungi Paisu Pok dan destinasi utama di kawasan sekitarnya.',
+              r:'Paisu Pok → Paisu Batango → Kawalu Bay → Poganda'
+            },
+            {
+              n:'02', t:'Paisu Pok & Peleng — 5D4N',
+              d:'Program yang menambahkan beberapa destinasi pesisir Peleng setelah rangkaian utama Paisu Pok.',
+              r:'Paisu Pok → Paisu Batango → Kawalu Bay → Poganda → Oyama → Long Beach'
+            },
+            {
+              n:'03', t:'Banggai Explorer — 6D5N',
+              d:'Pilihan yang lebih eksploratif dengan tambahan Mbuang-Mbuang dan Bontolan.',
+              r:'Paisu Pok → Paisu Batango → Kawalu Bay → Poganda → Mbuang-Mbuang → Bontolan → Peleng'
+            },
+            {
+              n:'04', t:'Banggai Wonderland — 7D7N',
+              d:'Program Open Trip paling lengkap untuk menggabungkan Banggai Islands, Peleng, Pulo Dua, dan kawasan Luwuk.',
+              r:'Paisu Pok → Paisu Batango → Kawalu Bay → Poganda → Mbuang-Mbuang → Bontolan → Oyama → Long Beach → Pulo Dua → Luwuk'
+            }
+          ].map(({n, t, d, r}) => (
+            <article class="rounded-3xl border border-sand-200 bg-sand-50 p-7">
+              <span class="text-xs font-bold tracking-[0.2em] text-turquoise-700">{n}</span>
+              <h3 class="font-serif text-2xl text-ocean-900 mt-4 mb-3">{t}</h3>
+              <p class="text-ocean-600 leading-relaxed mb-4">{d}</p>
+              <div class="rounded-2xl bg-white border border-sand-200 px-4 py-4">
+                <p class="text-xs font-bold uppercase tracking-[0.14em] text-turquoise-700 mb-2">Rangkaian Utama</p>
+                <p class="text-sm text-ocean-700 leading-relaxed">{r}</p>
+              </div>
             </article>
           ))}
         </div>
       </div>
     </section>
-    <section class="bg-white py-16 md:py-24">
-      <div class="max-w-4xl mx-auto px-5 sm:px-8">
-        <h2 class="font-serif text-3xl md:text-5xl text-ocean-900 mb-8">Open Trip Luwuk Banggai: Apa yang Perlu Disiapkan?</h2>
-        <div class="grid md:grid-cols-2 gap-5">
-          {[
-            ['Tanggal perjalanan','Tentukan tanggal dan durasi yang tersedia.'],
-            ['Jumlah peserta','Sampaikan jumlah orang agar opsi perjalanan dapat disesuaikan.'],
-            ['Destinasi prioritas','Pilih tempat yang paling ingin dikunjungi.'],
-            ['Kondisi perjalanan','Siapkan waktu fleksibel karena transportasi laut dan cuaca dapat memengaruhi rute.']
-          ].map(([h,t]) => <article class="rounded-2xl bg-sand-50 border border-sand-200 p-6"><h3 class="font-serif text-2xl text-ocean-900 mb-2">{h}</h3><p class="text-sm text-ocean-600 leading-relaxed">{t}</p></article>)}
+
+    <section class="bg-sand-50 py-16 md:py-24">
+      <div class="max-w-5xl mx-auto px-5 sm:px-8">
+        <h2 class="font-serif text-3xl md:text-5xl text-ocean-900 mb-6">Paisu Pok adalah bagian dari rangkaian perjalanan</h2>
+        <p class="text-ocean-600 leading-relaxed mb-8 max-w-3xl">
+          Untuk program yang mengunjungi Paisu Pok, perjalanan tidak dibuat hanya untuk datang ke satu
+          destinasi lalu kembali. Rute utama disusun sebagai satu rangkaian kawasan agar waktu perjalanan
+          lebih masuk akal dan peserta dapat menikmati beberapa tempat sekaligus.
+        </p>
+
+        <div class="overflow-x-auto rounded-2xl border border-sand-200 bg-white">
+          <table class="w-full min-w-[720px] text-left border-collapse">
+            <thead>
+              <tr class="border-b border-sand-200">
+                <th class="px-5 py-4 text-sm font-semibold text-ocean-900">Destinasi</th>
+                <th class="px-5 py-4 text-sm font-semibold text-ocean-900">Pengalaman</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-sand-200 text-ocean-700">
+              {[
+                ['Paisu Pok','Danau dengan air sangat jernih dan pemandangan alam Peleng'],
+                ['Paisu Batango','Mata air dan kawasan air alami di Luk Panenteng'],
+                ['Kawalu Bay','Kawasan pesisir dalam rangkaian eksplorasi Peleng'],
+                ['Poganda','Pantai dan kawasan pesisir dalam rute Banggai Islands'],
+                ['Mbuang-Mbuang','Eksplorasi kawasan danau dan pulau pada program yang lebih panjang'],
+                ['Bontolan','Destinasi pesisir dalam perjalanan Peleng'],
+                ['Oyama','Pantai dalam rute eksplorasi Peleng'],
+                ['Long Beach','Kawasan pantai dalam perjalanan Peleng'],
+                ['Pulo Dua','Island hopping, berenang, dan snorkeling'],
+                ['Luwuk','Meeting point dan rangkaian destinasi darat sesuai program']
+              ].map(([destination, experience]) => (
+                <tr>
+                  <td class="px-5 py-4 align-top font-semibold text-ocean-900">{destination}</td>
+                  <td class="px-5 py-4 align-top leading-relaxed">{experience}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
         </div>
       </div>
     </section>
+
+    <section class="bg-white py-16 md:py-24">
+      <div class="max-w-5xl mx-auto px-5 sm:px-8">
+        <h2 class="font-serif text-3xl md:text-5xl text-ocean-900 mb-5">Mengapa kami membatasi 4–8 peserta?</h2>
+        <p class="text-ocean-600 leading-relaxed max-w-3xl mb-10">
+          Kami sengaja menjaga jumlah peserta tetap kecil agar koordinasi lebih sederhana,
+          perpindahan antardestinasi lebih fleksibel, dan suasana perjalanan tetap personal.
+        </p>
+
+        <div class="grid md:grid-cols-2 gap-4">
+          {[
+            ['Minimum keberangkatan','4 peserta'],
+            ['Maksimum peserta','8 peserta per grup'],
+            ['Format perjalanan','Small Group Open Trip'],
+            ['Meeting point utama','Luwuk'],
+            ['Solo traveler','Bisa bergabung'],
+            ['Keberangkatan','Berdasarkan tanggal yang tersedia']
+          ].map(([label, value]) => (
+            <div class="rounded-2xl border border-sand-200 bg-sand-50 px-5 py-5 flex items-center justify-between gap-5">
+              <span class="text-sm text-ocean-600">{label}</span>
+              <strong class="text-sm text-ocean-900 text-right">{value}</strong>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
     <section class="bg-sand-50 py-16 md:py-24">
       <div class="max-w-4xl mx-auto px-5 sm:px-8">
-        <h2 class="font-serif text-3xl md:text-5xl text-ocean-900 mb-8">FAQ Banggai Open Trip</h2>
-        <div class="space-y-3">
-          {[
-            ['Apakah Banggai Open Trip tersedia setiap hari?','Tidak selalu. Keberangkatan mengikuti jadwal yang dibuka dan ketersediaan peserta. Hubungi kami untuk jadwal terbaru.'],
-            ['Apakah bisa ikut Open Trip Banggai sendirian?','Bisa. Format open trip memang memungkinkan wisatawan bergabung tanpa harus membawa kelompok sendiri, jika keberangkatan tersedia.'],
-            ['Apakah rute selalu sama?','Tidak. Rute dapat berbeda berdasarkan durasi, jadwal transportasi, cuaca, dan kondisi destinasi.'],
-            ['Apakah bisa meminta private trip?','Bisa. Jika tidak ada jadwal open trip yang sesuai, perjalanan privat atau custom itinerary dapat menjadi alternatif.'],
-            ['Dari mana perjalanan dimulai?','Banyak itinerary dimulai dari Luwuk sebelum dilanjutkan ke destinasi di Kepulauan Banggai.']
-          ].map(([q,a]) => <details class="rounded-2xl bg-white border border-sand-200 px-5 py-4"><summary class="cursor-pointer list-none font-semibold text-ocean-900">{q}</summary><p class="pt-3 text-sm text-ocean-600 leading-relaxed">{a}</p></details>)}
+        <h2 class="font-serif text-3xl md:text-5xl text-ocean-900 mb-8">Bagaimana Open Trip Banggai berjalan?</h2>
+        <div class="space-y-5 text-ocean-600 leading-relaxed">
+          <p>
+            Setiap keberangkatan memiliki tanggal, itinerary, dan jumlah peserta yang telah ditentukan.
+            Peserta akan bergabung dalam satu grup kecil dan berbagi beberapa komponen perjalanan sesuai program,
+            seperti kendaraan, boat, guide, akomodasi, dan kebutuhan operasional lainnya.
+          </p>
+          <p>
+            Meeting point utama adalah <strong class="text-ocean-900">Luwuk</strong>. Detail titik kumpul
+            dan waktu berkumpul akan disampaikan sebelum keberangkatan.
+          </p>
+          <p>
+            Karena beberapa rute menggunakan ferry dan boat, kondisi cuaca, gelombang, keselamatan pelayaran,
+            dan operasional transportasi dapat memengaruhi jadwal. Itinerary merupakan rencana perjalanan
+            yang dapat disesuaikan ketika kondisi lapangan membutuhkan.
+          </p>
         </div>
       </div>
     </section>
+
+    <section class="bg-white py-16 md:py-24">
+      <div class="max-w-5xl mx-auto px-5 sm:px-8">
+        <h2 class="font-serif text-3xl md:text-5xl text-ocean-900 mb-8">Apa yang membuat Open Trip ini berbeda?</h2>
+        <div class="grid md:grid-cols-3 gap-5">
+          {[
+            ['Small Group','Jumlah peserta dibatasi 4–8 orang per keberangkatan.'],
+            ['Rute Berlapis','Program dibuat bertahap dari 4D3N hingga 7D7N, dengan rute yang mengikuti kawasan dan durasi perjalanan.'],
+            ['Operator Lokal','Perjalanan disiapkan dari Luwuk dengan mempertimbangkan kondisi rute darat dan laut di Banggai.']
+          ].map(([heading, body]) => (
+            <article class="rounded-2xl border border-sand-200 bg-sand-50 p-6">
+              <h3 class="font-serif text-2xl text-ocean-900 mb-3">{heading}</h3>
+              <p class="text-sm text-ocean-600 leading-relaxed">{body}</p>
+            </article>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-sand-50 py-16 md:py-24">
+      <div class="max-w-5xl mx-auto px-5 sm:px-8">
+        <h2 class="font-serif text-3xl md:text-5xl text-ocean-900 mb-8">Informasi penting sebelum booking</h2>
+        <div class="overflow-x-auto rounded-2xl border border-sand-200 bg-white">
+          <table class="w-full min-w-[760px] text-left border-collapse">
+            <thead class="bg-ocean-900 text-white">
+              <tr>
+                <th class="px-5 py-4 text-sm font-semibold">Hal yang perlu diketahui</th>
+                <th class="px-5 py-4 text-sm font-semibold">Keterangan</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-sand-200 text-ocean-700">
+              {[
+                ['Jadwal bersama','Peserta mengikuti itinerary dan waktu perjalanan pada program yang dipilih.'],
+                ['Ferry & boat','Operasional dapat berubah karena cuaca, gelombang, keselamatan pelayaran, atau perubahan jadwal.'],
+                ['Aktivitas fisik','Beberapa destinasi membutuhkan berjalan kaki, naik turun boat, dan aktivitas di area pantai atau air.'],
+                ['Perubahan itinerary','Penyesuaian dapat dilakukan bila kondisi lapangan membutuhkan, dengan mempertimbangkan keselamatan dan kelancaran trip.'],
+                ['Harga & fasilitas','Detail biaya, fasilitas, akomodasi, dan jadwal diberikan sesuai tanggal keberangkatan yang dipilih.']
+              ].map(([heading, detail]) => (
+                <tr>
+                  <td class="px-5 py-4 align-top font-semibold text-ocean-900">{heading}</td>
+                  <td class="px-5 py-4 align-top leading-relaxed">{detail}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-white py-16 md:py-24">
+      <div class="max-w-5xl mx-auto px-5 sm:px-8">
+        <h2 class="font-serif text-3xl md:text-5xl text-ocean-900 mb-8">Siapa yang cocok mengikuti Open Trip Banggai?</h2>
+        <div class="grid md:grid-cols-2 gap-4">
+          {[
+            ['Solo traveler','Bisa bergabung dengan peserta lain dalam format grup kecil.'],
+            ['Pasangan','Tidak harus mengambil private trip jika ingin berbagi perjalanan dengan peserta lain.'],
+            ['Teman atau keluarga kecil','Tetap mendapatkan suasana perjalanan yang lebih personal.'],
+            ['Traveler domestik','Tidak perlu menyusun seluruh rute dan koneksi transportasi sendiri.'],
+            ['Traveler internasional','Mendapat dukungan operator lokal selama perjalanan.'],
+            ['Pecinta alam','Rute menggabungkan laut, pulau, pantai, dan air tawar.']
+          ].map(([heading, body]) => (
+            <article class="rounded-2xl border border-sand-200 bg-sand-50 p-6">
+              <h3 class="font-semibold text-ocean-900 mb-2">{heading}</h3>
+              <p class="text-sm text-ocean-600 leading-relaxed">{body}</p>
+            </article>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-sand-50 py-16 md:py-24">
+      <div class="max-w-4xl mx-auto px-5 sm:px-8">
+        <h2 class="font-serif text-3xl md:text-5xl text-ocean-900 mb-8">FAQ Open Trip Banggai</h2>
+        <div class="space-y-3">
+          {[
+            ['Berapa minimum peserta untuk Open Trip Banggai?','Minimum keberangkatan adalah 4 peserta.'],
+            ['Berapa maksimum peserta dalam satu grup?','Maksimum 8 peserta per grup.'],
+            ['Apakah saya bisa ikut sendiri?','Bisa. Solo traveler dapat mendaftar dan bergabung dengan peserta lain selama jumlah minimum keberangkatan terpenuhi.'],
+            ['Apakah saya harus menunggu sampai grup penuh?','Keberangkatan mengikuti tanggal dan ketentuan minimum peserta. Status keberangkatan akan diinformasikan saat proses booking.'],
+            ['Dari mana meeting point-nya?','Meeting point utama adalah Luwuk.'],
+            ['Apakah Open Trip tersedia setiap hari?','Tidak. Open Trip berjalan berdasarkan tanggal keberangkatan yang telah ditentukan.'],
+            ['Apakah semua program mengunjungi Paisu Pok?','Program pada halaman ini dirancang dengan Paisu Pok sebagai salah satu destinasi utama. Rangkaian Paisu Pok mencakup Paisu Pok, Paisu Batango, Kawalu Bay, dan Poganda.'],
+            ['Apakah semua destinasi dikunjungi dalam satu trip?','Tidak. Destinasi menyesuaikan program dan durasi yang dipilih. Program 6D5N dan 7D7N mencakup lebih banyak destinasi daripada program 4D3N.'],
+            ['Apakah jadwal ferry dan boat sudah pasti?','Jadwal merupakan bagian dari rencana perjalanan. Cuaca, kondisi laut, keselamatan pelayaran, dan operasional transportasi dapat menyebabkan penyesuaian.'],
+            ['Apakah Open Trip sama dengan private trip?','Tidak. Open Trip berarti Anda bergabung dengan peserta lain dalam satu grup. Private trip dibuat khusus untuk kelompok Anda sendiri.']
+          ].map(([question, answer]) => (
+            <details class="rounded-2xl bg-white border border-sand-200 px-5 py-4">
+              <summary class="cursor-pointer list-none font-semibold text-ocean-900">{question}</summary>
+              <p class="pt-3 text-sm text-ocean-600 leading-relaxed">{answer}</p>
+            </details>
+          ))}
+        </div>
+      </div>
+    </section>
+
     <section class="bg-white py-12 md:py-16 border-t border-sand-200">
       <div class="max-w-6xl mx-auto px-5 sm:px-8 lg:px-12">
         <p class="text-turquoise-600 text-xs font-bold tracking-[0.22em] uppercase mb-4">Banggai Travel Cluster</p>
-        <div class="grid md:grid-cols-2 gap-5">
+        <div class="grid md:grid-cols-3 gap-5">
           <a href="/id/banggai-travel/" class="rounded-2xl border border-sand-200 bg-sand-50 p-6 group">
             <p class="text-xs font-semibold text-turquoise-700 mb-2">Hub utama</p>
             <h2 class="font-serif text-2xl text-ocean-900 mb-2 group-hover:text-turquoise-700">Banggai Travel</h2>
-            <p class="text-sm text-ocean-600 leading-relaxed">Temukan gambaran layanan perjalanan, private trip, custom tour, dan rute ke Kepulauan Banggai.</p>
+            <p class="text-sm text-ocean-600 leading-relaxed">Pilihan private trip, custom tour, dan perjalanan ke Kepulauan Banggai.</p>
           </a>
           <a href="/id/banggai-trip/" class="rounded-2xl border border-sand-200 bg-sand-50 p-6 group">
             <p class="text-xs font-semibold text-turquoise-700 mb-2">Panduan trip</p>
             <h2 class="font-serif text-2xl text-ocean-900 mb-2 group-hover:text-turquoise-700">Banggai Trip & Banggai Tour</h2>
-            <p class="text-sm text-ocean-600 leading-relaxed">Pelajari pilihan durasi, rute dari Luwuk, destinasi, dan cara menyusun itinerary Banggai.</p>
+            <p class="text-sm text-ocean-600 leading-relaxed">Pilihan durasi, rute dari Luwuk, destinasi, dan cara menyusun itinerary Banggai.</p>
           </a>
           <a href="/id/jasa-tour-luwuk-banggai/#packages" class="rounded-2xl border border-sand-200 bg-sand-50 p-6 group">
             <p class="text-xs font-semibold text-turquoise-700 mb-2">Layanan</p>
             <h2 class="font-serif text-2xl text-ocean-900 mb-2 group-hover:text-turquoise-700">Jasa Tour Luwuk Banggai</h2>
-            <p class="text-sm text-ocean-600 leading-relaxed">Lihat paket private trip dan layanan perjalanan dari Luwuk ke Kepulauan Banggai.</p>
+            <p class="text-sm text-ocean-600 leading-relaxed">Lihat layanan dan paket perjalanan yang tersedia dari Luwuk.</p>
           </a>
         </div>
       </div>
@@ -115,9 +403,23 @@ const schema = {
 
     <section class="bg-ocean-900 text-white py-20">
       <div class="max-w-3xl mx-auto px-5 text-center">
-        <h2 class="font-serif text-4xl md:text-6xl mb-5">Cari Open Trip Banggai?</h2>
-        <p class="text-white/70 leading-relaxed mb-8">Kirim tanggal, jumlah peserta, dan destinasi yang Anda inginkan untuk mengecek opsi perjalanan yang tersedia.</p>
-        <a href="https://wa.me/6285820830530" target="_blank" rel="noopener noreferrer" class="inline-flex rounded-full bg-white text-ocean-900 px-7 py-3.5 text-sm font-semibold">Cek Jadwal via WhatsApp →</a>
+        <p class="text-white/60 text-xs font-bold tracking-[0.24em] uppercase mb-4">Banggai Wonderland</p>
+        <h2 class="font-serif text-4xl md:text-6xl mb-5">Siap Menjelajahi Banggai?</h2>
+        <p class="text-white/75 leading-relaxed mb-8">
+          Pilih durasi yang sesuai dengan waktu Anda dan bergabung dalam small group 4–8 peserta.
+          Untuk tanggal keberangkatan, ketersediaan slot, itinerary lengkap, fasilitas, dan harga, hubungi kami.
+        </p>
+        <div class="flex flex-wrap justify-center gap-3">
+          <a href="https://wa.me/6285820830530" target="_blank" rel="noopener noreferrer"
+             class="inline-flex rounded-full bg-white text-ocean-900 px-7 py-3.5 text-sm font-semibold">
+            Cek Jadwal via WhatsApp →
+          </a>
+          <a href="https://www.instagram.com/banggaiwonderland/" target="_blank" rel="noopener noreferrer"
+             class="inline-flex rounded-full border border-white/25 bg-white/10 px-7 py-3.5 text-sm font-semibold">
+            Instagram @banggaiwonderland
+          </a>
+        </div>
+        <p class="text-white/60 text-sm mt-7">Temukan Surga Tersembunyi di Banggai Bersama Kami.</p>
       </div>
     </section>
   </div>
