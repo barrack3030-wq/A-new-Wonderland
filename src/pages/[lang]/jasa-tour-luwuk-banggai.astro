@@ -337,11 +337,11 @@ const breadcrumbItems = [
     </section>
 
     ${isId && positioningCopy && (
-      <section class="bg-white py-20 md:py-24">
+      <section class="bg-[#FFFEFB] py-20 md:py-24">
         <div class="max-w-7xl mx-auto px-5 sm:px-8 lg:px-12 grid lg:grid-cols-2 gap-12 lg:gap-20 items-start">
           <div>
-            <p class="text-turquoise-700 text-xs font-bold tracking-[0.2em] uppercase mb-4">{positioningCopy.eyebrow}</p>
-            <h2 class="font-serif text-3xl md:text-5xl text-ocean-900 leading-tight tracking-[-0.03em]">{positioningCopy.title}</h2>
+            <p class="text-[#14B8A6] text-xs font-bold tracking-[0.2em] uppercase mb-4">{positioningCopy.eyebrow}</p>
+            <h2 class="font-serif text-3xl md:text-[44px] text-ocean-900 leading-tight tracking-[-0.03em]">{positioningCopy.title}</h2>
           </div>
           <div class="space-y-5 text-ocean-600 text-[15px] md:text-base leading-[1.7]">
             {positioningCopy.paragraphs.map(paragraph => <p>{paragraph}</p>)}
@@ -352,11 +352,11 @@ const breadcrumbItems = [
 
     
 
-    <section class="bg-sand-50 py-16 md:py-20">
+    <section class="bg-[#F6F2E9] py-16 md:py-20">
       <div class="max-w-7xl mx-auto px-5 sm:px-8 lg:px-12">
         <div class="max-w-3xl mb-10">
-          <p class="text-turquoise-700 text-xs font-bold tracking-[0.2em] uppercase mb-4">PRIVATE TRIP</p>
-          <h2 class="font-serif text-3xl md:text-5xl text-ocean-900 leading-tight tracking-[-0.03em] mb-4">{c.servicesTitle}</h2>
+          <p class="text-[#14B8A6] text-xs font-bold tracking-[0.2em] uppercase mb-4">PRIVATE TRIP</p>
+          <h2 class="font-serif text-3xl md:text-[44px] text-ocean-900 leading-tight tracking-[-0.03em] mb-4">{c.servicesTitle}</h2>
           {isId ? (
             <p class="text-ocean-600 text-[15px] md:text-base leading-[1.7] max-w-2xl">
               Layanan utama untuk mengatur perjalanan privat dari Luwuk ke Kepulauan Banggai dengan rute yang realistis dan mudah diikuti.
@@ -366,187 +366,40 @@ const breadcrumbItems = [
           )}
         </div>
 
-        <div class="border-y border-sand-200 divide-y divide-sand-200">
-          {servicesUi.map(([title, text], index) => (
-            <article class="grid md:grid-cols-[90px_minmax(220px,1fr)_minmax(280px,36ch)] gap-4 md:gap-8 items-start py-7 md:py-8">
-              <span class="font-serif text-3xl md:text-4xl text-turquoise-600 leading-none">{String(index + 1).padStart(2, '0')}</span>
-              <h3 class="font-serif text-2xl md:text-3xl text-ocean-900">{title}</h3>
-              <p class="text-ocean-600 text-[15px] leading-[1.7]">{text}</p>
-            </article>
-          ))}
-        </div>
-      </div>
-    </section>
-
-    <section class="bg-white py-16 md:py-24">
-      <div class="max-w-7xl mx-auto px-5 sm:px-8 lg:px-12">
-        <div class="grid lg:grid-cols-[.9fr_1.1fr] gap-12 lg:gap-20 items-start">
-          <div>
-            <p class="text-turquoise-700 text-xs font-bold tracking-[0.2em] uppercase mb-4">ROUTE & DESTINATION</p>
-            <h2 class="font-serif text-3xl md:text-5xl text-ocean-900 leading-tight tracking-[-0.03em] mb-5">{c.routeTitle}</h2>
-
-            <div class="mt-10">
-              {[
-                ['Luwuk', isId ? 'Start · Bandara' : 'Start'],
-                ['Salakan', isId ? 'Pelabuhan penyeberangan' : 'Crossing point'],
-                ['Peleng', isId ? 'Pulau utama' : 'Main island'],
-                ['Paisu Pok', isId ? 'Danau jernih' : 'Clear lake'],
-                ['Banggai Laut', isId ? 'Kawasan kepulauan' : 'Island area'],
-                ['Pulo Dua', isId ? 'Destinasi laut' : 'Marine destination']
-              ].map(([name, note], index) => (
-                <div class="grid grid-cols-[34px_1fr] gap-4">
-                  <div class="flex flex-col items-center">
-                    <span class={"w-2.5 h-2.5 rounded-full mt-2.5 " + (index === 3 ? 'bg-turquoise-500 ring-4 ring-turquoise-100' : 'bg-ocean-300')}></span>
-                    {index < 5 && <span class="w-px h-12 bg-sand-300"></span>}
-                  </div>
-                  <div class="pb-7">
-                    <p class="font-serif text-xl md:text-2xl text-ocean-900">{name}</p>
-                    <p class="text-sm text-ocean-500 mt-1">{note}</p>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-
-          <div class="lg:pt-16">
-            {isId ? (
-              <div class="space-y-5">
-                <div class="grid sm:grid-cols-3 gap-3">
-                  <div class="border-t border-sand-200 pt-4">
-                    <p class="text-xs font-bold uppercase tracking-[0.16em] text-turquoise-700 mb-2">1–2 hari</p>
-                    <p class="text-sm text-ocean-600 leading-[1.7]">Fokus Luwuk — Piala Waterfall, pesisir Luwuk, Salodik.</p>
-                  </div>
-                  <div class="border-t border-sand-200 pt-4">
-                    <p class="text-xs font-bold uppercase tracking-[0.16em] text-turquoise-700 mb-2">3 hari</p>
-                    <p class="text-sm text-ocean-600 leading-[1.7]">Luwuk + Salakan, mulai menyeberang.</p>
-                  </div>
-                  <div class="border-t border-sand-200 pt-4">
-                    <p class="text-xs font-bold uppercase tracking-[0.16em] text-turquoise-700 mb-2">4–6 hari</p>
-                    <p class="text-sm text-ocean-600 leading-[1.7]">Peleng, Paisu Pok, Banggai Laut, Pulo Dua.</p>
-                  </div>
-                </div>
-                <div class="rounded-2xl border border-sand-200 bg-sand-50 px-5 py-5">
-                  <p class="font-semibold text-ocean-900 mb-2">Rute dipilih berdasarkan kondisi perjalanan</p>
-                  <p class="text-sm text-ocean-600 leading-[1.7]">
-                    Durasi, minat, jadwal ferry/speedboat, cuaca, dan kondisi lokal ikut menentukan urutan perjalanan.
-                    Destinasi di atas adalah contoh; kombinasi aktual dibahas saat konsultasi.
-                  </p>
-                </div>
-              </div>
-            ) : (
-              <div class="rounded-3xl bg-ocean-950 text-white p-7 md:p-9">
-                <p class="text-white/50 text-xs font-bold tracking-[0.2em] uppercase mb-4">Route planning</p>
-                <p class="text-white/75 leading-relaxed">{c.routeText}</p>
-              </div>
-            )}
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="bg-sand-50 py-16 md:py-24">
-      <div class="max-w-7xl mx-auto px-5 sm:px-8 lg:px-12">
-        <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-5 mb-10">
-          <div class="max-w-3xl">
-            <p class="text-turquoise-700 text-xs font-bold tracking-[0.2em] uppercase mb-4">POPULAR DESTINATIONS</p>
-            <h2 class="font-serif text-3xl md:text-5xl text-ocean-900 tracking-[-0.03em] font-medium">{c.destinationTitle}</h2>
-          </div>
-          <a href={'/' + currentLang + '/banggai-travel/'} class="text-sm font-semibold text-ocean-900 underline underline-offset-4">Banggai Travel →</a>
-        </div>
-
-        <div class="grid lg:grid-cols-[1.25fr_1fr] gap-5">
-          {selectedDestinations.length > 0 && (
-            <a
-              href={'/' + currentLang + '/destinations/' + selectedDestinations[0].slug.split('/').slice(1).join('/') + '/'}
-              class="group relative overflow-hidden rounded-[24px] min-h-[560px] bg-ocean-900"
-            >
-              <img
-                src={selectedDestinations[0].data.image}
-                alt={selectedDestinations[0].data.imageAlt || selectedDestinations[0].data.title}
-                class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-                loading="lazy"
-              />
-              <div class="absolute inset-0 bg-gradient-to-t from-ocean-950 via-ocean-950/35 to-transparent"></div>
-              <div class="absolute inset-x-0 bottom-0 p-7 md:p-9">
-                <p class="text-white/60 text-xs font-semibold uppercase tracking-[0.16em]">{selectedDestinations[0].data.location}</p>
-                <h3 class="font-serif text-3xl md:text-4xl text-white mt-2">{selectedDestinations[0].data.title}</h3>
-                {isId && destinationMicro['paisu-pok-lake'] && (
-                  <>
-                    <p class="text-white/80 text-sm leading-relaxed mt-3 max-w-xl">{destinationMicro['paisu-pok-lake'].description}</p>
-                    <p class="text-white/55 text-xs mt-3">{destinationMicro['paisu-pok-lake'].micro}</p>
-                  </>
-                )}
-              </div>
-            </a>
-          )}
-
-          <div class="grid sm:grid-cols-3 lg:grid-cols-1 gap-5">
-            {selectedDestinations.slice(1).map(destination => {
-              const slug = destination.slug.split('/').slice(1).join('/');
-              const info = destinationMicro[slug];
-              return (
-                <a
-                  href={'/' + currentLang + '/destinations/' + slug + '/'}
-                  class="group grid sm:grid-cols-[180px_1fr] lg:grid-cols-[210px_1fr] gap-5 bg-white border border-sand-200 rounded-[20px] overflow-hidden"
-                >
-                  <img
-                    src={destination.data.image}
-                    alt={destination.data.imageAlt || destination.data.title}
-                    class="w-full h-full min-h-[190px] object-cover transition-transform duration-500 group-hover:scale-105"
-                    loading="lazy"
-                  />
-                  <div class="p-5 flex flex-col justify-center">
-                    <p class="text-xs uppercase tracking-[0.14em] text-ocean-500">{destination.data.location}</p>
-                    <h3 class="font-serif text-2xl text-ocean-900 mt-2">{destination.data.title}</h3>
-                    {isId && info ? (
-                      <>
-                        <p class="text-sm text-ocean-600 leading-[1.7] mt-2">{info.description}</p>
-                        <p class="text-xs text-ocean-500 mt-3">{info.micro}</p>
-                      </>
-                    ) : (
-                      <p class="text-sm text-ocean-600 leading-relaxed mt-2">{destination.data.location}</p>
-                    )}
-                  </div>
-                </a>
-              );
-            })}
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="packages" class="bg-white py-16 md:py-24">
-      <div id="paket-wisata" class="relative -top-24"></div>
-      <div class="max-w-7xl mx-auto px-5 sm:px-8 lg:px-12">
-        <div class="max-w-3xl mb-10">
-          <p class="text-turquoise-700 text-xs font-bold tracking-[0.2em] uppercase mb-4">TOUR PACKAGES</p>
-          <h2 class="font-serif text-3xl md:text-5xl text-ocean-900 tracking-[-0.03em] font-medium mb-4">{c.packageTitle}</h2>
-          <p class="text-ocean-600 leading-relaxed max-w-2xl">{c.packageText}</p>
-        </div>
-
-        <div class="border-y border-sand-200 divide-y divide-sand-200">
+        <div class="border-y border-[#E8E2D6] divide-y divide-[#E8E2D6]">
           {selectedPackages.map(pkg => {
             const slug = pkg.slug.split('/')[1];
             const meta = packageMeta[slug] || { label: '' };
             const isFeatured = meta.featured === true;
+            const rowClass =
+              'grid lg:grid-cols-[180px_minmax(0,1fr)_190px] gap-5 lg:gap-8 items-center px-0 py-7 md:py-8 ' +
+              (isFeatured
+                ? 'bg-[#0A1E3A] text-white px-5 md:px-7 -mx-5 md:-mx-7 rounded-2xl my-3 border border-[#0A1E3A]'
+                : '');
+
             return (
-              <a
-                href={'/' + currentLang + '/packages/' + slug + '/'}
-                class={'group grid lg:grid-cols-[180px_minmax(0,1fr)_190px] gap-5 lg:gap-8 items-center px-0 py-7 md:py-8 transition-colors ' + (isFeatured ? 'bg-ocean-950 text-white px-5 md:px-7 -mx-5 md:-mx-7 rounded-2xl my-3 border border-ocean-950' : '')}
-              >
+              <div class={rowClass}>
                 <div>
-                  <span class={'inline-flex rounded-full px-3 py-1 text-[11px] font-bold tracking-[0.14em] uppercase ' + (isFeatured ? 'bg-white/10 text-white' : 'bg-sand-100 text-turquoise-700')}>
+                  <span class={'inline-flex rounded-full px-3 py-1 text-[11px] font-bold tracking-[0.14em] uppercase ' +
+                    (isFeatured ? 'bg-white/10 text-white' : 'bg-[#F6F2E9] text-[#14B8A6]')}>
                     {meta.label}
                   </span>
                   <p class={'text-xs font-semibold mt-3 ' + (isFeatured ? 'text-white/60' : 'text-ocean-500')}>{pkg.data.duration}</p>
                 </div>
 
                 <div>
-                  <h3 class={'font-serif text-2xl md:text-3xl ' + (isFeatured ? 'text-white' : 'text-ocean-900')}>{pkg.data.title}</h3>
+                  <a
+                    href={'/' + currentLang + '/packages/' + slug + '/'}
+                    class={'font-serif text-2xl md:text-3xl hover:underline underline-offset-4 ' +
+                      (isFeatured ? 'text-white' : 'text-ocean-900')}
+                  >
+                    {pkg.data.title}
+                  </a>
                   <p class={'text-sm leading-[1.7] mt-2 ' + (isFeatured ? 'text-white/70' : 'text-ocean-600')}>{pkg.data.description}</p>
                   <div class="flex flex-wrap gap-2 mt-4">
                     {(pkg.data.destination || '').split(',').slice(0, 4).map(dest => (
-                      <span class={'rounded-full border px-3 py-1 text-xs ' + (isFeatured ? 'border-white/15 text-white/70' : 'border-sand-200 text-ocean-600')}>
+                      <span class={'rounded-full border px-3 py-1 text-xs ' +
+                        (isFeatured ? 'border-white/15 text-white/70' : 'border-[#E8E2D6] text-ocean-600')}>
                         {dest.trim()}
                       </span>
                     ))}
@@ -554,26 +407,31 @@ const breadcrumbItems = [
                 </div>
 
                 <div class="lg:text-right">
-                  <span class={'text-sm font-semibold underline underline-offset-4 ' + (isFeatured ? 'text-white' : 'text-ocean-900')}>
+                  <a
+                    href="https://wa.me/6285820830530"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class={'text-sm font-semibold underline underline-offset-4 ' +
+                      (isFeatured ? 'text-white' : 'text-ocean-900')}
+                  >
                     Konsultasi Rute →
-                  </span>
+                  </a>
                 </div>
-              </a>
+              </div>
             );
           })}
         </div>
-
         <div class="mt-6">
           <p class="text-xs text-ocean-500">Harga & include menyesuaikan jumlah peserta — konsultasi dulu.</p>
         </div>
       </div>
     </section>
 
-    <section class="bg-sand-50 py-16 md:py-24">
+    <section class="bg-[#F6F2E9] py-16 md:py-24">
       <div class="max-w-7xl mx-auto px-5 sm:px-8 lg:px-12">
         <div class="max-w-3xl mb-10">
-          <p class="text-turquoise-700 text-xs font-bold tracking-[0.2em] uppercase mb-4">HOW IT WORKS</p>
-          <h2 class="font-serif text-3xl md:text-5xl text-ocean-900 tracking-[-0.03em] font-medium mb-4">{c.processTitle}</h2>
+          <p class="text-[#14B8A6] text-xs font-bold tracking-[0.2em] uppercase mb-4">HOW IT WORKS</p>
+          <h2 class="font-serif text-3xl md:text-[44px] text-ocean-900 tracking-[-0.03em] font-medium mb-4">{c.processTitle}</h2>
           {isId ? (
             <p class="text-ocean-600 leading-[1.7] max-w-2xl">Tidak perlu menyusun semuanya sendiri. Mulai dari tanggal dan jumlah peserta, lalu kita susun rute yang masuk akal.</p>
           ) : (
@@ -586,7 +444,7 @@ const breadcrumbItems = [
           <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {processUi.map(([number, title, text]) => (
               <article class="relative">
-                <div class="font-serif text-4xl text-ocean-900 relative bg-sand-50 w-fit pr-4">{number}</div>
+                <div class="font-serif text-4xl text-ocean-900 relative bg-[#F6F2E9] w-fit pr-4">{number}</div>
                 <h3 class="font-serif text-2xl text-ocean-900 mt-4 mb-3">{title}</h3>
                 <p class="text-sm text-ocean-600 leading-[1.7]">{text}</p>
               </article>
@@ -597,12 +455,12 @@ const breadcrumbItems = [
     </section>
 
     ${isId && (
-      <section class="bg-white py-16 md:py-24">
+      <section class="bg-[#FFFEFB] py-16 md:py-24">
         <div class="max-w-7xl mx-auto px-5 sm:px-8 lg:px-12">
           <div class="grid lg:grid-cols-[.9fr_1.1fr] gap-12 lg:gap-20 items-start">
             <div>
-              <p class="text-turquoise-700 text-xs font-bold tracking-[0.2em] uppercase mb-4">WHY LOCAL PLANNING MATTERS</p>
-              <h2 class="font-serif text-3xl md:text-5xl text-ocean-900 leading-tight tracking-[-0.03em]">Perjalanan Banggai yang Disusun dengan Kondisi Nyata di Lapangan</h2>
+              <p class="text-[#14B8A6] text-xs font-bold tracking-[0.2em] uppercase mb-4">WHY LOCAL PLANNING MATTERS</p>
+              <h2 class="font-serif text-3xl md:text-[44px] text-ocean-900 leading-tight tracking-[-0.03em]">Perjalanan Banggai yang Disusun dengan Kondisi Nyata di Lapangan</h2>
             </div>
             <div>
               <p class="text-ocean-600 text-[15px] md:text-base leading-[1.7] mb-6">
@@ -610,7 +468,7 @@ const breadcrumbItems = [
                 dan di beberapa titik sinyal bisa hilang. Itinerary yang bagus bukan yang memasukkan tempat sebanyak mungkin,
                 tetapi yang ringkas, realistis, dan masih nyaman dijalani.
               </p>
-              <ul class="divide-y divide-sand-200 border-y border-sand-200">
+              <ul class="divide-y divide-[#E8E2D6] border-y border-[#E8E2D6]">
                 {[
                   'Destinasi tersebar, jadi waktu antar pulau perlu dihitung.',
                   'Transport laut punya jadwal dan tergantung cuaca.',
@@ -630,13 +488,13 @@ const breadcrumbItems = [
       </section>
     })}
 
-    <section class="bg-sand-50 py-16 md:py-24">
+    <section class="bg-[#F6F2E9] py-16 md:py-24">
       <div class="max-w-4xl mx-auto px-5 sm:px-8">
-        <p class="text-turquoise-700 text-xs font-bold tracking-[0.2em] uppercase mb-4">FAQ</p>
-        <h2 class="font-serif text-3xl md:text-5xl text-ocean-900 tracking-[-0.03em] font-medium mb-8">{c.faqTitle}</h2>
-        <div class="border-y border-sand-200 divide-y divide-sand-200">
+        <p class="text-[#14B8A6] text-xs font-bold tracking-[0.2em] uppercase mb-4">FAQ</p>
+        <h2 class="font-serif text-3xl md:text-[44px] text-ocean-900 tracking-[-0.03em] font-medium mb-8">{c.faqTitle}</h2>
+        <div class="border-y border-[#E8E2D6] divide-y divide-[#E8E2D6]">
           {c.faqs.map(([question, answer], index) => (
-            <details class="py-5 group" {...(index === 0 ? { open: true } : {})}>
+            <details class="py-5 group" open={index === 0}>
               <summary class="cursor-pointer list-none flex items-start justify-between gap-6 font-serif text-lg md:text-xl text-ocean-900">
                 <span>{question}</span>
                 <span class="font-sans text-ocean-400 text-xl leading-none transition-transform group-open:rotate-45">+</span>
@@ -648,7 +506,7 @@ const breadcrumbItems = [
       </div>
     </section>
 
-    <section class="bg-ocean-950 text-white py-20 md:py-24 relative overflow-hidden">
+    <section class="bg-[#0A1E3A] text-white py-20 md:py-24 relative overflow-hidden">
       <div class="absolute -top-32 -right-32 w-[420px] h-[420px] rounded-full opacity-50 blur-3xl"
            style="background: radial-gradient(circle, rgba(20,184,166,.28) 0%, rgba(20,184,166,0) 70%);"></div>
       <div class="relative max-w-4xl mx-auto px-5 sm:px-8 text-center">
@@ -658,10 +516,10 @@ const breadcrumbItems = [
           {isId ? 'Beri tahu kami tanggal & destinasi prioritas. Kami bantu susun rute private trip sesuai waktu & gaya jalanmu.' : c.closingText}
         </p>
         <div class="flex flex-wrap justify-center gap-3">
-          <a href="https://wa.me/6285820830530" target="_blank" rel="noopener noreferrer" class="inline-flex rounded-full bg-white text-ocean-900 px-7 py-3.5 text-sm font-semibold">
+          <a href="https://wa.me/6285820830530" target="_blank" rel="noopener noreferrer" class="inline-flex rounded-full bg-[#FFFEFB] text-ocean-900 px-7 py-3.5 text-sm font-semibold">
             {c.primaryCta} <span class="ml-2">→</span>
           </a>
-          <a href="#paket-wisata" class="inline-flex rounded-full border border-white/20 bg-white/5 text-white px-7 py-3.5 text-sm font-semibold">
+          <a href="#paket-wisata" class="inline-flex rounded-full border border-white/20 bg-[#FFFEFB]/5 text-white px-7 py-3.5 text-sm font-semibold">
             {c.secondaryCta}
           </a>
         </div>
