@@ -238,6 +238,66 @@ const schema = {
   url: new URL('/' + currentLang + '/jasa-tour-luwuk-banggai/', Astro.site).href
 };
 
+
+const isId = currentLang === 'id';
+
+const positioningCopy = isId
+  ? {
+      eyebrow: 'PRIVATE TRIP DARI LUWUK',
+      title: 'Kami bantu atur perjalanan privat dari Luwuk ke Kepulauan Banggai, tanpa harus ribet urus transport antar pulau.',
+      paragraphs: [
+        'Untuk pasangan, keluarga, atau rombongan kecil. Bukan open trip — 1 grup 1 mobil/kapal, ritme ikut kamu.',
+        'Mulai dari Luwuk (Bandara Syukuran Aminuddin Amir), kami bantu koordinasi mobil Luwuk–Salakan, ferry/speed ke Peleng, boat lokal, urutan rute, dan pendampingan lokal. Bisa 1–2 hari di Luwuk atau 4–6 hari sampai Paisu Pok & Pulo Dua.'
+      ]
+    }
+  : null;
+
+const servicesUi = isId
+  ? [
+      ['Private Trip', 'Satu grup privat, bukan digabung. Lebih fleksibel jam dan durasi.'],
+      ['Custom Route', 'Kombinasi Luwuk, Salakan, Peleng, Banggai Laut disusun berdasarkan berapa hari yang kamu punya.'],
+      ['Transportasi Perjalanan', 'Bantu atur mobil, ferry/speed, boat lokal sesuai jadwal real di lapangan.'],
+      ['Local Guide', 'Orang lokal yang tahu waktu tempuh real, jalur bagus pagi/sore, dan kapan perlu geser jadwal karena cuaca.']
+    ]
+  : c.services;
+
+const processUi = isId
+  ? [
+      ['01', 'Kirim rencana perjalanan', 'Sampaikan tanggal, jumlah peserta, lama perjalanan, dan destinasi. Contoh: 20–23 Des, 4 orang, 4 hari, ingin Paisu Pok.'],
+      ['02', 'Susun rute', 'Kami cek jadwal kapal dan waktu tempuh real, lalu usulkan urutan yang masuk akal.'],
+      ['03', 'Sesuaikan detail', 'Transport, penginapan, aktivitas, dan kebutuhan perjalanan dibahas sebelum berangkat.'],
+      ['04', 'Berangkat dari Luwuk', 'Jalan sesuai plan, tetap fleksibel kalau cuaca atau kondisi laut berubah.']
+    ]
+  : c.process;
+
+const packageMeta: Record<string, { label: string; featured?: boolean }> = {
+  'luwuk-one-day': { label: 'SHORT TRIP' },
+  'luwuk-stopover': { label: 'CITY + COAST' },
+  'luwuk-salakan': { label: 'CROSSING' },
+  'banggai-wonderland': { label: 'CLASSIC · Paling sering dipilih', featured: true },
+  'banggai-5d4n': { label: 'COMPLETE' },
+  'ultimate-banggai': { label: 'EXPEDITION' }
+};
+
+const destinationMicro: Record<string, { description: string; micro: string }> = {
+  'paisu-pok-lake': {
+    description: 'Danau jernih di Peleng yang menjadi salah satu tujuan utama perjalanan Banggai.',
+    micro: 'Dari Salakan ±1,5 jam mobil · Jalan ±3 menit · Cocok berenang & foto'
+  },
+  'piala-waterfall': {
+    description: 'Air terjun bertingkat di kawasan Luwuk untuk perjalanan singkat dari kota.',
+    micro: '±15 menit dari kota Luwuk · Trek pendek bertingkat'
+  },
+  'oyama-beach': {
+    description: 'Garis pasir panjang di Peleng yang cocok dimasukkan dalam rute pesisir.',
+    micro: 'Garis pasir panjang di Peleng · Bagus sore'
+  },
+  'pulau-dua-balantak': {
+    description: 'Kawasan pulau dengan laut jernih dan aktivitas island hopping.',
+    micro: 'Butuh boat ±20 menit dari Peleng · Laguna jernih'
+  }
+};
+
 const breadcrumbItems = [
   { name: 'Home', url: '/' + currentLang + '/' },
   { name: c.title, url: '/' + currentLang + '/jasa-tour-luwuk-banggai/' }
@@ -276,212 +336,336 @@ const breadcrumbItems = [
       </div>
     </section>
 
-    <!-- 1. SERVICES -->
-    <section class="bg-white py-16 md:py-20">
+    ${isId && positioningCopy && (
+      <section class="bg-white py-20 md:py-24">
+        <div class="max-w-7xl mx-auto px-5 sm:px-8 lg:px-12 grid lg:grid-cols-2 gap-12 lg:gap-20 items-start">
+          <div>
+            <p class="text-turquoise-700 text-xs font-bold tracking-[0.2em] uppercase mb-4">{positioningCopy.eyebrow}</p>
+            <h2 class="font-serif text-3xl md:text-5xl text-ocean-900 leading-tight tracking-[-0.03em]">{positioningCopy.title}</h2>
+          </div>
+          <div class="space-y-5 text-ocean-600 text-[15px] md:text-base leading-[1.7]">
+            {positioningCopy.paragraphs.map(paragraph => <p>{paragraph}</p>)}
+          </div>
+        </div>
+      </section>
+    })}
+
+    
+
+    <section class="bg-sand-50 py-16 md:py-20">
       <div class="max-w-7xl mx-auto px-5 sm:px-8 lg:px-12">
         <div class="max-w-3xl mb-10">
-          <p class="text-turquoise-700 text-xs font-bold tracking-[0.22em] uppercase mb-4">Banggai Wonderland</p>
-          <h2 class="font-serif text-3xl md:text-5xl text-ocean-900 tracking-[-0.03em] font-medium mb-4">{c.servicesTitle}</h2>
-          <p class="text-ocean-600 leading-relaxed max-w-2xl">
-            {c.intro}
-          </p>
+          <p class="text-turquoise-700 text-xs font-bold tracking-[0.2em] uppercase mb-4">PRIVATE TRIP</p>
+          <h2 class="font-serif text-3xl md:text-5xl text-ocean-900 leading-tight tracking-[-0.03em] mb-4">{c.servicesTitle}</h2>
+          {isId ? (
+            <p class="text-ocean-600 text-[15px] md:text-base leading-[1.7] max-w-2xl">
+              Layanan utama untuk mengatur perjalanan privat dari Luwuk ke Kepulauan Banggai dengan rute yang realistis dan mudah diikuti.
+            </p>
+          ) : (
+            <p class="text-ocean-600 leading-relaxed max-w-2xl">{c.intro}</p>
+          )}
         </div>
 
-        <div class="divide-y divide-sand-200 border-y border-sand-200">
-          {c.services.map(([title, text], index) => (
-            <article class="grid md:grid-cols-[80px_1fr_1.2fr] gap-5 md:gap-8 py-7 md:py-8 items-start">
-              <span class="text-sm font-bold tracking-[0.16em] text-turquoise-700">0{index + 1}</span>
+        <div class="border-y border-sand-200 divide-y divide-sand-200">
+          {servicesUi.map(([title, text], index) => (
+            <article class="grid md:grid-cols-[90px_minmax(220px,1fr)_minmax(280px,36ch)] gap-4 md:gap-8 items-start py-7 md:py-8">
+              <span class="font-serif text-3xl md:text-4xl text-turquoise-600 leading-none">{String(index + 1).padStart(2, '0')}</span>
               <h3 class="font-serif text-2xl md:text-3xl text-ocean-900">{title}</h3>
-              <p class="text-ocean-600 leading-relaxed text-sm md:text-base">{text}</p>
+              <p class="text-ocean-600 text-[15px] leading-[1.7]">{text}</p>
             </article>
           ))}
         </div>
       </div>
     </section>
 
-    <!-- 2. PACKAGES -->
-    <section id="packages" class="bg-sand-50 py-16 md:py-24">
-      <div class="max-w-7xl mx-auto px-5 sm:px-8 lg:px-12">
-        <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-5 mb-10">
-          <div class="max-w-3xl">
-            <p class="text-turquoise-700 text-xs font-bold tracking-[0.22em] uppercase mb-4">Tour Packages</p>
-            <h2 class="font-serif text-3xl md:text-5xl text-ocean-900 tracking-[-0.03em] font-medium mb-4">{c.packageTitle}</h2>
-            <p class="text-ocean-600 leading-relaxed">{c.packageText}</p>
-          </div>
-          <a href="https://wa.me/6285820830530" target="_blank" rel="noopener noreferrer" class="text-sm font-semibold text-ocean-900 underline underline-offset-4">
-            {c.primaryCta} →
-          </a>
-        </div>
-
-        <div class="grid md:grid-cols-2 gap-5">
-          {selectedPackages.map((pkg, index) => (
-            <a
-              href={'/' + currentLang + '/packages/' + pkg.slug.split('/').slice(1).join('/') + '/'}
-              class="group rounded-3xl border border-sand-200 bg-white p-7 hover:border-ocean-900/20 hover:-translate-y-0.5 transition-all"
-            >
-              <div class="flex items-start justify-between gap-5">
-                <div class="flex items-start gap-4">
-                  <span class="text-xs font-bold tracking-[0.16em] text-turquoise-700 pt-1">0{index + 1}</span>
-                  <div>
-                    <p class="text-[11px] font-bold tracking-[0.18em] uppercase text-ocean-500">{pkg.data.duration}</p>
-                    <h3 class="font-serif text-2xl text-ocean-900 mt-2 group-hover:text-turquoise-700 transition-colors">{pkg.data.title}</h3>
-                    <p class="text-sm text-ocean-600 leading-relaxed mt-3">{pkg.data.description}</p>
-                  </div>
-                </div>
-                <span class="text-ocean-500 text-xl group-hover:text-ocean-900 transition-colors">↗</span>
-              </div>
-            </a>
-          ))}
-        </div>
-      </div>
-    </section>
-
-    <!-- 3. ROUTE -->
-    <section class="bg-ocean-950 text-white py-16 md:py-20">
-      <div class="max-w-7xl mx-auto px-5 sm:px-8 lg:px-12">
-        <div class="grid lg:grid-cols-[.9fr_1.1fr] gap-12 items-start">
-          <div>
-            <p class="text-white/50 text-xs font-bold tracking-[0.22em] uppercase mb-4">Banggai Route</p>
-            <h2 class="font-serif text-3xl md:text-5xl tracking-[-0.03em] font-medium mb-5">{c.routeTitle}</h2>
-            <p class="text-white/70 leading-relaxed max-w-xl">{c.routeText}</p>
-          </div>
-
-          <div class="rounded-3xl border border-white/10 bg-white/[0.04] p-7 md:p-9">
-            <p class="text-white/45 text-xs font-bold tracking-[0.18em] uppercase mb-5">Start in Luwuk</p>
-            <div class="flex flex-wrap items-center gap-2">
-              {['Luwuk', 'Salakan', 'Peleng', 'Paisu Pok', 'Banggai Laut', 'Pulo Dua'].map((item, index) => (
-                <>
-                  <span class="rounded-full border border-white/15 bg-white/[0.04] px-4 py-2.5 text-sm text-white/90">{item}</span>
-                  {index < 5 && <span class="text-white/25 hidden sm:inline">→</span>}
-                </>
-              ))}
-            </div>
-            <p class="text-white/55 text-sm leading-relaxed mt-6">
-              Rute tidak selalu mencakup semua titik di atas. Urutan perjalanan mengikuti program,
-              waktu yang tersedia, koneksi transportasi laut, cuaca, dan kondisi lokal.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- 4. DESTINATIONS -->
     <section class="bg-white py-16 md:py-24">
       <div class="max-w-7xl mx-auto px-5 sm:px-8 lg:px-12">
+        <div class="grid lg:grid-cols-[.9fr_1.1fr] gap-12 lg:gap-20 items-start">
+          <div>
+            <p class="text-turquoise-700 text-xs font-bold tracking-[0.2em] uppercase mb-4">ROUTE & DESTINATION</p>
+            <h2 class="font-serif text-3xl md:text-5xl text-ocean-900 leading-tight tracking-[-0.03em] mb-5">{c.routeTitle}</h2>
+
+            <div class="mt-10">
+              {[
+                ['Luwuk', isId ? 'Start · Bandara' : 'Start'],
+                ['Salakan', isId ? 'Pelabuhan penyeberangan' : 'Crossing point'],
+                ['Peleng', isId ? 'Pulau utama' : 'Main island'],
+                ['Paisu Pok', isId ? 'Danau jernih' : 'Clear lake'],
+                ['Banggai Laut', isId ? 'Kawasan kepulauan' : 'Island area'],
+                ['Pulo Dua', isId ? 'Destinasi laut' : 'Marine destination']
+              ].map(([name, note], index) => (
+                <div class="grid grid-cols-[34px_1fr] gap-4">
+                  <div class="flex flex-col items-center">
+                    <span class={"w-2.5 h-2.5 rounded-full mt-2.5 " + (index === 3 ? 'bg-turquoise-500 ring-4 ring-turquoise-100' : 'bg-ocean-300')}></span>
+                    {index < 5 && <span class="w-px h-12 bg-sand-300"></span>}
+                  </div>
+                  <div class="pb-7">
+                    <p class="font-serif text-xl md:text-2xl text-ocean-900">{name}</p>
+                    <p class="text-sm text-ocean-500 mt-1">{note}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          <div class="lg:pt-16">
+            {isId ? (
+              <div class="space-y-5">
+                <div class="grid sm:grid-cols-3 gap-3">
+                  <div class="border-t border-sand-200 pt-4">
+                    <p class="text-xs font-bold uppercase tracking-[0.16em] text-turquoise-700 mb-2">1–2 hari</p>
+                    <p class="text-sm text-ocean-600 leading-[1.7]">Fokus Luwuk — Piala Waterfall, pesisir Luwuk, Salodik.</p>
+                  </div>
+                  <div class="border-t border-sand-200 pt-4">
+                    <p class="text-xs font-bold uppercase tracking-[0.16em] text-turquoise-700 mb-2">3 hari</p>
+                    <p class="text-sm text-ocean-600 leading-[1.7]">Luwuk + Salakan, mulai menyeberang.</p>
+                  </div>
+                  <div class="border-t border-sand-200 pt-4">
+                    <p class="text-xs font-bold uppercase tracking-[0.16em] text-turquoise-700 mb-2">4–6 hari</p>
+                    <p class="text-sm text-ocean-600 leading-[1.7]">Peleng, Paisu Pok, Banggai Laut, Pulo Dua.</p>
+                  </div>
+                </div>
+                <div class="rounded-2xl border border-sand-200 bg-sand-50 px-5 py-5">
+                  <p class="font-semibold text-ocean-900 mb-2">Rute dipilih berdasarkan kondisi perjalanan</p>
+                  <p class="text-sm text-ocean-600 leading-[1.7]">
+                    Durasi, minat, jadwal ferry/speedboat, cuaca, dan kondisi lokal ikut menentukan urutan perjalanan.
+                    Destinasi di atas adalah contoh; kombinasi aktual dibahas saat konsultasi.
+                  </p>
+                </div>
+              </div>
+            ) : (
+              <div class="rounded-3xl bg-ocean-950 text-white p-7 md:p-9">
+                <p class="text-white/50 text-xs font-bold tracking-[0.2em] uppercase mb-4">Route planning</p>
+                <p class="text-white/75 leading-relaxed">{c.routeText}</p>
+              </div>
+            )}
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-sand-50 py-16 md:py-24">
+      <div class="max-w-7xl mx-auto px-5 sm:px-8 lg:px-12">
         <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-5 mb-10">
           <div class="max-w-3xl">
-            <p class="text-turquoise-700 text-xs font-bold tracking-[0.22em] uppercase mb-4">Destination Guides</p>
+            <p class="text-turquoise-700 text-xs font-bold tracking-[0.2em] uppercase mb-4">POPULAR DESTINATIONS</p>
             <h2 class="font-serif text-3xl md:text-5xl text-ocean-900 tracking-[-0.03em] font-medium">{c.destinationTitle}</h2>
           </div>
-          <a href="/id/banggai-travel/" class="text-sm font-semibold text-ocean-900 underline underline-offset-4">Banggai Travel →</a>
+          <a href={'/' + currentLang + '/banggai-travel/'} class="text-sm font-semibold text-ocean-900 underline underline-offset-4">Banggai Travel →</a>
         </div>
 
-        <div class="grid lg:grid-cols-[1.35fr_1fr_1fr] gap-5">
-          {selectedDestinations.map((destination, index) => (
+        <div class="grid lg:grid-cols-[1.25fr_1fr] gap-5">
+          {selectedDestinations.length > 0 && (
             <a
-              href={'/' + currentLang + '/destinations/' + destination.slug.split('/').slice(1).join('/') + '/'}
-              class={index === 0
-                ? 'group relative overflow-hidden rounded-3xl min-h-[420px] bg-ocean-900'
-                : 'group relative overflow-hidden rounded-3xl min-h-[280px] bg-ocean-900'}
+              href={'/' + currentLang + '/destinations/' + selectedDestinations[0].slug.split('/').slice(1).join('/') + '/'}
+              class="group relative overflow-hidden rounded-[24px] min-h-[560px] bg-ocean-900"
             >
               <img
-                src={destination.data.image}
-                alt={destination.data.imageAlt || destination.data.title}
+                src={selectedDestinations[0].data.image}
+                alt={selectedDestinations[0].data.imageAlt || selectedDestinations[0].data.title}
                 class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                 loading="lazy"
               />
-              <div class="absolute inset-0 bg-gradient-to-t from-ocean-950 via-ocean-950/30 to-transparent"></div>
-              <div class="absolute inset-x-0 bottom-0 p-6 md:p-7">
-                <p class="text-white/55 text-xs font-semibold tracking-[0.14em] uppercase">{destination.data.location}</p>
-                <h3 class="font-serif text-2xl md:text-3xl text-white mt-2">{destination.data.title}</h3>
+              <div class="absolute inset-0 bg-gradient-to-t from-ocean-950 via-ocean-950/35 to-transparent"></div>
+              <div class="absolute inset-x-0 bottom-0 p-7 md:p-9">
+                <p class="text-white/60 text-xs font-semibold uppercase tracking-[0.16em]">{selectedDestinations[0].data.location}</p>
+                <h3 class="font-serif text-3xl md:text-4xl text-white mt-2">{selectedDestinations[0].data.title}</h3>
+                {isId && destinationMicro['paisu-pok-lake'] && (
+                  <>
+                    <p class="text-white/80 text-sm leading-relaxed mt-3 max-w-xl">{destinationMicro['paisu-pok-lake'].description}</p>
+                    <p class="text-white/55 text-xs mt-3">{destinationMicro['paisu-pok-lake'].micro}</p>
+                  </>
+                )}
               </div>
             </a>
-          ))}
+          )}
+
+          <div class="grid sm:grid-cols-3 lg:grid-cols-1 gap-5">
+            {selectedDestinations.slice(1).map(destination => {
+              const slug = destination.slug.split('/').slice(1).join('/');
+              const info = destinationMicro[slug];
+              return (
+                <a
+                  href={'/' + currentLang + '/destinations/' + slug + '/'}
+                  class="group grid sm:grid-cols-[180px_1fr] lg:grid-cols-[210px_1fr] gap-5 bg-white border border-sand-200 rounded-[20px] overflow-hidden"
+                >
+                  <img
+                    src={destination.data.image}
+                    alt={destination.data.imageAlt || destination.data.title}
+                    class="w-full h-full min-h-[190px] object-cover transition-transform duration-500 group-hover:scale-105"
+                    loading="lazy"
+                  />
+                  <div class="p-5 flex flex-col justify-center">
+                    <p class="text-xs uppercase tracking-[0.14em] text-ocean-500">{destination.data.location}</p>
+                    <h3 class="font-serif text-2xl text-ocean-900 mt-2">{destination.data.title}</h3>
+                    {isId && info ? (
+                      <>
+                        <p class="text-sm text-ocean-600 leading-[1.7] mt-2">{info.description}</p>
+                        <p class="text-xs text-ocean-500 mt-3">{info.micro}</p>
+                      </>
+                    ) : (
+                      <p class="text-sm text-ocean-600 leading-relaxed mt-2">{destination.data.location}</p>
+                    )}
+                  </div>
+                </a>
+              );
+            })}
+          </div>
         </div>
       </div>
     </section>
 
-    <!-- 5. PROCESS -->
+    <section id="packages" class="bg-white py-16 md:py-24">
+      <div id="paket-wisata" class="relative -top-24"></div>
+      <div class="max-w-7xl mx-auto px-5 sm:px-8 lg:px-12">
+        <div class="max-w-3xl mb-10">
+          <p class="text-turquoise-700 text-xs font-bold tracking-[0.2em] uppercase mb-4">TOUR PACKAGES</p>
+          <h2 class="font-serif text-3xl md:text-5xl text-ocean-900 tracking-[-0.03em] font-medium mb-4">{c.packageTitle}</h2>
+          <p class="text-ocean-600 leading-relaxed max-w-2xl">{c.packageText}</p>
+        </div>
+
+        <div class="border-y border-sand-200 divide-y divide-sand-200">
+          {selectedPackages.map(pkg => {
+            const slug = pkg.slug.split('/')[1];
+            const meta = packageMeta[slug] || { label: '' };
+            const isFeatured = meta.featured === true;
+            return (
+              <a
+                href={'/' + currentLang + '/packages/' + slug + '/'}
+                class={'group grid lg:grid-cols-[180px_minmax(0,1fr)_190px] gap-5 lg:gap-8 items-center px-0 py-7 md:py-8 transition-colors ' + (isFeatured ? 'bg-ocean-950 text-white px-5 md:px-7 -mx-5 md:-mx-7 rounded-2xl my-3 border border-ocean-950' : '')}
+              >
+                <div>
+                  <span class={'inline-flex rounded-full px-3 py-1 text-[11px] font-bold tracking-[0.14em] uppercase ' + (isFeatured ? 'bg-white/10 text-white' : 'bg-sand-100 text-turquoise-700')}>
+                    {meta.label}
+                  </span>
+                  <p class={'text-xs font-semibold mt-3 ' + (isFeatured ? 'text-white/60' : 'text-ocean-500')}>{pkg.data.duration}</p>
+                </div>
+
+                <div>
+                  <h3 class={'font-serif text-2xl md:text-3xl ' + (isFeatured ? 'text-white' : 'text-ocean-900')}>{pkg.data.title}</h3>
+                  <p class={'text-sm leading-[1.7] mt-2 ' + (isFeatured ? 'text-white/70' : 'text-ocean-600')}>{pkg.data.description}</p>
+                  <div class="flex flex-wrap gap-2 mt-4">
+                    {(pkg.data.destination || '').split(',').slice(0, 4).map(dest => (
+                      <span class={'rounded-full border px-3 py-1 text-xs ' + (isFeatured ? 'border-white/15 text-white/70' : 'border-sand-200 text-ocean-600')}>
+                        {dest.trim()}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+
+                <div class="lg:text-right">
+                  <span class={'text-sm font-semibold underline underline-offset-4 ' + (isFeatured ? 'text-white' : 'text-ocean-900')}>
+                    Konsultasi Rute →
+                  </span>
+                </div>
+              </a>
+            );
+          })}
+        </div>
+
+        <div class="mt-6">
+          <p class="text-xs text-ocean-500">Harga & include menyesuaikan jumlah peserta — konsultasi dulu.</p>
+        </div>
+      </div>
+    </section>
+
     <section class="bg-sand-50 py-16 md:py-24">
       <div class="max-w-7xl mx-auto px-5 sm:px-8 lg:px-12">
         <div class="max-w-3xl mb-10">
-          <p class="text-turquoise-700 text-xs font-bold tracking-[0.22em] uppercase mb-4">Simple Process</p>
+          <p class="text-turquoise-700 text-xs font-bold tracking-[0.2em] uppercase mb-4">HOW IT WORKS</p>
           <h2 class="font-serif text-3xl md:text-5xl text-ocean-900 tracking-[-0.03em] font-medium mb-4">{c.processTitle}</h2>
-          <p class="text-ocean-600 leading-relaxed">
-            Tidak perlu menyusun semuanya sendiri. Mulai dari tanggal dan jumlah peserta, lalu kita susun rute yang masuk akal.
-          </p>
+          {isId ? (
+            <p class="text-ocean-600 leading-[1.7] max-w-2xl">Tidak perlu menyusun semuanya sendiri. Mulai dari tanggal dan jumlah peserta, lalu kita susun rute yang masuk akal.</p>
+          ) : (
+            <p class="text-ocean-600 leading-relaxed max-w-2xl">{c.processTitle}</p>
+          )}
         </div>
 
-        <div class="grid md:grid-cols-2 lg:grid-cols-4 border-y border-sand-200">
-          {c.process.map(([number, title, text]) => (
-            <article class="py-7 md:p-7 md:border-r last:border-r-0 border-sand-200">
-              <span class="text-sm font-bold text-turquoise-700">{number}</span>
-              <h3 class="font-serif text-2xl text-ocean-900 mt-4 mb-3">{title}</h3>
-              <p class="text-sm text-ocean-600 leading-relaxed">{text}</p>
-            </article>
-          ))}
+        <div class="relative">
+          <div class="hidden lg:block absolute left-[8%] right-[8%] top-5 border-t border-[#D6D0C0]"></div>
+          <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {processUi.map(([number, title, text]) => (
+              <article class="relative">
+                <div class="font-serif text-4xl text-ocean-900 relative bg-sand-50 w-fit pr-4">{number}</div>
+                <h3 class="font-serif text-2xl text-ocean-900 mt-4 mb-3">{title}</h3>
+                <p class="text-sm text-ocean-600 leading-[1.7]">{text}</p>
+              </article>
+            ))}
+          </div>
         </div>
       </div>
     </section>
 
-    <!-- 6. FAQ -->
-    <section class="bg-white py-16 md:py-24">
-      <div class="max-w-4xl mx-auto px-5 sm:px-8">
-        <p class="text-turquoise-700 text-xs font-bold tracking-[0.22em] uppercase mb-4">FAQ</p>
-        <h2 class="font-serif text-3xl md:text-5xl text-ocean-900 tracking-[-0.03em] font-medium mb-8">{c.faqTitle}</h2>
+    ${isId && (
+      <section class="bg-white py-16 md:py-24">
+        <div class="max-w-7xl mx-auto px-5 sm:px-8 lg:px-12">
+          <div class="grid lg:grid-cols-[.9fr_1.1fr] gap-12 lg:gap-20 items-start">
+            <div>
+              <p class="text-turquoise-700 text-xs font-bold tracking-[0.2em] uppercase mb-4">WHY LOCAL PLANNING MATTERS</p>
+              <h2 class="font-serif text-3xl md:text-5xl text-ocean-900 leading-tight tracking-[-0.03em]">Perjalanan Banggai yang Disusun dengan Kondisi Nyata di Lapangan</h2>
+            </div>
+            <div>
+              <p class="text-ocean-600 text-[15px] md:text-base leading-[1.7] mb-6">
+                Banggai bukan Bali. Destinasinya tersebar, transport laut punya jamnya sendiri, cuaca bisa mengubah urutan,
+                dan di beberapa titik sinyal bisa hilang. Itinerary yang bagus bukan yang memasukkan tempat sebanyak mungkin,
+                tetapi yang ringkas, realistis, dan masih nyaman dijalani.
+              </p>
+              <ul class="divide-y divide-sand-200 border-y border-sand-200">
+                {[
+                  'Destinasi tersebar, jadi waktu antar pulau perlu dihitung.',
+                  'Transport laut punya jadwal dan tergantung cuaca.',
+                  'Cuaca dan pasang surut bisa mengubah urutan perjalanan.',
+                  'Pengetahuan rute lokal membantu menghindari rute memutar.',
+                  'Itinerary lebih baik ringkas dan santai daripada terlalu padat.'
+                ].map(item => (
+                  <li class="py-4 text-sm text-ocean-700 leading-[1.7] pl-5 relative">
+                    <span class="absolute left-0 top-6 w-1.5 h-1.5 rounded-full bg-turquoise-500"></span>
+                    {item}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+    })}
 
-        <div class="divide-y divide-sand-200 border-y border-sand-200">
-          {c.faqs.map(([question, answer]) => (
-            <details class="py-5 group">
-              <summary class="cursor-pointer list-none flex items-start justify-between gap-6 font-semibold text-ocean-900">
+    <section class="bg-sand-50 py-16 md:py-24">
+      <div class="max-w-4xl mx-auto px-5 sm:px-8">
+        <p class="text-turquoise-700 text-xs font-bold tracking-[0.2em] uppercase mb-4">FAQ</p>
+        <h2 class="font-serif text-3xl md:text-5xl text-ocean-900 tracking-[-0.03em] font-medium mb-8">{c.faqTitle}</h2>
+        <div class="border-y border-sand-200 divide-y divide-sand-200">
+          {c.faqs.map(([question, answer], index) => (
+            <details class="py-5 group" {...(index === 0 ? { open: true } : {})}>
+              <summary class="cursor-pointer list-none flex items-start justify-between gap-6 font-serif text-lg md:text-xl text-ocean-900">
                 <span>{question}</span>
-                <span class="text-ocean-400 group-open:rotate-45 transition-transform text-xl leading-none">+</span>
+                <span class="font-sans text-ocean-400 text-xl leading-none transition-transform group-open:rotate-45">+</span>
               </summary>
-              <p class="text-sm text-ocean-600 leading-relaxed pt-3 max-w-3xl">{answer}</p>
+              <p class="text-sm text-ocean-600 leading-[1.7] pt-3 max-w-3xl">{answer}</p>
             </details>
           ))}
         </div>
       </div>
     </section>
 
-    <!-- 7. INTERNAL NAV + CTA -->
-    {currentLang === 'id' && (
-      <section class="bg-sand-50 py-12 md:py-16 border-t border-sand-200">
-        <div class="max-w-7xl mx-auto px-5 sm:px-8 lg:px-12">
-          <div class="flex flex-wrap items-center justify-between gap-5 mb-6">
-            <div>
-              <p class="text-turquoise-700 text-xs font-bold tracking-[0.22em] uppercase mb-2">Jelajahi lebih lanjut</p>
-              <h2 class="font-serif text-2xl md:text-3xl text-ocean-900">Pilih format perjalanan Banggai</h2>
-            </div>
-            <p class="text-sm text-ocean-600 max-w-xl">Gunakan halaman berikut hanya bila Anda ingin membandingkan format perjalanan yang berbeda.</p>
-          </div>
-
-          <div class="grid md:grid-cols-3 gap-4">
-            <a href="/id/banggai-travel/" class="rounded-2xl border border-sand-200 bg-white px-5 py-5 group">
-              <h3 class="font-serif text-xl text-ocean-900 group-hover:text-turquoise-700 transition-colors">Banggai Travel</h3>
-              <p class="text-sm text-ocean-600 mt-2">Hub utama untuk layanan perjalanan dan custom trip.</p>
-            </a>
-            <a href="/id/banggai-trip/" class="rounded-2xl border border-sand-200 bg-white px-5 py-5 group">
-              <h3 class="font-serif text-xl text-ocean-900 group-hover:text-turquoise-700 transition-colors">Banggai Trip & Banggai Tour</h3>
-              <p class="text-sm text-ocean-600 mt-2">Panduan durasi, rute, dan perencanaan perjalanan.</p>
-            </a>
-            <a href="/id/banggai-open-trip/" class="rounded-2xl border border-sand-200 bg-white px-5 py-5 group">
-              <h3 class="font-serif text-xl text-ocean-900 group-hover:text-turquoise-700 transition-colors">Banggai Open Trip</h3>
-              <p class="text-sm text-ocean-600 mt-2">Pilihan perjalanan bersama dengan small group 4–8 peserta.</p>
-            </a>
-          </div>
-        </div>
-      </section>
-    )}
-
-    <section class="bg-ocean-900 text-white py-20 md:py-24">
-      <div class="max-w-4xl mx-auto px-5 sm:px-8 text-center">
+    <section class="bg-ocean-950 text-white py-20 md:py-24 relative overflow-hidden">
+      <div class="absolute -top-32 -right-32 w-[420px] h-[420px] rounded-full opacity-50 blur-3xl"
+           style="background: radial-gradient(circle, rgba(20,184,166,.28) 0%, rgba(20,184,166,0) 70%);"></div>
+      <div class="relative max-w-4xl mx-auto px-5 sm:px-8 text-center">
         <p class="text-white/50 text-xs font-bold tracking-[0.24em] uppercase mb-5">Banggai Wonderland</p>
-        <h2 class="font-serif text-4xl md:text-6xl leading-tight tracking-[-0.04em] font-medium mb-5">{c.closingTitle}</h2>
-        <p class="max-w-2xl mx-auto text-white/70 leading-relaxed mb-8">{c.closingText}</p>
-        <a href="https://wa.me/6285820830530" target="_blank" rel="noopener noreferrer" class="inline-flex rounded-full bg-white text-ocean-900 px-7 py-3.5 text-sm font-semibold">
-          {c.primaryCta} <span class="ml-2">→</span>
-        </a>
+        <h2 class="font-serif text-4xl md:text-[44px] leading-tight tracking-[-0.03em] font-medium mb-5">{c.closingTitle}</h2>
+        <p class="max-w-2xl mx-auto text-white/70 leading-[1.7] mb-8">
+          {isId ? 'Beri tahu kami tanggal & destinasi prioritas. Kami bantu susun rute private trip sesuai waktu & gaya jalanmu.' : c.closingText}
+        </p>
+        <div class="flex flex-wrap justify-center gap-3">
+          <a href="https://wa.me/6285820830530" target="_blank" rel="noopener noreferrer" class="inline-flex rounded-full bg-white text-ocean-900 px-7 py-3.5 text-sm font-semibold">
+            {c.primaryCta} <span class="ml-2">→</span>
+          </a>
+          <a href="#paket-wisata" class="inline-flex rounded-full border border-white/20 bg-white/5 text-white px-7 py-3.5 text-sm font-semibold">
+            {c.secondaryCta}
+          </a>
+        </div>
+        {isId && <p class="text-white/45 text-xs mt-7">+62 858-2083-0530 · Luwuk · Kepulauan Banggai</p>}
       </div>
     </section>
   </div>
