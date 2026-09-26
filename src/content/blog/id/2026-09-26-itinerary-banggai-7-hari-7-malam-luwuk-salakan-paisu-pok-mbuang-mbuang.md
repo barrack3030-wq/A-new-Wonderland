@@ -38,6 +38,8 @@ Jika Anda ingin menjelajahi **Luwuk dan Kepulauan Banggai** tanpa terburu-buru, 
 
 ## Day 1 — Luwuk → Piala Waterfall → Salakan
 
+![Piala Waterfall](/images/piala.jpg)
+
 | Waktu | Aktivitas |
 |---|---|
 | 11:30 | tiba di Luwuk Airport, pickup dan pengambilan bagasi. |
@@ -53,6 +55,14 @@ Jika Anda ingin menjelajahi **Luwuk dan Kepulauan Banggai** tanpa terburu-buru, 
 
 
 ## Day 2 — Paisu Pok, Paisu Batango, Kawalu Bay & Poganda
+
+![Paisu Pok Lake](/images/blog/dji-0992-2-20260915111011.webp)
+
+![Paisu Batango](/images/paisu.jpg)
+
+![Kawalu Bay](/images/kawalu.webp)
+
+![Poganda Beach](/images/Poganda-Beach-Banggai-IndonesiaJuara-Trip.webp)
 
 | Waktu | Aktivitas |
 |---|---|
@@ -71,6 +81,10 @@ Jika Anda ingin menjelajahi **Luwuk dan Kepulauan Banggai** tanpa terburu-buru, 
 
 ## Day 3 — Tebing → Mbuang-Mbuang → Bontolan
 
+![Mbuang-Mbuang](/images/mbuang mbuang.jpg)
+
+![Bontolan Beach](/images/bontolan.jpg)
+
 | Waktu | Aktivitas |
 |---|---|
 | 06:30 | sarapan. |
@@ -87,6 +101,12 @@ Jika Anda ingin menjelajahi **Luwuk dan Kepulauan Banggai** tanpa terburu-buru, 
 
 ## Day 4 — Tebing → Oyama → Long Beach → Bontolan
 
+![Oyama Beach](/images/698024319f723539c41d303baa496f2e.jpg)
+
+![Long Beach](/images/long b.jpg)
+
+![Bontolan Beach](/images/bontolan.jpg)
+
 | Waktu | Aktivitas |
 |---|---|
 | 06:30 | sarapan. |
@@ -102,6 +122,10 @@ Jika Anda ingin menjelajahi **Luwuk dan Kepulauan Banggai** tanpa terburu-buru, 
 
 
 ## Day 5 — Pompon Beach → Mandel Beach → Luwuk
+
+![Pompon Beach](/images/images (1).jpg)
+
+![Mandel Beach](/images/mandel.jpg)
 
 | Waktu | Aktivitas |
 |---|---|
@@ -120,6 +144,8 @@ Jika Anda ingin menjelajahi **Luwuk dan Kepulauan Banggai** tanpa terburu-buru, 
 
 ## Day 6 — Full-Day Pulo Dua
 
+![Pulo Dua](/images/blog/pulo-dua-20260909110950.webp)
+
 | Waktu | Aktivitas |
 |---|---|
 | 06:00 | sarapan. |
@@ -135,6 +161,10 @@ Jika Anda ingin menjelajahi **Luwuk dan Kepulauan Banggai** tanpa terburu-buru, 
 
 
 ## Day 7 — Kamumu Waterfall → Salodik Waterfall → Luwuk
+
+![Kamumu Waterfall](/images/kamumuu.jpg)
+
+![Salodik Waterfall](/images/images (3).jpg)
 
 | Waktu | Aktivitas |
 |---|---|
