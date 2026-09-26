@@ -38,6 +38,8 @@ Pour découvrir **Luwuk et les îles Banggai** sans courir, cet itinéraire de 7
 
 ## Jour 1 — Luwuk → Piala Waterfall → Salakan
 
+![Piala Waterfall](/images/piala.jpg)
+
 | Heure | Activité |
 |---|---|
 | 11h30 | arrivée à l’aéroport de Luwuk, accueil et bagages. |
@@ -53,6 +55,14 @@ Pour découvrir **Luwuk et les îles Banggai** sans courir, cet itinéraire de 7
 
 
 ## Jour 2 — Paisu Pok, Paisu Batango, Kawalu Bay et Poganda
+
+![Paisu Pok Lake](/images/blog/dji-0992-2-20260915111011.webp)
+
+![Paisu Batango](/images/paisu.jpg)
+
+![Kawalu Bay](/images/kawalu.webp)
+
+![Poganda Beach](/images/Poganda-Beach-Banggai-IndonesiaJuara-Trip.webp)
 
 | Heure | Activité |
 |---|---|
@@ -71,6 +81,10 @@ Pour découvrir **Luwuk et les îles Banggai** sans courir, cet itinéraire de 7
 
 ## Jour 3 — Tebing → Mbuang-Mbuang → Bontolan
 
+![Mbuang-Mbuang](/images/mbuang mbuang.jpg)
+
+![Bontolan Beach](/images/bontolan.jpg)
+
 | Heure | Activité |
 |---|---|
 | 06h30 | petit-déjeuner. |
@@ -87,6 +101,12 @@ Pour découvrir **Luwuk et les îles Banggai** sans courir, cet itinéraire de 7
 
 ## Jour 4 — Tebing → Oyama → Long Beach → Bontolan
 
+![Oyama Beach](/images/698024319f723539c41d303baa496f2e.jpg)
+
+![Long Beach](/images/long b.jpg)
+
+![Bontolan Beach](/images/bontolan.jpg)
+
 | Heure | Activité |
 |---|---|
 | 06h30 | petit-déjeuner. |
@@ -102,6 +122,10 @@ Pour découvrir **Luwuk et les îles Banggai** sans courir, cet itinéraire de 7
 
 
 ## Jour 5 — Pompon Beach → Mandel Beach → Luwuk
+
+![Pompon Beach](/images/images (1).jpg)
+
+![Mandel Beach](/images/mandel.jpg)
 
 | Heure | Activité |
 |---|---|
@@ -120,6 +144,8 @@ Pour découvrir **Luwuk et les îles Banggai** sans courir, cet itinéraire de 7
 
 ## Jour 6 — Pulo Dua toute la journée
 
+![Pulo Dua](/images/blog/pulo-dua-20260909110950.webp)
+
 | Heure | Activité |
 |---|---|
 | 06h00 | petit-déjeuner. |
@@ -135,6 +161,10 @@ Pour découvrir **Luwuk et les îles Banggai** sans courir, cet itinéraire de 7
 
 
 ## Jour 7 — Kamumu Waterfall → Salodik Waterfall → Luwuk
+
+![Kamumu Waterfall](/images/kamumuu.jpg)
+
+![Salodik Waterfall](/images/images (3).jpg)
 
 | Heure | Activité |
 |---|---|
