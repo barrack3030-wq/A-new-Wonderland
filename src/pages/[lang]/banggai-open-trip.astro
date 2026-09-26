@@ -33,7 +33,7 @@ const schema = {
   ogImage="/images/DSCF7073-5.webp"
   imageAlt="Danau Paisu Pok dengan air biru-hijau jernih di Pulau Peleng, Banggai Kepulauan"
 >
-  <div class="bg-sand-50 pt-28">
+  <div class="open-trip-dark bg-ocean-950 pt-28">
     <div class="max-w-7xl mx-auto px-5 sm:px-8 lg:px-12 py-8">
       <Breadcrumb items={[
         { name: 'Home', url: '/id/' },
@@ -68,14 +68,14 @@ const schema = {
              class="rounded-full bg-white text-ocean-900 px-6 py-3.5 text-sm font-semibold">
             Tanya Jadwal Open Trip →
           </a>
-          <a href="/id/banggai-travel/" class="rounded-full border border-white/25 bg-white/10 px-6 py-3.5 text-sm font-semibold">
+          <a href="/id/banggai-travel/" class="rounded-full border border-white/25 bg-ocean-900/10 px-6 py-3.5 text-sm font-semibold">
             Banggai Travel
           </a>
         </div>
       </div>
     </section>
 
-    <section class="bg-white py-14 md:py-20">
+    <section class="bg-ocean-900 py-14 md:py-20">
       <div class="max-w-7xl mx-auto px-5 sm:px-8 lg:px-12">
         <div class="grid md:grid-cols-4 gap-4">
           {[
@@ -84,51 +84,51 @@ const schema = {
             ['Paisu Pok', 'Destinasi inti'],
             ['4 pilihan', 'Durasi perjalanan']
           ].map(([value, label]) => (
-            <div class="rounded-2xl border border-sand-200 bg-sand-50 px-5 py-5">
-              <p class="font-serif text-2xl text-ocean-900">{value}</p>
-              <p class="text-sm text-ocean-600 mt-1">{label}</p>
+            <div class="rounded-2xl border border-white/10 bg-ocean-950 px-5 py-5">
+              <p class="font-serif text-2xl text-white">{value}</p>
+              <p class="text-sm text-white/70 mt-1">{label}</p>
             </div>
           ))}
         </div>
       </div>
     </section>
 
-    <section class="bg-white py-16 md:py-24">
+    <section class="bg-ocean-900 py-16 md:py-24">
       <div class="max-w-4xl mx-auto px-5 sm:px-8">
-        <p class="text-turquoise-600 text-xs font-bold tracking-[0.22em] uppercase mb-4">Open Trip Banggai</p>
-        <h2 class="font-serif text-3xl md:text-5xl text-ocean-900 mb-6">Perjalanan bersama, rute sudah kami siapkan</h2>
-        <p class="text-ocean-600 leading-relaxed mb-5">
+        <p class="text-turquoise-300 text-xs font-bold tracking-[0.22em] uppercase mb-4">Open Trip Banggai</p>
+        <h2 class="font-serif text-3xl md:text-5xl text-white mb-6">Perjalanan bersama, rute sudah kami siapkan</h2>
+        <p class="text-white/70 leading-relaxed mb-5">
           Banggai Wonderland membuka program <strong>Open Trip Banggai 2026</strong> dengan konsep
           <strong>small group 4 hingga 8 peserta per keberangkatan</strong>. Program ini dibuat untuk
           Anda yang ingin menjelajahi Banggai tanpa harus menyusun seluruh perjalanan sendiri.
         </p>
-        <p class="text-ocean-600 leading-relaxed mb-5">
+        <p class="text-white/70 leading-relaxed mb-5">
           Rute berfokus pada Banggai Islands dan Peleng, dengan <strong>Paisu Pok, Paisu Batango,
           Kawalu Bay, dan Poganda</strong> sebagai rangkaian utama. Program yang lebih panjang dapat
           dilanjutkan menuju <strong>Mbuang-Mbuang, Bontolan, Oyama, Long Beach, Pulo Dua</strong>,
           serta destinasi di sekitar Luwuk.
         </p>
-        <p class="text-ocean-600 leading-relaxed">
+        <p class="text-white/70 leading-relaxed">
           Karena beberapa rute menggunakan transportasi darat, ferry, dan boat, itinerary dapat
           menyesuaikan kondisi cuaca, laut, serta operasional transportasi setempat.
         </p>
       </div>
     </section>
 
-    <section class="bg-sand-50 py-16 md:py-24">
+    <section class="bg-ocean-950 py-16 md:py-24">
       <div class="max-w-7xl mx-auto px-5 sm:px-8 lg:px-12">
         <div class="max-w-3xl mb-10">
-          <p class="text-turquoise-600 text-xs font-bold tracking-[0.22em] uppercase mb-4">Pilihan Program</p>
-          <h2 class="font-serif text-3xl md:text-5xl text-ocean-900 mb-4">Pilih durasi yang paling sesuai</h2>
-          <p class="text-ocean-600 leading-relaxed">
+          <p class="text-turquoise-300 text-xs font-bold tracking-[0.22em] uppercase mb-4">Pilihan Program</p>
+          <h2 class="font-serif text-3xl md:text-5xl text-white mb-4">Pilih durasi yang paling sesuai</h2>
+          <p class="text-white/70 leading-relaxed">
             Semua program menggunakan konsep small group 4–8 peserta. Semakin panjang durasinya,
             semakin luas kawasan Banggai yang dapat dijelajahi.
           </p>
         </div>
 
-        <div class="overflow-x-auto rounded-2xl border border-sand-200 bg-white">
+        <div class="overflow-x-auto rounded-2xl border border-white/10 bg-ocean-900">
           <table class="w-full min-w-[820px] text-left border-collapse">
-            <thead class="bg-ocean-900 text-white">
+            <thead class="bg-black/40 text-white">
               <tr>
                 <th class="px-5 py-4 text-sm font-semibold">Program</th>
                 <th class="px-5 py-4 text-sm font-semibold">Durasi</th>
@@ -136,7 +136,7 @@ const schema = {
                 <th class="px-5 py-4 text-sm font-semibold">Destinasi Utama</th>
               </tr>
             </thead>
-            <tbody class="divide-y divide-sand-200 text-ocean-700">
+            <tbody class="divide-y divide-white/10 text-white/80">
               {[
                 ['Banggai Islands Escape','4D3N','Paisu Pok & sekitarnya','Paisu Pok, Paisu Batango, Kawalu Bay, Poganda'],
                 ['Paisu Pok & Peleng','5D4N','Paisu Pok + eksplorasi Peleng','Paisu Pok, Paisu Batango, Kawalu Bay, Poganda, Oyama, Long Beach'],
@@ -144,7 +144,7 @@ const schema = {
                 ['Banggai Wonderland','7D7N','Eksplorasi Banggai lebih lengkap','Paisu Pok, Paisu Batango, Kawalu Bay, Poganda, Mbuang-Mbuang, Bontolan, Oyama, Long Beach, Pulo Dua, Luwuk']
               ].map(([program, duration, focus, destinations]) => (
                 <tr>
-                  <td class="px-5 py-5 align-top font-semibold text-ocean-900">{program}</td>
+                  <td class="px-5 py-5 align-top font-semibold text-white">{program}</td>
                   <td class="px-5 py-5 align-top font-semibold">{duration}</td>
                   <td class="px-5 py-5 align-top">{focus}</td>
                   <td class="px-5 py-5 align-top leading-relaxed">{destinations}</td>
@@ -156,7 +156,7 @@ const schema = {
       </div>
     </section>
 
-    <section class="bg-white py-16 md:py-24">
+    <section class="bg-ocean-900 py-16 md:py-24">
       <div class="max-w-5xl mx-auto px-5 sm:px-8">
         <div class="grid md:grid-cols-2 gap-6">
           {[
@@ -181,13 +181,13 @@ const schema = {
               r:'Paisu Pok → Paisu Batango → Kawalu Bay → Poganda → Mbuang-Mbuang → Bontolan → Oyama → Long Beach → Pulo Dua → Luwuk'
             }
           ].map(({n, t, d, r}) => (
-            <article class="rounded-3xl border border-sand-200 bg-sand-50 p-7">
-              <span class="text-xs font-bold tracking-[0.2em] text-turquoise-700">{n}</span>
-              <h3 class="font-serif text-2xl text-ocean-900 mt-4 mb-3">{t}</h3>
-              <p class="text-ocean-600 leading-relaxed mb-4">{d}</p>
-              <div class="rounded-2xl bg-white border border-sand-200 px-4 py-4">
-                <p class="text-xs font-bold uppercase tracking-[0.14em] text-turquoise-700 mb-2">Rangkaian Utama</p>
-                <p class="text-sm text-ocean-700 leading-relaxed">{r}</p>
+            <article class="rounded-3xl border border-white/10 bg-white/[0.04] p-7">
+              <span class="text-xs font-bold tracking-[0.2em] text-turquoise-300">{n}</span>
+              <h3 class="font-serif text-2xl text-white mt-4 mb-3">{t}</h3>
+              <p class="text-white/70 leading-relaxed mb-4">{d}</p>
+              <div class="rounded-2xl bg-white/[0.04] border border-white/10 px-4 py-4">
+                <p class="text-xs font-bold uppercase tracking-[0.14em] text-turquoise-300 mb-2">Rangkaian Utama</p>
+                <p class="text-sm text-white/80 leading-relaxed">{r}</p>
               </div>
             </article>
           ))}
@@ -195,24 +195,24 @@ const schema = {
       </div>
     </section>
 
-    <section class="bg-sand-50 py-16 md:py-24">
+    <section class="bg-ocean-950 py-16 md:py-24">
       <div class="max-w-5xl mx-auto px-5 sm:px-8">
-        <h2 class="font-serif text-3xl md:text-5xl text-ocean-900 mb-6">Paisu Pok adalah bagian dari rangkaian perjalanan</h2>
-        <p class="text-ocean-600 leading-relaxed mb-8 max-w-3xl">
+        <h2 class="font-serif text-3xl md:text-5xl text-white mb-6">Paisu Pok adalah bagian dari rangkaian perjalanan</h2>
+        <p class="text-white/70 leading-relaxed mb-8 max-w-3xl">
           Untuk program yang mengunjungi Paisu Pok, perjalanan tidak dibuat hanya untuk datang ke satu
           destinasi lalu kembali. Rute utama disusun sebagai satu rangkaian kawasan agar waktu perjalanan
           lebih masuk akal dan peserta dapat menikmati beberapa tempat sekaligus.
         </p>
 
-        <div class="overflow-x-auto rounded-2xl border border-sand-200 bg-white">
+        <div class="overflow-x-auto rounded-2xl border border-white/10 bg-ocean-900">
           <table class="w-full min-w-[720px] text-left border-collapse">
             <thead>
-              <tr class="border-b border-sand-200">
-                <th class="px-5 py-4 text-sm font-semibold text-ocean-900">Destinasi</th>
-                <th class="px-5 py-4 text-sm font-semibold text-ocean-900">Pengalaman</th>
+              <tr class="border-b border-white/10">
+                <th class="px-5 py-4 text-sm font-semibold text-white">Destinasi</th>
+                <th class="px-5 py-4 text-sm font-semibold text-white">Pengalaman</th>
               </tr>
             </thead>
-            <tbody class="divide-y divide-sand-200 text-ocean-700">
+            <tbody class="divide-y divide-white/10 text-white/80">
               {[
                 ['Paisu Pok','Danau dengan air sangat jernih dan pemandangan alam Peleng'],
                 ['Paisu Batango','Mata air dan kawasan air alami di Luk Panenteng'],
@@ -226,7 +226,7 @@ const schema = {
                 ['Luwuk','Meeting point dan rangkaian destinasi darat sesuai program']
               ].map(([destination, experience]) => (
                 <tr>
-                  <td class="px-5 py-4 align-top font-semibold text-ocean-900">{destination}</td>
+                  <td class="px-5 py-4 align-top font-semibold text-white">{destination}</td>
                   <td class="px-5 py-4 align-top leading-relaxed">{experience}</td>
                 </tr>
               ))}
@@ -236,10 +236,10 @@ const schema = {
       </div>
     </section>
 
-    <section class="bg-white py-16 md:py-24">
+    <section class="bg-ocean-900 py-16 md:py-24">
       <div class="max-w-5xl mx-auto px-5 sm:px-8">
-        <h2 class="font-serif text-3xl md:text-5xl text-ocean-900 mb-5">Mengapa kami membatasi 4–8 peserta?</h2>
-        <p class="text-ocean-600 leading-relaxed max-w-3xl mb-10">
+        <h2 class="font-serif text-3xl md:text-5xl text-white mb-5">Mengapa kami membatasi 4–8 peserta?</h2>
+        <p class="text-white/70 leading-relaxed max-w-3xl mb-10">
           Kami sengaja menjaga jumlah peserta tetap kecil agar koordinasi lebih sederhana,
           perpindahan antardestinasi lebih fleksibel, dan suasana perjalanan tetap personal.
         </p>
@@ -253,26 +253,26 @@ const schema = {
             ['Solo traveler','Bisa bergabung'],
             ['Keberangkatan','Berdasarkan tanggal yang tersedia']
           ].map(([label, value]) => (
-            <div class="rounded-2xl border border-sand-200 bg-sand-50 px-5 py-5 flex items-center justify-between gap-5">
-              <span class="text-sm text-ocean-600">{label}</span>
-              <strong class="text-sm text-ocean-900 text-right">{value}</strong>
+            <div class="rounded-2xl border border-white/10 bg-ocean-950 px-5 py-5 flex items-center justify-between gap-5">
+              <span class="text-sm text-white/70">{label}</span>
+              <strong class="text-sm text-white text-right">{value}</strong>
             </div>
           ))}
         </div>
       </div>
     </section>
 
-    <section class="bg-sand-50 py-16 md:py-24">
+    <section class="bg-ocean-950 py-16 md:py-24">
       <div class="max-w-4xl mx-auto px-5 sm:px-8">
-        <h2 class="font-serif text-3xl md:text-5xl text-ocean-900 mb-8">Bagaimana Open Trip Banggai berjalan?</h2>
-        <div class="space-y-5 text-ocean-600 leading-relaxed">
+        <h2 class="font-serif text-3xl md:text-5xl text-white mb-8">Bagaimana Open Trip Banggai berjalan?</h2>
+        <div class="space-y-5 text-white/70 leading-relaxed">
           <p>
             Setiap keberangkatan memiliki tanggal, itinerary, dan jumlah peserta yang telah ditentukan.
             Peserta akan bergabung dalam satu grup kecil dan berbagi beberapa komponen perjalanan sesuai program,
             seperti kendaraan, boat, guide, akomodasi, dan kebutuhan operasional lainnya.
           </p>
           <p>
-            Meeting point utama adalah <strong class="text-ocean-900">Luwuk</strong>. Detail titik kumpul
+            Meeting point utama adalah <strong class="text-white">Luwuk</strong>. Detail titik kumpul
             dan waktu berkumpul akan disampaikan sebelum keberangkatan.
           </p>
           <p>
@@ -284,28 +284,28 @@ const schema = {
       </div>
     </section>
 
-    <section class="bg-white py-16 md:py-24">
+    <section class="bg-ocean-900 py-16 md:py-24">
       <div class="max-w-5xl mx-auto px-5 sm:px-8">
-        <h2 class="font-serif text-3xl md:text-5xl text-ocean-900 mb-8">Apa yang membuat Open Trip ini berbeda?</h2>
+        <h2 class="font-serif text-3xl md:text-5xl text-white mb-8">Apa yang membuat Open Trip ini berbeda?</h2>
         <div class="grid md:grid-cols-3 gap-5">
           {[
             ['Small Group','Jumlah peserta dibatasi 4–8 orang per keberangkatan.'],
             ['Rute Berlapis','Program dibuat bertahap dari 4D3N hingga 7D7N, dengan rute yang mengikuti kawasan dan durasi perjalanan.'],
             ['Operator Lokal','Perjalanan disiapkan dari Luwuk dengan mempertimbangkan kondisi rute darat dan laut di Banggai.']
           ].map(([heading, body]) => (
-            <article class="rounded-2xl border border-sand-200 bg-sand-50 p-6">
-              <h3 class="font-serif text-2xl text-ocean-900 mb-3">{heading}</h3>
-              <p class="text-sm text-ocean-600 leading-relaxed">{body}</p>
+            <article class="rounded-2xl border border-white/10 bg-white/[0.04] p-6">
+              <h3 class="font-serif text-2xl text-white mb-3">{heading}</h3>
+              <p class="text-sm text-white/70 leading-relaxed">{body}</p>
             </article>
           ))}
         </div>
       </div>
     </section>
 
-    <section class="bg-sand-50 py-16 md:py-24">
+    <section class="bg-ocean-950 py-16 md:py-24">
       <div class="max-w-5xl mx-auto px-5 sm:px-8">
-        <h2 class="font-serif text-3xl md:text-5xl text-ocean-900 mb-8">Informasi penting sebelum booking</h2>
-        <div class="overflow-x-auto rounded-2xl border border-sand-200 bg-white">
+        <h2 class="font-serif text-3xl md:text-5xl text-white mb-8">Informasi penting sebelum booking</h2>
+        <div class="overflow-x-auto rounded-2xl border border-white/10 bg-ocean-900">
           <table class="w-full min-w-[760px] text-left border-collapse">
             <thead class="bg-ocean-900 text-white">
               <tr>
@@ -313,7 +313,7 @@ const schema = {
                 <th class="px-5 py-4 text-sm font-semibold">Keterangan</th>
               </tr>
             </thead>
-            <tbody class="divide-y divide-sand-200 text-ocean-700">
+            <tbody class="divide-y divide-white/10 text-white/80">
               {[
                 ['Jadwal bersama','Peserta mengikuti itinerary dan waktu perjalanan pada program yang dipilih.'],
                 ['Ferry & boat','Operasional dapat berubah karena cuaca, gelombang, keselamatan pelayaran, atau perubahan jadwal.'],
@@ -322,7 +322,7 @@ const schema = {
                 ['Harga & fasilitas','Detail biaya, fasilitas, akomodasi, dan jadwal diberikan sesuai tanggal keberangkatan yang dipilih.']
               ].map(([heading, detail]) => (
                 <tr>
-                  <td class="px-5 py-4 align-top font-semibold text-ocean-900">{heading}</td>
+                  <td class="px-5 py-4 align-top font-semibold text-white">{heading}</td>
                   <td class="px-5 py-4 align-top leading-relaxed">{detail}</td>
                 </tr>
               ))}
@@ -332,9 +332,9 @@ const schema = {
       </div>
     </section>
 
-    <section class="bg-white py-16 md:py-24">
+    <section class="bg-ocean-900 py-16 md:py-24">
       <div class="max-w-5xl mx-auto px-5 sm:px-8">
-        <h2 class="font-serif text-3xl md:text-5xl text-ocean-900 mb-8">Siapa yang cocok mengikuti Open Trip Banggai?</h2>
+        <h2 class="font-serif text-3xl md:text-5xl text-white mb-8">Siapa yang cocok mengikuti Open Trip Banggai?</h2>
         <div class="grid md:grid-cols-2 gap-4">
           {[
             ['Solo traveler','Bisa bergabung dengan peserta lain dalam format grup kecil.'],
@@ -344,18 +344,18 @@ const schema = {
             ['Traveler internasional','Mendapat dukungan operator lokal selama perjalanan.'],
             ['Pecinta alam','Rute menggabungkan laut, pulau, pantai, dan air tawar.']
           ].map(([heading, body]) => (
-            <article class="rounded-2xl border border-sand-200 bg-sand-50 p-6">
-              <h3 class="font-semibold text-ocean-900 mb-2">{heading}</h3>
-              <p class="text-sm text-ocean-600 leading-relaxed">{body}</p>
+            <article class="rounded-2xl border border-white/10 bg-white/[0.04] p-6">
+              <h3 class="font-semibold text-white mb-2">{heading}</h3>
+              <p class="text-sm text-white/70 leading-relaxed">{body}</p>
             </article>
           ))}
         </div>
       </div>
     </section>
 
-    <section class="bg-sand-50 py-16 md:py-24">
+    <section class="bg-ocean-950 py-16 md:py-24">
       <div class="max-w-4xl mx-auto px-5 sm:px-8">
-        <h2 class="font-serif text-3xl md:text-5xl text-ocean-900 mb-8">FAQ Open Trip Banggai</h2>
+        <h2 class="font-serif text-3xl md:text-5xl text-white mb-8">FAQ Open Trip Banggai</h2>
         <div class="space-y-3">
           {[
             ['Berapa minimum peserta untuk Open Trip Banggai?','Minimum keberangkatan adalah 4 peserta.'],
@@ -369,33 +369,33 @@ const schema = {
             ['Apakah jadwal ferry dan boat sudah pasti?','Jadwal merupakan bagian dari rencana perjalanan. Cuaca, kondisi laut, keselamatan pelayaran, dan operasional transportasi dapat menyebabkan penyesuaian.'],
             ['Apakah Open Trip sama dengan private trip?','Tidak. Open Trip berarti Anda bergabung dengan peserta lain dalam satu grup. Private trip dibuat khusus untuk kelompok Anda sendiri.']
           ].map(([question, answer]) => (
-            <details class="rounded-2xl bg-white border border-sand-200 px-5 py-4">
-              <summary class="cursor-pointer list-none font-semibold text-ocean-900">{question}</summary>
-              <p class="pt-3 text-sm text-ocean-600 leading-relaxed">{answer}</p>
+            <details class="rounded-2xl bg-ocean-900 border border-white/10 px-5 py-4">
+              <summary class="cursor-pointer list-none font-semibold text-white">{question}</summary>
+              <p class="pt-3 text-sm text-white/70 leading-relaxed">{answer}</p>
             </details>
           ))}
         </div>
       </div>
     </section>
 
-    <section class="bg-white py-12 md:py-16 border-t border-sand-200">
+    <section class="bg-ocean-900 py-12 md:py-16 border-t border-white/10">
       <div class="max-w-6xl mx-auto px-5 sm:px-8 lg:px-12">
-        <p class="text-turquoise-600 text-xs font-bold tracking-[0.22em] uppercase mb-4">Banggai Travel Cluster</p>
+        <p class="text-turquoise-300 text-xs font-bold tracking-[0.22em] uppercase mb-4">Banggai Travel Cluster</p>
         <div class="grid md:grid-cols-3 gap-5">
-          <a href="/id/banggai-travel/" class="rounded-2xl border border-sand-200 bg-sand-50 p-6 group">
-            <p class="text-xs font-semibold text-turquoise-700 mb-2">Hub utama</p>
-            <h2 class="font-serif text-2xl text-ocean-900 mb-2 group-hover:text-turquoise-700">Banggai Travel</h2>
-            <p class="text-sm text-ocean-600 leading-relaxed">Pilihan private trip, custom tour, dan perjalanan ke Kepulauan Banggai.</p>
+          <a href="/id/banggai-travel/" class="rounded-2xl border border-white/10 bg-white/[0.04] p-6 group">
+            <p class="text-xs font-semibold text-turquoise-300 mb-2">Hub utama</p>
+            <h2 class="font-serif text-2xl text-white mb-2 group-hover:text-turquoise-300">Banggai Travel</h2>
+            <p class="text-sm text-white/70 leading-relaxed">Pilihan private trip, custom tour, dan perjalanan ke Kepulauan Banggai.</p>
           </a>
-          <a href="/id/banggai-trip/" class="rounded-2xl border border-sand-200 bg-sand-50 p-6 group">
-            <p class="text-xs font-semibold text-turquoise-700 mb-2">Panduan trip</p>
-            <h2 class="font-serif text-2xl text-ocean-900 mb-2 group-hover:text-turquoise-700">Banggai Trip & Banggai Tour</h2>
-            <p class="text-sm text-ocean-600 leading-relaxed">Pilihan durasi, rute dari Luwuk, destinasi, dan cara menyusun itinerary Banggai.</p>
+          <a href="/id/banggai-trip/" class="rounded-2xl border border-white/10 bg-white/[0.04] p-6 group">
+            <p class="text-xs font-semibold text-turquoise-300 mb-2">Panduan trip</p>
+            <h2 class="font-serif text-2xl text-white mb-2 group-hover:text-turquoise-300">Banggai Trip & Banggai Tour</h2>
+            <p class="text-sm text-white/70 leading-relaxed">Pilihan durasi, rute dari Luwuk, destinasi, dan cara menyusun itinerary Banggai.</p>
           </a>
-          <a href="/id/jasa-tour-luwuk-banggai/#packages" class="rounded-2xl border border-sand-200 bg-sand-50 p-6 group">
-            <p class="text-xs font-semibold text-turquoise-700 mb-2">Layanan</p>
-            <h2 class="font-serif text-2xl text-ocean-900 mb-2 group-hover:text-turquoise-700">Jasa Tour Luwuk Banggai</h2>
-            <p class="text-sm text-ocean-600 leading-relaxed">Lihat layanan dan paket perjalanan yang tersedia dari Luwuk.</p>
+          <a href="/id/jasa-tour-luwuk-banggai/#packages" class="rounded-2xl border border-white/10 bg-white/[0.04] p-6 group">
+            <p class="text-xs font-semibold text-turquoise-300 mb-2">Layanan</p>
+            <h2 class="font-serif text-2xl text-white mb-2 group-hover:text-turquoise-300">Jasa Tour Luwuk Banggai</h2>
+            <p class="text-sm text-white/70 leading-relaxed">Lihat layanan dan paket perjalanan yang tersedia dari Luwuk.</p>
           </a>
         </div>
       </div>
@@ -415,7 +415,7 @@ const schema = {
             Cek Jadwal via WhatsApp →
           </a>
           <a href="https://www.instagram.com/banggaiwonderland/" target="_blank" rel="noopener noreferrer"
-             class="inline-flex rounded-full border border-white/25 bg-white/10 px-7 py-3.5 text-sm font-semibold">
+             class="inline-flex rounded-full border border-white/25 bg-ocean-900/10 px-7 py-3.5 text-sm font-semibold">
             Instagram @banggaiwonderland
           </a>
         </div>
@@ -424,4 +424,12 @@ const schema = {
     </section>
   </div>
   <WhatsAppButton />
+<style>
+  :global(.open-trip-dark nav[aria-label="Breadcrumb"] ol) { color: rgba(255,255,255,.68); }
+  :global(.open-trip-dark nav[aria-label="Breadcrumb"] ol a) { color: rgba(255,255,255,.68); }
+  :global(.open-trip-dark nav[aria-label="Breadcrumb"] ol a:hover) { color: rgba(255,255,255,.95); }
+  :global(.open-trip-dark nav[aria-label="Breadcrumb"] ol span[aria-current="page"]) { color: rgba(255,255,255,.95); }
+  :global(.open-trip-dark nav[aria-label="Breadcrumb"] svg) { color: rgba(255,255,255,.28); }
+  :global(.open-trip-dark table tbody tr:hover) { background: rgba(255,255,255,.025); }
+</style>
 </BaseLayout>
