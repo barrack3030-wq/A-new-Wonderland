@@ -59,7 +59,10 @@ const t = useTranslations(lang);
     </div>
 
     <div class="border-t border-white/10 pt-6 flex flex-col md:flex-row justify-between items-center gap-3">
-      <p class="text-ocean-200 text-xs md:text-sm">&copy; {new Date().getFullYear()} Banggai Wonderland. All rights reserved.</p>
+      <div class="flex flex-col md:flex-row justify-between items-center gap-3 w-full">
+        <p class="text-ocean-200 text-xs md:text-sm">&copy; {new Date().getFullYear()} Banggai Wonderland. All rights reserved.</p>
+        <a href="https://nakamadigital.biz.id/" class="text-ocean-300 hover:text-white text-xs md:text-sm transition-colors">Website by Nakama Digital</a>
+      </div>
     </div>
   </div>
 </footer>
