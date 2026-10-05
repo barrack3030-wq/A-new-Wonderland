@@ -20,6 +20,7 @@ travelTips:
   - "보트 이동 전 날씨와 파도 상태를 확인하세요."
   - "현금과 식수를 준비하세요."
   - "해양 환경을 보호하고 쓰레기를 남기지 마세요."
+youtube: "https://www.youtube.com/watch?v=gVEDHYLdyLI"
 ---
 
 # 풀라우 두아: 방가이의 맑은 바다를 만나는 섬 여행
