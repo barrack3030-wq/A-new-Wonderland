@@ -1,0 +1,147 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import WhatsAppButton from '../../components/WhatsAppButton.astro';
+import Breadcrumb from '../../components/Breadcrumb.astro';
+
+const title = '서울에서 파이수폭까지: 방가이 제도 여행 가이드';
+const description = '서울에서 마나도, 루욱을 거쳐 파이수폭 호수까지 가는 방법을 알아보세요. 인도네시아 방가이 제도의 숨은 자연을 만나는 특별한 여행 가이드입니다.';
+const image = '/images/paisupok-lake.jpg';
+
+const breadcrumbItems = [
+  { name: '홈', url: '/ko/' },
+  { name: '파이수폭 여행 가이드', url: '/ko/paisu-pok/' }
+];
+
+const schema = {
+  '@context': 'https://schema.org',
+  '@type': 'TouristDestination',
+  name: 'Paisu Pok Lake',
+  alternateName: '파이수폭 호수',
+  description,
+  image: new URL(image, Astro.site).href,
+  url: new URL('/ko/paisu-pok/', Astro.site).href,
+  touristType: ['International tourists', 'Korean travelers']
+};
+---
+
+<BaseLayout
+  title={title}
+  description={description}
+  seoTitle={title}
+  seoDescription={description}
+  ogImage={image}
+  imageAlt="파이수폭 호수의 맑고 푸른 물과 열대 풍경"
+  schema={schema}
+>
+  <main class="ko-paisu">
+    <section class="hero">
+      <img src={image} alt="파이수폭 호수의 맑은 물" loading="eager" />
+      <div class="shade"></div>
+      <div class="hero-copy">
+        <p>BANGGAI ISLANDS · INDONESIA</p>
+        <h1>서울에서 파이수폭까지</h1>
+        <h2>인도네시아 방가이 제도의 숨은 보석</h2>
+        <div class="route">SEOUL → MANADO → LUWUK → PELENG → PAISU POK</div>
+      </div>
+    </section>
+
+    <div class="content">
+      <Breadcrumb items={breadcrumbItems} />
+
+      <article>
+        <p class="eyebrow">PAISU POK LAKE</p>
+        <h2>발리와 라자암팟을 넘어, 더 조용한 인도네시아를 만나보세요.</h2>
+        <p>
+          인도네시아 여행에서 조금 더 특별하고 조용한 장소를 찾고 있다면 방가이 제도를 주목해보세요.
+          파이수폭(Paisu Pok)은 중앙 술라웨시의 펠렝섬에 있는 맑은 담수호로, 투명한 물과 열대 자연이
+          어우러진 독특한 풍경을 만날 수 있습니다.
+        </p>
+        <p>
+          이곳의 매력은 목적지만이 아닙니다. 서울에서 마나도로 날아가고, 루욱으로 이동한 뒤 배를 타고
+          펠렝섬으로 들어가는 과정까지가 하나의 여행이 됩니다.
+        </p>
+
+        <div class="feature-image">
+          <img src={image} alt="파이수폭의 투명한 물과 주변 자연" loading="lazy" />
+        </div>
+
+        <h3>서울에서 파이수폭까지 어떻게 가나요?</h3>
+        <div class="steps">
+          <div><span>01</span><div><strong>서울 → 마나도</strong><p>인천국제공항(ICN)에서 마나도(MDC)로 이동합니다. 한국에서 인도네시아 동부로 들어가는 국제적인 관문으로 활용할 수 있습니다.</p></div></div>
+          <div><span>02</span><div><strong>마나도 → 루욱</strong><p>마나도에서 루욱(LUW)으로 국내선을 이용합니다. 항공편은 여행 날짜에 따라 운항 여부와 시간이 달라질 수 있으므로 먼저 확인하는 것이 좋습니다.</p></div></div>
+          <div><span>03</span><div><strong>루욱 → 펠렝섬</strong><p>루욱에서 배를 타고 펠렝섬으로 이동합니다. 파이수폭은 루욱 시내가 아니라 펠렝섬의 Luk Panenteng 지역에 있습니다.</p></div></div>
+          <div><span>04</span><div><strong>펠렝섬 → Luk Panenteng → Paisu Pok</strong><p>섬에 도착한 뒤 차량으로 Luk Panenteng 방향으로 이동합니다. 현지 이동과 보트 일정을 미리 준비하면 훨씬 편안하게 여행할 수 있습니다.</p></div></div>
+        </div>
+
+        <h3>파이수폭에서 무엇을 할 수 있나요?</h3>
+        <div class="cards">
+          <div><strong>맑은 호수</strong><p>투명한 물과 물속 풍경을 가까이에서 감상해보세요.</p></div>
+          <div><strong>수영과 보트</strong><p>잔잔한 호수에서 여유롭게 물놀이와 보트 경험을 즐길 수 있습니다.</p></div>
+          <div><strong>사진 여행</strong><p>푸른 물과 열대 숲이 어우러져 자연스러운 여행 사진을 남기기 좋습니다.</p></div>
+        </div>
+
+        <h3>한국인 여행자에게 추천하는 6일 5박 일정</h3>
+        <div class="itinerary">
+          <p><strong>Day 1</strong> 서울 → 마나도 · 도착 후 휴식</p>
+          <p><strong>Day 2</strong> 마나도 → 루욱 · 루욱 주변 여행 · 숙박</p>
+          <p><strong>Day 3</strong> 루욱 → 펠렝섬 · Luk Panenteng · Paisu Pok</p>
+          <p><strong>Day 4</strong> Paisu Pok · Paisu Batango · Kawalu Bay</p>
+          <p><strong>Day 5</strong> 펠렝섬 → 루욱 · 항공 일정에 맞춰 마나도 이동</p>
+          <p><strong>Day 6</strong> 마나도 → 서울</p>
+        </div>
+
+        <div class="note">
+          <strong>여행 팁</strong>
+          <p>
+            국제선보다 먼저 마나도–루욱 국내선 운항일을 확인한 뒤 서울 출발 날짜를 맞추는 방법을 추천합니다.
+            섬 지역 여행은 항공과 배의 연결 시간을 여유 있게 잡는 것이 중요합니다.
+          </p>
+        </div>
+
+        <section class="cta">
+          <p class="eyebrow">BANGGAI WONDERLAND</p>
+          <h3>당신만의 방가이 여행을 시작해보세요.</h3>
+          <p>서울에서 출발하는 방가이 여행을 계획하고 있다면 현지 이동, 섬 여행, 일정 구성에 대해 문의해주세요.</p>
+          <a href="https://wa.me/6285820830530" target="_blank" rel="noopener noreferrer">WhatsApp으로 여행 문의하기 →</a>
+        </section>
+      </article>
+    </div>
+  </main>
+  <WhatsAppButton />
+
+  <style>
+    .ko-paisu { background:#f7f7f5; color:#062f3d; }
+    .hero { position:relative; min-height:72vh; display:flex; align-items:flex-end; overflow:hidden; background:#062f3d; color:white; }
+    .hero img { position:absolute; inset:0; width:100%; height:100%; object-fit:cover; }
+    .shade { position:absolute; inset:0; background:linear-gradient(180deg,rgba(0,0,0,.12),rgba(0,30,42,.78)); }
+    .hero-copy { position:relative; z-index:1; width:min(1120px,calc(100% - 40px)); margin:0 auto; padding:120px 0 70px; }
+    .hero-copy p,.eyebrow { font:700 10px/1.4 'Plus Jakarta Sans',sans-serif; letter-spacing:.24em; text-transform:uppercase; color:#72a6b4; }
+    .hero-copy p { color:rgba(255,255,255,.65); }
+    .hero h1 { margin:14px 0 8px; font:500 clamp(3rem,7vw,6.2rem)/.95 'Playfair Display',serif; letter-spacing:-.045em; }
+    .hero h2 { margin:0; max-width:700px; color:rgba(255,255,255,.78); font:400 clamp(1.1rem,2vw,1.6rem)/1.4 'Plus Jakarta Sans',sans-serif; }
+    .route { margin-top:30px; font:700 10px/1.5 'Plus Jakarta Sans',sans-serif; letter-spacing:.14em; color:rgba(255,255,255,.6); }
+    .content { width:min(940px,calc(100% - 40px)); margin:0 auto; padding:32px 0 90px; }
+    article { max-width:820px; margin:35px auto 0; }
+    article > h2 { margin:10px 0 24px; font:500 clamp(2.3rem,5vw,4rem)/1.05 'Playfair Display',serif; letter-spacing:-.035em; }
+    article > p { color:#55747e; font-size:16px; line-height:1.9; }
+    h3 { margin:70px 0 22px; font:600 clamp(1.65rem,3vw,2.4rem)/1.2 'Plus Jakarta Sans',sans-serif; letter-spacing:-.03em; }
+    .feature-image { margin:48px 0; aspect-ratio:16/9; overflow:hidden; }
+    .feature-image img { width:100%; height:100%; object-fit:cover; }
+    .steps { border-top:1px solid #d9e2e4; }
+    .steps > div { display:grid; grid-template-columns:58px 1fr; gap:20px; padding:25px 0; border-bottom:1px solid #d9e2e4; }
+    .steps span { font:600 12px/1 'Plus Jakarta Sans',sans-serif; color:#7c9ca5; }
+    .steps strong,.cards strong { font-size:16px; }
+    .steps p,.cards p,.itinerary p,.note p,.cta p { margin:8px 0 0; color:#5e7b84; line-height:1.75; }
+    .cards { display:grid; grid-template-columns:repeat(3,1fr); gap:14px; }
+    .cards > div { padding:25px; background:white; border:1px solid #e1e8e9; }
+    .itinerary { padding:10px 25px; background:#fff; border-left:3px solid #6c9eaa; }
+    .itinerary p { padding:13px 0; margin:0; border-bottom:1px solid #edf0f0; }
+    .itinerary p:last-child { border-bottom:0; }
+    .note { margin-top:40px; padding:25px; background:#e9f2f3; }
+    .cta { margin-top:75px; padding:45px; background:#062f3d; color:white; }
+    .cta h3 { margin:10px 0 14px; color:white; }
+    .cta p { color:rgba(255,255,255,.68); }
+    .cta a { display:inline-flex; margin-top:24px; padding:14px 22px; background:white; color:#062f3d; text-decoration:none; font-weight:700; border-radius:999px; }
+    @media (max-width:700px) { .hero { min-height:68vh; } .cards { grid-template-columns:1fr; } .cta { padding:30px 24px; } .content { width:min(100% - 28px,940px); } }
+  </style>
+</BaseLayout>
