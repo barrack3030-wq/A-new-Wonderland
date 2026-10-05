@@ -16,6 +16,7 @@ const t = useTranslations(lang as any);
 const gallerySeoTitle = ({
   id: 'Galeri Wisata Kepulauan Banggai | Banggai Wonderland',
   en: 'Banggai Islands Travel Gallery | Banggai Wonderland',
+  ko: '방가이 제도 여행 갤러리 | Banggai Wonderland',
   es: 'Galería de las Islas Banggai | Banggai Wonderland'
 } as Record<string, string>)[lang as string];
 
@@ -32,27 +33,27 @@ const destinations = allDestinations.filter(d => d.slug.startsWith(`${lang}/`));
 const experiences = [
   {
     image: "https://images.unsplash.com/photo-1544550581-5f7ceaf7f992?auto=format&fit=crop&q=80&w=800",
-    caption: "Snorkeling in crystal clear waters"
+    caption: "맑고 투명한 바다에서 즐기는 스노클링"
   },
   {
     image: "https://images.unsplash.com/photo-1539367628448-4bc5c9d171c8?auto=format&fit=crop&q=80&w=800",
-    caption: "Island hopping adventures"
+    caption: "방가이 섬 아일랜드 호핑"
   },
   {
     image: "https://images.unsplash.com/photo-1510414842594-a61c69b5ae57?auto=format&fit=crop&q=80&w=800",
-    caption: "Relaxing on white sand beaches"
+    caption: "하얀 모래 해변에서 즐기는 휴식"
   },
   {
     image: "https://images.unsplash.com/photo-1499793983690-e29da59ef1c2?auto=format&fit=crop&q=80&w=800",
-    caption: "Sunset boat trips"
+    caption: "노을빛 바다에서 즐기는 보트 여행"
   },
   {
     image: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&q=80&w=800",
-    caption: "Pristine coastlines"
+    caption: "때묻지 않은 방가이 해안 풍경"
   },
   {
     image: "https://images.unsplash.com/photo-1519046904884-53103b34b206?auto=format&fit=crop&q=80&w=800",
-    caption: "Tropical getaways"
+    caption: "열대 섬에서 보내는 휴식"
   }
 ];
 ---
