@@ -8,28 +8,28 @@ const t = useTranslations(lang);
   <!-- Commercial hub: packages are presented within the main tour services page. -->
   <div class="max-w-7xl mx-auto px-5 sm:px-8 lg:px-12">
     <div class="h-[84px] flex items-center justify-between">
-      <a href={`/${lang}/`} class="flex items-center shrink-0" aria-label="Banggai Wonderland home">
+      <a href={`/${lang}/`} class="flex items-center shrink-0" aria-label={lang === 'ko' ? '방가이 원더랜드 홈' : 'Banggai Wonderland home'}>
         <img src="/images/logo.png" alt="Banggai Wonderland" class="h-[80px] md:h-[80px] w-auto object-contain" />
       </a>
       <nav class="hidden lg:flex items-center gap-8">
         <a href={`/${lang}/destinations/`} class="text-[13px] font-medium text-ocean-900/75 hover:text-ocean-900 transition">{t('nav.destinations')}</a>
-        <a href={`/${lang}/jasa-tour-luwuk-banggai/`} class="text-[13px] font-medium text-ocean-900/75 hover:text-ocean-900 transition">{lang === 'id' ? 'Paket & Jasa Tour' : lang === 'es' ? 'Paquetes y Tours' : lang === 'fr' ? 'Forfaits & Tours' : lang === 'zh' ? '套餐与旅游服务' : 'Packages & Tours'}</a>
+        <a href={`/${lang}/jasa-tour-luwuk-banggai/`} class="text-[13px] font-medium text-ocean-900/75 hover:text-ocean-900 transition">{lang === 'id' ? 'Paket & Jasa Tour' : lang === 'es' ? 'Paquetes y Tours' : lang === 'fr' ? 'Forfaits & Tours' : lang === 'zh' ? '套餐与旅游服务' : lang === 'ko' ? '투어 & 여행 패키지' : 'Packages & Tours'}</a>
         <a href={`/${lang}/gallery/`} class="text-[13px] font-medium text-ocean-900/75 hover:text-ocean-900 transition">{t('nav.gallery')}</a>
         <a href={`/${lang}/blog/`} class="text-[13px] font-medium text-ocean-900/75 hover:text-ocean-900 transition">{t('nav.blog')}</a>
         <a href={`/${lang}/about/`} class="text-[13px] font-medium text-ocean-900/75 hover:text-ocean-900 transition">{t('nav.about')}</a>
       </nav>
-      <div class="hidden lg:flex items-center gap-5"><LanguageSwitcher /><a href="https://wa.me/6285820830530" target="_blank" rel="noopener noreferrer" class="rounded-full bg-ocean-900 text-white px-5 py-2.5 text-[13px] font-semibold hover:bg-ocean-800 transition">Travel with us</a></div>
+      <div class="hidden lg:flex items-center gap-5"><LanguageSwitcher /><a href="https://wa.me/6285820830530" target="_blank" rel="noopener noreferrer" class="rounded-full bg-ocean-900 text-white px-5 py-2.5 text-[13px] font-semibold hover:bg-ocean-800 transition">{lang === 'ko' ? '함께 여행하기' : 'Travel with us'}</a></div>
       <div class="lg:hidden flex items-center gap-3">
         <LanguageSwitcher mobileHeader={true} />
-        <button id="mobile-menu-btn" type="button" class="text-ocean-900 p-2" aria-label="Toggle menu" aria-expanded="false"><svg class="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path id="menu-icon-path" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.7" d="M4 7h16M4 12h16M4 17h16"/></svg></button>
+        <button id="mobile-menu-btn" type="button" class="text-ocean-900 p-2" aria-label={lang === 'ko' ? '메뉴' : 'Toggle menu'} aria-expanded="false"><svg class="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path id="menu-icon-path" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.7" d="M4 7h16M4 12h16M4 17h16"/></svg></button>
       </div>
     </div>
   </div>
   <div id="mobile-menu" class="hidden lg:hidden bg-white/95 backdrop-blur-2xl border-t border-black/5">
     <div class="px-5 pt-4 pb-7 space-y-1">
-      <a href={`/${lang}/destinations/`} class="block py-3 text-base font-medium">{t('nav.destinations')}</a><a href={`/${lang}/jasa-tour-luwuk-banggai/`} class="block py-3 text-base font-medium">{lang === 'id' ? 'Paket & Jasa Tour' : lang === 'es' ? 'Paquetes y Tours' : lang === 'fr' ? 'Forfaits & Tours' : lang === 'zh' ? '套餐与旅游服务' : 'Packages & Tours'}</a><a href={`/${lang}/gallery/`} class="block py-3 text-base font-medium">{t('nav.gallery')}</a><a href={`/${lang}/blog/`} class="block py-3 text-base font-medium">{t('nav.blog')}</a><a href={`/${lang}/about/`} class="block py-3 text-base font-medium">{t('nav.about')}</a>
+      <a href={`/${lang}/destinations/`} class="block py-3 text-base font-medium">{t('nav.destinations')}</a><a href={`/${lang}/jasa-tour-luwuk-banggai/`} class="block py-3 text-base font-medium">{lang === 'id' ? 'Paket & Jasa Tour' : lang === 'es' ? 'Paquetes y Tours' : lang === 'fr' ? 'Forfaits & Tours' : lang === 'zh' ? '套餐与旅游服务' : lang === 'ko' ? '투어 & 여행 패키지' : 'Packages & Tours'}</a><a href={`/${lang}/gallery/`} class="block py-3 text-base font-medium">{t('nav.gallery')}</a><a href={`/${lang}/blog/`} class="block py-3 text-base font-medium">{t('nav.blog')}</a><a href={`/${lang}/about/`} class="block py-3 text-base font-medium">{t('nav.about')}</a>
       <div class="pt-4 mt-2 border-t border-black/5"><LanguageSwitcher mobile={true} /></div>
-      <a href="https://wa.me/6285820830530" target="_blank" rel="noopener noreferrer" class="mt-5 block text-center rounded-full bg-ocean-900 text-white py-3.5 font-semibold">Travel with us</a>
+      <a href="https://wa.me/6285820830530" target="_blank" rel="noopener noreferrer" class="mt-5 block text-center rounded-full bg-ocean-900 text-white py-3.5 font-semibold">{lang === 'ko' ? '함께 여행하기' : 'Travel with us'}a>
     </div>
   </div>
 </header>
