@@ -3,7 +3,7 @@ title: "풀라우 두아 발란탁"
 description: "두 개의 섬이 만드는 독특한 풍경과 푸른 바다를 감상할 수 있는 해안 여행지입니다."
 seoTitle: "풀라우 두아 발란탁 | 방가이 제도 여행"
 seoDescription: "두 개의 섬이 만드는 독특한 풍경과 푸른 바다를 감상할 수 있는 해안 여행지입니다. 한국인 여행자를 위한 방가이 제도 여행 가이드입니다."
-image: "/images/Poganda-Beach-Banggai-IndonesiaJuara-Trip.webp"
+image: /images/images (2).jpg
 imageAlt: "풀라우 두아 발란탁의 아름다운 자연 풍경, 방가이 제도 인도네시아"
 location: "Balantak"
 category: "섬"
