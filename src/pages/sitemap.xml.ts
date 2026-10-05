@@ -1,7 +1,7 @@
 import { getCollection } from 'astro:content';
 
 const site = 'https://banggaiwonderland.my.id';
-const languages = ['id', 'en', 'es', 'fr', 'zh'];
+const languages = ['id', 'en', 'es', 'fr', 'zh', 'ko'];
 
 const staticPages = [
   'about/',
@@ -14,7 +14,7 @@ const staticPages = [
   'jasa-tour-luwuk-banggai/'
 ];
 
-const idOnlyStaticPages = [
+const localizedLandingPages = [
   'banggai-travel/',
   'banggai-trip/',
   'banggai-open-trip/'
@@ -34,8 +34,8 @@ export async function GET() {
       urls.add(`${site}/${lang}/${page}`);
     }
 
-    if (lang === 'id') {
-      for (const page of idOnlyStaticPages) {
+    if (lang === 'id' || lang === 'ko') {
+      for (const page of localizedLandingPages) {
         urls.add(`${site}/id/${page}`);
       }
     }
