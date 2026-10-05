@@ -3,7 +3,7 @@ title: "롱 비치"
 description: "긴 해안선과 푸른 바다가 펼쳐지는 한적한 해변으로 여유로운 섬 여행에 어울립니다."
 seoTitle: "롱 비치 | 방가이 제도 여행"
 seoDescription: "긴 해안선과 푸른 바다가 펼쳐지는 한적한 해변으로 여유로운 섬 여행에 어울립니다. 한국인 여행자를 위한 방가이 제도 여행 가이드입니다."
-image: "/images/Poganda-Beach-Banggai-IndonesiaJuara-Trip.webp"
+image: /images/long b.jpg
 imageAlt: "롱 비치의 아름다운 자연 풍경, 방가이 제도 인도네시아"
 location: "Banggai"
 category: "해변"
