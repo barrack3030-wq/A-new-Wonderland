@@ -15,7 +15,7 @@ const { lang } = Astro.params;
 const t = useTranslations(lang as any);
 
 const breadcrumbItems = [
-  { name: 'Home', url: `/${lang}/` },
+  { name: lang === 'ko' ? '홈' : lang === 'id' ? 'Beranda' : 'Home', url: `/${lang}/` },
   { name: t('btn.book') || 'Booking', url: `/${lang}/book/` }
 ];
 
