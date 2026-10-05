@@ -39,7 +39,7 @@ const finalImageAlt = imageAlt || effectiveSeoTitle;
 
 let alternateLinks: { lang: string; href: string }[] = [];
 const contentSections = ['destinations', 'packages', 'blog'];
-const idOnlySections = ['banggai-travel', 'banggai-trip', 'banggai-open-trip'];
+const localizedLandingSections = ['banggai-travel', 'banggai-trip', 'banggai-open-trip'];
 
 const manualBlogTranslationKeys: Record<string, string> = {
   'cara-ke-paisu-pok-dari-luwuk': '2026-09-18-cara-ke-paisu-pok-dari-luwuk',
@@ -63,9 +63,9 @@ const manualBlogTranslationKeys: Record<string, string> = {
 
 if (!section) {
   alternateLinks = Object.keys(languages).map(langCode => ({ lang: langCode, href: new URL(`/${langCode}/`, siteUrl).href }));
-} else if (idOnlySections.includes(section)) {
-  // These SEO landing pages currently exist only in Indonesian. Never emit hreflang URLs that do not exist.
-  alternateLinks = currentLangCode === 'id' ? [{ lang: 'id', href: currentUrl }] : [];
+} else if (localizedLandingSections.includes(section)) {
+  // These SEO landing pages are maintained per language. Only emit a self hreflang until matching translations exist.
+  alternateLinks = [{ lang: currentLangCode, href: currentUrl }];
 } else if (!contentSections.includes(section)) {
   alternateLinks = Object.keys(languages).map(langCode => ({ lang: langCode, href: new URL(`/${langCode}/${pathParts.slice(1).join('/')}/`, siteUrl).href }));
 } else {
