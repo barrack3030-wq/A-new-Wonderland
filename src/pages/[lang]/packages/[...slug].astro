@@ -33,7 +33,7 @@ const relatedDestinations = sameLanguageDestinations.map(destination => {
 }).sort((a, b) => b.score - a.score).slice(0, 6).map(item => item.destination);
 
 const breadcrumbItems = [
-  { name: 'Home', url: `/${lang}/` },
+  { name: lang === 'ko' ? '홈' : lang === 'id' ? 'Beranda' : 'Home', url: `/${lang}/` },
   { name: t('nav.packages'), url: `/${lang}/packages/` },
   { name: entry.data.title, url: `/${lang}/packages/${Astro.params.slug}/` }
 ];
