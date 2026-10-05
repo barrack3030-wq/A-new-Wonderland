@@ -35,7 +35,7 @@ const schema = { '@context':'https://schema.org', '@type':'CollectionPage', name
     <div class="max-w-6xl mx-auto px-5 sm:px-6 lg:px-8">
       <Breadcrumb items={breadcrumbItems} />
       <header class="text-center max-w-4xl mx-auto pt-8 md:pt-12 pb-12">
-        <p class="text-xs font-bold uppercase tracking-[0.28em] text-turquoise-600 mb-5">Banggai Wonderland Journal</p>
+        <p class="text-xs font-bold uppercase tracking-[0.28em] text-turquoise-600 mb-5">{lang === 'ko' ? '방가이 원더랜드 여행 저널' : 'Banggai Wonderland Journal'}</p>
         <h1 class="font-serif text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight text-ocean-950 leading-[1.05] mb-6">{copy.title}</h1>
         <p class="text-base md:text-lg text-ocean-600 leading-relaxed max-w-3xl mx-auto mb-4">{copy.intro}</p>
         <p class="text-sm md:text-base text-ocean-500 leading-relaxed max-w-3xl mx-auto">{copy.description}</p>
