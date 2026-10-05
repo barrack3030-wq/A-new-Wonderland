@@ -19,7 +19,7 @@ const t = useTranslations(lang);
         <h3 class="font-serif text-lg font-semibold mb-5 text-white">{t('footer.nav')}</h3>
         <ul class="space-y-2.5">
           <li><a href={`/${lang}/destinations/`} class="text-ocean-100 hover:text-turquoise-400 text-sm transition-colors">{t('nav.destinations')}</a></li>
-          <li><a href={`/${lang}/jasa-tour-luwuk-banggai/`} class="text-ocean-100 hover:text-turquoise-400 text-sm transition-colors">{lang === 'id' ? 'Paket & Jasa Tour' : lang === 'es' ? 'Paquetes y Tours' : lang === 'fr' ? 'Forfaits & Tours' : lang === 'zh' ? '套餐与旅游服务' : 'Packages & Tours'}</a></li>
+          <li><a href={`/${lang}/jasa-tour-luwuk-banggai/`} class="text-ocean-100 hover:text-turquoise-400 text-sm transition-colors">{lang === 'id' ? 'Paket & Jasa Tour' : lang === 'es' ? 'Paquetes y Tours' : lang === 'fr' ? 'Forfaits & Tours' : lang === 'zh' ? '套餐与旅游服务' : lang === 'ko' ? '투어 & 여행 패키지' : 'Packages & Tours'}</a></li>
           <li><a href={`/${lang}/blog/`} class="text-ocean-100 hover:text-turquoise-400 text-sm transition-colors">{t('nav.blog')}</a></li>
           <li><a href={`/${lang}/about/`} class="text-ocean-100 hover:text-turquoise-400 text-sm transition-colors">{t('nav.about')}</a></li>
           <li><a href={`/${lang}/contact/`} class="text-ocean-100 hover:text-turquoise-400 text-sm transition-colors">{t('nav.contact')}</a></li>
@@ -31,7 +31,7 @@ const t = useTranslations(lang);
         <ul class="space-y-3">
           <li class="flex items-start text-sm text-ocean-100">
             <svg class="w-5 h-5 mr-3 mt-0.5 text-turquoise-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0zM15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
-            <span>Luwuk, Banggai,<br/>Central Sulawesi, Indonesia</span>
+            <span>{lang === 'ko' ? '인도네시아 중부 술라웨시주 방가이 루욱' : 'Luwuk, Banggai,<br/>Central Sulawesi, Indonesia'}</span>
           </li>
           <li class="flex items-center text-sm text-ocean-100">
             <svg class="w-5 h-5 mr-3 text-turquoise-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
@@ -61,7 +61,7 @@ const t = useTranslations(lang);
     <div class="border-t border-white/10 pt-6 flex flex-col md:flex-row justify-between items-center gap-3">
       <div class="flex flex-col md:flex-row justify-between items-center gap-3 w-full">
         <p class="text-ocean-200 text-xs md:text-sm">&copy; {new Date().getFullYear()} Banggai Wonderland. All rights reserved.</p>
-        <a href="https://nakamadigital.biz.id/" class="text-ocean-300 hover:text-white text-xs md:text-sm transition-colors">Website by Nakama Digital</a>
+        <a href="https://nakamadigital.biz.id/" class="text-ocean-300 hover:text-white text-xs md:text-sm transition-colors">{lang === 'ko' ? '웹사이트 제작: Nakama Digital' : 'Website by Nakama Digital'}</a>
       </div>
     </div>
   </div>
