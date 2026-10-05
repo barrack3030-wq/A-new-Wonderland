@@ -3,7 +3,7 @@ title: "킬로 5 비치"
 description: "루욱에서 접근하기 쉬운 해변으로 바다를 바라보며 휴식하기 좋은 현지 명소입니다."
 seoTitle: "킬로 5 비치 | 방가이 제도 여행"
 seoDescription: "루욱에서 접근하기 쉬운 해변으로 바다를 바라보며 휴식하기 좋은 현지 명소입니다. 한국인 여행자를 위한 방가이 제도 여행 가이드입니다."
-image: "/images/Poganda-Beach-Banggai-IndonesiaJuara-Trip.webp"
+image: /images/Pantai-Kilo-5-1.webp
 imageAlt: "킬로 5 비치의 아름다운 자연 풍경, 방가이 제도 인도네시아"
 location: "Luwuk"
 category: "해변"
