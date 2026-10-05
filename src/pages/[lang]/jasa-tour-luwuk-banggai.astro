@@ -337,7 +337,7 @@ const destinationMicro: Record<string, { description: string; micro: string }> =
 };
 
 const breadcrumbItems = [
-  { name: 'Home', url: '/' + currentLang + '/' },
+  { name: currentLang === 'ko' ? '홈' : currentLang === 'id' ? 'Beranda' : 'Home', url: '/' + currentLang + '/' },
   { name: c.title, url: '/' + currentLang + '/jasa-tour-luwuk-banggai/' }
 ];
 ---
