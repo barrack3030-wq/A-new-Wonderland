@@ -22,7 +22,7 @@ const contactSeoDescription = ({
 } as Record<string, string>)[lang as string];
 
 const breadcrumbItems = [
-  { name: 'Home', url: `/${lang}/` },
+  { name: lang === 'ko' ? '홈' : lang === 'id' ? 'Beranda' : 'Home', url: `/${lang}/` },
   { name: t('nav.contact'), url: `/${lang}/contact/` }
 ];
 ---
