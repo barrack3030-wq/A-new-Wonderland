@@ -3,7 +3,7 @@ title: "음부앙음부앙 섬"
 description: "청정한 바다와 해양 생태계로 유명한 섬으로 특별한 아일랜드 호핑 경험을 선사합니다."
 seoTitle: "음부앙음부앙 섬 | 방가이 제도 여행"
 seoDescription: "청정한 바다와 해양 생태계로 유명한 섬으로 특별한 아일랜드 호핑 경험을 선사합니다. 한국인 여행자를 위한 방가이 제도 여행 가이드입니다."
-image: "/images/Poganda-Beach-Banggai-IndonesiaJuara-Trip.webp"
+image: /images/mbuang mbuang.jpg
 imageAlt: "음부앙음부앙 섬의 아름다운 자연 풍경, 방가이 제도 인도네시아"
 location: "Banggai Laut"
 category: "섬"
