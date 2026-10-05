@@ -28,7 +28,8 @@ const homepageSeo: Record<string, { title: string; description: string }> = {
   id: { title: 'Wisata Kepulauan Banggai & Private Trip | Banggai Wonderland', description: 'Jelajahi Kepulauan Banggai, Sulawesi Tengah melalui private trip ke Paisu Pok, Air Terjun Piala, Pulo Dua, Kamumu dan destinasi tersembunyi di sekitar Luwuk dan Banggai.' },
   es: { title: 'Islas Banggai: Viajes Privados y Guía de Viaje | Banggai Wonderland', description: 'Descubre las Islas Banggai en Sulawesi Central con viajes privados a Paisu Pok, la cascada Piala, Pulo Dua, Kamumu y otros destinos cerca de Luwuk y Banggai.' },
   fr: { title: 'Îles Banggai : Voyages Privés et Guide | Banggai Wonderland', description: 'Découvrez les îles Banggai à Sulawesi central avec des voyages privés vers Paisu Pok, la cascade de Piala, Pulo Dua, Kamumu et d’autres destinations autour de Luwuk et Banggai.' },
-  zh: { title: '邦盖群岛旅行与私人定制之旅 | Banggai Wonderland', description: '探索印度尼西亚中苏拉威西的邦盖群岛，体验前往 Paisu Pok、Piala 瀑布、Pulo Dua、Kamumu 以及 Luwuk 和 Banggai 周边秘境的私人旅行。' }
+  zh: { title: '邦盖群岛旅行与私人定制之旅 | Banggai Wonderland', description: '探索印度尼西亚中苏拉威西的邦盖群岛，体验前往 Paisu Pok、Piala 瀑布、Pulo Dua、Kamumu 以及 Luwuk 和 Banggai 周边秘境的私人旅行。' },
+  ko: { title: '방가이 제도 여행과 프라이빗 투어 | Banggai Wonderland', description: '인도네시아 방가이 제도의 숨은 섬과 Paisu Pok을 만나보세요. 서울에서 마나도, 루욱을 거쳐 떠나는 특별한 방가이 여행을 안내합니다.' }
 };
 
 const isHomepage = !section;
@@ -99,7 +100,7 @@ if (!section) {
   }
 }
 
-const localeMap: Record<string, string> = { id: 'id_ID', en: 'en_US', es: 'es_ES', fr: 'fr_FR', zh: 'zh_CN' };
+const localeMap: Record<string, string> = { id: 'id_ID', en: 'en_US', es: 'es_ES', fr: 'fr_FR', zh: 'zh_CN', ko: 'ko_KR' };
 const baseSchema = {
   '@context': 'https://schema.org', '@type': 'TravelAgency', name: 'Banggai Wonderland',
   image: new URL('/images/logo.png', siteUrl).href, '@id': siteUrl.href, url: siteUrl.href,
