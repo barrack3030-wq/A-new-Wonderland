@@ -11,7 +11,14 @@ const BATCH_SIZE=2;
 function doGet(){return jsonResponse({ok:true,service:'Banggai Wonderland CMS',version:'8.0-manual-multilang',status:'online',timestamp:new Date().toISOString()});}
 function doPost(e){try{
   if(!e||!e.postData||!e.postData.contents)throw new Error('Request data tidak ditemukan.');
-  const data=JSON.parse(e.postData.contents);checkAccessKey(data.accessKey);
+  const data=JSON.parse(e.postData.contents);
+  if(data.action==='chatCreate')return jsonResponse({ok:true,conversation:createChatConversation(data)});
+  if(data.action==='chatSend')return jsonResponse({ok:true,message:sendChatMessage(data)});
+  if(data.action==='chatGet')return jsonResponse({ok:true,conversation:getChatConversation(data)});
+  if(data.action==='chatList'){checkAccessKey(data.accessKey);return jsonResponse({ok:true,conversations:listChatConversations()});}
+  if(data.action==='chatReply'){checkAccessKey(data.accessKey);return jsonResponse({ok:true,message:adminReplyChat(data)});}
+  if(data.action==='chatStatus'){checkAccessKey(data.accessKey);return jsonResponse({ok:true,conversation:updateChatStatus(data)});}
+  checkAccessKey(data.accessKey);
   if(data.action==='searchImage')return jsonResponse({ok:true,image:findRelevantImage(String(data.topic||''))});
   if(data.action==='uploadImage')return jsonResponse({ok:true,image:uploadImage(data)});
   if(data.action==='listBlogs')return jsonResponse({ok:true,blogs:listBlogs(String(data.language||''))});
@@ -26,6 +33,90 @@ function doPost(e){try{
 
 function checkAccessKey(value){const expected=PropertiesService.getScriptProperties().getProperty('CMS_ACCESS_KEY');if(!expected)throw new Error('CMS_ACCESS_KEY belum diset di Script Properties.');if(!value||value!==expected)throw new Error('Access key tidak valid.');}
 function getOpenAIConfig(){const key=PropertiesService.getScriptProperties().getProperty('OPENAI_API_KEY');if(!key)throw new Error('OPENAI_API_KEY belum diset di Script Properties.');return{key:key,model:OPENAI_MODEL,url:OPENAI_URL};}
+
+function getChatSpreadsheet_(){
+  const props=PropertiesService.getScriptProperties();
+  let id=props.getProperty('KOREAN_CHAT_SPREADSHEET_ID');
+  if(id){
+    try{return SpreadsheetApp.openById(id);}
+    catch(e){props.deleteProperty('KOREAN_CHAT_SPREADSHEET_ID');}
+  }
+  const ss=SpreadsheetApp.create('Banggai Wonderland — Korean Chat');
+  props.setProperty('KOREAN_CHAT_SPREADSHEET_ID',ss.getId());
+  const conversations=ss.getSheets()[0];
+  conversations.setName('Conversations');
+  conversations.getRange(1,1,1,8).setValues([['conversation_id','visitor_id','name','kakao_id','email','status','created_at','updated_at']]);
+  conversations.setFrozenRows(1);
+  const messages=ss.insertSheet('Messages');
+  messages.getRange(1,1,1,5).setValues([['message_id','conversation_id','sender','message','created_at']]);
+  messages.setFrozenRows(1);
+  return ss;
+}
+function chatSheet_(name){return getChatSpreadsheet_().getSheetByName(name);}
+function chatId_(){return Utilities.getUuid().replace(/-/g,'').substring(0,16);}
+function cleanChatText_(value,max){return String(value==null?'':value).trim().substring(0,max);}
+function validateChatVisitor_(data){
+  if(String(data.language||'ko').toLowerCase()!=='ko')throw new Error('이 채팅은 한국어 페이지에서만 사용할 수 있습니다.');
+  if(String(data.website||'').trim())throw new Error('요청을 처리할 수 없습니다.');
+}
+function createChatConversation(data){
+  validateChatVisitor_(data);
+  const visitorId=cleanChatText_(data.visitor_id,80);
+  const message=cleanChatText_(data.message,4000);
+  if(!visitorId)throw new Error('방문자 ID가 없습니다.');
+  if(!message)throw new Error('문의 내용을 입력해 주세요.');
+  const now=new Date(),id=chatId_(),ss=getChatSpreadsheet_();
+  ss.getSheetByName('Conversations').appendRow([id,visitorId,cleanChatText_(data.name,100),cleanChatText_(data.kakao_id,100),cleanChatText_(data.email,160),'open',now,now]);
+  ss.getSheetByName('Messages').appendRow([chatId_(),id,'visitor',message,now]);
+  return{conversation_id:id,status:'open',messages:[{sender:'visitor',message:message,created_at:now.toISOString()}]};
+}
+function getChatConversation(data){
+  validateChatVisitor_(data);
+  const id=cleanChatText_(data.conversation_id,80),visitorId=cleanChatText_(data.visitor_id,80);
+  if(!id||!visitorId)throw new Error('대화를 찾을 수 없습니다.');
+  const ss=getChatSpreadsheet_(),cs=ss.getSheetByName('Conversations'),rows=cs.getDataRange().getValues(),found=rows.slice(1).find(r=>String(r[0])===id&&String(r[1])===visitorId);
+  if(!found)throw new Error('대화를 찾을 수 없습니다.');
+  const ms=ss.getSheetByName('Messages'),mrows=ms.getDataRange().getValues().slice(1).filter(r=>String(r[1])===id).map(r=>({id:String(r[0]),sender:String(r[2]),message:String(r[3]),created_at:new Date(r[4]).toISOString()}));
+  return{conversation_id:id,status:String(found[5]||'open'),name:String(found[2]||''),messages:mrows};
+}
+function sendChatMessage(data){
+  validateChatVisitor_(data);
+  const id=cleanChatText_(data.conversation_id,80),visitorId=cleanChatText_(data.visitor_id,80),message=cleanChatText_(data.message,4000);
+  if(!id||!visitorId||!message)throw new Error('문의 내용을 입력해 주세요.');
+  const ss=getChatSpreadsheet_(),cs=ss.getSheetByName('Conversations'),rows=cs.getDataRange().getValues(),rowIndex=rows.findIndex((r,i)=>i>0&&String(r[0])===id&&String(r[1])===visitorId);
+  if(rowIndex<1)throw new Error('대화를 찾을 수 없습니다.');
+  if(String(rows[rowIndex][5])==='closed')throw new Error('이 상담은 종료되었습니다. 새 상담을 시작해 주세요.');
+  const now=new Date(),ms=ss.getSheetByName('Messages');
+  ms.appendRow([chatId_(),id,'visitor',message,now]);
+  cs.getRange(rowIndex+1,8).setValue(now);
+  return{id:id,sender:'visitor',message:message,created_at:now.toISOString()};
+}
+function listChatConversations(){
+  const cs=chatSheet_('Conversations'),rows=cs.getDataRange().getValues().slice(1);
+  return rows.reverse().filter(r=>r[0]).slice(0,100).map(r=>({conversation_id:String(r[0]),visitor_id:String(r[1]),name:String(r[2]||''),kakao_id:String(r[3]||''),email:String(r[4]||''),status:String(r[5]||'open'),created_at:new Date(r[6]).toISOString(),updated_at:new Date(r[7]).toISOString()}));
+}
+function adminGetMessages_(id){
+  const ms=chatSheet_('Messages'),rows=ms.getDataRange().getValues().slice(1);
+  return rows.filter(r=>String(r[1])===id).map(r=>({id:String(r[0]),sender:String(r[2]),message:String(r[3]),created_at:new Date(r[4]).toISOString()}));
+}
+function adminReplyChat(data){
+  const id=cleanChatText_(data.conversation_id,80),message=cleanChatText_(data.message,4000);
+  if(!id||!message)throw new Error('답변 내용을 입력해 주세요.');
+  const ss=getChatSpreadsheet_(),cs=ss.getSheetByName('Conversations'),rows=cs.getDataRange().getValues(),rowIndex=rows.findIndex((r,i)=>i>0&&String(r[0])===id);
+  if(rowIndex<1)throw new Error('대화를 찾을 수 없습니다.');
+  const now=new Date();
+  ss.getSheetByName('Messages').appendRow([chatId_(),id,'admin',message,now]);
+  cs.getRange(rowIndex+1,8).setValue(now);
+  return{id:id,sender:'admin',message:message,created_at:now.toISOString()};
+}
+function updateChatStatus(data){
+  const id=cleanChatText_(data.conversation_id,80),status=String(data.status||'').toLowerCase();
+  if(!id||['open','closed'].indexOf(status)===-1)throw new Error('Status tidak valid.');
+  const cs=chatSheet_('Conversations'),rows=cs.getDataRange().getValues(),rowIndex=rows.findIndex((r,i)=>i>0&&String(r[0])===id);
+  if(rowIndex<1)throw new Error('대화를 찾을 수 없습니다.');
+  cs.getRange(rowIndex+1,6).setValue(status);cs.getRange(rowIndex+1,8).setValue(new Date());
+  return{conversation_id:id,status:status};
+}
 
 function uploadImage(data){let blob,originalName='blog-image.jpg',source='';if(data.dataUrl){const m=String(data.dataUrl).match(/^data:([^;]+);base64,(.+)$/s);if(!m)throw new Error('Format upload foto tidak valid.');const mime=m[1].toLowerCase();if(['image/jpeg','image/png','image/webp','image/gif','image/svg+xml'].indexOf(mime)<0)throw new Error('Format foto harus JPG, PNG, WEBP, GIF atau SVG.');const bytes=Utilities.base64Decode(m[2]);if(bytes.length>8*1024*1024)throw new Error('Ukuran foto maksimal 8 MB.');originalName=String(data.fileName||originalName);blob=Utilities.newBlob(bytes,mime,originalName);}else if(data.imageUrl){source=String(data.imageUrl).trim();if(!/^https?:\/\//i.test(source))throw new Error('Link foto harus dimulai dengan http:// atau https://.');const r=UrlFetchApp.fetch(source,{method:'get',followRedirects:true,muteHttpExceptions:true});if(r.getResponseCode()<200||r.getResponseCode()>=300)throw new Error('Tidak dapat mengambil foto dari link ('+r.getResponseCode()+').');blob=r.getBlob();if(blob.getBytes().length>8*1024*1024)throw new Error('Foto dari link berukuran lebih dari 8 MB.');if(String(blob.getContentType()||'').toLowerCase().indexOf('image/')!==0)throw new Error('Link tersebut tidak mengarah ke file gambar.');originalName=String(blob.getName()||originalName);}else throw new Error('Pilih foto atau masukkan link foto.');const mime=String(blob.getContentType()||'image/jpeg').toLowerCase(),ext=extensionForMime(mime,originalName),base=createSlug(originalName.replace(/\.[^.]+$/,''))||'blog-image',fileName=base+'-'+Utilities.formatDate(new Date(),Session.getScriptTimeZone()||'Asia/Makassar','yyyyMMddHHmmss')+'.'+ext,path='public/images/blog/'+fileName;githubCreateBinaryFile(path,blob.getBytes(),'CMS: Add blog image '+fileName);return{url:'/images/blog/'+fileName,source:source,name:fileName,path:path};}
 function extensionForMime(mime,name){if(mime==='image/jpeg')return'jpg';if(mime==='image/png')return'png';if(mime==='image/webp')return'webp';if(mime==='image/gif')return'gif';if(mime==='image/svg+xml')return'svg';const m=String(name||'').toLowerCase().match(/\.(jpg|jpeg|png|webp|gif|svg)$/);return m?(m[1]==='jpeg'?'jpg':m[1]):'jpg';}
