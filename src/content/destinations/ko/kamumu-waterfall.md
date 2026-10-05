@@ -3,7 +3,7 @@ title: "카무무 폭포"
 description: "숲속에서 만나는 시원한 폭포와 자연 수영장이 어우러진 조용한 여행지입니다."
 seoTitle: "카무무 폭포 | 방가이 제도 여행"
 seoDescription: "숲속에서 만나는 시원한 폭포와 자연 수영장이 어우러진 조용한 여행지입니다. 한국인 여행자를 위한 방가이 제도 여행 가이드입니다."
-image: "/images/Poganda-Beach-Banggai-IndonesiaJuara-Trip.webp"
+image: /images/kamumuu.jpg
 imageAlt: "카무무 폭포의 아름다운 자연 풍경, 방가이 제도 인도네시아"
 location: "Banggai"
 category: "폭포"
