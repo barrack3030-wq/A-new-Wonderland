@@ -25,7 +25,7 @@ const packages = allPackages.filter(p => p.id.startsWith(`${lang}/`));
 ---
 
 <BaseLayout 
-  title={`${t('book.title') || 'Booking Form'} | Banggai Wonderland`}
+  title={`${t('book.title') || (lang === 'ko' ? '예약 문의' : 'Booking Form')} | Banggai Wonderland`}
   description={t('book.subtitle')}
 >
   <!-- Hero Section -->
@@ -36,7 +36,7 @@ const packages = allPackages.filter(p => p.id.startsWith(`${lang}/`));
         {t('book.title') || 'Booking Form'}
       </h1>
       <p class="text-ocean-100 text-lg font-medium tracking-wide">
-        {t('book.subtitle') || 'Plan your adventure with us'}
+        {t('book.subtitle') || (lang === 'ko' ? '당신의 방가이 여행을 계획해보세요' : 'Plan your adventure with us')}
       </p>
     </div>
   </section>
@@ -56,42 +56,42 @@ const packages = allPackages.filter(p => p.id.startsWith(`${lang}/`));
           <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div>
               <label for="name" class="block text-sm font-bold text-ocean-900 mb-2">{t('book.form.name') || 'Full Name'} *</label>
-              <input type="text" id="name" required class="w-full px-5 py-3 rounded-xl border border-sand-300 focus:ring-2 focus:ring-turquoise-500 focus:border-turquoise-500 outline-none transition-all bg-sand-50/50" placeholder="John Doe">
+              <input type="text" id="name" required class="w-full px-5 py-3 rounded-xl border border-sand-300 focus:ring-2 focus:ring-turquoise-500 focus:border-turquoise-500 outline-none transition-all bg-sand-50/50" placeholder={lang === 'ko' ? '이름을 입력하세요' : 'John Doe'}>
             </div>
             
             <div>
-              <label for="country" class="block text-sm font-bold text-ocean-900 mb-2">Asal Negara / Country of Origin *</label>
+              <label for="country" class="block text-sm font-bold text-ocean-900 mb-2">{lang === 'ko' ? '국가 / 출발 국가 *' : 'Asal Negara / Country of Origin *'}</label>
               <input type="text" id="country" required class="w-full px-5 py-3 rounded-xl border border-sand-300 focus:ring-2 focus:ring-turquoise-500 focus:border-turquoise-500 outline-none transition-all bg-sand-50/50" placeholder="Indonesia">
             </div>
           </div>
 
           <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div>
-              <label for="date" class="block text-sm font-bold text-ocean-900 mb-2">Tanggal Kedatangan / Arrival Date *</label>
+              <label for="date" class="block text-sm font-bold text-ocean-900 mb-2">{lang === 'ko' ? '도착 날짜 *' : 'Tanggal Kedatangan / Arrival Date *'}</label>
               <input type="date" id="date" required class="w-full px-5 py-3 rounded-xl border border-sand-300 focus:ring-2 focus:ring-turquoise-500 focus:border-turquoise-500 outline-none transition-all bg-sand-50/50">
             </div>
             
             <div>
-              <label for="participants" class="block text-sm font-bold text-ocean-900 mb-2">Jumlah Orang / Number of People *</label>
+              <label for="participants" class="block text-sm font-bold text-ocean-900 mb-2">{lang === 'ko' ? '여행 인원 *' : 'Jumlah Orang / Number of People *'}</label>
               <input type="number" id="participants" min="1" required class="w-full px-5 py-3 rounded-xl border border-sand-300 focus:ring-2 focus:ring-turquoise-500 focus:border-turquoise-500 outline-none transition-all bg-sand-50/50" placeholder="2">
             </div>
           </div>
           
           <div class="grid grid-cols-1 gap-6">
             <div>
-              <label for="package" class="block text-sm font-bold text-ocean-900 mb-2">Pilihan Paket / Package Choice *</label>
+              <label for="package" class="block text-sm font-bold text-ocean-900 mb-2">{lang === 'ko' ? '여행 패키지 선택 *' : 'Pilihan Paket / Package Choice *'}</label>
               <select id="package" required class="w-full px-5 py-3 rounded-xl border border-sand-300 focus:ring-2 focus:ring-turquoise-500 focus:border-turquoise-500 outline-none transition-all bg-sand-50/50">
-                <option value="" disabled selected>-- Select Package --</option>
+                <option value="" disabled selected>{lang === 'ko' ? '-- 패키지 선택 --' : '-- Select Package --'}</option>
                 {packages.map(pkg => (
                   <option value={pkg.data.title}>{pkg.data.title}</option>
                 ))}
-                <option value="Custom">{t('book.package.custom') || 'Custom Package / Other'}</option>
+                <option value="Custom">{t('book.package.custom') || '{lang === 'ko' ? '맞춤 여행 / 기타' : 'Custom Package / Other'}'}</option>
               </select>
             </div>
           </div>
           
           <div>
-            <label for="notes" class="block text-sm font-bold text-ocean-900 mb-2">{t('book.form.notes') || 'Additional Notes'}</label>
+            <label for="notes" class="block text-sm font-bold text-ocean-900 mb-2">{t('book.form.notes') || '{lang === 'ko' ? '추가 요청 사항' : 'Additional Notes'}'}</label>
             <textarea id="notes" rows="4" class="w-full px-5 py-3 rounded-xl border border-sand-300 focus:ring-2 focus:ring-turquoise-500 focus:border-turquoise-500 outline-none transition-all bg-sand-50/50" placeholder="..."></textarea>
           </div>
           
