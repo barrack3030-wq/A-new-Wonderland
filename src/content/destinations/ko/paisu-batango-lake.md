@@ -3,7 +3,7 @@ title: "파이수 바탕고"
 description: "맑은 물과 독특한 해안 풍경을 가진 자연 명소로 파이수폭과 함께 둘러보기 좋습니다."
 seoTitle: "파이수 바탕고 | 방가이 제도 여행"
 seoDescription: "맑은 물과 독특한 해안 풍경을 가진 자연 명소로 파이수폭과 함께 둘러보기 좋습니다. 한국인 여행자를 위한 방가이 제도 여행 가이드입니다."
-image: "/images/Poganda-Beach-Banggai-IndonesiaJuara-Trip.webp"
+image: /images/paisu.jpg
 imageAlt: "파이수 바탕고의 아름다운 자연 풍경, 방가이 제도 인도네시아"
 location: "Luk Panenteng, Peleng"
 category: "호수"
