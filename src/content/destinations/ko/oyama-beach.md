@@ -20,6 +20,7 @@ travelTips:
   - "해상 이동 전 날씨와 파도 상태를 확인하세요."
   - "식수와 간단한 개인용품을 준비하세요."
   - "현지 환경을 깨끗하게 유지해 주세요."
+youtube: "https://www.youtube.com/watch?v=zcwUg-FHlcw"
 ---
 
 # 오야마 비치: 펠렝의 조용한 해안
