@@ -3,7 +3,7 @@ title: "파이수폭"
 description: "투명한 담수와 물속에 잠긴 나무가 만드는 독특한 풍경으로 방가이 여행의 대표 명소입니다."
 seoTitle: "파이수폭 | 방가이 제도 여행"
 seoDescription: "투명한 담수와 물속에 잠긴 나무가 만드는 독특한 풍경으로 방가이 여행의 대표 명소입니다. 한국인 여행자를 위한 방가이 제도 여행 가이드입니다."
-image: "/images/Poganda-Beach-Banggai-IndonesiaJuara-Trip.webp"
+image: /images/DSCF7073-5.webp
 imageAlt: "파이수폭의 아름다운 자연 풍경, 방가이 제도 인도네시아"
 location: "Luk Panenteng, Peleng"
 category: "호수"
