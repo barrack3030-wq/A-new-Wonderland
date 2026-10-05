@@ -66,7 +66,7 @@ const pageCopy = {
 const copy = pageCopy[lang as keyof typeof pageCopy] || pageCopy.en;
 
 const breadcrumbItems = [
-  { name: 'Home', url: `/${lang}/` },
+  { name: lang === 'ko' ? '홈' : lang === 'id' ? 'Beranda' : 'Home', url: `/${lang}/` },
   { name: copy.title, url: `/${lang}/destinations/` }
 ];
 
