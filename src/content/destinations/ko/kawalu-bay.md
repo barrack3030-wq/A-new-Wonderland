@@ -3,7 +3,7 @@ title: "카왈루 베이"
 description: "맑은 바다와 섬 풍경이 아름다운 곳으로 파이수폭 여행과 함께 방문하기 좋습니다."
 seoTitle: "카왈루 베이 | 방가이 제도 여행"
 seoDescription: "맑은 바다와 섬 풍경이 아름다운 곳으로 파이수폭 여행과 함께 방문하기 좋습니다. 한국인 여행자를 위한 방가이 제도 여행 가이드입니다."
-image: "/images/Poganda-Beach-Banggai-IndonesiaJuara-Trip.webp"
+image: /images/kawalu.webp
 imageAlt: "카왈루 베이의 아름다운 자연 풍경, 방가이 제도 인도네시아"
 location: "Pulau Peleng"
 category: "만"
