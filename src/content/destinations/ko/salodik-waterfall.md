@@ -3,7 +3,7 @@ title: "살로딕 폭포"
 description: "맑은 계곡과 열대 숲이 어우러진 루욱 인근의 대표적인 자연 명소입니다."
 seoTitle: "살로딕 폭포 | 방가이 제도 여행"
 seoDescription: "맑은 계곡과 열대 숲이 어우러진 루욱 인근의 대표적인 자연 명소입니다. 한국인 여행자를 위한 방가이 제도 여행 가이드입니다."
-image: "/images/Poganda-Beach-Banggai-IndonesiaJuara-Trip.webp"
+image: /images/images (3).jpg
 imageAlt: "살로딕 폭포의 아름다운 자연 풍경, 방가이 제도 인도네시아"
 location: "Luwuk"
 category: "폭포"
