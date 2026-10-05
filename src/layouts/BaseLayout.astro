@@ -4,6 +4,7 @@ import Footer from '../components/Footer.astro';
 import SEO from '../components/SEO.astro';
 import BookingModal from '../components/BookingModal.astro';
 import { getLangFromUrl } from '../utils/i18n';
+import KoreanChat from '../components/KoreanChat.astro';
 
 interface Props {
   title: string;
@@ -70,5 +71,6 @@ const lang = getLangFromUrl(Astro.url);
     </main>
     <Footer />
     <BookingModal />
+    {lang === 'ko' && <KoreanChat />}
   </body>
 </html>
