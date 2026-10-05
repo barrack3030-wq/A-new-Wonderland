@@ -1,8 +1,8 @@
 ---
 title: "폼폰 비치"
 description: "조용한 섬 분위기와 맑은 바다를 즐길 수 있는 자연 해변입니다."
-seoTitle: "폼폰 비치 | 방가이 제도 여행"
-seoDescription: "조용한 섬 분위기와 맑은 바다를 즐길 수 있는 자연 해변입니다. 한국인 여행자를 위한 방가이 제도 여행 가이드입니다."
+seoTitle: "폼폰 비치 여행 | 조용한 섬 해변에서 쉬어가기"
+seoDescription: "조용한 섬 분위기와 맑은 바다를 즐길 수 있는 폼폰 비치. 방가이 여행에서 여유롭게 들르기 좋은 해변 여행 정보를 소개합니다."
 image: /images/images (1).jpg
 imageAlt: "폼폰 비치의 아름다운 자연 풍경, 방가이 제도 인도네시아"
 location: "Banggai"
