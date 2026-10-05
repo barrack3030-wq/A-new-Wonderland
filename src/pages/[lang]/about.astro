@@ -125,7 +125,7 @@ const copy = {
 
 const t = copy[lang as keyof typeof copy] ?? copy.en;
 const breadcrumbItems = [
-  { name: lang === 'id' ? 'Beranda' : 'Home', url: `/${lang}/` },
+  { name: lang === 'id' ? 'Beranda' : lang === 'ko' ? '홈' : 'Home', url: `/${lang}/` },
   { name: t.title, url: `/${lang}/about/` }
 ];
 ---
