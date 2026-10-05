@@ -3,7 +3,7 @@ title: "부킷 텔레토비"
 description: "푸른 초원이 펼쳐지는 전망 좋은 언덕으로 섬 풍경을 감상하기 좋습니다."
 seoTitle: "부킷 텔레토비 | 방가이 제도 여행"
 seoDescription: "푸른 초원이 펼쳐지는 전망 좋은 언덕으로 섬 풍경을 감상하기 좋습니다. 한국인 여행자를 위한 방가이 제도 여행 가이드입니다."
-image: "/images/Poganda-Beach-Banggai-IndonesiaJuara-Trip.webp"
+image: /images/bukit teletubis.jpg
 imageAlt: "부킷 텔레토비의 아름다운 자연 풍경, 방가이 제도 인도네시아"
 location: "Banggai"
 category: "언덕"
