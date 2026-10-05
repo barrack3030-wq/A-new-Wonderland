@@ -1,0 +1,83 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Breadcrumb from '../../components/Breadcrumb.astro';
+import WhatsAppButton from '../../components/WhatsAppButton.astro';
+
+const title = '방가이 오픈 트립 2026 | 4–8명 소규모 그룹';
+const description = '한국인 여행자를 위한 방가이 오픈 트립 2026. 4–8명 소규모 그룹으로 파이수폭, 파이수 바탕고, 카왈루 베이, 포간다와 펠렝을 여행합니다.';
+const schema = {
+  '@context': 'https://schema.org',
+  '@type': 'TravelAgency',
+  name: 'Banggai Wonderland',
+  url: 'https://banggaiwonderland.my.id/',
+  description,
+  areaServed: [
+    { '@type': 'Place', name: 'Luwuk' },
+    { '@type': 'Place', name: 'Banggai Islands' },
+    { '@type': 'Place', name: 'Banggai Laut' }
+  ]
+};
+---
+<BaseLayout title={title} description={description} seoTitle={title} seoDescription={description} ogImage="/images/DSCF7073-5.webp" imageAlt="Banggai Islands travel">
+  <div class="bg-sand-50 pt-28">
+    <div class="max-w-7xl mx-auto px-5 sm:px-8 lg:px-12 py-8">
+      <Breadcrumb items={[{ name: '홈', url: '/ko/' }, { name: '방가이 오픈 트립', url: '/ko/banggai-open-trip/' }]} />
+    </div>
+    <section class="relative overflow-hidden bg-ocean-900 text-white">
+      <img src="/images/DSCF7073-5.webp" alt="파이수폭 호수" class="absolute inset-0 w-full h-full object-cover opacity-45" loading="eager" fetchpriority="high" />
+      <div class="absolute inset-0 bg-ocean-900/70"></div>
+      <div class="relative max-w-7xl mx-auto px-5 sm:px-8 lg:px-12 py-20 md:py-28">
+        <p class="text-white/70 text-xs font-bold tracking-[0.24em] uppercase mb-5">OPEN TRIP BANGGAI · 2026</p>
+        <h1 class="font-serif text-4xl sm:text-5xl md:text-7xl leading-[0.98] max-w-4xl mb-7">4–8명의 소규모 그룹으로 만나는 방가이</h1>
+        <p class="text-white/80 text-base md:text-xl leading-relaxed max-w-3xl mb-9">혼자 모든 교통과 일정을 준비하지 않아도 됩니다. 루욱에서 시작해 파이수폭과 펠렝의 주요 목적지를 소규모 그룹으로 여행합니다.</p>
+        <div class="flex flex-wrap gap-3">
+          <a href="https://wa.me/6285820830530" target="_blank" rel="noopener noreferrer" class="rounded-full bg-white text-ocean-900 px-6 py-3.5 text-sm font-semibold">출발 일정 문의 →</a>
+          <a href="/ko/banggai-travel/" class="rounded-full border border-white/25 bg-white/10 px-6 py-3.5 text-sm font-semibold">방가이 트래블</a>
+        </div>
+      </div>
+    </section>
+    <section class="bg-white py-14 md:py-20">
+      <div class="max-w-7xl mx-auto px-5 sm:px-8 lg:px-12">
+        <div class="grid md:grid-cols-4 gap-4">
+          <div class="rounded-2xl border border-sand-200 bg-sand-50 px-5 py-5"><p class="font-serif text-2xl text-ocean-900">4–8</p><p class="text-sm text-ocean-600 mt-1">그룹 인원</p></div>,<div class="rounded-2xl border border-sand-200 bg-sand-50 px-5 py-5"><p class="font-serif text-2xl text-ocean-900">Luwuk</p><p class="text-sm text-ocean-600 mt-1">주요 미팅 포인트</p></div>,<div class="rounded-2xl border border-sand-200 bg-sand-50 px-5 py-5"><p class="font-serif text-2xl text-ocean-900">Paisu Pok</p><p class="text-sm text-ocean-600 mt-1">핵심 목적지</p></div>,<div class="rounded-2xl border border-sand-200 bg-sand-50 px-5 py-5"><p class="font-serif text-2xl text-ocean-900">4가지</p><p class="text-sm text-ocean-600 mt-1">대표 여행 기간</p></div>
+        </div>
+      </div>
+    </section>
+    <section class="bg-sand-50 py-16 md:py-24">
+      <div class="max-w-5xl mx-auto px-5 sm:px-8">
+        <h2 class="font-serif text-3xl md:text-5xl text-ocean-900 mb-8">대표 프로그램</h2>
+        <div class="overflow-x-auto rounded-2xl border border-sand-200 bg-white">
+          <table class="w-full min-w-[760px] text-left border-collapse">
+            <thead class="bg-ocean-900 text-white"><tr><th class="px-5 py-4 text-sm">프로그램</th><th class="px-5 py-4 text-sm">기간</th><th class="px-5 py-4 text-sm">주요 목적지</th></tr></thead>
+            <tbody class="divide-y divide-sand-200 text-ocean-700">
+              <tr><td class="px-5 py-5 font-semibold text-ocean-900">Banggai Islands Escape</td><td class="px-5 py-5">4D3N</td><td class="px-5 py-5">Paisu Pok · Paisu Batango · Kawalu Bay · Poganda</td></tr>,<tr><td class="px-5 py-5 font-semibold text-ocean-900">Paisu Pok & Peleng</td><td class="px-5 py-5">5D4N</td><td class="px-5 py-5">핵심 코스 + Oyama · Long Beach</td></tr>,<tr><td class="px-5 py-5 font-semibold text-ocean-900">Banggai Explorer</td><td class="px-5 py-5">6D5N</td><td class="px-5 py-5">핵심 코스 + Mbuang-Mbuang · Bontolan</td></tr>,<tr><td class="px-5 py-5 font-semibold text-ocean-900">Banggai Wonderland</td><td class="px-5 py-5">7D6N+</td><td class="px-5 py-5">펠렝 · 풀라우 두아 · 루욱까지 확장</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+    <section class="bg-white py-16 md:py-24">
+      <div class="max-w-4xl mx-auto px-5 sm:px-8">
+        <h2 class="font-serif text-3xl md:text-5xl text-ocean-900 mb-7">파이수폭 코스의 핵심</h2>
+        <p class="text-ocean-600 leading-relaxed mb-5">파이수폭을 방문하는 프로그램은 한 장소만 보고 돌아오는 일정이 아닙니다. <strong class="text-ocean-900">파이수폭 → 파이수 바탕고 → 카왈루 베이 → 포간다</strong>를 하나의 여행 동선으로 묶어 이동 시간을 효율적으로 구성합니다.</p>
+        <p class="text-ocean-600 leading-relaxed">더 긴 프로그램에서는 펠렝의 오야마와 롱비치, 그리고 다른 섬과 풀라우 두아를 추가할 수 있습니다.</p>
+      </div>
+    </section>
+    <section class="bg-sand-50 py-16 md:py-24">
+      <div class="max-w-4xl mx-auto px-5 sm:px-8">
+        <h2 class="font-serif text-3xl md:text-5xl text-ocean-900 mb-8">오픈 트립 FAQ</h2>
+        <div class="space-y-3">
+          <details class="rounded-2xl bg-white border border-sand-200 px-5 py-4"><summary class="cursor-pointer list-none font-semibold text-ocean-900">최소 몇 명부터 출발하나요?</summary><p class="pt-3 text-sm text-ocean-600 leading-relaxed">기본 최소 출발 인원은 4명입니다.</p></details>,<details class="rounded-2xl bg-white border border-sand-200 px-5 py-4"><summary class="cursor-pointer list-none font-semibold text-ocean-900">최대 몇 명까지 참가하나요?</summary><p class="pt-3 text-sm text-ocean-600 leading-relaxed">한 그룹은 최대 8명으로 운영합니다.</p></details>,<details class="rounded-2xl bg-white border border-sand-200 px-5 py-4"><summary class="cursor-pointer list-none font-semibold text-ocean-900">혼자 참가할 수 있나요?</summary><p class="pt-3 text-sm text-ocean-600 leading-relaxed">가능합니다. 출발 조건이 충족되면 다른 여행자와 소규모 그룹으로 합류할 수 있습니다.</p></details>,<details class="rounded-2xl bg-white border border-sand-200 px-5 py-4"><summary class="cursor-pointer list-none font-semibold text-ocean-900">미팅 포인트는 어디인가요?</summary><p class="pt-3 text-sm text-ocean-600 leading-relaxed">주요 미팅 포인트는 루욱입니다.</p></details>,<details class="rounded-2xl bg-white border border-sand-200 px-5 py-4"><summary class="cursor-pointer list-none font-semibold text-ocean-900">모든 프로그램이 파이수폭에 가나요?</summary><p class="pt-3 text-sm text-ocean-600 leading-relaxed">이 페이지의 대표 프로그램은 파이수폭을 핵심 목적지로 포함합니다. 파이수폭 코스는 파이수 바탕고, 카왈루 베이, 포간다와 연결됩니다.</p></details>,<details class="rounded-2xl bg-white border border-sand-200 px-5 py-4"><summary class="cursor-pointer list-none font-semibold text-ocean-900">페리와 보트 일정이 확정인가요?</summary><p class="pt-3 text-sm text-ocean-600 leading-relaxed">기본 일정은 출발 전에 안내하지만 날씨, 파도와 선박 운영에 따라 현지에서 조정될 수 있습니다.</p></details>
+        </div>
+      </div>
+    </section>
+    <section class="bg-ocean-900 text-white py-20">
+      <div class="max-w-3xl mx-auto px-5 text-center">
+        <h2 class="font-serif text-4xl md:text-6xl mb-5">방가이 오픈 트립에 합류하세요</h2>
+        <p class="text-white/75 leading-relaxed mb-8">원하는 출발 날짜와 인원을 보내주시면 현재 가능한 프로그램과 좌석을 안내해 드립니다.</p>
+        <a href="https://wa.me/6285820830530" target="_blank" rel="noopener noreferrer" class="inline-flex rounded-full bg-white text-ocean-900 px-7 py-3.5 text-sm font-semibold">WhatsApp으로 일정 문의 →</a>
+      </div>
+    </section>
+  </div>
+  <WhatsAppButton />
+</BaseLayout>
