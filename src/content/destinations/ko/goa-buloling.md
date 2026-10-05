@@ -3,7 +3,7 @@ title: "불롤링 동굴"
 description: "자연 그대로의 석회암 지형과 동굴 풍경을 탐험할 수 있는 방가이의 숨은 명소입니다."
 seoTitle: "불롤링 동굴 | 방가이 제도 여행"
 seoDescription: "자연 그대로의 석회암 지형과 동굴 풍경을 탐험할 수 있는 방가이의 숨은 명소입니다. 한국인 여행자를 위한 방가이 제도 여행 가이드입니다."
-image: "/images/Poganda-Beach-Banggai-IndonesiaJuara-Trip.webp"
+image: /images/buloling_3.webp
 imageAlt: "불롤링 동굴의 아름다운 자연 풍경, 방가이 제도 인도네시아"
 location: "Banggai"
 category: "동굴"
