@@ -19,6 +19,7 @@ Add:
 - `GITHUB_REPO` = `A-new-Wonderland`
 - `GITHUB_BRANCH` = `main`
 - `CMS_ACCESS_KEY` = create your own long random password for the CMS
+- `KOREAN_CHAT_SPREADSHEET_ID` = optional; leave unset on first deployment and the chat backend will create its own private Google Sheet automatically
 
 Do not put any API key or access key into GitHub or the frontend.
 
@@ -60,3 +61,22 @@ It is intentionally not linked from the public navigation and uses `noindex,nofo
 - Languages: Indonesian, English, Spanish, French, Chinese
 - Language generation: two requests per batch to reduce TPM spikes
 - Automatic retry for HTTP 429 rate-limit responses
+
+
+## Korean travel chat
+
+The public Korean pages (`/ko/`) include a floating **한국어 여행 상담** widget. Visitors can leave a message and optionally provide:
+
+- Name
+- Kakao ID
+- Email
+
+Kakao ID is optional. Conversation messages are stored in a private Google Sheet created by the Apps Script backend. The first chat request creates the spreadsheet automatically and stores its ID in Script Properties.
+
+Admin replies are handled at:
+
+`/ko/admin-chat/`
+
+The admin page requires the existing `CMS_ACCESS_KEY`. It polls for new messages and lets the admin reply or close a conversation.
+
+**Important:** after changing `Code.gs`, deploy a **new version** of the existing Apps Script Web App deployment. The GitHub code change alone does not update the live `/exec` deployment.
