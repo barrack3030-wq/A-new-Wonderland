@@ -14,11 +14,13 @@ const { lang } = Astro.params;
 const t = useTranslations(lang as any);
 const contactSeoTitle = ({
   id: 'Kontak Banggai Wonderland | Kepulauan Banggai',
-  en: 'Contact Banggai Wonderland | Banggai Islands'
+  en: 'Contact Banggai Wonderland | Banggai Islands',
+  ko: '방가이 원더랜드 문의 | 방가이 제도 여행'
 } as Record<string, string>)[lang as string];
 const contactSeoDescription = ({
   id: 'Hubungi Banggai Wonderland untuk merencanakan private trip di Kepulauan Banggai, termasuk Luwuk, Paisu Pok, Pulo Dua, dan destinasi pulau lainnya.',
-  en: 'Contact Banggai Wonderland to plan a private trip in the Banggai Islands, including Luwuk, Paisu Pok, Pulo Dua and other island destinations.'
+  en: 'Contact Banggai Wonderland to plan a private trip in the Banggai Islands, including Luwuk, Paisu Pok, Pulo Dua and other island destinations.',
+  ko: '방가이 제도 프라이빗 여행을 계획하고 계신가요? 루욱, 파이수폭, 풀라우 두아 등 원하는 여행지를 상담해 보세요.'
 } as Record<string, string>)[lang as string];
 
 const breadcrumbItems = [
@@ -100,12 +102,12 @@ const breadcrumbItems = [
             
             <div>
               <label for="name" class="block text-sm font-bold text-ocean-900 mb-2">{t('contact.form.name')}</label>
-              <input type="text" id="name" required class="w-full px-5 py-3 rounded-xl border border-sand-300 focus:ring-2 focus:ring-turquoise-500 focus:border-turquoise-500 outline-none transition-all bg-sand-50/50" placeholder="John Doe">
+              <input type="text" id="name" required class="w-full px-5 py-3 rounded-xl border border-sand-300 focus:ring-2 focus:ring-turquoise-500 focus:border-turquoise-500 outline-none transition-all bg-sand-50/50" placeholder={lang === 'ko' ? '이름을 입력하세요' : 'John Doe'}>
             </div>
             
             <div>
               <label for="email" class="block text-sm font-bold text-ocean-900 mb-2">{t('contact.form.email')}</label>
-              <input type="email" id="email" required class="w-full px-5 py-3 rounded-xl border border-sand-300 focus:ring-2 focus:ring-turquoise-500 focus:border-turquoise-500 outline-none transition-all bg-sand-50/50" placeholder="john@example.com">
+              <input type="email" id="email" required class="w-full px-5 py-3 rounded-xl border border-sand-300 focus:ring-2 focus:ring-turquoise-500 focus:border-turquoise-500 outline-none transition-all bg-sand-50/50" placeholder={lang === 'ko' ? '이메일을 입력하세요' : 'john@example.com'}>
             </div>
             
             <div>
