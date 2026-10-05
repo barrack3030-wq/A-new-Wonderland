@@ -63,7 +63,7 @@ const labels = {
 
 const postUrl = new URL(`/${lang}/blog/${Astro.params.slug}/`, Astro.site || Astro.url.origin).href;
 const breadcrumbItems = [
-  { name: 'Home', url: `/${lang}/` },
+  { name: lang === 'ko' ? '홈' : lang === 'id' ? 'Beranda' : 'Home', url: `/${lang}/` },
   { name: t('nav.blog'), url: `/${lang}/blog/` },
   { name: entry.data.title, url: `/${lang}/blog/${Astro.params.slug}/` }
 ];
