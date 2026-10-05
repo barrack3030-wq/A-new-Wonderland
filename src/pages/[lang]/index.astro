@@ -27,7 +27,7 @@ const latestBlogs = allBlogs
 const homeSeo = {
   en: {
     title: 'Banggai Islands Travel & Private Trips | Indonesia',
-    description: 'Discover the Banggai Islands in Central Sulawesi with private trips to Paisu Pok, Piala Waterfall, Pulo Dua, Kamumu and other destinations around Luwuk and Banggai.'
+    description: 'Discover the Banggai Islands in Central Sulawesi with private trips to Paisu Pok, {lang === 'ko' ? '피알라 폭포' : 'Piala Waterfall'}, Pulo Dua, Kamumu and other destinations around Luwuk and Banggai.'
   },
   id: {
     title: 'Wisata Kepulauan Banggai & Private Trip | Banggai Wonderland',
@@ -70,7 +70,7 @@ const seo = homeSeo[lang as keyof typeof homeSeo] || homeSeo.en;
 
       <div class="bw-hero-top">
         <span>BANGGAI · INDONESIA</span>
-        <span>PRIVATE JOURNEYS</span>
+        <span>{lang === 'ko' ? '프라이빗 여행' : 'PRIVATE JOURNEYS'}</span>
       </div>
 
       <div class="bw-hero-content">
@@ -83,7 +83,7 @@ const seo = homeSeo[lang as keyof typeof homeSeo] || homeSeo.en;
         </div>
       </div>
 
-      <a href="#destinations" class="bw-scroll">SCROLL TO EXPLORE <span>↓</span></a>
+      <a href="#destinations" class="bw-scroll">{lang === 'ko' ? '여행지 둘러보기' : 'SCROLL TO EXPLORE'} <span>↓</span></a>
       <div class="bw-hero-index">01 / 05</div>
     </section>
 
@@ -91,10 +91,10 @@ const seo = homeSeo[lang as keyof typeof homeSeo] || homeSeo.en;
       <div class="bw-container">
         <div class="bw-intro-row">
           <div>
-            <p class="bw-eyebrow">THE BANGGAI ISLANDS</p>
-            <h2>Not Bali. Not Raja Ampat.<br/><em>Something quieter.</em></h2>
+            <p class="bw-eyebrow">{lang === 'ko' ? '방가이 제도' : 'THE BANGGAI ISLANDS'}</p>
+            <h2>{lang === 'ko' ? '발리도 라자 암팟도 아닌' : 'Not Bali. Not Raja Ampat.'}<br/><em>{lang === 'ko' ? '조용한 방가이를 만나보세요.' : 'Something quieter.'}</em></h2>
           </div>
-          <p class="bw-intro-copy">A different side of Indonesia: clear lagoons, quiet islands and coastal roads made for travelling slowly.</p>
+          <p class="bw-intro-copy">{lang === 'ko' ? '맑은 라군과 고요한 섬, 천천히 여행하기 좋은 열대 해안을 만나보세요.' : 'A different side of Indonesia: clear lagoons, quiet islands and coastal roads made for travelling slowly.'}</p>
         </div>
 
         {featuredDestinations.length > 0 && (
@@ -109,8 +109,8 @@ const seo = homeSeo[lang as keyof typeof homeSeo] || homeSeo.en;
         )}
 
         <div class="bw-section-footer">
-          <span>PLACES WORTH TRAVELLING FOR</span>
-          <a href={`/${lang}/destinations/`} class="bw-text-link">Explore all destinations <span>→</span></a>
+          <span>{lang === 'ko' ? '여행할 가치가 있는 곳' : 'PLACES WORTH TRAVELLING FOR'}</span>
+          <a href={`/${lang}/destinations/`} class="bw-text-link">{lang === 'ko' ? '모든 여행지 보기' : 'Explore all destinations'} <span>→</span></a>
         </div>
       </div>
     </section>
@@ -118,16 +118,16 @@ const seo = homeSeo[lang as keyof typeof homeSeo] || homeSeo.en;
     <section class="bw-proof">
       <div class="bw-container bw-proof-grid">
         <div class="bw-proof-title">
-          <p class="bw-eyebrow bw-eyebrow-light">THE PROOF</p>
-          <h2>Banggai has<br/><em>more than you think.</em></h2>
+          <p class="bw-eyebrow bw-eyebrow-light">{lang === 'ko' ? '방가이의 매력' : 'THE PROOF'}</p>
+          <h2>{lang === 'ko' ? '방가이에는' : 'Banggai has'}<br/><em>{lang === 'ko' ? '생각보다 훨씬 더 많은 곳이 있습니다.' : 'more than you think.'}</em></h2>
         </div>
         <div class="bw-stat">
           <strong>20<span>+</span></strong>
-          <p>islands, beaches,<br/>lagoons & waterfalls</p>
+          <p>{lang === 'ko' ? '개의 섬, 해변, 라군과 폭포' : 'islands, beaches,<br/>lagoons & waterfalls'}</p>
         </div>
         <div class="bw-stat">
           <strong>10</strong>
-          <p>local team members,<br/>on-ground assistance</p>
+          <p>{lang === 'ko' ? '명의 현지 팀이 현장에서 지원합니다.' : 'local team members,<br/>on-ground assistance'}</p>
         </div>
         <div class="bw-proof-services" aria-label="Trip support services">
           <div class="bw-proof-service">
@@ -161,14 +161,14 @@ const seo = homeSeo[lang as keyof typeof homeSeo] || homeSeo.en;
     <section class="bw-section bw-way">
       <div class="bw-container bw-way-grid">
         <div>
-          <p class="bw-eyebrow">THE WAY OF TRAVELING</p>
-          <h2>Travel slowly.<br/><em>See more.</em></h2>
+          <p class="bw-eyebrow">{lang === 'ko' ? '여행하는 방식' : 'THE WAY OF TRAVELING'}</p>
+          <h2>{lang === 'ko' ? '천천히 여행하고' : 'Travel slowly.'}<br/><em>{lang === 'ko' ? '더 많이 만나보세요.' : 'See more.'}</em></h2>
         </div>
         <div class="bw-way-list">
-          <div><span>01</span><strong>Slow boat</strong><p>Let the islands set the rhythm.</p></div>
-          <div><span>02</span><strong>Local stay</strong><p>Stay closer to the people and places.</p></div>
-          <div><span>03</span><strong>Flexible pace</strong><p>Less rushing. More time in each place.</p></div>
-          <div><span>04</span><strong>Private only</strong><p>A journey arranged around your trip.</p></div>
+          <div><span>01</span><strong>{lang === 'ko' ? '느린 배' : 'Slow boat'}</strong><p>{lang === 'ko' ? '섬의 리듬에 맞춰 여행하세요.' : 'Let the islands set the rhythm.'}</p></div>
+          <div><span>02</span><strong>{lang === 'ko' ? '현지 숙박' : 'Local stay'}</strong><p>{lang === 'ko' ? '현지 사람과 장소에 더 가까이 머무세요.' : 'Stay closer to the people and places.'}</p></div>
+          <div><span>03</span><strong>{lang === 'ko' ? '유연한 일정' : 'Flexible pace'}</strong><p>{lang === 'ko' ? '서두르지 않고 각 장소에서 더 오래 머뭅니다.' : 'Less rushing. More time in each place.'}</p></div>
+          <div><span>04</span><strong>{lang === 'ko' ? '프라이빗 여행' : 'Private only'}</strong><p>{lang === 'ko' ? '당신의 일정에 맞춰 여행을 설계합니다.' : 'A journey arranged around your trip.'}</p></div>
         </div>
       </div>
     </section>
@@ -177,27 +177,27 @@ const seo = homeSeo[lang as keyof typeof homeSeo] || homeSeo.en;
       <div class="bw-container">
         <div class="bw-section-heading">
           <div>
-            <p class="bw-eyebrow">PRIVATE JOURNEYS</p>
-            <h2>Choose your way<br/><em>through Banggai.</em></h2>
+            <p class="bw-eyebrow">{lang === 'ko' ? '프라이빗 여행' : 'PRIVATE JOURNEYS'}</p>
+            <h2>{lang === 'ko' ? '당신만의 방식으로' : 'Choose your way'}<br/><em>{lang === 'ko' ? '방가이를 여행하세요.' : 'through Banggai.'}</em></h2>
           </div>
-          <a href={`/${lang}/jasa-tour-luwuk-banggai/#packages`} class="bw-text-link">View all journeys <span>→</span></a>
+          <a href={`/${lang}/jasa-tour-luwuk-banggai/#packages`} class="bw-text-link">{lang === 'ko' ? '모든 여행 보기' : 'View all journeys'} <span>→</span></a>
         </div>
 
         <div class="bw-journey-grid">
           <a href={`/${lang}/packages/luwuk-stopover/`} class="bw-journey-card">
             <img src="/images/asasa.jpg" alt="Luwuk private trip" loading="lazy"/>
             <div class="bw-journey-shade"></div>
-            <div class="bw-journey-copy"><span>02 DAYS · 01 NIGHT</span><h3>Luwuk Stopover</h3><p>A short escape built around Luwuk and its coast.</p></div>
+            <div class="bw-journey-copy"><span>{lang === 'ko' ? '02일 · 01박' : '02 DAYS · 01 NIGHT'}</span><h3>Luwuk Stopover</h3><p>{lang === 'ko' ? '루욱과 해안을 중심으로 즐기는 짧은 여행.' : 'A short escape built around Luwuk and its coast.'}</p></div>
           </a>
           <a href={`/${lang}/packages/banggai-wonderland/`} class="bw-journey-card">
             <img src="/images/wonder.jpg" alt="Banggai Wonderland private trip" loading="lazy"/>
             <div class="bw-journey-shade"></div>
-            <div class="bw-journey-copy"><span>04 DAYS · 03 NIGHTS</span><h3>Banggai Wonderland</h3><p>An island journey to the places you came for.</p></div>
+            <div class="bw-journey-copy"><span>{lang === 'ko' ? '04일 · 03박' : '04 DAYS · 03 NIGHTS'}</span><h3>Banggai Wonderland</h3><p>{lang === 'ko' ? '꼭 가보고 싶은 방가이의 섬을 만나는 여행.' : 'An island journey to the places you came for.'}</p></div>
           </a>
           <a href={`/${lang}/packages/ultimate-banggai/`} class="bw-journey-card">
             <img src="/images/Gemini_Generated_Image_xxtet3xxtet3xxte (4).jpg" alt="Ultimate Banggai private trip" loading="lazy"/>
             <div class="bw-journey-shade"></div>
-            <div class="bw-journey-copy"><span>06 DAYS · 05 NIGHTS</span><h3>Ultimate Banggai</h3><p>Go deeper across the islands, without backtracking.</p></div>
+            <div class="bw-journey-copy"><span>{lang === 'ko' ? '06일 · 05박' : '06 DAYS · 05 NIGHTS'}</span><h3>Ultimate Banggai</h3><p>{lang === 'ko' ? '섬 곳곳을 더 깊이 둘러보는 여행입니다.' : 'Go deeper across the islands, without backtracking.'}</p></div>
           </a>
         </div>
       </div>
@@ -207,10 +207,10 @@ const seo = homeSeo[lang as keyof typeof homeSeo] || homeSeo.en;
       <div class="bw-container">
         <div class="bw-section-heading bw-journal-heading">
           <div>
-            <p class="bw-eyebrow bw-eyebrow-light">THE JOURNAL</p>
-            <h2>Travel deeper.</h2>
+            <p class="bw-eyebrow bw-eyebrow-light">{lang === 'ko' ? '여행 저널' : 'THE JOURNAL'}</p>
+            <h2>{lang === 'ko' ? '더 깊이 여행하세요.' : 'Travel deeper.'}</h2>
           </div>
-          <a href={`/${lang}/blog/`} class="bw-text-link bw-text-link-light">All stories <span>→</span></a>
+          <a href={`/${lang}/blog/`} class="bw-text-link bw-text-link-light">{lang === 'ko' ? '모든 이야기 보기' : 'All stories'} <span>→</span></a>
         </div>
 
         {latestBlogs.length > 0 && (
@@ -222,7 +222,7 @@ const seo = homeSeo[lang as keyof typeof homeSeo] || homeSeo.en;
                 <div class="bw-story-copy">
                   <span>{post.data.pubDate.toLocaleDateString(lang, { year: 'numeric', month: 'short', day: 'numeric' })}</span>
                   <h3>{post.data.title}</h3>
-                  <p>Read the story →</p>
+                  <p>{lang === 'ko' ? '이야기 읽기 →' : 'Read the story →'}</p>
                 </div>
               </a>
             ))}
@@ -234,16 +234,16 @@ const seo = homeSeo[lang as keyof typeof homeSeo] || homeSeo.en;
     <section class="bw-knowledge">
       <div class="bw-container bw-knowledge-grid">
         <div>
-          <p class="bw-eyebrow">PLAN WITH CONFIDENCE</p>
-          <h2>Know where<br/><em>you are going.</em></h2>
+          <p class="bw-eyebrow">{lang === 'ko' ? '여행을 자신 있게 계획하세요' : 'PLAN WITH CONFIDENCE'}</p>
+          <h2>{lang === 'ko' ? '어디로 가는지' : 'Know where'}<br/><em>{lang === 'ko' ? '미리 알아보세요.' : 'you are going.'}</em></h2>
         </div>
         <div class="bw-knowledge-copy">
-          <p>Start with our practical guides for destinations, routes and trip planning across Luwuk and the Banggai Islands.</p>
+          <p>{lang === 'ko' ? '루욱과 방가이 제도의 여행지, 이동 방법과 여행 계획을 위한 실용적인 가이드입니다.' : 'Start with our practical guides for destinations, routes and trip planning across Luwuk and the Banggai Islands.'}</p>
           <div class="bw-knowledge-links">
-            <a href={`/${lang}/destinations/paisu-pok-lake/`}>Paisu Pok guide <span>↗</span></a>
-            <a href={`/${lang}/destinations/piala-waterfall/`}>Piala Waterfall <span>↗</span></a>
-            <a href={`/${lang}/blog/`}>Banggai travel journal <span>↗</span></a>
-            <a href={`/${lang}/jasa-tour-luwuk-banggai/`}>Luwuk Banggai tour service <span>↗</span></a>
+            <a href={`/${lang}/destinations/paisu-pok-lake/`}>{lang === 'ko' ? '파이수폭 여행 가이드' : 'Paisu Pok guide'} <span>↗</span></a>
+            <a href={`/${lang}/destinations/piala-waterfall/`}>{lang === 'ko' ? '피알라 폭포' : 'Piala Waterfall'} <span>↗</span></a>
+            <a href={`/${lang}/blog/`}>{lang === 'ko' ? '방가이 여행 저널' : 'Banggai travel journal'} <span>↗</span></a>
+            <a href={`/${lang}/jasa-tour-luwuk-banggai/`}>{lang === 'ko' ? '루욱 방가이 투어 서비스' : 'Luwuk Banggai tour service'} <span>↗</span></a>
           </div>
         </div>
       </div>
@@ -252,19 +252,19 @@ const seo = homeSeo[lang as keyof typeof homeSeo] || homeSeo.en;
     <section class="bw-cta">
       <div class="bw-container bw-cta-inner">
         <p class="bw-eyebrow bw-eyebrow-light">BANGGAI WONDERLAND</p>
-        <h2>Your Banggai story<br/><em>starts here.</em></h2>
-        <p>Tell us your dates, interests and preferred pace. We will shape the route with you.</p>
+        <h2>{lang === 'ko' ? '당신의 방가이 여행은' : 'Your Banggai story'}<br/><em>{lang === 'ko' ? '여기서 시작됩니다.' : 'starts here.'}</em></h2>
+        <p>{lang === 'ko' ? '여행 날짜와 관심사, 원하는 여행 속도를 알려주세요. 함께 최적의 여행 경로를 만들어 드립니다.' : 'Tell us your dates, interests and preferred pace. We will shape the route with you.'}</p>
         <a href="https://wa.me/6285820830530" target="_blank" rel="noopener noreferrer" class="bw-button bw-button-light">{t('btn.book')} <span>→</span></a>
       </div>
     </section>
   </main>
 
   <nav class="bw-mobile-nav" aria-label="Mobile navigation">
-    <a href="#home"><span>⌂</span><small>Home</small></a>
-    <a href="#destinations"><span>◉</span><small>Places</small></a>
-    <a href="#journeys"><span>↗</span><small>Journeys</small></a>
-    <a href="#journal"><span>▤</span><small>Journal</small></a>
-    <a href="#contact"><span>→</span><small>Book</small></a>
+    <a href="#home"><span>⌂</span><small>{lang === 'ko' ? '홈' : 'Home'}</small></a>
+    <a href="#destinations"><span>◉</span><small>{lang === 'ko' ? '여행지' : 'Places'}</small></a>
+    <a href="#journeys"><span>↗</span><small>{lang === 'ko' ? '여행' : 'Journeys'}</small></a>
+    <a href="#journal"><span>▤</span><small>{lang === 'ko' ? '저널' : 'Journal'}</small></a>
+    <a href="#contact"><span>→</span><small>{lang === 'ko' ? '문의하기' : 'Book'}</small></a>
   </nav>
 
   <WhatsAppButton />
