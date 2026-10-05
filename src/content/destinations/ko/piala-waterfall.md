@@ -3,7 +3,7 @@ title: "피알라 폭포"
 description: "루욱에서 접근하기 좋은 대표적인 폭포로 열대 자연과 시원한 물줄기를 함께 즐길 수 있습니다."
 seoTitle: "피알라 폭포 | 방가이 제도 여행"
 seoDescription: "루욱에서 접근하기 좋은 대표적인 폭포로 열대 자연과 시원한 물줄기를 함께 즐길 수 있습니다. 한국인 여행자를 위한 방가이 제도 여행 가이드입니다."
-image: "/images/Poganda-Beach-Banggai-IndonesiaJuara-Trip.webp"
+image: /images/piala.jpg
 imageAlt: "피알라 폭포의 아름다운 자연 풍경, 방가이 제도 인도네시아"
 location: "Luwuk"
 category: "폭포"
