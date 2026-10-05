@@ -3,7 +3,7 @@ title: "모코카와 폭포"
 description: "열대 숲 속에서 만나는 자연 폭포로 현지의 조용한 분위기를 느낄 수 있습니다."
 seoTitle: "모코카와 폭포 | 방가이 제도 여행"
 seoDescription: "열대 숲 속에서 만나는 자연 폭포로 현지의 조용한 분위기를 느낄 수 있습니다. 한국인 여행자를 위한 방가이 제도 여행 가이드입니다."
-image: "/images/Poganda-Beach-Banggai-IndonesiaJuara-Trip.webp"
+image: /images/Air-Terjun-Mukokawa-Source-Instagram-@kulturdomestik.webp
 imageAlt: "모코카와 폭포의 아름다운 자연 풍경, 방가이 제도 인도네시아"
 location: "Banggai"
 category: "폭포"
