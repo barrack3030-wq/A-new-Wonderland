@@ -14,7 +14,7 @@ function doPost(e){try{
   const data=JSON.parse(e.postData.contents);
   if(data.action==='chatCreate')return jsonResponse({ok:true,conversation:createChatConversation(data)});
   if(data.action==='chatSend')return jsonResponse({ok:true,message:sendChatMessage(data)});
-  if(data.action==='chatGet')return jsonResponse({ok:true,conversation:getChatConversation(data)});
+  if(data.action==='chatGet'){if(data.admin===true){checkAccessKey(data.accessKey);return jsonResponse({ok:true,conversation:adminGetConversation(data)});}return jsonResponse({ok:true,conversation:getChatConversation(data)});}
   if(data.action==='chatList'){checkAccessKey(data.accessKey);return jsonResponse({ok:true,conversations:listChatConversations()});}
   if(data.action==='chatReply'){checkAccessKey(data.accessKey);return jsonResponse({ok:true,message:adminReplyChat(data)});}
   if(data.action==='chatStatus'){checkAccessKey(data.accessKey);return jsonResponse({ok:true,conversation:updateChatStatus(data)});}
@@ -94,6 +94,13 @@ function sendChatMessage(data){
 function listChatConversations(){
   const cs=chatSheet_('Conversations'),rows=cs.getDataRange().getValues().slice(1);
   return rows.reverse().filter(r=>r[0]).slice(0,100).map(r=>({conversation_id:String(r[0]),visitor_id:String(r[1]),name:String(r[2]||''),kakao_id:String(r[3]||''),email:String(r[4]||''),status:String(r[5]||'open'),created_at:new Date(r[6]).toISOString(),updated_at:new Date(r[7]).toISOString()}));
+}
+function adminGetConversation(data){
+  const id=cleanChatText_(data.conversation_id,80);
+  if(!id)throw new Error('대화를 찾을 수 없습니다.');
+  const ss=getChatSpreadsheet_(),cs=ss.getSheetByName('Conversations'),rows=cs.getDataRange().getValues(),found=rows.slice(1).find(r=>String(r[0])===id);
+  if(!found)throw new Error('대화를 찾을 수 없습니다.');
+  return{conversation_id:id,visitor_id:String(found[1]||''),name:String(found[2]||''),kakao_id:String(found[3]||''),email:String(found[4]||''),status:String(found[5]||'open'),messages:adminGetMessages_(id)};
 }
 function adminGetMessages_(id){
   const ms=chatSheet_('Messages'),rows=ms.getDataRange().getValues().slice(1);
