@@ -1,0 +1,99 @@
+---
+const endpoint='https://script.google.com/macros/s/AKfycbxGMuyFzq0K-gKIPaamp1ClFqo6zYJfNNvZfd0hxeJIJTj0N_DVPywUtkWbo5g0_F08/exec';
+---
+<div class="ko-chat-root" data-endpoint={endpoint}>
+  <button class="ko-chat-fab" type="button" aria-label="한국어 여행 상담 열기">
+    <span class="ko-chat-fab-icon">↗</span>
+    <span>여행 상담</span>
+  </button>
+  <div class="ko-chat-panel" aria-hidden="true">
+    <div class="ko-chat-head">
+      <div>
+        <strong>한국어 여행 상담</strong>
+        <small>방가이 여행에 대해 편하게 문의해 주세요.</small>
+      </div>
+      <button class="ko-chat-close" type="button" aria-label="닫기">×</button>
+    </div>
+    <div class="ko-chat-body">
+      <div class="ko-chat-intro" data-intro>
+        <strong>무엇이 궁금하세요?</strong>
+        <p>여행 일정, 이동 방법, 투어 비용, 숙소 등 궁금한 내용을 남겨주세요. 확인 후 웹에서 답변해 드립니다.</p>
+      </div>
+      <div class="ko-chat-messages" data-messages></div>
+      <div class="ko-chat-form" data-form>
+        <div class="ko-chat-fields">
+          <input data-name type="text" maxlength="100" placeholder="이름 (선택)" />
+          <input data-kakao type="text" maxlength="100" placeholder="Kakao ID (선택)" />
+        </div>
+        <input data-email type="email" maxlength="160" placeholder="이메일 (선택)" />
+        <textarea data-message maxlength="4000" placeholder="문의 내용을 입력해 주세요." rows="3"></textarea>
+        <button data-send type="button">상담 요청 보내기</button>
+        <small>※ Kakao ID는 선택사항입니다. 입력하지 않아도 상담할 수 있습니다.</small>
+        <span data-status class="ko-chat-status"></span>
+      </div>
+      <div class="ko-chat-existing" data-existing hidden>
+        <button data-new type="button">새 상담 시작</button>
+      </div>
+    </div>
+  </div>
+</div>
+<style>
+.ko-chat-root{position:fixed;right:20px;bottom:24px;z-index:120;font-family:'Plus Jakarta Sans',sans-serif}
+.ko-chat-fab{display:flex;align-items:center;gap:9px;border:0;border-radius:999px;padding:13px 17px;background:#062f3d;color:#fff;box-shadow:0 12px 35px rgba(6,47,61,.28);font-size:11px;font-weight:800;cursor:pointer}
+.ko-chat-fab-icon{width:24px;height:24px;display:grid;place-items:center;border:1px solid rgba(255,255,255,.25);border-radius:50%;font-size:12px}
+.ko-chat-panel{position:absolute;right:0;bottom:58px;width:min(390px,calc(100vw - 28px));overflow:hidden;border:1px solid rgba(6,47,61,.12);background:#fff;box-shadow:0 25px 70px rgba(6,47,61,.22);opacity:0;transform:translateY(12px) scale(.98);pointer-events:none;transition:.2s ease}
+.ko-chat-root.open .ko-chat-panel{opacity:1;transform:none;pointer-events:auto}
+.ko-chat-head{display:flex;justify-content:space-between;gap:16px;padding:19px 20px;background:#062f3d;color:#fff}
+.ko-chat-head strong{display:block;font-size:14px}.ko-chat-head small{display:block;margin-top:5px;color:rgba(255,255,255,.62);font-size:10px;line-height:1.5}
+.ko-chat-close,.ko-chat-existing button{border:0;background:transparent;color:inherit;cursor:pointer}.ko-chat-close{font-size:23px;line-height:1;padding:0 2px;color:rgba(255,255,255,.72)}
+.ko-chat-body{padding:17px}.ko-chat-intro{padding:13px 14px;background:#f4f7f6;margin-bottom:12px}.ko-chat-intro strong{font-size:12px}.ko-chat-intro p{margin:5px 0 0;color:#6c858c;font-size:10px;line-height:1.6}
+.ko-chat-messages{max-height:260px;overflow:auto;display:flex;flex-direction:column;gap:8px;margin-bottom:12px}
+.ko-chat-message{max-width:86%;padding:9px 11px;font-size:11px;line-height:1.6}.ko-chat-message.visitor{align-self:flex-end;background:#062f3d;color:#fff}.ko-chat-message.admin{align-self:flex-start;background:#eef4f3;color:#183e48}.ko-chat-message time{display:block;margin-top:4px;font-size:8px;opacity:.5}
+.ko-chat-fields{display:grid;grid-template-columns:1fr 1fr;gap:8px}.ko-chat-form input,.ko-chat-form textarea{width:100%;box-sizing:border-box;border:1px solid #d8e2e1;border-radius:0;background:#fff;color:#163c46;padding:10px 11px;margin-bottom:8px;font:inherit;font-size:11px;outline:none}.ko-chat-form textarea{resize:vertical}.ko-chat-form input:focus,.ko-chat-form textarea:focus{border-color:#628892}
+.ko-chat-form [data-send]{width:100%;border:0;background:#062f3d;color:#fff;padding:12px;cursor:pointer;font-size:11px;font-weight:800}.ko-chat-form [data-send]:disabled{opacity:.5}
+.ko-chat-form small{display:block;margin-top:8px;color:#82969a;font-size:8px;line-height:1.5}.ko-chat-status{display:block;min-height:16px;margin-top:5px;color:#6c858c;font-size:9px}.ko-chat-status.error{color:#a63d3d}.ko-chat-status.success{color:#2f7653}
+.ko-chat-existing{text-align:center;padding-top:7px}.ko-chat-existing button{font-size:10px;text-decoration:underline;color:#486a73}
+@media(max-width:767px){.ko-chat-root{right:14px;bottom:82px}.ko-chat-fab{padding:12px 14px}.ko-chat-panel{bottom:55px}.ko-chat-messages{max-height:230px}}
+</style>
+<script>
+const root=document.currentScript?.previousElementSibling?.previousElementSibling;
+if(root){
+  const endpoint=root.dataset.endpoint, fab=root.querySelector('.ko-chat-fab'), panel=root.querySelector('.ko-chat-panel'), close=root.querySelector('.ko-chat-close');
+  const messagesEl=root.querySelector('[data-messages]'), form=root.querySelector('[data-form]'), existing=root.querySelector('[data-existing]');
+  const intro=root.querySelector('[data-intro]'), nameEl=root.querySelector('[data-name]'), kakaoEl=root.querySelector('[data-kakao]'), emailEl=root.querySelector('[data-email]'), msgEl=root.querySelector('[data-message]'), send=root.querySelector('[data-send]'), statusEl=root.querySelector('[data-status]');
+  const visitorKey='bw_ko_chat_visitor_id',conversationKey='bw_ko_chat_conversation_id';
+  let visitorId=localStorage.getItem(visitorKey); if(!visitorId){visitorId=crypto.randomUUID?crypto.randomUUID():String(Date.now())+Math.random().toString(36).slice(2);localStorage.setItem(visitorKey,visitorId);}
+  let conversationId=localStorage.getItem(conversationKey),timer=null;
+  const setStatus=(text,kind='')=>{statusEl.textContent=text;statusEl.className='ko-chat-status '+kind};
+  const escapeHtml=(v)=>String(v??'').replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+  const render=(data)=>{
+    messagesEl.innerHTML=(data.messages||[]).map(m=>'<div class="ko-chat-message '+(m.sender==='admin'?'admin':'visitor')+'">'+escapeHtml(m.message).replace(/\n/g,'<br>')+'<time>'+new Date(m.created_at).toLocaleString('ko-KR')+'</time></div>').join('');
+    messagesEl.scrollTop=messagesEl.scrollHeight;
+    if((data.messages||[]).length){intro.hidden=true;}
+    if(data.status==='closed'){form.hidden=true;existing.hidden=false;}
+  };
+  const post=async payload=>{const r=await fetch(endpoint,{method:'POST',headers:{'Content-Type':'text/plain;charset=utf-8','Accept':'application/json'},body:JSON.stringify(payload),cache:'no-store'});const d=await r.json();if(!d.ok)throw new Error(d.error||'요청을 처리할 수 없습니다.');return d;};
+  const load=async()=>{
+    if(!conversationId)return;
+    try{const d=await post({action:'chatGet',language:'ko',visitor_id:visitorId,conversation_id:conversationId});render(d.conversation);}
+    catch(e){localStorage.removeItem(conversationKey);conversationId=null;}
+  };
+  fab.addEventListener('click',()=>{root.classList.toggle('open');panel.setAttribute('aria-hidden',root.classList.contains('open')?'false':'true');if(root.classList.contains('open'))load();});
+  close.addEventListener('click',()=>root.classList.remove('open'));
+  send.addEventListener('click',async()=>{
+    const message=msgEl.value.trim(); if(!message)return setStatus('문의 내용을 입력해 주세요.','error');
+    send.disabled=true;setStatus('전송 중…');
+    try{
+      let d;
+      if(!conversationId)d=await post({action:'chatCreate',language:'ko',visitor_id:visitorId,name:nameEl.value,kakao_id:kakaoEl.value,email:emailEl.value,message,website:''});
+      else d=await post({action:'chatSend',language:'ko',visitor_id:visitorId,conversation_id:conversationId,message,website:''});
+      if(d.conversation?.conversation_id)conversationId=d.conversation.conversation_id;
+      if(d.conversation_id)conversationId=d.conversation_id;
+      localStorage.setItem(conversationKey,conversationId);msgEl.value='';setStatus('문의가 접수되었습니다. 답변을 확인해 주세요.','success');await load();
+    }catch(e){setStatus(e.message||'전송에 실패했습니다.','error');}finally{send.disabled=false;}
+  });
+  root.querySelector('[data-new]').addEventListener('click',()=>{localStorage.removeItem(conversationKey);conversationId=null;messagesEl.innerHTML='';intro.hidden=false;form.hidden=false;existing.hidden=true;nameEl.value='';kakaoEl.value='';emailEl.value='';msgEl.value='';setStatus('');});
+  load();timer=setInterval(()=>{if(root.classList.contains('open'))load();},5000);
+  window.addEventListener('beforeunload',()=>clearInterval(timer));
+}
+</script>
