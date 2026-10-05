@@ -58,7 +58,8 @@ const labels = {
   es: { recommended: 'Artículos Recomendados', related: 'Destinos Relacionados', allDestinations: 'Ver Todos los Destinos', moreArticles: 'Más Artículos', tourService: '¿Planeas un viaje desde Luwuk? Ver nuestros servicios de tour' },
   fr: { recommended: 'Articles Recommandés', related: 'Destinations Associées', allDestinations: 'Voir Toutes les Destinations', moreArticles: 'Plus d’Articles', tourService: 'Vous planifiez un voyage depuis Luwuk ? Voir nos services de tour' },
   zh: { recommended: '推荐文章', related: '相关目的地', allDestinations: '查看所有目的地', moreArticles: '更多文章', tourService: '计划从 Luwuk 出发旅行？查看邦盖旅游服务' },
-}[lang as 'id' | 'en' | 'es' | 'fr' | 'zh'] || { recommended: 'Recommended Articles', related: 'Related Destinations', allDestinations: 'View All Destinations', moreArticles: 'More Articles', tourService: 'Planning a trip from Luwuk? Explore our Luwuk Banggai tour services' };
+  ko: { recommended: '추천 기사', related: '관련 목적지', allDestinations: '모든 목적지 보기', moreArticles: '다른 기사 보기', tourService: '루욱에서 방가이 여행을 계획하고 계신가요? 투어 서비스를 확인해 보세요.' },
+}[lang as 'id' | 'en' | 'es' | 'fr' | 'zh' | 'ko'] || { recommended: 'Recommended Articles', related: 'Related Destinations', allDestinations: 'View All Destinations', moreArticles: 'More Articles', tourService: 'Planning a trip from Luwuk? Explore our Luwuk Banggai tour services' };
 
 const postUrl = new URL(`/${lang}/blog/${Astro.params.slug}/`, Astro.site || Astro.url.origin).href;
 const breadcrumbItems = [
@@ -110,7 +111,7 @@ const schema = {
           <div class="mt-8 rounded-3xl border border-turquoise-100 bg-turquoise-50 p-6 md:p-7">
             <p class="text-xs font-bold uppercase tracking-[0.18em] text-turquoise-700 mb-3">Banggai Wonderland</p>
             <p class="text-sm md:text-base leading-relaxed text-ocean-700 mb-4">{labels.tourService}</p>
-            <a href={`/${lang}/jasa-tour-luwuk-banggai/`} class="inline-flex items-center rounded-full bg-ocean-900 text-white px-5 py-3 text-sm font-semibold hover:bg-ocean-800 transition-colors">{lang === 'id' ? 'Lihat Jasa Tour' : lang === 'es' ? 'Ver servicios' : lang === 'fr' ? 'Voir les services' : lang === 'zh' ? '查看服务' : 'View tour services'} →</a>
+            <a href={`/${lang}/jasa-tour-luwuk-banggai/`} class="inline-flex items-center rounded-full bg-ocean-900 text-white px-5 py-3 text-sm font-semibold hover:bg-ocean-800 transition-colors">{lang === 'id' ? 'Lihat Jasa Tour' : lang === 'es' ? 'Ver servicios' : lang === 'fr' ? 'Voir les services' : lang === 'zh' ? '查看服务' : lang === 'ko' ? '투어 서비스 보기' : 'View tour services'} →</a>
           </div>
           <div class="mt-12 text-center"><a href={`/${lang}/blog/`} class="inline-flex items-center text-ocean-900 font-bold hover:text-turquoise-600 transition-colors">← {t('blog.back')}</a></div>
         </main>
