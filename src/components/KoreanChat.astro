@@ -55,7 +55,7 @@ const endpoint='https://script.google.com/macros/s/AKfycbxGMuyFzq0K-gKIPaamp1ClF
 .ko-chat-existing{text-align:center;padding-top:7px}.ko-chat-existing button{font-size:10px;text-decoration:underline;color:#486a73}
 @media(max-width:767px){.ko-chat-root{right:14px;bottom:82px}.ko-chat-fab{padding:12px 14px}.ko-chat-panel{bottom:55px}.ko-chat-messages{max-height:230px}}
 </style>
-<script>
+<script is:inline>
 const root=document.currentScript?.previousElementSibling?.previousElementSibling;
 if(root){
   const endpoint=root.dataset.endpoint, fab=root.querySelector('.ko-chat-fab'), panel=root.querySelector('.ko-chat-panel'), close=root.querySelector('.ko-chat-close');
