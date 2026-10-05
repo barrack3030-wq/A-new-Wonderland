@@ -3,7 +3,7 @@ title: "라우마랑 폭포"
 description: "울창한 자연 속에서 폭포와 계곡의 풍경을 즐길 수 있는 조용한 명소입니다."
 seoTitle: "라우마랑 폭포 | 방가이 제도 여행"
 seoDescription: "울창한 자연 속에서 폭포와 계곡의 풍경을 즐길 수 있는 조용한 명소입니다. 한국인 여행자를 위한 방가이 제도 여행 가이드입니다."
-image: "/images/Poganda-Beach-Banggai-IndonesiaJuara-Trip.webp"
+image: /images/images.jpg
 imageAlt: "라우마랑 폭포의 아름다운 자연 풍경, 방가이 제도 인도네시아"
 location: "Banggai"
 category: "폭포"
