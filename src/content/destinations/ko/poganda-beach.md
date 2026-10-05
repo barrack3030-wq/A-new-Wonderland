@@ -3,7 +3,7 @@ title: "포간다 비치"
 description: "긴 백사장과 맑은 터키색 바다가 펼쳐진 해변으로 파이수폭 여행과 함께 방문하기 좋습니다."
 seoTitle: "포간다 비치 | 방가이 제도 여행"
 seoDescription: "긴 백사장과 맑은 터키색 바다가 펼쳐진 해변으로 파이수폭 여행과 함께 방문하기 좋습니다. 한국인 여행자를 위한 방가이 제도 여행 가이드입니다."
-image: "/images/Poganda-Beach-Banggai-IndonesiaJuara-Trip.webp"
+image: /images/Poganda-Beach-Banggai-IndonesiaJuara-Trip.webp
 imageAlt: "포간다 비치의 아름다운 자연 풍경, 방가이 제도 인도네시아"
 location: "Luk Panenteng, Peleng"
 category: "해변"
