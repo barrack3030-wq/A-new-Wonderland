@@ -134,25 +134,25 @@ const seo = homeSeo[lang as keyof typeof homeSeo] || homeSeo.en;
             <span class="bw-proof-icon" aria-hidden="true">
               <svg viewBox="0 0 24 24"><path d="M7 9h10M5 10l2-2 1-3m11 5-2-2-1-3M9 13v3m6-3v3M6 9v4m12-4v4M9 16h6l1 3H8l1-3Z"/></svg>
             </span>
-            <span>Drone</span>
+            <span>{lang === 'ko' ? '드론' : 'Drone'}</span>
           </div>
           <div class="bw-proof-service">
             <span class="bw-proof-icon" aria-hidden="true">
               <svg viewBox="0 0 24 24"><path d="M5 15h14l-1.5-6H6.5L5 15Z"/><path d="M8 9l1.4-3h5.2L16 9M7 15v2m10-2v2"/><circle cx="8" cy="17" r="1.5"/><circle cx="16" cy="17" r="1.5"/></svg>
             </span>
-            <span>Car</span>
+            <span>{lang === 'ko' ? '차량' : 'Car'}</span>
           </div>
           <div class="bw-proof-service">
             <span class="bw-proof-icon" aria-hidden="true">
               <svg viewBox="0 0 24 24"><path d="M3 15h18l-2 4H6l-3-4Z"/><path d="M7 15V8h6l3 3v4M8 11h7"/><path d="M9 19v2m6-2v2"/></svg>
             </span>
-            <span>Boat</span>
+            <span>{lang === 'ko' ? '보트' : 'Boat'}</span>
           </div>
           <div class="bw-proof-service">
             <span class="bw-proof-icon" aria-hidden="true">
               <svg viewBox="0 0 24 24"><path d="M5 16h14l-1.5-3H6.5L5 16Z"/><path d="M8 13V7h8v6M10 7V4h4v3"/><path d="M3 19c1.5-1 3-1 4.5 0s3 1 4.5 0 3-1 4.5 0 3 1 4.5 0"/></svg>
             </span>
-            <span>Ferry</span>
+            <span>{lang === 'ko' ? '페리' : 'Ferry'}</span>
           </div>
         </div>
       </div>
