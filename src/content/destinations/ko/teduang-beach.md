@@ -3,7 +3,7 @@ title: "테두앙 비치"
 description: "맑은 바다와 섬 특유의 여유로운 분위기를 즐길 수 있는 조용한 해변입니다."
 seoTitle: "테두앙 비치 | 방가이 제도 여행"
 seoDescription: "맑은 바다와 섬 특유의 여유로운 분위기를 즐길 수 있는 조용한 해변입니다. 한국인 여행자를 위한 방가이 제도 여행 가이드입니다."
-image: "/images/Poganda-Beach-Banggai-IndonesiaJuara-Trip.webp"
+image: /images/images (4).jpg
 imageAlt: "테두앙 비치의 아름다운 자연 풍경, 방가이 제도 인도네시아"
 location: "Banggai"
 category: "해변"
