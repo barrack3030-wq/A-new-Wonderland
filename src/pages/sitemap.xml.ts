@@ -36,7 +36,7 @@ export async function GET() {
 
     if (lang === 'id' || lang === 'ko') {
       for (const page of localizedLandingPages) {
-        urls.add(`${site}/id/${page}`);
+        urls.add(`${site}/${lang}/${page}`);
       }
     }
   }
