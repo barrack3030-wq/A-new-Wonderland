@@ -67,7 +67,7 @@ const youtubeUrl = entry.data.youtube;
 const youtubeId = youtubeUrl?.match(/(?:youtube\.com\/watch\?v=|youtu\.be\/|youtube\.com\/embed\/)([^&?/]+)/)?.[1] || null;
 
 const breadcrumbItems = [
-  { name: 'Home', url: `/${lang}/` },
+  { name: lang === 'ko' ? '홈' : lang === 'id' ? 'Beranda' : 'Home', url: `/${lang}/` },
   { name: t('nav.destinations'), url: `/${lang}/destinations/` },
   { name: entry.data.title, url: `/${lang}/destinations/${slug}/` }
 ];
