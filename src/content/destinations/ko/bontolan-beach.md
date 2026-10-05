@@ -1,8 +1,8 @@
 ---
 title: "본톨란 비치"
 description: "하얀 모래와 맑은 바다를 만날 수 있는 방가이 섬의 한적한 해변입니다."
-seoTitle: "본톨란 비치 | 방가이 제도 여행"
-seoDescription: "하얀 모래와 맑은 바다를 만날 수 있는 방가이 섬의 한적한 해변입니다. 한국인 여행자를 위한 방가이 제도 여행 가이드입니다."
+seoTitle: "본톨란 비치 여행 | 방가이 섬의 한적한 해변"
+seoDescription: "하얀 모래와 맑은 바다가 어우러진 본톨란 비치. 방가이 섬에서 조용한 해변을 찾는 여행자를 위한 여행 정보를 소개합니다."
 image: /images/bontolan.jpg
 imageAlt: "본톨란 비치의 아름다운 자연 풍경, 방가이 제도 인도네시아"
 location: "Pulau Banggai"
