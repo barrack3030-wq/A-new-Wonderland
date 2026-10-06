@@ -12,7 +12,7 @@ interface Props {
   schema?: any;
 }
 
-const { title, description, seoTitle, seoDescription, ogImage = '/images/og-default.jpg', imageAlt, schema } = Astro.props;
+const { title, description, seoTitle, seoDescription, ogImage = '/images/Poganda-Beach-Banggai-IndonesiaJuara-Trip.webp', imageAlt, schema } = Astro.props;
 // Canonical production origin: keep every canonical, hreflang, OG URL, and schema URL on the same non-www host.
 const siteUrl = new URL('https://banggaiwonderland.my.id');
 const normalizedPath = Astro.url.pathname.endsWith('/') ? Astro.url.pathname : `${Astro.url.pathname}/`;
@@ -68,6 +68,13 @@ if (!section) {
   alternateLinks = [{ lang: currentLangCode, href: currentUrl }];
 } else if (!contentSections.includes(section)) {
   alternateLinks = Object.keys(languages).map(langCode => ({ lang: langCode, href: new URL(`/${langCode}/${pathParts.slice(1).join('/')}/`, siteUrl).href }));
+} else if (contentSections.includes(section) && pathParts.length === 2) {
+  // Listing pages (/destinations/, /packages/, /blog/) have no collection entry.
+  // Give each language listing its own hreflang instead of dropping alternates.
+  alternateLinks = Object.keys(languages).map(langCode => ({
+    lang: langCode,
+    href: new URL(`/${langCode}/${section}/`, siteUrl).href
+  }));
 } else {
   let entries: any[] = [];
   if (section === 'destinations') entries = await getCollection('destinations');
