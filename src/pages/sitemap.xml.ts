@@ -20,6 +20,10 @@ const localizedLandingPages = [
   'banggai-open-trip/'
 ];
 
+const additionalKoreanPages = [
+  'paisu-pok/'
+];
+
 export async function GET() {
   const destinations = await getCollection('destinations');
   const packages = await getCollection('packages');
@@ -36,6 +40,12 @@ export async function GET() {
 
     if (lang === 'id' || lang === 'ko') {
       for (const page of localizedLandingPages) {
+        urls.add(`${site}/${lang}/${page}`);
+      }
+    }
+
+    if (lang === 'ko') {
+      for (const page of additionalKoreanPages) {
         urls.add(`${site}/${lang}/${page}`);
       }
     }
