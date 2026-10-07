@@ -42,7 +42,6 @@ tags:
 
 ## 오야마 비치, 방가이에서 만나는 조용한 해변
 
-image_group{"layout":"carousel","aspect_ratio":"16:9","query":["Oyama Beach Banggai Indonesia"]}
 
 이번 여행의 대표적인 장소로 소개하고 싶은 곳은 **오야마 비치(Oyama Beach)**입니다.
 
