@@ -67,7 +67,7 @@ if (!section) {
   // These SEO landing pages are maintained per language. Only emit a self hreflang until matching translations exist.
   alternateLinks = [{ lang: hreflangMap[currentLangCode] || currentLangCode, href: currentUrl }];
 } else if (!contentSections.includes(section)) {
-  alternateLinks = Object.keys(languages).map(langCode => ({ lang: langCode, href: new URL(`/${langCode}/${pathParts.slice(1).join('/')}/`, siteUrl).href }));
+  alternateLinks = Object.keys(languages).map(langCode => ({ lang: hreflangMap[langCode] || langCode, href: new URL(`/${langCode}/${pathParts.slice(1).join('/')}/`, siteUrl).href }));
 } else if (contentSections.includes(section) && pathParts.length === 2) {
   // Listing pages (/destinations/, /packages/, /blog/) have no collection entry.
   // Give each language listing its own hreflang instead of dropping alternates.
@@ -116,7 +116,7 @@ const baseSchema = {
 };
 const websiteSchema = { '@context': 'https://schema.org', '@type': 'WebSite', name: 'Banggai Wonderland', url: siteUrl.href, inLanguage: hreflangMap[currentLangCode] || currentLangCode };
 const finalSchema = schema ? [baseSchema, websiteSchema, schema] : [baseSchema, websiteSchema];
-const defaultLink = alternateLinks.find(link => link.lang === 'en') || alternateLinks.find(link => link.lang === 'id');
+const defaultLink = alternateLinks.find(link => link.lang === (hreflangMap.en || 'en')) || alternateLinks.find(link => link.lang === (hreflangMap.id || 'id'));
 ---
 <title>{effectiveSeoTitle}</title>
 <meta name="description" content={effectiveDescription} />
