@@ -1,5 +1,8 @@
 export function GET() {
   const body = [
+    'User-agent: Baiduspider',
+    'Allow: /',
+    '',
     'User-agent: *',
     'Allow: /',
     'Disallow: /admin/',
