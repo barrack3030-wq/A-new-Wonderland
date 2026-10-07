@@ -62,17 +62,17 @@ const manualBlogTranslationKeys: Record<string, string> = {
 };
 
 if (!section) {
-  alternateLinks = Object.keys(languages).map(langCode => ({ lang: langCode, href: new URL(`/${langCode}/`, siteUrl).href }));
+  alternateLinks = Object.keys(languages).map(langCode => ({ lang: hreflangMap[langCode] || langCode, href: new URL(`/${langCode}/`, siteUrl).href }));
 } else if (localizedLandingSections.includes(section)) {
   // These SEO landing pages are maintained per language. Only emit a self hreflang until matching translations exist.
-  alternateLinks = [{ lang: currentLangCode, href: currentUrl }];
+  alternateLinks = [{ lang: hreflangMap[currentLangCode] || currentLangCode, href: currentUrl }];
 } else if (!contentSections.includes(section)) {
   alternateLinks = Object.keys(languages).map(langCode => ({ lang: langCode, href: new URL(`/${langCode}/${pathParts.slice(1).join('/')}/`, siteUrl).href }));
 } else if (contentSections.includes(section) && pathParts.length === 2) {
   // Listing pages (/destinations/, /packages/, /blog/) have no collection entry.
   // Give each language listing its own hreflang instead of dropping alternates.
   alternateLinks = Object.keys(languages).map(langCode => ({
-    lang: langCode,
+    lang: hreflangMap[langCode] || langCode,
     href: new URL(`/${langCode}/${section}/`, siteUrl).href
   }));
 } else {
@@ -102,18 +102,19 @@ if (!section) {
       });
       if (!match) return null;
       const [, ...slugParts] = match.slug.split('/');
-      return { lang: langCode, href: new URL(`/${langCode}/${section}/${slugParts.join('/')}/`, siteUrl).href };
+      return { lang: hreflangMap[langCode] || langCode, href: new URL(`/${langCode}/${section}/${slugParts.join('/')}/`, siteUrl).href };
     }).filter(Boolean) as { lang: string; href: string }[];
   }
 }
 
 const localeMap: Record<string, string> = { id: 'id_ID', en: 'en_US', es: 'es_ES', fr: 'fr_FR', zh: 'zh_CN', ko: 'ko_KR' };
+const hreflangMap: Record<string, string> = { id: 'id-ID', en: 'en', es: 'es', fr: 'fr', zh: 'zh-CN', ko: 'ko-KR' };
 const baseSchema = {
   '@context': 'https://schema.org', '@type': 'TravelAgency', name: 'Banggai Wonderland',
   image: new URL('/images/logo.png', siteUrl).href, '@id': siteUrl.href, url: siteUrl.href,
   telephone: '+6285820830530', description: 'Travel experiences and private trips in Banggai Islands, Indonesia.', mainEntityOfPage: currentUrl
 };
-const websiteSchema = { '@context': 'https://schema.org', '@type': 'WebSite', name: 'Banggai Wonderland', url: siteUrl.href, inLanguage: currentLangCode };
+const websiteSchema = { '@context': 'https://schema.org', '@type': 'WebSite', name: 'Banggai Wonderland', url: siteUrl.href, inLanguage: hreflangMap[currentLangCode] || currentLangCode };
 const finalSchema = schema ? [baseSchema, websiteSchema, schema] : [baseSchema, websiteSchema];
 const defaultLink = alternateLinks.find(link => link.lang === 'en') || alternateLinks.find(link => link.lang === 'id');
 ---
@@ -132,7 +133,7 @@ const defaultLink = alternateLinks.find(link => link.lang === 'en') || alternate
 <meta property="og:image:alt" content={finalImageAlt} />
 <meta property="og:site_name" content="Banggai Wonderland" />
 <meta property="og:locale" content={localeMap[currentLangCode] || 'en_US'} />
-{alternateLinks.filter(link => link.lang !== currentLangCode).map(link => <meta property="og:locale:alternate" content={localeMap[link.lang] || link.lang} />)}
+{alternateLinks.filter(link => link.lang !== (hreflangMap[currentLangCode] || currentLangCode)).map(link => <meta property="og:locale:alternate" content={localeMap[link.lang] || link.lang} />)}
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:url" content={currentUrl} />
 <meta name="twitter:title" content={effectiveSeoTitle} />
