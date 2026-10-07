@@ -38,6 +38,7 @@ const effectiveDescription = seoDescription || (isHomepage ? homepageSeo[current
 const finalImageAlt = imageAlt || effectiveSeoTitle;
 
 let alternateLinks: { lang: string; href: string }[] = [];
+const hreflangMap: Record<string, string> = { id: 'id-ID', en: 'en', es: 'es', fr: 'fr', zh: 'zh-CN', ko: 'ko-KR' };
 const contentSections = ['destinations', 'packages', 'blog'];
 const localizedLandingSections = ['banggai-travel', 'banggai-trip', 'banggai-open-trip'];
 
@@ -108,7 +109,6 @@ if (!section) {
 }
 
 const localeMap: Record<string, string> = { id: 'id_ID', en: 'en_US', es: 'es_ES', fr: 'fr_FR', zh: 'zh_CN', ko: 'ko_KR' };
-const hreflangMap: Record<string, string> = { id: 'id-ID', en: 'en', es: 'es', fr: 'fr', zh: 'zh-CN', ko: 'ko-KR' };
 const baseSchema = {
   '@context': 'https://schema.org', '@type': 'TravelAgency', name: 'Banggai Wonderland',
   image: new URL('/images/logo.png', siteUrl).href, '@id': siteUrl.href, url: siteUrl.href,
