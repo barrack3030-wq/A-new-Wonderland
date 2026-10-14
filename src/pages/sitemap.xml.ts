@@ -3,11 +3,10 @@ import { getCollection } from 'astro:content';
 const site = 'https://banggaiwonderland.my.id';
 const languages = ['id', 'en', 'es', 'fr', 'zh', 'ko'];
 
+// Only include universal static pages here. Collection archives are added below
+// only for languages that actually have content, avoiding empty archive URLs.
 const staticPages = [
   'about/',
-  'destinations/',
-  'packages/',
-  'blog/',
   'gallery/',
   'book/',
   'contact/',
@@ -18,10 +17,6 @@ const localizedLandingPages = [
   'banggai-travel/',
   'banggai-trip/',
   'banggai-open-trip/'
-];
-
-const additionalKoreanPages = [
-  'paisu-pok/'
 ];
 
 export async function GET() {
@@ -45,9 +40,17 @@ export async function GET() {
     }
 
     if (lang === 'ko') {
-      for (const page of additionalKoreanPages) {
-        urls.add(`${site}/${lang}/${page}`);
-      }
+      urls.add(`${site}/ko/paisu-pok/`);
+    }
+
+    if (destinations.some(entry => entry.slug.startsWith(`${lang}/`))) {
+      urls.add(`${site}/${lang}/destinations/`);
+    }
+    if (packages.some(entry => entry.slug.startsWith(`${lang}/`))) {
+      urls.add(`${site}/${lang}/packages/`);
+    }
+    if (blog.some(entry => entry.slug.startsWith(`${lang}/`))) {
+      urls.add(`${site}/${lang}/blog/`);
     }
   }
 
