@@ -10,9 +10,10 @@ interface Props {
   ogImage?: string;
   imageAlt?: string;
   schema?: any;
+  noIndex?: boolean;
 }
 
-const { title, description, seoTitle, seoDescription, ogImage = '/images/Poganda-Beach-Banggai-IndonesiaJuara-Trip.webp', imageAlt, schema } = Astro.props;
+const { title, description, seoTitle, seoDescription, ogImage = '/images/Poganda-Beach-Banggai-IndonesiaJuara-Trip.webp', imageAlt, schema, noIndex = false } = Astro.props;
 // Canonical production origin: keep every canonical, hreflang, OG URL, and schema URL on the same non-www host.
 const siteUrl = new URL('https://banggaiwonderland.my.id');
 const normalizedPath = Astro.url.pathname.endsWith('/') ? Astro.url.pathname : `${Astro.url.pathname}/`;
@@ -22,6 +23,7 @@ const currentLangCode = pathParts[0] && Object.keys(languages).includes(pathPart
 const section = pathParts[1] || '';
 // Booking query parameters only prefill the form; they are not separate SEO pages.
 const isParameterizedBookingUrl = section === 'book' && Astro.url.searchParams.toString().length > 0;
+const shouldNoIndex = noIndex || isParameterizedBookingUrl;
 
 const homepageSeo: Record<string, { title: string; description: string }> = {
   en: { title: 'Banggai Islands Travel Guide & Private Trips | Banggai Wonderland', description: 'Discover the Banggai Islands in Central Sulawesi with private trips to Paisu Pok, Piala Waterfall, Pulo Dua, Kamumu and other hidden destinations around Luwuk and Banggai.' },
@@ -64,15 +66,20 @@ const manualBlogTranslationKeys: Record<string, string> = {
 
 if (!section) {
   alternateLinks = Object.keys(languages).map(langCode => ({ lang: hreflangMap[langCode] || langCode, href: new URL(`/${langCode}/`, siteUrl).href }));
-} else if (localizedLandingSections.includes(section)) {
+} else if (localizedLandingSections.includes(section) || section === 'paisu-pok') {
   // These SEO landing pages are maintained per language. Only emit a self hreflang until matching translations exist.
   alternateLinks = [{ lang: hreflangMap[currentLangCode] || currentLangCode, href: currentUrl }];
 } else if (!contentSections.includes(section)) {
   alternateLinks = Object.keys(languages).map(langCode => ({ lang: hreflangMap[langCode] || langCode, href: new URL(`/${langCode}/${pathParts.slice(1).join('/')}/`, siteUrl).href }));
 } else if (contentSections.includes(section) && pathParts.length === 2) {
-  // Listing pages (/destinations/, /packages/, /blog/) have no collection entry.
-  // Give each language listing its own hreflang instead of dropping alternates.
-  alternateLinks = Object.keys(languages).map(langCode => ({
+  // Only declare language alternates for archive pages that contain entries in that language.
+  const archiveEntries = section === 'destinations'
+    ? await getCollection('destinations')
+    : section === 'packages'
+      ? await getCollection('packages')
+      : await getCollection('blog');
+  const availableLanguages = new Set(archiveEntries.map(entry => entry.slug.split('/')[0]));
+  alternateLinks = Object.keys(languages).filter(langCode => availableLanguages.has(langCode)).map(langCode => ({
     lang: hreflangMap[langCode] || langCode,
     href: new URL(`/${langCode}/${section}/`, siteUrl).href
   }));
@@ -120,7 +127,7 @@ const defaultLink = alternateLinks.find(link => link.lang === (hreflangMap.en ||
 ---
 <title>{effectiveSeoTitle}</title>
 <meta name="description" content={effectiveDescription} />
-<meta name="robots" content={isParameterizedBookingUrl ? 'noindex, follow' : 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1'} />
+<meta name="robots" content={shouldNoIndex ? 'noindex, follow' : 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1'} />
 <meta name="author" content="Banggai Wonderland" />
 <link rel="canonical" href={currentUrl} />
 {alternateLinks.map(link => <link rel="alternate" hreflang={link.lang} href={link.href} />)}
