@@ -24,7 +24,7 @@ Luwuk是探索Central Sulawesi的Banggai海岸与岛屿的实用起点。游客�
 
 ![Poganda Beach的白沙和清澈海水](https://theworldtravelguy.com/wp-content/uploads/2024/01/DSCF7131.jpg)
 
-*图片来源：[Nomad Archipelago — Banggai浮潜](https://nomadarchipelago.com/banggai-cruises/)。商业使用授权需要另行确认。*
+*图片来源：[The World Travel Guy — Banggai Islands](https://theworldtravelguy.com/banggai-islands-luwuk-indonesia/)。商业使用授权需要另行确认。*
 
 Peleng Island上的Poganda Beach以白沙和浅而清澈的海水闻名。一份Banggai旅行指南提到近岸有珊瑚礁，但能见度与海况仍受天气、潮汐和当地情况影响。
 
@@ -44,7 +44,7 @@ Balantak地区的Pulo Dua拥有岛屿景观、海滩和海洋环境，适合安�
 
 ![Oyama Beach的蓝色海水和热带海岸](https://theworldtravelguy.com/wp-content/uploads/2023/12/DJI_0190.jpg)
 
-*图片来源：[Nomad Archipelago — Banggai浮潜](https://nomadarchipelago.com/banggai-cruises/)。商业使用授权需要另行确认。*
+*图片来源：[The World Travel Guy — Banggai Islands](https://theworldtravelguy.com/banggai-islands-luwuk-indonesia/)。商业使用授权需要另行确认。*
 
 Oyama Beach适合希望享受较安静海岸风景的旅行者。若打算以浮潜为主要活动，请先向当地向导确认入水点是否安全、水下能见度是否合适。当地设施和交通可能有限，建议提前安排。
 
