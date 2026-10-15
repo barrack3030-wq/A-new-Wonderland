@@ -24,7 +24,7 @@ Luwuk est un point de départ pratique pour découvrir les côtes et les îles d
 
 ![Sable blanc et eau claire à Poganda Beach](https://theworldtravelguy.com/wp-content/uploads/2024/01/DSCF7131.jpg)
 
-*Photo : [Nomad Archipelago — snorkeling à Banggai](https://nomadarchipelago.com/banggai-cruises/). Les droits d’utilisation commerciale doivent être vérifiés.*
+*Photo : [The World Travel Guy — Banggai Islands](https://theworldtravelguy.com/banggai-islands-luwuk-indonesia/). Les droits d’utilisation commerciale doivent être vérifiés.*
 
 Sur l’île de Peleng, Poganda Beach est connue pour son sable blanc et ses eaux côtières peu profondes. Un guide de voyage consacré à Banggai mentionne des récifs près du rivage, mais la visibilité et les conditions dépendent de la météo, des marées et de la situation locale.
 
@@ -44,7 +44,7 @@ Toutes les côtes de l’île ne conviennent pas forcément au snorkeling. Deman
 
 ![Mer bleue et littoral tropical à Oyama Beach](https://theworldtravelguy.com/wp-content/uploads/2023/12/DJI_0190.jpg)
 
-*Photo : [Nomad Archipelago — snorkeling à Banggai](https://nomadarchipelago.com/banggai-cruises/). Les droits d’utilisation commerciale doivent être vérifiés.*
+*Photo : [The World Travel Guy — Banggai Islands](https://theworldtravelguy.com/banggai-islands-luwuk-indonesia/). Les droits d’utilisation commerciale doivent être vérifiés.*
 
 Oyama Beach peut plaire aux voyageurs qui recherchent un littoral calme. Avant d’en faire votre principal site de snorkeling, demandez à un guide si le point d’entrée est sûr et si la visibilité est suffisante. Les services et les transports peuvent être limités.
 
