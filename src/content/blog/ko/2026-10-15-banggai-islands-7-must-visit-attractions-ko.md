@@ -60,7 +60,7 @@ tags:
 
 ## 3. Kawalu Bay — 잔잔한 만과 청록색 바다
 
-![Kawalu Bay의 청록색 바다와 주변 녹색 언덕]( /images/kawalu.webp )
+![Kawalu Bay의 청록색 바다와 주변 녹색 언덕](/images/kawalu.webp)
 
 <small>사진: Banggai Wonderland 사이트의 Kawalu Bay 목적지 이미지. 원본 사진의 촬영자 및 재사용 권한은 별도 확인이 필요합니다.</small>
 
