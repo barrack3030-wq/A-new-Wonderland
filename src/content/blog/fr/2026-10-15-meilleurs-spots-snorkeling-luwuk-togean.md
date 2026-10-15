@@ -22,7 +22,7 @@ Luwuk est un point de départ pratique pour découvrir les côtes et les îles d
 
 ## 1. Poganda Beach — plage et snorkeling
 
-![Sable blanc et eau claire à Poganda Beach]( https://theworldtravelguy.com/wp-content/uploads/2024/01/DSCF7131.jpg )
+![Sable blanc et eau claire à Poganda Beach](https://theworldtravelguy.com/wp-content/uploads/2024/01/DSCF7131.jpg)
 
 *Photo : [The World Travel Guy — Banggai Islands](https://theworldtravelguy.com/banggai-islands-luwuk-indonesia/). Les droits d’utilisation commerciale doivent être vérifiés.*
 
@@ -32,7 +32,7 @@ C’est une option à envisager pour combiner plage et snorkeling tranquille. De
 
 ## 2. Pulo Dua — paysage insulaire et sortie en bateau
 
-![Pulo Dua, ses collines vertes et sa mer bleue]( https://luwukbanggai.com/wp-content/uploads/2026/04/Pulau-Dua-Balantak-1.webp )
+![Pulo Dua, ses collines vertes et sa mer bleue](https://luwukbanggai.com/wp-content/uploads/2026/04/Pulau-Dua-Balantak-1.webp)
 
 *Photo : [LuwukBangai](https://luwukbanggai.com/en/banggai-islands-sulawesi-adventure/). Les droits d’utilisation commerciale doivent être vérifiés.*
 
@@ -42,7 +42,7 @@ Toutes les côtes de l’île ne conviennent pas forcément au snorkeling. Deman
 
 ## 3. Oyama Beach — une halte côtière paisible
 
-![Mer bleue et littoral tropical à Oyama Beach]( https://theworldtravelguy.com/wp-content/uploads/2023/12/DJI_0190.jpg )
+![Mer bleue et littoral tropical à Oyama Beach](https://theworldtravelguy.com/wp-content/uploads/2023/12/DJI_0190.jpg)
 
 *Photo : [The World Travel Guy — Banggai Islands](https://theworldtravelguy.com/banggai-islands-luwuk-indonesia/). Les droits d’utilisation commerciale doivent être vérifiés.*
 
@@ -50,7 +50,7 @@ Oyama Beach peut plaire aux voyageurs qui recherchent un littoral calme. Avant d
 
 ## 4. Les eaux de Banggai — choisir un site précis
 
-![Eaux tropicales de la région de Banggai]( https://theworldtravelguy.com/wp-content/uploads/2023/12/DSCF7104.jpg )
+![Eaux tropicales de la région de Banggai](https://theworldtravelguy.com/wp-content/uploads/2023/12/DSCF7104.jpg)
 
 *Photo : [The World Travel Guy — Banggai Islands](https://theworldtravelguy.com/banggai-islands-luwuk-indonesia/). Les droits d’utilisation commerciale doivent être vérifiés.*
 
@@ -58,7 +58,7 @@ La région de Banggai compte des baies, des plages et de petites îles, mais « 
 
 ## 5. Togean Islands — un voyage consacré au snorkeling
 
-![Récif corallien et vie marine à Togean Islands]( https://coraltriangleadventures.com/wp-content/uploads/2025/03/Togian-Islands-reeflife.jpg )
+![Récif corallien et vie marine à Togean Islands](https://coraltriangleadventures.com/wp-content/uploads/2025/03/Togian-Islands-reeflife.jpg)
 
 *Photo : [Coral Triangle Adventures — Togean Islands](https://coraltriangleadventures.com/snorkeling-destinations/togean-islands/). Les droits d’utilisation commerciale doivent être vérifiés.*
 
@@ -68,7 +68,7 @@ Situées dans le golfe de Tomini, Togean Islands sont connues pour leurs récifs
 
 ## 6. Sorties sur les récifs de Togean — pratiquer un snorkeling responsable
 
-![Paysage marin de Togean Islands]( https://brunetteatsunset.com/wp-content/uploads/2026/06/DSC_1426-1024x683.jpg )
+![Paysage marin de Togean Islands](https://brunetteatsunset.com/wp-content/uploads/2026/06/DSC_1426-1024x683.jpg)
 
 *Photo : [Brunette at Sunset — Togean Islands Travel Guide](https://brunetteatsunset.com/asia/indonesia/togean-islands-travel-guide-where-to-stay-and-best-diving/). Les droits d’utilisation commerciale doivent être vérifiés.*
 
@@ -76,7 +76,7 @@ Les opérateurs locaux peuvent choisir un site adapté à votre niveau, aux cour
 
 ## 7. Paisupok Lake — une étape d’eau douce, pas un récif marin
 
-![Eau claire de Paisupok Lake entourée de végétation tropicale]( https://pariwisata.banggaikep.go.id/wp-content/uploads/2022/09/pasipok3.jpg )
+![Eau claire de Paisupok Lake entourée de végétation tropicale](https://pariwisata.banggaikep.go.id/wp-content/uploads/2022/09/pasipok3.jpg)
 
 *Photo : [Office du tourisme de Banggai Kepulauan](https://pariwisata.banggaikep.go.id/wisata-danau/). Vérifiez les conditions d’utilisation de l’image.*
 
