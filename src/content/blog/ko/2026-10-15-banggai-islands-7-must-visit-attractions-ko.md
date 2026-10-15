@@ -26,9 +26,6 @@ tags:
 
 이 가이드는 **Banggai Islands things to do**와 **Banggai Islands attractions**를 찾는 여행자를 위해 대표 명소 7곳을 소개합니다. 각 장소의 특징과 즐길 거리, 방문 전에 확인할 점을 함께 정리했습니다. 사진은 장소별로 구분했으며, 실제 이동 경로와 운영 조건은 현지에서 다시 확인해야 합니다.
 
-![초록빛 섬과 맑은 청록색 바다가 어우러진 Banggai Islands의 열대 해안 풍경](https://luwukbanggai.com/wp-content/uploads/2025/10/IMG_3250-2048x1152.jpg.webp)
-
-<small>사진 출처: [LuwukBangai — Banggai Islands Guide](https://luwukbanggai.com/en/banggai-islands-sulawesi-adventure/). 상업적 재사용 권한은 게시 전에 별도로 확인해야 합니다.</small>
 
 ## 1. Paisupok Lake — 맑은 담수호와 물속 풍경
 
