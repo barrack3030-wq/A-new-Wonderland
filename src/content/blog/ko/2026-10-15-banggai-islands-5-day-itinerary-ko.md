@@ -3,9 +3,9 @@ title: "Banggai Islands 4박 5일 여행 일정: 추천 코스와 이동 방법"
 description: "Luwuk에서 시작하는 Banggai Islands 4박 5일 여행 일정입니다. Paisupok Lake, Paisu Batango, Kawalu Bay, Pantai Poganda와 Luwuk 주변 명소를 이동 순서와 함께 정리했습니다."
 seoTitle: "Banggai Islands 4박 5일 여행 일정 | Luwuk 출발"
 seoDescription: "Banggai Islands 4박 5일 추천 일정과 이동 팁을 확인하세요. Luwuk, Paisupok Lake, Paisu Batango, Kawalu Bay, Pantai Poganda를 여행 날짜와 교통편에 맞춰 계획하는 방법입니다."
-image: "https://luwukbanggai.com/wp-content/uploads/2026/10/white-sand-beach-rocky-shore-banggai.webp"
-imageAlt: "Banggai Islands의 맑은 바다와 흰 모래 해변, 바위가 이어지는 해안 풍경"
-imageSource: "https://luwukbanggai.com/pantai-poganda-peleng/"
+image: "https://luwukbanggai.com/wp-content/uploads/2025/10/IMG_5980-1024x660.webp"
+imageAlt: "Paisupok Lake의 투명한 청록색 담수와 숲으로 둘러싸인 호수 풍경"
+imageSource: "https://luwukbanggai.com/en/paisu-pok-lake-banggai-island/"
 author: "Banggai Wonderland"
 pubDate: 2026-10-15
 translationKey: "2026-10-15-banggai-islands-5-day-itinerary-ko"
@@ -48,6 +48,10 @@ Banggai Islands 여행은 아름다운 호수와 해변을 보는 것만큼이�
 
 ## 2일 차 — Peleng Island와 Paisupok Lake
 
+![Paisupok Lake의 맑은 청록색 물과 호수 바닥이 비치는 풍경](https://luwukbanggai.com/wp-content/uploads/2025/10/IMG_5988-2048x1152.jpg)
+
+<small>사진 출처: [Luwuk Banggai — Paisu Pok Lake](https://luwukbanggai.com/en/paisu-pok-lake-banggai-island/)</small>
+
 이날은 Peleng Island로 이동해 Paisupok Lake 주변을 둘러보는 일정으로 계획합니다. 선박 도착 시간이 늦어지면 당일 방문을 서두르지 말고, 숙소에 먼저 체크인한 뒤 다음 날 아침 호수를 방문하는 방식으로 조정하세요.
 
 Paisupok Lake에서는 맑은 담수와 숲의 풍경을 감상하고, 현장에서 허용되는 활동을 이용할 수 있습니다. 수영이나 보트·카누 이용 가능 여부, 운영 시간과 요금은 방문 당일 현지 안내를 확인해야 합니다.
@@ -58,13 +62,33 @@ Paisupok Lake에서는 맑은 담수와 숲의 풍경을 감상하고, 현장에
 
 여행의 세 번째 날에는 인근 명소를 묶어 보는 일정을 고려할 수 있습니다. 이동 동선과 현장 상황이 맞는다면 Paisu Batango와 Kawalu Bay를 둘러보고, 오후에는 Pantai Poganda에서 해변 풍경을 즐기는 방식입니다.
 
-다만 지도상으로 가까워 보여도 실제 이동 시간은 도로 상태와 이용할 교통수단에 따라 달라집니다. 방문 순서는 현지 운전자나 숙소와 상의하고, 모든 장소를 반드시 하루에 넣어야 한다고 생각하지 마세요.
+### Paisu Batango
 
-- **Paisu Batango:** 현지 환경과 물가 접근 구역을 확인하며 둘러보세요.
-- **Kawalu Bay:** 날씨와 해상 상태를 확인한 뒤 방문 여부를 결정하세요.
-- **Pantai Poganda:** 해변을 걷거나 휴식을 취할 수 있도록 여유 시간을 남겨두세요.
+![Paisu Batango의 투명한 천연 샘물과 수영 구역](https://indonesiajuara.asia/en/wp-content/uploads/2025/04/Paisu-Batango-Spring-Water-IndonesiaJuara-Trip-e1745306399278.webp)
 
-장소별 특징을 비교하려면 [Kawalu Bay와 Paisupok Lake 비교 안내](/ko/blog/2026-10-15-kawalu-bay-vs-paisu-pok/)도 참고할 수 있습니다. 자연환경을 보호하고, 쓰레기를 남기거나 산호와 수중 생물을 밟지 않도록 주의하세요.
+<small>사진 출처: [IndonesiaJuara — Paisu Batango Spring Water](https://indonesiajuara.asia/en/blog/mata-air-paisu-batango/)</small>
+
+Paisu Batango는 맑은 물로 알려진 자연 명소입니다. 물가 접근 구역과 현장 이용 규칙을 확인하고, 방문객이 많거나 환경 보호를 위한 제한이 있을 때는 현지 안내를 따르세요.
+
+### Kawalu Bay
+
+![Kawalu Bay의 잔잔한 청록색 라군과 열대 해안](https://cdn.prod.rexby.com/image/aeb0538cc4614689bda2bd8ae5ab5e87?format=webp&width=1080&height=1350&quality=80)
+
+<small>사진 출처: [Rexby — A Serene Hidden Lagoon](https://www.rexby.com/two.beyond/ttd/a-serene-hidden-lagoon)</small>
+
+Kawalu Bay에서는 날씨와 해상 상태를 먼저 확인하세요. 보트나 패들보드 등 수상 활동은 당일 운영 여부와 안전 조건이 확인될 때만 이용하는 것이 좋습니다.
+
+### Pantai Poganda
+
+![Pantai Poganda의 흰 모래사장과 맑은 푸른 바다](https://indonesiajuara.asia/en/wp-content/uploads/2025/04/Poganda-Beach-Banggai-IndonesiaJuara-Trip.webp)
+
+<small>사진 출처: [IndonesiaJuara — Poganda Beach](https://indonesiajuara.asia/en/blog/pantai-poganda-banggai/)</small>
+
+Pantai Poganda에서는 해변을 걷거나 휴식을 취할 수 있도록 여유 시간을 남겨두세요. 바다에 들어갈 때는 파도와 해류를 확인하고, 쓰레기는 되가져오며 자연환경을 훼손하지 않도록 주의합니다.
+
+지도상으로 가까워 보여도 실제 이동 시간은 도로 상태와 이용할 교통수단에 따라 달라집니다. 방문 순서는 현지 운전자나 숙소와 상의하고, 모든 장소를 반드시 하루에 넣어야 한다고 생각하지 마세요.
+
+장소별 특징을 비교하려면 [Kawalu Bay와 Paisupok Lake 비교 안내](/ko/blog/2026-10-15-kawalu-bay-vs-paisu-pok/)도 참고할 수 있습니다.
 
 ## 4일 차 — 여유 일정 또는 추가 목적지
 
@@ -119,8 +143,11 @@ Banggai Islands에서는 항공편뿐 아니라 배와 육상 교통의 연결�
 ## 참고 자료
 
 - [Banggai Kepulauan 관광청: Danau Paisu Pok](https://pariwisata.banggaikep.go.id/wisata-danau/) — 목적지의 기본 위치 정보
-- [Luwuk Banggai: Pantai Poganda 위치와 이동 안내](https://luwukbanggai.com/pantai-poganda-peleng/) — Peleng Island의 이동과 인근 명소에 관한 여행 정보
-- [Banggai Islands 5일 일정 참고 자료](https://www.banggai.com/itineraries/5-day-essential-banggai) — 일정 구성 예시. 교통편과 운영 정보는 별도로 확인해야 합니다.
+- [Luwuk Banggai: Paisu Pok Lake](https://luwukbanggai.com/en/paisu-pok-lake-banggai-island/) — Paisupok Lake의 여행 정보와 사진
+- [IndonesiaJuara: Paisu Batango](https://indonesiajuara.asia/en/blog/mata-air-paisu-batango/) — Paisu Batango 관련 여행 정보와 사진
+- [Rexby: Kawalu Bay](https://www.rexby.com/two.beyond/ttd/a-serene-hidden-lagoon) — Kawalu Bay 관련 여행 정보와 사진
+- [IndonesiaJuara: Pantai Poganda](https://indonesiajuara.asia/en/blog/pantai-poganda-banggai/) — Pantai Poganda 관련 여행 정보와 사진
+- [Dinas Pariwisata Provinsi Sulawesi Tengah](https://www.pariwisata.sultengprov.go.id/berita/349-utusan-khusus-presiden-zita-anjani-kunjungi-sulawesi-tengah.html) — daftar destinasi wisata di Banggai Kepulauan
 
 ---
 
