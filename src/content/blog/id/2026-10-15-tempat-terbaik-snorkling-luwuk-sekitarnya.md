@@ -27,7 +27,7 @@ Panduan ini membandingkan beberapa tempat yang layak dipertimbangkan, sekaligus 
 
 ![Pantai Poganda dengan pasir putih dan air laut jernih](https://theworldtravelguy.com/wp-content/uploads/2024/01/DSCF7131.jpg)
 
-*Foto: [The World Travel Guy — Banggai Islands](https://theworldtravelguy.com/banggai-islands-luwuk-indonesia/). Hak penggunaan komersial perlu dikonfirmasi.*
+*Foto: [Nomad Archipelago — snorkeling Banggai](https://nomadarchipelago.com/banggai-cruises/). Hak penggunaan komersial perlu dikonfirmasi.*
 
 Poganda Beach di Pulau Peleng dikenal dengan pantai berpasir putih dan air dangkal yang menarik untuk menikmati pesisir. Panduan perjalanan Banggai menyebut terumbu berada tidak jauh dari pantai, tetapi visibilitas dan kondisi laut tetap bergantung pada cuaca, pasang surut, serta aktivitas setempat.
 
@@ -47,15 +47,15 @@ Jangan menganggap setiap sisi pulau cocok untuk snorkeling. Minta operator memil
 
 ![Oyama Beach dengan perairan biru dan pantai tropis](https://theworldtravelguy.com/wp-content/uploads/2023/12/DJI_0190.jpg)
 
-*Foto: [The World Travel Guy — Banggai Islands](https://theworldtravelguy.com/banggai-islands-luwuk-indonesia/). Hak penggunaan komersial perlu dikonfirmasi.*
+*Foto: [Nomad Archipelago — snorkeling Banggai](https://nomadarchipelago.com/banggai-cruises/). Hak penggunaan komersial perlu dikonfirmasi.*
 
 Oyama Beach menarik untuk menikmati pantai, air laut, dan suasana yang lebih tenang. Sebelum menjadikannya tujuan snorkeling utama, konfirmasikan kepada pemandu lokal apakah titik tertentu sedang aman dan memiliki visibilitas yang memadai. Fasilitas dan transportasi dapat terbatas, sehingga sebaiknya atur kendaraan atau perahu terlebih dahulu.
 
 ## 4. Perairan Kepulauan Banggai — pilih titik berdasarkan kondisi hari itu
 
-![Perairan tropis di kawasan Banggai dengan air jernih dan vegetasi pulau](https://theworldtravelguy.com/wp-content/uploads/2023/12/DSCF7104.jpg)
+![Terumbu karang Banggai dengan ikan kardinal dan anemon](https://nomadarchipelago.com/nomad-content/uploads/2025/05/banggai-cardinalfish-school-anemone-underwater-tropical-fish-coral-reef-scaled.webp)
 
-*Foto: [The World Travel Guy — Banggai Islands](https://theworldtravelguy.com/banggai-islands-luwuk-indonesia/). Hak penggunaan komersial perlu dikonfirmasi.*
+*Foto: [Nomad Archipelago — snorkeling Banggai](https://nomadarchipelago.com/banggai-cruises/). Hak penggunaan komersial perlu dikonfirmasi.*
 
 Kepulauan Banggai memiliki banyak teluk, pantai, dan pulau kecil. Namun, istilah “perairan Banggai” bukan satu titik snorkeling yang seragam. Kualitas terumbu dan keamanan berbeda antar lokasi. Untuk perjalanan perahu, mintalah operator menyebut nama spot yang akan dikunjungi, lama perjalanan, perlengkapan keselamatan, dan rencana jika cuaca memburuk.
 
