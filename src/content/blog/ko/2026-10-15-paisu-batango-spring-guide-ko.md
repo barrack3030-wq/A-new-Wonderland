@@ -23,8 +23,6 @@ Banggai Islands의 Peleng Island에서 자연을 가까이 느끼고 싶다면 *
 
 Paisu Batango는 유명한 **Paisupok Lake**와 이름이 비슷하지만 같은 장소는 아닙니다. 두 곳을 모두 방문할 계획이라면 물의 성격과 현장 환경이 다르다는 점을 기억하고, 한 장소의 사진이나 정보를 다른 장소에 그대로 적용하지 마세요.
 
-![Peleng Island의 Paisu Batango 해안 샘물에 비치는 맑은 청록색 물과 주변 바위](https://cdn.prod.rexby.com/image/31c503448fff4c5dbce3991030082ace?format=webp&width=1080&height=1350&quality=80)
-
 <small>사진 출처: [Rexby — Paisu Batango Spring Bath](https://www.rexby.com/two.beyond/ttd/crystal-clear-natural-spring). 사진의 상업적 재사용 권한은 게시 전에 별도로 확인해야 합니다.</small>
 
 ## Paisu Batango는 어디에 있나요?
