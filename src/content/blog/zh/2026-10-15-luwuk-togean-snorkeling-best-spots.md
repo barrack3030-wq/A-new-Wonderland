@@ -22,7 +22,7 @@ Luwuk是探索Central Sulawesi的Banggai海岸与岛屿的实用起点。游客�
 
 ## 1. Poganda Beach——海滩与浮潜结合
 
-![Poganda Beach的白沙和清澈海水]( https://theworldtravelguy.com/wp-content/uploads/2024/01/DSCF7131.jpg )
+![Poganda Beach的白沙和清澈海水](https://theworldtravelguy.com/wp-content/uploads/2024/01/DSCF7131.jpg)
 
 *图片来源：[The World Travel Guy — Banggai Islands](https://theworldtravelguy.com/banggai-islands-luwuk-indonesia/)。商业使用授权需要另行确认。*
 
@@ -32,7 +32,7 @@ Peleng Island上的Poganda Beach以白沙和浅而清澈的海水闻名。一份
 
 ## 2. Pulo Dua——乘船探索岛屿风光
 
-![Pulo Dua的绿色山丘与蓝色海水]( https://luwukbanggai.com/wp-content/uploads/2026/04/Pulau-Dua-Balantak-1.webp )
+![Pulo Dua的绿色山丘与蓝色海水](https://luwukbanggai.com/wp-content/uploads/2026/04/Pulau-Dua-Balantak-1.webp)
 
 *图片来源：[LuwukBangai](https://luwukbanggai.com/en/banggai-islands-sulawesi-adventure/)。商业使用授权需要另行确认。*
 
@@ -42,7 +42,7 @@ Balantak地区的Pulo Dua拥有岛屿景观、海滩和海洋环境，适合安�
 
 ## 3. Oyama Beach——安静的海岸体验
 
-![Oyama Beach的蓝色海水和热带海岸]( https://theworldtravelguy.com/wp-content/uploads/2023/12/DJI_0190.jpg )
+![Oyama Beach的蓝色海水和热带海岸](https://theworldtravelguy.com/wp-content/uploads/2023/12/DJI_0190.jpg)
 
 *图片来源：[The World Travel Guy — Banggai Islands](https://theworldtravelguy.com/banggai-islands-luwuk-indonesia/)。商业使用授权需要另行确认。*
 
@@ -50,7 +50,7 @@ Oyama Beach适合希望享受较安静海岸风景的旅行者。若打算以浮
 
 ## 4. Banggai海域——根据当天情况选择具体地点
 
-![Banggai地区的热带岛屿与海水]( https://theworldtravelguy.com/wp-content/uploads/2023/12/DSCF7104.jpg )
+![Banggai地区的热带岛屿与海水](https://theworldtravelguy.com/wp-content/uploads/2023/12/DSCF7104.jpg)
 
 *图片来源：[The World Travel Guy — Banggai Islands](https://theworldtravelguy.com/banggai-islands-luwuk-indonesia/)。商业使用授权需要另行确认。*
 
@@ -58,7 +58,7 @@ Banggai地区有许多海湾、海滩和小岛，但“Banggai海域”并不是
 
 ## 5. Togean Islands——专门安排的浮潜之旅
 
-![Togean Islands的珊瑚礁与海洋生物]( https://coraltriangleadventures.com/wp-content/uploads/2025/03/Togian-Islands-reeflife.jpg )
+![Togean Islands的珊瑚礁与海洋生物](https://coraltriangleadventures.com/wp-content/uploads/2025/03/Togian-Islands-reeflife.jpg)
 
 *图片来源：[Coral Triangle Adventures — Togean Islands](https://coraltriangleadventures.com/snorkeling-destinations/togean-islands/)。商业使用授权需要另行确认。*
 
@@ -68,7 +68,7 @@ Banggai地区有许多海湾、海滩和小岛，但“Banggai海域”并不是
 
 ## 6. Togean珊瑚礁之旅——负责任地浮潜
 
-![Togean Islands的海景]( https://brunetteatsunset.com/wp-content/uploads/2026/06/DSC_1426-1024x683.jpg )
+![Togean Islands的海景](https://brunetteatsunset.com/wp-content/uploads/2026/06/DSC_1426-1024x683.jpg)
 
 *图片来源：[Brunette at Sunset — Togean Islands Travel Guide](https://brunetteatsunset.com/asia/indonesia/togean-islands-travel-guide-where-to-stay-and-best-diving/)。商业使用授权需要另行确认。*
 
@@ -76,7 +76,7 @@ Banggai地区有许多海湾、海滩和小岛，但“Banggai海域”并不是
 
 ## 7. Paisupok Lake——淡水景点，并非海洋浮潜点
 
-![热带植被环绕的清澈Paisupok Lake]( https://pariwisata.banggaikep.go.id/wp-content/uploads/2022/09/pasipok3.jpg )
+![热带植被环绕的清澈Paisupok Lake](https://pariwisata.banggaikep.go.id/wp-content/uploads/2022/09/pasipok3.jpg)
 
 *图片来源：[Banggai Kepulauan旅游部门](https://pariwisata.banggaikep.go.id/wisata-danau/)。请确认图片使用条件。*
 
