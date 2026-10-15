@@ -24,7 +24,7 @@ Luwuk은 Central Sulawesi의 Banggai 해안과 섬을 여행하기 좋은 출발
 
 ![Poganda Beach의 흰 모래와 맑은 바닷물](https://theworldtravelguy.com/wp-content/uploads/2024/01/DSCF7131.jpg)
 
-*사진 출처: [The World Travel Guy — Banggai Islands](https://theworldtravelguy.com/banggai-islands-luwuk-indonesia/). 상업적 사용 권한 확인이 필요합니다.*
+*사진 출처: [Nomad Archipelago — Banggai snorkeling](https://nomadarchipelago.com/banggai-cruises/). 상업적 사용 권한 확인이 필요합니다.*
 
 Peleng Island의 Poganda Beach는 흰 모래와 얕고 맑은 해안으로 알려져 있습니다. 여행 가이드에서는 해안 가까이에 산호초가 있다고 소개하지만, 실제 시야와 바다 상태는 날씨와 조수, 현지 상황에 따라 달라집니다.
 
@@ -44,15 +44,15 @@ Balantak 지역의 Pulo Dua는 섬 풍경과 해변, 바다를 함께 즐길 수
 
 ![Oyama Beach의 푸른 바다와 열대 해안](https://theworldtravelguy.com/wp-content/uploads/2023/12/DJI_0190.jpg)
 
-*사진 출처: [The World Travel Guy — Banggai Islands](https://theworldtravelguy.com/banggai-islands-luwuk-indonesia/). 상업적 사용 권한 확인이 필요합니다.*
+*사진 출처: [Nomad Archipelago — Banggai snorkeling](https://nomadarchipelago.com/banggai-cruises/). 상업적 사용 권한 확인이 필요합니다.*
 
 Oyama Beach는 한적한 해안 풍경을 즐기고 싶은 여행자에게 어울립니다. 스노클링을 주목적으로 방문하기 전, 현지 가이드에게 입수 지점의 안전과 시야를 확인하세요. 편의시설과 교통이 제한적일 수 있으므로 이동 수단을 미리 준비하는 편이 좋습니다.
 
 ## 4. Banggai 해역 — 당일 상태에 맞는 지점 선택
 
-![Banggai 지역의 열대 섬과 맑은 바다](https://theworldtravelguy.com/wp-content/uploads/2023/12/DSCF7104.jpg)
+![Banggai 해역의 카디널피시와 말미잘 산호초](https://nomadarchipelago.com/nomad-content/uploads/2025/05/banggai-cardinalfish-school-anemone-underwater-tropical-fish-coral-reef-scaled.webp)
 
-*사진 출처: [The World Travel Guy — Banggai Islands](https://theworldtravelguy.com/banggai-islands-luwuk-indonesia/). 상업적 사용 권한 확인이 필요합니다.*
+*사진 출처: [Nomad Archipelago — Banggai snorkeling](https://nomadarchipelago.com/banggai-cruises/). 상업적 사용 권한 확인이 필요합니다.*
 
 Banggai 지역에는 만과 해변, 작은 섬이 많지만 모든 해역의 조건이 같지는 않습니다. 보트 투어를 예약할 때는 방문할 스팟의 정확한 이름, 이동 시간, 안전 장비와 날씨가 나빠질 때의 대안을 확인하세요.
 
