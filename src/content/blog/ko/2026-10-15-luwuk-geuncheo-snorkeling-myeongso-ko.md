@@ -22,7 +22,7 @@ Luwuk은 Central Sulawesi의 Banggai 해안과 섬을 여행하기 좋은 출발
 
 ## 1. Poganda Beach — 해변과 스노클링을 함께
 
-![Poganda Beach의 흰 모래와 맑은 바닷물]( https://theworldtravelguy.com/wp-content/uploads/2024/01/DSCF7131.jpg )
+![Poganda Beach의 흰 모래와 맑은 바닷물](https://theworldtravelguy.com/wp-content/uploads/2024/01/DSCF7131.jpg)
 
 *사진 출처: [The World Travel Guy — Banggai Islands](https://theworldtravelguy.com/banggai-islands-luwuk-indonesia/). 상업적 사용 권한 확인이 필요합니다.*
 
@@ -32,7 +32,7 @@ Peleng Island의 Poganda Beach는 흰 모래와 얕고 맑은 해안으로 알�
 
 ## 2. Pulo Dua — 보트로 만나는 섬 풍경
 
-![푸른 바다와 초록 언덕이 보이는 Pulo Dua]( https://luwukbanggai.com/wp-content/uploads/2026/04/Pulau-Dua-Balantak-1.webp )
+![푸른 바다와 초록 언덕이 보이는 Pulo Dua](https://luwukbanggai.com/wp-content/uploads/2026/04/Pulau-Dua-Balantak-1.webp)
 
 *사진 출처: [LuwukBangai](https://luwukbanggai.com/en/banggai-islands-sulawesi-adventure/). 상업적 사용 권한 확인이 필요합니다.*
 
@@ -42,7 +42,7 @@ Balantak 지역의 Pulo Dua는 섬 풍경과 해변, 바다를 함께 즐길 수
 
 ## 3. Oyama Beach — 조용한 해변 여행
 
-![Oyama Beach의 푸른 바다와 열대 해안]( https://theworldtravelguy.com/wp-content/uploads/2023/12/DJI_0190.jpg )
+![Oyama Beach의 푸른 바다와 열대 해안](https://theworldtravelguy.com/wp-content/uploads/2023/12/DJI_0190.jpg)
 
 *사진 출처: [The World Travel Guy — Banggai Islands](https://theworldtravelguy.com/banggai-islands-luwuk-indonesia/). 상업적 사용 권한 확인이 필요합니다.*
 
@@ -50,7 +50,7 @@ Oyama Beach는 한적한 해안 풍경을 즐기고 싶은 여행자에게 어�
 
 ## 4. Banggai 해역 — 당일 상태에 맞는 지점 선택
 
-![Banggai 지역의 열대 섬과 맑은 바다]( https://theworldtravelguy.com/wp-content/uploads/2023/12/DSCF7104.jpg )
+![Banggai 지역의 열대 섬과 맑은 바다](https://theworldtravelguy.com/wp-content/uploads/2023/12/DSCF7104.jpg)
 
 *사진 출처: [The World Travel Guy — Banggai Islands](https://theworldtravelguy.com/banggai-islands-luwuk-indonesia/). 상업적 사용 권한 확인이 필요합니다.*
 
@@ -58,7 +58,7 @@ Banggai 지역에는 만과 해변, 작은 섬이 많지만 모든 해역의 조
 
 ## 5. Togean Islands — 스노클링을 위한 별도 여행
 
-![Togean Islands의 산호초와 해양 생물]( https://coraltriangleadventures.com/wp-content/uploads/2025/03/Togian-Islands-reeflife.jpg )
+![Togean Islands의 산호초와 해양 생물](https://coraltriangleadventures.com/wp-content/uploads/2025/03/Togian-Islands-reeflife.jpg)
 
 *사진 출처: [Coral Triangle Adventures — Togean Islands](https://coraltriangleadventures.com/snorkeling-destinations/togean-islands/). 상업적 사용 권한 확인이 필요합니다.*
 
@@ -68,7 +68,7 @@ Tomini Bay의 Togean Islands는 산호초와 다양한 해양 생물로 알려�
 
 ## 6. Togean 산호초 — 책임 있는 스노클링
 
-![Togean Islands의 바다 풍경]( https://brunetteatsunset.com/wp-content/uploads/2026/06/DSC_1426-1024x683.jpg )
+![Togean Islands의 바다 풍경](https://brunetteatsunset.com/wp-content/uploads/2026/06/DSC_1426-1024x683.jpg)
 
 *사진 출처: [Brunette at Sunset — Togean Islands Travel Guide](https://brunetteatsunset.com/asia/indonesia/togean-islands-travel-guide-where-to-stay-and-best-diving/). 상업적 사용 권한 확인이 필요합니다.*
 
@@ -76,7 +76,7 @@ Tomini Bay의 Togean Islands는 산호초와 다양한 해양 생물로 알려�
 
 ## 7. Paisupok Lake — 바다 스노클링이 아닌 담수 여행지
 
-![열대 숲으로 둘러싸인 맑은 Paisupok Lake]( https://pariwisata.banggaikep.go.id/wp-content/uploads/2022/09/pasipok3.jpg )
+![열대 숲으로 둘러싸인 맑은 Paisupok Lake](https://pariwisata.banggaikep.go.id/wp-content/uploads/2022/09/pasipok3.jpg)
 
 *사진 출처: [Banggai Kepulauan 관광청](https://pariwisata.banggaikep.go.id/wisata-danau/). 사진 이용 조건을 확인하세요.*
 
