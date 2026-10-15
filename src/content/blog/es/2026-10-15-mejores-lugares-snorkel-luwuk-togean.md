@@ -22,7 +22,7 @@ Luwuk es un punto de partida práctico para explorar la costa y las islas de Ban
 
 ## 1. Poganda Beach — playa y snorkel
 
-![Arena blanca y agua costera transparente en Poganda Beach]( https://theworldtravelguy.com/wp-content/uploads/2024/01/DSCF7131.jpg )
+![Arena blanca y agua costera transparente en Poganda Beach](https://theworldtravelguy.com/wp-content/uploads/2024/01/DSCF7131.jpg)
 
 *Foto: [The World Travel Guy — Banggai Islands](https://theworldtravelguy.com/banggai-islands-luwuk-indonesia/). Hay que confirmar los derechos de uso comercial.*
 
@@ -32,7 +32,7 @@ Puede ser una buena opción para combinar descanso y snorkel tranquilo. Consulta
 
 ## 2. Pulo Dua — paisaje insular y excursión en barco
 
-![Isla Pulo Dua con colinas verdes y mar azul]( https://luwukbanggai.com/wp-content/uploads/2026/04/Pulau-Dua-Balantak-1.webp )
+![Isla Pulo Dua con colinas verdes y mar azul](https://luwukbanggai.com/wp-content/uploads/2026/04/Pulau-Dua-Balantak-1.webp)
 
 *Foto: [LuwukBangai](https://luwukbanggai.com/en/banggai-islands-sulawesi-adventure/). Hay que confirmar los derechos de uso comercial.*
 
@@ -42,7 +42,7 @@ No todas las costas de la isla son aptas para hacer snorkel. Pide al operador qu
 
 ## 3. Oyama Beach — una parada costera tranquila
 
-![Mar azul y costa tropical en Oyama Beach]( https://theworldtravelguy.com/wp-content/uploads/2023/12/DJI_0190.jpg )
+![Mar azul y costa tropical en Oyama Beach](https://theworldtravelguy.com/wp-content/uploads/2023/12/DJI_0190.jpg)
 
 *Foto: [The World Travel Guy — Banggai Islands](https://theworldtravelguy.com/banggai-islands-luwuk-indonesia/). Hay que confirmar los derechos de uso comercial.*
 
@@ -50,7 +50,7 @@ Oyama Beach puede interesar a quienes buscan paisaje costero y un ambiente más 
 
 ## 4. Aguas de Banggai — elige un punto concreto
 
-![Aguas tropicales de la región de Banggai]( https://theworldtravelguy.com/wp-content/uploads/2023/12/DSCF7104.jpg )
+![Aguas tropicales de la región de Banggai](https://theworldtravelguy.com/wp-content/uploads/2023/12/DSCF7104.jpg)
 
 *Foto: [The World Travel Guy — Banggai Islands](https://theworldtravelguy.com/banggai-islands-luwuk-indonesia/). Hay que confirmar los derechos de uso comercial.*
 
@@ -58,7 +58,7 @@ La región incluye bahías, playas e islas pequeñas, pero “aguas de Banggai�
 
 ## 5. Togean Islands — una excursión dedicada al snorkel
 
-![Arrecife de coral y vida marina en Togean Islands]( https://coraltriangleadventures.com/wp-content/uploads/2025/03/Togian-Islands-reeflife.jpg )
+![Arrecife de coral y vida marina en Togean Islands](https://coraltriangleadventures.com/wp-content/uploads/2025/03/Togian-Islands-reeflife.jpg)
 
 *Foto: [Coral Triangle Adventures — Togean Islands](https://coraltriangleadventures.com/snorkeling-destinations/togean-islands/). Hay que confirmar los derechos de uso comercial.*
 
@@ -68,7 +68,7 @@ Togean Islands, en la bahía de Tomini, es conocida por sus arrecifes y diversid
 
 ## 6. Excursiones a los arrecifes de Togean — practica snorkel responsable
 
-![Paisaje marino de Togean Islands]( https://brunetteatsunset.com/wp-content/uploads/2026/06/DSC_1426-1024x683.jpg )
+![Paisaje marino de Togean Islands](https://brunetteatsunset.com/wp-content/uploads/2026/06/DSC_1426-1024x683.jpg)
 
 *Foto: [Brunette at Sunset — Togean Islands Travel Guide](https://brunetteatsunset.com/asia/indonesia/togean-islands-travel-guide-where-to-stay-and-best-diving/). Hay que confirmar los derechos de uso comercial.*
 
@@ -76,7 +76,7 @@ Los operadores locales pueden ayudarte a escoger un arrecife según tu experienc
 
 ## 7. Paisupok Lake — agua dulce, no un arrecife marino
 
-![Agua transparente de Paisupok Lake rodeada de vegetación tropical]( https://pariwisata.banggaikep.go.id/wp-content/uploads/2022/09/pasipok3.jpg )
+![Agua transparente de Paisupok Lake rodeada de vegetación tropical](https://pariwisata.banggaikep.go.id/wp-content/uploads/2022/09/pasipok3.jpg)
 
 *Foto: [Oficina de Turismo de Banggai Kepulauan](https://pariwisata.banggaikep.go.id/wisata-danau/). Comprueba las condiciones de uso de la imagen.*
 
