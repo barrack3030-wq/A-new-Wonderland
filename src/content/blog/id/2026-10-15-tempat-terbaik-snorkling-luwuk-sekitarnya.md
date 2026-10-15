@@ -25,7 +25,7 @@ Panduan ini membandingkan beberapa tempat yang layak dipertimbangkan, sekaligus 
 
 ## 1. Poganda Beach — pilihan pantai untuk snorkeling
 
-![Pantai Poganda dengan pasir putih dan air laut jernih]( https://theworldtravelguy.com/wp-content/uploads/2024/01/DSCF7131.jpg )
+![Pantai Poganda dengan pasir putih dan air laut jernih](https://theworldtravelguy.com/wp-content/uploads/2024/01/DSCF7131.jpg)
 
 *Foto: [The World Travel Guy — Banggai Islands](https://theworldtravelguy.com/banggai-islands-luwuk-indonesia/). Hak penggunaan komersial perlu dikonfirmasi.*
 
@@ -35,7 +35,7 @@ Poganda Beach di Pulau Peleng dikenal dengan pantai berpasir putih dan air dangk
 
 ## 2. Pulo Dua — snorkeling sebagai bagian dari perjalanan pulau
 
-![Pulau Pulo Dua di Balantak dengan perbukitan hijau dan laut biru]( https://luwukbanggai.com/wp-content/uploads/2026/04/Pulau-Dua-Balantak-1.webp )
+![Pulau Pulo Dua di Balantak dengan perbukitan hijau dan laut biru](https://luwukbanggai.com/wp-content/uploads/2026/04/Pulau-Dua-Balantak-1.webp)
 
 *Foto: [LuwukBangai](https://luwukbanggai.com/en/banggai-islands-sulawesi-adventure/). Hak penggunaan komersial perlu dikonfirmasi.*
 
@@ -45,7 +45,7 @@ Jangan menganggap setiap sisi pulau cocok untuk snorkeling. Minta operator memil
 
 ## 3. Oyama Beach — suasana pantai yang lebih tenang
 
-![Oyama Beach dengan perairan biru dan pantai tropis]( https://theworldtravelguy.com/wp-content/uploads/2023/12/DJI_0190.jpg )
+![Oyama Beach dengan perairan biru dan pantai tropis](https://theworldtravelguy.com/wp-content/uploads/2023/12/DJI_0190.jpg)
 
 *Foto: [The World Travel Guy — Banggai Islands](https://theworldtravelguy.com/banggai-islands-luwuk-indonesia/). Hak penggunaan komersial perlu dikonfirmasi.*
 
@@ -53,7 +53,7 @@ Oyama Beach menarik untuk menikmati pantai, air laut, dan suasana yang lebih ten
 
 ## 4. Perairan Kepulauan Banggai — pilih titik berdasarkan kondisi hari itu
 
-![Perairan tropis di kawasan Banggai dengan air jernih dan vegetasi pulau]( https://theworldtravelguy.com/wp-content/uploads/2023/12/DSCF7104.jpg )
+![Perairan tropis di kawasan Banggai dengan air jernih dan vegetasi pulau](https://theworldtravelguy.com/wp-content/uploads/2023/12/DSCF7104.jpg)
 
 *Foto: [The World Travel Guy — Banggai Islands](https://theworldtravelguy.com/banggai-islands-luwuk-indonesia/). Hak penggunaan komersial perlu dikonfirmasi.*
 
@@ -61,7 +61,7 @@ Kepulauan Banggai memiliki banyak teluk, pantai, dan pulau kecil. Namun, istilah
 
 ## 5. Togean Islands — pilihan untuk perjalanan snorkeling khusus
 
-![Terumbu karang dan kehidupan bawah laut di Togean Islands]( https://coraltriangleadventures.com/wp-content/uploads/2025/03/Togian-Islands-reeflife.jpg )
+![Terumbu karang dan kehidupan bawah laut di Togean Islands](https://coraltriangleadventures.com/wp-content/uploads/2025/03/Togian-Islands-reeflife.jpg)
 
 *Foto: [Coral Triangle Adventures — Togean Islands](https://coraltriangleadventures.com/snorkeling-destinations/togean-islands/). Hak penggunaan komersial perlu dikonfirmasi.*
 
@@ -71,7 +71,7 @@ Togean Islands di Teluk Tomini dikenal sebagai tujuan bahari dengan terumbu kara
 
 ## 6. Terumbu karang Togean — pilih operator yang bertanggung jawab
 
-![Pemandangan laut Togean Islands]( https://brunetteatsunset.com/wp-content/uploads/2026/06/DSC_1426-1024x683.jpg )
+![Pemandangan laut Togean Islands](https://brunetteatsunset.com/wp-content/uploads/2026/06/DSC_1426-1024x683.jpg)
 
 *Foto: [Brunette at Sunset — Togean Islands Travel Guide](https://brunetteatsunset.com/asia/indonesia/togean-islands-travel-guide-where-to-stay-and-best-diving/). Hak penggunaan komersial perlu dikonfirmasi.*
 
@@ -79,7 +79,7 @@ Saat berada di Togean, operator lokal dapat membantu memilih lokasi snorkeling s
 
 ## 7. Paisupok Lake — tambahan wisata air tawar, bukan spot snorkeling laut
 
-![Air jernih Paisupok Lake yang dikelilingi hutan tropis]( https://pariwisata.banggaikep.go.id/wp-content/uploads/2022/09/pasipok3.jpg )
+![Air jernih Paisupok Lake yang dikelilingi hutan tropis](https://pariwisata.banggaikep.go.id/wp-content/uploads/2022/09/pasipok3.jpg)
 
 *Foto: [Dinas Pariwisata Kabupaten Banggai Kepulauan](https://pariwisata.banggaikep.go.id/wisata-danau/). Periksa ketentuan penggunaan foto.*
 
