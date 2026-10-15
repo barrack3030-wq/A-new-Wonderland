@@ -26,7 +26,7 @@ This guide compares places worth considering and explains which are regional opt
 
 ![White sand and clear coastal water at Poganda Beach](https://theworldtravelguy.com/wp-content/uploads/2024/01/DSCF7131.jpg)
 
-*Photo source: [Nomad Archipelago — Banggai snorkeling](https://nomadarchipelago.com/banggai-cruises/). Commercial reuse rights must be confirmed.*
+*Photo source: [The World Travel Guy — Banggai Islands](https://theworldtravelguy.com/banggai-islands-luwuk-indonesia/). Commercial reuse rights must be confirmed.*
 
 Poganda Beach on Peleng Island is known for white sand and shallow, clear coastal water. A Banggai travel guide notes reef close to shore, although visibility and conditions depend on weather, tides and local activity.
 
@@ -46,7 +46,7 @@ Not every side of the island is automatically suitable for snorkeling. Ask the o
 
 ![Blue water and tropical shoreline at Oyama Beach](https://theworldtravelguy.com/wp-content/uploads/2023/12/DJI_0190.jpg)
 
-*Photo source: [Nomad Archipelago — Banggai snorkeling](https://nomadarchipelago.com/banggai-cruises/). Commercial reuse rights must be confirmed.*
+*Photo source: [The World Travel Guy — Banggai Islands](https://theworldtravelguy.com/banggai-islands-luwuk-indonesia/). Commercial reuse rights must be confirmed.*
 
 Oyama Beach is an option for travelers seeking coastal scenery and a quieter atmosphere. Before making it the main snorkeling stop, confirm with a local guide whether a specific entry point is safe and visibility is suitable. Facilities and transport may be limited, so arrange logistics in advance.
 
