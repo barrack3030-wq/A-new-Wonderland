@@ -3,9 +3,8 @@ title: "Snorkeling di Pantai Bontolan: Cara Menikmati Terumbu dan Ikan Capungan 
 description: "Panduan snorkeling di Pantai Bontolan, Banggai Laut, dengan persiapan keselamatan, etika melihat ikan capungan Banggai, dan cara menjaga terumbu karang."
 seoTitle: "Snorkeling Pantai Bontolan: Ikan Capungan Banggai & Tips Aman"
 seoDescription: "Rencanakan snorkeling di Pantai Bontolan, Banggai Laut. Pelajari persiapan, keselamatan di perairan dangkal, etika mengamati ikan capungan Banggai, dan perlindungan terumbu."
-image: "https://sulteng.jadesta.com/imgpost/85186.jpg"
+image: "/images/bontolan.jpg"
 imageAlt: "Pengunjung bermain di perairan dangkal Pantai Bontolan, dengan garis pantai dan vegetasi di belakang"
-imageSource: "https://sulteng.jadesta.com/atraksi/pantai_bontolan_bontolan_beach"
 author: "Banggai Wonderland"
 pubDate: 2026-10-15
 translationKey: "id-responsible-snorkeling-bontolan-2026"
@@ -80,4 +79,4 @@ Jangan memaksakan diri melawan arus atau menjauh dari pantai. Ikuti arahan peman
 
 Sebelum berangkat, baca juga [panduan Pantai Bontolan](/id/destinations/bontolan-beach/) untuk memahami lokasi, akses, dan hal-hal yang perlu dikonfirmasi di lapangan.
 
-**Sumber foto:** [Jadesta — Pantai Bontolan](https://sulteng.jadesta.com/atraksi/pantai_bontolan_bontolan_beach).
+**Referensi informasi lokasi:** [Jadesta — Pantai Bontolan](https://sulteng.jadesta.com/atraksi/pantai_bontolan_bontolan_beach). Foto utama memakai aset yang sudah tersedia di repository Banggai Wonderland; izin penggunaan foto pihak ketiga harus diverifikasi sebelum mengambil gambar dari sumber eksternal.
