@@ -23,11 +23,9 @@ Pulo Dua는 인도네시아 Central Sulawesi의 Banggai Regency에 있는 해양
 
 이 글은 **Pulo Dua 자체를 방문할 때 알아둘 정보**에 초점을 맞춥니다. Luwuk에서 출발하는 큰 여행 일정은 [Banggai Islands 4박 5일 일정](/ko/blog/2026-10-15-banggai-islands-5-day-itinerary-ko/)을 참고하세요.
 
+<small>대표 이미지 출처: [IndonesiaJuara — Dua Island, Banggai](https://indonesiajuara.asia/en/blog/pulau-dua-balantak/). 사진의 재사용 권한은 게시 전에 확인하세요.</small>
+
 ## Pulo Dua에서 무엇을 볼 수 있나요?
-
-![Pulo Dua의 초록빛 언덕과 푸른 바다](https://indonesiajuara.asia/en/wp-content/uploads/2025/04/Dua-Island-Banggai-IndonesiaJuara-Trip.webp)
-
-<small>사진 출처: [IndonesiaJuara — Dua Island, Banggai](https://indonesiajuara.asia/en/blog/pulau-dua-balantak/). 사진의 재사용 권한은 게시 전에 확인하세요.</small>
 
 ### 언덕 위에서 바라보는 바다 전망
 
