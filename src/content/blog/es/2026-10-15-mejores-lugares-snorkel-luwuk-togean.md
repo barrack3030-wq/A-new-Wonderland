@@ -24,7 +24,7 @@ Luwuk es un punto de partida práctico para explorar la costa y las islas de Ban
 
 ![Arena blanca y agua costera transparente en Poganda Beach](https://theworldtravelguy.com/wp-content/uploads/2024/01/DSCF7131.jpg)
 
-*Foto: [The World Travel Guy — Banggai Islands](https://theworldtravelguy.com/banggai-islands-luwuk-indonesia/). Hay que confirmar los derechos de uso comercial.*
+*Foto: [Nomad Archipelago — snorkel en Banggai](https://nomadarchipelago.com/banggai-cruises/). Hay que confirmar los derechos de uso comercial.*
 
 Poganda Beach, en la isla de Peleng, es conocida por su arena blanca y aguas costeras poco profundas. Una guía de viaje de Banggai menciona arrecifes cerca de la orilla, pero la visibilidad y las condiciones dependen del tiempo, las mareas y la situación local.
 
@@ -44,15 +44,15 @@ No todas las costas de la isla son aptas para hacer snorkel. Pide al operador qu
 
 ![Mar azul y costa tropical en Oyama Beach](https://theworldtravelguy.com/wp-content/uploads/2023/12/DJI_0190.jpg)
 
-*Foto: [The World Travel Guy — Banggai Islands](https://theworldtravelguy.com/banggai-islands-luwuk-indonesia/). Hay que confirmar los derechos de uso comercial.*
+*Foto: [Nomad Archipelago — snorkel en Banggai](https://nomadarchipelago.com/banggai-cruises/). Hay que confirmar los derechos de uso comercial.*
 
 Oyama Beach puede interesar a quienes buscan paisaje costero y un ambiente más tranquilo. Antes de convertirla en el principal punto de snorkel, confirma con un guía si la entrada es segura y la visibilidad es adecuada. Los servicios y el transporte pueden ser limitados.
 
 ## 4. Aguas de Banggai — elige un punto concreto
 
-![Aguas tropicales de la región de Banggai](https://theworldtravelguy.com/wp-content/uploads/2023/12/DSCF7104.jpg)
+![Arrecife de Banggai con peces cardenal y anémona](https://nomadarchipelago.com/nomad-content/uploads/2025/05/banggai-cardinalfish-school-anemone-underwater-tropical-fish-coral-reef-scaled.webp)
 
-*Foto: [The World Travel Guy — Banggai Islands](https://theworldtravelguy.com/banggai-islands-luwuk-indonesia/). Hay que confirmar los derechos de uso comercial.*
+*Foto: [Nomad Archipelago — snorkel en Banggai](https://nomadarchipelago.com/banggai-cruises/). Hay que confirmar los derechos de uso comercial.*
 
 La región incluye bahías, playas e islas pequeñas, pero “aguas de Banggai” no es un único sitio de snorkel. La calidad del arrecife y la seguridad varían. En una excursión en barco, pregunta por los nombres exactos de los puntos, el tiempo de navegación, el equipo de seguridad y el plan alternativo si empeora el tiempo.
 
