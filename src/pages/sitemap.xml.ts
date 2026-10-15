@@ -1,5 +1,7 @@
 import { getCollection } from 'astro:content';
 
+export const prerender = true;
+
 const site = 'https://banggaiwonderland.my.id';
 const languages = ['id', 'en', 'es', 'fr', 'zh', 'ko'];
 
@@ -18,6 +20,15 @@ const localizedLandingPages = [
   'banggai-trip/',
   'banggai-open-trip/'
 ];
+
+function escapeXml(value: string): string {
+  return value
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;')
+    .replace(/'/g, '&apos;');
+}
 
 export async function GET() {
   const destinations = await getCollection('destinations');
@@ -75,14 +86,19 @@ export async function GET() {
     }
   }
 
+  const urlEntries = [...urls].sort()
+    .map(url => `  <url><loc>${escapeXml(url)}</loc></url>`)
+    .join('\n');
+
   const xml = `<?xml version="1.0" encoding="UTF-8"?>\n` +
     `<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n` +
-    [...urls].sort().map(url => `  <url><loc>${url}</loc></url>`).join('\n') +
-    `\n</urlset>`;
+    urlEntries +
+    `\n</urlset>\n`;
 
   return new Response(xml, {
     headers: {
-      'Content-Type': 'application/xml; charset=utf-8'
+      'Content-Type': 'application/xml; charset=utf-8',
+      'Cache-Control': 'public, max-age=0, must-revalidate'
     }
   });
 }
