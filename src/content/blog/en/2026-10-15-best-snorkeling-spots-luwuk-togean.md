@@ -24,7 +24,7 @@ This guide compares places worth considering and explains which are regional opt
 
 ## 1. Poganda Beach — a beach-and-snorkeling combination
 
-![White sand and clear coastal water at Poganda Beach]( https://theworldtravelguy.com/wp-content/uploads/2024/01/DSCF7131.jpg )
+![White sand and clear coastal water at Poganda Beach](https://theworldtravelguy.com/wp-content/uploads/2024/01/DSCF7131.jpg)
 
 *Photo source: [The World Travel Guy — Banggai Islands](https://theworldtravelguy.com/banggai-islands-luwuk-indonesia/). Commercial reuse rights must be confirmed.*
 
@@ -34,7 +34,7 @@ It can suit travelers who want to combine beach time with a relaxed snorkel. Ask
 
 ## 2. Pulo Dua — explore island scenery by boat
 
-![Pulo Dua island landscape with green hills and blue sea]( https://luwukbanggai.com/wp-content/uploads/2026/04/Pulau-Dua-Balantak-1.webp )
+![Pulo Dua island landscape with green hills and blue sea](https://luwukbanggai.com/wp-content/uploads/2026/04/Pulau-Dua-Balantak-1.webp)
 
 *Photo source: [LuwukBangai](https://luwukbanggai.com/en/banggai-islands-sulawesi-adventure/). Commercial reuse rights must be confirmed.*
 
@@ -44,7 +44,7 @@ Not every side of the island is automatically suitable for snorkeling. Ask the o
 
 ## 3. Oyama Beach — a quieter coastal stop
 
-![Blue water and tropical shoreline at Oyama Beach]( https://theworldtravelguy.com/wp-content/uploads/2023/12/DJI_0190.jpg )
+![Blue water and tropical shoreline at Oyama Beach](https://theworldtravelguy.com/wp-content/uploads/2023/12/DJI_0190.jpg)
 
 *Photo source: [The World Travel Guy — Banggai Islands](https://theworldtravelguy.com/banggai-islands-luwuk-indonesia/). Commercial reuse rights must be confirmed.*
 
@@ -52,7 +52,7 @@ Oyama Beach is an option for travelers seeking coastal scenery and a quieter atm
 
 ## 4. Banggai waters — choose a specific spot with a local operator
 
-![Tropical island waters in the Banggai region]( https://theworldtravelguy.com/wp-content/uploads/2023/12/DSCF7104.jpg )
+![Tropical island waters in the Banggai region](https://theworldtravelguy.com/wp-content/uploads/2023/12/DSCF7104.jpg)
 
 *Photo source: [The World Travel Guy — Banggai Islands](https://theworldtravelguy.com/banggai-islands-luwuk-indonesia/). Commercial reuse rights must be confirmed.*
 
@@ -60,7 +60,7 @@ The Banggai region includes bays, beaches and small islands, but “Banggai wate
 
 ## 5. Togean Islands — a dedicated snorkeling trip
 
-![Coral reef and marine life in the Togean Islands]( https://coraltriangleadventures.com/wp-content/uploads/2025/03/Togian-Islands-reeflife.jpg )
+![Coral reef and marine life in the Togean Islands](https://coraltriangleadventures.com/wp-content/uploads/2025/03/Togian-Islands-reeflife.jpg)
 
 *Photo source: [Coral Triangle Adventures — Togean Islands](https://coraltriangleadventures.com/snorkeling-destinations/togean-islands/). Commercial reuse rights must be confirmed.*
 
@@ -70,7 +70,7 @@ The Togean Islands in Tomini Bay are known for coral reefs and marine biodiversi
 
 ## 6. Togean reef trips — snorkel responsibly
 
-![Seascape from the Togean Islands]( https://brunetteatsunset.com/wp-content/uploads/2026/06/DSC_1426-1024x683.jpg )
+![Seascape from the Togean Islands](https://brunetteatsunset.com/wp-content/uploads/2026/06/DSC_1426-1024x683.jpg)
 
 *Photo source: [Brunette at Sunset — Togean Islands Travel Guide](https://brunetteatsunset.com/asia/indonesia/togean-islands-travel-guide-where-to-stay-and-best-diving/). Commercial reuse rights must be confirmed.*
 
@@ -78,7 +78,7 @@ Local operators can help select a reef site according to your ability, currents 
 
 ## 7. Paisupok Lake — a freshwater add-on, not a sea-snorkeling site
 
-![Clear freshwater at Paisupok Lake surrounded by tropical greenery]( https://pariwisata.banggaikep.go.id/wp-content/uploads/2022/09/pasipok3.jpg )
+![Clear freshwater at Paisupok Lake surrounded by tropical greenery](https://pariwisata.banggaikep.go.id/wp-content/uploads/2022/09/pasipok3.jpg)
 
 *Photo source: [Banggai Kepulauan Tourism Office](https://pariwisata.banggaikep.go.id/wisata-danau/). Check image-use terms.*
 
