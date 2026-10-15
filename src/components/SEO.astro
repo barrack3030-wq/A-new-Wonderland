@@ -23,7 +23,9 @@ const currentLangCode = pathParts[0] && Object.keys(languages).includes(pathPart
 const section = pathParts[1] || '';
 // Booking query parameters only prefill the form; they are not separate SEO pages.
 const isParameterizedBookingUrl = section === 'book' && Astro.url.searchParams.toString().length > 0;
-const shouldNoIndex = noIndex || isParameterizedBookingUrl;
+const isLocalizedHomepage = pathParts.length === 1 && Object.keys(languages).includes(pathParts[0]);
+// Localized homepages must remain indexable; only parameterized booking URLs are forcibly excluded.
+const shouldNoIndex = (noIndex && !isLocalizedHomepage) || isParameterizedBookingUrl;
 
 const homepageSeo: Record<string, { title: string; description: string }> = {
   en: { title: 'Banggai Islands Travel Guide & Private Trips | Banggai Wonderland', description: 'Discover the Banggai Islands in Central Sulawesi with private trips to Paisu Pok, Piala Waterfall, Pulo Dua, Kamumu and other hidden destinations around Luwuk and Banggai.' },
