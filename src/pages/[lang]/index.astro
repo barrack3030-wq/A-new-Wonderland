@@ -53,7 +53,7 @@ const homeSeo = {
 const seo = homeSeo[lang as keyof typeof homeSeo] || homeSeo.en;
 ---
 
-<BaseLayout title={seo.title} description={seo.description} seoTitle={seo.title} seoDescription={seo.description}>
+<BaseLayout title={seo.title} description={seo.description} seoTitle={seo.title} seoDescription={seo.description} noIndex={false}>
   <main class="home-page">
     <section id="home" class="bw-hero">
       <div id="hero-media" class="bw-hero-media" aria-hidden="true">
