@@ -1,5 +1,8 @@
 export function GET() {
   const body = [
+    'User-agent: OAI-SearchBot',
+    'Allow: /',
+    '',
     'User-agent: Baiduspider',
     'Allow: /',
     '',
