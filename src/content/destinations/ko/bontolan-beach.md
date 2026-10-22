@@ -22,6 +22,10 @@ travelTips:
   - "현지 운영자에게 장비 대여와 당일 해상 상태를 문의하세요."
   - "산호를 밟거나 만지지 말고 쓰레기를 남기지 마세요."
 youtube: "https://www.youtube.com/watch?v=LEO-F982E6g"
+relatedDestinations:
+  - "oyama-beach"
+  - "long-beach"
+  - "paisu-pok-lake"
 ---
 
 # 본톨란 비치: 방가이섬에서 즐기는 해안과 스노클링
