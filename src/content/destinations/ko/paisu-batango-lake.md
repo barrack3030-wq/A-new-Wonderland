@@ -24,6 +24,10 @@ travelTips:
   - "마을 주민도 이용하는 수원이라는 점을 기억하세요."
   - "물을 오염시키거나 쓰레기를 남기지 마세요."
 youtube: "https://www.youtube.com/watch?v=7RTzL8yKLM4"
+relatedDestinations:
+  - "paisu-pok-lake"
+  - "poganda-beach"
+  - "kawalu-bay"
 ---
 
 # 파이수 바탕고: 조수에 따라 달라지는 해안 샘

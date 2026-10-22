@@ -24,6 +24,10 @@ travelTips:
   - "출발 당일 날씨와 파도 상태를 확인하세요."
   - "카왈루 비치(팡기마나 지역)와 카왈루 베이는 서로 다른 장소입니다."
 youtube: "https://www.youtube.com/watch?v=1LqWUDwkxTQ"
+relatedDestinations:
+  - "paisu-pok-lake"
+  - "paisu-batango-lake"
+  - "poganda-beach"
 ---
 
 # 카왈루 베이 여행 가이드: 맑은 바다와 맹그로브 풍경
