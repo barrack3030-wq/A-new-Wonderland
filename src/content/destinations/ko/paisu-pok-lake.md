@@ -23,6 +23,10 @@ travelTips:
   - "수영 전 현지 안전 안내를 확인하고 지정된 규칙을 따르세요."
   - "마을과 호수 주변에 쓰레기를 남기지 마세요."
 youtube: "https://www.youtube.com/watch?v=2vtdbJRPZMw"
+relatedDestinations:
+  - "paisu-batango-lake"
+  - "poganda-beach"
+  - "kawalu-bay"
 ---
 
 # 파이수폭: 펠렝섬의 맑은 담수호
