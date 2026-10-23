@@ -2,9 +2,7 @@ export const languages = {
   id: 'ID',
   en: 'EN',
   es: 'ES',
-  fr: 'FR',
-  zh: '中文',
-  ko: 'KO'
+  fr: 'FR'
 };
 
 export const defaultLang = 'id';
