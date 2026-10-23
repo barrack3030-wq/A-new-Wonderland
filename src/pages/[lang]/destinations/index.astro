@@ -47,3 +47,78 @@ const pageCopy = {
     guide: 'Commencez par Paisu Pok et son lac d’eau douce limpide, découvrez la cascade de Piala près de Luwuk, ou ajoutez Pulo Dua et d’autres sites côtiers à un voyage plus long.',
     cta: 'Vous préparez un voyage ? Découvrez nos circuits privés.'
   },
+
+
+} as const;
+
+const copy = pageCopy[lang as keyof typeof pageCopy] || pageCopy.en;
+
+const breadcrumbItems = [
+  { name: lang === 'id' ? 'Beranda' : 'Home', url: `/${lang}/` },
+  { name: copy.title, url: `/${lang}/destinations/` }
+];
+
+const schema = {
+  '@context': 'https://schema.org',
+  '@type': 'CollectionPage',
+  name: copy.title,
+  description: copy.description,
+  url: new URL(`/${lang}/destinations/`, Astro.site).href,
+  mainEntity: {
+    '@type': 'ItemList',
+    numberOfItems: destinations.length,
+    itemListElement: destinations.map((destination, index) => {
+      const [, ...slugParts] = destination.slug.split('/');
+      return {
+        '@type': 'ListItem',
+        position: index + 1,
+        name: destination.data.title,
+        url: new URL(`/${lang}/destinations/${slugParts.join('/')}/`, Astro.site).href
+      };
+    })
+  }
+};
+---
+
+<BaseLayout
+  title={`${copy.title} | Banggai Wonderland`}
+  description={copy.description}
+  seoTitle={`${copy.title} | Banggai Wonderland`}
+  seoDescription={copy.description}
+  schema={schema}
+  noIndex={destinations.length === 0}
+>
+  <div class="bg-sand-50 pt-32 pb-20 min-h-screen">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <Breadcrumb items={breadcrumbItems} />
+
+      <header class="mb-12 max-w-3xl">
+        <p class="text-turquoise-600 text-xs font-bold tracking-[0.22em] uppercase mb-4">Banggai Islands · Indonesia</p>
+        <h1 class="font-serif text-4xl md:text-6xl font-medium tracking-[-0.035em] text-ocean-900 mb-5">{copy.title}</h1>
+        <p class="text-lg text-ocean-600 leading-relaxed mb-4">{copy.intro}</p>
+        <p class="text-base text-ocean-600 leading-relaxed">{copy.guide}</p>
+      </header>
+
+      {destinations.length > 0 ? (
+        <>
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {destinations.map(destination => (
+              <DestinationCard destination={destination} />
+            ))}
+          </div>
+
+          <div class="mt-14 pt-8 border-t border-sand-200 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+            <p class="text-sm text-ocean-600 max-w-xl">{copy.cta}</p>
+            <a href={`/${lang}/jasa-tour-luwuk-banggai/#packages`} class="inline-flex items-center justify-center rounded-full bg-ocean-900 text-white px-6 py-3 text-sm font-semibold hover:bg-ocean-800 transition-colors">{t('btn.view_packages')} <span class="ml-2">→</span></a>
+          </div>
+        </>
+      ) : (
+        <div class="text-center py-20 bg-white rounded-2xl border border-sand-200">
+          <p class="text-ocean-600">No destinations found for this language yet.</p>
+        </div>
+      )}
+    </div>
+  </div>
+
+  <WhatsAppButton />
+</BaseLayout>

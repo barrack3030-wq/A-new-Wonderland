@@ -83,3 +83,135 @@ const copy = {
     approachTitle: 'Notre Approche', local: 'Connaissance Locale', localText: 'Découvrez des lieux et expériences issus d’une véritable connaissance locale.', private: 'Privé & Personnel', privateText: 'Des voyages pour particuliers, couples, familles et petits groupes qui apprécient la flexibilité.', authentic: 'Expériences Authentiques', authenticText: 'Banggai est plus que ses paysages. Découvrez ses habitants, sa culture et sa vie quotidienne.', thoughtful: 'Voyages Soigneusement Conçus', thoughtfulText: 'Nous voulons rendre votre découverte de Banggai simple, confortable et mémorable.',
     welcomeTitle: 'Bienvenue à Banggai', welcome: 'Banggai reste encore relativement méconnu du monde — et c’est ce qui fait une partie de son charme. Si vous cherchez une destination loin des itinéraires les plus connus d’Indonésie, découvrez Banggai avec quelqu’un qui le connaît de l’intérieur.', cta: 'Banggai, vécu localement.'
   },
+
+
+};
+
+const t = copy[lang as keyof typeof copy] ?? copy.en;
+const breadcrumbItems = [
+  { name: lang === 'id' ? 'Beranda' : 'Home', url: `/${lang}/` },
+  { name: t.title, url: `/${lang}/about/` }
+];
+---
+
+<BaseLayout
+  title={`${t.title} | Banggai Wonderland`}
+  description={t.p1}
+  seoTitle={lang === 'en' ? 'About Banggai Wonderland | Banggai Islands, Indonesia' : undefined}
+>
+  <section class="relative min-h-[42vh] flex items-center justify-center pt-20 overflow-hidden bg-ocean-950">
+    <div class="absolute inset-0 bg-gradient-to-br from-ocean-950 via-ocean-800 to-ocean-600"></div>
+    <div class="absolute inset-0 bg-[radial-gradient(circle_at_70%_30%,rgba(45,212,191,0.14),transparent_45%)]"></div>
+    <div class="relative z-10 max-w-4xl mx-auto text-center px-5 py-20">
+      <p class="text-turquoise-300 uppercase tracking-[0.28em] text-xs md:text-sm font-semibold mb-5">Banggai Wonderland</p>
+      <h1 class="text-4xl md:text-6xl lg:text-7xl font-serif font-bold text-white mb-5">{t.title}</h1>
+      <p class="text-ocean-100 text-lg md:text-xl tracking-wide">{t.subtitle}</p>
+    </div>
+  </section>
+
+  <section class="py-16 md:py-24 bg-sand-50">
+    <div class="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8">
+      <div class="mb-12"><Breadcrumb items={breadcrumbItems} /></div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-14 lg:gap-20 items-center">
+        <div>
+          <p class="text-turquoise-600 uppercase tracking-[0.2em] text-xs font-bold mb-4">Banggai Wonderland</p>
+          <h2 class="font-serif text-3xl md:text-4xl lg:text-5xl font-bold text-ocean-950 leading-tight mb-7">{t.storyTitle}</h2>
+          <div class="space-y-5 text-ocean-700 text-lg leading-relaxed">
+            <p>{t.p1}</p><p>{t.p2}</p>
+          </div>
+        </div>
+
+        <div class="relative">
+          <div class="absolute -inset-3 rounded-[2rem] border border-turquoise-200 rotate-2"></div>
+          <div class="relative rounded-[1.75rem] overflow-hidden shadow-2xl bg-ocean-100 border border-white/70">
+            {aboutImages.length > 0 ? (
+              <div id="about-slider" class="relative aspect-[4/3] w-full bg-ocean-50 group">
+                {aboutImages.map((image, index) => (
+                  <div class={`about-slide absolute inset-0 transition-opacity duration-700 ${index === 0 ? 'opacity-100 z-10' : 'opacity-0 z-0'}`} data-slide={index}>
+                    <img src={image} alt={`${t.title} - Banggai Wonderland ${index + 1}`} class="w-full h-full object-cover" loading={index === 0 ? 'eager' : 'lazy'} decoding="async" />
+                  </div>
+                ))}
+                {aboutImages.length > 1 && (
+                  <>
+                    <button type="button" class="about-prev absolute left-4 top-1/2 -translate-y-1/2 z-20 w-11 h-11 rounded-full bg-black/35 hover:bg-black/55 text-white backdrop-blur-sm flex items-center justify-center transition" aria-label="Previous image">‹</button>
+                    <button type="button" class="about-next absolute right-4 top-1/2 -translate-y-1/2 z-20 w-11 h-11 rounded-full bg-black/35 hover:bg-black/55 text-white backdrop-blur-sm flex items-center justify-center transition" aria-label="Next image">›</button>
+                    <div class="absolute bottom-4 left-1/2 -translate-x-1/2 z-20 flex gap-2">
+                      {aboutImages.map((_, index) => <button type="button" class={`about-dot w-2.5 h-2.5 rounded-full transition-all ${index === 0 ? 'bg-white scale-110' : 'bg-white/50'}`} data-dot={index} aria-label={`Go to image ${index + 1}`}></button>)}
+                    </div>
+                  </>
+                )}
+              </div>
+            ) : (
+              <div class="aspect-[4/3] flex items-center justify-center text-ocean-400 p-8 text-center">Upload About Us images to <code class="ml-1">src/assets/about/</code></div>
+            )}
+          </div>
+        </div>
+      </div>
+
+      <div class="mt-24 grid grid-cols-1 lg:grid-cols-[0.8fr_1.2fr] gap-12 items-start">
+        <div class="bg-ocean-950 rounded-[2rem] p-8 md:p-10 text-white shadow-xl">
+          <p class="text-turquoise-300 uppercase tracking-[0.2em] text-xs font-bold mb-4">{t.founderTitle}</p>
+          <h2 class="font-serif text-3xl md:text-4xl font-bold mb-2">{t.founderName}</h2>
+          <p class="text-ocean-200 font-medium">{t.founderRole}</p>
+          <div class="w-14 h-px bg-turquoise-400 my-7"></div>
+          <p class="text-ocean-100 leading-relaxed">{t.founder}</p>
+        </div>
+        <div class="lg:pt-5">
+          <h2 class="font-serif text-3xl md:text-4xl font-bold text-ocean-950 mb-6">{t.beyondTitle}</h2>
+          <p class="text-ocean-700 text-lg leading-relaxed mb-6">{t.beyond}</p>
+          <p class="text-ocean-700 text-lg leading-relaxed">{t.founder2}</p>
+        </div>
+      </div>
+
+      <div class="mt-24">
+        <div class="max-w-2xl mb-12">
+          <p class="text-turquoise-600 uppercase tracking-[0.2em] text-xs font-bold mb-4">Banggai Wonderland</p>
+          <h2 class="font-serif text-3xl md:text-4xl font-bold text-ocean-950">{t.approachTitle}</h2>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+          {[
+            [t.local, t.localText], [t.private, t.privateText], [t.authentic, t.authenticText], [t.thoughtful, t.thoughtfulText]
+          ].map(([title, text]) => (
+            <div class="rounded-2xl bg-white border border-sand-200 p-7 shadow-sm hover:shadow-md transition-shadow">
+              <div class="w-10 h-10 rounded-full bg-turquoise-50 flex items-center justify-center mb-5 text-turquoise-700 font-serif font-bold">✓</div>
+              <h3 class="font-serif text-xl font-bold text-ocean-950 mb-2">{title}</h3>
+              <p class="text-ocean-600 leading-relaxed">{text}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      <div class="mt-24 rounded-[2rem] bg-gradient-to-br from-ocean-900 to-ocean-950 px-7 py-14 md:px-14 md:py-20 text-center shadow-xl">
+        <p class="text-turquoise-300 uppercase tracking-[0.25em] text-xs font-bold mb-5">{t.welcomeTitle}</p>
+        <h2 class="font-serif text-3xl md:text-5xl font-bold text-white mb-6">{t.cta}</h2>
+        <p class="max-w-3xl mx-auto text-ocean-100 text-lg leading-relaxed">{t.welcome}</p>
+      </div>
+    </div>
+  </section>
+
+  <WhatsAppButton />
+</BaseLayout>
+
+{aboutImages.length > 1 && (
+  <script is:inline>
+    const slider = document.getElementById('about-slider');
+    if (slider) {
+      let current = 0;
+      const slides = Array.from(slider.querySelectorAll('.about-slide'));
+      const dots = Array.from(slider.querySelectorAll('.about-dot'));
+      const show = (index) => {
+        current = (index + slides.length) % slides.length;
+        slides.forEach((s, i) => { s.classList.toggle('opacity-100', i === current); s.classList.toggle('opacity-0', i !== current); s.classList.toggle('z-10', i === current); s.classList.toggle('z-0', i !== current); });
+        dots.forEach((d, i) => { d.classList.toggle('bg-white', i === current); d.classList.toggle('scale-110', i === current); d.classList.toggle('bg-white/50', i !== current); });
+      };
+      let timer = setInterval(() => show(current + 1), 5000);
+      const restart = () => { clearInterval(timer); timer = setInterval(() => show(current + 1), 5000); };
+      slider.querySelector('.about-prev')?.addEventListener('click', () => { show(current - 1); restart(); });
+      slider.querySelector('.about-next')?.addEventListener('click', () => { show(current + 1); restart(); });
+      dots.forEach((d, i) => d.addEventListener('click', () => { show(i); restart(); }));
+      slider.addEventListener('mouseenter', () => clearInterval(timer));
+      slider.addEventListener('mouseleave', restart);
+    }
+  </script>
+)}

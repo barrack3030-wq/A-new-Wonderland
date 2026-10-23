@@ -3,6 +3,8 @@ export const languages = {
   en: 'EN',
   es: 'ES',
   fr: 'FR',
+
+
 };
 
 export const defaultLang = 'id';
@@ -286,3 +288,12 @@ export const uiTranslations = {
     'home.featured.blog.desc': 'Découvrez des conseils et des histoires passionnantes pour votre prochaine aventure.',
     'destinations.access': 'Accès et Transport',
   },
+
+
+} as const;
+
+export function useTranslations(lang: keyof typeof uiTranslations) {
+  return function t(key: keyof typeof uiTranslations[typeof defaultLang]) {
+    return uiTranslations[lang][key] || uiTranslations[defaultLang][key];
+  }
+}
