@@ -67,7 +67,7 @@ const youtubeUrl = entry.data.youtube;
 const youtubeId = youtubeUrl?.match(/(?:youtube\.com\/watch\?v=|youtu\.be\/|youtube\.com\/embed\/)([^&?/]+)/)?.[1] || null;
 
 const breadcrumbItems = [
-  { name: lang === 'ko' ? '홈' : lang === 'id' ? 'Beranda' : 'Home', url: `/${lang}/` },
+  { name: lang === 'id' ? 'Beranda' : 'Home', url: `/${lang}/` },
   { name: t('nav.destinations'), url: `/${lang}/destinations/` },
   { name: entry.data.title, url: `/${lang}/destinations/${slug}/` }
 ];
@@ -86,47 +86,3 @@ const labels = ({
   en: { read:'Read Full Article', hide:'Hide Full Article', related:'Related Destinations', packages:'Related Private Trips', articles:'Related Travel Guides', plan:'Plan This Trip', video:'Watch Video', service:'Luwuk Banggai Tour Services' },
   es: { read:'Leer el artículo completo', hide:'Cerrar artículo', related:'Destinos relacionados', packages:'Viajes privados relacionados', articles:'Guías de viaje relacionadas', plan:'Planifica este viaje', video:'Ver vídeo', service:'Servicios de tour Luwuk Banggai' },
   fr: { read:'Lire l’article complet', hide:'Réduire l’article', related:'Destinations similaires', packages:'Circuits privés associés', articles:'Guides de voyage associés', plan:'Planifier ce voyage', video:'Voir la vidéo', service:'Services de tour à Luwuk Banggai' },
-  zh: { read:'阅读完整文章', hide:'收起文章', related:'相关目的地', packages:'相关私人旅行', articles:'相关旅行指南', plan:'规划这次旅行', video:'观看视频', service:'Luwuk Banggai 旅游服务' },
-  ko: { read:'전체 기사 읽기', hide:'기사 접기', related:'관련 여행지', packages:'관련 프라이빗 투어', articles:'관련 여행 가이드', plan:'이 여행 계획하기', video:'동영상 보기', service:'루욱 방가이 투어 서비스' }
-} as Record<string, any>)[lang as string] || { read:'Read Full Article', hide:'Hide Full Article', related:'Related Destinations', packages:'Related Private Trips', articles:'Related Travel Guides', plan:'Plan This Trip', video:'Watch Video', service:'Luwuk Banggai Tour Services' };
----
-
-<BaseLayout title={`${entry.data.title} | Banggai Wonderland`} description={entry.data.description} seoTitle={entry.data.seoTitle} seoDescription={entry.data.seoDescription} ogImage={entry.data.image} imageAlt={entry.data.imageAlt} schema={schema}>
-  <section class="relative h-[60vh] min-h-[400px] flex items-end pb-16 pt-32">
-    <div class="absolute inset-0 z-0"><img src={entry.data.image} alt={entry.data.imageAlt || entry.data.title} class="w-full h-full object-cover"/><div class="absolute inset-0 bg-gradient-to-t from-ocean-900 via-ocean-900/60 to-transparent"></div></div>
-    <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
-      <Breadcrumb items={breadcrumbItems}/>
-      <div class="mt-4"><span class="inline-block bg-turquoise-500 text-ocean-900 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wide mb-4">{entry.data.category}</span><h1 class="text-4xl md:text-5xl lg:text-6xl font-serif font-bold text-white mb-4">{entry.data.title}</h1><div class="flex items-center text-ocean-100 text-sm md:text-base">{entry.data.location}</div></div>
-    </div>
-  </section>
-
-  <section class="py-16 bg-white"><div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"><div class="flex flex-col lg:flex-row gap-12">
-    <div class="lg:w-2/3">
-      <article class="relative">
-        <div id="destination-article" class="prose prose-lg prose-ocean max-w-none prose-headings:font-serif prose-headings:text-ocean-900 prose-p:text-ocean-700 prose-p:leading-relaxed prose-a:text-turquoise-600 prose-img:rounded-2xl prose-img:shadow-md max-h-[760px] overflow-hidden transition-[max-height] duration-700 ease-in-out"><Content/></div>
-        <div id="article-fade" class="absolute left-0 right-0 bottom-0 h-40 bg-gradient-to-t from-white via-white/90 to-transparent pointer-events-none"></div>
-        <div class="relative flex justify-center -mt-2 pt-8"><button id="article-toggle" type="button" aria-expanded="false" aria-controls="destination-article" data-expanded-label={labels.hide} class="inline-flex items-center gap-2 rounded-full bg-ocean-900 px-6 py-3 text-sm font-bold text-white shadow-md hover:bg-ocean-800"><span id="article-toggle-label">{labels.read}</span><span id="article-toggle-icon" class="transition-transform">⌄</span></button></div>
-      </article>
-
-      {youtubeId && <section class="mt-12"><h2 class="font-serif text-3xl font-bold text-ocean-900 mb-6">{labels.video}</h2><div class="relative aspect-video overflow-hidden rounded-2xl shadow-lg bg-ocean-900"><iframe src={`https://www.youtube.com/embed/${youtubeId}?rel=0`} title={`${entry.data.title} video`} loading="lazy" class="absolute inset-0 w-full h-full" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div></section>}
-
-      {relatedArticles.length > 0 && <section class="mt-14 pt-10 border-t border-sand-200"><h2 class="font-serif text-3xl font-bold text-ocean-900 mb-6">{labels.articles}</h2><div class="grid sm:grid-cols-3 gap-5">{relatedArticles.map(post => { const parts=post.slug.split('/').slice(1).join('/'); return <a href={`/${lang}/blog/${parts}/`} class="block rounded-2xl border border-sand-200 bg-sand-50 p-5 hover:shadow-lg transition-shadow"><p class="text-xs text-turquoise-600 font-semibold mb-2">Travel Guide</p><h3 class="font-serif text-lg font-bold text-ocean-900">{post.data.title}</h3><p class="mt-2 text-sm text-ocean-600 line-clamp-3">{post.data.description}</p></a>; })}</div></section>}
-
-      {relatedPackages.length > 0 && <section class="mt-14 pt-10 border-t border-sand-200"><h2 class="font-serif text-3xl font-bold text-ocean-900 mb-6">{labels.packages}</h2><div class="grid sm:grid-cols-3 gap-5">{relatedPackages.map(pkg => { const parts=pkg.slug.split('/').slice(1).join('/'); return <a href={`/${lang}/packages/${parts}/`} class="block rounded-2xl border border-sand-200 bg-sand-50 p-5 hover:shadow-lg transition-shadow"><p class="text-xs text-turquoise-600 font-semibold mb-2">{pkg.data.duration}</p><h3 class="font-serif text-lg font-bold text-ocean-900">{pkg.data.title}</h3><p class="mt-2 text-sm text-ocean-600 line-clamp-3">{pkg.data.description}</p></a>; })}</div></section>}
-
-      {relatedDestinations.length > 0 && <section class="mt-14 pt-10 border-t border-sand-200"><h2 class="font-serif text-3xl font-bold text-ocean-900 mb-6">{labels.related}</h2><div class="grid sm:grid-cols-2 gap-5">{relatedDestinations.map(destination => { const parts=destination.slug.split('/').slice(1).join('/'); return <a href={`/${lang}/destinations/${parts}/`} class="group block rounded-2xl overflow-hidden border border-sand-200 bg-sand-50 hover:shadow-lg transition-shadow"><img src={destination.data.image} alt={destination.data.imageAlt || destination.data.title} loading="lazy" class="w-full h-40 object-cover group-hover:scale-105 transition-transform duration-500"/><div class="p-4"><h3 class="font-serif text-lg font-bold text-ocean-900 group-hover:text-turquoise-600">{destination.data.title}</h3><p class="mt-1 text-sm text-ocean-600 line-clamp-2">{destination.data.description}</p></div></a>; })}</div></section>}
-    </div>
-
-    <aside class="lg:w-1/3 space-y-8">
-      {entry.data.highlights?.length > 0 && <div class="bg-sand-50 p-6 rounded-2xl border border-sand-200"><h2 class="font-serif text-xl font-bold text-ocean-900 mb-4">Highlights</h2><ul class="space-y-3">{entry.data.highlights.map(item=><li class="flex items-start text-sm text-ocean-700"><span class="text-turquoise-500 mr-3" aria-hidden="true">✓</span>{item}</li>)}</ul></div>}
-      {entry.data.bestTime && <div class="bg-sand-50 p-6 rounded-2xl border border-sand-200"><h2 class="font-serif text-xl font-bold text-ocean-900 mb-4">Best Time to Visit</h2><p class="text-sm text-ocean-700">{entry.data.bestTime}</p></div>}
-      {accessText && <div class="bg-sand-50 p-6 rounded-2xl border border-sand-200"><h2 class="font-serif text-xl font-bold text-ocean-900 mb-4">{t('destinations.access') || 'Access & Transportation'}</h2><p class="text-sm leading-relaxed text-ocean-700">{accessText}</p></div>}
-      <div class="bg-ocean-800 p-8 rounded-2xl shadow-xl text-center"><h2 class="font-serif text-2xl font-bold text-white mb-4">{labels.plan}</h2><p class="text-ocean-50 text-sm mb-6">Explore {entry.data.title} as part of a private trip around the Banggai Islands.</p><a href={`/${lang}/book/?destination=${encodeURIComponent(entry.data.title)}`} class="block w-full bg-turquoise-500 text-ocean-900 px-6 py-3 rounded-full font-bold text-sm hover:bg-turquoise-400">{t('btn.book')}</a><a href={`/${lang}/jasa-tour-luwuk-banggai/`} class="mt-4 inline-flex text-sm font-semibold text-white/85 underline underline-offset-4 hover:text-white">{labels.service} →</a></div>
-    </aside>
-  </div></div></section>
-  <WhatsAppButton/>
-  <script>
-    const toggle=document.getElementById('article-toggle'); const article=document.getElementById('destination-article'); const fade=document.getElementById('article-fade'); const label=document.getElementById('article-toggle-label'); const icon=document.getElementById('article-toggle-icon');
-    if(toggle&&article&&fade&&label&&icon){const expandedLabel=toggle.getAttribute('data-expanded-label')||'Hide Full Article';const collapsedLabel=label.textContent||'Read Full Article';toggle.addEventListener('click',()=>{const next=toggle.getAttribute('aria-expanded')!=='true';toggle.setAttribute('aria-expanded',String(next));article.style.maxHeight=next?`${article.scrollHeight}px`:'';fade.classList.toggle('hidden',next);icon.classList.toggle('rotate-180',next);label.textContent=next?expandedLabel:collapsedLabel;if(!next)toggle.scrollIntoView({behavior:'smooth',block:'center'});});}
-  </script>
-</BaseLayout>

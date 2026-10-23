@@ -2,9 +2,9 @@ const OPENAI_MODEL='gpt-5.6-luna';
 const OPENAI_URL='https://api.openai.com/v1/responses';
 const WIKIMEDIA_API='https://commons.wikimedia.org/w/api.php';
 const DEFAULT_IMAGE='/images/Poganda-Beach-Banggai-IndonesiaJuara-Trip.webp';
-const LANGUAGES={id:'Indonesian',en:'English',es:'Spanish',fr:'French',zh:'Chinese'};
-const TARGET_LANGUAGES={en:'English',es:'Spanish',fr:'French',zh:'Chinese'};
-const MANUAL_TARGET_LANGUAGES={en:'English',es:'Spanish',zh:'Chinese',fr:'French'};
+const LANGUAGES={id:'Indonesian',en:'English',es:'Spanish',fr:'French'};
+const TARGET_LANGUAGES={en:'English',es:'Spanish',fr:'French'};
+const MANUAL_TARGET_LANGUAGES={en:'English',es:'Spanish',fr:'French'};
 const MAX_RETRIES=4;
 const BATCH_SIZE=2;
 
@@ -12,12 +12,6 @@ function doGet(){return jsonResponse({ok:true,service:'Banggai Wonderland CMS',v
 function doPost(e){try{
   if(!e||!e.postData||!e.postData.contents)throw new Error('Request data tidak ditemukan.');
   const data=JSON.parse(e.postData.contents);
-  if(data.action==='chatCreate')return jsonResponse({ok:true,conversation:createChatConversation(data)});
-  if(data.action==='chatSend')return jsonResponse({ok:true,message:sendChatMessage(data)});
-  if(data.action==='chatGet'){if(data.admin===true){checkAccessKey(data.accessKey);return jsonResponse({ok:true,conversation:adminGetConversation(data)});}return jsonResponse({ok:true,conversation:getChatConversation(data)});}
-  if(data.action==='chatList'){checkAccessKey(data.accessKey);return jsonResponse({ok:true,conversations:listChatConversations()});}
-  if(data.action==='chatReply'){checkAccessKey(data.accessKey);return jsonResponse({ok:true,message:adminReplyChat(data)});}
-  if(data.action==='chatStatus'){checkAccessKey(data.accessKey);return jsonResponse({ok:true,conversation:updateChatStatus(data)});}
   checkAccessKey(data.accessKey);
   if(data.action==='searchImage')return jsonResponse({ok:true,image:findRelevantImage(String(data.topic||''))});
   if(data.action==='uploadImage')return jsonResponse({ok:true,image:uploadImage(data)});
@@ -25,113 +19,22 @@ function doPost(e){try{
   if(data.action==='getBlog')return jsonResponse({ok:true,blog:getBlog(data.path)});
   if(data.action==='updateBlog')return jsonResponse({ok:true,blog:updateBlog(data.path,data.article)});
   if(data.action==='translateManual')return jsonResponse({ok:true,article:translateSingleArticle(data)});
-  if(data.action==='publishManual'){const files=publishManualArticles(data.articles);return jsonResponse({ok:true,message:'5 versi artikel manual berhasil dipublish ke GitHub.',files:files});}
+  if(data.action==='publishManual'){const files=publishManualArticles(data.articles);return jsonResponse({ok:true,message:'4 versi artikel manual berhasil dipublish ke GitHub.',files:files});}
   if(data.action==='translate')return jsonResponse({ok:true,articles:translateArticle(data)});
-  if(data.action==='publish'){if(!data.articles||typeof data.articles!=='object')throw new Error('Data artikel tidak ditemukan.');const result=publishArticles(data.articles);return jsonResponse({ok:true,message:'5 versi artikel berhasil dipublish ke GitHub.',files:result.files});}
+  if(data.action==='publish'){if(!data.articles||typeof data.articles!=='object')throw new Error('Data artikel tidak ditemukan.');const result=publishArticles(data.articles);return jsonResponse({ok:true,message:'4 versi artikel berhasil dipublish ke GitHub.',files:result.files});}
   throw new Error('Action tidak dikenal.');
 }catch(error){return jsonResponse({ok:false,error:error&&error.message?error.message:String(error)});}}
 
 function checkAccessKey(value){const expected=PropertiesService.getScriptProperties().getProperty('CMS_ACCESS_KEY');if(!expected)throw new Error('CMS_ACCESS_KEY belum diset di Script Properties.');if(!value||value!==expected)throw new Error('Access key tidak valid.');}
 function getOpenAIConfig(){const key=PropertiesService.getScriptProperties().getProperty('OPENAI_API_KEY');if(!key)throw new Error('OPENAI_API_KEY belum diset di Script Properties.');return{key:key,model:OPENAI_MODEL,url:OPENAI_URL};}
 
-function getChatSpreadsheet_(){
-  const props=PropertiesService.getScriptProperties();
-  let id=props.getProperty('KOREAN_CHAT_SPREADSHEET_ID');
-  if(id){
-    try{return SpreadsheetApp.openById(id);}
-    catch(e){props.deleteProperty('KOREAN_CHAT_SPREADSHEET_ID');}
-  }
-  const ss=SpreadsheetApp.create('Banggai Wonderland — Korean Chat');
-  props.setProperty('KOREAN_CHAT_SPREADSHEET_ID',ss.getId());
-  const conversations=ss.getSheets()[0];
-  conversations.setName('Conversations');
-  conversations.getRange(1,1,1,8).setValues([['conversation_id','visitor_id','name','kakao_id','email','status','created_at','updated_at']]);
-  conversations.setFrozenRows(1);
-  const messages=ss.insertSheet('Messages');
-  messages.getRange(1,1,1,5).setValues([['message_id','conversation_id','sender','message','created_at']]);
-  messages.setFrozenRows(1);
-  return ss;
-}
-function chatSheet_(name){return getChatSpreadsheet_().getSheetByName(name);}
-function chatId_(){return Utilities.getUuid().replace(/-/g,'').substring(0,16);}
-function cleanChatText_(value,max){return String(value==null?'':value).trim().substring(0,max);}
-function validateChatVisitor_(data){
-  if(String(data.language||'ko').toLowerCase()!=='ko')throw new Error('이 채팅은 한국어 페이지에서만 사용할 수 있습니다.');
-  if(String(data.website||'').trim())throw new Error('요청을 처리할 수 없습니다.');
-}
-function createChatConversation(data){
-  validateChatVisitor_(data);
-  const visitorId=cleanChatText_(data.visitor_id,80);
-  const message=cleanChatText_(data.message,4000);
-  if(!visitorId)throw new Error('방문자 ID가 없습니다.');
-  if(!message)throw new Error('문의 내용을 입력해 주세요.');
-  const now=new Date(),id=chatId_(),ss=getChatSpreadsheet_();
-  ss.getSheetByName('Conversations').appendRow([id,visitorId,cleanChatText_(data.name,100),cleanChatText_(data.kakao_id,100),cleanChatText_(data.email,160),'open',now,now]);
-  ss.getSheetByName('Messages').appendRow([chatId_(),id,'visitor',message,now]);
-  return{conversation_id:id,status:'open',messages:[{sender:'visitor',message:message,created_at:now.toISOString()}]};
-}
-function getChatConversation(data){
-  validateChatVisitor_(data);
-  const id=cleanChatText_(data.conversation_id,80),visitorId=cleanChatText_(data.visitor_id,80);
-  if(!id||!visitorId)throw new Error('대화를 찾을 수 없습니다.');
-  const ss=getChatSpreadsheet_(),cs=ss.getSheetByName('Conversations'),rows=cs.getDataRange().getValues(),found=rows.slice(1).find(r=>String(r[0])===id&&String(r[1])===visitorId);
-  if(!found)throw new Error('대화를 찾을 수 없습니다.');
-  const ms=ss.getSheetByName('Messages'),mrows=ms.getDataRange().getValues().slice(1).filter(r=>String(r[1])===id).map(r=>({id:String(r[0]),sender:String(r[2]),message:String(r[3]),created_at:new Date(r[4]).toISOString()}));
-  return{conversation_id:id,status:String(found[5]||'open'),name:String(found[2]||''),messages:mrows};
-}
-function sendChatMessage(data){
-  validateChatVisitor_(data);
-  const id=cleanChatText_(data.conversation_id,80),visitorId=cleanChatText_(data.visitor_id,80),message=cleanChatText_(data.message,4000);
-  if(!id||!visitorId||!message)throw new Error('문의 내용을 입력해 주세요.');
-  const ss=getChatSpreadsheet_(),cs=ss.getSheetByName('Conversations'),rows=cs.getDataRange().getValues(),rowIndex=rows.findIndex((r,i)=>i>0&&String(r[0])===id&&String(r[1])===visitorId);
-  if(rowIndex<1)throw new Error('대화를 찾을 수 없습니다.');
-  if(String(rows[rowIndex][5])==='closed')throw new Error('이 상담은 종료되었습니다. 새 상담을 시작해 주세요.');
-  const now=new Date(),ms=ss.getSheetByName('Messages');
-  ms.appendRow([chatId_(),id,'visitor',message,now]);
-  cs.getRange(rowIndex+1,8).setValue(now);
-  return{id:id,sender:'visitor',message:message,created_at:now.toISOString()};
-}
-function listChatConversations(){
-  const cs=chatSheet_('Conversations'),rows=cs.getDataRange().getValues().slice(1);
-  return rows.reverse().filter(r=>r[0]).slice(0,100).map(r=>({conversation_id:String(r[0]),visitor_id:String(r[1]),name:String(r[2]||''),kakao_id:String(r[3]||''),email:String(r[4]||''),status:String(r[5]||'open'),created_at:new Date(r[6]).toISOString(),updated_at:new Date(r[7]).toISOString()}));
-}
-function adminGetConversation(data){
-  const id=cleanChatText_(data.conversation_id,80);
-  if(!id)throw new Error('대화를 찾을 수 없습니다.');
-  const ss=getChatSpreadsheet_(),cs=ss.getSheetByName('Conversations'),rows=cs.getDataRange().getValues(),found=rows.slice(1).find(r=>String(r[0])===id);
-  if(!found)throw new Error('대화를 찾을 수 없습니다.');
-  return{conversation_id:id,visitor_id:String(found[1]||''),name:String(found[2]||''),kakao_id:String(found[3]||''),email:String(found[4]||''),status:String(found[5]||'open'),messages:adminGetMessages_(id)};
-}
-function adminGetMessages_(id){
-  const ms=chatSheet_('Messages'),rows=ms.getDataRange().getValues().slice(1);
-  return rows.filter(r=>String(r[1])===id).map(r=>({id:String(r[0]),sender:String(r[2]),message:String(r[3]),created_at:new Date(r[4]).toISOString()}));
-}
-function adminReplyChat(data){
-  const id=cleanChatText_(data.conversation_id,80),message=cleanChatText_(data.message,4000);
-  if(!id||!message)throw new Error('답변 내용을 입력해 주세요.');
-  const ss=getChatSpreadsheet_(),cs=ss.getSheetByName('Conversations'),rows=cs.getDataRange().getValues(),rowIndex=rows.findIndex((r,i)=>i>0&&String(r[0])===id);
-  if(rowIndex<1)throw new Error('대화를 찾을 수 없습니다.');
-  const now=new Date();
-  ss.getSheetByName('Messages').appendRow([chatId_(),id,'admin',message,now]);
-  cs.getRange(rowIndex+1,8).setValue(now);
-  return{id:id,sender:'admin',message:message,created_at:now.toISOString()};
-}
-function updateChatStatus(data){
-  const id=cleanChatText_(data.conversation_id,80),status=String(data.status||'').toLowerCase();
-  if(!id||['open','closed'].indexOf(status)===-1)throw new Error('Status tidak valid.');
-  const cs=chatSheet_('Conversations'),rows=cs.getDataRange().getValues(),rowIndex=rows.findIndex((r,i)=>i>0&&String(r[0])===id);
-  if(rowIndex<1)throw new Error('대화를 찾을 수 없습니다.');
-  cs.getRange(rowIndex+1,6).setValue(status);cs.getRange(rowIndex+1,8).setValue(new Date());
-  return{conversation_id:id,status:status};
-}
-
 function uploadImage(data){let blob,originalName='blog-image.jpg',source='';if(data.dataUrl){const m=String(data.dataUrl).match(/^data:([^;]+);base64,(.+)$/s);if(!m)throw new Error('Format upload foto tidak valid.');const mime=m[1].toLowerCase();if(['image/jpeg','image/png','image/webp','image/gif','image/svg+xml'].indexOf(mime)<0)throw new Error('Format foto harus JPG, PNG, WEBP, GIF atau SVG.');const bytes=Utilities.base64Decode(m[2]);if(bytes.length>8*1024*1024)throw new Error('Ukuran foto maksimal 8 MB.');originalName=String(data.fileName||originalName);blob=Utilities.newBlob(bytes,mime,originalName);}else if(data.imageUrl){source=String(data.imageUrl).trim();if(!/^https?:\/\//i.test(source))throw new Error('Link foto harus dimulai dengan http:// atau https://.');const r=UrlFetchApp.fetch(source,{method:'get',followRedirects:true,muteHttpExceptions:true});if(r.getResponseCode()<200||r.getResponseCode()>=300)throw new Error('Tidak dapat mengambil foto dari link ('+r.getResponseCode()+').');blob=r.getBlob();if(blob.getBytes().length>8*1024*1024)throw new Error('Foto dari link berukuran lebih dari 8 MB.');if(String(blob.getContentType()||'').toLowerCase().indexOf('image/')!==0)throw new Error('Link tersebut tidak mengarah ke file gambar.');originalName=String(blob.getName()||originalName);}else throw new Error('Pilih foto atau masukkan link foto.');const mime=String(blob.getContentType()||'image/jpeg').toLowerCase(),ext=extensionForMime(mime,originalName),base=createSlug(originalName.replace(/\.[^.]+$/,''))||'blog-image',fileName=base+'-'+Utilities.formatDate(new Date(),Session.getScriptTimeZone()||'Asia/Makassar','yyyyMMddHHmmss')+'.'+ext,path='public/images/blog/'+fileName;githubCreateBinaryFile(path,blob.getBytes(),'CMS: Add blog image '+fileName);return{url:'/images/blog/'+fileName,source:source,name:fileName,path:path};}
 function extensionForMime(mime,name){if(mime==='image/jpeg')return'jpg';if(mime==='image/png')return'png';if(mime==='image/webp')return'webp';if(mime==='image/gif')return'gif';if(mime==='image/svg+xml')return'svg';const m=String(name||'').toLowerCase().match(/\.(jpg|jpeg|png|webp|gif|svg)$/);return m?(m[1]==='jpeg'?'jpg':m[1]):'jpg';}
 
 function translateArticle(data){const title=String(data.title||'').trim(),description=String(data.description||'').trim(),content=String(data.content||'').trim();if(!title)throw new Error('Judul artikel wajib diisi.');if(!content)throw new Error('Isi artikel wajib diisi.');if(content.length<300)throw new Error('Isi artikel terlalu pendek. Pastikan artikel lengkap sudah ditempel.');const image=data.image&&data.image.url?data.image:{url:DEFAULT_IMAGE,source:'',alt:'Banggai destination in Indonesia'},pubDate=normalizeDate(data.pubDate||getToday()),cfg=getOpenAIConfig();const articles={id:{title:title,description:description||createPreview(content),seoTitle:String(data.seoTitle||title),seoDescription:String(data.seoDescription||description||createPreview(content)),image:image.url||DEFAULT_IMAGE,imageAlt:String(data.imageAlt||image.alt||''),imageSource:String(image.source||''),author:String(data.author||'Banggai Wonderland'),pubDate:pubDate,tags:normalizeTags(data.tags),content:content,preview:createPreview(content)}};const langs=Object.keys(TARGET_LANGUAGES);for(let start=0;start<langs.length;start+=BATCH_SIZE){const batch=langs.slice(start,start+BATCH_SIZE),requests=batch.map(lang=>translatorRequest(cfg,articles.id,TARGET_LANGUAGES[lang])),responses=UrlFetchApp.fetchAll(requests);responses.forEach(function(response,index){const lang=batch[index],status=response.getResponseCode(),raw=response.getContentText();let dataOut;if(isTransientStatus(status)){dataOut=aiRequestResilient(cfg,buildTranslationPayload(cfg,articles.id,TARGET_LANGUAGES[lang]),'Translate ['+lang+']').data;}else{if(status<200||status>=300)throw new Error('OpenAI error ['+lang+'] ('+status+'): '+raw);try{dataOut=JSON.parse(raw);}catch(e){throw new Error('Respons AI tidak valid untuk '+lang+'.');}}const translated=parseTranslationResponse(dataOut,lang);articles[lang]={title:translated.title||articles.id.title,description:translated.description||articles.id.description,seoTitle:translated.seoTitle||translated.title||articles.id.title,seoDescription:translated.seoDescription||translated.description||articles.id.seoDescription,image:articles.id.image,imageAlt:translated.imageAlt||articles.id.imageAlt,imageSource:articles.id.imageSource,author:'Banggai Wonderland',pubDate:articles.id.pubDate,tags:translated.tags.length?translated.tags:articles.id.tags,content:translated.content,preview:createPreview(translated.content)};});if(start+batch.length<langs.length)Utilities.sleep(300);}return articles;}
 
-function translateSingleArticle(data){const lang=String(data.language||'').trim().toLowerCase();if(!MANUAL_TARGET_LANGUAGES[lang])throw new Error('Bahasa manual tidak didukung. Gunakan en, es, zh, atau fr.');const title=String(data.title||'').trim(),description=String(data.description||'').trim(),content=String(data.content||'').trim();if(!title)throw new Error('Judul artikel sumber wajib diisi.');if(!content)throw new Error('Isi artikel sumber wajib diisi.');if(content.length<300)throw new Error('Isi artikel terlalu pendek. Minimal 300 karakter.');const image=data.image&&data.image.url?data.image:{url:DEFAULT_IMAGE,source:'',alt:'Banggai destination in Indonesia'};const source={title:title,description:description||createPreview(content),seoTitle:String(data.seoTitle||title),seoDescription:String(data.seoDescription||description||createPreview(content)),imageAlt:String(data.imageAlt||image.alt||''),tags:normalizeTags(data.tags),content:content};const cfg=getOpenAIConfig();const translated=parseTranslationResponse(aiRequestResilient(cfg,buildTranslationPayload(cfg,source,MANUAL_TARGET_LANGUAGES[lang]),'Translate manual ['+lang+']').data,lang);return{title:translated.title||title,description:translated.description||source.description,seoTitle:translated.seoTitle||translated.title||title,seoDescription:translated.seoDescription||translated.description||source.seoDescription,image:image.url||DEFAULT_IMAGE,imageAlt:translated.imageAlt||source.imageAlt,imageSource:String(image.source||''),author:'Banggai Wonderland',pubDate:normalizeDate(data.pubDate||getToday()),tags:translated.tags.length?translated.tags:source.tags,content:translated.content,preview:createPreview(translated.content),language:lang};}
-function publishManualArticles(articles){if(!articles||typeof articles!=='object')throw new Error('Data artikel manual tidak ditemukan.');const required=['id','en','es','zh','fr'],first=articles.id;if(!first||!first.title||!first.content)throw new Error('Artikel Bahasa Indonesia tidak ditemukan.');const translationKey=getToday()+'-'+createSlug(first.title).substring(0,70),files=[];required.forEach(function(lang){const article=articles[lang];if(!article||!article.title||!article.content)throw new Error('Artikel bahasa '+lang+' belum lengkap.');const slug=createSlug(article.title);if(!slug)throw new Error('Slug kosong untuk '+lang+'.');const path='src/content/blog/'+lang+'/'+article.pubDate+'-'+slug+'.md';githubCreateFile(path,createMarkdown(article,translationKey),'CMS: Add manual blog article ['+lang+'] '+article.title);files.push({language:lang,path:path,title:article.title});});return files;}
+function translateSingleArticle(data){const lang=String(data.language||'').trim().toLowerCase();if(!MANUAL_TARGET_LANGUAGES[lang])throw new Error('Bahasa manual tidak didukung. Gunakan en, es, atau fr.');const title=String(data.title||'').trim(),description=String(data.description||'').trim(),content=String(data.content||'').trim();if(!title)throw new Error('Judul artikel sumber wajib diisi.');if(!content)throw new Error('Isi artikel sumber wajib diisi.');if(content.length<300)throw new Error('Isi artikel terlalu pendek. Minimal 300 karakter.');const image=data.image&&data.image.url?data.image:{url:DEFAULT_IMAGE,source:'',alt:'Banggai destination in Indonesia'};const source={title:title,description:description||createPreview(content),seoTitle:String(data.seoTitle||title),seoDescription:String(data.seoDescription||description||createPreview(content)),imageAlt:String(data.imageAlt||image.alt||''),tags:normalizeTags(data.tags),content:content};const cfg=getOpenAIConfig();const translated=parseTranslationResponse(aiRequestResilient(cfg,buildTranslationPayload(cfg,source,MANUAL_TARGET_LANGUAGES[lang]),'Translate manual ['+lang+']').data,lang);return{title:translated.title||title,description:translated.description||source.description,seoTitle:translated.seoTitle||translated.title||title,seoDescription:translated.seoDescription||translated.description||source.seoDescription,image:image.url||DEFAULT_IMAGE,imageAlt:translated.imageAlt||source.imageAlt,imageSource:String(image.source||''),author:'Banggai Wonderland',pubDate:normalizeDate(data.pubDate||getToday()),tags:translated.tags.length?translated.tags:source.tags,content:translated.content,preview:createPreview(translated.content),language:lang};}
+function publishManualArticles(articles){if(!articles||typeof articles!=='object')throw new Error('Data artikel manual tidak ditemukan.');const required=['id','en','es','fr'],first=articles.id;if(!first||!first.title||!first.content)throw new Error('Artikel Bahasa Indonesia tidak ditemukan.');const translationKey=getToday()+'-'+createSlug(first.title).substring(0,70),files=[];required.forEach(function(lang){const article=articles[lang];if(!article||!article.title||!article.content)throw new Error('Artikel bahasa '+lang+' belum lengkap.');const slug=createSlug(article.title);if(!slug)throw new Error('Slug kosong untuk '+lang+'.');const path='src/content/blog/'+lang+'/'+article.pubDate+'-'+slug+'.md';githubCreateFile(path,createMarkdown(article,translationKey),'CMS: Add manual blog article ['+lang+'] '+article.title);files.push({language:lang,path:path,title:article.title});});return files;}
 
 function normalizeTags(tags){if(Array.isArray(tags)&&tags.length)return tags.map(String).filter(v=>v.trim()).slice(0,12);if(typeof tags==='string'&&tags.trim())return tags.split(',').map(v=>v.trim()).filter(Boolean).slice(0,12);return['Banggai','Indonesia','Travel'];}
 function translatorRequest(cfg,source,targetLanguage){return{url:cfg.url,method:'post',contentType:'application/json',headers:{Authorization:'Bearer '+cfg.key},payload:JSON.stringify(buildTranslationPayload(cfg,source,targetLanguage)),muteHttpExceptions:true};}
@@ -161,7 +64,7 @@ function githubConfig(){const p=PropertiesService.getScriptProperties(),token=p.
 function githubGetJson(path){const cfg=githubConfig(),url='https://api.github.com/repos/'+cfg.owner+'/'+cfg.repo+'/contents/'+path+'?ref='+encodeURIComponent(cfg.branch),r=UrlFetchApp.fetch(url,{method:'get',headers:{Authorization:'Bearer '+cfg.token,Accept:'application/vnd.github+json','X-GitHub-Api-Version':'2022-11-28'},muteHttpExceptions:true});if(r.getResponseCode()<200||r.getResponseCode()>=300)throw new Error('GitHub read error ('+r.getResponseCode()+'): '+r.getContentText());return JSON.parse(r.getContentText());}
 function githubGetFile(path){const data=githubGetJson(path);if(!data||data.type!=='file'||!data.content)throw new Error('File blog tidak ditemukan.');const bytes=Utilities.base64Decode(String(data.content).replace(/\s/g,''));return{path:path,sha:data.sha,content:Utilities.newBlob(bytes).getDataAsString('UTF-8')};}
 function githubUpdateFile(path,content,message,sha){const cfg=githubConfig(),url='https://api.github.com/repos/'+cfg.owner+'/'+cfg.repo+'/contents/'+path,payload={message:message,content:Utilities.base64Encode(Utilities.newBlob(String(content)).getBytes()),branch:cfg.branch,sha:sha},r=UrlFetchApp.fetch(url,{method:'put',contentType:'application/json',headers:{Authorization:'Bearer '+cfg.token,Accept:'application/vnd.github+json','X-GitHub-Api-Version':'2022-11-28'},payload:JSON.stringify(payload),muteHttpExceptions:true});if(r.getResponseCode()<200||r.getResponseCode()>=300)throw new Error('GitHub update error ('+r.getResponseCode()+'): '+r.getContentText());return JSON.parse(r.getContentText());}
-function blogPathForLanguage(path){const p=String(path||'').replace(/^\/+|\/+$/g,'');if(!/^src\/content\/blog\/(id|en|es|fr|zh)\/[^/]+\.md$/i.test(p))throw new Error('Path blog tidak valid.');return p;}
+function blogPathForLanguage(path){const p=String(path||'').replace(/^\/+|\/+$/g,'');if(!/^src\/content\/blog\/(id|en|es|fr)\/[^/]+\.md$/i.test(p))throw new Error('Path blog tidak valid.');return p;}
 function parseYamlScalar(v){const s=String(v||'').trim();if((s.charAt(0)==='"'&&s.charAt(s.length-1)==='"')||(s.charAt(0)==="'"&&s.charAt(s.length-1)==="'"))return s.substring(1,s.length-1).replace(/\\"/g,'"').replace(/\\\\/g,'\\');return s;}
 function parseBlogMarkdown(raw,path,sha){const text=String(raw||'').replace(/\r\n?/g,'\n');let fm='',body=text;if(text.indexOf('---\n')===0){const end=text.indexOf('\n---',4);if(end!==-1){fm=text.substring(4,end);body=text.substring(end+4).replace(/^\n+/,'');}}const data={tags:[]};let tags=false;fm.split('\n').forEach(function(line){if(/^tags:\s*$/.test(line.trim())){tags=true;return;}if(tags&&/^\s+-\s+/.test(line)){data.tags.push(parseYamlScalar(line.replace(/^\s+-\s+/,'')));return;}if(tags&&line.trim()&&!/^\s+-\s+/.test(line)){tags=false;}const m=line.match(/^([A-Za-z][A-Za-z0-9_]*)\s*:\s*(.*)$/);if(m)data[m[1]]=parseYamlScalar(m[2]);});return{path:path,sha:sha,title:data.title||'',description:data.description||'',seoTitle:data.seoTitle||'',seoDescription:data.seoDescription||'',image:data.image||'',imageAlt:data.imageAlt||'',imageSource:data.imageSource||'',author:data.author||'Banggai Wonderland',pubDate:normalizeDate(data.pubDate||getToday()),tags:data.tags||[],translationKey:data.translationKey||'',content:body.trim()};}
 function listBlogs(language){const requested=String(language||'').trim().toLowerCase();const langs=requested&&LANGUAGES[requested]?[requested]:Object.keys(LANGUAGES),out=[];langs.forEach(function(lang){const data=githubGetJson('src/content/blog/'+lang);if(!Array.isArray(data))return;data.filter(function(item){return item.type==='file'&&/\.md$/i.test(item.name);}).forEach(function(item){out.push({language:lang,path:item.path,name:item.name,title:item.name.replace(/\.md$/i,''),sha:item.sha});});});return out.sort(function(a,b){return String(b.name).localeCompare(String(a.name));});}
