@@ -17,7 +17,7 @@ slug:
 
 i18n:
   structure: multiple_folders
-  locales: [id, en, es, fr, zh]
+  locales: [id, en, es, fr]
   default_locale: id
 
 collections:
@@ -175,26 +175,3 @@ collections:
       - {label: "Image Source", name: "imageSource", widget: "hidden", required: false}
       - {label: "Translation Key", name: "translationKey", widget: "hidden", required: false}
 
-  - name: "blog_zh"
-    label: "Blog — 中文"
-    label_singular: "Blog Post — 中文"
-    folder: "src/content/blog/zh"
-    create: true
-    slug: "{{slug}}"
-    extension: "md"
-    format: "yaml-frontmatter"
-    media_folder: "public/images/blog"
-    public_folder: "/images/blog"
-    fields:
-      - {label: "Featured Image", name: "image", widget: "image"}
-      - {label: "Image Alt", name: "imageAlt", widget: "string", required: false}
-      - {label: "Title", name: "title", widget: "string"}
-      - {label: "Description", name: "description", widget: "text"}
-      - {label: "SEO Title", name: "seoTitle", widget: "string", required: false}
-      - {label: "SEO Description", name: "seoDescription", widget: "text", required: false}
-      - {label: "Author", name: "author", widget: "string"}
-      - {label: "Publish Date", name: "pubDate", widget: "datetime"}
-      - {label: "Tags", name: "tags", widget: "list", required: false}
-      - {label: "Body", name: "body", widget: "markdown"}
-      - {label: "Image Source", name: "imageSource", widget: "hidden", required: false}
-      - {label: "Translation Key", name: "translationKey", widget: "hidden", required: false}

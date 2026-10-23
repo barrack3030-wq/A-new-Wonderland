@@ -25,7 +25,6 @@ Manual languages:
 - Indonesian — source article
 - English — Translate English
 - Spanish — Translate Spanish
-- Chinese — Translate Chinese
 - French — Translate French
 
-The existing Bulk workflow remains separate and continues to use Indonesian + English + Spanish + French + Chinese.
+The existing Bulk workflow remains separate and continues to use Indonesian + English + Spanish + French.

@@ -16,12 +16,12 @@ const t = useTranslations(lang as any);
 const gallerySeoTitle = ({
   id: 'Galeri Wisata Kepulauan Banggai | Banggai Wonderland',
   en: 'Banggai Islands Travel Gallery | Banggai Wonderland',
-  ko: '방가이 제도 여행 갤러리 | Banggai Wonderland',
+
   es: 'Galería de las Islas Banggai | Banggai Wonderland'
 } as Record<string, string>)[lang as string];
 
 const breadcrumbItems = [
-  { name: lang === 'ko' ? '홈' : lang === 'id' ? 'Beranda' : 'Home', url: `/${lang}/` },
+  { name: lang === 'id' ? 'Beranda' : 'Home', url: `/${lang}/` },
   { name: t('nav.gallery'), url: `/${lang}/gallery/` }
 ];
 
