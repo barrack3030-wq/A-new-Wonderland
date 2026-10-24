@@ -173,7 +173,7 @@ const seo = homeSeo[lang as keyof typeof homeSeo] || homeSeo.en;
       </div>
     </section>
 
-    <section class="bw-section bw-journeys">
+    <section id="journeys" class="bw-section bw-journeys">
       <div class="bw-container">
         <div class="bw-section-heading">
           <div>
@@ -203,7 +203,7 @@ const seo = homeSeo[lang as keyof typeof homeSeo] || homeSeo.en;
       </div>
     </section>
 
-    <section class="bw-journal">
+    <section id="journal" class="bw-journal">
       <div class="bw-container">
         <div class="bw-section-heading bw-journal-heading">
           <div>
@@ -249,7 +249,7 @@ const seo = homeSeo[lang as keyof typeof homeSeo] || homeSeo.en;
       </div>
     </section>
 
-    <section class="bw-cta">
+    <section id="contact" class="bw-cta">
       <div class="bw-container bw-cta-inner">
         <p class="bw-eyebrow bw-eyebrow-light">BANGGAI WONDERLAND</p>
         <h2>{lang === 'ko' ? '당신의 방가이 여행은' : 'Your Banggai story'}<br/><em>{lang === 'ko' ? '여기서 시작됩니다.' : 'starts here.'}</em></h2>
@@ -260,7 +260,7 @@ const seo = homeSeo[lang as keyof typeof homeSeo] || homeSeo.en;
   </main>
 
   <nav class="bw-mobile-nav" aria-label="Mobile navigation">
-    <a href="#home"><span>⌂</span><small>{lang === 'ko' ? '홈' : 'Home'}</small></a>
+    <a href="#home" aria-current="location"><span>⌂</span><small>{lang === 'ko' ? '홈' : 'Home'}</small></a>
     <a href="#destinations"><span>◉</span><small>{lang === 'ko' ? '여행지' : 'Places'}</small></a>
     <a href="#journeys"><span>↗</span><small>{lang === 'ko' ? '여행' : 'Journeys'}</small></a>
     <a href="#journal"><span>▤</span><small>{lang === 'ko' ? '저널' : 'Journal'}</small></a>
@@ -419,8 +419,11 @@ const seo = homeSeo[lang as keyof typeof homeSeo] || homeSeo.en;
       .bw-cta { padding: 82px 0 110px; }
       .bw-cta p { font-size: 13px; }
       .bw-mobile-nav { position: fixed; display: grid; grid-template-columns: repeat(5, 1fr); left: 8px; right: 8px; bottom: 8px; z-index: 70; padding: 6px; gap: 2px; border: 1px solid rgba(255,255,255,.55); border-radius: 18px; background: rgba(255,255,255,.91); backdrop-filter: blur(18px); -webkit-backdrop-filter: blur(18px); box-shadow: 0 15px 45px rgba(6,43,61,.2); }
+      #destinations, #journeys, #journal, #contact { scroll-margin-top: 100px; }
+      .bw-mobile-nav a { -webkit-tap-highlight-color: transparent; touch-action: manipulation; }
+      .bw-mobile-nav a:focus-visible { outline: 2px solid #1595a8; outline-offset: 2px; }
       .bw-mobile-nav a { min-height: 54px; display: flex; flex-direction: column; justify-content: center; align-items: center; gap: 3px; color: #5b7983; text-decoration: none; border-radius: 12px; }
-      .bw-mobile-nav a:first-child { background: #062f3d; color: white; }
+      .bw-mobile-nav a[aria-current="location"] { background: #062f3d; color: white; }
       .bw-mobile-nav span { font-size: 14px; line-height: 1; }
       .bw-mobile-nav small { font-family: 'Plus Jakarta Sans', sans-serif; font-size: 8px; font-weight: 700; }
     }
@@ -443,6 +446,34 @@ const seo = homeSeo[lang as keyof typeof homeSeo] || homeSeo.en;
           ticking = true;
         }
       }, { passive: true });
+    }
+
+    // Keep the bottom navigation's active item in sync with the section in view.
+    const mobileNav = document.querySelector('.bw-mobile-nav');
+    if (mobileNav) {
+      const navLinks = Array.from(mobileNav.querySelectorAll('a[href^="#"]'));
+      const updateActiveNav = () => {
+        let activeLink = navLinks[0];
+        for (const link of navLinks) {
+          const targetId = link.getAttribute('href').slice(1);
+          const target = document.getElementById(targetId);
+          if (target && target.getBoundingClientRect().top <= 112) activeLink = link;
+        }
+
+        const nearPageBottom =
+          window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 80;
+        if (nearPageBottom && navLinks.length) activeLink = navLinks[navLinks.length - 1];
+
+        navLinks.forEach((link) => {
+          if (link === activeLink) link.setAttribute('aria-current', 'location');
+          else link.removeAttribute('aria-current');
+        });
+      };
+
+      window.addEventListener('scroll', updateActiveNav, { passive: true });
+      window.addEventListener('hashchange', updateActiveNav);
+      window.addEventListener('resize', updateActiveNav);
+      updateActiveNav();
     }
   </script>
 </BaseLayout>
