@@ -29,7 +29,7 @@ const t = useTranslations(lang);
     <div class="px-5 pt-4 pb-7 space-y-1">
       <a href={`/${lang}/destinations/`} class="block py-3 text-base font-medium">{t('nav.destinations')}</a><a href={`/${lang}/jasa-tour-luwuk-banggai/`} class="block py-3 text-base font-medium">{lang === 'id' ? 'Paket & Jasa Tour' : lang === 'es' ? 'Paquetes y Tours' : lang === 'fr' ? 'Forfaits & Tours' : 'Packages & Tours'}</a><a href={`/${lang}/gallery/`} class="block py-3 text-base font-medium">{t('nav.gallery')}</a><a href={`/${lang}/blog/`} class="block py-3 text-base font-medium">{t('nav.blog')}</a><a href={`/${lang}/about/`} class="block py-3 text-base font-medium">{t('nav.about')}</a>
       <div class="pt-4 mt-2 border-t border-black/5"><LanguageSwitcher mobile={true} /></div>
-      <a href="https://wa.me/6285820830530" target="_blank" rel="noopener noreferrer" class="mt-5 block text-center rounded-full bg-ocean-900 text-white py-3.5 font-semibold">Travel with usa>
+      <a href="https://wa.me/6285820830530" target="_blank" rel="noopener noreferrer" class="mt-5 block text-center rounded-full bg-ocean-900 text-white py-3.5 font-semibold">Travel with us</a>
     </div>
   </div>
 </header>
@@ -37,15 +37,29 @@ const t = useTranslations(lang);
 <style>
   /* Keep the fixed header compact on mobile so it does not visually crowd the hero. */
   .bw-site-header {
-    min-height: 0;
+    height: 72px;
+    min-height: 72px;
     border-radius: 0 !important;
+    overflow: visible;
+    box-shadow: none !important;
   }
+  .bw-site-header > .max-w-7xl { height: 72px; }
+  .bw-site-header #mobile-menu { display: none !important; }
   .bw-site-header-row {
     min-height: 72px;
   }
   @media (min-width: 768px) {
-    .bw-site-header-row {
-      min-height: 84px;
+    .bw-site-header { height: 84px; min-height: 84px; }
+    .bw-site-header > .max-w-7xl { height: 84px; }
+    .bw-site-header-row { min-height: 84px; }
+  }
+  @media (max-width: 1023px) {
+    .bw-site-header .hidden.lg\\:flex { display: none !important; }
+    .bw-site-header #mobile-menu:not(.hidden) {
+      display: block !important;
+      position: absolute;
+      top: 100%; left: 0; right: 0; z-index: 60;
+      background: rgba(255,255,255,.98);
     }
   }
   @media (max-width: 767px) {
