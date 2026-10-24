@@ -8,62 +8,237 @@ const t = useTranslations(lang);
   <!-- Commercial hub: packages are presented within the main tour services page. -->
   <div class="max-w-7xl mx-auto px-5 sm:px-8 lg:px-12">
     <div class="bw-site-header-row h-[72px] md:h-[84px] flex items-center justify-between">
-      <a href={`/${lang}/`} class="flex items-center shrink-0" aria-label="Banggai Wonderland home">
+      <a href={'/' + lang + '/'} class="bw-header-home flex items-center shrink-0" aria-label="Banggai Wonderland home">
         <img src="/images/logo.png" alt="Banggai Wonderland" class="h-[58px] md:h-[72px] w-auto object-contain" />
       </a>
-      <nav class="hidden lg:flex items-center gap-8">
-        <a href={`/${lang}/destinations/`} class="text-[13px] font-medium text-ocean-900/75 hover:text-ocean-900 transition">{t('nav.destinations')}</a>
-        <a href={`/${lang}/jasa-tour-luwuk-banggai/`} class="text-[13px] font-medium text-ocean-900/75 hover:text-ocean-900 transition">{lang === 'id' ? 'Paket & Jasa Tour' : lang === 'es' ? 'Paquetes y Tours' : lang === 'fr' ? 'Forfaits & Tours' : 'Packages & Tours'}</a>
-        <a href={`/${lang}/gallery/`} class="text-[13px] font-medium text-ocean-900/75 hover:text-ocean-900 transition">{t('nav.gallery')}</a>
-        <a href={`/${lang}/blog/`} class="text-[13px] font-medium text-ocean-900/75 hover:text-ocean-900 transition">{t('nav.blog')}</a>
-        <a href={`/${lang}/about/`} class="text-[13px] font-medium text-ocean-900/75 hover:text-ocean-900 transition">{t('nav.about')}</a>
+
+      <nav class="bw-desktop-nav hidden lg:flex items-center gap-8" aria-label="Main navigation">
+        <a href={'/' + lang + '/destinations/'} class="text-[13px] font-medium text-ocean-900/75 hover:text-ocean-900 transition">{t('nav.destinations')}</a>
+        <a href={'/' + lang + '/jasa-tour-luwuk-banggai/'} class="text-[13px] font-medium text-ocean-900/75 hover:text-ocean-900 transition">{lang === 'id' ? 'Paket & Jasa Tour' : lang === 'es' ? 'Paquetes y Tours' : lang === 'fr' ? 'Forfaits & Tours' : 'Packages & Tours'}</a>
+        <a href={'/' + lang + '/gallery/'} class="text-[13px] font-medium text-ocean-900/75 hover:text-ocean-900 transition">{t('nav.gallery')}</a>
+        <a href={'/' + lang + '/blog/'} class="text-[13px] font-medium text-ocean-900/75 hover:text-ocean-900 transition">{t('nav.blog')}</a>
+        <a href={'/' + lang + '/about/'} class="text-[13px] font-medium text-ocean-900/75 hover:text-ocean-900 transition">{t('nav.about')}</a>
       </nav>
-      <div class="hidden lg:flex items-center gap-5"><LanguageSwitcher /><a href="https://wa.me/6285820830530" target="_blank" rel="noopener noreferrer" class="rounded-full bg-ocean-900 text-white px-5 py-2.5 text-[13px] font-semibold hover:bg-ocean-800 transition">Travel with us</a></div>
-      <div class="lg:hidden flex items-center gap-3">
+
+      <div class="bw-desktop-actions hidden lg:flex items-center gap-5">
+        <LanguageSwitcher />
+        <a href="https://wa.me/6285820830530" target="_blank" rel="noopener noreferrer" class="rounded-full bg-ocean-900 text-white px-5 py-2.5 text-[13px] font-semibold hover:bg-ocean-800 transition">Travel with us</a>
+      </div>
+
+      <div class="bw-mobile-controls" aria-label="Mobile navigation controls">
         <LanguageSwitcher mobileHeader={true} />
-        <button id="mobile-menu-btn" type="button" class="text-ocean-900 p-2" aria-label="Toggle menu" aria-expanded="false"><svg class="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path id="menu-icon-path" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.7" d="M4 7h16M4 12h16M4 17h16"/></svg></button>
+        <button
+          id="mobile-menu-btn"
+          type="button"
+          class="bw-mobile-menu-button"
+          aria-label="Buka menu navigasi"
+          aria-controls="mobile-menu"
+          aria-expanded="false"
+        >
+          <svg class="bw-mobile-menu-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+            <path id="menu-icon-path" d="M4 7h16M4 12h16M4 17h16" />
+          </svg>
+        </button>
       </div>
     </div>
   </div>
-  <div id="mobile-menu" class="hidden lg:hidden bg-white/95 backdrop-blur-2xl border-t border-black/5">
-    <div class="px-5 pt-4 pb-7 space-y-1">
-      <a href={`/${lang}/destinations/`} class="block py-3 text-base font-medium">{t('nav.destinations')}</a><a href={`/${lang}/jasa-tour-luwuk-banggai/`} class="block py-3 text-base font-medium">{lang === 'id' ? 'Paket & Jasa Tour' : lang === 'es' ? 'Paquetes y Tours' : lang === 'fr' ? 'Forfaits & Tours' : 'Packages & Tours'}</a><a href={`/${lang}/gallery/`} class="block py-3 text-base font-medium">{t('nav.gallery')}</a><a href={`/${lang}/blog/`} class="block py-3 text-base font-medium">{t('nav.blog')}</a><a href={`/${lang}/about/`} class="block py-3 text-base font-medium">{t('nav.about')}</a>
+
+  <div id="mobile-menu" class="hidden lg:hidden bg-white/95 backdrop-blur-2xl border-t border-black/5" aria-label="Mobile navigation">
+    <nav class="px-5 pt-4 pb-7 space-y-1" aria-label="Mobile navigation links">
+      <a href={'/' + lang + '/destinations/'} class="block py-3 text-base font-medium">{t('nav.destinations')}</a>
+      <a href={'/' + lang + '/jasa-tour-luwuk-banggai/'} class="block py-3 text-base font-medium">{lang === 'id' ? 'Paket & Jasa Tour' : lang === 'es' ? 'Paquetes y Tours' : lang === 'fr' ? 'Forfaits & Tours' : 'Packages & Tours'}</a>
+      <a href={'/' + lang + '/gallery/'} class="block py-3 text-base font-medium">{t('nav.gallery')}</a>
+      <a href={'/' + lang + '/blog/'} class="block py-3 text-base font-medium">{t('nav.blog')}</a>
+      <a href={'/' + lang + '/about/'} class="block py-3 text-base font-medium">{t('nav.about')}</a>
       <div class="pt-4 mt-2 border-t border-black/5"><LanguageSwitcher mobile={true} /></div>
       <a href="https://wa.me/6285820830530" target="_blank" rel="noopener noreferrer" class="mt-5 block text-center rounded-full bg-ocean-900 text-white py-3.5 font-semibold">Travel with us</a>
-    </div>
+    </nav>
   </div>
 </header>
+
 <style>
-  /* Mobile header and menu use square full-width surfaces to prevent stray blue/pill bars. */
-  .bw-site-header { height: 72px; min-height: 72px; border-radius: 0 !important; overflow: visible !important; box-shadow: none !important; }
-  .bw-site-header > .max-w-7xl { height: 72px; }
-  .bw-site-header-row { min-height: 72px; }
+  .bw-site-header {
+    --bw-header-height: 72px;
+    height: var(--bw-header-height);
+    min-height: var(--bw-header-height);
+    border-radius: 0 !important;
+    overflow: visible !important;
+    box-shadow: none !important;
+  }
+
+  .bw-site-header > .max-w-7xl {
+    height: var(--bw-header-height);
+  }
+
+  .bw-site-header-row {
+    min-height: var(--bw-header-height);
+  }
+
+  .bw-mobile-controls {
+    display: none;
+  }
+
+  .bw-mobile-menu-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex: 0 0 44px;
+    width: 44px;
+    height: 44px;
+    padding: 0;
+    margin: 0;
+    border: 1px solid rgba(6, 45, 58, 0.2);
+    border-radius: 9999px;
+    background: #ffffff;
+    color: #062d3a;
+    position: relative;
+    z-index: 103;
+    cursor: pointer;
+    touch-action: manipulation;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  .bw-mobile-menu-button:focus-visible {
+    outline: 3px solid rgba(20, 139, 158, 0.55);
+    outline-offset: 2px;
+  }
+
+  .bw-mobile-menu-icon {
+    display: block;
+    width: 26px;
+    height: 26px;
+    flex: 0 0 26px;
+    pointer-events: none;
+  }
+
+  .bw-site-header #mobile-menu {
+    display: none !important;
+  }
+
   @media (min-width: 768px) {
-    .bw-site-header { height: 84px; min-height: 84px; }
-    .bw-site-header > .max-w-7xl { height: 84px; }
-    .bw-site-header-row { min-height: 84px; }
-  }
-  @media (max-width: 1023px) {
-    .bw-site-header #mobile-menu { display: none; }
-    .bw-site-header #mobile-menu:not(.hidden) {
-      display: block !important; position: fixed !important;
-      top: 72px !important; left: 0 !important; right: 0 !important; bottom: 0 !important;
-      width: 100% !important; max-height: none !important; overflow-y: auto !important;
-      overscroll-behavior: contain; z-index: 101 !important; margin: 0 !important;
-      padding: 0 !important; border: 0 !important; border-radius: 0 !important;
-      background: #fff !important; box-shadow: none !important; transform: none !important;
+    .bw-site-header {
+      --bw-header-height: 84px;
     }
-    .bw-site-header #mobile-menu .px-5 { padding-top: 1rem; padding-bottom: 1.75rem; }
-    .bw-site-header #mobile-menu a { border-radius: 0 !important; }
-    .bw-site-header #mobile-menu a.mt-5 { border-radius: 9999px !important; }
   }
+
+  @media (min-width: 1024px) {
+    .bw-mobile-controls {
+      display: none !important;
+    }
+  }
+
+  @media (max-width: 1023px) {
+    .bw-mobile-controls {
+      display: flex !important;
+      align-items: center;
+      justify-content: flex-end;
+      gap: 8px;
+      flex: 0 0 auto;
+      position: relative;
+      z-index: 103;
+    }
+
+    .bw-site-header .bw-mobile-menu-button {
+      display: inline-flex !important;
+      visibility: visible !important;
+      opacity: 1 !important;
+    }
+
+    .bw-site-header #mobile-menu:not(.hidden) {
+      display: block !important;
+      position: fixed !important;
+      top: var(--bw-header-height) !important;
+      left: 0 !important;
+      right: 0 !important;
+      bottom: 0 !important;
+      width: 100% !important;
+      max-height: none !important;
+      overflow-y: auto !important;
+      overscroll-behavior: contain;
+      z-index: 101 !important;
+      margin: 0 !important;
+      padding: 0 !important;
+      border: 0 !important;
+      border-radius: 0 !important;
+      background: #ffffff !important;
+      box-shadow: none !important;
+      transform: none !important;
+    }
+
+    .bw-site-header #mobile-menu nav {
+      padding-top: 1rem;
+      padding-bottom: 1.75rem;
+    }
+
+    .bw-site-header #mobile-menu a {
+      display: block;
+      border-radius: 0 !important;
+    }
+
+    .bw-site-header #mobile-menu a.mt-5 {
+      border-radius: 9999px !important;
+    }
+  }
+
   @media (max-width: 767px) {
-    .bw-site-header .max-w-7xl { padding-left: 16px; padding-right: 16px; }
-    .bw-site-header img { max-height: 58px; }
+    .bw-site-header > .max-w-7xl {
+      padding-left: 16px;
+      padding-right: 16px;
+    }
+
+    .bw-site-header .bw-header-home img {
+      max-height: 58px;
+      width: auto;
+    }
   }
 </style>
 
 <script>
-const btn=document.getElementById('mobile-menu-btn');const menu=document.getElementById('mobile-menu');const path=document.getElementById('menu-icon-path');
-if(btn&&menu&&path){btn.addEventListener('click',()=>{const open=menu.classList.toggle('hidden')===false;btn.setAttribute('aria-expanded',String(open));path.setAttribute('d',open?'M6 18L18 6M6 6l12 12':'M4 7h16M4 12h16M4 17h16')})}
+  const initMobileNavigation = () => {
+    const button = document.getElementById('mobile-menu-btn');
+    const menu = document.getElementById('mobile-menu');
+    const iconPath = document.getElementById('menu-icon-path');
+
+    if (!button || !menu || !iconPath || button.dataset.menuBound === 'true') return;
+    button.dataset.menuBound = 'true';
+
+    const setMenuOpen = (open) => {
+      menu.classList.toggle('hidden', !open);
+      button.setAttribute('aria-expanded', String(open));
+      button.setAttribute('aria-label', open ? 'Tutup menu navigasi' : 'Buka menu navigasi');
+      iconPath.setAttribute('d', open ? 'M6 6l12 12M18 6L6 18' : 'M4 7h16M4 12h16M4 17h16');
+    };
+
+    button.addEventListener('click', (event) => {
+      event.preventDefault();
+      setMenuOpen(menu.classList.contains('hidden'));
+    });
+
+    menu.addEventListener('click', (event) => {
+      const target = event.target;
+      if (target instanceof Element && target.closest('a')) {
+        setMenuOpen(false);
+      }
+    });
+
+    document.addEventListener('keydown', (event) => {
+      if (event.key === 'Escape') setMenuOpen(false);
+    });
+
+    const desktopBreakpoint = window.matchMedia('(min-width: 1024px)');
+    const closeOnDesktop = (event) => {
+      if (event.matches) setMenuOpen(false);
+    };
+    if (desktopBreakpoint.addEventListener) {
+      desktopBreakpoint.addEventListener('change', closeOnDesktop);
+    } else {
+      desktopBreakpoint.addListener(closeOnDesktop);
+    }
+  };
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initMobileNavigation, { once: true });
+  } else {
+    initMobileNavigation();
+  }
 </script>
