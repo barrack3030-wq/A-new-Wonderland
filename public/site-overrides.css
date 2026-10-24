@@ -89,16 +89,19 @@
     min-height: 72px !important;
   }
   header.bw-site-header #mobile-menu {
-    position: absolute !important;
-    top: 100% !important;
+    position: fixed !important;
+    top: 72px !important;
     left: 0 !important;
     right: 0 !important;
+    bottom: 0 !important;
     width: 100% !important;
-    max-height: calc(100dvh - 72px) !important;
+    max-height: none !important;
     overflow-y: auto !important;
+    overscroll-behavior: contain !important;
     border-radius: 0 !important;
-    box-shadow: 0 12px 24px rgba(6,47,61,.08) !important;
+    box-shadow: none !important;
     background: #fff !important;
+    z-index: 101 !important;
   }
   header.bw-site-header #mobile-menu.hidden {
     display: none !important;
