@@ -99,13 +99,15 @@ const t = useTranslations(lang);
   .bw-mobile-menu-panel { display: none; }
   .bw-mobile-menu-disclosure[open] .bw-mobile-menu-panel {
     display: block;
-    position: fixed;
-    top: var(--bw-header-height);
+    position: absolute;
+    top: 100%;
     left: 0;
     right: 0;
-    bottom: 0;
+    bottom: auto;
     z-index: 102;
     width: 100%;
+    max-height: calc(100vh - var(--bw-header-height));
+    max-height: calc(100dvh - var(--bw-header-height));
     overflow-y: auto;
     overscroll-behavior: contain;
     margin: 0;
