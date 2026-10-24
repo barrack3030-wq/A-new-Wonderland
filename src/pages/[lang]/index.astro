@@ -452,23 +452,32 @@ const seo = homeSeo[lang as keyof typeof homeSeo] || homeSeo.en;
     const mobileNav = document.querySelector('.bw-mobile-nav');
     if (mobileNav) {
       const navLinks = Array.from(mobileNav.querySelectorAll('a[href^="#"]'));
+      const setActiveNavLink = (activeLink) => {
+        navLinks.forEach((link) => {
+          if (link === activeLink) link.setAttribute('aria-current', 'location');
+          else link.removeAttribute('aria-current');
+        });
+      };
+
       const updateActiveNav = () => {
         let activeLink = navLinks[0];
         for (const link of navLinks) {
           const targetId = link.getAttribute('href').slice(1);
           const target = document.getElementById(targetId);
-          if (target && target.getBoundingClientRect().top <= 112) activeLink = link;
+          if (target && target.getBoundingClientRect().top <= 180) activeLink = link;
         }
 
         const nearPageBottom =
           window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 80;
         if (nearPageBottom && navLinks.length) activeLink = navLinks[navLinks.length - 1];
 
-        navLinks.forEach((link) => {
-          if (link === activeLink) link.setAttribute('aria-current', 'location');
-          else link.removeAttribute('aria-current');
-        });
+        setActiveNavLink(activeLink);
       };
+
+      // Update the indicator immediately on tap, then keep it in sync while scrolling.
+      navLinks.forEach((link) => {
+        link.addEventListener('click', () => setActiveNavLink(link));
+      });
 
       window.addEventListener('scroll', updateActiveNav, { passive: true });
       window.addEventListener('hashchange', updateActiveNav);
