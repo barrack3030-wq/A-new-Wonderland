@@ -1,3 +1,20 @@
+/* Remove an accidental empty spacer/bar inserted directly after the fixed site header. */
+body > header + div:empty {
+  display: none !important;
+  height: 0 !important;
+  min-height: 0 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  border: 0 !important;
+  background: transparent !important;
+}
+
+/* The shared header should end at its navigation row, without a decorative blue pill. */
+body > header::after {
+  content: none !important;
+  display: none !important;
+}
+
 /* Homepage and shared visual refinements */
 
 /* Force a real visual space where the desktop CTA uses a line-break element. */
