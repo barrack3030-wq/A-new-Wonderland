@@ -68,3 +68,48 @@
     margin-bottom: 1.35rem !important;
   }
 }
+
+
+/* Mobile header/menu: keep the dropdown over the page and prevent stray pill-shaped bars. */
+@media (max-width: 1023px) {
+  header.bw-site-header {
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    height: 72px !important;
+    min-height: 72px !important;
+    border-radius: 0 !important;
+    overflow: visible !important;
+    z-index: 100 !important;
+    background: rgba(255,255,255,.94) !important;
+  }
+  header.bw-site-header > .max-w-7xl {
+    height: 72px !important;
+    min-height: 72px !important;
+  }
+  header.bw-site-header #mobile-menu {
+    position: absolute !important;
+    top: 100% !important;
+    left: 0 !important;
+    right: 0 !important;
+    width: 100% !important;
+    max-height: calc(100dvh - 72px) !important;
+    overflow-y: auto !important;
+    border-radius: 0 !important;
+    box-shadow: 0 12px 24px rgba(6,47,61,.08) !important;
+    background: #fff !important;
+  }
+  header.bw-site-header #mobile-menu.hidden {
+    display: none !important;
+  }
+  header.bw-site-header #mobile-menu:not(.hidden) {
+    display: block !important;
+  }
+  header.bw-site-header #mobile-menu a {
+    border-radius: 0 !important;
+  }
+  header.bw-site-header #mobile-menu a.mt-5 {
+    border-radius: 999px !important;
+  }
+}
