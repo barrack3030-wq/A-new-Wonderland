@@ -18,27 +18,27 @@ const copy = {
     description: 'Jasa tour Luwuk Banggai untuk private trip Kepulauan Banggai, mulai dari Luwuk menuju Salakan, Peleng, Paisu Pok, Pulo Dua dan destinasi pilihan lainnya.',
     eyebrow: 'Private Trip · Luwuk · Kepulauan Banggai',
     h1: 'Jasa Tour Luwuk Banggai untuk Private Trip Kepulauan Banggai',
-    intro: 'Banggai Wonderland membantu Anda menyusun perjalanan dari Luwuk ke Kepulauan Banggai dengan itinerary yang fleksibel, rute yang disesuaikan, dan pendampingan lokal. Layanan Banggai Tour & Travel ini dapat digunakan untuk private trip singkat maupun perjalanan beberapa hari antarpulau.',
+    intro: 'Pilih paket atau konsultasikan private trip dari Luwuk ke Paisu Pok, Pulau Peleng, Pulo Dua, dan destinasi Banggai lainnya. Kami bantu menyesuaikan rute, transportasi, dan durasi perjalanan.',
     primaryCta: 'Konsultasi via WhatsApp',
     secondaryCta: 'Lihat Paket Wisata',
-    servicesTitle: 'Layanan Banggai Tour & Travel dari Luwuk',
+    servicesTitle: 'Apa yang Kami Bantu',
     services: [
-      ['Private trip', 'Perjalanan privat untuk pasangan, keluarga, sahabat, atau kelompok kecil.'],
-      ['Rute custom', 'Susun kombinasi Luwuk, Salakan, Peleng, Banggai Laut dan destinasi lain sesuai waktu yang tersedia.'],
-      ['Transportasi perjalanan', 'Bantuan mengatur transportasi darat dan perjalanan laut sesuai itinerary dan kondisi lapangan.'],
-      ['Local guide', 'Pendampingan lokal untuk membantu perjalanan lebih terarah dan mudah disesuaikan.']
+      ['Private trip', 'Trip privat untuk keluarga, pasangan, atau grup Anda.'],
+      ['Rute fleksibel', 'Pilih destinasi sesuai durasi dan minat Anda.'],
+      ['Transportasi', 'Bantuan koordinasi mobil, ferry, speedboat, dan boat lokal.'],
+      ['Pendamping lokal', 'Bantuan selama perjalanan dan penyesuaian kondisi setempat.']
     ],
-    routeTitle: 'Banggai Tour dari Luwuk: Rute dan Destinasi yang Bisa Digabungkan',
-    routeText: 'Mulai dari Luwuk, perjalanan dapat dikembangkan menjadi short trip hingga perjalanan beberapa hari ke pulau-pulau Banggai. Tidak semua destinasi harus dimasukkan dalam satu itinerary; rute dipilih berdasarkan durasi, minat, jadwal kapal, dan kondisi perjalanan.',
-    processTitle: 'Cara Kerja Private Trip',
+    routeTitle: 'Pilih Rute Sesuai Waktu Anda',
+    routeText: 'Mulai dari Luwuk untuk trip singkat, atau lanjutkan ke pulau-pulau Banggai untuk perjalanan beberapa hari. Rute disesuaikan dengan waktu, minat, jadwal kapal, dan kondisi laut.',
+    processTitle: 'Cara Memesan',
     process: [
-      ['01', 'Kirim rencana perjalanan', 'Sampaikan tanggal, jumlah peserta, lama perjalanan, dan destinasi yang ingin dikunjungi.'],
-      ['02', 'Susun rute', 'Kami bantu memilih kombinasi destinasi dan urutan perjalanan yang masuk akal.'],
-      ['03', 'Sesuaikan detail', 'Transportasi, penginapan, aktivitas, dan kebutuhan perjalanan dibahas sebelum keberangkatan.'],
-      ['04', 'Berangkat dari Luwuk', 'Setelah detail disepakati, perjalanan dijalankan dengan penyesuaian terhadap kondisi lokal.']
+      ['01', 'Kirim detail', 'Tanggal, jumlah peserta, durasi, dan destinasi pilihan.'],
+      ['02', 'Pilih rute', 'Kami susun rute sesuai waktu dan kondisi transportasi.'],
+      ['03', 'Konfirmasi', 'Cek layanan, biaya, dan detail perjalanan sebelum berangkat.'],
+      ['04', 'Mulai perjalanan', 'Nikmati trip dengan penyesuaian jika kondisi lokal berubah.']
     ],
-    packageTitle: 'Pilihan Paket Banggai Tour & Private Trip',
-    packageText: 'Gunakan paket berikut sebagai titik awal, lalu konsultasikan penyesuaian itinerary sesuai kebutuhan Anda.',
+    packageTitle: 'Pilih Paket Wisata',
+    packageText: 'Bandingkan durasi dan destinasi. Hubungi kami untuk menyesuaikan rute dan mendapatkan penawaran.',
     destinationTitle: 'Destinasi Populer',
     faqTitle: 'Pertanyaan Umum',
     faqs: [
@@ -48,8 +48,8 @@ const copy = {
       ['Apakah perjalanan laut selalu berjalan sesuai jadwal?', 'Jadwal dan urutan perjalanan laut dapat dipengaruhi oleh cuaca, kondisi laut, operator, dan situasi lokal sehingga itinerary perlu tetap fleksibel.'],
       ['Bagaimana cara booking?', 'Hubungi Banggai Wonderland melalui WhatsApp untuk mengirim tanggal perjalanan, jumlah peserta, dan kebutuhan itinerary.']
     ],
-    closingTitle: 'Rencanakan Perjalanan Banggai Anda',
-    closingText: 'Beri tahu kami tanggal perjalanan dan destinasi yang ingin Anda prioritaskan. Kami akan membantu menyusun rute private trip yang sesuai dengan waktu dan gaya perjalanan Anda.'
+    closingTitle: 'Siap Menjelajahi Banggai?',
+    closingText: 'Kirim tanggal, jumlah peserta, dan destinasi pilihan melalui WhatsApp. Kami bantu memilih rute yang sesuai.',
   },
   ko: {
     title: '루욱 방가이 투어 서비스 | 방가이 제도 프라이빗 여행',
@@ -372,20 +372,6 @@ const breadcrumbItems = [
       </div>
     </section>
 
-    ${isId && positioningCopy && (
-      <section class="bg-[#FFFEFB] py-20 md:py-24">
-        <div class="max-w-7xl mx-auto px-5 sm:px-8 lg:px-12 grid lg:grid-cols-2 gap-12 lg:gap-20 items-start">
-          <div>
-            <p class="text-[#14B8A6] text-xs font-bold tracking-[0.2em] uppercase mb-4">{positioningCopy.eyebrow}</p>
-            <h2 class="font-serif text-3xl md:text-[44px] text-ocean-900 leading-tight tracking-[-0.03em]">{positioningCopy.title}</h2>
-          </div>
-          <div class="space-y-5 text-ocean-600 text-[15px] md:text-base leading-[1.7]">
-            {positioningCopy.paragraphs.map(paragraph => <p>{paragraph}</p>)}
-          </div>
-        </div>
-      </section>
-    )}
-
     <section class="bg-[#F6F2E9] py-16 md:py-20">
       <div class="max-w-7xl mx-auto px-5 sm:px-8 lg:px-12">
         <div class="max-w-3xl mb-10">
@@ -555,27 +541,6 @@ const breadcrumbItems = [
         </div>
       </div>
     </section>
-
-    ${isId && (
-      <section class="bg-[#FFFEFB] py-16 md:py-24">
-        <div class="max-w-7xl mx-auto px-5 sm:px-8 lg:px-12">
-          <div class="grid lg:grid-cols-[.9fr_1.1fr] gap-12 lg:gap-20 items-start">
-            <div>
-              <p class="text-[#14B8A6] text-xs font-bold tracking-[0.2em] uppercase mb-4">WHY LOCAL PLANNING MATTERS</p>
-              <h2 class="font-serif text-3xl md:text-[44px] text-ocean-900 leading-tight tracking-[-0.03em]">Perjalanan Banggai yang Disusun dengan Kondisi Nyata di Lapangan</h2>
-            </div>
-            <div>
-              <p class="text-ocean-600 text-[15px] md:text-base leading-[1.7] mb-6">Banggai bukan Bali. Destinasinya tersebar, transport laut punya jamnya sendiri, cuaca bisa mengubah urutan, dan di beberapa titik sinyal bisa hilang. Itinerary yang bagus bukan yang memasukkan tempat sebanyak mungkin, tetapi yang ringkas, realistis, dan masih nyaman dijalani.</p>
-              <ul class="divide-y divide-[#E8E2D6] border-y border-[#E8E2D6]">
-                {['Destinasi tersebar, jadi waktu antar pulau perlu dihitung.','Transport laut punya jadwal dan tergantung cuaca.','Cuaca dan pasang surut bisa mengubah urutan perjalanan.','Pengetahuan rute lokal membantu menghindari rute memutar.','Itinerary lebih baik ringkas dan santai daripada terlalu padat.'].map(item => (
-                  <li class="py-4 text-sm text-ocean-700 leading-[1.7] pl-5 relative"><span class="absolute left-0 top-6 w-1.5 h-1.5 rounded-full bg-[#14B8A6]"></span>{item}</li>
-                ))}
-              </ul>
-            </div>
-          </div>
-        </div>
-      </section>
-    )}
 
     <section class="bg-[#F6F2E9] py-16 md:py-24">
       <div class="max-w-4xl mx-auto px-5 sm:px-8">
