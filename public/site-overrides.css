@@ -85,3 +85,11 @@ body > header::after {
     margin-bottom: 1.35rem !important;
   }
 }
+
+
+/* Remove only the duplicate full-width booking CTA directly below the header.
+   The header's own “Travel with us” CTA remains available and still opens the booking form. */
+body > header + a[href*="wa.me"],
+body > header + div:has(> a[href*="wa.me"]) {
+  display: none !important;
+}
