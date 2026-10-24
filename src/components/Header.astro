@@ -5,7 +5,6 @@ const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
 ---
 <header class="bw-site-header fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-xl border-b border-black/5">
-  <!-- Commercial hub: packages are presented within the main tour services page. -->
   <div class="max-w-7xl mx-auto px-5 sm:px-8 lg:px-12">
     <div class="bw-site-header-row h-[72px] md:h-[84px] flex items-center justify-between">
       <a href={'/' + lang + '/'} class="bw-header-home flex items-center shrink-0" aria-label="Banggai Wonderland home">
@@ -27,32 +26,31 @@ const t = useTranslations(lang);
 
       <div class="bw-mobile-controls" aria-label="Mobile navigation controls">
         <LanguageSwitcher mobileHeader={true} />
-        <button
-          id="mobile-menu-btn"
-          type="button"
-          class="bw-mobile-menu-button"
-          aria-label="Buka menu navigasi"
-          aria-controls="mobile-menu"
-          aria-expanded="false"
-        >
-          <svg class="bw-mobile-menu-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
-            <path id="menu-icon-path" d="M4 7h16M4 12h16M4 17h16" />
-          </svg>
-        </button>
+        <details id="mobile-menu-disclosure" class="bw-mobile-menu-disclosure">
+          <summary class="bw-mobile-menu-button" aria-label="Buka atau tutup menu navigasi" aria-controls="mobile-menu">
+            <svg class="bw-menu-icon bw-hamburger-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false">
+              <path d="M4 7h16M4 12h16M4 17h16" />
+            </svg>
+            <svg class="bw-menu-icon bw-close-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false">
+              <path d="M6 6l12 12M18 6L6 18" />
+            </svg>
+          </summary>
+          <div id="mobile-menu" class="bw-mobile-menu-panel">
+            <nav aria-label="Mobile navigation links">
+              <a href={'/' + lang + '/destinations/'}>{t('nav.destinations')}</a>
+              <a href={'/' + lang + '/jasa-tour-luwuk-banggai/'}>{lang === 'id' ? 'Paket & Jasa Tour' : lang === 'es' ? 'Paquetes y Tours' : lang === 'fr' ? 'Forfaits & Tours' : 'Packages & Tours'}</a>
+              <a href={'/' + lang + '/gallery/'}>{t('nav.gallery')}</a>
+              <a href={'/' + lang + '/blog/'}>{t('nav.blog')}</a>
+              <a href={'/' + lang + '/about/'}>{t('nav.about')}</a>
+              <div class="bw-mobile-language-links">
+                <LanguageSwitcher mobile={true} />
+              </div>
+              <a href="https://wa.me/6285820830530" target="_blank" rel="noopener noreferrer" class="bw-mobile-whatsapp">Travel with us</a>
+            </nav>
+          </div>
+        </details>
       </div>
     </div>
-  </div>
-
-  <div id="mobile-menu" class="hidden lg:hidden bg-white/95 backdrop-blur-2xl border-t border-black/5" aria-label="Mobile navigation">
-    <nav class="px-5 pt-4 pb-7 space-y-1" aria-label="Mobile navigation links">
-      <a href={'/' + lang + '/destinations/'} class="block py-3 text-base font-medium">{t('nav.destinations')}</a>
-      <a href={'/' + lang + '/jasa-tour-luwuk-banggai/'} class="block py-3 text-base font-medium">{lang === 'id' ? 'Paket & Jasa Tour' : lang === 'es' ? 'Paquetes y Tours' : lang === 'fr' ? 'Forfaits & Tours' : 'Packages & Tours'}</a>
-      <a href={'/' + lang + '/gallery/'} class="block py-3 text-base font-medium">{t('nav.gallery')}</a>
-      <a href={'/' + lang + '/blog/'} class="block py-3 text-base font-medium">{t('nav.blog')}</a>
-      <a href={'/' + lang + '/about/'} class="block py-3 text-base font-medium">{t('nav.about')}</a>
-      <div class="pt-4 mt-2 border-t border-black/5"><LanguageSwitcher mobile={true} /></div>
-      <a href="https://wa.me/6285820830530" target="_blank" rel="noopener noreferrer" class="mt-5 block text-center rounded-full bg-ocean-900 text-white py-3.5 font-semibold">Travel with us</a>
-    </nav>
   </div>
 </header>
 
@@ -66,68 +64,89 @@ const t = useTranslations(lang);
     box-shadow: none !important;
   }
 
-  .bw-site-header > .max-w-7xl {
-    height: var(--bw-header-height);
-  }
+  .bw-site-header > .max-w-7xl { height: var(--bw-header-height); }
+  .bw-site-header-row { min-height: var(--bw-header-height); }
+  .bw-mobile-controls { display: none; }
 
-  .bw-site-header-row {
-    min-height: var(--bw-header-height);
-  }
-
-  .bw-mobile-controls {
-    display: none;
-  }
-
+  .bw-mobile-menu-disclosure { position: static; }
   .bw-mobile-menu-button {
+    list-style: none;
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    flex: 0 0 44px;
     width: 44px;
     height: 44px;
     padding: 0;
     margin: 0;
-    border: 1px solid rgba(6, 45, 58, 0.2);
-    border-radius: 9999px;
-    background: #ffffff;
+    border: 0;
+    border-radius: 8px;
+    background: transparent;
     color: #062d3a;
-    position: relative;
-    z-index: 103;
     cursor: pointer;
     touch-action: manipulation;
     -webkit-tap-highlight-color: transparent;
   }
-
+  .bw-mobile-menu-button::-webkit-details-marker { display: none; }
   .bw-mobile-menu-button:focus-visible {
-    outline: 3px solid rgba(20, 139, 158, 0.55);
+    outline: 2px solid rgba(20, 139, 158, 0.65);
     outline-offset: 2px;
   }
+  .bw-menu-icon { display: block; width: 27px; height: 27px; }
+  .bw-close-icon { display: none; }
+  .bw-mobile-menu-disclosure[open] .bw-hamburger-icon { display: none; }
+  .bw-mobile-menu-disclosure[open] .bw-close-icon { display: block; }
 
-  .bw-mobile-menu-icon {
+  .bw-mobile-menu-panel { display: none; }
+  .bw-mobile-menu-disclosure[open] .bw-mobile-menu-panel {
     display: block;
-    width: 26px;
-    height: 26px;
-    flex: 0 0 26px;
-    pointer-events: none;
+    position: fixed;
+    top: var(--bw-header-height);
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 102;
+    width: 100%;
+    overflow-y: auto;
+    overscroll-behavior: contain;
+    margin: 0;
+    padding: 0;
+    border-top: 1px solid rgba(6, 45, 58, 0.1);
+    background: #ffffff;
   }
-
-  .bw-site-header #mobile-menu {
-    display: none !important;
+  .bw-mobile-menu-panel nav { display: block; padding: 12px 20px 28px; }
+  .bw-mobile-menu-panel nav > a:not(.bw-mobile-whatsapp) {
+    display: block;
+    padding: 15px 0;
+    border-bottom: 1px solid rgba(6, 45, 58, 0.1);
+    color: #062d3a;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.4;
+  }
+  .bw-mobile-language-links {
+    padding: 18px 0 10px;
+    border-bottom: 1px solid rgba(6, 45, 58, 0.1);
+  }
+  .bw-mobile-whatsapp {
+    display: block;
+    margin-top: 18px;
+    padding: 14px 16px;
+    border-radius: 9999px;
+    background: #062d3a;
+    color: #ffffff;
+    text-align: center;
+    text-decoration: none;
+    font-weight: 600;
   }
 
   @media (min-width: 768px) {
-    .bw-site-header {
-      --bw-header-height: 84px;
-    }
+    .bw-site-header { --bw-header-height: 84px; }
   }
 
-  @media (min-width: 1024px) {
-    .bw-mobile-controls {
-      display: none !important;
-    }
-  }
-
-  @media (max-width: 1023px) {
+  @media screen and (max-width: 1023px), screen and (hover: none) and (pointer: coarse) {
+    .bw-desktop-nav,
+    .bw-desktop-actions { display: none !important; }
     .bw-mobile-controls {
       display: flex !important;
       align-items: center;
@@ -137,108 +156,14 @@ const t = useTranslations(lang);
       position: relative;
       z-index: 103;
     }
+  }
 
-    .bw-site-header .bw-mobile-menu-button {
-      display: inline-flex !important;
-      visibility: visible !important;
-      opacity: 1 !important;
-    }
-
-    .bw-site-header #mobile-menu:not(.hidden) {
-      display: block !important;
-      position: fixed !important;
-      top: var(--bw-header-height) !important;
-      left: 0 !important;
-      right: 0 !important;
-      bottom: 0 !important;
-      width: 100% !important;
-      max-height: none !important;
-      overflow-y: auto !important;
-      overscroll-behavior: contain;
-      z-index: 101 !important;
-      margin: 0 !important;
-      padding: 0 !important;
-      border: 0 !important;
-      border-radius: 0 !important;
-      background: #ffffff !important;
-      box-shadow: none !important;
-      transform: none !important;
-    }
-
-    .bw-site-header #mobile-menu nav {
-      padding-top: 1rem;
-      padding-bottom: 1.75rem;
-    }
-
-    .bw-site-header #mobile-menu a {
-      display: block;
-      border-radius: 0 !important;
-    }
-
-    .bw-site-header #mobile-menu a.mt-5 {
-      border-radius: 9999px !important;
-    }
+  @media screen and (min-width: 1024px) and (hover: hover) and (pointer: fine) {
+    .bw-mobile-controls { display: none !important; }
   }
 
   @media (max-width: 767px) {
-    .bw-site-header > .max-w-7xl {
-      padding-left: 16px;
-      padding-right: 16px;
-    }
-
-    .bw-site-header .bw-header-home img {
-      max-height: 58px;
-      width: auto;
-    }
+    .bw-site-header > .max-w-7xl { padding-left: 16px; padding-right: 16px; }
+    .bw-site-header .bw-header-home img { max-height: 58px; width: auto; }
   }
 </style>
-
-<script>
-  const initMobileNavigation = () => {
-    const button = document.getElementById('mobile-menu-btn');
-    const menu = document.getElementById('mobile-menu');
-    const iconPath = document.getElementById('menu-icon-path');
-
-    if (!button || !menu || !iconPath || button.dataset.menuBound === 'true') return;
-    button.dataset.menuBound = 'true';
-
-    const setMenuOpen = (open) => {
-      menu.classList.toggle('hidden', !open);
-      button.setAttribute('aria-expanded', String(open));
-      button.setAttribute('aria-label', open ? 'Tutup menu navigasi' : 'Buka menu navigasi');
-      iconPath.setAttribute('d', open ? 'M6 6l12 12M18 6L6 18' : 'M4 7h16M4 12h16M4 17h16');
-    };
-
-    button.addEventListener('click', (event) => {
-      event.preventDefault();
-      setMenuOpen(menu.classList.contains('hidden'));
-    });
-
-    menu.addEventListener('click', (event) => {
-      const target = event.target;
-      if (target instanceof Element && target.closest('a')) {
-        setMenuOpen(false);
-      }
-    });
-
-    document.addEventListener('keydown', (event) => {
-      if (event.key === 'Escape') setMenuOpen(false);
-    });
-
-    const desktopBreakpoint = window.matchMedia('(min-width: 1024px)');
-    const closeOnDesktop = (event) => {
-      if (event.matches) setMenuOpen(false);
-    };
-    if (desktopBreakpoint.addEventListener) {
-      desktopBreakpoint.addEventListener('change', closeOnDesktop);
-    } else {
-      desktopBreakpoint.addListener(closeOnDesktop);
-    }
-  };
-
-  if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', initMobileNavigation, { once: true });
-  } else {
-    initMobileNavigation();
-  }
-</script>
