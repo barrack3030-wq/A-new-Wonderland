@@ -17,11 +17,11 @@ const copy = {
     title: 'Jasa Tour Luwuk Banggai | Banggai Tour & Travel',
     description: 'Jasa tour Luwuk Banggai untuk private trip Kepulauan Banggai, mulai dari Luwuk menuju Salakan, Peleng, Paisu Pok, Pulo Dua dan destinasi pilihan lainnya.',
     eyebrow: 'Private Trip · Luwuk · Kepulauan Banggai',
-    h1: 'Jasa Tour Luwuk Banggai untuk Private Trip Kepulauan Banggai',
-    intro: 'Banggai Wonderland membantu Anda menyusun perjalanan dari Luwuk ke Kepulauan Banggai dengan itinerary yang fleksibel, rute yang disesuaikan, dan pendampingan lokal. Layanan Banggai Tour & Travel ini dapat digunakan untuk private trip singkat maupun perjalanan beberapa hari antarpulau.',
-    primaryCta: 'Konsultasi via WhatsApp',
-    secondaryCta: 'Lihat Paket Wisata',
-    servicesTitle: 'Layanan Banggai Tour & Travel dari Luwuk',
+    h1: 'Jasa Tour Luwuk Banggai untuk Private Trip',
+    intro: 'Pilih private trip 1–6 hari dari Luwuk. Kami bantu susun rute, transportasi darat dan laut, serta destinasi sesuai tanggal, jumlah peserta, dan kebutuhan perjalanan.',
+    primaryCta: 'Tanya Rute & Harga',
+    secondaryCta: 'Pilih Paket',
+    servicesTitle: 'Yang Kami Bantu Siapkan',
     services: [
       ['Private trip', 'Perjalanan privat untuk pasangan, keluarga, sahabat, atau kelompok kecil.'],
       ['Rute custom', 'Susun kombinasi Luwuk, Salakan, Peleng, Banggai Laut dan destinasi lain sesuai waktu yang tersedia.'],
@@ -30,19 +30,20 @@ const copy = {
     ],
     routeTitle: 'Banggai Tour dari Luwuk: Rute dan Destinasi yang Bisa Digabungkan',
     routeText: 'Mulai dari Luwuk, perjalanan dapat dikembangkan menjadi short trip hingga perjalanan beberapa hari ke pulau-pulau Banggai. Tidak semua destinasi harus dimasukkan dalam satu itinerary; rute dipilih berdasarkan durasi, minat, jadwal kapal, dan kondisi perjalanan.',
-    processTitle: 'Cara Kerja Private Trip',
+    processTitle: 'Cara Booking',
     process: [
       ['01', 'Kirim rencana perjalanan', 'Sampaikan tanggal, jumlah peserta, lama perjalanan, dan destinasi yang ingin dikunjungi.'],
       ['02', 'Susun rute', 'Kami bantu memilih kombinasi destinasi dan urutan perjalanan yang masuk akal.'],
       ['03', 'Sesuaikan detail', 'Transportasi, penginapan, aktivitas, dan kebutuhan perjalanan dibahas sebelum keberangkatan.'],
       ['04', 'Berangkat dari Luwuk', 'Setelah detail disepakati, perjalanan dijalankan dengan penyesuaian terhadap kondisi lokal.']
     ],
-    packageTitle: 'Pilihan Paket Banggai Tour & Private Trip',
-    packageText: 'Gunakan paket berikut sebagai titik awal, lalu konsultasikan penyesuaian itinerary sesuai kebutuhan Anda.',
+    packageTitle: 'Pilih Paket Berdasarkan Durasi',
+    packageText: 'Pilih durasi yang paling sesuai. Rute dan harga dikonfirmasi berdasarkan tanggal, jumlah peserta, dan kebutuhan trip Anda.',
     destinationTitle: 'Destinasi Populer',
     faqTitle: 'Pertanyaan Umum',
     faqs: [
-      ['Berapa hari ideal untuk Banggai Tour dari Luwuk?', 'Durasi bergantung pada jumlah pulau dan aktivitas yang ingin dimasukkan. Perjalanan singkat dapat dibuat 1–2 hari, sedangkan rute kepulauan tersedia untuk perjalanan beberapa hari.'],
+      ['Berapa harga paket?', 'Harga bergantung pada jumlah peserta, tanggal, rute, dan layanan yang dipilih. Kirim detail trip melalui WhatsApp untuk meminta penawaran.'],
+      ['Berapa hari ideal untuk Banggai Tour dari Luwuk?', 'Pilih 1–2 hari untuk Luwuk dan sekitarnya, 3 hari untuk mulai menyeberang, atau 4–6 hari untuk rute kepulauan.'],
       ['Apakah itinerary bisa custom?', 'Ya. Itinerary dapat dibahas berdasarkan tanggal, jumlah peserta, minat, dan urutan destinasi yang diinginkan.'],
       ['Apakah trip dimulai dari Luwuk?', 'Banyak rute dapat dimulai dari Luwuk, terutama ketika kedatangan Anda melalui Bandara Syukuran Aminuddin Amir.'],
       ['Apakah perjalanan laut selalu berjalan sesuai jadwal?', 'Jadwal dan urutan perjalanan laut dapat dipengaruhi oleh cuaca, kondisi laut, operator, dan situasi lokal sehingga itinerary perlu tetap fleksibel.'],
@@ -279,32 +280,21 @@ const schema = {
 
 const isId = currentLang === 'id';
 
-const positioningCopy = isId
-  ? {
-      eyebrow: 'PRIVATE TRIP DARI LUWUK',
-      title: 'Kami bantu atur perjalanan privat dari Luwuk ke Kepulauan Banggai, tanpa harus ribet urus transport antar pulau.',
-      paragraphs: [
-        'Untuk pasangan, keluarga, atau rombongan kecil. Bukan open trip — 1 grup 1 mobil/kapal, ritme ikut kamu.',
-        'Mulai dari Luwuk (Bandara Syukuran Aminuddin Amir), kami bantu koordinasi mobil Luwuk–Salakan, ferry/speed ke Peleng, boat lokal, urutan rute, dan pendampingan lokal. Bisa 1–2 hari di Luwuk atau 4–6 hari sampai Paisu Pok & Pulo Dua.'
-      ]
-    }
-  : null;
-
 const servicesUi = isId
   ? [
-      ['Private Trip', 'Satu grup privat, bukan digabung. Lebih fleksibel jam dan durasi.'],
-      ['Custom Route', 'Kombinasi Luwuk, Salakan, Peleng, Banggai Laut disusun berdasarkan berapa hari yang kamu punya.'],
-      ['Transportasi Perjalanan', 'Bantu atur mobil, ferry/speed, boat lokal sesuai jadwal real di lapangan.'],
-      ['Local Guide', 'Orang lokal yang tahu waktu tempuh real, jalur bagus pagi/sore, dan kapan perlu geser jadwal karena cuaca.']
+      ['Private trip', 'Satu grup sendiri, tidak digabung dengan peserta lain.'],
+      ['Rute custom', 'Gabungkan Luwuk, Salakan, Peleng, dan destinasi lain sesuai durasi.'],
+      ['Transportasi', 'Bantuan koordinasi mobil, ferry/speedboat, dan boat lokal.'],
+      ['Pendamping lokal', 'Bantu arahkan perjalanan dan menyesuaikan rute dengan kondisi lapangan.']
     ]
   : c.services;
 
 const processUi = isId
   ? [
-      ['01', 'Kirim rencana perjalanan', 'Sampaikan tanggal, jumlah peserta, lama perjalanan, dan destinasi. Contoh: 20–23 Des, 4 orang, 4 hari, ingin Paisu Pok.'],
-      ['02', 'Susun rute', 'Kami cek jadwal kapal dan waktu tempuh real, lalu usulkan urutan yang masuk akal.'],
-      ['03', 'Sesuaikan detail', 'Transport, penginapan, aktivitas, dan kebutuhan perjalanan dibahas sebelum berangkat.'],
-      ['04', 'Berangkat dari Luwuk', 'Jalan sesuai plan, tetap fleksibel kalau cuaca atau kondisi laut berubah.']
+      ['01', 'Kirim rencana', 'Tanggal, jumlah peserta, durasi, dan destinasi prioritas.'],
+      ['02', 'Cek rute', 'Kami susun urutan perjalanan dan transportasi yang realistis.'],
+      ['03', 'Konfirmasi biaya', 'Detail layanan dan harga disepakati sebelum keberangkatan.'],
+      ['04', 'Mulai dari Luwuk', 'Rute dapat menyesuaikan cuaca dan kondisi laut.']
     ]
   : c.process;
 
@@ -372,20 +362,64 @@ const breadcrumbItems = [
       </div>
     </section>
 
-    ${isId && positioningCopy && (
-      <section class="bg-[#FFFEFB] py-20 md:py-24">
-        <div class="max-w-7xl mx-auto px-5 sm:px-8 lg:px-12 grid lg:grid-cols-2 gap-12 lg:gap-20 items-start">
-          <div>
-            <p class="text-[#14B8A6] text-xs font-bold tracking-[0.2em] uppercase mb-4">{positioningCopy.eyebrow}</p>
-            <h2 class="font-serif text-3xl md:text-[44px] text-ocean-900 leading-tight tracking-[-0.03em]">{positioningCopy.title}</h2>
+    <section id="packages" class="bg-[#FFFEFB] py-16 md:py-24 scroll-mt-24">
+      <div id="paket-wisata" class="scroll-mt-24"></div>
+      <div class="max-w-7xl mx-auto px-5 sm:px-8 lg:px-12">
+        <div class="max-w-3xl mb-10">
+          <p class="text-[#14B8A6] text-xs font-bold tracking-[0.2em] uppercase mb-4">TOUR PACKAGES</p>
+          <h2 class="font-serif text-3xl md:text-[44px] text-ocean-900 tracking-[-0.03em] font-medium mb-4">{c.packageTitle}</h2>
+          <p class="text-ocean-600 leading-relaxed max-w-2xl">{c.packageText}</p>
+        </div>
+        <div class="border-y border-[#E8E2D6] divide-y divide-[#E8E2D6]">
+          {selectedPackages.map(pkg => {
+            const slug = pkg.slug.split('/')[1];
+            const meta = packageMeta[slug] || { label: '' };
+            const isFeatured = meta.featured === true;
+            const rowClass = 'grid lg:grid-cols-[180px_minmax(0,1fr)_190px] gap-5 lg:gap-8 items-center px-0 py-7 md:py-8 ' + (isFeatured ? 'bg-[#0A1E3A] text-white px-5 md:px-7 -mx-5 md:-mx-7 rounded-2xl my-3 border border-[#0A1E3A]' : '');
+            return (
+              <div class={rowClass}>
+                <div>
+                  <span class={'inline-flex rounded-full px-3 py-1 text-[11px] font-bold tracking-[0.14em] uppercase ' + (isFeatured ? 'bg-white/10 text-white' : 'bg-[#F6F2E9] text-[#14B8A6]')}>{meta.label}</span>
+                  <p class={'text-xs font-semibold mt-3 ' + (isFeatured ? 'text-white/60' : 'text-ocean-500')}>{pkg.data.duration}</p>
+                </div>
+                <div>
+                  <a href={'/' + currentLang + '/packages/' + slug + '/'} class={'font-serif text-2xl md:text-3xl hover:underline underline-offset-4 ' + (isFeatured ? 'text-white' : 'text-ocean-900')}>{pkg.data.title}</a>
+                  <p class={'text-sm leading-[1.65] mt-2 line-clamp-2 ' + (isFeatured ? 'text-white/70' : 'text-ocean-600')}>{pkg.data.description}</p>
+                  <div class="flex flex-wrap gap-2 mt-4">{(pkg.data.destination || '').split(',').slice(0, 4).map(dest => (<span class={'rounded-full border px-3 py-1 text-xs ' + (isFeatured ? 'border-white/15 text-white/70' : 'border-[#E8E2D6] text-ocean-600')}>{dest.trim()}</span>))}</div>
+                </div>
+                <div class="lg:text-right">
+                  <a href="https://wa.me/6285820830530" target="_blank" rel="noopener noreferrer" class={'text-sm font-semibold underline underline-offset-4 ' + (isFeatured ? 'text-white' : 'text-ocean-900')}>Konsultasi Rute →</a>
+                </div>
+              </div>
+            );
+          })}
+        </div>
+        <div class="mt-6"><p class="text-xs text-ocean-500">Harga akhir menyesuaikan jumlah peserta, tanggal, rute, dan layanan yang dipilih. Minta penawaran sebelum booking.</p></div>
+      </div>
+    </section>
+
+
+    {isId ? (
+      <section class="bg-[#F6F2E9] py-12 md:py-14">
+        <div class="max-w-7xl mx-auto px-5 sm:px-8 lg:px-12">
+          <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-4 mb-7">
+            <div>
+              <p class="text-[#14B8A6] text-xs font-bold tracking-[0.2em] uppercase mb-3">PRIVATE TRIP</p>
+              <h2 class="font-serif text-3xl md:text-4xl text-ocean-900 leading-tight tracking-[-0.03em]">{c.servicesTitle}</h2>
+            </div>
+            <p class="text-ocean-600 text-sm leading-[1.6] max-w-xl">Satu grup privat, rute sesuai durasi, dan bantuan mengatur perjalanan darat maupun laut.</p>
           </div>
-          <div class="space-y-5 text-ocean-600 text-[15px] md:text-base leading-[1.7]">
-            {positioningCopy.paragraphs.map(paragraph => <p>{paragraph}</p>)}
+          <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-3">
+            {servicesUi.map(([title, text]) => (
+              <article class="rounded-2xl border border-[#E8E2D6] bg-[#FFFEFB] p-5">
+                <h3 class="font-semibold text-ocean-900 mb-2">{title}</h3>
+                <p class="text-sm text-ocean-600 leading-[1.65]">{text}</p>
+              </article>
+            ))}
           </div>
         </div>
       </section>
-    )}
-
+    ) : (
     <section class="bg-[#F6F2E9] py-16 md:py-20">
       <div class="max-w-7xl mx-auto px-5 sm:px-8 lg:px-12">
         <div class="max-w-3xl mb-10">
@@ -404,7 +438,9 @@ const breadcrumbItems = [
         </div>
       </div>
     </section>
+    )}
 
+    {!isId && (
     <section class="bg-[#FFFEFB] py-16 md:py-24">
       <div class="max-w-7xl mx-auto px-5 sm:px-8 lg:px-12">
         <div class="grid lg:grid-cols-[.9fr_1.1fr] gap-12 lg:gap-20 items-start">
@@ -456,6 +492,7 @@ const breadcrumbItems = [
         </div>
       </div>
     </section>
+    )}
 
     <section class="bg-[#F6F2E9] py-16 md:py-24">
       <div class="max-w-7xl mx-auto px-5 sm:px-8 lg:px-12">
@@ -498,42 +535,6 @@ const breadcrumbItems = [
       </div>
     </section>
 
-    <section id="packages" class="bg-[#FFFEFB] py-16 md:py-24">
-      <div id="paket-wisata" class="relative -top-24"></div>
-      <div class="max-w-7xl mx-auto px-5 sm:px-8 lg:px-12">
-        <div class="max-w-3xl mb-10">
-          <p class="text-[#14B8A6] text-xs font-bold tracking-[0.2em] uppercase mb-4">TOUR PACKAGES</p>
-          <h2 class="font-serif text-3xl md:text-[44px] text-ocean-900 tracking-[-0.03em] font-medium mb-4">{c.packageTitle}</h2>
-          <p class="text-ocean-600 leading-relaxed max-w-2xl">{c.packageText}</p>
-        </div>
-        <div class="border-y border-[#E8E2D6] divide-y divide-[#E8E2D6]">
-          {selectedPackages.map(pkg => {
-            const slug = pkg.slug.split('/')[1];
-            const meta = packageMeta[slug] || { label: '' };
-            const isFeatured = meta.featured === true;
-            const rowClass = 'grid lg:grid-cols-[180px_minmax(0,1fr)_190px] gap-5 lg:gap-8 items-center px-0 py-7 md:py-8 ' + (isFeatured ? 'bg-[#0A1E3A] text-white px-5 md:px-7 -mx-5 md:-mx-7 rounded-2xl my-3 border border-[#0A1E3A]' : '');
-            return (
-              <div class={rowClass}>
-                <div>
-                  <span class={'inline-flex rounded-full px-3 py-1 text-[11px] font-bold tracking-[0.14em] uppercase ' + (isFeatured ? 'bg-white/10 text-white' : 'bg-[#F6F2E9] text-[#14B8A6]')}>{meta.label}</span>
-                  <p class={'text-xs font-semibold mt-3 ' + (isFeatured ? 'text-white/60' : 'text-ocean-500')}>{pkg.data.duration}</p>
-                </div>
-                <div>
-                  <a href={'/' + currentLang + '/packages/' + slug + '/'} class={'font-serif text-2xl md:text-3xl hover:underline underline-offset-4 ' + (isFeatured ? 'text-white' : 'text-ocean-900')}>{pkg.data.title}</a>
-                  <p class={'text-sm leading-[1.7] mt-2 ' + (isFeatured ? 'text-white/70' : 'text-ocean-600')}>{pkg.data.description}</p>
-                  <div class="flex flex-wrap gap-2 mt-4">{(pkg.data.destination || '').split(',').slice(0, 4).map(dest => (<span class={'rounded-full border px-3 py-1 text-xs ' + (isFeatured ? 'border-white/15 text-white/70' : 'border-[#E8E2D6] text-ocean-600')}>{dest.trim()}</span>))}</div>
-                </div>
-                <div class="lg:text-right">
-                  <a href="https://wa.me/6285820830530" target="_blank" rel="noopener noreferrer" class={'text-sm font-semibold underline underline-offset-4 ' + (isFeatured ? 'text-white' : 'text-ocean-900')}>Konsultasi Rute →</a>
-                </div>
-              </div>
-            );
-          })}
-        </div>
-        <div class="mt-6"><p class="text-xs text-ocean-500">Harga & include menyesuaikan jumlah peserta — konsultasi dulu.</p></div>
-      </div>
-    </section>
-
     <section class="bg-[#F6F2E9] py-16 md:py-24">
       <div class="max-w-7xl mx-auto px-5 sm:px-8 lg:px-12">
         <div class="max-w-3xl mb-10">
@@ -555,27 +556,6 @@ const breadcrumbItems = [
         </div>
       </div>
     </section>
-
-    ${isId && (
-      <section class="bg-[#FFFEFB] py-16 md:py-24">
-        <div class="max-w-7xl mx-auto px-5 sm:px-8 lg:px-12">
-          <div class="grid lg:grid-cols-[.9fr_1.1fr] gap-12 lg:gap-20 items-start">
-            <div>
-              <p class="text-[#14B8A6] text-xs font-bold tracking-[0.2em] uppercase mb-4">WHY LOCAL PLANNING MATTERS</p>
-              <h2 class="font-serif text-3xl md:text-[44px] text-ocean-900 leading-tight tracking-[-0.03em]">Perjalanan Banggai yang Disusun dengan Kondisi Nyata di Lapangan</h2>
-            </div>
-            <div>
-              <p class="text-ocean-600 text-[15px] md:text-base leading-[1.7] mb-6">Banggai bukan Bali. Destinasinya tersebar, transport laut punya jamnya sendiri, cuaca bisa mengubah urutan, dan di beberapa titik sinyal bisa hilang. Itinerary yang bagus bukan yang memasukkan tempat sebanyak mungkin, tetapi yang ringkas, realistis, dan masih nyaman dijalani.</p>
-              <ul class="divide-y divide-[#E8E2D6] border-y border-[#E8E2D6]">
-                {['Destinasi tersebar, jadi waktu antar pulau perlu dihitung.','Transport laut punya jadwal dan tergantung cuaca.','Cuaca dan pasang surut bisa mengubah urutan perjalanan.','Pengetahuan rute lokal membantu menghindari rute memutar.','Itinerary lebih baik ringkas dan santai daripada terlalu padat.'].map(item => (
-                  <li class="py-4 text-sm text-ocean-700 leading-[1.7] pl-5 relative"><span class="absolute left-0 top-6 w-1.5 h-1.5 rounded-full bg-[#14B8A6]"></span>{item}</li>
-                ))}
-              </ul>
-            </div>
-          </div>
-        </div>
-      </section>
-    )}
 
     <section class="bg-[#F6F2E9] py-16 md:py-24">
       <div class="max-w-4xl mx-auto px-5 sm:px-8">
