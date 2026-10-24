@@ -4,12 +4,12 @@ import { getLangFromUrl, useTranslations } from '../utils/i18n';
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
 ---
-<header class="fixed top-0 left-0 right-0 z-50 bg-white/75 backdrop-blur-2xl border-b border-black/5">
+<header class="bw-site-header fixed top-0 left-0 right-0 z-50 bg-white/90 backdrop-blur-xl border-b border-black/5">
   <!-- Commercial hub: packages are presented within the main tour services page. -->
   <div class="max-w-7xl mx-auto px-5 sm:px-8 lg:px-12">
-    <div class="h-[84px] flex items-center justify-between">
+    <div class="bw-site-header-row h-[72px] md:h-[84px] flex items-center justify-between">
       <a href={`/${lang}/`} class="flex items-center shrink-0" aria-label="Banggai Wonderland home">
-        <img src="/images/logo.png" alt="Banggai Wonderland" class="h-[80px] md:h-[80px] w-auto object-contain" />
+        <img src="/images/logo.png" alt="Banggai Wonderland" class="h-[58px] md:h-[72px] w-auto object-contain" />
       </a>
       <nav class="hidden lg:flex items-center gap-8">
         <a href={`/${lang}/destinations/`} class="text-[13px] font-medium text-ocean-900/75 hover:text-ocean-900 transition">{t('nav.destinations')}</a>
@@ -33,6 +33,32 @@ const t = useTranslations(lang);
     </div>
   </div>
 </header>
+
+<style>
+  /* Keep the fixed header compact on mobile so it does not visually crowd the hero. */
+  .bw-site-header {
+    min-height: 0;
+    border-radius: 0 !important;
+  }
+  .bw-site-header-row {
+    min-height: 72px;
+  }
+  @media (min-width: 768px) {
+    .bw-site-header-row {
+      min-height: 84px;
+    }
+  }
+  @media (max-width: 767px) {
+    .bw-site-header .max-w-7xl {
+      padding-left: 16px;
+      padding-right: 16px;
+    }
+    .bw-site-header img {
+      max-height: 58px;
+    }
+  }
+</style>
+
 <script>
 const btn=document.getElementById('mobile-menu-btn');const menu=document.getElementById('mobile-menu');const path=document.getElementById('menu-icon-path');
 if(btn&&menu&&path){btn.addEventListener('click',()=>{const open=menu.classList.toggle('hidden')===false;btn.setAttribute('aria-expanded',String(open));path.setAttribute('d',open?'M6 18L18 6M6 6l12 12':'M4 7h16M4 12h16M4 17h16')})}
