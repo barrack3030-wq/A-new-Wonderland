@@ -362,39 +362,54 @@ const breadcrumbItems = [
       </div>
     </section>
 
-    <section id="packages" class="bg-[#FFFEFB] py-16 md:py-24 scroll-mt-24">
+    <section id="packages" class="bg-[#F4F5F7] py-14 md:py-20 scroll-mt-24">
       <div id="paket-wisata" class="scroll-mt-24"></div>
       <div class="max-w-7xl mx-auto px-5 sm:px-8 lg:px-12">
-        <div class="max-w-3xl mb-10">
-          <p class="text-[#14B8A6] text-xs font-bold tracking-[0.2em] uppercase mb-4">TOUR PACKAGES</p>
-          <h2 class="font-serif text-3xl md:text-[44px] text-ocean-900 tracking-[-0.03em] font-medium mb-4">{c.packageTitle}</h2>
+        <div class="max-w-3xl mb-8 md:mb-10">
+          <p class="text-[#14B8A6] text-xs font-bold tracking-[0.2em] uppercase mb-3">TOUR PACKAGES</p>
+          <h2 class="font-serif text-3xl md:text-[44px] text-ocean-900 tracking-[-0.03em] font-medium mb-3">{c.packageTitle}</h2>
           <p class="text-ocean-600 leading-relaxed max-w-2xl">{c.packageText}</p>
         </div>
-        <div class="border-y border-[#E8E2D6] divide-y divide-[#E8E2D6]">
-          {selectedPackages.map(pkg => {
-            const slug = pkg.slug.split('/')[1];
-            const meta = packageMeta[slug] || { label: '' };
-            const isFeatured = meta.featured === true;
-            const rowClass = 'grid lg:grid-cols-[180px_minmax(0,1fr)_190px] gap-5 lg:gap-8 items-center px-0 py-7 md:py-8 ' + (isFeatured ? 'bg-[#0A1E3A] text-white px-5 md:px-7 -mx-5 md:-mx-7 rounded-2xl my-3 border border-[#0A1E3A]' : '');
-            return (
-              <div class={rowClass}>
-                <div>
-                  <span class={'inline-flex rounded-full px-3 py-1 text-[11px] font-bold tracking-[0.14em] uppercase ' + (isFeatured ? 'bg-white/10 text-white' : 'bg-[#F6F2E9] text-[#14B8A6]')}>{meta.label}</span>
-                  <p class={'text-xs font-semibold mt-3 ' + (isFeatured ? 'text-white/60' : 'text-ocean-500')}>{pkg.data.duration}</p>
-                </div>
-                <div>
-                  <a href={'/' + currentLang + '/packages/' + slug + '/'} class={'font-serif text-2xl md:text-3xl hover:underline underline-offset-4 ' + (isFeatured ? 'text-white' : 'text-ocean-900')}>{pkg.data.title}</a>
-                  <p class={'text-sm leading-[1.65] mt-2 line-clamp-2 ' + (isFeatured ? 'text-white/70' : 'text-ocean-600')}>{pkg.data.description}</p>
-                  <div class="flex flex-wrap gap-2 mt-4">{(pkg.data.destination || '').split(',').slice(0, 4).map(dest => (<span class={'rounded-full border px-3 py-1 text-xs ' + (isFeatured ? 'border-white/15 text-white/70' : 'border-[#E8E2D6] text-ocean-600')}>{dest.trim()}</span>))}</div>
-                </div>
-                <div class="lg:text-right">
-                  <a href="https://wa.me/6285820830530" target="_blank" rel="noopener noreferrer" class={'text-sm font-semibold underline underline-offset-4 ' + (isFeatured ? 'text-white' : 'text-ocean-900')}>Konsultasi Rute →</a>
-                </div>
-              </div>
-            );
-          })}
+        <div class="rounded-[28px] bg-white p-4 sm:p-6 md:p-8 shadow-[0_14px_40px_rgba(15,23,42,0.10)]">
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 gap-4 md:gap-5">
+            {selectedPackages.map((pkg, index) => {
+              const slug = pkg.slug.split('/')[1];
+              const meta = packageMeta[slug] || { label: '' };
+              const isFeatured = meta.featured === true;
+              const photoByPackage: Record<string, string> = {
+                'luwuk-one-day': '/images/Piala-Waterfall-Banggai.webp',
+                'luwuk-stopover': '/images/Poganda-Beach-Banggai-IndonesiaJuara-Trip.webp',
+                'luwuk-salakan': '/images/DSCF7073-5.webp',
+                'banggai-wonderland': '/images/Poganda-Beach-Banggai-IndonesiaJuara-Trip.webp',
+                'banggai-5d4n': '/images/DSCF7073-5.webp',
+                'ultimate-banggai': '/images/DSCF7073-5.webp'
+              };
+              const photo = pkg.data.image || photoByPackage[slug] || '/images/Poganda-Beach-Banggai-IndonesiaJuara-Trip.webp';
+              const orderText = currentLang === 'id' ? 'Order Sekarang' : currentLang === 'es' ? 'Reservar ahora' : currentLang === 'fr' ? 'Réserver maintenant' : currentLang === 'zh' ? '立即预订' : currentLang === 'ko' ? '지금 예약하기' : 'Order Now';
+              const orderMessage = encodeURIComponent('Halo Banggai Wonderland, saya ingin order paket ' + pkg.data.title + '. Mohon info harga dan ketersediaan untuk tanggal perjalanan saya.');
+              return (
+                <article class="relative flex min-w-0 flex-col overflow-hidden rounded-xl border border-[#E5E7EB] bg-white transition duration-200 hover:-translate-y-1 hover:shadow-lg">
+                  {isFeatured && <span class="absolute left-0 top-3 z-10 rounded-r-md bg-[#FACC15] px-3 py-1.5 text-[11px] font-bold text-[#332600] shadow-sm">★ BEST SELLER</span>}
+                  <a href={'/' + currentLang + '/packages/' + slug + '/'} class="relative block h-40 sm:h-36 md:h-40 overflow-hidden bg-[#E8EEF2]">
+                    <img src={photo} alt={pkg.data.imageAlt || pkg.data.title} class="h-full w-full object-cover transition-transform duration-500 hover:scale-105" loading="lazy" />
+                    <span class="absolute bottom-3 left-3 rounded-md bg-white/95 px-2 py-1 text-[11px] font-semibold text-ocean-900 shadow-sm">{pkg.data.duration}</span>
+                  </a>
+                  <div class="flex flex-1 flex-col p-4">
+                    <a href={'/' + currentLang + '/packages/' + slug + '/'} class="text-base font-bold leading-snug text-slate-900 hover:text-ocean-700">{pkg.data.title}</a>
+                    <p class="mt-2 flex-1 text-sm leading-relaxed text-slate-600">{pkg.data.description}</p>
+                    <div class="mt-3 flex flex-wrap gap-1.5">
+                      {(pkg.data.destination || '').split(',').slice(0, 3).map(dest => (
+                        <span class="rounded-full bg-slate-100 px-2.5 py-1 text-[11px] text-slate-600">{dest.trim()}</span>
+                      ))}
+                    </div>
+                    <a href={'https://wa.me/6285820830530?text=' + orderMessage} target="_blank" rel="noopener noreferrer" class="mt-4 inline-flex min-h-11 w-full items-center justify-center rounded-lg bg-[#4D5FA8] px-4 py-3 text-sm font-semibold text-white transition hover:bg-[#39498B] focus:outline-none focus:ring-2 focus:ring-[#4D5FA8] focus:ring-offset-2">{orderText}</a>
+                  </div>
+                </article>
+              );
+            })}
+          </div>
+          <p class="mt-6 text-xs leading-relaxed text-slate-500">{isId ? 'Harga dan ketersediaan dikonfirmasi saat pemesanan. Biaya dapat menyesuaikan tanggal, jumlah peserta, rute, dan layanan yang dipilih.' : 'Prices and availability are confirmed when you enquire. Costs may vary by date, group size, route and selected services.'}</p>
         </div>
-        <div class="mt-6"><p class="text-xs text-ocean-500">Harga akhir menyesuaikan jumlah peserta, tanggal, rute, dan layanan yang dipilih. Minta penawaran sebelum booking.</p></div>
       </div>
     </section>
 
