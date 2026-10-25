@@ -377,12 +377,12 @@ const breadcrumbItems = [
               const meta = packageMeta[slug] || { label: '' };
               const isFeatured = meta.featured === true;
               const photoByPackage: Record<string, string> = {
-                'luwuk-one-day': '/images/Piala-Waterfall-Banggai.webp',
-                'luwuk-stopover': '/images/Poganda-Beach-Banggai-IndonesiaJuara-Trip.webp',
-                'luwuk-salakan': '/images/DSCF7073-5.webp',
-                'banggai-wonderland': '/images/Poganda-Beach-Banggai-IndonesiaJuara-Trip.webp',
-                'banggai-5d4n': '/images/DSCF7073-5.webp',
-                'ultimate-banggai': '/images/DSCF7073-5.webp'
+                'luwuk-one-day': selectedDestinations.find(item => item.slug.endsWith('/piala-waterfall'))?.data.image || '/images/Poganda-Beach-Banggai-IndonesiaJuara-Trip.webp',
+                'luwuk-stopover': selectedDestinations.find(item => item.slug.endsWith('/oyama-beach'))?.data.image || '/images/Poganda-Beach-Banggai-IndonesiaJuara-Trip.webp',
+                'luwuk-salakan': selectedDestinations.find(item => item.slug.endsWith('/paisu-pok-lake'))?.data.image || '/images/DSCF7073-5.webp',
+                'banggai-wonderland': selectedDestinations.find(item => item.slug.endsWith('/pulau-dua-balantak'))?.data.image || '/images/Poganda-Beach-Banggai-IndonesiaJuara-Trip.webp',
+                'banggai-5d4n': selectedDestinations.find(item => item.slug.endsWith('/oyama-beach'))?.data.image || '/images/DSCF7073-5.webp',
+                'ultimate-banggai': selectedDestinations.find(item => item.slug.endsWith('/paisu-pok-lake'))?.data.image || '/images/DSCF7073-5.webp'
               };
               const photo = pkg.data.image || photoByPackage[slug] || '/images/Poganda-Beach-Banggai-IndonesiaJuara-Trip.webp';
               const orderText = currentLang === 'id' ? 'Order Sekarang' : currentLang === 'es' ? 'Reservar ahora' : currentLang === 'fr' ? 'Réserver maintenant' : currentLang === 'zh' ? '立即预订' : currentLang === 'ko' ? '지금 예약하기' : 'Order Now';
