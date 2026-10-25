@@ -376,7 +376,7 @@ const breadcrumbItems = [
               const slug = pkg.slug.split('/')[1];
               const meta = packageMeta[slug] || { label: '' };
               const isFeatured = meta.featured === true;
-              const photoByPackage: Record<string, string> = {
+              const photoByPackage = {
                 'luwuk-one-day': selectedDestinations.find(item => item.slug.endsWith('/piala-waterfall'))?.data.image || '/images/Poganda-Beach-Banggai-IndonesiaJuara-Trip.webp',
                 'luwuk-stopover': selectedDestinations.find(item => item.slug.endsWith('/oyama-beach'))?.data.image || '/images/Poganda-Beach-Banggai-IndonesiaJuara-Trip.webp',
                 'luwuk-salakan': selectedDestinations.find(item => item.slug.endsWith('/paisu-pok-lake'))?.data.image || '/images/DSCF7073-5.webp',
