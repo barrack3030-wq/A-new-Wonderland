@@ -49,7 +49,7 @@ If Lake Paisupok is your main priority, ask how the route to the Luk Panenteng a
 
 Confirm local entrance fees, activity rules, and access conditions close to your travel date. Local arrangements can change, so older social media posts should not be treated as guaranteed current prices.
 
-For route-planning details, read our guide to [Paisu Pok and Paisu Batango from Salakan](/en/blog/2026-10-24-luwuk-arrival-buffer-before-banggai-islands/).
+If you are flying into Luwuk, our guide to [planning a buffer after arrival](/en/blog/2026-10-24-luwuk-arrival-buffer-before-banggai-islands/) can help you avoid an overly tight first day.
 
 ## Compare the full cost, not just the headline price
 
