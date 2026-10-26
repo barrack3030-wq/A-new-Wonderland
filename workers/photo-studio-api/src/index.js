@@ -37,7 +37,7 @@ export default {
         headers: { ...githubHeaders(env), 'Content-Type': 'application/json' },
         body: JSON.stringify({
           message: 'Photo Studio: add ' + fileName,
-          content: btoa(String.fromCharCode(...binary)),
+          content: bytesToBase64(binary),
           branch: env.GITHUB_BRANCH || 'main'
         })
       });
@@ -75,9 +75,17 @@ async function requireAccessIdentity(request, env) {
   if (!keyResponse.ok) throw new Error('Cloudflare Access: tidak dapat memverifikasi kunci tanda tangan.');
   const keySet = await keyResponse.json();
   const header = JSON.parse(atob(parts[0].replace(/-/g, '+').replace(/_/g, '/')));
-  const jwk = (keySet.public_certs || []).find(key => key.kid === header.kid);
-  if (!jwk || header.alg !== 'RS256') throw new Error('Cloudflare Access: tanda tangan token tidak dikenali.');
-  const publicKey = await crypto.subtle.importKey('jwk', { kty: jwk.kty, e: jwk.e, n: jwk.n, alg: 'RS256', ext: true }, { name: 'RSASSA-PKCS1-v1_5', hash: 'SHA-256' }, false, ['verify']);
+  const key = (keySet.keys || keySet.public_certs || []).find(item => item.kid === header.kid);
+  if (!key || header.alg !== 'RS256') throw new Error('Cloudflare Access: tanda tangan token tidak dikenali.');
+  let publicKey;
+  if (key.kty === 'RSA' && key.n && key.e) {
+    publicKey = await crypto.subtle.importKey('jwk', key, { name: 'RSASSA-PKCS1-v1_5', hash: 'SHA-256' }, false, ['verify']);
+  } else if (key.cert) {
+    const spki = extractSpkiFromCertificate(key.cert);
+    publicKey = await crypto.subtle.importKey('spki', spki, { name: 'RSASSA-PKCS1-v1_5', hash: 'SHA-256' }, false, ['verify']);
+  } else {
+    throw new Error('Cloudflare Access: format sertifikat tidak didukung.');
+  }
   const signature = Uint8Array.from(atob(parts[2].replace(/-/g, '+').replace(/_/g, '/')), c => c.charCodeAt(0));
   const valid = await crypto.subtle.verify('RSASSA-PKCS1-v1_5', publicKey, signature, new TextEncoder().encode(parts[0] + '.' + parts[1]));
   if (!valid) throw new Error('Cloudflare Access: tanda tangan token tidak valid.');
@@ -94,4 +102,35 @@ function corsHeaders(origin) {
 }
 function json(data, status = 200, origin = '') {
   return new Response(JSON.stringify(data), { status, headers: { ...corsHeaders(origin), 'Content-Type': 'application/json; charset=utf-8' } });
+}
+
+function bytesToBase64(bytes) {
+  let binary = '';
+  const chunkSize = 0x8000;
+  for (let i = 0; i < bytes.length; i += chunkSize) binary += String.fromCharCode(...bytes.subarray(i, i + chunkSize));
+  return btoa(binary);
+}
+function extractSpkiFromCertificate(pem) {
+  const base64 = String(pem).replace(/-----BEGIN CERTIFICATE-----|-----END CERTIFICATE-----|\\s/g, '');
+  const der = Uint8Array.from(atob(base64), c => c.charCodeAt(0));
+  function node(offset) {
+    const tag = der[offset];
+    let length = der[offset + 1], start = offset + 2;
+    if (length & 0x80) {
+      const count = length & 0x7f;
+      length = 0;
+      for (let i = 0; i < count; i++) length = length * 256 + der[start + i];
+      start += count;
+    }
+    return { tag, start, end: start + length };
+  }
+  const cert = node(0);
+  const tbs = node(cert.start);
+  let cursor = tbs.start;
+  let item = node(cursor);
+  if (item.tag === 0xa0) { cursor = item.end; item = node(cursor); }
+  // serial, signature, issuer, validity, subject, then SubjectPublicKeyInfo
+  for (let i = 0; i < 5; i++) { cursor = item.end; item = node(cursor); }
+  if (item.tag !== 0x30) throw new Error('Cloudflare Access: sertifikat tidak valid.');
+  return der.slice(cursor, item.end);
 }
