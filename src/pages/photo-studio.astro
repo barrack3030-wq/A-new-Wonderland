@@ -1,0 +1,76 @@
+---
+const title = 'Banggai Wonderland Photo Studio';
+---
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="robots" content="noindex,nofollow,noarchive" />
+  <meta name="referrer" content="no-referrer" />
+  <title>{title}</title>
+  <style>
+    :root{font-family:Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:#eaf5fb;background:#071725;color-scheme:dark}
+    *{box-sizing:border-box}body{margin:0;background:radial-gradient(ellipse at top right,#123d57 0,transparent 48%),#071725;min-height:100vh}
+    main{width:min(960px,92%);margin:auto;padding:32px 0 64px}.eyebrow{color:#7dd3fc;text-transform:uppercase;letter-spacing:.14em;font-size:12px;font-weight:800}
+    h1{font-size:clamp(30px,5vw,48px);line-height:1.08;letter-spacing:-.04em;margin:10px 0}p{color:#a9c4d3;line-height:1.6}
+    .card{background:#0b2131;border:1px solid #244357;border-radius:20px;padding:clamp(18px,4vw,30px);margin-top:20px;box-shadow:0 18px 60px #0002}
+    .drop{border:1px dashed #4d7b94;border-radius:16px;padding:30px 18px;text-align:center;background:#0a1c2a}
+    input,select{width:100%;background:#061522;border:1px solid #315168;border-radius:10px;padding:12px;color:#eff9ff;font:inherit}
+    label{display:block;font-size:13px;font-weight:750;margin:0 0 8px;color:#c8dfeb}
+    .grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:18px 0}.actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:18px}
+    button{border:0;border-radius:11px;background:#7dd3fc;color:#062033;font:inherit;font-weight:800;padding:12px 17px;cursor:pointer}
+    button.secondary{background:#17384e;color:#e2f4ff;border:1px solid #31556a}button:disabled{opacity:.5;cursor:wait}
+    .status{white-space:pre-wrap;overflow-wrap:anywhere;min-height:24px;margin-top:15px;color:#9dc4d8}.status.error{color:#fca5a5}.status.ok{color:#86efac}
+    .hint{font-size:13px;color:#8eafc1}.results{display:grid;gap:12px;margin-top:16px}.item{display:grid;grid-template-columns:100px 1fr;gap:14px;border:1px solid #254459;padding:12px;border-radius:14px;align-items:center}.item img{width:100px;height:82px;object-fit:cover;border-radius:8px;background:#061522}.url{font-size:12px;overflow-wrap:anywhere;color:#a5dfff}
+    .hidden{display:none!important}.toprow{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap}.brandmark{font-weight:900;letter-spacing:.04em}.tag{font-size:12px;border:1px solid #315168;border-radius:99px;padding:6px 10px;color:#b9d6e5}
+    @media(max-width:620px){.grid{grid-template-columns:1fr}.item{grid-template-columns:78px 1fr}.item img{width:78px;height:78px}.drop{padding:22px 12px}}
+  </style>
+</head>
+<body>
+<main>
+  <div class="toprow"><div class="brandmark">BANGGAI WONDERLAND</div><span class="tag">PRIVATE PHOTO STUDIO</span></div>
+  <header style="margin-top:32px"><div class="eyebrow">Photo workflow</div><h1>Foto asli, siap untuk artikel.</h1><p>Unggah foto dari HP atau laptop. Foto akan dikompres menjadi WebP di perangkat Anda, lalu disimpan ke repositori website setelah sesi GitHub terverifikasi.</p></header>
+  <section class="card" id="loginCard">
+    <h2 style="margin-top:0">Masuk dengan GitHub</h2>
+    <p>Hanya akun GitHub yang diizinkan di konfigurasi server yang dapat mengunggah foto. Token GitHub tidak dikirim ke halaman ini.</p>
+    <button id="login">Login dengan GitHub</button>
+    <div id="loginStatus" class="status"></div>
+  </section>
+  <section class="card hidden" id="studioCard">
+    <div class="toprow"><div><h2 style="margin:0">Unggah foto baru</h2><p id="signedIn" class="hint"></p></div><button class="secondary" id="logout">Keluar</button></div>
+    <div class="grid">
+      <div><label for="destination">Nama destinasi / subjek</label><input id="destination" maxlength="70" placeholder="Contoh: Pantai Poganda" /></div>
+      <div><label for="category">Kategori</label><select id="category"><option value="destinasi">Destinasi</option><option value="aktivitas">Aktivitas / tour</option><option value="akomodasi">Hotel / akomodasi</option><option value="transportasi">Transportasi</option><option value="tim">Tim Banggai Wonderland</option><option value="lainnya">Lainnya</option></select></div>
+    </div>
+    <div class="drop">
+      <div style="font-size:32px">＋</div><strong>Pilih satu atau beberapa foto</strong>
+      <p class="hint">JPG, PNG, WebP. Foto dikonversi menjadi WebP; GIF/SVG tidak didukung untuk alur ini.</p>
+      <input id="files" type="file" accept="image/jpeg,image/png,image/webp" multiple style="margin-top:12px" />
+    </div>
+    <div class="actions"><button id="upload">Kompres &amp; simpan ke GitHub</button></div>
+    <p class="hint">Optimasi: sisi terpanjang maksimal 2000 px, kualitas WebP 82%, batas file asli 15 MB per foto. Nama file dibuat dari destinasi, kategori, dan nama foto.</p>
+    <div id="uploadStatus" class="status" role="status" aria-live="polite"></div>
+    <div id="results" class="results"></div>
+  </section>
+  <section class="card"><h2 style="margin-top:0">Alur penyimpanan</h2><p>File tersimpan di <code>public/images/blog/</code> dan URL-nya dapat langsung dipakai pada frontmatter artikel sebagai nilai <code>image</code>. Foto baru memakai repositori utama agar dapat digunakan oleh CMS artikel yang sudah ada.</p><p class="hint">Halaman memakai noindex, tetapi perlindungan utamanya adalah autentikasi server-side. Jangan membagikan URL sesi atau konfigurasi rahasia.</p></section>
+</main>
+<script>
+const ENDPOINT='https://script.google.com/macros/s/AKfycbxGMuyFzq0K-gKIPaamp1ClFqo6zYJfNNvZfd0hxeJIJTj0N_DVPywUtkWbo5g0_F08/exec';
+const loginCard=document.getElementById('loginCard'),studioCard=document.getElementById('studioCard'),loginStatus=document.getElementById('loginStatus'),uploadStatus=document.getElementById('uploadStatus'),filesEl=document.getElementById('files'),results=document.getElementById('results');
+let session=sessionStorage.getItem('bw_photo_session')||'';
+function status(el,text,kind=''){el.textContent=text;el.className='status'+(kind?' '+kind:'');}
+async function api(payload){const response=await fetch(ENDPOINT+'?photo='+Date.now(),{method:'POST',headers:{'Content-Type':'text/plain;charset=utf-8','Accept':'application/json'},body:JSON.stringify(payload),cache:'no-store',redirect:'follow'});const raw=await response.text();let data;try{data=JSON.parse(raw)}catch(e){throw new Error('Server upload tidak mengembalikan JSON. Pastikan Apps Script sudah diperbarui dan deployment aktif.')}if(!response.ok||!data.ok)throw new Error(data.error||('Request gagal: HTTP '+response.status));return data;}
+function showStudio(user){loginCard.classList.add('hidden');studioCard.classList.remove('hidden');document.getElementById('signedIn').textContent='Terautentikasi sebagai @'+user+' · sesi sementara';}
+async function verifySession(){if(!session)return false;try{const data=await api({action:'photoSession',session});showStudio(data.user);return true}catch(e){session='';sessionStorage.removeItem('bw_photo_session');status(loginStatus,e.message,'error');return false;}}
+document.getElementById('login').addEventListener('click',()=>{location.href=ENDPOINT+'?action=oauthStart';});
+document.getElementById('logout').addEventListener('click',()=>{session='';sessionStorage.removeItem('bw_photo_session');studioCard.classList.add('hidden');loginCard.classList.remove('hidden');results.replaceChildren();status(loginStatus,'Anda telah keluar.');});
+function slug(s){return String(s||'').normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/^-+|-+$/g,'').slice(0,60)||'banggai-photo';}
+function readAsDataURL(blob){return new Promise((resolve,reject)=>{const reader=new FileReader();reader.onload=()=>resolve(reader.result);reader.onerror=()=>reject(new Error('Tidak dapat membaca foto hasil kompresi.'));reader.readAsDataURL(blob);});}
+async function compressWebp(file){if(!('createImageBitmap' in window))throw new Error('Browser ini belum mendukung pemrosesan foto. Coba browser Chrome yang terbaru.');const bitmap=await createImageBitmap(file);try{const scale=Math.min(1,2000/Math.max(bitmap.width,bitmap.height));const canvas=document.createElement('canvas');canvas.width=Math.max(1,Math.round(bitmap.width*scale));canvas.height=Math.max(1,Math.round(bitmap.height*scale));const ctx=canvas.getContext('2d',{alpha:false});ctx.drawImage(bitmap,0,0,canvas.width,canvas.height);const blob=await new Promise(resolve=>canvas.toBlob(resolve,'image/webp',0.82));if(!blob||blob.type!=='image/webp')throw new Error('Browser gagal membuat WebP.');return{blob,width:canvas.width,height:canvas.height};}finally{bitmap.close();}}
+function addResult(image,previewUrl,bytesBefore,bytesAfter){const item=document.createElement('div');item.className='item';const img=document.createElement('img');img.src=previewUrl;img.alt='Pratinjau foto yang diunggah';const body=document.createElement('div');const name=document.createElement('strong');name.textContent=image.name||'Foto WebP';const info=document.createElement('p');info.className='hint';info.textContent=(bytesBefore/1024/1024).toFixed(2)+' MB → '+(bytesAfter/1024/1024).toFixed(2)+' MB';const url=document.createElement('div');url.className='url';url.textContent=image.url;const copy=document.createElement('button');copy.className='secondary';copy.textContent='Salin URL';copy.style.marginTop='9px';copy.addEventListener('click',async()=>{await navigator.clipboard.writeText(image.url);copy.textContent='Tersalin';});body.append(name,info,url,copy);item.append(img,body);results.prepend(item);}
+document.getElementById('upload').addEventListener('click',async function(){const chosen=Array.from(filesEl.files||[]);if(!session)return status(uploadStatus,'Sesi tidak tersedia. Login GitHub kembali.','error');if(!chosen.length)return status(uploadStatus,'Pilih setidaknya satu foto terlebih dahulu.','error');if(chosen.some(f=>!/^image\/(jpeg|png|webp)$/.test(f.type)))return status(uploadStatus,'Gunakan JPG, PNG, atau WebP.','error');if(chosen.some(f=>f.size>15*1024*1024))return status(uploadStatus,'Ukuran foto asli maksimal 15 MB per file.','error');const destination=document.getElementById('destination').value.trim(),category=document.getElementById('category').value;if(!destination)return status(uploadStatus,'Isi nama destinasi atau subjek foto.','error');this.disabled=true;let done=0;try{for(const file of chosen){status(uploadStatus,'Memproses '+(done+1)+'/'+chosen.length+': '+file.name+'…');const compressed=await compressWebp(file);const dataUrl=await readAsDataURL(compressed.blob);const fileName=slug(destination)+'-'+slug(category)+'-'+slug(file.name.replace(/\.[^.]+$/,''))+'.webp';const data=await api({action:'photoUpload',session,dataUrl,fileName});addResult(data.image,URL.createObjectURL(compressed.blob),file.size,compressed.blob.size);done++;}status(uploadStatus,'Selesai. '+done+' foto tersimpan ke repositori.','ok');filesEl.value='';}catch(e){status(uploadStatus,'Upload berhenti setelah '+done+' foto berhasil. '+e.message,'error');}finally{this.disabled=false;}});
+const params=new URLSearchParams(location.search);if(params.get('session')){session=params.get('session');sessionStorage.setItem('bw_photo_session',session);history.replaceState({},'',location.pathname);}verifySession();
+</script>
+</body>
+</html>
