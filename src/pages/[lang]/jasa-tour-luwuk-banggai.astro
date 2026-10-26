@@ -384,7 +384,7 @@ const breadcrumbItems = [
                 'banggai-5d4n': selectedDestinations.find(item => item.slug.endsWith('/oyama-beach'))?.data.image || '/images/DSCF7073-5.webp',
                 'ultimate-banggai': selectedDestinations.find(item => item.slug.endsWith('/paisu-pok-lake'))?.data.image || '/images/DSCF7073-5.webp'
               };
-              const photo = pkg.data.image || photoByPackage[slug] || '/images/Poganda-Beach-Banggai-IndonesiaJuara-Trip.webp';
+              const photo = photoByPackage[slug] || pkg.data.image || '/images/Poganda-Beach-Banggai-IndonesiaJuara-Trip.webp';
               const orderText = currentLang === 'id' ? 'Order Sekarang' : currentLang === 'es' ? 'Reservar ahora' : currentLang === 'fr' ? 'Réserver maintenant' : currentLang === 'zh' ? '立即预订' : currentLang === 'ko' ? '지금 예약하기' : 'Order Now';
               const orderMessage = encodeURIComponent('Halo Banggai Wonderland, saya ingin order paket ' + pkg.data.title + '. Mohon info harga dan ketersediaan untuk tanggal perjalanan saya.');
               return (
