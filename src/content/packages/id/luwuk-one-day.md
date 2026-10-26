@@ -3,8 +3,8 @@ title: Luwuk One Day Private Trip
 description: Paket private trip 1 hari dari Luwuk untuk mengunjungi Air Terjun Piala, pesisir Luwuk dan destinasi sekitar kota.
 seoTitle: 'Paket Wisata Luwuk 1 Hari | Private Trip Luwuk'
 seoDescription: 'Paket wisata Luwuk 1 hari dengan Air Terjun Piala, pesisir Kilo 5, transportasi privat dan pemandu lokal. Cocok untuk wisatawan dengan waktu terbatas.'
-image: /images/luwuk-stopover.webp
-imageAlt: Pemandangan perjalanan private trip satu hari di Luwuk, Banggai
+image: /images/oyama-beach.webp
+imageAlt: Pantai Oyama dengan pasir putih dan air laut jernih di Banggai Laut
 duration: 1 Day
 destination: Luwuk City, Piala Waterfall, Kilo 5
 activities:
