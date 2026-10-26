@@ -79,10 +79,9 @@ function photoValidateSession_(session){
   return user;
 }
 function photoSafeName_(name){
-  const value=String(name||'banggai-photo.webp').replace(/\\.[^.]+$/,'').normalize('NFD').replace(/[\\u0300-\\u036f]/g,'').toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/^-+|-+$/g,'').substring(0,80)||'banggai-photo';
+  const value=String(name||'banggai-photo.webp').replace(/\.[^.]+$/,'').normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/^-+|-+$/g,'').substring(0,80)||'banggai-photo';
   return value+'.webp';
 }
-
 function checkAccessKey(value){const expected=PropertiesService.getScriptProperties().getProperty('CMS_ACCESS_KEY');if(!expected)throw new Error('CMS_ACCESS_KEY belum diset di Script Properties.');if(!value||value!==expected)throw new Error('Access key tidak valid.');}
 function getOpenAIConfig(){const key=PropertiesService.getScriptProperties().getProperty('OPENAI_API_KEY');if(!key)throw new Error('OPENAI_API_KEY belum diset di Script Properties.');return{key:key,model:OPENAI_MODEL,url:OPENAI_URL};}
 
