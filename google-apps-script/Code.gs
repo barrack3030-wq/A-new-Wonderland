@@ -10,13 +10,12 @@ const BATCH_SIZE=2;
 
 function doGet(e){
   const p=e&&e.parameter?e.parameter:{};
-  if(p.action==='oauthStart')return photoOAuthStart_();
-  if(p.code)return photoOAuthCallback_(p);
-  return jsonResponse({ok:true,service:'Banggai Wonderland CMS',version:'8.1-photo-studio-oauth',status:'online',timestamp:new Date().toISOString()});
+  return jsonResponse({ok:true,service:'Banggai Wonderland CMS',version:'8.2-photo-studio-access-code',status:'online',timestamp:new Date().toISOString()});
 }
 function doPost(e){try{
   if(!e||!e.postData||!e.postData.contents)throw new Error('Request data tidak ditemukan.');
   const data=JSON.parse(e.postData.contents);
+  if(data.action==='photoAccessSession'){const session=photoCreateSession_(data.accessCode);return jsonResponse({ok:true,session:session,expiresIn:1800});}
   if(data.action==='photoSession'){const user=photoValidateSession_(data.session);return jsonResponse({ok:true,user:user});}
   if(data.action==='photoUpload'){photoValidateSession_(data.session);const fileName=photoSafeName_(data.fileName);const image=uploadImage({dataUrl:data.dataUrl,fileName:fileName});return jsonResponse({ok:true,image:image});}
   if(data.action==='chatCreate')return jsonResponse({ok:true,conversation:createChatConversation(data)});
@@ -39,44 +38,31 @@ function doPost(e){try{
 }catch(error){return jsonResponse({ok:false,error:error&&error.message?error.message:String(error)});}}
 
 
-// Photo Studio GitHub OAuth. Configure these Script Properties before redeploying:
-// GITHUB_OAUTH_CLIENT_ID, GITHUB_OAUTH_CLIENT_SECRET, GITHUB_OAUTH_ALLOWED_USER,
-// PHOTO_STUDIO_URL (e.g. https://banggaiwonderland.my.id/photo-studio/).
-function photoOAuthStart_(){
-  const p=PropertiesService.getScriptProperties(),clientId=p.getProperty('GITHUB_OAUTH_CLIENT_ID');
-  if(!clientId||!p.getProperty('GITHUB_OAUTH_CLIENT_SECRET')||!p.getProperty('GITHUB_OAUTH_ALLOWED_USER')||!p.getProperty('PHOTO_STUDIO_URL'))return HtmlService.createHtmlOutput('<h2>Photo Studio belum dikonfigurasi</h2><p>Admin perlu mengatur Script Properties OAuth lalu memperbarui deployment Apps Script.</p>');
-  const state=Utilities.getUuid().replace(/-/g,'');
-  CacheService.getScriptCache().put('photo_oauth_state_'+state,'1',600);
-  const redirect=ScriptApp.getService().getUrl();
-  const url='https://github.com/login/oauth/authorize?client_id='+encodeURIComponent(clientId)+'&redirect_uri='+encodeURIComponent(redirect)+'&scope=read%3Auser&state='+encodeURIComponent(state);
-  return HtmlService.createHtmlOutput('<!doctype html><meta charset="utf-8"><p>Mengarahkan ke GitHub untuk login…</p><script>location.replace('+JSON.stringify(url)+')</script>');
-}
-function photoOAuthCallback_(p){
-  const state=String(p.state||''),cache=CacheService.getScriptCache();
-  if(!state||cache.get('photo_oauth_state_'+state)!=='1')return HtmlService.createHtmlOutput('<h2>Login gagal</h2><p>State OAuth tidak valid atau kedaluwarsa. Silakan kembali dan coba lagi.</p>');
-  cache.remove('photo_oauth_state_'+state);
-  if(p.error)return HtmlService.createHtmlOutput('<h2>Login dibatalkan</h2><p>Anda dapat menutup halaman ini.</p>');
-  const props=PropertiesService.getScriptProperties(),clientId=props.getProperty('GITHUB_OAUTH_CLIENT_ID'),clientSecret=props.getProperty('GITHUB_OAUTH_CLIENT_SECRET');
-  if(!clientId||!clientSecret)return HtmlService.createHtmlOutput('<h2>OAuth belum dikonfigurasi</h2>');
-  const tokenResponse=UrlFetchApp.fetch('https://github.com/login/oauth/access_token',{method:'post',contentType:'application/json',headers:{Accept:'application/json'},payload:JSON.stringify({client_id:clientId,client_secret:clientSecret,code:String(p.code||''),redirect_uri:ScriptApp.getService().getUrl()}),muteHttpExceptions:true});
-  const tokenData=JSON.parse(tokenResponse.getContentText()||'{}');
-  if(tokenResponse.getResponseCode()<200||tokenResponse.getResponseCode()>=300||!tokenData.access_token)return HtmlService.createHtmlOutput('<h2>Login GitHub gagal</h2><p>OAuth token tidak dapat diverifikasi.</p>');
-  const userResponse=UrlFetchApp.fetch('https://api.github.com/user',{headers:{Authorization:'Bearer '+tokenData.access_token,Accept:'application/vnd.github+json','X-GitHub-Api-Version':'2022-11-28'},muteHttpExceptions:true});
-  if(userResponse.getResponseCode()<200||userResponse.getResponseCode()>=300)return HtmlService.createHtmlOutput('<h2>Login GitHub gagal</h2><p>Profil GitHub tidak dapat diverifikasi.</p>');
-  const user=JSON.parse(userResponse.getContentText()||'{}'),allowed=String(props.getProperty('GITHUB_OAUTH_ALLOWED_USER')||'').toLowerCase();
-  if(!user.login||String(user.login).toLowerCase()!==allowed)return HtmlService.createHtmlOutput('<h2>Akses ditolak</h2><p>Akun GitHub ini tidak diizinkan menggunakan Photo Studio.</p>');
+// Private Photo Studio access-code gate. Configure PHOTO_STUDIO_ACCESS_CODE in Script Properties.
+// The code is checked only on this server; never embed it in the public Astro page.
+function photoCreateSession_(submittedCode){
+  const props=PropertiesService.getScriptProperties();
+  const expected=String(props.getProperty('PHOTO_STUDIO_ACCESS_CODE')||'');
+  const supplied=String(submittedCode||'');
+  if(!expected||expected.length<20)throw new Error('Photo Studio belum dikonfigurasi. Admin perlu mengatur PHOTO_STUDIO_ACCESS_CODE (minimal 20 karakter) di Script Properties.');
+  if(!supplied||supplied.length>200||!photoConstantTimeEquals_(supplied,expected))throw new Error('Kode akses tidak valid.');
   const session=Utilities.getUuid().replace(/-/g,'')+Utilities.getUuid().replace(/-/g,'');
-  cache.put('photo_studio_session_'+session,String(user.login),1800);
-  const destination=String(props.getProperty('PHOTO_STUDIO_URL')).replace(/\/$/,'')+'/?session='+encodeURIComponent(session);
-  return HtmlService.createHtmlOutput('<!doctype html><meta charset="utf-8"><p>Login berhasil. Kembali ke Photo Studio…</p><script>location.replace('+JSON.stringify(destination)+')</script>');
+  CacheService.getScriptCache().put('photo_studio_session_'+session,'owner',1800);
+  return session;
+}
+function photoConstantTimeEquals_(a,b){
+  const digestA=Utilities.computeDigest(Utilities.DigestAlgorithm.SHA_256,String(a),Utilities.Charset.UTF_8);
+  const digestB=Utilities.computeDigest(Utilities.DigestAlgorithm.SHA_256,String(b),Utilities.Charset.UTF_8);
+  let diff=0;
+  for(let i=0;i<digestA.length;i++)diff|=(digestA[i]&255)^(digestB[i]&255);
+  return diff===0;
 }
 function photoValidateSession_(session){
   const value=String(session||'');
-  if(!/^[a-f0-9]{64}$/.test(value))throw new Error('Sesi GitHub tidak valid. Silakan login kembali.');
-  const user=CacheService.getScriptCache().get('photo_studio_session_'+value);
-  const allowed=String(PropertiesService.getScriptProperties().getProperty('GITHUB_OAUTH_ALLOWED_USER')||'').toLowerCase();
-  if(!user||String(user).toLowerCase()!==allowed)throw new Error('Sesi login telah kedaluwarsa. Silakan login GitHub kembali.');
-  return user;
+  if(!/^[a-f0-9]{64}$/.test(value))throw new Error('Sesi akses tidak valid. Masukkan kode akses kembali.');
+  const owner=CacheService.getScriptCache().get('photo_studio_session_'+value);
+  if(owner!=='owner')throw new Error('Sesi akses telah kedaluwarsa. Masukkan kode akses kembali.');
+  return owner;
 }
 function photoSafeName_(name){
   const value=String(name||'banggai-photo.webp').replace(/\.[^.]+$/,'').normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/^-+|-+$/g,'').substring(0,80)||'banggai-photo';
