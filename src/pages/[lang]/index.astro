@@ -149,7 +149,7 @@ const homeCopy = {
     home: 'Accueil', placesNav: 'Destinations', journeysNav: 'Circuits', journalNav: 'Journal', book: 'Contact'
   }
 } as const;
-const copy = homeCopy[(lang in homeCopy ? lang : 'en') as keyof typeof homeCopy];
+const copy = homeCopy[(lang && lang in homeCopy ? lang : 'en') as keyof typeof homeCopy];
 
 ---
 
