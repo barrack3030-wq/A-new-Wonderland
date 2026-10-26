@@ -51,6 +51,106 @@ const homeSeo = {
   }} as const;
 
 const seo = homeSeo[lang as keyof typeof homeSeo] || homeSeo.en;
+
+const homeCopy = {
+  id: {
+    brand: 'BANGGAI · INDONESIA', private: 'PERJALANAN PRIVAT', scroll: 'GULIR UNTUK MENJELAJAH',
+    islands: 'KEPULAUAN BANGGAI', introTitle: 'Bukan Bali. Bukan Raja Ampat.', introEm: 'Temukan Banggai yang lebih tenang.',
+    intro: 'Sisi lain Indonesia: laguna jernih, pulau yang tenang, dan pesisir tropis untuk dinikmati perlahan.',
+    places: 'DESTINASI YANG LAYAK DIJELAJAHI', exploreAll: 'Jelajahi semua destinasi',
+    proof: 'KEUNGGULAN BANGGAI', proofTitle: 'Banggai punya', proofEm: 'lebih banyak keindahan dari yang Anda bayangkan.',
+    statsPlaces: 'pulau, pantai, laguna, dan air terjun', statsTeam: 'anggota tim lokal yang siap membantu',
+    way: 'CARA MENJELAJAHI', wayTitle: 'Jalani perjalanan perlahan.', wayEm: 'Nikmati lebih banyak pengalaman.',
+    slowBoat: 'Perjalanan laut santai', slowBoatDesc: 'Ikuti ritme kehidupan pulau.',
+    localStay: 'Penginapan lokal', localStayDesc: 'Lebih dekat dengan warga dan tempat setempat.',
+    flexible: 'Jadwal fleksibel', flexibleDesc: 'Lebih sedikit terburu-buru, lebih banyak waktu di setiap tempat.',
+    privateOnly: 'Perjalanan privat', privateOnlyDesc: 'Rute dirancang sesuai rencana perjalanan Anda.',
+    journeyLabel: 'PERJALANAN PRIVAT', journeyTitle: 'Pilih cara Anda', journeyEm: 'menjelajahi Banggai.',
+    viewJourneys: 'Lihat semua perjalanan', days2: '2 HARI · 1 MALAM', days4: '4 HARI · 3 MALAM', days6: '6 HARI · 5 MALAM',
+    stopover: 'Perjalanan singkat untuk menikmati Luwuk dan pesisir sekitarnya.',
+    wonderland: 'Jelajahi pulau-pulau Banggai yang paling ingin Anda kunjungi.',
+    ultimate: 'Jelajahi lebih banyak pulau dengan rute yang lebih efisien.',
+    journal: 'JURNAL PERJALANAN', journalTitle: 'Kenali Banggai lebih dalam.', allStories: 'Semua artikel', readStory: 'Baca artikel →',
+    confidence: 'RENCANAKAN DENGAN PERCAYA DIRI', know: 'Kenali tujuan Anda', knowEm: 'sebelum berangkat.',
+    guide: 'Mulai dengan panduan praktis tentang destinasi, rute, dan perencanaan perjalanan di Luwuk serta Kepulauan Banggai.',
+    paisu: 'Panduan Danau Paisupok', piala: 'Air Terjun Piala', blog: 'Jurnal wisata Banggai', service: 'Layanan tour Luwuk dan Banggai',
+    ctaTitle: 'Kisah perjalanan Banggai Anda', ctaEm: 'dimulai di sini.',
+    ctaDesc: 'Ceritakan tanggal perjalanan, minat, dan ritme liburan yang Anda inginkan. Kami akan membantu menyusun rute bersama Anda.',
+    home: 'Beranda', placesNav: 'Destinasi', journeysNav: 'Paket Trip', journalNav: 'Artikel', book: 'Hubungi'
+  },
+  en: {
+    brand: 'BANGGAI · INDONESIA', private: 'PRIVATE JOURNEYS', scroll: 'SCROLL TO EXPLORE',
+    islands: 'THE BANGGAI ISLANDS', introTitle: 'Not Bali. Not Raja Ampat.', introEm: 'Discover a quieter side of Banggai.',
+    intro: 'A different side of Indonesia: clear lagoons, quiet islands and tropical coastlines made for travelling slowly.',
+    places: 'PLACES WORTH TRAVELLING FOR', exploreAll: 'Explore all destinations',
+    proof: 'WHY BANGGAI', proofTitle: 'Banggai has', proofEm: 'more to discover than you might expect.',
+    statsPlaces: 'islands, beaches, lagoons & waterfalls', statsTeam: 'local team members providing on-ground support',
+    way: 'A DIFFERENT WAY TO TRAVEL', wayTitle: 'Travel slowly.', wayEm: 'See more along the way.',
+    slowBoat: 'Slow boat journeys', slowBoatDesc: 'Let the islands set the rhythm.',
+    localStay: 'Local stays', localStayDesc: 'Stay closer to local people and places.',
+    flexible: 'Flexible pace', flexibleDesc: 'Less rushing. More time in each place.',
+    privateOnly: 'Private journeys', privateOnlyDesc: 'A route arranged around your trip.',
+    journeyLabel: 'PRIVATE JOURNEYS', journeyTitle: 'Choose your way', journeyEm: 'through Banggai.',
+    viewJourneys: 'View all journeys', days2: '2 DAYS · 1 NIGHT', days4: '4 DAYS · 3 NIGHTS', days6: '6 DAYS · 5 NIGHTS',
+    stopover: 'A short escape built around Luwuk and its coast.', wonderland: 'An island journey to the places you came to see.',
+    ultimate: 'Explore more of the islands with a well-planned route.',
+    journal: 'THE JOURNAL', journalTitle: 'Travel deeper.', allStories: 'All stories', readStory: 'Read the story →',
+    confidence: 'PLAN WITH CONFIDENCE', know: 'Know your destination', knowEm: 'before you go.',
+    guide: 'Start with practical guides to destinations, routes and trip planning across Luwuk and the Banggai Islands.',
+    paisu: 'Paisu Pok travel guide', piala: 'Piala Waterfall', blog: 'Banggai travel journal', service: 'Luwuk and Banggai tour services',
+    ctaTitle: 'Your Banggai story', ctaEm: 'starts here.',
+    ctaDesc: 'Tell us your dates, interests and preferred pace. We will help shape a route around your trip.',
+    home: 'Home', placesNav: 'Places', journeysNav: 'Trips', journalNav: 'Journal', book: 'Contact'
+  },
+  es: {
+    brand: 'BANGGAI · INDONESIA', private: 'VIAJES PRIVADOS', scroll: 'DESLIZA PARA EXPLORAR',
+    islands: 'LAS ISLAS BANGGAI', introTitle: 'Ni Bali ni Raja Ampat.', introEm: 'Descubre la tranquilidad de Banggai.',
+    intro: 'Otra cara de Indonesia: lagunas cristalinas, islas tranquilas y costas tropicales para viajar sin prisas.',
+    places: 'LUGARES QUE MERECEN EL VIAJE', exploreAll: 'Explorar todos los destinos',
+    proof: 'POR QUÉ BANGGAI', proofTitle: 'Banggai tiene', proofEm: 'mucho más por descubrir.',
+    statsPlaces: 'islas, playas, lagunas y cascadas', statsTeam: 'miembros del equipo local para ayudarte',
+    way: 'OTRA FORMA DE VIAJAR', wayTitle: 'Viaja sin prisas.', wayEm: 'Descubre mucho más.',
+    slowBoat: 'Trayectos en barco tranquilos', slowBoatDesc: 'Sigue el ritmo de las islas.',
+    localStay: 'Alojamiento local', localStayDesc: 'Acércate a las personas y los lugares locales.',
+    flexible: 'Ritmo flexible', flexibleDesc: 'Menos prisas y más tiempo en cada lugar.',
+    privateOnly: 'Viajes privados', privateOnlyDesc: 'Una ruta adaptada a tu viaje.',
+    journeyLabel: 'VIAJES PRIVADOS', journeyTitle: 'Elige cómo', journeyEm: 'recorrer Banggai.',
+    viewJourneys: 'Ver todos los viajes', days2: '2 DÍAS · 1 NOCHE', days4: '4 DÍAS · 3 NOCHES', days6: '6 DÍAS · 5 NOCHES',
+    stopover: 'Una escapada breve por Luwuk y su costa.', wonderland: 'Un viaje por las islas que quieres conocer.', ultimate: 'Explora más islas con una ruta bien organizada.',
+    journal: 'DIARIO DE VIAJE', journalTitle: 'Descubre Banggai a fondo.', allStories: 'Todas las historias', readStory: 'Leer el artículo →',
+    confidence: 'PLANIFICA CON CONFIANZA', know: 'Conoce tu destino', knowEm: 'antes de partir.',
+    guide: 'Consulta nuestras guías prácticas sobre destinos, rutas y planificación de viajes por Luwuk y las islas Banggai.',
+    paisu: 'Guía del lago Paisu Pok', piala: 'Cascada Piala', blog: 'Diario de viaje de Banggai', service: 'Tours por Luwuk y Banggai',
+    ctaTitle: 'Tu historia en Banggai', ctaEm: 'empieza aquí.',
+    ctaDesc: 'Cuéntanos tus fechas, intereses y ritmo preferido. Te ayudaremos a diseñar la ruta.',
+    home: 'Inicio', placesNav: 'Destinos', journeysNav: 'Viajes', journalNav: 'Blog', book: 'Contacto'
+  },
+  fr: {
+    brand: 'BANGGAI · INDONÉSIE', private: 'VOYAGES PRIVÉS', scroll: 'DÉFILER POUR EXPLORER',
+    islands: 'LES ÎLES BANGGAI', introTitle: 'Ni Bali ni Raja Ampat.', introEm: 'Découvrez la tranquillité de Banggai.',
+    intro: 'Une autre facette de l’Indonésie : des lagons limpides, des îles paisibles et des côtes tropicales à découvrir sans se presser.',
+    places: 'DES LIEUX QUI MÉRITENT LE VOYAGE', exploreAll: 'Explorer toutes les destinations',
+    proof: 'LES ATOUTS DE BANGGAI', proofTitle: 'Banggai offre', proofEm: 'bien plus à découvrir qu’on ne l’imagine.',
+    statsPlaces: 'îles, plages, lagons et cascades', statsTeam: 'membres de l’équipe locale à votre service',
+    way: 'UNE AUTRE FAÇON DE VOYAGER', wayTitle: 'Prenez votre temps.', wayEm: 'Profitez davantage.',
+    slowBoat: 'Traversées tranquilles', slowBoatDesc: 'Laissez les îles donner le rythme.',
+    localStay: 'Hébergements locaux', localStayDesc: 'Rapprochez-vous des habitants et des lieux.',
+    flexible: 'Rythme flexible', flexibleDesc: 'Moins de précipitation, plus de temps à chaque étape.',
+    privateOnly: 'Voyages privés', privateOnlyDesc: 'Un itinéraire adapté à votre séjour.',
+    journeyLabel: 'VOYAGES PRIVÉS', journeyTitle: 'Choisissez votre façon', journeyEm: 'de découvrir Banggai.',
+    viewJourneys: 'Voir tous les voyages', days2: '2 JOURS · 1 NUIT', days4: '4 JOURS · 3 NUITS', days6: '6 JOURS · 5 NUITS',
+    stopover: 'Une courte escapade autour de Luwuk et de sa côte.', wonderland: 'Un voyage vers les îles que vous souhaitez découvrir.', ultimate: 'Explorez davantage d’îles grâce à un itinéraire bien pensé.',
+    journal: 'LE CARNET DE VOYAGE', journalTitle: 'Découvrez Banggai en profondeur.', allStories: 'Tous les articles', readStory: 'Lire l’article →',
+    confidence: 'PRÉPAREZ VOTRE VOYAGE EN CONFIANCE', know: 'Découvrez votre destination', knowEm: 'avant le départ.',
+    guide: 'Consultez nos guides pratiques sur les destinations, les itinéraires et la préparation d’un voyage à Luwuk et dans les îles Banggai.',
+    paisu: 'Guide du lac Paisu Pok', piala: 'Cascade de Piala', blog: 'Carnet de voyage de Banggai', service: 'Circuits à Luwuk et Banggai',
+    ctaTitle: 'Votre histoire à Banggai', ctaEm: 'commence ici.',
+    ctaDesc: 'Indiquez vos dates, vos envies et votre rythme préféré. Nous vous aiderons à préparer votre itinéraire.',
+    home: 'Accueil', placesNav: 'Destinations', journeysNav: 'Circuits', journalNav: 'Journal', book: 'Contact'
+  }
+} as const;
+const copy = homeCopy[(lang && lang in homeCopy ? lang : 'en') as keyof typeof homeCopy];
+
 ---
 
 <BaseLayout title={seo.title} description={seo.description} seoTitle={seo.title} seoDescription={seo.description} noIndex={false}>
@@ -69,8 +169,8 @@ const seo = homeSeo[lang as keyof typeof homeSeo] || homeSeo.en;
       <div class="bw-hero-bottom"></div>
 
       <div class="bw-hero-top">
-        <span>BANGGAI · INDONESIA</span>
-        <span>{lang === 'ko' ? '프라이빗 여행' : 'PRIVATE JOURNEYS'}</span>
+        <span>{copy.brand}</span>
+        <span>{copy.private}</span>
       </div>
 
       <div class="bw-hero-content">
@@ -83,7 +183,7 @@ const seo = homeSeo[lang as keyof typeof homeSeo] || homeSeo.en;
         </div>
       </div>
 
-      <a href="#destinations" class="bw-scroll">{lang === 'ko' ? '여행지 둘러보기' : 'SCROLL TO EXPLORE'} <span>↓</span></a>
+      <a href="#destinations" class="bw-scroll">{copy.scroll} <span>↓</span></a>
       <div class="bw-hero-index">01 / 05</div>
     </section>
 
@@ -91,10 +191,10 @@ const seo = homeSeo[lang as keyof typeof homeSeo] || homeSeo.en;
       <div class="bw-container">
         <div class="bw-intro-row">
           <div>
-            <p class="bw-eyebrow">{lang === 'ko' ? '방가이 제도' : 'THE BANGGAI ISLANDS'}</p>
-            <h2>{lang === 'ko' ? '발리도 라자 암팟도 아닌' : 'Not Bali. Not Raja Ampat.'}<br/><em>{lang === 'ko' ? '조용한 방가이를 만나보세요.' : 'Something quieter.'}</em></h2>
+            <p class="bw-eyebrow">{copy.islands}</p>
+            <h2>{copy.introTitle}<br/><em>{copy.introEm}</em></h2>
           </div>
-          <p class="bw-intro-copy">{lang === 'ko' ? '맑은 라군과 고요한 섬, 천천히 여행하기 좋은 열대 해안을 만나보세요.' : 'A different side of Indonesia: clear lagoons, quiet islands and coastal roads made for travelling slowly.'}</p>
+          <p class="bw-intro-copy">{copy.intro}</p>
         </div>
 
         {featuredDestinations.length > 0 && (
@@ -109,8 +209,8 @@ const seo = homeSeo[lang as keyof typeof homeSeo] || homeSeo.en;
         )}
 
         <div class="bw-section-footer">
-          <span>{lang === 'ko' ? '여행할 가치가 있는 곳' : 'PLACES WORTH TRAVELLING FOR'}</span>
-          <a href={`/${lang}/destinations/`} class="bw-text-link">{lang === 'ko' ? '모든 여행지 보기' : 'Explore all destinations'} <span>→</span></a>
+          <span>{copy.places}</span>
+          <a href={`/${lang}/destinations/`} class="bw-text-link">{copy.exploreAll} <span>→</span></a>
         </div>
       </div>
     </section>
@@ -118,41 +218,41 @@ const seo = homeSeo[lang as keyof typeof homeSeo] || homeSeo.en;
     <section class="bw-proof">
       <div class="bw-container bw-proof-grid">
         <div class="bw-proof-title">
-          <p class="bw-eyebrow bw-eyebrow-light">{lang === 'ko' ? '방가이의 매력' : 'THE PROOF'}</p>
-          <h2>{lang === 'ko' ? '방가이에는' : 'Banggai has'}<br/><em>{lang === 'ko' ? '생각보다 훨씬 더 많은 곳이 있습니다.' : 'more than you think.'}</em></h2>
+          <p class="bw-eyebrow bw-eyebrow-light">{copy.proof}</p>
+          <h2>{copy.proofTitle}<br/><em>{copy.proofEm}</em></h2>
         </div>
         <div class="bw-stat">
           <strong>20<span>+</span></strong>
-          <p>{lang === 'ko' ? '개의 섬, 해변, 라군과 폭포' : 'islands, beaches,<br/>lagoons & waterfalls'}</p>
+          <p>{copy.statsPlaces}</p>
         </div>
         <div class="bw-stat">
           <strong>10</strong>
-          <p>{lang === 'ko' ? '명의 현지 팀이 현장에서 지원합니다.' : 'local team members,<br/>on-ground assistance'}</p>
+          <p>{copy.statsTeam}</p>
         </div>
-        <div class="bw-proof-services" aria-label="Trip support services">
+        <div class="bw-proof-services" aria-label={lang === "id" ? "Layanan pendukung perjalanan" : lang === "es" ? "Servicios de viaje" : lang === "fr" ? "Services de voyage" : "Trip support services"}>
           <div class="bw-proof-service">
             <span class="bw-proof-icon" aria-hidden="true">
               <svg viewBox="0 0 24 24"><path d="M7 9h10M5 10l2-2 1-3m11 5-2-2-1-3M9 13v3m6-3v3M6 9v4m12-4v4M9 16h6l1 3H8l1-3Z"/></svg>
             </span>
-            <span>{lang === 'ko' ? '드론' : 'Drone'}</span>
+            <span>{lang === 'id' ? 'Drone' : lang === 'es' ? 'Dron' : lang === 'fr' ? 'Drone' : 'Drone'}</span>
           </div>
           <div class="bw-proof-service">
             <span class="bw-proof-icon" aria-hidden="true">
               <svg viewBox="0 0 24 24"><path d="M5 15h14l-1.5-6H6.5L5 15Z"/><path d="M8 9l1.4-3h5.2L16 9M7 15v2m10-2v2"/><circle cx="8" cy="17" r="1.5"/><circle cx="16" cy="17" r="1.5"/></svg>
             </span>
-            <span>{lang === 'ko' ? '차량' : 'Car'}</span>
+            <span>{lang === 'id' ? 'Mobil' : lang === 'es' ? 'Coche' : lang === 'fr' ? 'Voiture' : 'Car'}</span>
           </div>
           <div class="bw-proof-service">
             <span class="bw-proof-icon" aria-hidden="true">
               <svg viewBox="0 0 24 24"><path d="M3 15h18l-2 4H6l-3-4Z"/><path d="M7 15V8h6l3 3v4M8 11h7"/><path d="M9 19v2m6-2v2"/></svg>
             </span>
-            <span>{lang === 'ko' ? '보트' : 'Boat'}</span>
+            <span>{lang === 'id' ? 'Perahu' : lang === 'es' ? 'Barco' : lang === 'fr' ? 'Bateau' : 'Boat'}</span>
           </div>
           <div class="bw-proof-service">
             <span class="bw-proof-icon" aria-hidden="true">
               <svg viewBox="0 0 24 24"><path d="M5 16h14l-1.5-3H6.5L5 16Z"/><path d="M8 13V7h8v6M10 7V4h4v3"/><path d="M3 19c1.5-1 3-1 4.5 0s3 1 4.5 0 3-1 4.5 0 3 1 4.5 0"/></svg>
             </span>
-            <span>{lang === 'ko' ? '페리' : 'Ferry'}</span>
+            <span>{lang === 'id' ? 'Feri' : lang === 'es' ? 'Ferri' : lang === 'fr' ? 'Ferry' : 'Ferry'}</span>
           </div>
         </div>
       </div>
@@ -161,14 +261,14 @@ const seo = homeSeo[lang as keyof typeof homeSeo] || homeSeo.en;
     <section class="bw-section bw-way">
       <div class="bw-container bw-way-grid">
         <div>
-          <p class="bw-eyebrow">{lang === 'ko' ? '여행하는 방식' : 'THE WAY OF TRAVELING'}</p>
-          <h2>{lang === 'ko' ? '천천히 여행하고' : 'Travel slowly.'}<br/><em>{lang === 'ko' ? '더 많이 만나보세요.' : 'See more.'}</em></h2>
+          <p class="bw-eyebrow">{copy.way}</p>
+          <h2>{copy.wayTitle}<br/><em>{copy.wayEm}</em></h2>
         </div>
         <div class="bw-way-list">
-          <div><span>01</span><strong>{lang === 'ko' ? '느린 배' : 'Slow boat'}</strong><p>{lang === 'ko' ? '섬의 리듬에 맞춰 여행하세요.' : 'Let the islands set the rhythm.'}</p></div>
-          <div><span>02</span><strong>{lang === 'ko' ? '현지 숙박' : 'Local stay'}</strong><p>{lang === 'ko' ? '현지 사람과 장소에 더 가까이 머무세요.' : 'Stay closer to the people and places.'}</p></div>
-          <div><span>03</span><strong>{lang === 'ko' ? '유연한 일정' : 'Flexible pace'}</strong><p>{lang === 'ko' ? '서두르지 않고 각 장소에서 더 오래 머뭅니다.' : 'Less rushing. More time in each place.'}</p></div>
-          <div><span>04</span><strong>{lang === 'ko' ? '프라이빗 여행' : 'Private only'}</strong><p>{lang === 'ko' ? '당신의 일정에 맞춰 여행을 설계합니다.' : 'A journey arranged around your trip.'}</p></div>
+          <div><span>01</span><strong>{copy.slowBoat}</strong><p>{copy.slowBoatDesc}</p></div>
+          <div><span>02</span><strong>{copy.localStay}</strong><p>{copy.localStayDesc}</p></div>
+          <div><span>03</span><strong>{copy.flexible}</strong><p>{copy.flexibleDesc}</p></div>
+          <div><span>04</span><strong>{copy.privateOnly}</strong><p>{copy.privateOnlyDesc}</p></div>
         </div>
       </div>
     </section>
@@ -177,27 +277,27 @@ const seo = homeSeo[lang as keyof typeof homeSeo] || homeSeo.en;
       <div class="bw-container">
         <div class="bw-section-heading">
           <div>
-            <p class="bw-eyebrow">{lang === 'ko' ? '프라이빗 여행' : 'PRIVATE JOURNEYS'}</p>
-            <h2>{lang === 'ko' ? '당신만의 방식으로' : 'Choose your way'}<br/><em>{lang === 'ko' ? '방가이를 여행하세요.' : 'through Banggai.'}</em></h2>
+            <p class="bw-eyebrow">{copy.private}</p>
+            <h2>{copy.journeyTitle}<br/><em>{copy.journeyEm}</em></h2>
           </div>
-          <a href={`/${lang}/jasa-tour-luwuk-banggai/#packages`} class="bw-text-link">{lang === 'ko' ? '모든 여행 보기' : 'View all journeys'} <span>→</span></a>
+          <a href={`/${lang}/jasa-tour-luwuk-banggai/#packages`} class="bw-text-link">{copy.viewJourneys} <span>→</span></a>
         </div>
 
         <div class="bw-journey-grid">
           <a href={`/${lang}/packages/luwuk-stopover/`} class="bw-journey-card">
             <img src="/images/asasa.jpg" alt="Luwuk private trip" loading="lazy"/>
             <div class="bw-journey-shade"></div>
-            <div class="bw-journey-copy"><span>{lang === 'ko' ? '02일 · 01박' : '02 DAYS · 01 NIGHT'}</span><h3>Luwuk Stopover</h3><p>{lang === 'ko' ? '루욱과 해안을 중심으로 즐기는 짧은 여행.' : 'A short escape built around Luwuk and its coast.'}</p></div>
+            <div class="bw-journey-copy"><span>{copy.days2}</span><h3>Luwuk Stopover</h3><p>{copy.stopover}</p></div>
           </a>
           <a href={`/${lang}/packages/banggai-wonderland/`} class="bw-journey-card">
             <img src="/images/wonder.jpg" alt="Banggai Wonderland private trip" loading="lazy"/>
             <div class="bw-journey-shade"></div>
-            <div class="bw-journey-copy"><span>{lang === 'ko' ? '04일 · 03박' : '04 DAYS · 03 NIGHTS'}</span><h3>Banggai Wonderland</h3><p>{lang === 'ko' ? '꼭 가보고 싶은 방가이의 섬을 만나는 여행.' : 'An island journey to the places you came for.'}</p></div>
+            <div class="bw-journey-copy"><span>{copy.days4}</span><h3>Banggai Wonderland</h3><p>{copy.wonderland}</p></div>
           </a>
           <a href={`/${lang}/packages/ultimate-banggai/`} class="bw-journey-card">
             <img src="/images/Gemini_Generated_Image_xxtet3xxtet3xxte (4).jpg" alt="Ultimate Banggai private trip" loading="lazy"/>
             <div class="bw-journey-shade"></div>
-            <div class="bw-journey-copy"><span>{lang === 'ko' ? '06일 · 05박' : '06 DAYS · 05 NIGHTS'}</span><h3>Ultimate Banggai</h3><p>{lang === 'ko' ? '섬 곳곳을 더 깊이 둘러보는 여행입니다.' : 'Go deeper across the islands, without backtracking.'}</p></div>
+            <div class="bw-journey-copy"><span>{copy.days6}</span><h3>Ultimate Banggai</h3><p>{copy.ultimate}</p></div>
           </a>
         </div>
       </div>
@@ -207,10 +307,10 @@ const seo = homeSeo[lang as keyof typeof homeSeo] || homeSeo.en;
       <div class="bw-container">
         <div class="bw-section-heading bw-journal-heading">
           <div>
-            <p class="bw-eyebrow bw-eyebrow-light">{lang === 'ko' ? '여행 저널' : 'THE JOURNAL'}</p>
-            <h2>{lang === 'ko' ? '더 깊이 여행하세요.' : 'Travel deeper.'}</h2>
+            <p class="bw-eyebrow bw-eyebrow-light">{copy.journal}</p>
+            <h2>{copy.journalTitle}</h2>
           </div>
-          <a href={`/${lang}/blog/`} class="bw-text-link bw-text-link-light">{lang === 'ko' ? '모든 이야기 보기' : 'All stories'} <span>→</span></a>
+          <a href={`/${lang}/blog/`} class="bw-text-link bw-text-link-light">{copy.allStories} <span>→</span></a>
         </div>
 
         {latestBlogs.length > 0 && (
@@ -222,7 +322,7 @@ const seo = homeSeo[lang as keyof typeof homeSeo] || homeSeo.en;
                 <div class="bw-story-copy">
                   <span>{post.data.pubDate.toLocaleDateString(lang, { year: 'numeric', month: 'short', day: 'numeric' })}</span>
                   <h3>{post.data.title}</h3>
-                  <p>{lang === 'ko' ? '이야기 읽기 →' : 'Read the story →'}</p>
+                  <p>{copy.readStory}</p>
                 </div>
               </a>
             ))}
@@ -234,16 +334,16 @@ const seo = homeSeo[lang as keyof typeof homeSeo] || homeSeo.en;
     <section class="bw-knowledge">
       <div class="bw-container bw-knowledge-grid">
         <div>
-          <p class="bw-eyebrow">{lang === 'ko' ? '여행을 자신 있게 계획하세요' : 'PLAN WITH CONFIDENCE'}</p>
-          <h2>{lang === 'ko' ? '어디로 가는지' : 'Know where'}<br/><em>{lang === 'ko' ? '미리 알아보세요.' : 'you are going.'}</em></h2>
+          <p class="bw-eyebrow">{copy.confidence}</p>
+          <h2>{copy.know}<br/><em>{copy.knowEm}</em></h2>
         </div>
         <div class="bw-knowledge-copy">
-          <p>{lang === 'ko' ? '루욱과 방가이 제도의 여행지, 이동 방법과 여행 계획을 위한 실용적인 가이드입니다.' : 'Start with our practical guides for destinations, routes and trip planning across Luwuk and the Banggai Islands.'}</p>
+          <p>{copy.guide}</p>
           <div class="bw-knowledge-links">
-            <a href={`/${lang}/destinations/paisu-pok-lake/`}>{lang === 'ko' ? '파이수폭 여행 가이드' : 'Paisu Pok guide'} <span>↗</span></a>
-            <a href={`/${lang}/destinations/piala-waterfall/`}>{lang === 'ko' ? '피알라 폭포' : 'Piala Waterfall'} <span>↗</span></a>
-            <a href={`/${lang}/blog/`}>{lang === 'ko' ? '방가이 여행 저널' : 'Banggai travel journal'} <span>↗</span></a>
-            <a href={`/${lang}/jasa-tour-luwuk-banggai/`}>{lang === 'ko' ? '루욱 방가이 투어 서비스' : 'Luwuk Banggai tour service'} <span>↗</span></a>
+            <a href={`/${lang}/destinations/paisu-pok-lake/`}>{copy.paisu} <span>↗</span></a>
+            <a href={`/${lang}/destinations/piala-waterfall/`}>{copy.piala} <span>↗</span></a>
+            <a href={`/${lang}/blog/`}>{copy.blog} <span>↗</span></a>
+            <a href={`/${lang}/jasa-tour-luwuk-banggai/`}>{copy.service} <span>↗</span></a>
           </div>
         </div>
       </div>
@@ -252,19 +352,19 @@ const seo = homeSeo[lang as keyof typeof homeSeo] || homeSeo.en;
     <section id="contact" class="bw-cta">
       <div class="bw-container bw-cta-inner">
         <p class="bw-eyebrow bw-eyebrow-light">BANGGAI WONDERLAND</p>
-        <h2>{lang === 'ko' ? '당신의 방가이 여행은' : 'Your Banggai story'}<br/><em>{lang === 'ko' ? '여기서 시작됩니다.' : 'starts here.'}</em></h2>
-        <p>{lang === 'ko' ? '여행 날짜와 관심사, 원하는 여행 속도를 알려주세요. 함께 최적의 여행 경로를 만들어 드립니다.' : 'Tell us your dates, interests and preferred pace. We will shape the route with you.'}</p>
+        <h2>{copy.ctaTitle}<br/><em>{copy.ctaEm}</em></h2>
+        <p>{copy.ctaDesc}</p>
         <a href="https://wa.me/6285820830530" target="_blank" rel="noopener noreferrer" class="bw-button bw-button-light">{t('btn.book')} <span>→</span></a>
       </div>
     </section>
   </main>
 
   <nav class="bw-mobile-nav" aria-label="Mobile navigation">
-    <a href="#home" aria-current="location"><span>⌂</span><small>{lang === 'ko' ? '홈' : 'Home'}</small></a>
-    <a href="#destinations"><span>◉</span><small>{lang === 'ko' ? '여행지' : 'Places'}</small></a>
-    <a href="#journeys"><span>↗</span><small>{lang === 'ko' ? '여행' : 'Journeys'}</small></a>
-    <a href="#journal"><span>▤</span><small>{lang === 'ko' ? '저널' : 'Journal'}</small></a>
-    <a href="#contact"><span>→</span><small>{lang === 'ko' ? '문의하기' : 'Book'}</small></a>
+    <a href="#home" aria-current="location"><span>⌂</span><small>{copy.home}</small></a>
+    <a href="#destinations"><span>◉</span><small>{copy.placesNav}</small></a>
+    <a href="#journeys"><span>↗</span><small>{copy.journeysNav}</small></a>
+    <a href="#journal"><span>▤</span><small>{copy.journalNav}</small></a>
+    <a href="#contact"><span>→</span><small>{copy.book}</small></a>
   </nav>
 
   <WhatsAppButton />
