@@ -10,9 +10,7 @@ const BATCH_SIZE=2;
 
 function doGet(e){
   const p=e&&e.parameter?e.parameter:{};
-  if(p.action==='oauthStart')return photoOAuthStart_();
-  if(p.code)return photoOAuthCallback_(p);
-  return jsonResponse({ok:true,service:'Banggai Wonderland CMS',version:'8.1-photo-studio-oauth',status:'online',timestamp:new Date().toISOString()});
+  return jsonResponse({ok:true,service:'Banggai Wonderland CMS',version:'8.2-photo-studio-access-code',status:'online',timestamp:new Date().toISOString()});
 }
 function doPost(e){try{
   if(!e||!e.postData||!e.postData.contents)throw new Error('Request data tidak ditemukan.');
