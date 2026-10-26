@@ -3,8 +3,8 @@ title: Paket Wisata Banggai 5 Hari 4 Malam
 description: Paket private trip 5 hari 4 malam untuk menghubungkan Luwuk, Salakan dan Peleng dengan Paisu Pok serta destinasi pesisir pilihan.
 seoTitle: 'Paket Wisata Banggai 5 Hari 4 Malam | Private Trip'
 seoDescription: 'Paket wisata Banggai 5 hari 4 malam dari Luwuk melalui Salakan dan Peleng, dengan Paisu Pok, destinasi pesisir, transportasi dan pemandu lokal.'
-image: /images/luwuk-salakan.webp
-imageAlt: Private trip 5 hari menjelajahi Luwuk, Salakan dan Peleng di Kepulauan Banggai
+image: /images/paisupok-lake.jpg
+imageAlt: Danau Paisupok dengan air jernih berwarna biru kehijauan di Pulau Peleng
 duration: 5 Days 4 Nights
 destination: Luwuk, Salakan, Peleng, Paisu Pok
 activities:

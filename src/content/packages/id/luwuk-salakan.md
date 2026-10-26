@@ -3,8 +3,8 @@ title: Private Trip Luwuk Salakan 3 Hari 2 Malam
 description: Private trip Luwuk dan Salakan selama 3 hari 2 malam, dengan perjalanan antarpulau, pemandangan pesisir, dan waktu eksplorasi fleksibel di Kepulauan Banggai.
 seoTitle: 'Private Trip Luwuk Salakan 3D2N | Banggai Wonderland'
 seoDescription: 'Private trip Luwuk Salakan 3 hari 2 malam dengan perjalanan antarpulau, wisata pesisir, transportasi lokal dan waktu eksplorasi fleksibel di Kepulauan Banggai.'
-image: /images/packages/luwuk-salakan.webp
-imageAlt: Luwuk and Salakan private trip
+image: https://static.tripzilla.id/media/10173/conversions/6-1-Pulau-Dua-By-Wikimedia-w768.webp
+imageAlt: Pulo Dua, Banggai, dengan punggung bukit hijau dan laut biru
 duration: 3 Days 2 Nights
 destination: Luwuk, Salakan, Banggai Islands
 activities:
