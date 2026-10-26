@@ -10,14 +10,11 @@ const BATCH_SIZE=2;
 
 function doGet(e){
   const p=e&&e.parameter?e.parameter:{};
-  return jsonResponse({ok:true,service:'Banggai Wonderland CMS',version:'8.2-photo-studio-access-code',status:'online',timestamp:new Date().toISOString()});
+  return jsonResponse({ok:true,service:'Banggai Wonderland CMS',version:'8.2',status:'online',timestamp:new Date().toISOString()});
 }
 function doPost(e){try{
   if(!e||!e.postData||!e.postData.contents)throw new Error('Request data tidak ditemukan.');
   const data=JSON.parse(e.postData.contents);
-  if(data.action==='photoAccessSession'){const session=photoCreateSession_(data.accessCode);return jsonResponse({ok:true,session:session,expiresIn:1800});}
-  if(data.action==='photoSession'){const user=photoValidateSession_(data.session);return jsonResponse({ok:true,user:user});}
-  if(data.action==='photoUpload'){photoValidateSession_(data.session);const fileName=photoSafeName_(data.fileName);const image=uploadImage({dataUrl:data.dataUrl,fileName:fileName});return jsonResponse({ok:true,image:image});}
   if(data.action==='chatCreate')return jsonResponse({ok:true,conversation:createChatConversation(data)});
   if(data.action==='chatSend')return jsonResponse({ok:true,message:sendChatMessage(data)});
   if(data.action==='chatGet'){if(data.admin===true){checkAccessKey(data.accessKey);return jsonResponse({ok:true,conversation:adminGetConversation(data)});}return jsonResponse({ok:true,conversation:getChatConversation(data)});}
@@ -38,36 +35,6 @@ function doPost(e){try{
 }catch(error){return jsonResponse({ok:false,error:error&&error.message?error.message:String(error)});}}
 
 
-// Private Photo Studio access-code gate. Configure PHOTO_STUDIO_ACCESS_CODE in Script Properties.
-// The code is checked only on this server; never embed it in the public Astro page.
-function photoCreateSession_(submittedCode){
-  const props=PropertiesService.getScriptProperties();
-  const expected=String(props.getProperty('PHOTO_STUDIO_ACCESS_CODE')||'');
-  const supplied=String(submittedCode||'');
-  if(!expected||expected.length<20)throw new Error('Photo Studio belum dikonfigurasi. Admin perlu mengatur PHOTO_STUDIO_ACCESS_CODE (minimal 20 karakter) di Script Properties.');
-  if(!supplied||supplied.length>200||!photoConstantTimeEquals_(supplied,expected))throw new Error('Kode akses tidak valid.');
-  const session=Utilities.getUuid().replace(/-/g,'')+Utilities.getUuid().replace(/-/g,'');
-  CacheService.getScriptCache().put('photo_studio_session_'+session,'owner',1800);
-  return session;
-}
-function photoConstantTimeEquals_(a,b){
-  const digestA=Utilities.computeDigest(Utilities.DigestAlgorithm.SHA_256,String(a),Utilities.Charset.UTF_8);
-  const digestB=Utilities.computeDigest(Utilities.DigestAlgorithm.SHA_256,String(b),Utilities.Charset.UTF_8);
-  let diff=0;
-  for(let i=0;i<digestA.length;i++)diff|=(digestA[i]&255)^(digestB[i]&255);
-  return diff===0;
-}
-function photoValidateSession_(session){
-  const value=String(session||'');
-  if(!/^[a-f0-9]{64}$/.test(value))throw new Error('Sesi akses tidak valid. Masukkan kode akses kembali.');
-  const owner=CacheService.getScriptCache().get('photo_studio_session_'+value);
-  if(owner!=='owner')throw new Error('Sesi akses telah kedaluwarsa. Masukkan kode akses kembali.');
-  return owner;
-}
-function photoSafeName_(name){
-  const value=String(name||'banggai-photo.webp').replace(/\.[^.]+$/,'').normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/^-+|-+$/g,'').substring(0,80)||'banggai-photo';
-  return value+'.webp';
-}
 function checkAccessKey(value){const expected=PropertiesService.getScriptProperties().getProperty('CMS_ACCESS_KEY');if(!expected)throw new Error('CMS_ACCESS_KEY belum diset di Script Properties.');if(!value||value!==expected)throw new Error('Access key tidak valid.');}
 function getOpenAIConfig(){const key=PropertiesService.getScriptProperties().getProperty('OPENAI_API_KEY');if(!key)throw new Error('OPENAI_API_KEY belum diset di Script Properties.');return{key:key,model:OPENAI_MODEL,url:OPENAI_URL};}
 
