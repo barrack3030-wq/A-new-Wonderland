@@ -1,0 +1,12 @@
+name = "banggai-wonderland-photo-studio"
+main = "src/index.js"
+compatibility_date = "2026-10-26"
+workers_dev = true
+
+# Set non-secret variables in the Cloudflare Worker dashboard:
+# CF_ACCESS_TEAM_DOMAIN = https://YOUR-TEAM.cloudflareaccess.com
+# CF_ACCESS_AUD = the Access application's AUD tag
+# GITHUB_OWNER = barrack3030-wq
+# GITHUB_REPO = A-new-Wonderland
+# GITHUB_BRANCH = main
+# Add GITHUB_TOKEN using Wrangler secret or the Cloudflare dashboard. Never put it here.
