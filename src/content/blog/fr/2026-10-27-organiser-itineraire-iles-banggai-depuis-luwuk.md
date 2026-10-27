@@ -73,7 +73,7 @@ Les durées de trajet restent des estimations, pas des garanties. La météo, l�
 
 Un circuit privé peut faciliter la coordination du véhicule, du guide local et des visites, notamment lors d’un premier séjour. Il ne supprime toutefois pas les perturbations liées à la météo et ne garantit pas les horaires des bateaux publics. Demandez ce qui est inclus et quels éléments de transport doivent encore être confirmés.
 
-Consultez notre [service de circuits à Luwuk et Banggai](/fr/circuits-luwuk-banggai/) pour discuter de votre itinéraire. Précisez les dates, le nombre de voyageurs, l’heure d’arrivée à Luwuk et vos sites prioritaires afin de construire un programme réaliste.
+Consultez notre [service de circuits à Luwuk et Banggai](/fr/jasa-tour-luwuk-banggai/) pour discuter de votre itinéraire. Précisez les dates, le nombre de voyageurs, l’heure d’arrivée à Luwuk et vos sites prioritaires afin de construire un programme réaliste.
 
 ## À retenir
 
