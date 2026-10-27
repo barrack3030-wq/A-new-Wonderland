@@ -74,7 +74,7 @@ Treat journey durations as estimates, not guarantees. Weather, sea conditions, t
 
 A private tour can make it easier to coordinate a driver, local guide, and destination stops, especially for first-time visitors. It cannot remove weather-related disruption or guarantee public boat schedules. Ask what the package includes and which transport details still need confirmation.
 
-Explore our [Luwuk Banggai tour service](/en/luwuk-banggai-tour-service/) to discuss your route. Share your dates, group size, arrival time in Luwuk, and must-see places so the itinerary can be planned around real constraints.
+Explore our [Luwuk Banggai tour service](/en/jasa-tour-luwuk-banggai/) to discuss your route. Share your dates, group size, arrival time in Luwuk, and must-see places so the itinerary can be planned around real constraints.
 
 ## Final advice
 
