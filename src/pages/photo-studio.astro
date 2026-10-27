@@ -55,7 +55,7 @@ const title = 'Banggai Wonderland Photo Studio';
   </section>
   <section class="card"><h2 style="margin-top:0">Alur penyimpanan</h2><p>File tersimpan di <code>public/images/blog/</code> dan URL-nya dapat langsung dipakai pada frontmatter artikel sebagai nilai <code>image</code>. Foto baru memakai repositori utama agar dapat digunakan oleh CMS artikel yang sudah ada.</p><p class="hint">Halaman memakai noindex. Upload hanya boleh diproses setelah Cloudflare Access memverifikasi akun pemilik; GitHub token disimpan sebagai secret di backend Cloudflare Worker.</p></section>
 </main>
-<script>
+<script is:inline>
 const ENDPOINT = 'https://REPLACE-WITH-YOUR-CLOUDFLARE-WORKER-HOST';
 const loginStatus=document.getElementById('loginStatus'),uploadStatus=document.getElementById('uploadStatus'),filesEl=document.getElementById('files'),results=document.getElementById('results');
 document.getElementById('accessLink').href=ENDPOINT+'/';
