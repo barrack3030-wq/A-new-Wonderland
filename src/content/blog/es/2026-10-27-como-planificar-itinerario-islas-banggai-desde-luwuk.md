@@ -73,7 +73,7 @@ Los tiempos de viaje son estimaciones, no garantías. El clima, el mar, la opera
 
 Un tour privado puede facilitar la coordinación de vehículo, guía y paradas, especialmente si es tu primera visita. Sin embargo, no elimina los cambios por el clima ni garantiza los horarios de los barcos públicos. Pregunta qué incluye el servicio y qué detalles de transporte deben confirmarse por separado.
 
-Consulta nuestro [servicio de tours por Luwuk y Banggai](/es/servicio-tour-luwuk-banggai/) para comentar tu ruta. Indica las fechas, el número de viajeros, la hora de llegada a Luwuk y los lugares prioritarios para preparar un plan realista.
+Consulta nuestro [servicio de tours por Luwuk y Banggai](/es/jasa-tour-luwuk-banggai/) para comentar tu ruta. Indica las fechas, el número de viajeros, la hora de llegada a Luwuk y los lugares prioritarios para preparar un plan realista.
 
 ## En resumen
 
