@@ -3,7 +3,7 @@ title: "Banggai and Togean Islands in One Trip: Routes and Time to Plan"
 description: "Planning to visit both the Banggai and Togean Islands? Compare onward routes from Luwuk, overland transfers and boat options before setting your itinerary."
 seoTitle: "Banggai and Togean Islands in One Trip: Route Guide"
 seoDescription: "Plan a combined Banggai and Togean Islands trip from Luwuk. Understand the Ampana route, private boat options from Bunta and how much time to allow."
-image: "/images/banggai-togean-route-hero.webp"
+image: "/images/banggai-togean-route-hero.svg"
 imageAlt: "A passenger boat crossing blue water between tropical islands in Central Sulawesi"
 author: "Banggai Wonderland"
 pubDate: 2026-10-30
