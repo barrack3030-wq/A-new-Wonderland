@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+<title id="title">Banggai and Togean island journey</title>
+<desc id="desc">An editorial illustration of a small passenger boat crossing a tropical blue sea between green islands in Central Sulawesi.</desc>
+<defs>
+  <linearGradient id="sky" x2="0" y2="1"><stop stop-color="#b9e5f6"/><stop offset="1" stop-color="#eef8f7"/></linearGradient>
+  <linearGradient id="sea" x2="0" y2="1"><stop stop-color="#42c4d0"/><stop offset="1" stop-color="#075b78"/></linearGradient>
+  <linearGradient id="island" x2="0" y2="1"><stop stop-color="#4b9b68"/><stop offset="1" stop-color="#174f48"/></linearGradient>
+  <linearGradient id="boat" x2="0" y2="1"><stop stop-color="#fffdf4"/><stop offset="1" stop-color="#c9e2df"/></linearGradient>
+</defs>
+<rect width="1600" height="900" fill="url(#sky)"/>
+<circle cx="1280" cy="165" r="68" fill="#fff5cf" opacity=".8"/>
+<path d="M0 405 Q150 330 285 395 T560 385 T860 375 T1160 390 T1600 355 V900 H0Z" fill="#b3d5c6" opacity=".45"/>
+<path d="M0 470 Q120 310 280 330 Q370 345 445 460Z" fill="url(#island)"/>
+<path d="M0 470 Q115 365 270 375 Q345 390 445 460" fill="none" stroke="#8fc58e" stroke-width="18" opacity=".55"/>
+<path d="M1030 460 Q1160 275 1335 315 Q1465 345 1600 465Z" fill="url(#island)"/>
+<path d="M1080 435 Q1240 320 1370 350 Q1480 375 1600 460" fill="none" stroke="#8fc58e" stroke-width="18" opacity=".45"/>
+<path d="M490 455 Q665 250 860 290 Q1000 315 1120 455Z" fill="#2f765b"/>
+<path d="M560 420 Q690 305 840 322 Q965 340 1060 440" fill="none" stroke="#82b87d" stroke-width="16" opacity=".55"/>
+<path d="M0 455 Q240 435 450 465 T900 460 T1350 455 T1600 470 V900 H0Z" fill="url(#sea)"/>
+<path d="M0 560 Q240 520 470 555 T930 550 T1390 555 T1600 535" fill="none" stroke="#9be4df" stroke-width="8" opacity=".42"/>
+<path d="M0 675 Q220 640 430 670 T860 670 T1280 665 T1600 680" fill="none" stroke="#b6ece5" stroke-width="5" opacity=".3"/>
+<path d="M0 785 Q240 755 470 785 T930 785 T1390 775 T1600 790" fill="none" stroke="#b6ece5" stroke-width="4" opacity=".23"/>
+<g transform="translate(720 500)">
+  <path d="M-90 130 Q40 164 250 126 L220 190 Q60 230 -55 190Z" fill="#073f55" opacity=".28"/>
+  <path d="M-110 78 Q35 110 285 72 L245 148 Q55 185 -75 145Z" fill="url(#boat)" stroke="#eaf5ef" stroke-width="8"/>
+  <path d="M-70 70 L-45 8 L145 8 L185 72Z" fill="#f6f5e9" stroke="#174e61" stroke-width="7"/>
+  <path d="M-35 22 H-5 V65 H-35Z M12 22 H42 V65 H12Z M60 22 H90 V65 H60Z M108 22 H138 V65 H108Z" fill="#2c8a9b"/>
+  <path d="M-110 78 Q30 103 285 72" fill="none" stroke="#e4a85d" stroke-width="12"/>
+  <path d="M-155 190 Q-40 220 75 192 M115 197 Q230 215 340 180" fill="none" stroke="#d5f7ef" stroke-width="12" stroke-linecap="round" opacity=".75"/>
+  <path d="M-175 225 Q-80 248 20 225 M160 226 Q260 242 365 210" fill="none" stroke="#d5f7ef" stroke-width="7" stroke-linecap="round" opacity=".45"/>
+</g>
+<g fill="#fff" opacity=".58"><path d="M170 190 q40 -28 80 0 q36 -24 70 4 q-7 28 -47 23 h-90 q-35 -5 -13 -27Z"/><path d="M780 150 q36 -22 72 0 q32 -22 62 4 q-5 23 -42 20 h-83 q-29 -3 -9 -24Z"/></g>
+</svg>
