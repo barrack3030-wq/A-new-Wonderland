@@ -74,7 +74,7 @@ Susunan ini hanya contoh. Jangan memaksakan perjalanan Banggai dan Togean dalam 
 - **Waktu cadangan:** hindari menghubungkan kapal, mobil, dan pesawat dalam jadwal yang terlalu rapat.
 - **Rincian biaya:** minta pemisahan biaya kendaraan, tiket kapal, charter, penginapan, makan, dan aktivitas.
 
-Untuk informasi dasar rute, baca juga [panduan perjalanan Togean](/id/blog/2026-10-17-panduan-wisata-togean-islands/) dan [itinerary Banggai 4 hari 3 malam](/id/blog/2026-10-28-itinerary-banggai-4-hari-3-malam/). Dinas Perhubungan Sulawesi Tengah juga pernah mempublikasikan survei rencana trayek Luwuk–Leme-Leme pada Mei 2026; informasi tersebut merupakan tahap kajian, bukan konfirmasi bahwa layanan reguler sudah beroperasi.
+Untuk informasi dasar rute, baca juga [panduan perjalanan Togean](/id/blog/2026-10-17-panduan-wisata-togean-islands/) dan [itinerary Banggai 4 hari 3 malam](/id/blog/2026-10-28-itinerary-banggai-4-hari-3-malam/). Dinas Perhubungan Sulawesi Tengah pernah mempublikasikan [survei rencana trayek Luwuk–Leme-Leme pada Mei 2026](https://perhubungan.sultengprov.go.id/berita-detail.php?id=54); informasi tersebut merupakan tahap kajian, bukan konfirmasi bahwa layanan reguler sudah beroperasi. Untuk pilihan koneksi Togean, baca juga [panduan rute dan kapal dari operator lokal Togean](https://togeansulawesi.com/travel-guides/how-to-get-to-the-togean-islands/); jadwal dan layanan charter tetap perlu dikonfirmasi langsung.
 
 ## Susun perjalanan Banggai dari Luwuk
 
