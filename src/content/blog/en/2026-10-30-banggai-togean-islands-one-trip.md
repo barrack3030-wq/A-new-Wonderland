@@ -74,7 +74,7 @@ This is a flexible framework, not a transport timetable. If you only have seven 
 - **Buffer time:** avoid tight connections between boats, road transfers and flights.
 - **Trip costs:** request separate details for vehicles, passenger tickets, charter boats, accommodation, meals and activities.
 
-For more detail, read our [Togean Islands travel guide](/en/blog/2026-10-17-togean-islands-travel-guide/) and [four-day Banggai Islands itinerary](/en/blog/2026-10-28-banggai-islands-4-day-itinerary-luwuk/). The Central Sulawesi Transportation Agency also reported a survey for a proposed Luwuk–Leme-Leme ferry route in May 2026. That report described a study, not confirmation that a regular service is operating.
+For more detail, read our [Togean Islands travel guide](/en/blog/2026-10-17-togean-islands-travel-guide/) and [four-day Banggai Islands itinerary](/en/blog/2026-10-28-banggai-islands-4-day-itinerary-luwuk/). The Central Sulawesi Transportation Agency published a [May 2026 survey about a proposed Luwuk–Leme-Leme ferry route](https://perhubungan.sultengprov.go.id/berita-detail.php?id=54). It described a study, not confirmation that a regular service is operating. For Togean connections, also consult this [local operator's guide to routes and boats](https://togeansulawesi.com/travel-guides/how-to-get-to-the-togean-islands/); schedules and charter services still need direct confirmation.
 
 ## Plan your Banggai journey from Luwuk
 
