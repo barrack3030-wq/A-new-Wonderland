@@ -74,7 +74,7 @@ Ce programme est flexible et ne constitue pas un horaire de transport. Si vous n
 - **Temps de marge :** évitez les correspondances trop courtes entre bateaux, véhicules et vols.
 - **Budget :** demandez le détail des véhicules, billets, bateaux privés, hébergements, repas et activités.
 
-Pour approfondir la préparation, consultez notre [guide de voyage des îles Togean](/fr/blog/2026-10-17-guide-voyage-iles-togean/) et notre [itinéraire de quatre jours à Banggai](/fr/blog/2026-10-28-itineraire-iles-banggai-4-jours-luwuk/). Le service des transports du Sulawesi central a également publié en mai 2026 une enquête sur le projet de liaison en ferry Luwuk–Leme-Leme. Ce document présentait une étude, et non la confirmation qu'un service régulier était déjà en activité.
+Pour approfondir la préparation, consultez notre [guide de voyage des îles Togean](/fr/blog/2026-10-17-guide-voyage-iles-togean/) et notre [itinéraire de quatre jours à Banggai](/fr/blog/2026-10-28-itineraire-iles-banggai-4-jours-luwuk/). Le service des transports du Sulawesi central a publié en mai 2026 une [étude sur le projet de liaison en ferry Luwuk–Leme-Leme](https://perhubungan.sultengprov.go.id/berita-detail.php?id=54). Ce document présentait une étude, et non la confirmation qu'un service régulier était déjà en activité. Pour les liaisons vers Togean, consultez également ce [guide des itinéraires et bateaux publié par un opérateur local](https://togeansulawesi.com/travel-guides/how-to-get-to-the-togean-islands/) ; les horaires et les services privés doivent être confirmés directement.
 
 ## Organisez votre voyage à Banggai depuis Luwuk
 
