@@ -3,7 +3,7 @@ title: "Banggai et Togean en un Seul Voyage : Itinéraires et Durée"
 description: "Vous souhaitez découvrir les îles Banggai et Togean pendant le même séjour ? Comparez les itinéraires au départ de Luwuk, les transferts routiers et les options en bateau."
 seoTitle: "Banggai et Togean en un Voyage : Guide des Itinéraires"
 seoDescription: "Préparez un voyage combiné à Banggai et Togean depuis Luwuk. Découvrez le passage par Ampana, les bateaux privés depuis Bunta et le temps à prévoir."
-image: "/images/banggai-togean-route-hero.webp"
+image: "/images/banggai-togean-route-hero.svg"
 imageAlt: "Un bateau de passagers traverse les eaux bleues entre les îles tropicales du Sulawesi central"
 author: "Banggai Wonderland"
 pubDate: 2026-10-30
