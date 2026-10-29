@@ -3,7 +3,7 @@ title: "Trip Banggai dan Togean dalam Satu Perjalanan: Rute dan Durasi Ideal"
 description: "Ingin mengunjungi Kepulauan Banggai dan Togean sekaligus? Pahami pilihan rute dari Luwuk, koneksi darat dan laut, serta waktu yang perlu disiapkan."
 seoTitle: "Trip Banggai dan Togean: Rute, Transportasi & Durasi"
 seoDescription: "Panduan menggabungkan trip Banggai dan Togean dari Luwuk. Bandingkan rute via Ampana dan kapal charter Bunta, plus contoh pembagian hari."
-image: "/images/banggai-togean-route-hero.webp"
+image: "/images/banggai-togean-route-hero.svg"
 imageAlt: "Kapal penumpang melintasi perairan biru di antara pulau-pulau tropis Sulawesi Tengah"
 author: "Banggai Wonderland"
 pubDate: 2026-10-30
