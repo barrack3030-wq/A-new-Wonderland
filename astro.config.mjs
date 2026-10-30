@@ -8,6 +8,8 @@ export default defineConfig({
   // Retire legacy ko/zh URLs: redirect only where an equivalent page exists.
   // Unmapped legacy URLs intentionally return 404 rather than redirecting to an unrelated page.
   redirects: {
+      // Near-duplicate English post merged into the longer 2026-09-09 guide.
+      "/en/blog/2026-09-08-how-long-does-it-take-from-luwuk-airport-to-lake-paisupok/": "/en/blog/2026-09-09-how-long-does-it-take-to-reach-lake-paisupok-from-luwuk-airport/",
       "/ko/": "/en/",
       "/ko/about/": "/en/about/",
       "/ko/gallery/": "/en/gallery/",

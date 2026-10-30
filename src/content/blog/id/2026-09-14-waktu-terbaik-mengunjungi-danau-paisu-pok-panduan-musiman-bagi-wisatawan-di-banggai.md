@@ -1,8 +1,8 @@
 ---
 title: "Waktu Terbaik Mengunjungi Danau Paisu Pok: Panduan Musiman bagi Wisatawan di Banggai"
-description: "Planning a trip to Paisu Pok Lake in Banggai? Learn the best time to visit, seasonal conditions, water clarity, and practical travel tips for Peleng Island."
-seoTitle: "Best Time to Visit Paisu Pok Lake: Banggai Travel Guide"
-seoDescription: "Planning a trip to Paisu Pok Lake in Banggai? Learn the best time to visit, seasonal conditions, water clarity, and practical travel tips for Peleng Island."
+description: "Kapan waktu terbaik ke Danau Paisu Pok di Banggai? Kondisi musiman, kejernihan air, dan tips perjalanan praktis untuk Pulau Peleng."
+seoTitle: "Waktu Terbaik ke Danau Paisu Pok: Panduan Musiman"
+seoDescription: "Merencanakan perjalanan ke Danau Paisu Pok? Ketahui waktu terbaik berkunjung, kondisi musiman, kejernihan air, dan tips praktis di Pulau Peleng."
 image: "/images/blog/compressed-image-20260914162943.jpg"
 imageAlt: "Waktu Terbaik Mengunjungi Danau Paisu Pok: Panduan Musiman bagi Wisatawan di Banggai"
 author: "Banggai Wonderland"
