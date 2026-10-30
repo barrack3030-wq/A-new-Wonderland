@@ -1,10 +1,10 @@
 ---
-title: "Where to Go After Bali? 10 Indonesian Destinations Beyond Bali"
+title: "Ke Mana Setelah Bali? 10 Destinasi Indonesia di Luar Bali"
 description: "Setelah Bali, jelajahi 10 destinasi di Pulau Banggai, Luwuk, dan sekitarnya. Panduan lengkap Danau Paisu Pok, Pantai Poganda, snorkeling, dan tips praktis."
-seoTitle: "Where to Go After Bali? 10 Indonesian Destinations Beyond Bali"
+seoTitle: "Ke Mana Setelah Bali? 10 Destinasi di Banggai & Luwuk"
 seoDescription: "Setelah Bali, jelajahi 10 destinasi di Pulau Banggai, Luwuk, dan sekitarnya. Panduan lengkap Danau Paisu Pok, Pantai Poganda, snorkeling, dan tips praktis."
 image: "/images/blog/dji-0992-2-20260915111011.webp"
-imageAlt: "Where to Go After Bali? 10 Indonesian Destinations Beyond Bali"
+imageAlt: "Pemandangan pantai dan laut di Banggai, Sulawesi Tengah"
 author: "Banggai Wonderland"
 pubDate: 2026-09-15
 translationKey: "2026-09-15-where-to-go-after-bali-10-indonesian-destinations-beyond-bali"

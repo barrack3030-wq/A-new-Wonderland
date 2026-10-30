@@ -185,7 +185,7 @@ Pour découvrir **Luwuk et les îles Banggai** sans courir, cet itinéraire de 7
 
 ## Vous avez moins de temps ?
 
-Pour un séjour court, consultez le [Forfait Luwuk 2 jours 1 nuit](/fr/packages/luwuk-stopover/). Pour un itinéraire Luwuk–Salakan, consultez le [Private Trip Luwuk Salakan](/fr/packages/luwuk-salakan/).
+Pour un séjour court, consultez le [Forfait Luwuk 2 jours 1 nuit](/fr/packages/luwuk-stopover/). Pour un itinéraire Luwuk–Salakan, consultez le [circuits privés](/fr/packages/).
 
 Pour un voyage de 7 jours comme celui-ci, nous recommandons un **itinéraire personnalisé**, car les ferries, les activités maritimes et les conditions locales peuvent varier selon la date. Découvrez nos [services de tour Luwuk Banggai](/fr/jasa-tour-luwuk-banggai/) pour organiser un voyage privé selon vos dates et votre groupe.
 
