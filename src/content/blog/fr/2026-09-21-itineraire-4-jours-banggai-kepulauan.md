@@ -1,7 +1,7 @@
 ---
 title: "Itinéraire de 4 Jours à Banggai Kepulauan pour les Primo-Visiteurs"
 description: "Guide pratique de 4 jours à Banggai Kepulauan depuis Luwuk avec Salakan, plages de Banggai Laut, Peleng, lac Paisu Pok et cascades de Luwuk."
-seoTitle: "Banggai Kepulauan en 4 Jours : Itinéraire pour une Première Visite"
+seoTitle: "Banggai Kepulauan en 4 jours : itinéraire pour une première visite"
 seoDescription: "Organisez 4 jours à Banggai Kepulauan depuis Luwuk avec Salakan, les plages de Banggai Laut, Peleng, le lac Paisu Pok et des conseils de transport."
 image: "/images/Poganda-Beach-Banggai-IndonesiaJuara-Trip.webp"
 imageAlt: "Plage de Poganda à Banggai Kepulauan avec sable blanc, eau turquoise et cocotiers"

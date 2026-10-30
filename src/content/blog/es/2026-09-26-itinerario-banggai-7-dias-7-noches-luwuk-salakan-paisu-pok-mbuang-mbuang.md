@@ -1,7 +1,7 @@
 ---
 title: "Itinerario de Banggai de 7 días y 7 noches: Luwuk, Salakan, Peleng y Pulo Dua"
 description: "Itinerario privado de 7 días y 7 noches desde Luwuk para explorar Salakan, Paisu Pok, Mbuang-Mbuang, Bontolan, las playas de Banggai y Pulo Dua."
-seoTitle: "Itinerario de Banggai 7 días y 7 noches: Ruta completa desde Luwuk"
+seoTitle: "Itinerario Banggai 7 días y 7 noches: ruta completa desde Luwuk"
 seoDescription: "Planifica un viaje de 7 días y 7 noches por Banggai desde Luwuk con Piala, Salakan, Paisu Pok, Mbuang-Mbuang, Bontolan, Oyama, Long Beach, Pulo Dua."
 image: "/images/Poganda-Beach-Banggai-IndonesiaJuara-Trip.webp"
 imageAlt: "Playa de Poganda en las Islas Banggai"
