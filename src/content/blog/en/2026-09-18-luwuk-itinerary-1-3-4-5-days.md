@@ -7,6 +7,7 @@ image: "/images/Poganda-Beach-Banggai-IndonesiaJuara-Trip.webp"
 imageAlt: "Tropical coastal scenery in Banggai, Indonesia"
 author: "Banggai Wonderland"
 pubDate: 2026-09-18
+translationKey: "2026-09-18-luwuk-itinerary-1-3-4-5-days"
 tags:
   - "Luwuk"
   - "Banggai"
@@ -15,7 +16,7 @@ tags:
   - "Travel"
 ---
 
-Luwuk is one of the main gateways to Banggai in Central Sulawesi, Indonesia. For many travelers, it is the starting point before continuing to Salakan, Peleng Island, Paisu Pok and other destinations in the Banggai Islands.
+Luwuk is one of the main gateways to Banggai in Central Sulawesi, Indonesia. For many travelers, it is the starting point before continuing to Salakan, Peleng Island, [Paisu Pok](/en/destinations/paisu-pok-lake/) and other destinations in the Banggai Islands.
 
 The main challenge is distance. Several attractions require a combination of road and sea transport, so a good itinerary should allow enough time for travel and possible changes in boat schedules.
 
@@ -44,7 +45,7 @@ If you plan to continue to the islands the next day, use this time to confirm yo
 
 #### Late Morning: Piala Waterfall
 
-Visit Piala Waterfall, one of the natural attractions close to Luwuk. Allow around one to two hours to explore the area.
+Visit [Piala Waterfall](/en/destinations/piala-waterfall/), one of the natural attractions close to Luwuk. Allow around one to two hours to explore the area.
 
 #### Lunch: Luwuk
 
@@ -134,7 +135,7 @@ There is no need to add another major attraction this day because the transfer i
 
 Start early at Paisu Pok Lake. Spend the morning swimming, snorkeling, exploring by local boat or enjoying the scenery.
 
-After lunch, visit one or two nearby coastal destinations such as Paisu Batango or Poganda, depending on local conditions and your route.
+After lunch, visit one or two nearby coastal destinations such as [Paisu Batango](/en/destinations/paisu-batango-lake/) or Poganda, depending on local conditions and your route.
 
 Avoid trying to visit too many places in one day.
 
@@ -170,7 +171,7 @@ Use the second day for island and coastal destinations around Peleng.
 
 A possible route is:
 
-**Salakan → boat departure point → Tanjung Gundul → Long Beach → Oyama → Bontolan**
+**Salakan → boat departure point → Tanjung Gundul → [Long Beach](/en/destinations/long-beach/) → Oyama → Bontolan**
 
 Take time to swim, snorkel and relax rather than rushing between locations.
 
@@ -234,7 +235,7 @@ This structure leaves a useful buffer between your island journey and your fligh
 
 ## Can You Add Pulo Dua?
 
-Yes, but Pulo Dua is best treated as a separate day trip.
+Yes, but [Pulo Dua](/en/destinations/pulau-dua-balantak/) is best treated as a separate day trip.
 
 For a longer trip, one practical option is:
 
@@ -252,7 +253,7 @@ Yes. Salodik works well as a half-day or full-day trip from Luwuk.
 
 A simple route is:
 
-**Luwuk → Salodik Waterfall → Luwuk**
+**Luwuk → [Salodik Waterfall](/en/destinations/salodik-waterfall/) → Luwuk**
 
 It is better to give Salodik its own time slot than to combine it with a long island transfer.
 

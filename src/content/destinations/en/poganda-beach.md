@@ -31,7 +31,7 @@ youtube: "https://www.youtube.com/watch?v=TsAT26i-QZE"
 
 ## Poganda Beach: Peleng Island's Snorkelling Shore
 
-Poganda Beach is a white-sand beach in **Dusun Poganda, Desa Luk Panenteng, Kecamatan Bulagi Utara, Kabupaten Banggai Kepulauan, Central Sulawesi**, on **Peleng Island**. It sits at the end of the village, about **15 minutes by road from Paisu Pok Lake**, and forms part of the same tourism cluster as the lake and the Paisu Batango spring.
+Poganda Beach is a white-sand beach in **Dusun Poganda, Desa Luk Panenteng, Kecamatan Bulagi Utara, Kabupaten Banggai Kepulauan, Central Sulawesi**, on **Peleng Island**. It sits at the end of the village, about **15 minutes by road from [Paisu Pok Lake](/en/destinations/paisu-pok-lake/)**, and forms part of the same tourism cluster as the lake and the [Paisu Batango](/en/destinations/paisu-batango-lake/) spring.
 
 The beach runs for approximately **3.4 kilometres**, with fine pale sand, clear turquoise water, and calm waves. It is a long village beach rather than a resort, with a quiet atmosphere, coconut trees, simple shelters, and a reef close to shore.
 
@@ -123,4 +123,4 @@ Yes. The beach is known for relatively calm, clear water, but conditions can cha
 
 **Paisu Pok Lake** is about **15 minutes by road** from Poganda and is one of the best-known freshwater destinations in Banggai. **Paisu Batango Spring** is in the same village and can be combined with the beach on the same trip.
 
-**Mandel Beach** and **Oyama Beach** are other notable island beaches. **Piala Waterfall** and **Kilo 5 Beach** are easier mainland options for travellers based in Luwuk.
+**[Mandel Beach](/en/destinations/mandel-beach/)** and **[Oyama Beach](/en/destinations/oyama-beach/)** are other notable island beaches. **[Piala Waterfall](/en/destinations/piala-waterfall/)** and **[Kilo 5 Beach](/en/destinations/kilo-5-beach/)** are easier mainland options for travellers based in Luwuk.

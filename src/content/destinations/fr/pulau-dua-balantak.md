@@ -108,4 +108,4 @@ Oui. Des homestays et hébergements simples existent autour de Kampangar et de P
 
 ## Destinations associées
 
-**Paisu Pok Lake** et **Paisu Batango Spring** à Peleng offrent des paysages d’eau douce. **Poganda Beach** et **Pompon Beach** sont des plages de sable blanc adaptées au snorkeling. **Mandel Beach** et **Oyama Beach** offrent d’autres plages insulaires, tandis que **Piala Waterfall** et **Kilo 5 Beach** sont plus faciles à combiner depuis Luwuk.
+**[Paisu Pok Lake](/fr/destinations/paisu-pok-lake/)** et **[Paisu Batango](/fr/destinations/paisu-batango-lake/) Spring** à Peleng offrent des paysages d’eau douce. **[Poganda Beach](/fr/destinations/poganda-beach/)** et **[Pompon Beach](/fr/destinations/pompon-beach/)** sont des plages de sable blanc adaptées au snorkeling. **[Mandel Beach](/fr/destinations/mandel-beach/)** et **[Oyama Beach](/fr/destinations/oyama-beach/)** offrent d’autres plages insulaires, tandis que **[Piala Waterfall](/fr/destinations/piala-waterfall/)** et **[Kilo 5 Beach](/fr/destinations/kilo-5-beach/)** sont plus faciles à combiner depuis Luwuk.

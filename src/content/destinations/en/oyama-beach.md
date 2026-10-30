@@ -91,4 +91,4 @@ No. There is **no homestay on the beach**. The nearest accommodation is in Lokot
 
 ## Related Destinations
 
-**Pantai Bontolan** in Bone Baru is often combined with Oyama on the same boat trip. **Long Beach (Pantai Pasir Panjang)** is another boat-access beach on the Banggai Laut side. **Tanjung Gundul** is a nearby limestone cliff with a sea-carved hole. For travellers on Peleng Island, **Paisu Pok Lake** and **Paisu Batango Spring** are the region’s signature freshwater destinations.
+**[Pantai Bontolan](/en/destinations/bontolan-beach/)** in Bone Baru is often combined with Oyama on the same boat trip. **[Long Beach](/en/destinations/long-beach/) (Pantai Pasir Panjang)** is another boat-access beach on the Banggai Laut side. **Tanjung Gundul** is a nearby limestone cliff with a sea-carved hole. For travellers on Peleng Island, **[Paisu Pok Lake](/en/destinations/paisu-pok-lake/)** and **[Paisu Batango](/en/destinations/paisu-batango-lake/) Spring** are the region’s signature freshwater destinations.

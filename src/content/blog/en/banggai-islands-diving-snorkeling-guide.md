@@ -76,17 +76,17 @@ Larger animals such as dugongs may occur in the wider region, but sightings are 
 
 ### Pulau Dua
 
-Pulau Dua is a practical marine destination for travelers starting from Luwuk. It can be included as a day trip or as part of a longer Banggai itinerary.
+[Pulau Dua](/en/destinations/pulau-dua-balantak/) is a practical marine destination for travelers starting from Luwuk. It can be included as a day trip or as part of a longer Banggai itinerary.
 
 ### Banggai Laut
 
 Banggai Laut offers beaches, shallow coastal areas and reefs that can be combined with island-hopping.
 
-Places mentioned in local travel information include **Oyama Beach, Mandel Beach and other coastal areas around Banggai Laut**.
+Places mentioned in local travel information include **[Oyama Beach](/en/destinations/oyama-beach/), [Mandel Beach](/en/destinations/mandel-beach/) and other coastal areas around Banggai Laut**.
 
 ![Pasir Panjang Beach, Banggai Laut](https://commons.wikimedia.org/wiki/Special:Redirect/file/Pantai_Pasir_Panjang_-_Banggai_Laut.jpg)
 
-*Pasir Panjang Beach, Mbuang-Mbuang, Banggai Laut. Image from Indonesia's Ministry of Tourism and Creative Economy via Wikimedia Commons, public domain.*
+*Pasir Panjang Beach, [Mbuang-Mbuang](/en/destinations/mbuang-mbuang-island/), Banggai Laut. Image from Indonesia's Ministry of Tourism and Creative Economy via Wikimedia Commons, public domain.*
 
 ### Mangrove-Fringed Bays
 
@@ -122,7 +122,7 @@ The two activities can easily be combined. You do not need to make every day of 
 
 ## Paisu Pok: Add a Freshwater Day
 
-One advantage of a Banggai itinerary is the possibility of combining marine activities with **Paisu Pok Lake on Peleng Island**.
+One advantage of a Banggai itinerary is the possibility of combining marine activities with **[Paisu Pok Lake](/en/destinations/paisu-pok-lake/) on Peleng Island**.
 
 The lake is known for exceptionally clear water and submerged vegetation and trees.
 

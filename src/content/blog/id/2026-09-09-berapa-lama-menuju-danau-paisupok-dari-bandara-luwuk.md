@@ -7,6 +7,7 @@ image: "/images/Poganda-Beach-Banggai-IndonesiaJuara-Trip.webp"
 imageAlt: "Pemandangan pantai tropis di kawasan Banggai, Sulawesi Tengah"
 author: "Banggai Wonderland"
 pubDate: 2026-09-09
+translationKey: "2026-09-09-luwuk-airport-to-paisu-pok-travel-time"
 tags:
   - "Banggai"
   - "Indonesia"

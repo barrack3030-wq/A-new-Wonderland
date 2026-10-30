@@ -19,7 +19,7 @@ tags:
   - "guide de voyage"
 ---
 
-Le lac Paisu Pok, situé sur l'île de Peleng à Banggai, est l'un des lacs d'eau douce les plus transparents d'Indonésie. La visibilité sous l'eau peut atteindre 10 à 15 mètres, révélant des troncs d'arbres immergés depuis longtemps sous la surface—nettement visibles d'en haut tel un panorama d'art naturel silencieux. Bien que les photos de ce lac aient largement circulé sur les réseaux sociaux, le nombre de visiteurs reste en réalité relativement faible. L'une des raisons principales en est l'accessibilité ; le voyage pour s'y rendre exige que les voyageurs prennent un vol pour Luwuk, traversent en ferry jusqu'à l'île de Peleng, puis poursuivent par la route sur des voies dont une partie est en assez mauvais état.
+Le lac [Paisu Pok](/fr/destinations/paisu-pok-lake/), situé sur l'île de Peleng à Banggai, est l'un des lacs d'eau douce les plus transparents d'Indonésie. La visibilité sous l'eau peut atteindre 10 à 15 mètres, révélant des troncs d'arbres immergés depuis longtemps sous la surface—nettement visibles d'en haut tel un panorama d'art naturel silencieux. Bien que les photos de ce lac aient largement circulé sur les réseaux sociaux, le nombre de visiteurs reste en réalité relativement faible. L'une des raisons principales en est l'accessibilité ; le voyage pour s'y rendre exige que les voyageurs prennent un vol pour Luwuk, traversent en ferry jusqu'à l'île de Peleng, puis poursuivent par la route sur des voies dont une partie est en assez mauvais état.
 
 Pour ceux qui sont prêts à effectuer ce trajet, la première question qui se pose habituellement est : **quel est le meilleur moment pour s'y rendre ?**
 

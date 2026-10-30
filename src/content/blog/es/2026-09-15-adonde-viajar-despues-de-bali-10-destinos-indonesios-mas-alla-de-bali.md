@@ -22,7 +22,7 @@ Este artículo te invita a conocer 10 destinos en los alrededores de Luwuk y las
 
 Luwuk es la capital de la regencia de Banggai y la principal puerta de entrada a las islas Banggai. El aeropuerto Syukuran Aminuddin Amir (LUW) ofrece vuelos desde Yakarta y Makassar. Si llegas desde Bali u otra ciudad, normalmente tendrás que hacer escala en uno de esos hubs. Las rutas aéreas pueden cambiar, así que consulta los horarios más recientes antes de reservar el billete.
 
-Desde Luwuk, el acceso a las islas de Banggai Kepulauan solo es posible por vía marítima. Hay ferris y barcos de madera desde el puerto de rakyat de Luwuk hacia la isla de Peling (Leme Leme) y Salakan. Los horarios, precios y disponibilidad dependen en gran medida del clima y del estado del oleaje. Confirma siempre los horarios más recientes con el puerto o con un agente local antes de salir. Para determinados destinos, como el lago Paisu Pok, las lanchas rápidas desde la bahía de Lalong suelen salir por la mañana.
+Desde Luwuk, el acceso a las islas de Banggai Kepulauan solo es posible por vía marítima. Hay ferris y barcos de madera desde el puerto de rakyat de Luwuk hacia la isla de Peling (Leme Leme) y Salakan. Los horarios, precios y disponibilidad dependen en gran medida del clima y del estado del oleaje. Confirma siempre los horarios más recientes con el puerto o con un agente local antes de salir. Para determinados destinos, como el lago [Paisu Pok](/es/destinations/paisu-pok-lake/), las lanchas rápidas desde la bahía de Lalong suelen salir por la mañana.
 
 ## 10 destinos en Banggai y sus alrededores
 

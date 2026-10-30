@@ -71,7 +71,7 @@ Pompon is on **Peleng Island**, in Banggai Kepulauan Regency.
 
 **By road from Salakan:** From the regency capital **Salakan**, the drive to Desa Lalong is approximately **2.5 hours** according to the supplied travel research, over roughly **90 kilometers**. A car or motorbike is the practical option for the final road journey.
 
-**By boat from Luwuk or Banggai:** Travelers can also reach Peleng Island by boat and continue by road to Pompon. Some tour itineraries combine Pompon with **Paisu Pok Lake** and **Poganda Beach**.
+**By boat from Luwuk or Banggai:** Travelers can also reach Peleng Island by boat and continue by road to Pompon. Some tour itineraries combine Pompon with **[Paisu Pok Lake](/en/destinations/paisu-pok-lake/)** and **[Poganda Beach](/en/destinations/poganda-beach/)**.
 
 Because transport schedules and sea conditions can change, travelers should confirm current ferry or speedboat arrangements before departure.
 
@@ -117,4 +117,4 @@ No formal beach accommodation is listed in the supplied research. Homestays in n
 
 ## Related Destinations
 
-**Paisu Pok Lake** is the region’s famous clear freshwater destination and can be combined with Pompon on a Peleng itinerary. **Poganda Beach** offers white sand, calm water and near-shore snorkeling. **Paisu Batango Spring** is another natural attraction in the Luk Panenteng area. **Mandel Beach** is another white-sand option on Peleng. For travelers based in Luwuk, **Kilo 5 Beach** and **Piala Waterfall** are easier mainland additions.
+**Paisu Pok Lake** is the region’s famous clear freshwater destination and can be combined with Pompon on a Peleng itinerary. **Poganda Beach** offers white sand, calm water and near-shore snorkeling. **[Paisu Batango](/en/destinations/paisu-batango-lake/) Spring** is another natural attraction in the Luk Panenteng area. **[Mandel Beach](/en/destinations/mandel-beach/)** is another white-sand option on Peleng. For travelers based in Luwuk, **[Kilo 5 Beach](/en/destinations/kilo-5-beach/)** and **[Piala Waterfall](/en/destinations/piala-waterfall/)** are easier mainland additions.

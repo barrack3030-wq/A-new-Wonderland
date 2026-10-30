@@ -32,7 +32,7 @@ El nombre procede del idioma local: **"paisu" significa agua** y **"pok" signifi
 
 ## El Agua y el Fondo del Lago
 
-Paisu Pok es un **lago de agua dulce cerrado**, diferente de Paisu Batango, que es un manantial costero influido por las mareas. En buenas condiciones, la visibilidad puede alcanzar unos **10–15 metros**.
+Paisu Pok es un **lago de agua dulce cerrado**, diferente de [Paisu Batango](/es/destinations/paisu-batango-lake/), que es un manantial costero influido por las mareas. En buenas condiciones, la visibilidad puede alcanzar unos **10–15 metros**.
 
 Los árboles muertos sumergidos son visibles bajo el agua y crean un paisaje submarino poco común. La tonalidad del agua cambia durante el día y la luz de la tarde puede resaltar los tonos azul verdosos y los reflejos de la vegetación. Desde una canoa, la transparencia puede hacer que la embarcación parezca flotar sobre el fondo.
 
@@ -111,4 +111,4 @@ Sí. Hay homestays y guesthouses sencillos en Luk Panenteng, además de más opc
 
 ## Destinos Relacionados
 
-**Paisu Batango** ofrece una experiencia acuática diferente, con agua dulce, salobre y marina que se encuentran en un manantial costero. **Poganda Beach** es otra atracción cercana. En la isla de Banggai, **Pantai Bontolan** y **Oyama Beach** son importantes destinos costeros, mientras que desde Luwuk también se puede visitar **Kilo 5 Beach** y **Piala Waterfall**.
+**Paisu Batango** ofrece una experiencia acuática diferente, con agua dulce, salobre y marina que se encuentran en un manantial costero. **[Poganda Beach](/es/destinations/poganda-beach/)** es otra atracción cercana. En la isla de Banggai, **[Pantai Bontolan](/es/destinations/bontolan-beach/)** y **[Oyama Beach](/es/destinations/oyama-beach/)** son importantes destinos costeros, mientras que desde Luwuk también se puede visitar **[Kilo 5 Beach](/es/destinations/kilo-5-beach/)** y **[Piala Waterfall](/es/destinations/piala-waterfall/)**.

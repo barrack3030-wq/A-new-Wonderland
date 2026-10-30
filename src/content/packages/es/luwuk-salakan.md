@@ -70,9 +70,9 @@ El itinerario puede adaptarse a los horarios de los barcos, el clima, las condic
 
 **Opciones**
 
-- Lago Paisu Pok
-- Paisu Batango
-- Playa Poganda
+- [Lago Paisu Pok](/es/destinations/paisu-pok-lake/)
+- [Paisu Batango](/es/destinations/paisu-batango-lake/)
+- [Playa Poganda](/es/destinations/poganda-beach/)
 - Otros lugares de la costa según las condiciones y el tiempo disponible
 
 **Tarde**

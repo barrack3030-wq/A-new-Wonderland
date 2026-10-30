@@ -26,7 +26,7 @@ Ask which legs use a car, speedboat, local boat or ferry, where applicable.
 
 ## 2. Which destinations are actually included?
 
-Request a written itinerary, not just a promotional collage. Check the names of the stops, their order and the time planned at each location. If Paisupok, Paisu Batango, Kawalu Bay or Poganda Beach matters to you, ask whether each place is included in your specific package and whether the route works on your travel date.
+Request a written itinerary, not just a promotional collage. Check the names of the stops, their order and the time planned at each location. If Paisupok, [Paisu Batango](/en/destinations/paisu-batango-lake/), [Kawalu Bay](/en/destinations/kawalu-bay/) or [Poganda Beach](/en/destinations/poganda-beach/) matters to you, ask whether each place is included in your specific package and whether the route works on your travel date.
 
 A destination shown in advertising is not automatically part of every tour.
 

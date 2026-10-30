@@ -70,9 +70,9 @@ The itinerary can be adjusted to ferry schedules, weather, sea conditions, and f
 
 **Possible destinations**
 
-- Paisu Pok Lake
-- Paisu Batango
-- Poganda Beach
+- [Paisu Pok Lake](/en/destinations/paisu-pok-lake/)
+- [Paisu Batango](/en/destinations/paisu-batango-lake/)
+- [Poganda Beach](/en/destinations/poganda-beach/)
 - Other coastal spots depending on conditions and available time
 
 **Afternoon**

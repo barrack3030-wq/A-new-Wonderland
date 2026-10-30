@@ -46,7 +46,7 @@ Paket singkat namun berkesan bagi wisatawan yang memiliki waktu terbatas di Luwu
 - Makan siang / kuliner lokal
 - Menikmati perjalanan melalui lanskap tropis
 
-**Siang — Piala Waterfall**
+**Siang — [Piala Waterfall](/id/destinations/piala-waterfall/)**
 
 - Mengunjungi Piala Waterfall
 - Menjelajahi alam tropis

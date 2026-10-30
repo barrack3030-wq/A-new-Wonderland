@@ -46,7 +46,7 @@ Una escapada corta pero memorable para viajeros con poco tiempo en Luwuk. Descub
 - Almuerzo / experiencia gastronómica local
 - Disfruta del paisaje tropical durante el trayecto
 
-**Tarde — Piala Waterfall**
+**Tarde — [Piala Waterfall](/es/destinations/piala-waterfall/)**
 
 - Visita a Piala Waterfall
 - Exploración de la naturaleza tropical

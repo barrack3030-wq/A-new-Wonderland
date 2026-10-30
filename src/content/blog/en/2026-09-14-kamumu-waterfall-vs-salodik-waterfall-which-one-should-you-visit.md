@@ -14,7 +14,7 @@ tags:
   - "Travel"
 ---
 
-Luwuk and its surroundings are home to many waterfalls, but the two names that come up most often in travelers’ conversations are **Kamumu Waterfall** and **Salodik Waterfall**. Both are located in North Luwuk District, only a few kilometers from each other, and both offer clear, multi-tiered flows of water. However, the experience at each place can feel very different, depending on what you are looking for.
+Luwuk and its surroundings are home to many waterfalls, but the two names that come up most often in travelers’ conversations are **[Kamumu Waterfall](/en/destinations/kamumu-waterfall/)** and **[Salodik Waterfall](/en/destinations/salodik-waterfall/)**. Both are located in North Luwuk District, only a few kilometers from each other, and both offer clear, multi-tiered flows of water. However, the experience at each place can feel very different, depending on what you are looking for.
 
 This article compares the two directly—from access, facilities, and atmosphere to who is best suited to visit each one. Neither is truly "better" than the other; the better choice is simply the one that best suits your preferences.
 

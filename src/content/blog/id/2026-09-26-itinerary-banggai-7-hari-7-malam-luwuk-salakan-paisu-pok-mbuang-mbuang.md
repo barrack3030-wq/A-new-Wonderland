@@ -18,7 +18,7 @@ tags:
 ---
 
 
-Jika Anda ingin menjelajahi **Luwuk dan Kepulauan Banggai** tanpa terburu-buru, rute 7 hari 7 malam ini menggabungkan perjalanan darat, ferry, pantai, dan beberapa destinasi laut yang lebih terpencil. Rute ini cocok untuk private trip yang ingin memasukkan **Paisu Pok, Mbuang-Mbuang, Bontolan, Oyama, Long Beach, Pulo Dua, Kamumu dan Salodik** dalam satu perjalanan.
+Jika Anda ingin menjelajahi **Luwuk dan Kepulauan Banggai** tanpa terburu-buru, rute 7 hari 7 malam ini menggabungkan perjalanan darat, ferry, pantai, dan beberapa destinasi laut yang lebih terpencil. Rute ini cocok untuk private trip yang ingin memasukkan **[Paisu Pok](/id/destinations/paisu-pok-lake/), [Mbuang-Mbuang](/id/destinations/mbuang-mbuang-island/), Bontolan, Oyama, [Long Beach](/id/destinations/long-beach/), [Pulo Dua](/id/destinations/pulau-dua-balantak/), Kamumu dan Salodik** dalam satu perjalanan.
 
 > Jadwal ferry dan aktivitas laut tetap perlu disesuaikan dengan cuaca, kondisi laut, dan jadwal operasional lokal.
 

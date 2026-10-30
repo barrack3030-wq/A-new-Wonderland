@@ -29,7 +29,7 @@ youtube: "https://www.youtube.com/watch?v=P6PO7BwgQa0"
 
 ## Long Beach: Pantai Pasir Panjang di Pulau Banggai
 
-Long Beach—yang dikenal lokal sebagai **Pantai Pasir Panjang**—adalah pantai berpasir putih di **Pulau Banggai, Kabupaten Banggai Laut, Sulawesi Tengah**. Pantai ini berada di sebelah **Pantai Oyama** dan, seperti Oyama, **hanya dapat dicapai dengan perahu**, biasanya dari desa **Popisi** atau **Lokotoy**. Tidak ada akses jalan darat, tidak ada tiket masuk, dan tidak ada infrastruktur formal. Sebagai gantinya, Anda mendapatkan garis pantai yang tenang, belum berkembang, dengan air jernih dan akses langsung ke laut.
+Long Beach—yang dikenal lokal sebagai **Pantai Pasir Panjang**—adalah pantai berpasir putih di **Pulau Banggai, Kabupaten Banggai Laut, Sulawesi Tengah**. Pantai ini berada di sebelah **[Pantai Oyama](/id/destinations/oyama-beach/)** dan, seperti Oyama, **hanya dapat dicapai dengan perahu**, biasanya dari desa **Popisi** atau **Lokotoy**. Tidak ada akses jalan darat, tidak ada tiket masuk, dan tidak ada infrastruktur formal. Sebagai gantinya, Anda mendapatkan garis pantai yang tenang, belum berkembang, dengan air jernih dan akses langsung ke laut.
 
 Long Beach paling cocok dikunjungi sebagai bagian dari perjalanan perahu menyusuri pesisir Banggai Laut, terutama bersama Pantai Oyama dan destinasi pesisir di sekitarnya.
 
@@ -43,7 +43,7 @@ Suasananya jauh lebih alami daripada pantai yang sudah dikembangkan. Tidak ada f
 
 ## Snorkeling dan Kehidupan Laut
 
-Snorkeling dapat dilakukan **langsung dari pantai** ketika kondisi laut tenang. Terumbu di sini tidak dijelaskan sekaya Pantai Bontolan, tetapi karang dan kehidupan terumbu dapat ditemukan tidak jauh dari garis pantai.
+Snorkeling dapat dilakukan **langsung dari pantai** ketika kondisi laut tenang. Terumbu di sini tidak dijelaskan sekaya [Pantai Bontolan](/id/destinations/bontolan-beach/), tetapi karang dan kehidupan terumbu dapat ditemukan tidak jauh dari garis pantai.
 
 Karena pilihan penyewaan perlengkapan di Pulau Banggai terbatas, wisatawan yang ingin snorkeling sebaiknya membawa masker, kaki katak dan perlengkapan berenang sendiri.
 
@@ -87,4 +87,4 @@ Tidak ada fasilitas makanan atau akomodasi formal yang dijelaskan di pantai. Baw
 
 ## Destinasi Terkait
 
-**Pantai Oyama** berada tepat di sebelah Long Beach dan biasanya dikunjungi dalam perjalanan perahu yang sama. **Tanjung Gundul** adalah tebing kapur di dekatnya dengan lubang yang terbentuk oleh gelombang laut, dicapai dengan perahu dan berenang singkat. **Pantai Bontolan** di Bone Baru menawarkan snorkeling di atas karang dan habitat ikan cardinal Banggai endemik. Bagi wisatawan yang melanjutkan perjalanan ke Pulau Peleng, **Danau Paisu Pok** dan **Mata Air Paisu Batango** adalah dua destinasi air tawar ikonik kawasan ini.
+**Pantai Oyama** berada tepat di sebelah Long Beach dan biasanya dikunjungi dalam perjalanan perahu yang sama. **Tanjung Gundul** adalah tebing kapur di dekatnya dengan lubang yang terbentuk oleh gelombang laut, dicapai dengan perahu dan berenang singkat. **Pantai Bontolan** di Bone Baru menawarkan snorkeling di atas karang dan habitat ikan cardinal Banggai endemik. Bagi wisatawan yang melanjutkan perjalanan ke Pulau Peleng, **[Danau Paisu Pok](/id/destinations/paisu-pok-lake/)** dan **Mata Air [Paisu Batango](/id/destinations/paisu-batango-lake/)** adalah dua destinasi air tawar ikonik kawasan ini.

@@ -7,6 +7,7 @@ image: /images/Poganda-Beach-Banggai-IndonesiaJuara-Trip.webp
 imageAlt: 'Poganda Beach en Banggai, Indonesia'
 author: 'aji'
 pubDate: "2026-09-08T20:00:00"
+translationKey: "2026-09-08-banggai-beyond-bali"
 tags:
   - Banggai
   - Luwuk
@@ -46,7 +47,7 @@ Una mañana puede comenzar junto a un lago tranquilo, continuar con una tarde en
 
 ### Lago Paisupok
 
-**Paisupok Lake** es uno de los tesoros naturales de Banggai.
+**[Paisupok Lake](/es/destinations/paisu-pok-lake/)** es uno de los tesoros naturales de Banggai.
 
 Sus aguas son sorprendentemente transparentes y el entorno transmite una sensación de calma difícil de encontrar en destinos más concurridos.
 
@@ -62,7 +63,7 @@ A veces, las mejores experiencias no nacen de un itinerario lleno, sino de unos 
 
 Para quienes aman el mar pero prefieren la tranquilidad, Banggai ofrece opciones extraordinarias.
 
-**Poganda Beach, Mandel Beach, Oyama Beach, Bontolan Beach y Long Beach** tienen cada una su propia personalidad.
+**[Poganda Beach](/es/destinations/poganda-beach/), [Mandel Beach](/es/destinations/mandel-beach/), [Oyama Beach](/es/destinations/oyama-beach/), [Bontolan Beach](/es/destinations/bontolan-beach/) y [Long Beach](/es/destinations/long-beach/)** tienen cada una su propia personalidad.
 
 Algunas son ideales para nadar y descansar; otras invitan a practicar snorkel, hacer fotografías o contemplar el atardecer.
 
@@ -72,9 +73,9 @@ Lo que comparten es una sensación cada vez más valiosa: espacio para disfrutar
 
 Al adentrarte en el interior, el paisaje se vuelve más verde y aparecen las cascadas.
 
-**Piala Waterfall** es una parada interesante cerca de Luwuk para quienes quieren combinar naturaleza, agua dulce y un poco de aventura.
+**[Piala Waterfall](/es/destinations/piala-waterfall/)** es una parada interesante cerca de Luwuk para quienes quieren combinar naturaleza, agua dulce y un poco de aventura.
 
-**Kamumu Waterfall** ofrece una experiencia diferente y atractiva para quienes disfrutan descubriendo lugares menos conocidos.
+**[Kamumu Waterfall](/es/destinations/kamumu-waterfall/)** ofrece una experiencia diferente y atractiva para quienes disfrutan descubriendo lugares menos conocidos.
 
 La combinación de mar, lagos y cascadas hace que un viaje por Luwuk y Banggai sea extraordinariamente variado.
 

@@ -24,7 +24,7 @@ Voici cinq lieux à inscrire en priorité dans votre itinéraire à Banggai Laut
 
 ## 1. Paisu Batango, un lagon aux eaux translucides
 
-Paisu Batango est sans doute l’un des paysages les plus emblématiques de Banggai Laut. Ce lagon naturel séduit par la limpidité de son eau, ses nuances bleutées et l’atmosphère silencieuse qui l’entoure. À certains endroits, la surface est si claire qu’elle donne l’impression de flotter au-dessus d’un miroir naturel.
+[Paisu Batango](/fr/destinations/paisu-batango-lake/) est sans doute l’un des paysages les plus emblématiques de Banggai Laut. Ce lagon naturel séduit par la limpidité de son eau, ses nuances bleutées et l’atmosphère silencieuse qui l’entoure. À certains endroits, la surface est si claire qu’elle donne l’impression de flotter au-dessus d’un miroir naturel.
 
 La beauté de Paisu Batango se découvre en prenant le temps d’observer les détails : les reflets de la végétation, les fonds visibles sous l’eau et la lumière qui change au fil de la journée. Une baignade tranquille ou une sortie en petite embarcation permet d’apprécier pleinement le site, selon les conditions locales et les règles appliquées par la communauté.
 
@@ -32,7 +32,7 @@ Pour préserver ce lieu fragile, évitez les crèmes solaires non adaptées aux 
 
 ## 2. Pantai Teduang, une plage paisible face à la mer
 
-Avec son littoral lumineux et son ambiance décontractée, **Pantai Teduang** est une étape idéale pour profiter de la beauté côtière de Banggai Laut. La plage offre un cadre agréable pour marcher au bord de l’eau, admirer les variations de couleur de la mer et attendre les dernières lumières du jour.
+Avec son littoral lumineux et son ambiance décontractée, **[Pantai Teduang](/fr/destinations/teduang-beach/)** est une étape idéale pour profiter de la beauté côtière de Banggai Laut. La plage offre un cadre agréable pour marcher au bord de l’eau, admirer les variations de couleur de la mer et attendre les dernières lumières du jour.
 
 Pantai Teduang convient particulièrement aux voyageurs qui souhaitent alterner exploration et moments de repos. Le paysage devient encore plus séduisant lorsque le soleil descend, révélant les silhouettes des îles et les reflets dorés sur la mer.
 
@@ -40,7 +40,7 @@ Comme dans de nombreuses zones côtières de l’archipel, l’expérience peut 
 
 ## 3. Mbuang-Mbuang, l’esprit d’une île isolée
 
-Pour ressentir pleinement le caractère insulaire de Banggai Laut, mettez le cap sur **Mbuang-Mbuang**. Cette destination est appréciée pour ses eaux calmes, ses paysages marins et son atmosphère simple, loin des itinéraires les plus fréquentés.
+Pour ressentir pleinement le caractère insulaire de Banggai Laut, mettez le cap sur **[Mbuang-Mbuang](/fr/destinations/mbuang-mbuang-island/)**. Cette destination est appréciée pour ses eaux calmes, ses paysages marins et son atmosphère simple, loin des itinéraires les plus fréquentés.
 
 Le trajet en bateau fait partie intégrante de l’aventure. En approchant de l’île, les nuances de bleu se multiplient autour des récifs et des plages. Sur place, l’idéal est de voyager lentement : se promener dans le village, échanger avec les habitants, explorer le rivage avec respect et profiter d’une mer souvent propice à la baignade lorsque les conditions sont favorables.
 

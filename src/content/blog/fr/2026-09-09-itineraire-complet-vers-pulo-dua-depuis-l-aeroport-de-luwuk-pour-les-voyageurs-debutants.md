@@ -14,7 +14,7 @@ tags:
   - Voyage
 ---
 
-Mengenal Pulo Dua, Surga Tersembunyi di Timur Sulawesi
+Mengenal [Pulo Dua](/fr/destinations/pulau-dua-balantak/), Surga Tersembunyi di Timur Sulawesi
 Pernahkah Anda membayangkan berdiri di puncak bukit hijau, memandang hamparan laut biru keemasan saat matahari terbenam, dengan deburan ombak yang menenangkan? Itulah Pulo Dua.
 
 Terletak di Kecamatan Balantak Utara, Kabupaten Banggai, Sulawesi Tengah, Pulo Dua adalah destinasi wisata bahari yang dijuluki "Pulau Padarnya Sulawesi" karena kemiripan pemandangannya dengan Pulau Padar di Labuan Bajo. Nama "Pulo Dua" sendiri merujuk pada dua semenanjung kecil yang menjulur ke laut, menciptakan pemandangan yang ikonik dan sangat fotogenik.

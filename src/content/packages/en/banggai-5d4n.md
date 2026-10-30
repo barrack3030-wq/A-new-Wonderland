@@ -48,7 +48,7 @@ itinerary:
 
 **5 Days 4 Nights**
 
-**Luwuk • Salakan • Peleng • Paisu Pok**
+**Luwuk • Salakan • Peleng • [Paisu Pok](/en/destinations/paisu-pok-lake/)**
 
 This private itinerary connects Luwuk with the islands without forcing too many activities into each day. The route focuses on Salakan, Peleng and Paisu Pok while allowing time for land and sea travel.
 

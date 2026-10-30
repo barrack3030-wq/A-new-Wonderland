@@ -7,6 +7,7 @@ image: /images/DSCF7073-5.webp
 imageAlt: 'Paisu Pok Lake on Peleng Island, showing exceptionally clear water and submerged trees in the Banggai Islands.'
 author: Diving Expert
 pubDate: "2026-10-15T00:00:00Z"
+translationKey: "2026-10-15-paisu-pok-diving-guide"
 tags:
   - Diving
   - Adventure
@@ -14,7 +15,7 @@ tags:
 
 ## Diving Guide to Paisu Pok Lake in Banggai
 
-**Imagine swimming through crystal-clear freshwater, looking down at submerged trees, rocks, and an underwater landscape that seems almost unreal. Welcome to Paisu Pok Lake, one of Banggai’s most extraordinary hidden gems.**
+**Imagine swimming through crystal-clear freshwater, looking down at submerged trees, rocks, and an underwater landscape that seems almost unreal. Welcome to [Paisu Pok Lake](/en/destinations/paisu-pok-lake/), one of Banggai’s most extraordinary hidden gems.**
 
 Far from Indonesia’s busy tourist destinations, **Paisu Pok Lake** offers travelers something increasingly rare: a peaceful, natural experience surrounded by tropical landscapes and local village life.
 
@@ -311,13 +312,13 @@ It can become part of a multi-day adventure through the Banggai Islands.
 Depending on your itinerary, you can combine the lake with destinations such as:
 
 - Paisubatango Lake
-- Poganda Beach
-- Mandel Beach
-- Long Beach
-- Oyama Beach
-- Bontolan Beach
-- Kawalu Bay
-- Pulo Dua
+- [Poganda Beach](/en/destinations/poganda-beach/)
+- [Mandel Beach](/en/destinations/mandel-beach/)
+- [Long Beach](/en/destinations/long-beach/)
+- [Oyama Beach](/en/destinations/oyama-beach/)
+- [Bontolan Beach](/en/destinations/bontolan-beach/)
+- [Kawalu Bay](/en/destinations/kawalu-bay/)
+- [Pulo Dua](/en/destinations/pulau-dua-balantak/)
 - Mbuang-Mbuang
 
 Imagine an itinerary combining:

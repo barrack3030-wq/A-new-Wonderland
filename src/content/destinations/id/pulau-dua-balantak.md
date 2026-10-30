@@ -108,4 +108,4 @@ Ada homestay dan penginapan sederhana di sekitar Kampangar dan Pulau Dua. **Rang
 
 ## Destinasi Terkait
 
-**Danau Paisu Pok** dan **Mata Air Paisu Batango** di Pulau Peleng menawarkan pengalaman air tawar. **Pantai Poganda** dan **Pantai Pompon** adalah pantai pasir putih untuk snorkeling. **Pantai Mandel** dan **Pantai Oyama** menambah pilihan pantai pulau, sedangkan **Air Terjun Piala** dan **Pantai Kilo 5** lebih mudah digabungkan dari Luwuk.
+**[Danau Paisu Pok](/id/destinations/paisu-pok-lake/)** dan **Mata Air [Paisu Batango](/id/destinations/paisu-batango-lake/)** di Pulau Peleng menawarkan pengalaman air tawar. **[Pantai Poganda](/id/destinations/poganda-beach/)** dan **[Pantai Pompon](/id/destinations/pompon-beach/)** adalah pantai pasir putih untuk snorkeling. **[Pantai Mandel](/id/destinations/mandel-beach/)** dan **[Pantai Oyama](/id/destinations/oyama-beach/)** menambah pilihan pantai pulau, sedangkan **[Air Terjun Piala](/id/destinations/piala-waterfall/)** dan **[Pantai Kilo 5](/id/destinations/kilo-5-beach/)** lebih mudah digabungkan dari Luwuk.

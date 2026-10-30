@@ -7,6 +7,7 @@ image: "/images/Poganda-Beach-Banggai-IndonesiaJuara-Trip.webp"
 imageAlt: "Côte tropicale des îles Banggai en Indonésie"
 author: "Banggai Wonderland"
 pubDate: 2026-09-18
+translationKey: "2026-09-18-how-to-get-to-banggai-islands-from-luwuk"
 tags:
   - "Luwuk"
   - "Îles Banggai"
@@ -22,7 +23,7 @@ La plupart des voyageurs arrivent à l'aéroport Syukuran Aminuddin Amir de Luwu
 
 Le meilleur itinéraire dépend de votre destination.
 
-Pour **Paisu Pok**, Peleng est la zone principale. Pour un itinéraire plus large à Peleng, Salakan peut être une bonne base. Pour **Banggai Laut**, il faut emprunter une autre route vers Banggai.
+Pour **[Paisu Pok](/fr/destinations/paisu-pok-lake/)**, Peleng est la zone principale. Pour un itinéraire plus large à Peleng, Salakan peut être une bonne base. Pour **Banggai Laut**, il faut emprunter une autre route vers Banggai.
 
 L'essentiel est de choisir la bonne destination avant de choisir le bateau.
 

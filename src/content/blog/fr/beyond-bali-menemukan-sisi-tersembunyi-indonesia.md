@@ -7,6 +7,7 @@ image: /images/Poganda-Beach-Banggai-IndonesiaJuara-Trip.webp
 imageAlt: 'Poganda Beach à Banggai, Indonésie'
 author: 'aji'
 pubDate: "2026-09-08T20:00:00"
+translationKey: "2026-09-08-banggai-beyond-bali"
 tags:
   - Banggai
   - Luwuk
@@ -46,7 +47,7 @@ Une matinée peut commencer au bord d’un lac paisible, se poursuivre sur une p
 
 ### Le lac Paisupok
 
-**Paisupok Lake** est l’un des trésors naturels de Banggai.
+**[Paisupok Lake](/fr/destinations/paisu-pok-lake/)** est l’un des trésors naturels de Banggai.
 
 Son eau est remarquablement claire et son environnement dégage une impression de calme rare dans les destinations plus fréquentées. Lorsque la lumière est idéale, la surface du lac ressemble presque à un miroir.
 
@@ -60,7 +61,7 @@ Les meilleurs souvenirs ne viennent pas toujours d’un programme chargé. Parfo
 
 Pour les voyageurs qui aiment la mer mais recherchent davantage de tranquillité, Banggai offre de nombreuses possibilités.
 
-**Poganda Beach, Mandel Beach, Oyama Beach, Bontolan Beach et Long Beach** possèdent chacune leur propre caractère.
+**[Poganda Beach](/fr/destinations/poganda-beach/), [Mandel Beach](/fr/destinations/mandel-beach/), [Oyama Beach](/fr/destinations/oyama-beach/), [Bontolan Beach](/fr/destinations/bontolan-beach/) et [Long Beach](/fr/destinations/long-beach/)** possèdent chacune leur propre caractère.
 
 Certaines sont parfaites pour nager et se détendre, d’autres pour le snorkeling, la photographie ou le coucher du soleil.
 
@@ -72,9 +73,9 @@ Pouvoir s’asseoir face à la mer sans avoir l’impression d’être entouré 
 
 En entrant dans les terres, le paysage devient plus vert et les cascades apparaissent.
 
-**Piala Waterfall** est une étape intéressante autour de Luwuk pour ceux qui souhaitent associer nature, eau douce et une pointe d’aventure.
+**[Piala Waterfall](/fr/destinations/piala-waterfall/)** est une étape intéressante autour de Luwuk pour ceux qui souhaitent associer nature, eau douce et une pointe d’aventure.
 
-**Kamumu Waterfall** offre une expérience différente pour les voyageurs qui aiment sortir des itinéraires les plus connus.
+**[Kamumu Waterfall](/fr/destinations/kamumu-waterfall/)** offre une expérience différente pour les voyageurs qui aiment sortir des itinéraires les plus connus.
 
 La rencontre entre mer, lacs et cascades rend un voyage à Luwuk et Banggai particulièrement varié.
 

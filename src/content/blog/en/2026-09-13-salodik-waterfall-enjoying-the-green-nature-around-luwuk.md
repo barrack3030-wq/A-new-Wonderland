@@ -19,7 +19,7 @@ tags:
   - "Trans Sulawesi"
 ---
 
-Luwuk, as the capital of Banggai Regency in Central Sulawesi, has a reputation that is slowly growing among travelers. This small town is known as the gateway to the Banggai Islands—an archipelago with blue seas, iconic lakes like Paisu Pok, and still-quiet beaches. Yet before crossing over to those islands, there is one place that almost always gets mentioned by locals when asked about nature tourism on the mainland: **Salodik Waterfall**.
+Luwuk, as the capital of Banggai Regency in Central Sulawesi, has a reputation that is slowly growing among travelers. This small town is known as the gateway to the Banggai Islands—an archipelago with blue seas, iconic lakes like [Paisu Pok](/en/destinations/paisu-pok-lake/), and still-quiet beaches. Yet before crossing over to those islands, there is one place that almost always gets mentioned by locals when asked about nature tourism on the mainland: **[Salodik Waterfall](/en/destinations/salodik-waterfall/)**.
 
 This waterfall is not a grandiose attraction with cliffs tens of meters high. Instead, its charm lies in something simpler—tiered water flows, a greenish-blue natural pool, and dense tropical forests surrounding it. For travelers who have just arrived in Luwuk and want to experience the interior atmosphere of Sulawesi without having to travel for hours, Salodik is a sensible choice.
 
@@ -94,7 +94,7 @@ If you plan to continue your journey to the Banggai Islands, staying in Luwuk be
 
 ### How Long Should You Stay?
 
-To visit Salodik Waterfall alone, **2–3 hours** is enough—including time to swim, take photos, and relax. However, if you want to combine it with other destinations around Luwuk, such as Bukit Teletubbies or Kilo 5 Beach, you can spend **half a day to a full day**.
+To visit Salodik Waterfall alone, **2–3 hours** is enough—including time to swim, take photos, and relax. However, if you want to combine it with other destinations around Luwuk, such as [Bukit Teletubbies](/en/destinations/bukit-teletubbies/) or [Kilo 5 Beach](/en/destinations/kilo-5-beach/), you can spend **half a day to a full day**.
 
 Salodik can also be a short stop on the way to other destinations in Banggai, for instance if you are on your way to [INTERNAL LINK: Banggai Islands] or Paisu Pok Lake.
 

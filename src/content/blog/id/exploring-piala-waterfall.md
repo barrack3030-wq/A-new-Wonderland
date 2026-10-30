@@ -7,6 +7,7 @@ image: /images/piala.jpg
 imageAlt: 'Air Terjun Piala di Luwuk, Banggai, dikelilingi hutan tropis hijau'
 author: Nature Lover
 pubDate: "2026-10-15T00:00:00Z"
+translationKey: "2026-10-15-exploring-piala-waterfall"
 tags:
   - Waterfall
   - Trekking
@@ -14,7 +15,7 @@ tags:
 
 ## Menjelajahi Air Terjun Piala: Permata Tersembunyi di Luwuk, Banggai
 
-**Temukan keindahan Air Terjun Piala, salah satu destinasi alam yang menarik di sekitar Luwuk, Banggai, Sulawesi Tengah.**
+**Temukan keindahan [Air Terjun Piala](/id/destinations/piala-waterfall/), salah satu destinasi alam yang menarik di sekitar Luwuk, Banggai, Sulawesi Tengah.**
 
 Bayangkan meninggalkan hiruk-pikuk kota, mengikuti suara gemericik air, kemudian tiba di sebuah air terjun yang dikelilingi pepohonan hijau dan suasana tropis yang menyegarkan.
 
@@ -307,13 +308,13 @@ Beberapa di antaranya:
 
 - Danau Paisupok
 - Danau Paisubatango
-- Pantai Poganda
-- Pantai Mandel
-- Long Beach
-- Pantai Oyama
-- Pantai Bontolan
-- Kawalu Bay
-- Pulo Dua
+- [Pantai Poganda](/id/destinations/poganda-beach/)
+- [Pantai Mandel](/id/destinations/mandel-beach/)
+- [Long Beach](/id/destinations/long-beach/)
+- [Pantai Oyama](/id/destinations/oyama-beach/)
+- [Pantai Bontolan](/id/destinations/bontolan-beach/)
+- [Kawalu Bay](/id/destinations/kawalu-bay/)
+- [Pulo Dua](/id/destinations/pulau-dua-balantak/)
 - Mbuang-Mbuang
 - Kepulauan Banggai
 

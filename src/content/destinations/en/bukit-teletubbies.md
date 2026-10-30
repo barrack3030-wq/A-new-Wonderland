@@ -118,4 +118,4 @@ No official entrance fee is documented. The site is informally used rather than 
 
 Bukit Teletubbies can be combined with other attractions around Luwuk. **Keles Hills** is another viewpoint near the same road, offering hill panoramas and a swing for photos. **Bukit Kasih Sayang** is closer to town and is suited to sunset visits, with gazebos and a monument symbolizing religious harmony.
 
-For a different landscape, **Piala Waterfall** in Hanga-Hanga Village and **Salodik Waterfall** offer freshwater pools and forest scenery. Travelers continuing toward Peleng Island can also combine a Luwuk hills visit with **Paisu Pok Lake**, the region's well-known blue lake.
+For a different landscape, **[Piala Waterfall](/en/destinations/piala-waterfall/)** in Hanga-Hanga Village and **[Salodik Waterfall](/en/destinations/salodik-waterfall/)** offer freshwater pools and forest scenery. Travelers continuing toward Peleng Island can also combine a Luwuk hills visit with **[Paisu Pok Lake](/en/destinations/paisu-pok-lake/)**, the region's well-known blue lake.

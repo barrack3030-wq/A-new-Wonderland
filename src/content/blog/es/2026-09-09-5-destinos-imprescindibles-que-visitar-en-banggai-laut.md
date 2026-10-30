@@ -30,7 +30,7 @@ Más que una simple parada, Banggai ofrece una introducción cercana a la identi
 
 ## 2. Pantai Mandel: una costa para desconectar
 
-**Pantai Mandel** es uno de los lugares costeros que conviene incluir en una ruta por Banggai Laut. Su paisaje combina el azul del mar, la vegetación tropical y una atmósfera serena, perfecta para quienes desean pasar unas horas junto al agua.
+**[Pantai Mandel](/es/destinations/mandel-beach/)** es uno de los lugares costeros que conviene incluir en una ruta por Banggai Laut. Su paisaje combina el azul del mar, la vegetación tropical y una atmósfera serena, perfecta para quienes desean pasar unas horas junto al agua.
 
 La playa invita a caminar, contemplar el horizonte y disfrutar de la luz cambiante sobre la costa. En días de buenas condiciones, el mar puede ofrecer una excelente oportunidad para nadar o explorar las aguas cercanas, siempre siguiendo las indicaciones de los habitantes locales.
 
@@ -38,7 +38,7 @@ El encanto de Pantai Mandel está precisamente en su sencillez. No es necesario 
 
 ## 3. Pulau Mbuang-Mbuang: naturaleza insular en estado tranquilo
 
-**Pulau Mbuang-Mbuang** representa la esencia de una escapada tropical en Banggai Laut. Sus costas y aguas marinas son ideales para viajeros interesados en descubrir islas menos concurridas y paisajes alejados de las rutas convencionales.
+**[Pulau Mbuang-Mbuang](/es/destinations/mbuang-mbuang-island/)** representa la esencia de una escapada tropical en Banggai Laut. Sus costas y aguas marinas son ideales para viajeros interesados en descubrir islas menos concurridas y paisajes alejados de las rutas convencionales.
 
 El trayecto hasta la isla forma parte de la experiencia. Desde la embarcación, el horizonte se abre entre pequeñas islas, arrecifes y diferentes tonalidades de azul. Una vez allí, el visitante puede disfrutar de la costa, nadar en zonas adecuadas y observar la vida marina con respeto.
 

@@ -32,7 +32,7 @@ Nama Paisu Pok berasal dari bahasa setempat: **"paisu" berarti air** dan **"pok"
 
 ## Air dan Dasar Danau
 
-Paisu Pok adalah **danau air tawar yang tertutup daratan**, berbeda dengan Paisu Batango yang merupakan mata air pesisir yang dipengaruhi pasang surut. Dalam kondisi jernih, jarak pandang di dalam air dapat mencapai sekitar **10–15 meter**.
+Paisu Pok adalah **danau air tawar yang tertutup daratan**, berbeda dengan [Paisu Batango](/id/destinations/paisu-batango-lake/) yang merupakan mata air pesisir yang dipengaruhi pasang surut. Dalam kondisi jernih, jarak pandang di dalam air dapat mencapai sekitar **10–15 meter**.
 
 Pohon-pohon mati yang terendam terlihat di bawah permukaan, menciptakan lanskap bawah air yang unik. Warna air berubah sepanjang hari; cahaya sore dapat menonjolkan warna biru-hijau dan pantulan pepohonan. Dari kano, kejernihan air dapat membuat perahu terlihat seolah melayang di atas dasar danau.
 
@@ -111,4 +111,4 @@ Ada. Homestay dan guesthouse sederhana tersedia di sekitar Luk Panenteng, sement
 
 ## Destinasi Terkait
 
-**Paisu Batango** berada tidak jauh dan menawarkan pengalaman air yang berbeda, yaitu pertemuan air tawar, payau, dan air laut. **Pantai Poganda** juga berada di sekitar Luk Panenteng. Di Pulau Banggai, **Pantai Bontolan** dan **Pantai Oyama** menjadi atraksi pesisir utama, sedangkan wisatawan berbasis Luwuk dapat mengunjungi **Pantai Kilo 5** dan **Air Terjun Piala**.
+**Paisu Batango** berada tidak jauh dan menawarkan pengalaman air yang berbeda, yaitu pertemuan air tawar, payau, dan air laut. **[Pantai Poganda](/id/destinations/poganda-beach/)** juga berada di sekitar Luk Panenteng. Di Pulau Banggai, **[Pantai Bontolan](/id/destinations/bontolan-beach/)** dan **[Pantai Oyama](/id/destinations/oyama-beach/)** menjadi atraksi pesisir utama, sedangkan wisatawan berbasis Luwuk dapat mengunjungi **[Pantai Kilo 5](/id/destinations/kilo-5-beach/)** dan **[Air Terjun Piala](/id/destinations/piala-waterfall/)**.

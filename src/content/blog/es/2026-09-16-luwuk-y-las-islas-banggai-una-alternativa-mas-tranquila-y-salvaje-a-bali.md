@@ -44,7 +44,7 @@ Luwuk no es simplemente un punto de tránsito. La ciudad y sus alrededores ofrec
 
 ### Lago Paisu Pok: El Lago Azul en el Corazón de Banggai
 
-Este es uno de los iconos de la región. El lago Paisu Pok se encuentra en el pueblo de Luk Panenteng, distrito de Bulagi Utara, en la regencia de Banggai Islands. El agua es extraordinariamente transparente y permite ver claramente el fondo arenoso y rocoso del lago. Su color cambia según la luz del sol, desde un verde plateado hasta un intenso azul turquesa.
+Este es uno de los iconos de la región. El lago [Paisu Pok](/es/destinations/paisu-pok-lake/) se encuentra en el pueblo de Luk Panenteng, distrito de Bulagi Utara, en la regencia de Banggai Islands. El agua es extraordinariamente transparente y permite ver claramente el fondo arenoso y rocoso del lago. Su color cambia según la luz del sol, desde un verde plateado hasta un intenso azul turquesa.
 
 Se dice que el nombre Paisu Pok significa "agua negra" en la lengua local, aunque el agua no es negra en absoluto. Lo que sí está claro es que el lago se ha convertido en un atractivo para viajeros nacionales e internacionales durante los últimos años.
 

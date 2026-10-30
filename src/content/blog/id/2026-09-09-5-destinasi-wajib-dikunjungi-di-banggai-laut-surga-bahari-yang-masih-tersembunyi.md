@@ -24,7 +24,7 @@ Berikut lima destinasi yang layak masuk dalam daftar perjalanan Anda di Banggai 
 
 ## 1. Pantai Mandel
 
-Pantai Mandel menjadi salah satu pilihan terbaik untuk menikmati keindahan pesisir Banggai Laut tanpa suasana yang terlalu ramai. Pantai ini menghadirkan perpaduan pasir cerah, air laut berwarna biru kehijauan, dan panorama pulau-pulau di kejauhan.
+[Pantai Mandel](/id/destinations/mandel-beach/) menjadi salah satu pilihan terbaik untuk menikmati keindahan pesisir Banggai Laut tanpa suasana yang terlalu ramai. Pantai ini menghadirkan perpaduan pasir cerah, air laut berwarna biru kehijauan, dan panorama pulau-pulau di kejauhan.
 
 Suasananya cocok untuk bersantai, berjalan menyusuri garis pantai, menikmati matahari terbenam, atau sekadar menghabiskan waktu dengan pemandangan laut terbuka. Pada waktu tertentu, kondisi air yang tenang juga membuat kawasan ini menarik untuk menikmati aktivitas bahari ringan.
 
@@ -44,7 +44,7 @@ Karena merupakan kawasan kepulauan, perjalanan menuju Pulau Bandang sangat berga
 
 ## 3. Pulau Mbuang-Mbuang
 
-Pulau Mbuang-Mbuang adalah destinasi yang tepat bagi wisatawan yang ingin merasakan pesona Banggai Laut secara lebih dekat. Pulau ini menawarkan suasana pesisir yang alami, perairan yang menarik untuk dijelajahi, serta kehidupan desa yang masih lekat dengan tradisi maritim.
+[Pulau Mbuang-Mbuang](/id/destinations/mbuang-mbuang-island/) adalah destinasi yang tepat bagi wisatawan yang ingin merasakan pesona Banggai Laut secara lebih dekat. Pulau ini menawarkan suasana pesisir yang alami, perairan yang menarik untuk dijelajahi, serta kehidupan desa yang masih lekat dengan tradisi maritim.
 
 Selain menikmati panorama pantai, wisatawan dapat berinteraksi secara santun dengan masyarakat setempat dan mempelajari keseharian warga kepulauan. Pengalaman seperti ini menjadi nilai tambah perjalanan karena membuat kunjungan terasa lebih personal, bukan sekadar menikmati pemandangan.
 
@@ -52,7 +52,7 @@ Sebelum berkunjung, pastikan Anda memperoleh informasi lokal mengenai titik pend
 
 ## 4. Pantai Teduang
 
-Pantai Teduang memperlihatkan karakter pesisir Banggai Laut yang tenang dan memanjakan mata. Hamparan laut, garis pantai, dan suasana tropis menjadikannya tempat yang menyenangkan untuk beristirahat dari rutinitas perjalanan.
+[Pantai Teduang](/id/destinations/teduang-beach/) memperlihatkan karakter pesisir Banggai Laut yang tenang dan memanjakan mata. Hamparan laut, garis pantai, dan suasana tropis menjadikannya tempat yang menyenangkan untuk beristirahat dari rutinitas perjalanan.
 
 Pantai ini dapat menjadi pilihan untuk menikmati waktu santai bersama keluarga maupun teman. Pemandangan sekitar juga menarik untuk fotografi, terutama ketika cahaya matahari mulai lembut pada pagi atau sore hari.
 

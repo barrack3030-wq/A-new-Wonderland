@@ -22,7 +22,7 @@ This article will introduce you to 10 destinations around Luwuk and the Banggai 
 
 Luwuk is the capital of Banggai Regency and the main gateway to the Banggai Islands. Syukuran Aminuddin Amir Airport (LUW) serves flights from Jakarta and Makassar. If you are coming from Bali or another city, you will usually need to transit through one of these hubs. Flight routes may change, so check the latest schedules before booking your ticket.
 
-From Luwuk, the islands of the Banggai Islands can only be reached by sea. Ferries and wooden boats operate from Luwuk People’s Port to Peling Island (Leme Leme) and Salakan. Schedules, prices, and availability depend heavily on the weather and wave conditions. Always confirm the latest schedule with the port or a local agent before departing. For certain destinations such as Lake Paisu Pok, speedboats from Lalong Bay usually depart in the morning.
+From Luwuk, the islands of the Banggai Islands can only be reached by sea. Ferries and wooden boats operate from Luwuk People’s Port to Peling Island (Leme Leme) and Salakan. Schedules, prices, and availability depend heavily on the weather and wave conditions. Always confirm the latest schedule with the port or a local agent before departing. For certain destinations such as Lake [Paisu Pok](/en/destinations/paisu-pok-lake/), speedboats from Lalong Bay usually depart in the morning.
 
 ## 10 Destinations in Banggai and Surrounding Areas
 
@@ -32,19 +32,19 @@ Lake Paisu Pok in Luk Panenteng Village, North Bulagi District, is an icon of Ba
 
 ### 2. Poganda Beach
 
-Also located in Luk Panenteng Village, Poganda Beach offers fine white sand and calm seawater. The beach is ideal for swimming, snorkeling, and diving. From the small pier, you can dive straight in and enjoy the well-preserved coral reefs. Because it is close to Lake Paisu Pok, many travelers visit both in a single day.
+Also located in Luk Panenteng Village, [Poganda Beach](/en/destinations/poganda-beach/) offers fine white sand and calm seawater. The beach is ideal for swimming, snorkeling, and diving. From the small pier, you can dive straight in and enjoy the well-preserved coral reefs. Because it is close to Lake Paisu Pok, many travelers visit both in a single day.
 
 ### 3. Pulo Dua Balantak
 
-Pulo Dua is located in North Balantak District, Banggai Regency. To reach it, you can travel overland from Luwuk to Kampangar Village, then continue by boat. The island offers a combination of green hills, white-sand beaches, and clear waters. Activities include snorkeling, diving, swimming, and hiking up the hills to enjoy sunrise or sunset views.
+[Pulo Dua](/en/destinations/pulau-dua-balantak/) is located in North Balantak District, Banggai Regency. To reach it, you can travel overland from Luwuk to Kampangar Village, then continue by boat. The island offers a combination of green hills, white-sand beaches, and clear waters. Activities include snorkeling, diving, swimming, and hiking up the hills to enjoy sunrise or sunset views.
 
 ### 4. Kilo 5 Beach
 
-For those who want to enjoy the beach without crossing to another island, Kilo 5 Beach in Maahas Subdistrict, South Luwuk District, is an excellent choice. It is located close to central Luwuk. The beach offers white sand and clear seawater, with coral reefs visible beneath the surface.
+For those who want to enjoy the beach without crossing to another island, [Kilo 5 Beach](/en/destinations/kilo-5-beach/) in Maahas Subdistrict, South Luwuk District, is an excellent choice. It is located close to central Luwuk. The beach offers white sand and clear seawater, with coral reefs visible beneath the surface.
 
 ### 5. Piala Waterfall
 
-Piala Waterfall is one of the most popular waterfalls in Central Sulawesi. Located not far from Luwuk, this two-tiered waterfall has exceptionally clear water and is surrounded by lush trees. You will need to trek a little to reach it, but the scenery and fresh air around it are well worth the effort.
+[Piala Waterfall](/en/destinations/piala-waterfall/) is one of the most popular waterfalls in Central Sulawesi. Located not far from Luwuk, this two-tiered waterfall has exceptionally clear water and is surrounded by lush trees. You will need to trek a little to reach it, but the scenery and fresh air around it are well worth the effort.
 
 ### 6. Peling Island (Leme Leme)
 

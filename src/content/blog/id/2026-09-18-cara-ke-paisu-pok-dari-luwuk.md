@@ -7,6 +7,7 @@ image: "/images/Poganda-Beach-Banggai-IndonesiaJuara-Trip.webp"
 imageAlt: "Pemandangan tropis Peleng di sekitar Paisu Pok"
 author: "Banggai Wonderland"
 pubDate: 2026-09-18
+translationKey: "2026-09-18-how-to-get-to-paisu-pok-from-luwuk"
 tags:
   - "Luwuk"
   - "Paisu Pok"
@@ -16,7 +17,7 @@ tags:
   - "Travel Guide"
 ---
 
-Paisu Pok adalah salah satu destinasi alam yang paling dikenal di Kepulauan Banggai. Namun, hal pertama yang perlu diketahui adalah: **Paisu Pok tidak berada di Luwuk**.
+[Paisu Pok](/id/destinations/paisu-pok-lake/) adalah salah satu destinasi alam yang paling dikenal di Kepulauan Banggai. Namun, hal pertama yang perlu diketahui adalah: **Paisu Pok tidak berada di Luwuk**.
 
 Danau ini berada di **Desa Luk Panenteng, Pulau Peleng, Kabupaten Banggai Kepulauan**. Bagi wisatawan yang datang melalui jalur udara, Luwuk menjadi titik awal sebelum perjalanan dilanjutkan melalui laut dan kemudian melalui darat.
 

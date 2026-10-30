@@ -32,7 +32,7 @@ The name comes from the local language: **"paisu" means water** and **"pok" mean
 
 ## The Water and the Lake Bed
 
-Paisu Pok is a **landlocked freshwater lake**, distinct from nearby Paisu Batango, which is a coastal tidal spring. In clear conditions, visibility can reach around **10–15 meters**. Submerged dead trees are visible beneath the surface, creating an unusual underwater landscape.
+Paisu Pok is a **landlocked freshwater lake**, distinct from nearby [Paisu Batango](/en/destinations/paisu-batango-lake/), which is a coastal tidal spring. In clear conditions, visibility can reach around **10–15 meters**. Submerged dead trees are visible beneath the surface, creating an unusual underwater landscape.
 
 The water color changes during the day. Early in the morning it can look darker, while later light can bring out vivid blue-green tones and strong reflections. From the lake edge or a canoe, the clarity can make boats appear to float above the lake bed.
 
@@ -111,4 +111,4 @@ Yes. Simple homestays and guesthouses are available around Luk Panenteng, with a
 
 ## Related Destinations
 
-**Paisu Batango** is a short distance away and offers a different water environment where freshwater, brackish water and seawater meet. **Poganda Beach** is another nearby coastal attraction. On Banggai Island, **Pantai Bontolan** and **Oyama Beach** are major coastal stops, while **Kilo 5 Beach** and **Piala Waterfall** are practical options for travelers based in Luwuk.
+**Paisu Batango** is a short distance away and offers a different water environment where freshwater, brackish water and seawater meet. **[Poganda Beach](/en/destinations/poganda-beach/)** is another nearby coastal attraction. On Banggai Island, **[Pantai Bontolan](/en/destinations/bontolan-beach/)** and **[Oyama Beach](/en/destinations/oyama-beach/)** are major coastal stops, while **[Kilo 5 Beach](/en/destinations/kilo-5-beach/)** and **[Piala Waterfall](/en/destinations/piala-waterfall/)** are practical options for travelers based in Luwuk.

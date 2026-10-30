@@ -14,13 +14,13 @@ tags:
   - "Travel"
 ---
 
-Las cascadas de Kamumu son uno de los destinos naturales más accesibles desde Luwuk—asalkan Anda tahu jalur yang harus diambil. Berbeda dari Paisu Pok Lake yang memerlukan penyeberangan feri ke Peleng Island, Kamumu berada di daratan Sulawesi, sekitar 26–30 kilometer ke arah utara dari Luwuk, di Kecamatan Luwuk Utara. Perjalanan dengan kendaraan relatif singkat. Yang perlu diperhatikan justru bagian akhir: trekking singkat melewati kebun warga yang bisa licin setelah hujan.
+Las cascadas de Kamumu son uno de los destinos naturales más accesibles desde Luwuk—asalkan Anda tahu jalur yang harus diambil. Berbeda dari [Paisu Pok Lake](/es/destinations/paisu-pok-lake/) yang memerlukan penyeberangan feri ke Peleng Island, Kamumu berada di daratan Sulawesi, sekitar 26–30 kilometer ke arah utara dari Luwuk, di Kecamatan Luwuk Utara. Perjalanan dengan kendaraan relatif singkat. Yang perlu diperhatikan justru bagian akhir: trekking singkat melewati kebun warga yang bisa licin setelah hujan.
 
 Panduan ini membahas setiap tahap perjalanan: rute dari Luwuk, opsi transportasi, waktu tempuh, kondisi jalan, dan apa yang bisa diharapkan pada perjalanan terakhir menuju air terjun.
 
 ### Di Mana Air Terjun Kamumu?
 
-Air Terjun Kamumu terletak di **Desa Kamumu, Kecamatan Luwuk Utara, Kabupaten Banggai, Sulawesi Tengah**. Jaraknya sekitar **26–30 kilometer** dari pusat Kota Luwuk, dapat ditempuh dalam **30–45 menit dengan mobil atau motor** melalui Jalan Trans Sulawesi.
+[Air Terjun Kamumu](/es/destinations/kamumu-waterfall/) terletak di **Desa Kamumu, Kecamatan Luwuk Utara, Kabupaten Banggai, Sulawesi Tengah**. Jaraknya sekitar **26–30 kilometer** dari pusat Kota Luwuk, dapat ditempuh dalam **30–45 menit dengan mobil atau motor** melalui Jalan Trans Sulawesi.
 
 Air terjun ini **tidak berada di Peleng Island atau dekat Bulagi**. Lokasinya di daratan Sulawesi, di kabupaten yang sama dengan Luwuk. Jika Anda datang dari Peleng atau Bulagi, Anda perlu menyeberang kembali ke Luwuk terlebih dahulu sebelum melanjutkan perjalanan darat ke utara menuju Kamumu.
 
@@ -103,7 +103,7 @@ Jika Anda datang dari **Salakan** (Banggai Laut) atau bagian lain dari Peleng, A
 
 **Konfirmasi kondisi parkir dan jalur secara lokal.** Jalur setapak bisa berlumpur setelah hujan. Warga di area parkir bisa memberi saran tentang jalur terbaik.
 
-**Gabungkan dengan destinasi lain di Luwuk Utara.** Kamumu berada di rute yang sama dengan Air Terjun Salodik dan destinasi lain di Luwuk Utara. Jika Anda memiliki kendaraan pribadi, Anda bisa mengunjungi lebih dari satu tempat dalam sehari.
+**Gabungkan dengan destinasi lain di Luwuk Utara.** Kamumu berada di rute yang sama dengan [Air Terjun Salodik](/es/destinations/salodik-waterfall/) dan destinasi lain di Luwuk Utara. Jika Anda memiliki kendaraan pribadi, Anda bisa mengunjungi lebih dari satu tempat dalam sehari.
 
 **Atur transportasi pulang sejak awal.** Jika Anda tidak menyetir sendiri, konfirmasi dengan driver atau atur waktu penjemputan. Aplikasi ojek online mungkin tidak memiliki driver yang tersedia di Kamumu.
 

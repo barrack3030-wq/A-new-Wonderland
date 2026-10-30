@@ -84,7 +84,7 @@ La ville et ses environs offrent de nombreux endroits intéressants à découvri
 
 C’est l’un des sites emblématiques de la région.
 
-Le lac Paisu Pok se trouve à Luk Panenteng, dans le district de Bulagi Utara, dans la régence des îles Banggai.
+Le lac [Paisu Pok](/fr/destinations/paisu-pok-lake/) se trouve à Luk Panenteng, dans le district de Bulagi Utara, dans la régence des îles Banggai.
 
 Son eau est exceptionnellement claire, ce qui permet de voir nettement le fond du lac, composé de sable et de rochers.
 

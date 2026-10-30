@@ -31,7 +31,7 @@ travelTips:
 
 Kawalu Bay is a calm, turquoise bay in the **Banggai Islands of Central Sulawesi, Indonesia**. This guide covers where Kawalu Bay is, how to get there, boat access, snorkeling, diving, the best time to visit, and what to bring. It is known for mirror-like water, mangrove-lined shores, and green hills surrounding the bay. The combination creates one of the region's most appealing marine landscapes and is best experienced as part of a local boat trip.
 
-Travelers often visit Kawalu Bay together with other Banggai Islands destinations such as **Paisu Pok Lake** and **Paisu Batango Spring**. Local accommodation or a guide can usually help arrange the boat trip and coordinate the day's route.
+Travelers often visit Kawalu Bay together with other Banggai Islands destinations such as **[Paisu Pok Lake](/en/destinations/paisu-pok-lake/)** and **[Paisu Batango](/en/destinations/paisu-batango-lake/) Spring**. Local accommodation or a guide can usually help arrange the boat trip and coordinate the day's route.
 
 There is an important naming distinction. **Kawalu Beach, also known as Pantai Manado**, is a separate mainland location in Desa Siuna, Kecamatan Pagimana, Banggai Regency. The Kawalu Bay described here is in **Banggai Islands Regency** and is reached as part of a boat-based island trip.
 
@@ -116,4 +116,4 @@ Late morning to early afternoon usually gives stronger light for the turquoise w
 
 Kawalu Bay is often combined with other Banggai Islands attractions on the same boat trip. **Paisu Pok Lake** is the region's famous blue freshwater lake on Peleng Island, while **Paisu Batango Spring** offers another clear freshwater experience nearby.
 
-**Poganda Beach** offers white sand and snorkeling, while **Oyama Beach** in Banggai Laut is another remote coastal destination reached by boat. For travelers based in Luwuk, **Piala Waterfall** and **Bukit Teletubbies** provide mainland alternatives before or after an island trip.
+**[Poganda Beach](/en/destinations/poganda-beach/)** offers white sand and snorkeling, while **[Oyama Beach](/en/destinations/oyama-beach/)** in Banggai Laut is another remote coastal destination reached by boat. For travelers based in Luwuk, **[Piala Waterfall](/en/destinations/piala-waterfall/)** and **[Bukit Teletubbies](/en/destinations/bukit-teletubbies/)** provide mainland alternatives before or after an island trip.

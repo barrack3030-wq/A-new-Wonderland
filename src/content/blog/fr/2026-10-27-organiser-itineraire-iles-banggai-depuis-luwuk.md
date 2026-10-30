@@ -24,11 +24,11 @@ Le principe essentiel : ne remplissez pas chaque heure comme si tous les transfe
 
 Avant de choisir la durée du séjour, déterminez ce qui compte le plus.
 
-- **Le lac Paisu Pok et Peleng :** prévoyez suffisamment de temps sur l’île au lieu de considérer cette étape comme une excursion rapide depuis Luwuk.
+- **Le lac [Paisu Pok](/fr/destinations/paisu-pok-lake/) et Peleng :** prévoyez suffisamment de temps sur l’île au lieu de considérer cette étape comme une excursion rapide depuis Luwuk.
 - **Les plages et les baies :** regroupez les lieux par secteur et vérifiez les accès routiers auprès d’un opérateur local.
 - **Une courte halte à Luwuk :** privilégiez les activités proches et évitez de dépendre d’une traversée le même jour sans avoir confirmé le transport.
 
-Paisu Pok, Paisu Batango, Kawalu Bay et Poganda peuvent faire partie d’un même séjour, mais l’ordre dépend de votre hébergement, des moyens de transport disponibles et des conditions du jour. Mieux vaut ne pas imposer tous les sites dans une seule journée trop chargée.
+Paisu Pok, [Paisu Batango](/fr/destinations/paisu-batango-lake/), [Kawalu Bay](/fr/destinations/kawalu-bay/) et Poganda peuvent faire partie d’un même séjour, mais l’ordre dépend de votre hébergement, des moyens de transport disponibles et des conditions du jour. Mieux vaut ne pas imposer tous les sites dans une seule journée trop chargée.
 
 ## Organisez le voyage par étapes
 

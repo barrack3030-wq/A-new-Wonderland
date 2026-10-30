@@ -7,6 +7,7 @@ image: /images/Poganda-Beach-Banggai-IndonesiaJuara-Trip.webp
 imageAlt: 'Poganda Beach di Banggai, Indonesia'
 author: 'aji'
 pubDate: "2026-09-08T20:00:00"
+translationKey: "2026-09-08-banggai-beyond-bali"
 tags:
   - Banggai
   - Luwuk
@@ -66,7 +67,7 @@ Kadang, momen paling berkesan justru datang ketika kita berhenti mengejar waktu.
 
 Banggai juga memiliki deretan pantai yang cocok untuk traveler yang ingin menikmati laut tanpa suasana terlalu ramai.
 
-**Poganda Beach, Mandel Beach, Oyama Beach, Bontolan Beach, dan Long Beach** masing-masing menawarkan karakter yang berbeda.
+**[Poganda Beach](/id/destinations/poganda-beach/), [Mandel Beach](/id/destinations/mandel-beach/), [Oyama Beach](/id/destinations/oyama-beach/), [Bontolan Beach](/id/destinations/bontolan-beach/), dan [Long Beach](/id/destinations/long-beach/)** masing-masing menawarkan karakter yang berbeda.
 
 Ada yang cocok untuk bersantai, berenang, snorkeling, menikmati sunset, atau sekadar duduk menghadap laut.
 
@@ -82,9 +83,9 @@ Masuk lebih jauh ke daratan, suasana berubah menjadi semakin hijau.
 
 Di sinilah air terjun menjadi bagian penting dari perjalanan.
 
-**Piala Waterfall** merupakan salah satu pilihan menarik di sekitar Luwuk untuk traveler yang ingin menggabungkan perjalanan alam dengan aktivitas yang lebih ringan.
+**[Piala Waterfall](/id/destinations/piala-waterfall/)** merupakan salah satu pilihan menarik di sekitar Luwuk untuk traveler yang ingin menggabungkan perjalanan alam dengan aktivitas yang lebih ringan.
 
-Sementara **Kamumu Waterfall** menghadirkan pengalaman berbeda bagi mereka yang senang mencari tempat yang lebih tersembunyi.
+Sementara **[Kamumu Waterfall](/id/destinations/kamumu-waterfall/)** menghadirkan pengalaman berbeda bagi mereka yang senang mencari tempat yang lebih tersembunyi.
 
 Pepohonan, bebatuan, air tawar, dan suara alam menciptakan kontras yang indah dengan pemandangan laut.
 

@@ -14,7 +14,7 @@ tags:
   - Travel
 ---
 
-Getting to Know Pulo Dua, a Hidden Paradise in Eastern Sulawesi
+Getting to Know [Pulo Dua](/en/destinations/pulau-dua-balantak/), a Hidden Paradise in Eastern Sulawesi
 Pernahkah Anda membayangkan berdiri di puncak bukit hijau, memandang hamparan laut biru keemasan saat matahari terbenam, dengan deburan ombak yang menenangkan? Itulah Pulo Dua.
 
 Located in North Balantak District, Banggai Regency, Central Sulawesi, Pulo Dua is a marine tourism destination nicknamed the "Padar Island of Sulawesi" because of its visual similarity to Padar Island in Labuan Bajo. The name "Pulo Dua" itself refers to two small peninsulas extending into the sea, creating an iconic and highly photogenic view.

@@ -7,6 +7,7 @@ image: "/images/Poganda-Beach-Banggai-IndonesiaJuara-Trip.webp"
 imageAlt: "Paisaje tropical de Banggai para un viaje de luna de miel"
 author: "Banggai Wonderland"
 pubDate: 2026-09-30
+translationKey: "2026-09-30-banggai-honeymoon-4d3n"
 tags:
   - "Luna de Miel en Banggai"
   - "Viaje Privado"
@@ -18,7 +19,7 @@ tags:
 
 Banggai es una opción para parejas que buscan una escapada tranquila entre islas. **Banggai Honeymoon Escape** está diseñado como un viaje privado de 4 días y 3 noches para dos personas.
 
-La ruta conecta Luwuk, Salakan y varios destinos costeros de Banggai, como **Paisu Pok, Paisu Batango, Kawalu Bay, Poganda Beach, Long Beach, Oyama, Bontolan, Pompon Beach y Mandel Beach**.
+La ruta conecta Luwuk, Salakan y varios destinos costeros de Banggai, como **[Paisu Pok](/es/destinations/paisu-pok-lake/), [Paisu Batango](/es/destinations/paisu-batango-lake/), [Kawalu Bay](/es/destinations/kawalu-bay/), [Poganda Beach](/es/destinations/poganda-beach/), [Long Beach](/es/destinations/long-beach/), Oyama, Bontolan, [Pompon Beach](/es/destinations/pompon-beach/) y [Mandel Beach](/es/destinations/mandel-beach/)**.
 
 ## Banggai Honeymoon Escape
 
@@ -28,7 +29,7 @@ El viaje está pensado para parejas que prefieren viajar de forma privada en lug
 
 ### Destacados
 
-- Piala Waterfall
+- [Piala Waterfall](/es/destinations/piala-waterfall/)
 - Paisu Pok
 - Paisu Batango
 - Kawalu Bay

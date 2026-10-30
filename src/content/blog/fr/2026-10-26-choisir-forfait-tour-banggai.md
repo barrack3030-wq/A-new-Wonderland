@@ -15,7 +15,7 @@ tags:
 translationKey: "choose-banggai-tour-package-2026-10-26"
 ---
 
-Préparer un séjour à Banggai ne consiste pas seulement à choisir de beaux sites. Il faut aussi adapter l’itinéraire au nombre de jours disponibles, à la taille du groupe, aux transports et au rythme souhaité. Un **forfait Banggai** bien choisi peut faciliter la visite du lac Paisupok, de Paisu Batango, de la cascade de Salodik ou de Pulau Dua Balantak.
+Préparer un séjour à Banggai ne consiste pas seulement à choisir de beaux sites. Il faut aussi adapter l’itinéraire au nombre de jours disponibles, à la taille du groupe, aux transports et au rythme souhaité. Un **forfait Banggai** bien choisi peut faciliter la visite du lac Paisupok, de [Paisu Batango](/fr/destinations/paisu-batango-lake/), de la cascade de Salodik ou de [Pulau Dua Balantak](/fr/destinations/pulau-dua-balantak/).
 
 La première décision est de choisir entre un voyage privé, organisé de façon plus personnelle, et un open trip partagé avec d’autres voyageurs.
 

@@ -21,7 +21,7 @@ La respuesta corta: **sí, muy adecuado—tal vez uno de los mejores meses.** Pe
 
 ## Clima: Seco, pero no significa libre de lluvias
 
-Septiembre en la aldea de Mbuang-Mbuang tiene un perfil climático bastante amigable. Los datos climáticos de **timeanddate.com** muestran una precipitación promedio en septiembre de alrededor de **88,3 mm**—mucho más baja en comparación con mayo (218,6 mm) o junio (211,2 mm). La temperatura promedio ronda los **26 °C**, con una temperatura máxima de alrededor de **31 °C** y una mínima de **22 °C**. La humedad también es relativamente más baja, alrededor del **74 %**.
+Septiembre en la aldea de [Mbuang-Mbuang](/es/destinations/mbuang-mbuang-island/) tiene un perfil climático bastante amigable. Los datos climáticos de **timeanddate.com** muestran una precipitación promedio en septiembre de alrededor de **88,3 mm**—mucho más baja en comparación con mayo (218,6 mm) o junio (211,2 mm). La temperatura promedio ronda los **26 °C**, con una temperatura máxima de alrededor de **31 °C** y una mínima de **22 °C**. La humedad también es relativamente más baja, alrededor del **74 %**.
 
 *Nota importante:* estos datos provienen de la estación meteorológica de **Kendari / Woltermon-Ginsidi**, ubicada a unos **277 km** de la aldea de Mbuang-Mbuang, por lo que las condiciones reales en el lugar pueden variar ligeramente.
 

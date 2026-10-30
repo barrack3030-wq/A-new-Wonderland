@@ -7,6 +7,7 @@ image: "/images/Poganda-Beach-Banggai-IndonesiaJuara-Trip.webp"
 imageAlt: "Costa tropical de las Islas Banggai, Indonesia"
 author: "Banggai Wonderland"
 pubDate: 2026-09-18
+translationKey: "2026-09-18-how-to-get-to-banggai-islands-from-luwuk"
 tags:
   - "Luwuk"
   - "Islas Banggai"
@@ -20,7 +21,7 @@ Luwuk es uno de los principales puntos de partida para los viajeros que quieren 
 
 La mayoría de los viajeros llega al aeropuerto Syukuran Aminuddin Amir de Luwuk y continúa por mar hacia Peleng, Salakan, Banggai u otras islas. La ruta correcta depende del lugar que quieras visitar.
 
-Si tu objetivo es **Paisu Pok**, Peleng es la zona principal. Para un viaje más amplio por las islas, Salakan puede ser una buena base. Si quieres conocer **Banggai Laut**, necesitas seguir una ruta diferente hacia Banggai.
+Si tu objetivo es **[Paisu Pok](/es/destinations/paisu-pok-lake/)**, Peleng es la zona principal. Para un viaje más amplio por las islas, Salakan puede ser una buena base. Si quieres conocer **Banggai Laut**, necesitas seguir una ruta diferente hacia Banggai.
 
 La clave es elegir primero el destino y después el barco.
 

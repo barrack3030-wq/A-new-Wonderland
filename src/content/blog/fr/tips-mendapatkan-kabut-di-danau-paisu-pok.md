@@ -7,10 +7,11 @@ image: /images/images (6).jpg
 imageAlt: "Lac Paisu Pok sur l’île de Peleng, îles Banggai"
 author: aji
 pubDate: "2026-09-05T23:54:00"
+translationKey: "2026-09-05-paisu-pok-mist-tips"
 tags: []
 ---
 
-Le lac Paisu Pok est célèbre pour son eau douce cristalline et ses magnifiques paysages sous-marins. Dans certaines conditions, le lac révèle cependant une autre facette de sa beauté : une fine brume qui apparaît progressivement au-dessus de l'eau.
+Le lac [Paisu Pok](/fr/destinations/paisu-pok-lake/) est célèbre pour son eau douce cristalline et ses magnifiques paysages sous-marins. Dans certaines conditions, le lac révèle cependant une autre facette de sa beauté : une fine brume qui apparaît progressivement au-dessus de l'eau.
 
 Pour les photographes, les créateurs de contenu et les voyageurs à la recherche d'une expérience différente à Paisu Pok, observer le lac dans la brume peut être un moment particulièrement mémorable.
 

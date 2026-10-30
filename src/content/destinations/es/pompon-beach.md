@@ -71,7 +71,7 @@ Pompon está en la **isla de Peleng**, en la regencia de Banggai Kepulauan.
 
 **Por carretera desde Salakan:** desde **Salakan**, el viaje hasta Desa Lalong dura aproximadamente **2,5 horas** según la investigación de viaje proporcionada, recorriendo unos **90 kilómetros**. Un coche o una moto son las opciones más prácticas.
 
-**En barco desde Luwuk o Banggai:** también se puede llegar a Peleng en barco y continuar por carretera hasta Pompon. Algunos operadores combinan Pompon con **Paisu Pok Lake** y **Poganda Beach**.
+**En barco desde Luwuk o Banggai:** también se puede llegar a Peleng en barco y continuar por carretera hasta Pompon. Algunos operadores combinan Pompon con **[Paisu Pok Lake](/es/destinations/paisu-pok-lake/)** y **[Poganda Beach](/es/destinations/poganda-beach/)**.
 
 Los horarios de transporte y las condiciones del mar pueden cambiar, por lo que es recomendable confirmar los ferris o lanchas rápidas antes de salir.
 
@@ -117,4 +117,4 @@ No hay alojamiento formal en la playa. Las alternativas son homestays en pueblos
 
 ## Destinos Relacionados
 
-**Paisu Pok Lake** es el famoso destino de agua dulce de la región y puede combinarse con Pompon. **Poganda Beach** ofrece arena blanca, agua tranquila y snorkel cerca de la orilla. **Paisu Batango Spring** es otra atracción natural en la zona de Luk Panenteng. **Mandel Beach** es otra opción de arena blanca en Peleng. Para quienes se alojan en Luwuk, **Kilo 5 Beach** y **Piala Waterfall** son añadidos sencillos al itinerario.
+**Paisu Pok Lake** es el famoso destino de agua dulce de la región y puede combinarse con Pompon. **Poganda Beach** ofrece arena blanca, agua tranquila y snorkel cerca de la orilla. **[Paisu Batango](/es/destinations/paisu-batango-lake/) Spring** es otra atracción natural en la zona de Luk Panenteng. **[Mandel Beach](/es/destinations/mandel-beach/)** es otra opción de arena blanca en Peleng. Para quienes se alojan en Luwuk, **[Kilo 5 Beach](/es/destinations/kilo-5-beach/)** y **[Piala Waterfall](/es/destinations/piala-waterfall/)** son añadidos sencillos al itinerario.

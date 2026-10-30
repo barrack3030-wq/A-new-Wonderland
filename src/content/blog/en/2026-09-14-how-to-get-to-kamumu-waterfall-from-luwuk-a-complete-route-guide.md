@@ -14,7 +14,7 @@ tags:
   - "Travel"
 ---
 
-Kamumu Waterfall is one of the easiest natural destinations to reach from Luwuk—as long as you know the path to take. Unlike Paisu Pok Lake which requires a ferry crossing to Peleng Island, Kamumu is located on the mainland of Sulawesi, about 26–30 kilometers north of Luwuk, in North Luwuk District. The journey by vehicle is relatively short. What you need to pay attention to is the final part: a short trek through local gardens that can be slippery after rain.
+[Kamumu Waterfall](/en/destinations/kamumu-waterfall/) is one of the easiest natural destinations to reach from Luwuk—as long as you know the path to take. Unlike [Paisu Pok Lake](/en/destinations/paisu-pok-lake/) which requires a ferry crossing to Peleng Island, Kamumu is located on the mainland of Sulawesi, about 26–30 kilometers north of Luwuk, in North Luwuk District. The journey by vehicle is relatively short. What you need to pay attention to is the final part: a short trek through local gardens that can be slippery after rain.
 
 This guide covers every stage of the journey: the route from Luwuk, transportation options, travel time, road conditions, and what to expect on the final journey to the waterfall.
 
@@ -103,7 +103,7 @@ Pertahankan **Depart from Luwuk in the morning.** This gives you time to enjoy t
 
 **Confirm parking and trail conditions locally.** The trail can be muddy after rain. Locals at the parking area can advise on the best path.
 
-**Combine with other destinations in North Luwuk.** Kamumu is on the same route as Salodik Waterfall and other destinations in North Luwuk. If you have private transportation, you can visit more than one place in a day.
+**Combine with other destinations in North Luwuk.** Kamumu is on the same route as [Salodik Waterfall](/en/destinations/salodik-waterfall/) and other destinations in North Luwuk. If you have private transportation, you can visit more than one place in a day.
 
 **Arrange return transportation early.** If you are not driving yourself, confirm with your driver or arrange a pickup time. Ride-hailing apps may not have available drivers in Kamumu.
 

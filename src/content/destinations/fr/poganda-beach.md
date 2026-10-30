@@ -31,7 +31,7 @@ youtube: "https://www.youtube.com/watch?v=TsAT26i-QZE"
 
 ## Plage de Poganda : le littoral snorkeling de l'île de Peleng
 
-La plage de Poganda est une plage de sable blanc située à **Dusun Poganda, Desa Luk Panenteng, Kecamatan Bulagi Utara, Kabupaten Banggai Kepulauan, Sulawesi Central**, sur **l'île de Peleng**. Elle se trouve à l'extrémité du village, à environ **15 minutes de route du lac Paisu Pok**, et fait partie du même ensemble touristique que le lac et la source de Paisu Batango.
+La plage de Poganda est une plage de sable blanc située à **Dusun Poganda, Desa Luk Panenteng, Kecamatan Bulagi Utara, Kabupaten Banggai Kepulauan, Sulawesi Central**, sur **l'île de Peleng**. Elle se trouve à l'extrémité du village, à environ **15 minutes de route du lac [Paisu Pok](/fr/destinations/paisu-pok-lake/)**, et fait partie du même ensemble touristique que le lac et la source de [Paisu Batango](/fr/destinations/paisu-batango-lake/).
 
 La plage s'étend sur environ **3,4 kilomètres**, avec du sable fin et clair, une eau turquoise et des vagues généralement calmes. C'est une longue plage villageoise, pas une station balnéaire, avec des cocotiers, des abris simples et un récif proche du rivage.
 
@@ -123,4 +123,4 @@ Oui. La plage est connue pour son eau claire et relativement calme, mais les con
 
 **Paisu Pok Lake** se trouve à environ **15 minutes par la route** de Poganda et compte parmi les destinations d'eau douce les plus connues de Banggai. **Paisu Batango Spring** se trouve dans le même village et peut être combiné avec la plage.
 
-**Mandel Beach** et **Oyama Beach** sont d'autres plages insulaires remarquables. **Piala Waterfall** et **Kilo 5 Beach** sont des options continentales plus faciles pour les voyageurs basés à Luwuk.
+**[Mandel Beach](/fr/destinations/mandel-beach/)** et **[Oyama Beach](/fr/destinations/oyama-beach/)** sont d'autres plages insulaires remarquables. **[Piala Waterfall](/fr/destinations/piala-waterfall/)** et **[Kilo 5 Beach](/fr/destinations/kilo-5-beach/)** sont des options continentales plus faciles pour les voyageurs basés à Luwuk.

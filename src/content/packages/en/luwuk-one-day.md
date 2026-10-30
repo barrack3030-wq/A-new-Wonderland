@@ -30,7 +30,7 @@ itinerary:
 
 **1 Day**
 
-**Luwuk • Piala Waterfall • Kilo 5**
+**Luwuk • [Piala Waterfall](/en/destinations/piala-waterfall/) • Kilo 5**
 
 A one-day private trip for travelers with limited time in Luwuk. The route focuses on nearby attractions that can realistically fit into one day without inter-island travel.
 
@@ -67,4 +67,4 @@ This route suits travelers transiting through Luwuk, working with a short schedu
 
 ## Note
 
-The itinerary can be adjusted around flight schedules, weather, road conditions and local circumstances. For Paisu Pok or other island destinations, a longer itinerary is more practical.
+The itinerary can be adjusted around flight schedules, weather, road conditions and local circumstances. For [Paisu Pok](/en/destinations/paisu-pok-lake/) or other island destinations, a longer itinerary is more practical.

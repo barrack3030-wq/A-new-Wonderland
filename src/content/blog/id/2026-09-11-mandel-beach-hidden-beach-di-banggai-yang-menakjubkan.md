@@ -18,7 +18,7 @@ tags:
 
 **Discover Hidden Paradise of Banggai**
 
-Bayangkan bangun pagi dengan suara ombak yang tenang, pasir putih halus di bawah kaki, dan air laut biru kehijauan yang bening hingga ke dasar. Tidak ada hiruk-pikuk, tidak ada antrean foto, hanya Anda dan keindahan alam yang masih perawan. Selamat datang di **Pantai Mandel**—permata tersembunyi di Banggai yang selama ini luput dari radar wisatawan arus utama.
+Bayangkan bangun pagi dengan suara ombak yang tenang, pasir putih halus di bawah kaki, dan air laut biru kehijauan yang bening hingga ke dasar. Tidak ada hiruk-pikuk, tidak ada antrean foto, hanya Anda dan keindahan alam yang masih perawan. Selamat datang di **[Pantai Mandel](/id/destinations/mandel-beach/)**—permata tersembunyi di Banggai yang selama ini luput dari radar wisatawan arus utama.
 
 Terletak di antara Desa Kombutokan dan Desa Palam, Kecamatan Totikum, Kabupaten Banggai, Sulawesi Tengah, Pantai Mandel adalah definisi sempurna dari *hidden paradise* yang selama ini Anda cari. Dengan garis pantai sepanjang sekitar 2 kilometer, pantai ini menawarkan hamparan pasir putih yang lembut, air laut jernih berwarna biru muda, serta dikelilingi bukit berumput hijau dan pepohonan rindang yang memanjakan mata.
 
@@ -70,7 +70,7 @@ Salah satu momen paling magis di Pantai Mandel adalah menyaksikan **matahari ter
 Dengan latar pasir putih, air biru kehijauan, dan perbukitan hijau, Pantai Mandel adalah surga bagi para fotografer. Setiap sudut menawarkan komposisi yang sempurna untuk foto *landscape*, *portrait*, maupun *underwater photography*.
 
 ### 5. Island Hopping
-Jadikan Pantai Mandel sebagai basis untuk menjelajahi destinasi lain di Pulau Peling, seperti **Danau Paisu Pok** yang terkenal dengan airnya yang biru seperti kaca, **Pantai Poganda**, dan **Air Terjun Piala**.
+Jadikan Pantai Mandel sebagai basis untuk menjelajahi destinasi lain di Pulau Peling, seperti **[Danau Paisu Pok](/id/destinations/paisu-pok-lake/)** yang terkenal dengan airnya yang biru seperti kaca, **[Pantai Poganda](/id/destinations/poganda-beach/)**, dan **[Air Terjun Piala](/id/destinations/piala-waterfall/)**.
 
 
 ## Kapan Waktu Terbaik Berkunjung?

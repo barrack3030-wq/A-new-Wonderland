@@ -186,7 +186,7 @@ If you are traveling with a group or have a specific itinerary, a private boat c
 
 ### If Paisu Pok Is Your Main Destination
 
-If Paisu Pok is one of the main reasons you are visiting Banggai, plan the journey carefully.
+If [Paisu Pok](/en/destinations/paisu-pok-lake/) is one of the main reasons you are visiting Banggai, plan the journey carefully.
 
 Paisu Pok is not simply a quick day trip from Luwuk. Reaching it involves traveling from the mainland toward the islands and then continuing by local road and/or boat depending on your route.
 

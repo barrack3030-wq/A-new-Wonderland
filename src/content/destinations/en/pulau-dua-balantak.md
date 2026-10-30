@@ -107,4 +107,4 @@ Yes. Homestays and simple accommodation are available around Kampangar and the P
 
 ## Related Destinations
 
-**Paisu Pok Lake** and **Paisu Batango Spring** on Peleng Island offer freshwater scenery. **Poganda Beach** and **Pompon Beach** are white-sand snorkeling destinations. **Mandel Beach** and **Oyama Beach** add boat-access island beaches, while **Piala Waterfall** and **Kilo 5 Beach** are easier mainland options for travelers based in Luwuk.
+**[Paisu Pok Lake](/en/destinations/paisu-pok-lake/)** and **[Paisu Batango](/en/destinations/paisu-batango-lake/) Spring** on Peleng Island offer freshwater scenery. **[Poganda Beach](/en/destinations/poganda-beach/)** and **[Pompon Beach](/en/destinations/pompon-beach/)** are white-sand snorkeling destinations. **[Mandel Beach](/en/destinations/mandel-beach/)** and **[Oyama Beach](/en/destinations/oyama-beach/)** add boat-access island beaches, while **[Piala Waterfall](/en/destinations/piala-waterfall/)** and **[Kilo 5 Beach](/en/destinations/kilo-5-beach/)** are easier mainland options for travelers based in Luwuk.
