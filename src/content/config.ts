@@ -18,6 +18,8 @@ const destinationsCollection = defineCollection({
     travelTips: z.array(z.string()).optional(),
     gallery: z.array(z.string()).optional(),
     relatedDestinations: z.array(z.string()).optional(),
+    // Temporarily keep a thin page out of search results (and the sitemap) until it has real content.
+    noindex: z.boolean().optional(),
   }),
 });
 

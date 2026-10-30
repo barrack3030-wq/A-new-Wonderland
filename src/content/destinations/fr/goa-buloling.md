@@ -6,6 +6,7 @@ seoDescription: "Goa Buloling est une grotte à Banggai, Sulawesi central, à aj
 image: /images/buloling_3.webp
 imageAlt: Goa Buloling view
 location: Banggai
+noindex: true
 category: Grotte
 highlights:
   - Paysage naturel exotique

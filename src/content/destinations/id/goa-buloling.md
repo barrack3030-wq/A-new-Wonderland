@@ -6,6 +6,7 @@ seoDescription: "Goa Buloling adalah destinasi gua di Banggai, Sulawesi Tengah, 
 image: /images/buloling_3.webp
 imageAlt: Goa Buloling view
 location: Banggai
+noindex: true
 category: Gua
 highlights:
   - Pemandangan alam yang eksotis

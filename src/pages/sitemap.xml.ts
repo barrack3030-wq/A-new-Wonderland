@@ -64,6 +64,7 @@ export async function GET() {
   }
 
   for (const entry of destinations) {
+    if (entry.data.noindex) continue;
     const [lang, ...parts] = entry.slug.split('/');
     if (languages.includes(lang) && parts.length) {
       urls.add(`${site}/${lang}/destinations/${parts.join('/')}/`);
