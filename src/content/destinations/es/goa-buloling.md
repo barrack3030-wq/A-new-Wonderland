@@ -6,6 +6,7 @@ seoDescription: "Goa Buloling es un destino de cuevas en Banggai, Sulawesi Centr
 image: /images/buloling_3.webp
 imageAlt: Goa Buloling view
 location: Banggai
+noindex: true
 category: Cueva
 highlights:
   - Paisaje natural exótico

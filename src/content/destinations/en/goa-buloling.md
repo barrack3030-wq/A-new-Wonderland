@@ -6,6 +6,7 @@ seoDescription: "Goa Buloling is a cave destination in Banggai, Central Sulawesi
 image: /images/buloling_3.webp
 imageAlt: Goa Buloling view
 location: Banggai
+noindex: true
 category: Cave
 highlights:
   - Exotic natural scenery
