@@ -4,7 +4,7 @@ description: "Guide pratique pour plonger et explorer le lac Paisu Pok sur l’�
 seoTitle: "Guide de plongée au lac Paisu Pok | Banggai Wonderland"
 seoDescription: "Guide pratique pour plonger et explorer le lac Paisu Pok sur l’île de Peleng : conditions de l’eau, activités, accès et conseils aux îles Banggai."
 image: /images/DSCF7073-5.webp
-imageAlt: ''
+imageAlt: "Lac Paisu Pok sur l’île de Peleng, îles Banggai"
 author: Diving Expert
 pubDate: "2026-10-15T00:00:00Z"
 tags:

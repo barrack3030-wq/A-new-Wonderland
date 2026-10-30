@@ -4,6 +4,7 @@ description: "Poganda Beach à Banggai Laut offre du sable blanc, une eau de mer
 seoTitle: "Poganda Beach : Plage exotique à Banggai Laut, Sulawesi central"
 seoDescription: "Poganda Beach à Banggai Laut : sable blanc, eau cristalline, rochers de granit et snorkeling avec le cardinal de Banggai. Accès et conseils."
 image: "/images/blog/images-9-20260910083834.jpg"
+imageAlt: "Poganda Beach à Banggai Laut"
 author: "Banggai Wonderland"
 pubDate: 2026-09-10
 translationKey: "2026-09-10-poganda-beach-pantai-eksotis-dengan-pemandangan-laut-banggai"

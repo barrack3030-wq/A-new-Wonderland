@@ -4,6 +4,7 @@ description: "Poganda Beach di Banggai Laut menawarkan pasir putih, air laut jer
 seoTitle: "Poganda Beach: Pantai Eksotis di Banggai Laut, Sulawesi Tengah"
 seoDescription: "Poganda Beach di Banggai Laut: pasir putih, air jernih, bongkahan granit, dan snorkeling bersama ikan capungan Banggai. Akses dan tips berkunjung."
 image: "/images/blog/images-9-20260910083834.jpg"
+imageAlt: "Poganda Beach di Banggai Laut"
 author: "Banggai Wonderland"
 pubDate: 2026-09-10
 translationKey: "2026-09-10-poganda-beach-pantai-eksotis-dengan-pemandangan-laut-banggai"

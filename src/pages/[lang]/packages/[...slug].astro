@@ -43,8 +43,10 @@ const schema = {
   '@type': 'TouristTrip',
   name: entry.data.title,
   description: entry.data.description,
-  image: entry.data.image,
+  image: [new URL(entry.data.image, Astro.site || Astro.url.origin).href],
   url: packageUrl,
+  inLanguage: lang,
+  provider: { '@id': new URL('/#organization', Astro.site || Astro.url.origin).href },
   touristType: 'Leisure travelers',
   itinerary: entry.data.itinerary?.length ? {
     '@type': 'ItemList',

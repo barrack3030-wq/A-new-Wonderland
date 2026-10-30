@@ -4,6 +4,7 @@ description: "Descubre Luwuk y las Islas Banggai en Sulawesi Central, desde el l
 seoTitle: "Luwuk y las islas Banggai: una alternativa tranquila a Bali"
 seoDescription: "Descubre Luwuk y las Islas Banggai en Sulawesi Central, desde el lago Paisu Pok y la cascada Piala hasta playas, ferris, buceo, snorkel y consejos prácticos."
 image: "/images/blog/images-16-20260916142820.jpg"
+imageAlt: "Luwuk y las islas Banggai en Sulawesi Central"
 author: "Banggai Wonderland"
 pubDate: 2026-09-16
 translationKey: "2026-09-16-alternatif-bali-menjelajah-keindahan-luwuk-dan-kepulauan-banggai"

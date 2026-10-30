@@ -4,6 +4,7 @@ description: "Discover Luwuk and the Banggai Islands in Central Sulawesi, from P
 seoTitle: "Luwuk & Banggai Islands Travel Guide: A Hidden Alternative to Bali"
 seoDescription: "Discover Luwuk and the Banggai Islands in Central Sulawesi, from Paisu Pok Lake and Piala Waterfall to beaches, ferries and snorkeling."
 image: "/images/blog/images-16-20260916142820.jpg"
+imageAlt: "Luwuk and the Banggai Islands in Central Sulawesi"
 author: "Banggai Wonderland"
 pubDate: 2026-09-16
 translationKey: "2026-09-16-alternatif-bali-menjelajah-keindahan-luwuk-dan-kepulauan-banggai"

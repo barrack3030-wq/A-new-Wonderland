@@ -116,13 +116,28 @@ if (!section) {
 }
 
 const localeMap: Record<string, string> = { id: 'id_ID', en: 'en_US', es: 'es_ES', fr: 'fr_FR' };
-const baseSchema = {
-  '@context': 'https://schema.org', '@type': 'TravelAgency', name: 'Banggai Wonderland',
-  image: new URL('/images/logo.png', siteUrl).href, '@id': siteUrl.href, url: siteUrl.href,
-  telephone: '+6285820830530', description: 'Travel experiences and private trips in Banggai Islands, Indonesia.', mainEntityOfPage: currentUrl
+// One business entity, referenced by @id from page-level schema (publisher, provider, author).
+const orgId = new URL('/#organization', siteUrl).href;
+const websiteId = new URL('/#website', siteUrl).href;
+const logoUrl = new URL('/images/logo.png', siteUrl).href;
+const organizationSchema = {
+  '@context': 'https://schema.org', '@type': 'TravelAgency', '@id': orgId, name: 'Banggai Wonderland',
+  url: siteUrl.href, image: logoUrl, logo: { '@type': 'ImageObject', url: logoUrl },
+  description: 'Private trips and travel guides for Luwuk and the Banggai Islands, Central Sulawesi, Indonesia.',
+  telephone: '+6285820830530', email: 'zulaji33@gmail.com',
+  sameAs: ['https://www.instagram.com/aji_zulficar/'],
+  address: { '@type': 'PostalAddress', streetAddress: 'Jl. Trans Sulawesi', addressLocality: 'Luwuk', addressRegion: 'Sulawesi Tengah', addressCountry: 'ID' },
+  areaServed: [
+    { '@type': 'AdministrativeArea', name: 'Banggai Regency' },
+    { '@type': 'AdministrativeArea', name: 'Banggai Islands Regency' },
+    { '@type': 'AdministrativeArea', name: 'Banggai Laut Regency' }
+  ],
+  knowsLanguage: ['id', 'en', 'es', 'fr'],
+  contactPoint: { '@type': 'ContactPoint', contactType: 'customer service', telephone: '+6285820830530', availableLanguage: ['Indonesian', 'English', 'Spanish', 'French'] }
 };
-const websiteSchema = { '@context': 'https://schema.org', '@type': 'WebSite', name: 'Banggai Wonderland', url: siteUrl.href, inLanguage: hreflangMap[currentLangCode] || currentLangCode };
-const finalSchema = schema ? [baseSchema, websiteSchema, schema] : [baseSchema, websiteSchema];
+const websiteSchema = { '@context': 'https://schema.org', '@type': 'WebSite', '@id': websiteId, name: 'Banggai Wonderland', url: siteUrl.href, inLanguage: hreflangMap[currentLangCode] || currentLangCode, publisher: { '@id': orgId } };
+// Defined on every page so @id references (publisher, provider) always resolve within the same document.
+const finalSchema = [websiteSchema, organizationSchema, ...(schema ? [schema] : [])];
 const defaultLink = alternateLinks.find(link => link.lang === (hreflangMap.en || 'en')) || alternateLinks.find(link => link.lang === (hreflangMap.id || 'id'));
 ---
 <title>{effectiveSeoTitle}</title>

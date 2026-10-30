@@ -4,6 +4,7 @@ description: "Cari alternatif Bali yang lebih sunyi? Jelajahi Luwuk dan Kepulaua
 seoTitle: "Alternatif Bali: Panduan Lengkap Luwuk dan Kepulauan Banggai"
 seoDescription: "Cari alternatif Bali yang lebih sunyi? Jelajahi Luwuk dan Kepulauan Banggai di Sulawesi Tengah: danau biru Paisu Pok, air terjun, pantai jernih."
 image: "/images/blog/images-16-20260916142820.jpg"
+imageAlt: "Luwuk dan Kepulauan Banggai di Sulawesi Tengah"
 author: "Banggai Wonderland"
 pubDate: 2026-09-16
 translationKey: "2026-09-16-alternatif-bali-menjelajah-keindahan-luwuk-dan-kepulauan-banggai"

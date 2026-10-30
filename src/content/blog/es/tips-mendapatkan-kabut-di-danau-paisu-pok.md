@@ -4,7 +4,7 @@ description: "La niebla en el lago Paisu Pok depende de la temperatura, la humed
 seoTitle: "Cómo ver la niebla en el lago Paisu Pok: horarios y consejos"
 seoDescription: "¿Quieres ver niebla sobre el lago Paisu Pok? Descubre cuándo ir, qué condiciones ayudan y consejos de fotografía. La niebla nunca está garantizada."
 image: /images/images (6).jpg
-imageAlt: ''
+imageAlt: "Lago Paisu Pok en la isla de Peleng, islas Banggai"
 author: aji
 pubDate: "2026-09-05T23:54:00"
 tags: []
