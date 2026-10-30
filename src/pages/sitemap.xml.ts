@@ -36,6 +36,8 @@ export async function GET() {
   const blog = await getCollection('blog');
 
   const urls = new Set<string>();
+  // Only blog posts carry a real date (updatedDate falls back to pubDate); other URLs get no <lastmod>.
+  const lastmod = new Map<string, string>();
 
   for (const lang of languages) {
     urls.add(`${site}/${lang}/`);
@@ -78,12 +80,15 @@ export async function GET() {
   for (const entry of blog) {
     const [lang, ...parts] = entry.slug.split('/');
     if (languages.includes(lang) && parts.length) {
-      urls.add(`${site}/${lang}/blog/${parts.join('/')}/`);
+      const postUrl = `${site}/${lang}/blog/${parts.join('/')}/`;
+      urls.add(postUrl);
+      const modified = entry.data.updatedDate ?? entry.data.pubDate;
+      if (modified) lastmod.set(postUrl, modified.toISOString().slice(0, 10));
     }
   }
 
   const urlEntries = [...urls].sort()
-    .map(url => `  <url><loc>${escapeXml(url)}</loc></url>`)
+    .map(url => `  <url><loc>${escapeXml(url)}</loc>${lastmod.has(url) ? `<lastmod>${lastmod.get(url)}</lastmod>` : ''}</url>`)
     .join('\n');
 
   const xml = `<?xml version="1.0" encoding="UTF-8"?>\n` +

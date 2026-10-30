@@ -9,6 +9,7 @@ Allow: /
 Disallow: /admin/
 Disallow: /cms/
 Disallow: /seo-lab/
+Disallow: /seo/
 Disallow: /plan/
 
 Sitemap: https://banggaiwonderland.my.id/sitemap.xml
