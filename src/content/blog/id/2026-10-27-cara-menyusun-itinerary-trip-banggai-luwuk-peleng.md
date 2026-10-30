@@ -17,8 +17,6 @@ tags:
 translationKey: "banggai-trip-itinerary-buffer-planning"
 ---
 
-# Cara Menyusun Itinerary Trip Banggai dari Luwuk ke Pulau Peleng
-
 Perjalanan ke Kepulauan Banggai akan terasa lebih nyaman jika itinerary disusun berdasarkan **koneksi transportasi**, bukan sekadar jumlah tempat yang ingin dikunjungi. Banyak wisatawan memulai perjalanan dari Luwuk, lalu melanjutkan perjalanan darat dan laut menuju Pulau Peleng untuk mengunjungi Danau Paisu Pok, Paisu Batango, pantai, dan teluk di sekitarnya.
 
 Kuncinya adalah memberi ruang untuk penyeberangan, waktu tunggu, dan perubahan kondisi laut. Jangan menganggap perjalanan antar-pulau memiliki jadwal yang selalu sama setiap hari.

@@ -1,8 +1,8 @@
 ---
 title: "Kamumu Waterfall vs Salodik Waterfall: Which One Should You Visit?"
 description: "Luwuk and its surroundings are home to many waterfalls, but the two names that come up most often in travelers’ conversations are Kamumu Waterfall and Salodik Waterfall. Both are located in North Luwuk District, only a few kilometers from each other, and both offer clear, multi-tiered flows of water. However, the experience at each place can feel very different, depending on what you are looking for."
-seoTitle: "Kamumu Waterfall vs Salodik Waterfall: Which One Should You Visit?"
-seoDescription: "Luwuk and its surroundings are home to many waterfalls, but the two names that come up most often in travelers’ conversations are Kamumu Waterfall and Salodik Waterfall. Both are located in North Luwuk District, only a few kilometers from each other, and both offer clear, multi-tiered flows of water. However, the experience at each place can feel very different, depending on what you are looking for."
+seoTitle: "Kamumu vs Salodik Waterfall: Which One Should You Visit?"
+seoDescription: "Kamumu vs Salodik Waterfall near Luwuk: how they differ in scenery, access and atmosphere, so you can pick the one that suits your trip."
 image: "/images/blog/gemini-generated-image-m0ve86m0ve86m0ve-20260914204156.jpg"
 imageAlt: "Air Terjun Kamumu vs Air Terjun Salodik: Mana yang Harus Anda Kunjungi?"
 author: "Banggai Wonderland"

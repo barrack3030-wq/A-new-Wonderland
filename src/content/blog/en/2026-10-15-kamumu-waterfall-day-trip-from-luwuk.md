@@ -14,8 +14,6 @@ tags:
   - Banggai travel guide
   - Central Sulawesi
 ---
-# Kamumu Waterfall Day Trip from Luwuk: What to Plan Before You Go
-
 A visit to **Kamumu Waterfall** is a refreshing way to add nature to a stay in Luwuk. Instead of rushing between several attractions, plan a relaxed outing that leaves time for the road, a walk around the site, and a respectful visit to the village.
 
 This guide focuses on the practical decisions that make a waterfall trip easier to organize. Local conditions, access, fees, and facilities can change, so confirm current details with a local host before departure.

@@ -14,8 +14,6 @@ tags:
   - "Tour privado Banggai"
   - "Viajar a Luwuk"
 ---
-# Antes de reservar island hopping en Banggai, haz estas 7 preguntas
-
 Las lagunas transparentes y las playas tranquilas invitan a reservar una excursión en barco en cuanto aparecen las primeras fotos. Sin embargo, viajar entre las islas Banggai también exige organizar puertos, traslados por carretera, horarios locales y posibles cambios por las condiciones del mar.
 
 Antes de pagar una señal, plantea estas siete preguntas y solicita respuestas por escrito.

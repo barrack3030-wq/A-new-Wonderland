@@ -2,7 +2,7 @@
 title: '5 Alasan Mengapa Banggai Layak Disebut Surga Tersembunyi Indonesia'
 description: 'Lima alasan mengapa Banggai di Sulawesi Tengah menjadi destinasi istimewa: alam yang beragam, laut yang jernih, destinasi yang tenang, perjalanan yang autentik, dan pengalaman yang sulit ditemukan di tempat lain.'
 seoTitle: '5 Alasan Mengapa Banggai Adalah Surga Tersembunyi Indonesia'
-seoDescription: 'Temukan 5 alasan mengapa Banggai di Sulawesi Tengah layak disebut hidden paradise Indonesia, dari danau sebening kristal dan pantai tenang hingga pulau tropis dan pengalaman lokal.'
+seoDescription: "Temukan 5 alasan mengapa Banggai di Sulawesi Tengah layak disebut hidden paradise Indonesia: danau jernih, pantai tenang, dan pulau tropis."
 image: /images/Poganda-Beach-Banggai-IndonesiaJuara-Trip.webp
 imageAlt: 'Poganda Beach, Banggai, Indonesia'
 author: 'aji'
@@ -14,8 +14,6 @@ tags:
   - Wisata Indonesia
   - Sulawesi
 ---
-
-# 5 Alasan Mengapa Banggai Layak Disebut Surga Tersembunyi Indonesia
 
 Ada tempat-tempat yang indah karena terkenal.
 

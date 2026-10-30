@@ -26,8 +26,6 @@ travelTips:
 youtube: "https://www.youtube.com/watch?v=sRkhqbTYvnk"
 ---
 
-# Pulau Mbuang-Mbuang
-
 Mbuang-Mbuang bukan pantai, resor, atau perjalanan sehari. Ini adalah **desa pulau terpencil** di **Kabupaten Banggai Laut, Sulawesi Tengah, Indonesia**. Secara administratif, Mbuang-Mbuang merupakan **Desa Mbuang-Mbuang**, Kecamatan **Bokan Kepulauan**, di pulau kecil **Pulau Salue Kecil**.
 
 Tidak ada jalan yang menghubungkan Mbuang-Mbuang dengan pulau lain, tidak ada bandara, dan infrastruktur wisata masih sangat terbatas. Mencapainya memerlukan penerbangan ke Luwuk, perjalanan feri atau kapal menuju Kota Banggai, lalu penyeberangan perahu yang panjang. Tantangan perjalanan menjadi bagian dari karakter destinasi ini.

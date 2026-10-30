@@ -2,7 +2,7 @@
 title: "Banggai Honeymoon 4 Hari 3 Malam untuk 2 Orang"
 description: "Paket honeymoon private 4 hari 3 malam untuk pasangan yang ingin menjelajahi Paisu Pok, Paisu Batango, Kawalu Bay, Poganda, Long Beach, Oyama, Bontolan, Pompon dan Mandel."
 seoTitle: "Banggai Honeymoon 4 Hari 3 Malam | Private Trip untuk 2 Orang"
-seoDescription: "Nikmati honeymoon private di Banggai selama 4 hari 3 malam untuk 2 orang, dengan Paisu Pok, Paisu Batango, Kawalu Bay, Poganda, Long Beach, Oyama, Bontolan, Pompon dan Mandel."
+seoDescription: "Nikmati honeymoon private di Banggai selama 4 hari 3 malam untuk 2 orang, dengan Paisu Pok, Paisu Batango, Kawalu Bay, Poganda, Long Beach, Oyama, Bontolan."
 image: "/images/Poganda-Beach-Banggai-IndonesiaJuara-Trip.webp"
 imageAlt: "Pemandangan pantai tropis Banggai untuk perjalanan honeymoon"
 author: "Banggai Wonderland"
@@ -15,8 +15,6 @@ tags:
   - "Luwuk"
   - "Salakan"
 ---
-
-# Banggai Honeymoon 4 Hari 3 Malam untuk 2 Orang
 
 Banggai cocok untuk pasangan yang ingin menikmati perjalanan pulau dengan suasana yang lebih tenang. Dalam **Banggai Honeymoon Escape**, perjalanan dirancang khusus untuk **2 orang** dengan konsep private trip selama 4 hari 3 malam.
 

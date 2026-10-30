@@ -14,8 +14,6 @@ tags:
   - "Private trip Banggai"
   - "Luwuk"
 ---
-# Jangan Booking Island Hopping Banggai Sebelum Menanyakan 7 Hal Ini
-
 Foto laut sebening kaca memang mudah membuat kita ingin langsung memesan perjalanan. Namun, di Kepulauan Banggai, pengalaman island hopping bukan hanya soal memilih pulau yang terlihat indah. Perjalanan juga bergantung pada titik keberangkatan, perpindahan darat dan laut, kondisi cuaca, serta apa saja yang benar-benar termasuk dalam harga.
 
 Sebelum membayar deposit, gunakan tujuh pertanyaan berikut untuk memastikan rencana perjalanan sesuai dengan waktu dan anggaran Anda.

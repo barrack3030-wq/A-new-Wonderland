@@ -1,7 +1,7 @@
 ---
 title: 'Banggai Islands Diving and Snorkeling Guide: Best Sites, Marine Life & Tips'
 description: 'Planning Banggai Islands diving? Discover snorkeling areas, dive sites, Banggai cardinalfish, marine life, travel tips and a practical 4–5 day itinerary.'
-seoTitle: 'Banggai Islands Diving and Snorkeling Guide: Best Sites, Marine Life & Tips'
+seoTitle: "Banggai Islands Diving & Snorkeling Guide: Sites & Tips"
 seoDescription: 'Planning Banggai Islands diving? Discover snorkeling areas, dive sites, Banggai cardinalfish, marine life, travel tips and a practical 4–5 day itinerary.'
 image: 'https://unsplash.com/photos/UHtRqQLbH3I/download?force=true'
 imageAlt: 'Coastal water and dock in Salakan, Banggai Islands, Central Sulawesi'

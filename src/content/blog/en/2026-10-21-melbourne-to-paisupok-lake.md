@@ -2,7 +2,7 @@
 title: "Melbourne to Paisupok Lake: A Practical Route Guide via Luwuk"
 description: "Planning a trip from Melbourne to Paisupok Lake on Peleng Island? Follow the journey through Indonesian flight connections, Luwuk, the boat to Leme Leme and the final road transfer."
 seoTitle: "Melbourne to Paisupok Lake: Flights and Boat Route"
-seoDescription: "Learn how to travel from Melbourne, Australia, to Paisupok Lake in the Banggai Islands via Luwuk, including flight planning, boat connections, overnight stays and local transport."
+seoDescription: "How to travel from Melbourne, Australia, to Paisupok Lake in the Banggai Islands via Luwuk: flight planning and boat connections."
 image: "/images/blog/dji-0992-2-20260915111011.webp"
 imageAlt: "Clear turquoise water at Paisupok Lake on Peleng Island, Banggai Islands, Indonesia"
 author: "Banggai Wonderland"
@@ -15,8 +15,6 @@ tags:
   - "Luwuk"
   - "Central Sulawesi travel"
 ---
-
-# Melbourne to Paisupok Lake: A Practical Route Guide via Luwuk
 
 Paisupok Lake is on Peleng Island in Indonesia’s Banggai Islands, in Central Sulawesi. Travellers starting in Melbourne need to combine international and domestic flights with a boat crossing and a road transfer. The most important planning tip is to treat Luwuk as the gateway, not as the final destination.
 

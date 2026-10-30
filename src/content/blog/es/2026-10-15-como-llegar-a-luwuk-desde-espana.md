@@ -15,8 +15,6 @@ tags:
   - islas Banggai
   - Indonesia desde España
 ---
-# Cómo llegar a Luwuk desde España para visitar las islas Banggai
-
 Las islas Banggai están en Sulawesi Central, en el este de Indonesia. Para llegar desde España hay que planificar el viaje en dos partes: el trayecto internacional hasta un aeropuerto de conexión y el vuelo doméstico a Luwuk, cuyo código aeroportuario es **LUW**. No conviene comprar el primer billete que muestre “Banggai” sin comprobar el aeropuerto final y los traslados posteriores.
 
 Las rutas y los horarios cambian según la fecha. Este artículo explica cómo comparar opciones, no garantiza una combinación específica ni una tarifa determinada.

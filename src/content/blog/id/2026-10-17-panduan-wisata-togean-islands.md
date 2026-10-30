@@ -2,7 +2,7 @@
 title: "Panduan Wisata Togean Islands: Snorkeling, Danau Ubur-Ubur, dan Cara ke Sana"
 description: "Rencanakan perjalanan ke Togean Islands di Sulawesi Tengah: aktivitas bahari, pilihan pulau, Danau Mariona, transportasi, dan tips perjalanan bertanggung jawab."
 seoTitle: "Togean Islands: Panduan Wisata, Snorkeling & Akses"
-seoDescription: "Temukan hal terbaik yang bisa dilakukan di Togean Islands, mulai dari snorkeling dan menyelam hingga Danau Mariona, serta cara merencanakan perjalanan melalui Ampana."
+seoDescription: "Temukan hal terbaik yang bisa dilakukan di Togean Islands, mulai dari snorkeling dan menyelam hingga Danau Mariona."
 image: "https://upload.wikimedia.org/wikipedia/commons/0/02/Kadidiri%2C_morning_view_%286972093459%29.jpg"
 imageAlt: "Pemandangan pagi Pulau Kadidiri di Taman Nasional Kepulauan Togean, Sulawesi Tengah"
 imageSource: "https://commons.wikimedia.org/wiki/File:Kadidiri,_morning_view_(6972093459).jpg"
@@ -16,8 +16,6 @@ tags:
   - Danau Mariona
   - wisata Sulawesi Tengah
 ---
-# Panduan Wisata Togean Islands: Snorkeling, Danau Ubur-Ubur, dan Cara ke Sana
-
 Di tengah Teluk Tomini, Sulawesi Tengah, Togean Islands menawarkan pengalaman wisata bahari yang lebih lambat: pulau-pulau tropis, terumbu karang, pantai, desa pesisir, dan kesempatan menjelajahi laut bersama pemandu lokal. Karena perjalanan menuju kepulauan ini membutuhkan perencanaan transportasi, Togean paling cocok dinikmati dengan waktu yang cukup, bukan sebagai persinggahan singkat.
 
 Kepulauan ini berada dalam kawasan Taman Nasional Kepulauan Togean. Ekosistemnya mencakup terumbu karang, lamun, mangrove, dan hutan tropis. Keanekaragaman alam tersebut membuat perjalanan ke Togean menarik bagi pencinta snorkeling, penyelaman, fotografi alam, dan ekowisata.

@@ -1,7 +1,7 @@
 ---
 title: "Checklist avant un voyage à Banggai : les préparatifs essentiels"
 description: "Un guide pratique sur les correspondances, l’argent liquide, les horaires des bateaux, l’hébergement, la météo et les indispensables pour visiter Luwuk et les îles Banggai."
-seoTitle: "Checklist voyage à Banggai | Préparer son séjour à Luwuk et aux îles Banggai"
+seoTitle: "Checklist voyage à Banggai : préparer Luwuk et les îles"
 seoDescription: "Préparez un voyage plus serein à Banggai. Vérifiez les transports, les bateaux, l’argent liquide, l’hébergement et la sécurité en mer avant le départ."
 image: "https://upload.wikimedia.org/wikipedia/commons/0/02/Kadidiri%2C_morning_view_%286972093459%29.jpg"
 imageAlt: "Une île tropicale et une mer limpide en Indonésie"
@@ -16,8 +16,6 @@ tags:
   - îles Banggai
   - tourisme à Sulawesi
 ---
-
-# Checklist avant un voyage à Banggai : les préparatifs essentiels
 
 Luwuk et les îles Banggai, à Sulawesi, séduisent par leurs plages, leurs îles et leurs paysages marins. Pour se déplacer d’une île à l’autre, il faut toutefois parfois combiner la route et le bateau. Quelques vérifications avant le départ peuvent éviter des changements de programme de dernière minute.
 

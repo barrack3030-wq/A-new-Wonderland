@@ -14,8 +14,6 @@ tags:
   - "Banggai Laut"
 ---
 
-# Visiter le Keraton Banggai : Repères Historiques et Conseils Pratiques
-
 Le Keraton Banggai, ancien palais royal de Banggai, offre un angle différent pour découvrir l'archipel : l'histoire et le patrimoine plutôt que les plages et les lagons. Il se trouve sur l'île de Banggai, dans le Kabupaten de Banggai Laut, et non dans la ville de Luwuk.
 
 Cette distinction géographique est importante pour préparer le déplacement. Luwuk se trouve sur le continent de Sulawesi et sert de point de départ pour plusieurs trajets maritimes, tandis que Banggai Laut est une administration insulaire distincte de Kabupaten Banggai Kepulauan, qui comprend notamment l'île de Peleng.

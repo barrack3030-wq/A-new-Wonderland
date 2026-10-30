@@ -14,8 +14,6 @@ tags:
   - "Excursion privée Banggai"
   - "Voyage à Luwuk"
 ---
-# Island hopping à Banggai : 7 questions à poser avant de réserver
-
 Les lagons transparents et les plages paisibles donnent envie de réserver une sortie en bateau dès les premières photos. Pourtant, voyager entre les îles Banggai demande aussi d’organiser les ports, les transferts terrestres, les horaires locaux et les éventuels changements liés à l’état de la mer.
 
 Avant de verser un acompte, posez ces sept questions et demandez des réponses écrites.

@@ -2,7 +2,7 @@
 title: Piala Waterfall
 description: Piala Waterfall near Luwuk is a terraced cascade with clear green-blue pools, a short forest trek, and managed visitor facilities.
 seoTitle: "Piala Waterfall Luwuk | Terraced Waterfall in Banggai"
-seoDescription: Piala Waterfall near Luwuk is a terraced cascade with clear green-blue pools, just 30 minutes from the city. Guide to fees, access, facilities and best time to visit.
+seoDescription: "Piala Waterfall near Luwuk is a terraced cascade with clear green-blue pools, just 30 minutes from the city."
 image: /images/piala.jpg
 imageAlt: Terraced cascade of Piala Waterfall flowing over stepped rock shelves into a green-blue natural pool surrounded by forest in Hanga-Hanga, Luwuk, Banggai, Central Sulawesi.
 location: Luwuk, Banggai Regency, Central Sulawesi

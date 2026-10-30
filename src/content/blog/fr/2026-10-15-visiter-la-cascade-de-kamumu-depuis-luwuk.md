@@ -14,8 +14,6 @@ tags:
   - Luwuk
   - Sulawesi central
 ---
-# Visiter la cascade de Kamumu depuis Luwuk : préparer sa journée
-
 La cascade de Kamumu peut offrir une pause nature agréable pendant un séjour à Luwuk et dans le kabupaten de Banggai. Pour profiter de la visite sans vous presser, préparez le transport, prévoyez suffisamment de temps sur place et gardez une marge pour la météo ou l'état de la route.
 
 Les conditions d'accès, les équipements et les éventuels frais peuvent changer. Demandez des informations récentes à un chauffeur ou à un habitant avant le départ.

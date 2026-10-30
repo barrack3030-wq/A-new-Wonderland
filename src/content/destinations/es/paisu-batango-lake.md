@@ -2,7 +2,7 @@
 title: "Paisu Batango"
 description: "Paisu Batango es un manantial costero y una laguna influida por las mareas en Luk Panenteng, isla de Peleng, donde se encuentran agua dulce, salobre y marina."
 seoTitle: "Paisu Batango Banggai | Guía del manantial y la laguna"
-seoDescription: "Paisu Batango en Luk Panenteng, isla de Peleng, es un manantial costero donde se encuentran aguas dulces, salobres y saladas. Guía de acceso, instalaciones y mejor época."
+seoDescription: "Paisu Batango en Luk Panenteng, isla de Peleng, es un manantial costero donde se encuentran aguas dulces, salobres y saladas."
 image: "/images/paisu.jpg"
 imageAlt: "Piscina clara del manantial costero Paisu Batango rodeada de rocas y vegetación en Luk Panenteng, isla de Peleng, Banggai Kepulauan, Sulawesi Central."
 location: "Luk Panenteng, Banggai Kepulauan"
@@ -25,8 +25,6 @@ travelTips:
   - "Respeta a los residentes y mantén limpia el agua"
 youtube: "https://www.youtube.com/watch?v=7RTzL8yKLM4"
 ---
-
-# Paisu Batango: el manantial donde se encuentran tres aguas
 
 Paisu Batango es un **manantial costero y una laguna de agua dulce** en **Desa Luk Panenteng, Kecamatan Bulagi Utara, Kabupaten Banggai Kepulauan, Sulawesi Central**, en la **isla de Peleng**. Se encuentra en el lado sur del pueblo, unos **15 minutos antes** del conocido **Paisu Pok Lake**. Muchos viajeros pasan por aquí camino de Paisu Pok sin darse cuenta de que también es un destino propio.
 

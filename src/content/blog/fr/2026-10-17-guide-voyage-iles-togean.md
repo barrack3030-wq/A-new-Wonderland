@@ -16,8 +16,6 @@ tags:
   - lac Mariona
   - Sulawesi central
 ---
-# Guide de voyage aux îles Togean : snorkeling, lac aux méduses et accès
-
 Au cœur du golfe de Tomini, dans le Sulawesi central, les îles Togean séduisent par leurs plages tranquilles, leurs récifs coralliens et leurs excursions en mer. Le trajet demande de l’organisation : mieux vaut prévoir plusieurs jours plutôt qu’une courte halte.
 
 L’archipel fait partie du parc national des îles Togean, une zone protégée qui comprend des récifs, des herbiers marins, des mangroves et une forêt tropicale. Il intéresse les amateurs de snorkeling, de plongée, de photographie de nature et de tourisme communautaire.

@@ -16,8 +16,6 @@ tags:
   - Poganda Beach
   - Pulo Dua
 ---
-# Les meilleurs endroits pour faire du snorkeling à Luwuk et aux alentours
-
 Luwuk est un point de départ pratique pour découvrir les côtes et les îles de Banggai, dans le Sulawesi central. On peut choisir une plage, une sortie en bateau ou un voyage plus long vers Togean Islands. L’état des récifs, la visibilité, les courants et l’accès changent selon les jours : aucun site n’est automatiquement sûr en toute saison.
 
 ## 1. Poganda Beach — plage et snorkeling

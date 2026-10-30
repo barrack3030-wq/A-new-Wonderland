@@ -23,15 +23,15 @@ excluded:
 itinerary: []
 ---
 
-# FRANÇAIS
+## FRANÇAIS
 
-## ULTIMATE BANGGAI
+### ULTIMATE BANGGAI
 
 **6 Jours 5 Nuits**
 
 **Luwuk • Salakan • Peleng • Banggai Laut • Kamumu • Salodik • Pulo Dua**
 
-### Jour 1 — Luwuk → Salakan
+#### Jour 1 — Luwuk → Salakan
 
 **11h30 — Arrivée à Luwuk**
 
@@ -57,7 +57,7 @@ itinerary: []
 - Dîner
 - Nuit à Salakan
 
-### Jour 2 — Salakan → Peleng
+#### Jour 2 — Salakan → Peleng
 
 - Lac Paisu Pok
 - Lac Paisubatango
@@ -68,7 +68,7 @@ itinerary: []
 - Retour à Salakan
 - Nuit à Salakan
 
-### Jour 3 — Salakan → Banggai Laut → Salakan
+#### Jour 3 — Salakan → Banggai Laut → Salakan
 
 - Exploration de Banggai Laut
 - Plages et îles
@@ -79,7 +79,7 @@ itinerary: []
 - Retour à Salakan
 - Nuit à Salakan
 
-### Jour 4 — Salakan → Luwuk → Kamumu & Salodik
+#### Jour 4 — Salakan → Luwuk → Kamumu & Salodik
 
 - Ferry / bateau vers Luwuk
 - Kamumu Waterfall
@@ -90,7 +90,7 @@ itinerary: []
 - Retour à Luwuk
 - Nuit à Luwuk
 
-### Jour 5 — Excursion d'une journée à Pulo Dua
+#### Jour 5 — Excursion d'une journée à Pulo Dua
 
 - Départ tôt de Luwuk
 - Island hopping à Pulo Dua
@@ -102,7 +102,7 @@ itinerary: []
 - Retour à Luwuk dans la soirée
 - Nuit à Luwuk
 
-### Jour 6 — Luwuk → Aéroport
+#### Jour 6 — Luwuk → Aéroport
 
 - Petit-déjeuner
 - Check-out
@@ -110,7 +110,7 @@ itinerary: []
 - Transfert vers l'aéroport
 - Fin du voyage
 
-### Inclus
+#### Inclus
 
 ✓ Transferts aéroport
 ✓ Transport terrestre privé
@@ -129,7 +129,7 @@ itinerary: []
 ✓ Assistance photographique
 ✓ **Drone Video — En option**
 
-### Non inclus
+#### Non inclus
 
 ✕ Vols
 ✕ Équipement de snorkeling

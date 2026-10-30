@@ -16,8 +16,6 @@ tags:
   - "Luwuk"
 ---
 
-# When the Sea Changes Your Plans: A Backup Plan for Banggai Island Hopping
-
 Island hopping in Banggai depends on the sea, not just the itinerary. Stronger winds, rough waves, heavy rain, or poor visibility can make a planned boat trip unsuitable. A backup plan does not mean a holiday has failed; it helps you make sensible decisions without putting a schedule ahead of safety.
 
 ## Agree on the details before paying

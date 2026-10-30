@@ -14,8 +14,6 @@ tags:
   - "Private trip Banggai"
   - "Luwuk travel"
 ---
-# Before You Book Banggai Island Hopping, Ask These 7 Questions
-
 Clear lagoons and quiet island beaches make it tempting to book a boat trip as soon as you see the photos. But island hopping in the Banggai region is also a logistics decision: the starting port, land transfers, boat availability, local conditions and package inclusions can shape the day as much as the destinations themselves.
 
 Before paying a deposit, ask these seven questions and get the answers in writing.

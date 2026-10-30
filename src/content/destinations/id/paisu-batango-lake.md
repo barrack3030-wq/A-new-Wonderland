@@ -26,8 +26,6 @@ travelTips:
 youtube: "https://www.youtube.com/watch?v=7RTzL8yKLM4"
 ---
 
-# Paisu Batango: Mata Air Tempat Tiga Air Bertemu
-
 Paisu Batango adalah **mata air pantai dan laguna air tawar** di **Desa Luk Panenteng, Kecamatan Bulagi Utara, Kabupaten Banggai Kepulauan, Sulawesi Tengah**, di **Pulau Peleng**. Lokasinya berada di sisi selatan desa, sekitar **15 menit sebelum** **Danau Paisu Pok** yang lebih terkenal. Banyak wisatawan melewatinya dalam perjalanan ke Paisu Pok tanpa menyadari bahwa tempat ini juga merupakan destinasi tersendiri.
 
 Namanya menggambarkan karakter tempatnya. Dalam bahasa lokal, **paisu berarti air** dan **batango berarti batang pohon**, merujuk pada air mata air yang muncul di dekat dasar batang pohon dan membentuk kolam kecil. Ini bukan danau konvensional, melainkan **kolam mata air yang dipengaruhi pasang surut**.

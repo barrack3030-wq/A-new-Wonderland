@@ -1,7 +1,7 @@
 ---
 title: "Checklist Persiapan Wisata Banggai Sebelum Berangkat"
 description: "Panduan praktis menyiapkan transportasi, uang tunai, jadwal kapal, penginapan, cuaca, dan perlengkapan sebelum menjelajahi Luwuk serta Kepulauan Banggai."
-seoTitle: "Checklist Wisata Banggai | Persiapan ke Luwuk dan Kepulauan Banggai"
+seoTitle: "Checklist Wisata Banggai: Persiapan ke Luwuk dan Kepulauan"
 seoDescription: "Rencanakan perjalanan ke Banggai dengan lebih nyaman. Periksa koneksi transportasi, kapal, uang tunai, penginapan, dan keselamatan wisata laut sebelum berangkat."
 image: "https://upload.wikimedia.org/wikipedia/commons/0/02/Kadidiri%2C_morning_view_%286972093459%29.jpg"
 imageAlt: "Pulau tropis dan laut jernih di Kepulauan Togean, Sulawesi, Indonesia"
@@ -16,8 +16,6 @@ tags:
   - Kepulauan Banggai
   - wisata Sulawesi
 ---
-
-# Checklist Persiapan Wisata Banggai Sebelum Berangkat
 
 Luwuk dan Kepulauan Banggai di Sulawesi menawarkan pantai, pulau, dan pemandangan laut yang menarik. Namun, perjalanan antarpulau tidak selalu cukup mengandalkan pesawat; Anda mungkin perlu menggabungkan perjalanan darat dan laut. Beberapa pemeriksaan sederhana sebelum berangkat dapat membantu mengurangi perubahan rencana mendadak.
 

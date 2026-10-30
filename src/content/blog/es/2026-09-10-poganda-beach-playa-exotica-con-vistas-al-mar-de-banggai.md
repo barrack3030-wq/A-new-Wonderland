@@ -2,7 +2,7 @@
 title: "Poganda Beach: Playa exótica con vistas al mar de Banggai"
 description: "Poganda Beach en Banggai Laut ofrece arena blanca, aguas cristalinas, grandes rocas de granito y esnórquel con el pez cardenal de Banggai, una especie endémica. Descubre su ubicación, acceso, actividades y consejos para la visita."
 seoTitle: "Poganda Beach: Playa exótica en Banggai Laut, Célebes Central"
-seoDescription: "Poganda Beach en Banggai Laut ofrece arena blanca, aguas cristalinas, grandes rocas de granito y esnórquel con el pez cardenal de Banggai, una especie endémica. Descubre su ubicación, acceso, actividades y consejos para la visita."
+seoDescription: "Poganda Beach en Banggai Laut: arena blanca, aguas cristalinas, rocas de granito y esnórquel con el pez cardenal de Banggai. Acceso y consejos."
 image: "/images/blog/images-9-20260910083834.jpg"
 author: "Banggai Wonderland"
 pubDate: 2026-09-10
@@ -12,8 +12,6 @@ tags:
   - "Indonesia"
   - "Viajes"
 ---
-
-# Poganda Beach: Playa exótica con vistas al mar de Banggai
 
 Poganda Beach es una de las playas del municipio de Banggai Laut, Célebes Central, que ha comenzado a ganar reconocimiento entre los viajeros debido a su entorno natural bien conservado y sus cristalinas vistas marinas. Esta playa se encuentra en la costa oriental de la isla de Peleng, la segunda isla más grande del archipiélago de Banggai después de la isla de Banggai.
 

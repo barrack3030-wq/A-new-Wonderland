@@ -1,7 +1,7 @@
 ---
 title: "Air Terjun Salodik : Profitez de la nature verdoyante autour de Luwuk"
 description: "- tourisme nature Luwuk Banggai - cascade Banggai - cascade Salodik - lieu touristique Luwuk - Trans Sulawesi Banggai"
-seoTitle: "Cascade de Salodik Luwuk : Guide complet du tourisme nature à Banggai"
+seoTitle: "Cascade de Salodik à Luwuk : guide nature à Banggai"
 seoDescription: "Guide touristique de la cascade de Salodik à Luwuk, Banggai. Emplacement, accès, billets, meilleur moment pour visiter et conseils pratiques pour les voyageurs"
 image: "/images/blog/unnamed-20260913111425.webp"
 imageAlt: "Air Terjun Salodik: Menikmati Alam Hijau di Sekitar Luwuk"

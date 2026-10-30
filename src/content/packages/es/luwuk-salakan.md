@@ -1,9 +1,9 @@
 ---
 title: Viaje Privado Luwuk Salakan 3 Días 2 Noches
 description: Viaje privado de 3 días entre Luwuk y Salakan, con trayecto marítimo, costa, gastronomía local y tiempo para explorar las islas Banggai.
-seoTitle: 'Viaje Privado Luwuk Salakan 3 Días 2 Noches | Banggai Wonderland'
+seoTitle: "Viaje privado Luwuk Salakan 3 días 2 noches"
 seoDescription: 'Descubre Luwuk y Salakan en un viaje privado de 3 días y 2 noches por Banggai, con transporte local y una ruta flexible.'
-image: /images/packages/luwuk-salakan.webp
+image: /images/paisu.jpg
 imageAlt: Viaje privado entre Luwuk y Salakan
 duration: 3 Días 2 Noches
 destination: Luwuk, Salakan, Islas Banggai
@@ -27,19 +27,19 @@ excluded:
 itinerary: []
 ---
 
-# Escapada Luwuk y Salakan
+## Escapada Luwuk y Salakan
 
 **3 Días 2 Noches**
 
 **Luwuk • Salakan • Islas Banggai**
 
-## Descripción
+### Descripción
 
 Un viaje privado de 3 días para conectar Luwuk y Salakan sin un programa demasiado ajustado. La ruta combina viaje por mar, paisajes costeros, comida local y tiempo para conocer Salakan con más calma.
 
 El itinerario puede adaptarse a los horarios de los barcos, el clima, las condiciones del mar y los horarios de los vuelos.
 
-## Día 1 — Llegada a Luwuk y viaje a Salakan
+### Día 1 — Llegada a Luwuk y viaje a Salakan
 
 **Tarde**
 
@@ -61,7 +61,7 @@ El itinerario puede adaptarse a los horarios de los barcos, el clima, las condic
 - Cena
 - Tiempo libre en Salakan
 
-## Día 2 — Salakan y Peleng
+### Día 2 — Salakan y Peleng
 
 **Mañana**
 
@@ -92,7 +92,7 @@ El itinerario puede adaptarse a los horarios de los barcos, el clima, las condic
 - Cena
 - Noche en Salakan
 
-## Día 3 — Salakan → Luwuk
+### Día 3 — Salakan → Luwuk
 
 **Mañana**
 
@@ -109,7 +109,7 @@ El itinerario puede adaptarse a los horarios de los barcos, el clima, las condic
 
 **Fin del viaje**
 
-## Incluye
+### Incluye
 
 ✓ Traslados desde y hacia el aeropuerto  
 ✓ Transporte terrestre privado en Luwuk  
@@ -120,7 +120,7 @@ El itinerario puede adaptarse a los horarios de los barcos, el clima, las condic
 ✓ Entradas a los destinos indicados  
 ✓ Itinerario flexible
 
-## No incluye
+### No incluye
 
 ✕ Vuelos  
 ✕ Gastos personales  
@@ -129,7 +129,7 @@ El itinerario puede adaptarse a los horarios de los barcos, el clima, las condic
 ✕ Actividades adicionales  
 ✕ Vídeo con drone — Opcional
 
-## Nota importante
+### Nota importante
 
 La ruta Luwuk–Salakan incluye viaje por mar. Los horarios de los barcos, el tiempo de viaje y el orden de las actividades pueden cambiar debido al clima, las condiciones del mar, los horarios de los operadores y las circunstancias locales.
 

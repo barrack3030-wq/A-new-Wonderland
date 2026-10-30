@@ -15,8 +15,6 @@ tags:
   - "Wisata Banggai Kepulauan"
 ---
 
-# Paisu Pok dan Paisu Batango Sekali Jalan: Cara Menyusun Rute dari Salakan
-
 Jika berangkat dari Salakan, mengunjungi Paisu Pok dan Mata Air Paisu Batango dalam satu rangkaian perjalanan dapat membantu Anda memanfaatkan waktu di kawasan Luk Panenteng. Namun, perjalanan sebaiknya direncanakan berdasarkan kondisi jalan, waktu berangkat, dan aturan terbaru di lokasi—bukan hanya berdasarkan jarak pada peta.
 
 Kedua tempat tersebut berada di Desa Luk Panenteng, Kecamatan Bulagi Utara, Kabupaten Banggai Kepulauan. Panduan perjalanan Wikivoyage mencatat bahwa Paisu Batango berada dekat gerbang Paisu Pok dan dapat dicapai dengan berjalan kaki ke arah barat. Anggap keterangan jarak sebagai orientasi awal, bukan jaminan durasi untuk setiap pengunjung.

@@ -16,8 +16,6 @@ tags:
   - Banggai Islands
 ---
 
-# Banggai Wonderland: Menemukan Surga Tersembunyi Indonesia
-
 Ada Indonesia yang sudah sangat dikenal dunia.
 
 Bali, misalnya, telah menjadi nama yang hampir identik dengan liburan tropis. Pantai, pura, sawah, villa, kafe, dan matahari terbenamnya telah menjadi bagian dari imajinasi wisatawan dari berbagai negara.

@@ -5,7 +5,7 @@ imageAlt: 'Kamumu Waterfall: Air Terjun di Tengah Keindahan Alam Banggai'
 title: 'Kamumu Waterfall: Air Terjun di Tengah Keindahan Alam Banggai'
 description: Discover Hidden Paradise of Banggai Ada sesuatu yang magis tentang air terjun yang tersembunyi di tengah hutan pinus. Suara gemericik air yang jatuh dari undakan batu alami, aroma khas resin pinus, dan udara sejuk yang menyegarkan paru-paru—semuanya menciptakan pengalaman yang jauh dari hiruk-pikuk kota. Inilah Air Terjun Kamumu, permata tersembunyi di Desa Kamumu, Kecamatan Luwuk Utara, Kabupaten Banggai, Sulawesi T
 seoTitle: 'Kamumu Waterfall: Air Terjun di Tengah Keindahan Alam Banggai'
-seoDescription: Discover Hidden Paradise of Banggai Ada sesuatu yang magis tentang air terjun yang tersembunyi di tengah hutan pinus. Suara gemericik air yang jatuh dari undakan batu alami, aroma khas resin pinus, dan udara sejuk yang menyegarkan paru-paru—semuanya menciptakan pengalaman yang jauh dari hiruk-pikuk kota. Inilah Air Terjun Kamumu, permata tersembunyi di Desa Kamumu, Kecamatan Luwuk Utara, Kabupaten Banggai, Sulawesi T
+seoDescription: "Air Terjun Kamumu di Luwuk Utara, Banggai: permata tersembunyi di tengah hutan pinus dengan aliran air bertingkat. Yang bisa dinikmati dan cara berkunjung."
 author: Banggai Wonderland
 pubDate: 2026-09-12
 tags:

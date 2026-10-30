@@ -23,8 +23,6 @@ excluded:
 itinerary: []
 ---
 
-# Paket Wisata Banggai 6 Hari 5 Malam
-
 **6 Hari 5 Malam**
 
 **Luwuk • Salakan • Peleng • Banggai Laut • Kamumu • Salodik • Pulo Dua**

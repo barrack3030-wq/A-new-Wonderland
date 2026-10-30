@@ -1,7 +1,7 @@
 ---
 title: Bontolan Beach
 description: Bontolan Beach est une plage de sable blanc située à Bone Baru, sur l’île de Banggai, connue pour le snorkeling, ses récifs coralliens et la vie du village.
-seoTitle: 'Bontolan Beach : snorkeling et vie locale sur l’île de Banggai | Banggai Wonderland'
+seoTitle: "Bontolan Beach : snorkeling et vie locale à Banggai"
 seoDescription: 'Découvrez Bontolan Beach sur l’île de Banggai : snorkeling, Banggai Cardinal Fish, vie locale, accès, hébergements et conseils de sécurité.'
 image: /images/bontolan.jpg
 imageAlt: Bontolan Beach, Banggai Island

@@ -25,8 +25,6 @@ travelTips:
   - "Carry cash for parking and local fees"
 ---
 
-# Mokokawa Waterfall
-
 Mokokawa Waterfall is a **terraced waterfall** in the forested hills above **Luwuk, Banggai Regency, Central Sulawesi**. Unlike the single-drop cascades at Piala or Laumarang, Mokokawa is defined by its **layered limestone shelves**—water flows over a series of rock steps rather than falling vertically from a cliff.
 
 Most sources place it in **Kelurahan Hanga-Hanga, Kecamatan Luwuk Selatan**, reached via **Desa Tontouan**. The journey from Luwuk combines a road trip with a **30–45 minute forest trek**. Recent published guides also emphasize its terraced rock formations and quiet forest setting.

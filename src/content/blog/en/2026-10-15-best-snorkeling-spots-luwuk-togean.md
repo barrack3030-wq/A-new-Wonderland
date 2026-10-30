@@ -2,7 +2,7 @@
 title: "Best Places for Snorkeling in Luwuk and Nearby Islands"
 description: "Compare snorkeling options around Luwuk and Banggai, including Poganda Beach, Pulo Dua, Oyama Beach and the Togean Islands, with access and safety tips."
 seoTitle: "Best Snorkeling Spots Near Luwuk, Banggai & Togean"
-seoDescription: "Plan snorkeling near Luwuk with this guide to Poganda Beach, Pulo Dua, Oyama Beach, Banggai waters and the Togean Islands. Learn what is nearby and what needs a separate trip."
+seoDescription: "Plan snorkeling near Luwuk with this guide to Poganda Beach, Pulo Dua, Oyama Beach, Banggai waters and the Togean Islands."
 image: "https://theworldtravelguy.com/wp-content/uploads/2024/01/DSCF7131.jpg"
 imageAlt: "Clear tropical water and white sand at Poganda Beach in Banggai"
 imageSource: "https://brunetteatsunset.com/asia/indonesia/banggai-islands-travel-guide-sulawesi/"
@@ -16,8 +16,6 @@ tags:
   - Poganda Beach
   - Pulo Dua
 ---
-# Best Places for Snorkeling in Luwuk and Nearby Islands
-
 Luwuk is a useful starting point for exploring the coast and islands of Banggai, Central Sulawesi. Snorkeling options range from beaches and short boat trips to a longer journey to the Togean Islands. Reef conditions, visibility, currents and access vary, so no location should be treated as safe in every season or on every day.
 
 This guide compares places worth considering and explains which are regional options and which require a dedicated trip.

@@ -16,8 +16,6 @@ tags:
   - snorkeling
   - Luwuk
 ---
-# Que mettre dans sa valise pour les îles Banggai : liste pratique
-
 Un voyage autour de Luwuk, de l’île de Peleng et des îles Banggai peut combiner trajets routiers, traversées en bateau, pauses baignade et nuits dans des endroits où les commerces et les services sont limités. Un bagage bien préparé permet de voyager confortablement sans s’encombrer.
 
 Utilisez cette liste comme base, puis adaptez-la à votre itinéraire, à la saison et à votre hébergement.

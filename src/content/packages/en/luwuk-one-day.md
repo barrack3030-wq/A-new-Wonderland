@@ -3,7 +3,7 @@ title: Luwuk One-Day Private Trip
 description: A one-day private trip from Luwuk covering Piala Waterfall, the Luwuk coast and nearby attractions.
 seoTitle: 'Luwuk One-Day Tour Package | Private Trip'
 seoDescription: 'Luwuk one-day tour package with Piala Waterfall, Kilo 5 coast, private transportation and local guide for travelers with limited time.'
-image: /images/luwuk-stopover.webp
+image: /images/oyama-beach.webp
 imageAlt: Luwuk one-day private trip with Piala Waterfall and coastal scenery
 duration: 1 Day
 destination: Luwuk City, Piala Waterfall, Kilo 5
@@ -27,8 +27,6 @@ itinerary:
     title: Luwuk City & Piala Waterfall
     description: Arrive in Luwuk, meet the guide, visit Piala Waterfall, continue to the Luwuk coast and Kilo 5, then transfer to the airport or hotel.
 ---
-
-# Luwuk One-Day Private Trip
 
 **1 Day**
 

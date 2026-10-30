@@ -16,8 +16,6 @@ tags:
   - "Banggai Islands"
 ---
 
-# Caves to Visit in Banggai
-
 Banggai is known for turquoise lagoons, quiet islands, tropical forests and dramatic coastlines. Yet beneath its limestone landscapes lies another side of the region: caves shaped by water, rock and time.
 
 For travelers who enjoy nature, photography and off-the-beaten-path experiences, exploring a **goa**—the Indonesian word for cave—is a rewarding way to see Banggai from a different perspective. The most notable destination to place on your itinerary is **Goa Babang**, while the wider Banggai and Banggai Islands region offers many lesser-known limestone formations that are best discovered with local guidance.

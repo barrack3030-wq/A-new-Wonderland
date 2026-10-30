@@ -1,8 +1,8 @@
 ---
 title: "Air Terjun Kamumu vs Air Terjun Salodik: Mana yang Harus Anda Kunjungi?"
 description: "Luwuk dan sekitarnya menyimpan banyak air terjun, tetapi dua nama yang paling sering muncul dalam percakapan wisatawan adalah Air Terjun Kamumu dan Air Terjun Salodik. Keduanya berada di Kecamatan Luwuk Utara, berjarak hanya beberapa kilometer satu sama lain, dan sama-sama menawarkan aliran air bertingkat yang jernih. Namun pengalaman di masing-masing tempat bisa terasa sangat berbeda, tergantung apa yang Anda cari. "
-seoTitle: "Air Terjun Kamumu vs Air Terjun Salodik: Mana yang Harus Anda Kunjungi?"
-seoDescription: "Luwuk dan sekitarnya menyimpan banyak air terjun, tetapi dua nama yang paling sering muncul dalam percakapan wisatawan adalah Air Terjun Kamumu dan Air Terjun Salodik. Keduanya berada di Kecamatan Luwuk Utara, berjarak hanya beberapa kilometer satu sama lain, dan sama-sama menawarkan aliran air bertingkat yang jernih. Namun pengalaman di masing-masing tempat bisa terasa sangat berbeda, tergantung apa yang Anda cari. "
+seoTitle: "Air Terjun Kamumu vs Salodik: Mana yang Harus Dikunjungi?"
+seoDescription: "Air Terjun Kamumu vs Salodik di Luwuk Utara: perbedaan suasana, akses, dan pengalaman agar Anda bisa memilih yang paling cocok."
 image: "/images/blog/gemini-generated-image-m0ve86m0ve86m0ve-20260914204156.jpg"
 imageAlt: "Air Terjun Kamumu vs Air Terjun Salodik: Mana yang Harus Anda Kunjungi?"
 author: "Banggai Wonderland"

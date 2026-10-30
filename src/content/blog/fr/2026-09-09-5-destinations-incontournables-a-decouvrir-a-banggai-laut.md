@@ -16,8 +16,6 @@ tags:
   - "Travel"
 ---
 
-# 5 destinations incontournables à découvrir à Banggai Laut
-
 **Banggai Laut** est une invitation au voyage hors des sentiers battus. Dans cet archipel de Sulawesi central, les lagons aux eaux cristallines, les villages côtiers et les îles couvertes de végétation tropicale composent un décor encore préservé du tourisme de masse.
 
 Depuis **Luwuk**, souvent considéré comme une porte d’entrée vers les îles Banggai, le voyage se poursuit au rythme des bateaux locaux et des traversées maritimes. Cette destination demande un peu de préparation, mais elle récompense les voyageurs à la recherche d’une Indonésie authentique, paisible et spectaculaire.

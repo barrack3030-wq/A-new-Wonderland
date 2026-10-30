@@ -17,8 +17,6 @@ tags:
   - Pulo Dua
   - wisata bahari Sulawesi
 ---
-# Tempat Terbaik untuk Snorkling di Luwuk dan sekitarnya
-
 Luwuk adalah titik awal yang praktis untuk menjelajahi pesisir dan pulau-pulau di Banggai, Sulawesi Tengah. Di kawasan ini, wisata bahari dapat berarti snorkeling dari pantai, perjalanan perahu ke perairan pulau, atau perjalanan lebih jauh ke gugusan Togean Islands. Kondisi terumbu, kejernihan air, arus, dan akses bisa berubah, jadi jangan menganggap semua lokasi aman setiap hari.
 
 Panduan ini membandingkan beberapa tempat yang layak dipertimbangkan, sekaligus menjelaskan mana yang relatif dekat dari Luwuk dan mana yang perlu perjalanan tersendiri.

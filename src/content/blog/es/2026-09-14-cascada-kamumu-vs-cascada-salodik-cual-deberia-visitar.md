@@ -1,8 +1,8 @@
 ---
 title: "Cascada Kamumu vs. Cascada Salodik: ¿Cuál debería visitar?"
 description: "Luwuk y sus alrededores albergan numerosas cascadas, pero dos nombres que aparecen con mayor frecuencia en las conversaciones entre viajeros son la Cascada Kamumu y la Cascada Salodik. Ambas se encuentran en el distrito de Luwuk Utara, a solo unos kilómetros de distancia entre sí, y ofrecen igualmente corrientes de agua cristalina dispuestas en varios niveles. Sin embargo, la experiencia en cada lugar puede ser muy diferente, dependiendo de lo que busque."
-seoTitle: "Cascada Kamumu vs. Cascada Salodik: ¿Cuál debería visitar?"
-seoDescription: "Luwuk y sus alrededores albergan numerosas cascadas, pero dos nombres que aparecen con mayor frecuencia en las conversaciones entre viajeros son la Cascada Kamumu y la Cascada Salodik. Ambas se encuentran en el distrito de Luwuk Utara, a solo unos kilómetros de distancia entre sí, y ofrecen igualmente corrientes de agua cristalina dispuestas en varios niveles. Sin embargo, la experiencia en cada lugar puede ser muy diferente, dependiendo de lo que busque."
+seoTitle: "Cascada Kamumu vs Salodik: ¿cuál deberías visitar?"
+seoDescription: "Cascada Kamumu o Salodik cerca de Luwuk: diferencias de paisaje, acceso y ambiente para elegir la que mejor encaja con tu viaje."
 image: "/images/blog/gemini-generated-image-m0ve86m0ve86m0ve-20260914204156.jpg"
 imageAlt: "Air Terjun Kamumu vs Air Terjun Salodik: Mana yang Harus Anda Kunjungi?"
 author: "Banggai Wonderland"

@@ -1,8 +1,8 @@
 ---
 title: "Comment se rendre à la cascade de Kamumu depuis Luwuk : Guide complet de l'itinéraire"
 description: "La cascade de Kamumu est l'une des destinations naturelles les plus faciles d'accès depuis Luwuk, à condition de connaître le chemin à emprunter. Contrairement au lac Paisu Pok qui nécessite une traversée en ferry vers l'île de Peleng, Kamumu se trouve sur le continent de Sulawesi, à environ 26 à 30 kilomètres au nord de Luwuk, dans le district de Luwuk Utara. Le trajet en véhicule est relativement court. Ce qui demande de l'attention, c'est la dernière partie : le trekking."
-seoTitle: "Comment aller à la cascade de Kamumu depuis Luwuk : Guide complet de l'itinéraire"
-seoDescription: "Guide de l'itinéraire vers la cascade de Kamumu depuis Luwuk. Route Trans-Sulawesi, temps de trajet, état des routes, options de transport et dernier trekking vers la cascade."
+seoTitle: "Comment aller à la cascade de Kamumu depuis Luwuk : guide"
+seoDescription: "Itinéraire vers la cascade de Kamumu depuis Luwuk : route Trans-Sulawesi, temps de trajet et état des routes."
 image: "/images/blog/images-13-20260914194738.jpg"
 imageAlt: "Cara Pergi ke Air Terjun Kamumu dari Luwuk: Panduan Rute Lengkap"
 author: "Banggai Wonderland"

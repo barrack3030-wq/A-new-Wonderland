@@ -25,8 +25,6 @@ travelTips:
   - "Siapkan uang tunai untuk parkir dan biaya lokal"
 ---
 
-# Air Terjun Mokokawa
-
 Air Terjun Mokokawa adalah **air terjun bertingkat** di perbukitan berhutan di atas **Luwuk, Kabupaten Banggai, Sulawesi Tengah**. Berbeda dari air terjun tunggal seperti Piala atau Laumarang, Mokokawa memiliki **undakan batu kapur** yang membuat air mengalir melewati beberapa tingkat batu, bukan jatuh vertikal dari satu tebing.
 
 Sebagian besar sumber menempatkannya di **Kelurahan Hanga-Hanga, Kecamatan Luwuk Selatan**, dengan akses melalui **Desa Tontouan**. Perjalanan dari Luwuk memadukan perjalanan darat dengan **trek hutan sekitar 30–45 menit**.

@@ -16,13 +16,13 @@ tags:
   - "Sulawesi Central"
 ---
 
-# ¿Kawalu Bay o Paisu Pok? Elige según tu forma de viajar
+## ¿Kawalu Bay o Paisu Pok? Elige según tu forma de viajar
 
 Las islas Banggai, en Sulawesi Central, ofrecen dos experiencias acuáticas muy distintas. **Kawalu Bay** destaca por su paisaje costero, el agua turquesa y las colinas verdes. **Paisu Pok**, en la isla de Peleng, es un lago de agua dulce conocido por su transparencia y por los árboles sumergidos que se ven bajo la superficie.
 
 La mejor opción depende del paisaje que quieras conocer, de las actividades que te interesen y del tiempo disponible para el viaje.
 
-## ¿Cuál es la diferencia entre Kawalu Bay y Paisu Pok?
+### ¿Cuál es la diferencia entre Kawalu Bay y Paisu Pok?
 
 Kawalu Bay es una bahía junto al mar; Paisu Pok es un lago de agua dulce situado tierra adentro, en la isla de Peleng.
 
@@ -30,7 +30,7 @@ En Kawalu Bay, la experiencia gira en torno al mar, la costa y las colinas que r
 
 En Paisu Pok, el principal atractivo es el agua dulce cristalina, los troncos sumergidos y el entorno natural de Luk Panenteng. Nadar, usar canoas o practicar paddleboard depende de las normas del lugar y de los servicios disponibles durante la visita.
 
-## Por qué elegir Kawalu Bay
+### Por qué elegir Kawalu Bay
 
 Kawalu Bay es una buena alternativa si prefieres el paisaje del litoral.
 
@@ -43,7 +43,7 @@ El acceso en barco y las actividades dependen del tiempo, el estado del mar y lo
 
 Consulta nuestra [guía de Kawalu Bay](/es/destinations/kawalu-bay/).
 
-## Por qué elegir el lago Paisu Pok
+### Por qué elegir el lago Paisu Pok
 
 Paisu Pok encaja mejor con quienes buscan un lago de agua dulce excepcionalmente transparente.
 
@@ -56,7 +56,7 @@ Respeta las indicaciones locales, no introduzcas jabón ni productos químicos e
 
 Para preparar la visita, consulta nuestra [guía del lago Paisu Pok](/es/destinations/paisu-pok-lake/).
 
-## ¿Se pueden visitar ambos en un mismo viaje?
+### ¿Se pueden visitar ambos en un mismo viaje?
 
 Puede ser posible si dispones de suficientes días, pero no conviene dar por hecho que ambos lugares se pueden visitar cómodamente en una sola jornada. Los desplazamientos por las islas Banggai pueden incluir carreteras, cruces en barco y transporte organizado localmente.
 
@@ -68,7 +68,7 @@ Antes de decidir la ruta:
 4. Evita conexiones demasiado ajustadas con un vuelo.
 5. Valora dormir cerca del destino si volver el mismo día resulta agotador.
 
-## ¿Qué destino es mejor para ti?
+### ¿Qué destino es mejor para ti?
 
 **Elige Kawalu Bay** si buscas costa, vistas al mar y posibles actividades marinas organizadas localmente.
 
@@ -78,21 +78,21 @@ Antes de decidir la ruta:
 
 No hay una opción mejor para todo el mundo. La mejor elección es la que se adapta a tu ritmo y a tus intereses.
 
-## Preguntas frecuentes
+### Preguntas frecuentes
 
-### ¿Kawalu Bay y Paisu Pok son el mismo lugar?
+#### ¿Kawalu Bay y Paisu Pok son el mismo lugar?
 
 No. Kawalu Bay es una bahía costera y Paisu Pok es un lago de agua dulce situado en la isla de Peleng.
 
-### ¿Se puede hacer snorkel en ambos lugares?
+#### ¿Se puede hacer snorkel en ambos lugares?
 
 El snorkel puede ser posible en Kawalu Bay según el estado del mar y los acuerdos locales. Paisu Pok es un lago de agua dulce, por lo que las actividades acuáticas deben respetar las normas del lugar.
 
-### ¿Cómo puedo confirmar el transporte?
+#### ¿Cómo puedo confirmar el transporte?
 
 Pregunta a un operador local o a tu alojamiento por las opciones actuales de barco y transporte por carretera. Los horarios pueden cambiar.
 
-### ¿Banggai Wonderland puede ayudar a organizar la visita?
+#### ¿Banggai Wonderland puede ayudar a organizar la visita?
 
 Banggai Wonderland puede ayudarte a conversar sobre un viaje privado según tus fechas, intereses y necesidades de transporte. Consulta la información de [viajes a Banggai](/es/banggai-trip/) y confirma los detalles antes de reservar.
 

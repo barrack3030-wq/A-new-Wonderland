@@ -16,8 +16,6 @@ tags:
   - "Islas de Indonesia"
 ---
 
-# 5 destinos imprescindibles que visitar en Banggai Laut
-
 En el este de Sulawesi Central, **Banggai Laut** conserva algunos de los paisajes más tranquilos y auténticos de Indonesia. Sus aguas transparentes, pequeñas islas, costas de arena clara y comunidades pesqueras ofrecen una experiencia diferente a la de los destinos tropicales más conocidos.
 
 Si buscas naturaleza, navegación entre islas y momentos de calma lejos de las grandes multitudes, este archipiélago merece un lugar destacado en tu itinerario. A continuación, te presentamos cinco destinos que puedes incluir en tu viaje por Banggai Laut.

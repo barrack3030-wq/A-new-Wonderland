@@ -16,8 +16,6 @@ tags:
   - "Luwuk"
 ---
 
-# Quand la mer change les plans : prévoir une alternative pour les îles Banggai
-
 Les excursions entre les îles Banggai dépendent des conditions en mer, pas seulement de l'itinéraire prévu. Un vent plus fort, une houle importante, de fortes pluies ou une visibilité réduite peuvent rendre une sortie en bateau inadaptée. Prévoir une solution de repli ne signifie pas que le voyage est raté : cela permet de prendre des décisions raisonnables sans faire passer le programme avant la sécurité.
 
 ## Les points à vérifier avant de payer

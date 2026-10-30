@@ -16,8 +16,6 @@ tags:
   - Mariona Lake
   - Central Sulawesi travel
 ---
-# Togean Islands Travel Guide: Snorkeling, Jellyfish Lake and How to Get There
-
 Set in the Gulf of Tomini in Central Sulawesi, the Togean Islands are a destination for travelers who enjoy tropical islands, coral reefs, quiet beaches and time on the water. Reaching the archipelago takes planning, so it is best treated as a multi-day stay rather than a quick side trip.
 
 The islands lie within Togean Islands National Park, a protected landscape that includes coral reefs, seagrass beds, mangroves and tropical forest. This variety makes the area appealing to snorkelers, divers, nature photographers and travelers interested in community-based tourism.

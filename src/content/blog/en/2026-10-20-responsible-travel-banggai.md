@@ -17,8 +17,6 @@ tags:
   - Sustainable Tourism
 ---
 
-# Responsible Travel in Banggai: Protecting the Sea and Local Communities
-
 The Banggai Islands are known for clear water, small islands, beaches, and distinctive marine life. These places are not only there to be enjoyed; they also need to be cared for. A few simple choices during a trip can reduce pressure on the environment and help tourism bring more benefits to local communities.
 
 ## Snorkel and explore the sea carefully

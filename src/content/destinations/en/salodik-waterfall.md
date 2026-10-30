@@ -2,7 +2,7 @@
 title: Salodik Waterfall
 description: Salodik Waterfall near Luwuk is a terraced roadside cascade with clear blue-green water, easy access and family-friendly facilities.
 seoTitle: "Salodik Waterfall Luwuk | Banggai Waterfall Guide"
-seoDescription: Salodik Waterfall on the Trans Sulawesi highway near Luwuk offers a terraced cascade with clear blue-green water and easy roadside access. Guide to fees and facilities.
+seoDescription: "Salodik Waterfall on the Trans Sulawesi highway near Luwuk offers a terraced cascade with clear blue-green water and easy roadside access."
 image: /images/images (3).jpg
 imageAlt: Terraced cascade of Salodik Waterfall flowing over stepped rock shelves with clear blue-green water surrounded by forest in Luwuk, Banggai, Central Sulawesi.
 location: Salodik, North Luwuk, Banggai Regency, Central Sulawesi

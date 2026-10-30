@@ -14,8 +14,6 @@ tags:
   - "Viajar por Sulawesi"
 ---
 
-# Pulo Dua, Banggai: Qué Confirmar Antes de Organizar la Excursión
-
 Pulo Dua, en la zona de Kampangar, aparece en las guías de viaje por sus vistas costeras y su paisaje de pequeñas islas. Para disfrutar de la visita sin improvisar, conviene resolver primero la logística local: dónde empieza la excursión, cómo se llega al punto de embarque y qué incluye el precio acordado.
 
 No des por hecho que una tarifa o un horario publicado por otro viajero sigue vigente. Las condiciones pueden depender del operador, del estado del mar y del tipo de transporte elegido.

@@ -15,8 +15,6 @@ tags:
 translationKey: "banggai-islands-4-day-itinerary-from-luwuk"
 ---
 
-# Itinerario por las islas Banggai: 4 días desde Luwuk
-
 Para visitar las islas Banggai no basta con elegir lugares bonitos en el mapa. Hay que coordinar la salida desde Luwuk, el ferry, los traslados por la isla de Peleng, el alojamiento y el tiempo disponible en cada parada. Un viaje de varios días permite disfrutar del paisaje sin intentar verlo todo con prisas.
 
 Este itinerario es una estructura para organizar el viaje, no un horario garantizado. Los ferris, el estado de las carreteras, el mar y el acceso a cada lugar pueden variar; confirma la logística para tus fechas.

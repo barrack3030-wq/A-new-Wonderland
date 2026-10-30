@@ -16,8 +16,6 @@ tags:
   - "travel from australia"
 ---
 
-# How to Get to the Banggai Islands from Australia: Flights, Luwuk and Ferry Guide
-
 The Banggai Islands are in eastern Indonesia, off the coast of Central Sulawesi. For travellers coming from Australia, the journey is not a single direct flight. The practical route is to reach an Indonesian gateway first, continue to Luwuk, and then travel by road and sea to the islands.
 
 That may sound complicated, but once you understand the route, planning becomes much easier.

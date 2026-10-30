@@ -16,8 +16,6 @@ tags:
   - "Itinerary"
 ---
 
-# Danau Paisu Pok: Panduan Wisata Lengkap
-
 Anda mungkin sudah melihat fotonya sebelum mengetahui namanya: air biru-hijau yang sangat jernih, pepohonan yang terlihat di bawah permukaan, dan vegetasi tropis di sekitar danau.
 
 Yang biasanya tidak terlihat dari foto adalah geografisnya.
@@ -28,7 +26,7 @@ Danau ini berada di **Desa Luk Panenteng, Pulau Peleng, Kabupaten Banggai Kepula
 
 Hal ini penting untuk itinerary. Paisu Pok bukan sekadar destinasi singkat dari Luwuk. Anda perlu menghitung penyeberangan, perjalanan darat, penginapan, waktu kunjungan, dan perjalanan kembali.
 
-## Danau Paisu Pok secara singkat
+### Danau Paisu Pok secara singkat
 
 | Informasi | Detail |
 |---|---|
@@ -40,7 +38,7 @@ Hal ini penting untuk itinerary. Paisu Pok bukan sekadar destinasi singkat dari 
 | **Durasi yang disarankan** | 2–3 hari |
 | **Base paling praktis** | Luk Panenteng / Peleng |
 
-# Di Mana Danau Paisu Pok?
+## Di Mana Danau Paisu Pok?
 
 Untuk first-time traveler, bayangkan rutenya sebagai rangkaian berikut:
 
@@ -54,7 +52,7 @@ Untuk first-time traveler, bayangkan rutenya sebagai rangkaian berikut:
 
 Kesalahan pertama yang perlu dihindari adalah menganggap tiba di Luwuk berarti sudah dekat dengan danau.
 
-# Seperti Apa Danau Paisu Pok?
+## Seperti Apa Danau Paisu Pok?
 
 Daya tarik utamanya adalah kejernihan air.
 
@@ -64,7 +62,7 @@ Tampilan danau juga berubah mengikuti cahaya. Warna air dan pantulan bisa berbed
 
 Paisu Pok juga semakin dikenal. Foto yang terlihat sepi di internet tidak berarti danau selalu kosong sepanjang hari.
 
-# Cara ke Danau Paisu Pok
+## Cara ke Danau Paisu Pok
 
 Bagi wisatawan yang memulai perjalanan dari Luwuk, salah satu rute praktis adalah:
 
@@ -74,7 +72,7 @@ Bagian pertama menggunakan kapal. Setelah tiba di Peleng, perjalanan dilanjutkan
 
 Pilihan transportasi lokal bisa berbeda tergantung hari, cuaca, dan ketersediaan kapal. Karena itu, konfirmasi kondisi transportasi sebelum berangkat lebih penting daripada mengandalkan jadwal lama di internet.
 
-# Berapa Lama Perjalanan ke Paisu Pok?
+## Berapa Lama Perjalanan ke Paisu Pok?
 
 Jangan hanya menghitung durasi kapal.
 
@@ -87,7 +85,7 @@ Jangan hanya menghitung durasi kapal.
 
 Informasi waktu penyeberangan yang tersedia dapat berbeda, sehingga itinerary sebaiknya menggunakan **buffer waktu**, bukan rangkaian koneksi yang terlalu rapat.
 
-# Apakah Bisa Day Trip ke Paisu Pok?
+## Apakah Bisa Day Trip ke Paisu Pok?
 
 Tergantung transportasi.
 
@@ -101,7 +99,7 @@ Tergantung transportasi.
 
 Dengan transportasi umum, perjalanan satu hari kurang fleksibel. Private speedboat dapat membuat day trip lebih memungkinkan ketika tersedia dan kondisi laut mendukung.
 
-# Itinerary Danau Paisu Pok 2 Hari
+## Itinerary Danau Paisu Pok 2 Hari
 
 | Hari | Rute | Aktivitas utama | Menginap |
 |---|---|---|---|
@@ -110,7 +108,7 @@ Dengan transportasi umum, perjalanan satu hari kurang fleksibel. Private speedbo
 
 Dua hari memberikan ruang untuk menghadapi keterlambatan tanpa membuat kunjungan ke danau terganggu.
 
-# Itinerary Danau Paisu Pok 3 Hari
+## Itinerary Danau Paisu Pok 3 Hari
 
 | Hari | Rute | Aktivitas utama | Menginap |
 |---|---|---|---|
@@ -120,7 +118,7 @@ Dua hari memberikan ruang untuk menghadapi keterlambatan tanpa membuat kunjungan
 
 Tiga hari lebih nyaman bagi traveler yang ingin bergerak santai atau membutuhkan ruang untuk perubahan jadwal kapal.
 
-# Kapan Sebaiknya ke Paisu Pok?
+## Kapan Sebaiknya ke Paisu Pok?
 
 Ada dua hal yang perlu diperhitungkan: **musim dan jam kunjungan**.
 
@@ -130,7 +128,7 @@ Ketika kunjungan harian mulai berdatangan, kawasan danau bisa menjadi lebih rama
 
 Untuk pembahasan musiman yang lebih detail, gunakan artikel khusus tentang waktu terbaik mengunjungi Paisu Pok.
 
-# Sebaiknya Menginap di Mana?
+## Sebaiknya Menginap di Mana?
 
 | Lokasi | Cocok untuk | Catatan |
 |---|---|---|
@@ -140,7 +138,7 @@ Untuk pembahasan musiman yang lebih detail, gunakan artikel khusus tentang waktu
 
 Untuk perjalanan yang fokus pada Paisu Pok, menginap di Peleng biasanya membuat itinerary lebih mudah.
 
-# Apa yang Perlu Disiapkan?
+## Apa yang Perlu Disiapkan?
 
 | Barang / persiapan | Kegunaan |
 |---|---|
@@ -157,37 +155,37 @@ Persiapan paling penting bukan perlengkapan mahal, melainkan **logistik yang jel
 
 Sebelum meninggalkan Luwuk, ketahui cara menyeberang ke Peleng, cara melanjutkan ke Luk Panenteng, tempat menginap, dan bagaimana cara kembali.
 
-# Kesalahan First-Time Traveler yang Sering Terjadi
+## Kesalahan First-Time Traveler yang Sering Terjadi
 
-## 1. Menganggap Paisu Pok berada di Luwuk
+### 1. Menganggap Paisu Pok berada di Luwuk
 
 Luwuk adalah gerbang. Paisu Pok berada di Pulau Peleng.
 
-## 2. Menganggap jadwal kapal pasti
+### 2. Menganggap jadwal kapal pasti
 
 Transportasi laut lokal dapat berubah. Konfirmasi layanan aktual sebelum menyusun koneksi berikutnya.
 
-## 3. Lupa perjalanan darat
+### 3. Lupa perjalanan darat
 
 Tiba di Peleng bukan berarti tiba di danau.
 
-## 4. Menjadwalkan kapal terlalu dekat dengan penerbangan
+### 4. Menjadwalkan kapal terlalu dekat dengan penerbangan
 
 Sisakan waktu untuk bagasi, perjalanan ke pelabuhan, dan kemungkinan keterlambatan.
 
-## 5. Memaksakan semuanya dalam satu hari
+### 5. Memaksakan semuanya dalam satu hari
 
 Private trip mungkin memungkinkan, tetapi transportasi umum memiliki ruang kesalahan yang jauh lebih kecil.
 
-## 6. Menganggap danau selalu sepi
+### 6. Menganggap danau selalu sepi
 
 Paisu Pok semakin dikenal wisatawan. Foto yang tenang hanya menunjukkan satu momen.
 
-## 7. Terlalu terburu-buru
+### 7. Terlalu terburu-buru
 
 Paisu Pok lebih nikmat jika Anda tidak harus terus melihat jam.
 
-# Kapal Umum atau Private Speedboat?
+## Kapal Umum atau Private Speedboat?
 
 | | Kapal Umum / Lokal | Private Speedboat |
 |---|---|---|
@@ -199,7 +197,7 @@ Paisu Pok lebih nikmat jika Anda tidak harus terus melihat jam.
 
 Pilihan terbaik bergantung pada pola perjalanan Anda. Kapal umum cocok untuk perjalanan santai. Private boat memberikan fleksibilitas.
 
-# Apa yang Bisa Dilakukan di Paisu Pok?
+## Apa yang Bisa Dilakukan di Paisu Pok?
 
 | Aktivitas | Manfaat |
 |---|---|
@@ -210,7 +208,7 @@ Pilihan terbaik bergantung pada pola perjalanan Anda. Kapal umum cocok untuk per
 | **Fotografi** | Menangkap air, pantulan, dan pohon terendam |
 | **Mengunjungi Luk Panenteng** | Mengenal lingkungan lokal |
 
-# Checklist Perjalanan Paisu Pok
+## Checklist Perjalanan Paisu Pok
 
 | Periksa | Siap? |
 |---|---|
@@ -225,7 +223,7 @@ Pilihan terbaik bergantung pada pola perjalanan Anda. Kapal umum cocok untuk per
 
 Tujuannya bukan membuat perjalanan kaku, tetapi mencegah masalah yang sebenarnya bisa dihindari.
 
-# Berapa Hari yang Dibutuhkan?
+## Berapa Hari yang Dibutuhkan?
 
 | Waktu tersedia | Pendekatan |
 |---|---|
@@ -236,17 +234,17 @@ Tujuannya bukan membuat perjalanan kaku, tetapi mencegah masalah yang sebenarnya
 
 Untuk first-time traveler, dua sampai tiga hari memberikan ruang perjalanan yang lebih nyaman.
 
-# FAQ
+## FAQ
 
-## Di mana Danau Paisu Pok berada?
+### Di mana Danau Paisu Pok berada?
 
 Danau Paisu Pok berada di Desa Luk Panenteng, Pulau Peleng, Kabupaten Banggai Kepulauan.
 
-## Apakah Paisu Pok berada di Luwuk?
+### Apakah Paisu Pok berada di Luwuk?
 
 Tidak. Luwuk adalah gerbang dari daratan, sedangkan Paisu Pok berada di Pulau Peleng.
 
-## Bagaimana cara ke Paisu Pok dari Luwuk?
+### Bagaimana cara ke Paisu Pok dari Luwuk?
 
 Salah satu rute praktis:
 
@@ -254,23 +252,23 @@ Salah satu rute praktis:
 
 Rutenya memadukan perjalanan laut dan darat.
 
-## Berapa lama perjalanan?
+### Berapa lama perjalanan?
 
 Sediakan beberapa jam untuk penyeberangan, sekitar satu jam perjalanan darat dari Leme-Leme menuju Luk Panenteng, serta waktu tunggu dan perpindahan.
 
-## Apakah bisa day trip?
+### Apakah bisa day trip?
 
 Dengan private transport, perjalanan sehari dapat dilakukan dalam kondisi tertentu. Dengan transportasi umum, menginap di Peleng biasanya lebih praktis.
 
-## Di mana sebaiknya menginap?
+### Di mana sebaiknya menginap?
 
 Luk Panenteng adalah base yang paling praktis bila tujuan utama perjalanan adalah Paisu Pok.
 
-## Apa yang perlu dibawa?
+### Apa yang perlu dibawa?
 
 Uang tunai, air minum, dry bag, power bank, pakaian renang, sepatu nyaman, dan perlengkapan hujan.
 
-# Penutup
+## Penutup
 
 Danau Paisu Pok akan lebih mudah dipahami jika Anda tidak melihatnya sebagai destinasi singkat di sekitar Luwuk.
 

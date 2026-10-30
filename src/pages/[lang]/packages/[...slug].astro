@@ -53,7 +53,7 @@ const schema = {
 };
 ---
 
-<BaseLayout title={`${entry.data.title} | Banggai Wonderland`} description={entry.data.description} seoTitle={entry.data.seoTitle} seoDescription={entry.data.seoDescription} ogImage={entry.data.image} imageAlt={entry.data.imageAlt} schema={schema}>
+<BaseLayout title={(entry.data.title + ' | Banggai Wonderland').length <= 60 ? entry.data.title + ' | Banggai Wonderland' : entry.data.title} description={entry.data.description} seoTitle={entry.data.seoTitle} seoDescription={entry.data.seoDescription} ogImage={entry.data.image} imageAlt={entry.data.imageAlt} schema={schema}>
   <section class="relative h-[60vh] min-h-[450px] flex items-end pb-16 pt-32">
     <div class="absolute inset-0 z-0"><img src={entry.data.image} alt={entry.data.imageAlt || entry.data.title} class="w-full h-full object-cover" loading="eager" /><div class="absolute inset-0 bg-gradient-to-t from-ocean-700 via-ocean-800/40 to-transparent"></div></div>
     <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">

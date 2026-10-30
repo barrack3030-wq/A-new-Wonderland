@@ -15,8 +15,6 @@ tags:
 
 ![Apakah Bulan September Waktu yang Tepat Pergi ke Mbuang-Mbuang?](/images/blog/1000603141-20260910201805.jpg)
 
-# Apakah Bulan September Waktu yang Tepat Pergi ke Mbuang-Mbuang?
-
 Jawaban singkatnya: **ya, sangat tepat—mungkin salah satu bulan terbaik.** Tapi bukan tanpa catatan. Mari kita bedah satu per satu, bukan sekadar *"karena musim kemarau"*.
 
 ---

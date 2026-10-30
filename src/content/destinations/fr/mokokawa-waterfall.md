@@ -25,8 +25,6 @@ travelTips:
   - "Emportez de l'argent liquide pour le stationnement et les frais locaux"
 ---
 
-# Cascade de Mokokawa
-
 La **cascade de Mokokawa** est une cascade en terrasses située dans les collines boisées au-dessus de **Luwuk, dans la régence de Banggai, Sulawesi central**. Contrairement aux chutes en une seule verticale comme Piala ou Laumarang, Mokokawa se distingue par ses **gradins de calcaire**, sur lesquels l'eau descend par plusieurs niveaux.
 
 La plupart des sources la situent à **Kelurahan Hanga-Hanga, Kecamatan Luwuk Selatan**, avec un accès par **Desa Tontouan**. Depuis Luwuk, le trajet combine la route et un **sentier forestier de 30 à 45 minutes**.

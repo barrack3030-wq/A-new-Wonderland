@@ -27,8 +27,6 @@ travelTips:
 youtube: "https://www.youtube.com/watch?v=zcwUg-FHlcw"
 ---
 
-# Oyama Beach Banggai: Boat Access, Snorkeling and Travel Guide
-
 Oyama Beach is a white-sand beach on the **northern tip of Banggai Island in Banggai Laut Regency, Central Sulawesi**. This guide covers how to get to Oyama Beach, boat access from Lokotoy or Popisi, snorkeling, the best time to visit, and what to bring. It sits in the **Lokotoy / Pasir Putih area of North Banggai District**, but the exact village name varies between sources—some place it in Desa Lokotoy, others in Desa Pasir Putih. What is consistent is the setting: fine white sand, calm turquoise water, and a large mangrove forest directly behind the shoreline.
 
 The beach is **not accessible by road**. The northern tip of Banggai Island is cut off by the mangrove, so the only way in is by boat—typically a short crossing from the villages of **Lokotoy** or **Popisi**. This is the main practical constraint, and also the reason Oyama remains quieter than beaches like Bontolan or Kilo 5.

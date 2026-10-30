@@ -1,8 +1,8 @@
 ---
 title: Explorando la cascada de Piala
-description: Discover more about Explorando la cascada de Piala in Banggai Wonderland.
-seoTitle: ''
-seoDescription: ''
+description: "Guía de la cascada de Piala cerca de Luwuk, Banggai, con ubicación, actividades y consejos prácticos de viaje."
+seoTitle: "Cascada de Piala en Luwuk | Guía de viaje de Banggai"
+seoDescription: "Guía de la cascada de Piala cerca de Luwuk, Banggai, Sulawesi Central, con ubicación, actividades y consejos prácticos de viaje."
 image: /images/piala.jpg
 imageAlt: ''
 author: Nature Lover
@@ -11,8 +11,6 @@ tags:
   - Waterfall
   - Trekking
 ---
-
-# Explorando la Cascada de Piala: Un Paraíso Tropical Escondido en Luwuk
 
 **Descubre la belleza natural de la Cascada de Piala, una de las joyas escondidas cerca de Luwuk, en Banggai, Indonesia.**
 

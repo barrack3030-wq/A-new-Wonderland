@@ -44,8 +44,6 @@ itinerary:
     description: Enjoy a flexible morning in Luwuk, visit a nearby attraction if time allows, then transfer to the airport.
 ---
 
-# Paket Wisata Banggai 5 Hari 4 Malam
-
 **5 Hari 4 Malam**
 
 **Luwuk • Salakan • Peleng • Paisu Pok**

@@ -16,8 +16,6 @@ tags:
   - Lago Mariona
   - turismo en Célebes Central
 ---
-# Guía de viaje a las islas Togean: snorkel, lago de medusas y cómo llegar
-
 En el golfo de Tomini, en Célebes Central, las islas Togean ofrecen playas tranquilas, arrecifes de coral y excursiones por mar. Llegar requiere organizar los transportes, por lo que conviene dedicar varios días en lugar de tratarlas como una visita rápida.
 
 El archipiélago forma parte del Parque Nacional de las Islas Togean, un área protegida con arrecifes, praderas marinas, manglares y bosque tropical. Es un destino interesante para quienes disfrutan del snorkel, el buceo, la fotografía de naturaleza y el turismo comunitario.

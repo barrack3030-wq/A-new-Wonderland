@@ -4,8 +4,8 @@ image: /images/blog/images-11-20260912170453.jpg
 imageAlt: 'Kamumu Waterfall: Air Terjun di Tengah Keindahan Alam Banggai'
 title: 'Cascade de Kamumu : Une cascade au cœur de la beauté naturelle de Banggai'
 description: Discover Hidden Paradise of Banggai Il y a quelque chose de magique dans une cascade cachée au milieu d'une forêt de pins. Le murmure de l'eau tombant de marches rocheuses naturelles, l'arôme caractéristique de la résine de pin et l'air frais qui rafraîchit les poumons — tout cela crée une expérience loin de l'agitation de la ville. Voici la cascade de Kamumu, un joyau caché dans le village de Kamumu, district de Luwuk Utara, régence de Banggai, Sulawesi T
-seoTitle: 'Cascade de Kamumu : Une cascade au cœur de la beauté naturelle de Banggai'
-seoDescription: Discover Hidden Paradise of Banggai Il y a quelque chose de magique dans une cascade cachée au milieu d'une forêt de pins. Le murmure de l'eau tombant de marches rocheuses naturelles, l'arôme caractéristique de la résine de pin et l'air frais qui rafraîchit les poumons — tout cela crée une expérience loin de l'agitation de la ville. Voici la cascade de Kamumu, un joyau caché dans le village de Kamumu, district de Luwuk Utara, régence de Banggai, Sulawesi T
+seoTitle: "Cascade de Kamumu : nature à Luwuk Utara, Banggai"
+seoDescription: "Cascade de Kamumu à Luwuk Utara, Banggai : un joyau caché dans une forêt de pins, aux eaux limpides en plusieurs niveaux. À quoi s’attendre et comment la visiter."
 author: Banggai Wonderland
 pubDate: 2026-09-12
 tags:

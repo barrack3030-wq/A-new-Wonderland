@@ -1,7 +1,7 @@
 ---
 title: "Combien de jours idéalement passer pour des vacances à Banggai ? Guide de durée de séjour"
 description: "Vous hésitez sur la durée de vos vacances à Banggai ? Guide de durée de séjour de 3D2N à 7 jours, itinéraire et estimation des coûts pour les voyageurs."
-seoTitle: "Combien de jours idéalement passer pour des vacances à Banggai ? Guide de durée de séjour"
+seoTitle: "Combien de jours pour visiter Banggai ? Guide de durée"
 seoDescription: "Vous hésitez sur la durée de vos vacances à Banggai ? Guide de durée de séjour de 3D2N à 7 jours, itinéraire et estimation des coûts pour les voyageurs."
 image: "/images/blog/mbuang-mbuang-banggai-laut-20260914165440.webp"
 imageAlt: "Berapa Hari Ideal untuk Liburan ke Banggai? Panduan Durasi Trip"

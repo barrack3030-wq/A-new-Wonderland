@@ -4,8 +4,8 @@ image: /images/blog/pulo-dua-20260909110950.webp
 imageAlt: Banggai destination in Indonesia
 title: Complete Route to Pulo Dua from Luwuk Airport for First-Time Travelers
 description: Get to know Pulo Dua, a Hidden Paradise in Eastern Sulawesi. Have you ever imagined standing on the peak of a green hill, gazing at an expanse of golden-blue sea at sunset, with the soothing sound of crashing waves? That is Pulo Dua. Located in North Balantak District, Banggai Regency, Central Sulawesi, Pulo Dua is a marine tourism destination dubbed the "Padar Island of Sulawesi" due to the similarity of its views wi
-seoTitle: A complete travel route guide from Syukuran Aminuddin Amir Airport (Luwuk) to the hidden paradise of Pulo Dua in Balantak, Central Sulawesi. Complete with transportation info, costs, tips, and itineraries for beginner travelers.
-seoDescription: Complete Route to Pulo Dua from Luwuk Airport for Beginner Travelers. "The Padar Island of Sulawesi" — an exotic destination featuring green hills, blue seas, and pristine underwater beauty.
+seoTitle: "Route to Pulo Dua from Luwuk Airport: Complete Guide"
+seoDescription: "Route from Luwuk Airport to Pulo Dua, the “Padar Island of Sulawesi”: green hills, blue sea and pristine reefs. A beginner-friendly guide."
 author: Banggai Wonderland
 pubDate: 2026-09-09
 tags:

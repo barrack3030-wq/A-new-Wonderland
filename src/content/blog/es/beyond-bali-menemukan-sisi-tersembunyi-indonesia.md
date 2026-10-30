@@ -2,7 +2,7 @@
 title: 'Banggai Wonderland: descubre el paraíso oculto de Indonesia'
 description: 'Descubre Banggai, en Sulawesi Central: lagos de aguas cristalinas, playas tranquilas, cascadas, islas tropicales y experiencias locales auténticas.'
 seoTitle: 'Banggai Wonderland: descubre el paraíso oculto de Indonesia'
-seoDescription: 'Explora Luwuk y Banggai en Sulawesi Central, Indonesia, con lagos cristalinos, playas apartadas, cascadas, islas tropicales y experiencias que van más allá de las rutas habituales.'
+seoDescription: "Explora Luwuk y Banggai en Sulawesi Central, Indonesia: lagos cristalinos, playas apartadas, cascadas e islas tropicales."
 image: /images/Poganda-Beach-Banggai-IndonesiaJuara-Trip.webp
 imageAlt: 'Poganda Beach en Banggai, Indonesia'
 author: 'aji'
@@ -15,8 +15,6 @@ tags:
   - Sulawesi
   - Islas Banggai
 ---
-
-# Banggai Wonderland: descubre el paraíso oculto de Indonesia
 
 Hay una Indonesia que todo el mundo conoce.
 

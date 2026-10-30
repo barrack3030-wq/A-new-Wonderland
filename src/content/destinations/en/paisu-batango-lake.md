@@ -26,8 +26,6 @@ travelTips:
 youtube: "https://www.youtube.com/watch?v=7RTzL8yKLM4"
 ---
 
-# Paisu Batango: The Spring Where Three Waters Meet
-
 Paisu Batango is a **coastal freshwater spring and lagoon** in **Desa Luk Panenteng, Kecamatan Bulagi Utara, Kabupaten Banggai Kepulauan, Central Sulawesi**, on **Peleng Island**. It sits on the southern side of the village, about **15 minutes before** the better-known **Paisu Pok Lake**. Many travelers pass it on the way to Paisu Pok without realizing that it is a destination in its own right.
 
 The name explains the setting. In the local language, **paisu means water** and **batango means tree trunk**, referring to spring water emerging near the base of a tree trunk and forming a small pool. It is not a conventional lake, but a **tidal spring pool** where different types of water meet.

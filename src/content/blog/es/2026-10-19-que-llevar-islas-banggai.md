@@ -16,8 +16,6 @@ tags:
   - snorkel
   - Luwuk
 ---
-# Qué llevar a las islas Banggai: lista práctica para el viaje
-
 Un viaje por Luwuk, la isla de Peleng y las islas Banggai puede incluir trayectos por carretera, traslados en barco, paradas para nadar y noches en lugares con pocas tiendas o servicios. Preparar bien el equipaje ayuda a viajar con comodidad sin cargar cosas innecesarias.
 
 Usa esta lista como punto de partida y ajústala a tu ruta, la época del año y el alojamiento reservado.

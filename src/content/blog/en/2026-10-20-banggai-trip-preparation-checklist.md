@@ -1,7 +1,7 @@
 ---
 title: "Banggai Travel Preparation Checklist: What to Know Before You Go"
 description: "A practical guide to transport connections, cash, boat schedules, accommodation, weather, and essentials for exploring Luwuk and the Banggai Islands."
-seoTitle: "Banggai Travel Checklist | Preparing for Luwuk and the Banggai Islands"
+seoTitle: "Banggai Travel Checklist: Preparing for Luwuk & the Islands"
 seoDescription: "Plan a smoother trip to Banggai. Check transport connections, boats, cash, accommodation, and marine safety before you travel."
 image: "https://upload.wikimedia.org/wikipedia/commons/0/02/Kadidiri%2C_morning_view_%286972093459%29.jpg"
 imageAlt: "A tropical island and clear sea in Indonesia"
@@ -16,8 +16,6 @@ tags:
   - Banggai Islands
   - Sulawesi travel
 ---
-
-# Banggai Travel Preparation Checklist: What to Know Before You Go
 
 Luwuk and the Banggai Islands in Sulawesi offer beaches, islands, and beautiful seascapes. Getting between islands, however, may require a combination of road and boat travel rather than flights alone. A few checks before departure can help you avoid last-minute changes.
 

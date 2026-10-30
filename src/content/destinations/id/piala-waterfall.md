@@ -2,7 +2,7 @@
 title: Air Terjun Piala
 description: Air Terjun Piala di dekat Luwuk adalah kaskade bertingkat dengan kolam hijau kebiruan yang jernih, trek hutan singkat, dan fasilitas wisata yang dikelola.
 seoTitle: "Air Terjun Piala Luwuk | Wisata Air Terjun Banggai"
-seoDescription: Air Terjun Piala di dekat Luwuk adalah kaskade bertingkat dengan kolam hijau kebiruan jernih, hanya 30 menit dari kota. Panduan tiket, akses, fasilitas dan waktu terbaik.
+seoDescription: "Air Terjun Piala di dekat Luwuk adalah kaskade bertingkat dengan kolam hijau kebiruan jernih, hanya 30 menit dari kota."
 image: /images/piala.jpg
 imageAlt: Kaskade bertingkat Air Terjun Piala mengalir di undakan batu ke kolam alami hijau kebiruan dikelilingi hutan di Hanga-Hanga, Luwuk, Banggai, Sulawesi Tengah.
 location: Luwuk, Kabupaten Banggai, Sulawesi Tengah

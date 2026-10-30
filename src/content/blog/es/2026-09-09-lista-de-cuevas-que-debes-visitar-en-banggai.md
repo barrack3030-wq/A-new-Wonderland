@@ -14,8 +14,6 @@ tags:
   - "Travel"
 ---
 
-# Cuevas que debes visitar en Banggai
-
 Banggai no solo enamora por sus playas turquesas, lagunas y pequeñas islas cubiertas de vegetación. Bajo sus paisajes tropicales también se esconden cuevas de piedra caliza, formaciones rocosas y espacios naturales que conservan una atmósfera tranquila y casi intacta.
 
 Visitar una cueva en Banggai es una oportunidad para conocer otra cara del destino: más silenciosa, aventurera y vinculada a la vida de las comunidades locales. Algunas se encuentran cerca de pueblos costeros, mientras que otras requieren desplazamientos por caminos rurales, senderos o zonas que dependen de las condiciones del tiempo.

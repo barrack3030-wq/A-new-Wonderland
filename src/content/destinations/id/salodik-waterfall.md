@@ -2,7 +2,7 @@
 title: Air Terjun Salodik
 description: Air Terjun Salodik dekat Luwuk adalah kaskade bertingkat di tepi jalan dengan air biru kehijauan yang jernih, akses mudah dan fasilitas ramah keluarga.
 seoTitle: "Air Terjun Salodik Luwuk | Wisata Air Terjun Banggai"
-seoDescription: Air Terjun Salodik di Jalan Trans Sulawesi dekat Luwuk menawarkan kaskade bertingkat dengan air biru kehijauan jernih dan akses pinggir jalan. Panduan tiket dan fasilitas.
+seoDescription: "Air Terjun Salodik di Jalan Trans Sulawesi dekat Luwuk menawarkan kaskade bertingkat dengan air biru kehijauan jernih dan akses pinggir jalan."
 image: /images/images (3).jpg
 imageAlt: Kaskade bertingkat Air Terjun Salodik mengalir di undakan batu dengan air biru kehijauan jernih dikelilingi hutan di Luwuk, Banggai, Sulawesi Tengah.
 location: Salodik, Luwuk Utara, Kabupaten Banggai, Sulawesi Tengah

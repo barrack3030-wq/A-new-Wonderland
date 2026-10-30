@@ -16,8 +16,6 @@ tags:
   - snorkeling
   - Luwuk travel
 ---
-# What to Pack for the Banggai Islands: A Practical Travel Checklist
-
 A trip around Luwuk, Peleng Island and the Banggai Islands can include road journeys, boat transfers, swimming stops and nights in places where shops and services are limited. Packing well helps you stay comfortable without carrying more than you need.
 
 Use this checklist as a starting point, then adjust it to your route, the season and the accommodation you have booked.

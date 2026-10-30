@@ -16,8 +16,6 @@ tags:
   - "Guía de viaje"
 ---
 
-# Cómo llegar a Paisu Pok desde Luwuk
-
 Paisu Pok es uno de los paisajes naturales más conocidos de las Islas Banggai, pero hay algo importante que debes saber antes de organizar el viaje: **Paisu Pok no está en Luwuk**.
 
 El lago se encuentra en **Luk Panenteng, en la isla de Peleng, dentro de Banggai Kepulauan**. Para la mayoría de los viajeros que llegan en avión, Luwuk es el punto de partida antes de cruzar el mar hacia Peleng y continuar por carretera.
@@ -28,7 +26,7 @@ La ruta principal es:
 
 No es un traslado directo. El viaje combina barco y carretera, así que conviene dejar margen en el itinerario.
 
-## Luwuk a Paisu Pok de un vistazo
+### Luwuk a Paisu Pok de un vistazo
 
 | Etapa | Ruta | Transporte | Información |
 |---|---|---|---|
@@ -39,7 +37,7 @@ No es un traslado directo. El viaje combina barco y carretera, así que conviene
 
 Los tiempos son orientativos y pueden variar según el mar, las carreteras, el clima y los horarios de los barcos.
 
-# ¿Dónde está Paisu Pok?
+## ¿Dónde está Paisu Pok?
 
 Paisu Pok está en **Luk Panenteng, isla de Peleng, Banggai Kepulauan**.
 
@@ -52,7 +50,7 @@ Paisu Pok está en **Luk Panenteng, isla de Peleng, Banggai Kepulauan**.
 
 Entender estas cuatro ubicaciones hace que el viaje sea mucho más fácil de organizar.
 
-# Paso 1: Llegar a Luwuk
+## Paso 1: Llegar a Luwuk
 
 La mayoría de los viajeros comienza en el **aeropuerto Syukuran Aminuddin Amir**.
 
@@ -60,7 +58,7 @@ Después de llegar, dirígete a Luwuk para preparar el viaje hacia Peleng. Lleva
 
 No programes el barco inmediatamente después del vuelo. Deja tiempo para recoger el equipaje y llegar al puerto.
 
-# Paso 2: Luwuk a Leme-Leme
+## Paso 2: Luwuk a Leme-Leme
 
 Para quienes viajan específicamente a Paisu Pok, **Leme-Leme es uno de los principales accesos a Peleng**.
 
@@ -75,7 +73,7 @@ Puedes viajar en barco público o lancha rápida privada.
 
 Confirma siempre el horario local antes de viajar.
 
-# Paso 3: Leme-Leme a Luk Panenteng
+## Paso 3: Leme-Leme a Luk Panenteng
 
 Al llegar a Leme-Leme, el viaje todavía no ha terminado.
 
@@ -83,13 +81,13 @@ Debes continuar por carretera hacia Luk Panenteng. El trayecto hacia la zona de 
 
 Para una primera visita a Peleng, es más práctico organizar este traslado antes de llegar.
 
-# Paso 4: Llegar a Paisu Pok
+## Paso 4: Llegar a Paisu Pok
 
 Luk Panenteng no es solo un punto de paso. El pueblo está directamente relacionado con Paisu Pok y forma parte de la experiencia del viaje.
 
 La zona cuenta con alojamiento local y servicios turísticos comunitarios. En Paisu Pok puedes explorar el lago, nadar cuando esté permitido, hacer esnórquel si las condiciones lo permiten, recorrer el lago en una embarcación local y tomar fotografías.
 
-# ¿Puedes visitar Paisu Pok y volver a Luwuk el mismo día?
+## ¿Puedes visitar Paisu Pok y volver a Luwuk el mismo día?
 
 Depende del transporte.
 
@@ -102,14 +100,14 @@ Con una lancha privada, un viaje de un día puede ser posible cuando las condici
 | **Día 1** | Luwuk → Leme-Leme → Luk Panenteng | Cruce a Peleng y llegada al alojamiento | Peleng |
 | **Día 2** | Luk Panenteng → Paisu Pok | Lago y alrededores | Peleng / Luwuk |
 
-# Ruta de 2 días
+## Ruta de 2 días
 
 | Día | Ruta | Actividades principales | Alojamiento |
 |---|---|---|---|
 | **Día 1** | Luwuk → Leme-Leme → Luk Panenteng | Barco, carretera y llegada al pueblo | Peleng |
 | **Día 2** | Luk Panenteng → Paisu Pok | Lago, natación o esnórquel cuando sea posible | Peleng / Luwuk |
 
-# Ruta de 3 días
+## Ruta de 3 días
 
 | Día | Ruta | Actividades principales | Alojamiento |
 |---|---|---|---|
@@ -117,7 +115,7 @@ Con una lancha privada, un viaje de un día puede ser posible cuando las condici
 | **Día 2** | Peleng | Paisu Pok, Luk Panenteng y lugares cercanos | Peleng |
 | **Día 3** | Peleng → Luwuk | Regreso a Luwuk y preparación para la salida | Luwuk |
 
-# ¿Dónde alojarse?
+## ¿Dónde alojarse?
 
 | Lugar | Ideal para | Ventaja |
 |---|---|---|
@@ -127,7 +125,7 @@ Con una lancha privada, un viaje de un día puede ser posible cuando las condici
 
 Si Paisu Pok es tu prioridad, dormir en Peleng reduce el tiempo de desplazamiento.
 
-# ¿Qué llevar?
+## ¿Qué llevar?
 
 | Artículo | Utilidad |
 |---|---|
@@ -139,7 +137,7 @@ Si Paisu Pok es tu prioridad, dormir en Peleng reduce el tiempo de desplazamient
 | **Ropa de baño** | Para actividades en Paisu Pok |
 | **Protección contra la lluvia** | El tiempo puede cambiar |
 
-# Qué confirmar antes de salir de Luwuk
+## Qué confirmar antes de salir de Luwuk
 
 | Verificación | Por qué |
 |---|---|
@@ -152,13 +150,13 @@ Si Paisu Pok es tu prioridad, dormir en Peleng reduce el tiempo de desplazamient
 
 No hagas un itinerario demasiado ajustado. Deja margen para esperas y cambios de las condiciones locales.
 
-# ¿Para quién es esta ruta?
+## ¿Para quién es esta ruta?
 
 Esta ruta es adecuada para viajeros que pasan 3–5 días en Banggai, viajeros independientes cómodos con el transporte local, fotógrafos y amantes de la naturaleza, y visitantes cuyo principal objetivo es Paisu Pok.
 
 Un viaje privado resulta más útil cuando tienes poco tiempo, viajas en familia o grupo, o quieres coordinar el barco y el transporte terrestre.
 
-# Ruta sencilla para una primera visita
+## Ruta sencilla para una primera visita
 
 | Duración | Ruta recomendada |
 |---|---|
@@ -170,9 +168,9 @@ Un viaje privado resulta más útil cuando tienes poco tiempo, viajas en familia
 
 Cuantos más días tengas, más fácil será adaptarte a cambios de transporte y clima.
 
-# Preguntas frecuentes
+## Preguntas frecuentes
 
-## ¿Cómo llegar a Paisu Pok desde Luwuk?
+### ¿Cómo llegar a Paisu Pok desde Luwuk?
 
 La ruta principal es:
 
@@ -180,23 +178,23 @@ La ruta principal es:
 
 Primero se cruza el mar y después se continúa por carretera en Peleng.
 
-## ¿Paisu Pok está en Luwuk?
+### ¿Paisu Pok está en Luwuk?
 
 No. Paisu Pok está en Luk Panenteng, en la isla de Peleng, dentro de Banggai Kepulauan.
 
-## ¿Cuánto tiempo se tarda de Luwuk a Paisu Pok?
+### ¿Cuánto tiempo se tarda de Luwuk a Paisu Pok?
 
 La travesía hasta Leme-Leme suele durar unas horas y después hay aproximadamente una hora de carretera hasta la zona del lago. El tiempo de espera puede aumentar el total.
 
-## ¿Se puede hacer una excursión de un día?
+### ¿Se puede hacer una excursión de un día?
 
 Con una lancha privada puede ser posible en condiciones adecuadas. Con transporte público, pasar una noche en Peleng suele ser más práctico.
 
-## ¿Hay alojamiento cerca de Paisu Pok?
+### ¿Hay alojamiento cerca de Paisu Pok?
 
 Sí. Luk Panenteng cuenta con alojamientos locales y servicios turísticos.
 
-# Conclusión
+## Conclusión
 
 Llegar a **Paisu Pok desde Luwuk** es más sencillo cuando entiendes la ruta:
 

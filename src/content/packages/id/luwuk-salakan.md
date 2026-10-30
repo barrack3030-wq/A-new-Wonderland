@@ -27,8 +27,6 @@ excluded:
 itinerary: []
 ---
 
-# Private Trip Luwuk Salakan 3 Hari 2 Malam
-
 **3 Hari 2 Malam**
 
 **Luwuk • Salakan • Banggai Islands**

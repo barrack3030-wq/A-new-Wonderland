@@ -16,8 +16,6 @@ tags:
   - "Wisata Bahari"
 ---
 
-# 5 Destinasi Wajib Dikunjungi di Banggai Laut
-
 Banggai Laut adalah salah satu permata tersembunyi di Sulawesi Tengah yang menawarkan lanskap tropis, laut jernih, pantai berpasir putih, serta kehidupan masyarakat pesisir yang hangat. Wilayah ini cocok bagi wisatawan yang ingin menikmati suasana pulau yang tenang, jauh dari keramaian destinasi populer.
 
 Berbeda dari Banggai Kepulauan, Banggai Laut merupakan kabupaten tersendiri dengan ibu kota di Banggai. Perjalanan menuju kawasan ini umumnya dimulai dari Luwuk, kemudian dilanjutkan menggunakan transportasi laut menuju Banggai. Waktu tempuh dan jadwal keberangkatan dapat berubah, sehingga sebaiknya dikonfirmasi kembali kepada operator lokal sebelum berangkat.

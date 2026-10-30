@@ -1,7 +1,7 @@
 ---
 title: "How Many Days is Ideal for a Vacation to Banggai? Trip Duration Guide"
 description: "Confused about how many days to spend on vacation in Banggai? A trip duration guide from 3D2N to 7 days, itineraries, and estimated costs for travelers."
-seoTitle: "How Many Days is Ideal for a Vacation to Banggai? Trip Duration Guide"
+seoTitle: "How Many Days Do You Need in Banggai? Trip Duration Guide"
 seoDescription: "Confused about how many days to spend on vacation in Banggai? A trip duration guide from 3D2N to 7 days, itineraries, and estimated costs for travelers."
 image: "/images/blog/mbuang-mbuang-banggai-laut-20260914165440.webp"
 imageAlt: "Berapa Hari Ideal untuk Liburan ke Banggai? Panduan Durasi Trip"

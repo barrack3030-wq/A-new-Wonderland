@@ -2,7 +2,7 @@
 title: "Poganda Beach: Pantai Eksotis dengan Pemandangan Laut Banggai"
 description: "Poganda Beach di Banggai Laut menawarkan pasir putih, air laut jernih, batu granit besar, dan snorkeling ikan endemik Banggai cardinalfish. Simak lokasi, akses, aktivitas, dan tips berkunjungnya."
 seoTitle: "Poganda Beach: Pantai Eksotis di Banggai Laut, Sulawesi Tengah"
-seoDescription: "Poganda Beach di Banggai Laut menawarkan pasir putih, air laut jernih, batu granit besar, dan snorkeling ikan endemik Banggai cardinalfish. Simak lokasi, akses, aktivitas, dan tips berkunjungnya."
+seoDescription: "Poganda Beach di Banggai Laut: pasir putih, air jernih, bongkahan granit, dan snorkeling bersama ikan capungan Banggai. Akses dan tips berkunjung."
 image: "/images/blog/images-9-20260910083834.jpg"
 author: "Banggai Wonderland"
 pubDate: 2026-09-10
@@ -12,8 +12,6 @@ tags:
   - "Indonesia"
   - "Travel"
 ---
-
-# Poganda Beach: Pantai Eksotis dengan Pemandangan Laut Banggai
 
 Poganda Beach adalah salah satu pantai di Kabupaten Banggai Laut, Sulawesi Tengah, yang mulai dikenal wisatawan karena kondisi alamnya yang masih bersih dan pemandangan lautnya yang jernih. Pantai ini terletak di pesisir timur Pulau Peleng, pulau terbesar kedua di Kepulauan Banggai setelah Pulau Banggai.
 

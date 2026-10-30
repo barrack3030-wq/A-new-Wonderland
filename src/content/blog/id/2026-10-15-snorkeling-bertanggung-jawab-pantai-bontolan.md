@@ -2,7 +2,7 @@
 title: "Snorkeling di Pantai Bontolan: Cara Menikmati Terumbu dan Ikan Capungan Banggai dengan Bertanggung Jawab"
 description: "Panduan snorkeling di Pantai Bontolan, Banggai Laut, dengan persiapan keselamatan, etika melihat ikan capungan Banggai, dan cara menjaga terumbu karang."
 seoTitle: "Snorkeling Pantai Bontolan: Ikan Capungan Banggai & Tips Aman"
-seoDescription: "Rencanakan snorkeling di Pantai Bontolan, Banggai Laut. Pelajari persiapan, keselamatan di perairan dangkal, etika mengamati ikan capungan Banggai, dan perlindungan terumbu."
+seoDescription: "Rencanakan snorkeling di Pantai Bontolan, Banggai Laut. Pelajari persiapan, keselamatan di perairan dangkal, etika mengamati ikan capungan Banggai."
 image: "/images/bontolan.jpg"
 imageAlt: "Pengunjung bermain di perairan dangkal Pantai Bontolan, dengan garis pantai dan vegetasi di belakang"
 author: "Banggai Wonderland"
@@ -14,8 +14,6 @@ tags:
   - wisata Banggai Laut
   - konservasi terumbu karang
 ---
-# Snorkeling di Pantai Bontolan: Cara Menikmati Terumbu dan Ikan Capungan Banggai dengan Bertanggung Jawab
-
 Pantai Bontolan berada di Desa Bone Baru, Pulau Banggai, Kabupaten Banggai Laut, Sulawesi Tengah. Selain pantai berpasir dan perairan pesisir, kawasan ini dikenal sebagai salah satu lokasi untuk menikmati kehidupan laut, termasuk ikan capungan Banggai (*Pterapogon kauderni*), spesies ikan yang berasal dari wilayah Kepulauan Banggai dan sekitarnya.
 
 Snorkeling yang baik bukan hanya soal mendapatkan foto. Cara masuk ke air, jarak dengan karang, penggunaan pelampung, dan perilaku terhadap satwa ikut menentukan apakah kunjungan kita memberi dampak yang kecil terhadap lingkungan. Kondisi laut dan jarak pandang dapat berubah, jadi jangan menganggap perairan dangkal selalu aman.

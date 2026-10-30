@@ -16,8 +16,6 @@ tags:
   - "australia"
 ---
 
-# Best Alternatives to Bali for Fewer Crowds: Discover Banggai
-
 Bali remains one of Indonesia's most popular destinations, but it is not the only place to experience beaches, islands, diving, waterfalls, and local culture.
 
 For travellers who want fewer crowds, more time on the water, and a destination that still feels relatively under the radar, Central Sulawesi and the Banggai Islands offer a very different experience.

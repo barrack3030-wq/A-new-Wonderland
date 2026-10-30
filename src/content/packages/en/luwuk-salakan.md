@@ -3,7 +3,7 @@ title: Luwuk Salakan Private Trip 3D2N
 description: A private 3-day trip connecting Luwuk and Salakan, combining sea travel, coastal scenery, local food and flexible island exploration.
 seoTitle: 'Luwuk Salakan Private Trip 3D2N | Banggai Wonderland'
 seoDescription: 'Explore Luwuk and Salakan on a 3-day 2-night private Banggai trip with sea travel, coastal stops and flexible island exploration.'
-image: /images/packages/luwuk-salakan.webp
+image: /images/paisu.jpg
 imageAlt: Luwuk and Salakan private trip
 duration: 3 Days 2 Nights
 destination: Luwuk, Salakan, Banggai Islands
@@ -27,19 +27,19 @@ excluded:
 itinerary: []
 ---
 
-# Luwuk & Salakan Escape
+## Luwuk & Salakan Escape
 
 **3 Days 2 Nights**
 
 **Luwuk • Salakan • Banggai Islands**
 
-## Overview
+### Overview
 
 A 3-day private trip for travelers who want to connect Luwuk and Salakan without rushing the itinerary. The route combines sea travel, coastal scenery, local food and time to experience Salakan at a relaxed pace.
 
 The itinerary can be adjusted to ferry schedules, weather, sea conditions, and flight arrival or departure times.
 
-## Day 1 — Arrive in Luwuk & Travel to Salakan
+### Day 1 — Arrive in Luwuk & Travel to Salakan
 
 **Afternoon**
 
@@ -61,7 +61,7 @@ The itinerary can be adjusted to ferry schedules, weather, sea conditions, and f
 - Dinner
 - Free time in Salakan
 
-## Day 2 — Salakan & Peleng
+### Day 2 — Salakan & Peleng
 
 **Morning**
 
@@ -92,7 +92,7 @@ The itinerary can be adjusted to ferry schedules, weather, sea conditions, and f
 - Dinner
 - Overnight in Salakan
 
-## Day 3 — Salakan → Luwuk
+### Day 3 — Salakan → Luwuk
 
 **Morning**
 
@@ -109,7 +109,7 @@ The itinerary can be adjusted to ferry schedules, weather, sea conditions, and f
 
 **Trip ends**
 
-## Included
+### Included
 
 ✓ Airport pickup and drop-off  
 ✓ Private land transportation in Luwuk  
@@ -120,7 +120,7 @@ The itinerary can be adjusted to ferry schedules, weather, sea conditions, and f
 ✓ Entrance fees for listed destinations  
 ✓ Flexible itinerary
 
-## Not Included
+### Not Included
 
 ✕ Flights  
 ✕ Personal expenses  
@@ -129,7 +129,7 @@ The itinerary can be adjusted to ferry schedules, weather, sea conditions, and f
 ✕ Additional activities  
 ✕ Drone Video — Optional
 
-## Important Note
+### Important Note
 
 The Luwuk–Salakan route involves sea travel. Ferry schedules, travel time and the order of activities may change because of weather, sea conditions, operator schedules and local circumstances.
 

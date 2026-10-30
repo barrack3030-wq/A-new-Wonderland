@@ -17,8 +17,6 @@ tags:
   - Wisata Berkelanjutan
 ---
 
-# Wisata Bertanggung Jawab di Banggai: Cara Menjaga Laut dan Desa Lokal
-
 Kepulauan Banggai dikenal dengan air laut yang jernih, pulau-pulau kecil, pantai, dan kehidupan bawah laut yang khas. Keindahan ini bukan hanya untuk dinikmati, tetapi juga perlu dijaga bersama. Kebiasaan sederhana selama perjalanan dapat membantu mengurangi tekanan pada lingkungan dan membuat manfaat pariwisata terasa lebih baik bagi masyarakat setempat.
 
 ## Saat snorkeling dan beraktivitas di laut

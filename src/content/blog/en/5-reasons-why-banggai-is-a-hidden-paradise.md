@@ -15,8 +15,6 @@ tags:
   - Sulawesi
 ---
 
-# 5 Reasons Why Banggai Feels Like Indonesia’s Hidden Paradise
-
 Some places are beautiful because everyone knows about them.
 
 Others feel special precisely because they are not yet on everyone’s radar.

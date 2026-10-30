@@ -2,7 +2,7 @@
 title: "Is September the Right Time to Visit Mbuang-Mbuang?"
 description: "Is September the Right Time to Visit Mbuang-Mbuang?"
 seoTitle: "Is September the Right Time to Visit Mbuang-Mbuang?"
-seoDescription: "Wondering when to go to Mbuang-Mbuang? September offers dry weather, calm seas, and the jellyfish of Lake Paisu Batongan. But there are access notes you need to prepare for."
+seoDescription: "Wondering when to go to Mbuang-Mbuang? September offers dry weather, calm seas, and the jellyfish of Lake Paisu Batongan."
 image: "/images/blog/1000603141-20260910201805.jpg"
 imageAlt: "Apakah Bulan September Waktu yang Tepat Pergi ke Mbuang-Mbuang?"
 author: "Banggai Wonderland"
@@ -14,8 +14,6 @@ tags:
 ---
 
 ![Apakah Bulan September Waktu yang Tepat Pergi ke Mbuang-Mbuang?](/images/blog/1000603141-20260910201805.jpg)
-
-# Is September the Right Time to Visit Mbuang-Mbuang?
 
 The short answer: **yes, absolutely—perhaps one of the best months.** But not without a few notes. Let us break it down one by one, not just *"because it's the dry season"*.
 

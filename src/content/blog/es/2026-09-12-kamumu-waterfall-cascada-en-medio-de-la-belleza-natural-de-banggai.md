@@ -4,8 +4,8 @@ image: /images/blog/images-11-20260912170453.jpg
 imageAlt: 'Kamumu Waterfall: Air Terjun di Tengah Keindahan Alam Banggai'
 title: 'Kamumu Waterfall: Cascada en Medio de la Belleza Natural de Banggai'
 description: 'Discover Hidden Paradise of Banggai Hay algo mágico en una cascada escondida en medio de un bosque de pinos. El murmullo del agua al caer por los escalones de piedra natural, el aroma característico de la resina de pino y el aire fresco que reconforta los pulmones: todo crea una experiencia lejos del bullicio de la ciudad. Esta es la Cascada de Kamumu, una joya oculta en la aldea de Kamumu, distrito de Luwuk Norte, regencia de Banggai, Célebes C'
-seoTitle: 'Kamumu Waterfall: Cascada en Medio de la Belleza Natural de Banggai'
-seoDescription: 'Discover Hidden Paradise of Banggai Hay algo mágico en una cascada escondida en medio de un bosque de pinos. El murmullo del agua al caer por los escalones de piedra natural, el aroma característico de la resina de pino y el aire fresco que reconforta los pulmones: todo crea una experiencia lejos del bullicio de la ciudad. Esta es la Cascada de Kamumu, una joya oculta en la aldea de Kamumu, distrito de Luwuk Norte, regencia de Banggai, Célebes C'
+seoTitle: "Cascada Kamumu: naturaleza en Luwuk Norte, Banggai"
+seoDescription: "Cascada Kamumu en Luwuk Norte, Banggai: una joya escondida en un bosque de pinos, con agua cristalina en varios niveles. Qué esperar y cómo visitarla."
 author: Banggai Wonderland
 pubDate: 2026-09-12
 tags:

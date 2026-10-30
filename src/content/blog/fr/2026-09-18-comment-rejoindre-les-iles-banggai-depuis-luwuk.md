@@ -16,8 +16,6 @@ tags:
   - "Guide de voyage"
 ---
 
-# Comment rejoindre les îles Banggai depuis Luwuk
-
 Luwuk est le principal point de départ pour les voyageurs qui souhaitent découvrir les îles Banggai, dans le centre de Sulawesi, en Indonésie.
 
 La plupart des voyageurs arrivent à l'aéroport Syukuran Aminuddin Amir de Luwuk avant de continuer par bateau vers Peleng, Salakan, Banggai ou d'autres îles.

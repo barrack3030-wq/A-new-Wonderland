@@ -82,7 +82,7 @@ const schema = {
 };
 ---
 
-<BaseLayout title={`${entry.data.title} | Banggai Wonderland Blog`} description={entry.data.description} seoTitle={entry.data.seoTitle} seoDescription={entry.data.seoDescription} ogImage={resolvedImage} imageAlt={resolvedImageAlt} schema={schema}>
+<BaseLayout title={(entry.data.title + ' | Banggai Wonderland Blog').length <= 60 ? entry.data.title + ' | Banggai Wonderland Blog' : entry.data.title} description={entry.data.description} seoTitle={entry.data.seoTitle} seoDescription={entry.data.seoDescription} ogImage={resolvedImage} imageAlt={resolvedImageAlt} schema={schema}>
   <div class="bg-sand-50 pt-32 pb-16">
     <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
       <Breadcrumb items={breadcrumbItems} />
@@ -151,20 +151,7 @@ const schema = {
       const aliases = destinations.flatMap(item => item.aliases.map(alias => ({ ...item, alias })))
         .sort((a, b) => b.alias.length - a.alias.length);
 
-      const escapeRegExp = value => value.replace(/[.*+?^$()|[\\]\\]/g, '\\  <style is:global>
-    .destination-inline-link {
-      color: inherit;
-      text-decoration-line: underline;
-      text-decoration-color: rgba(20, 184, 166, 0.55);
-      text-decoration-thickness: 1px;
-      text-underline-offset: 3px;
-      transition: color .2s ease, text-decoration-color .2s ease;
-    }
-    .destination-inline-link:hover {
-      color: rgb(13, 148, 136);
-      text-decoration-color: currentColor;
-    }
-    .sidebar-scroll');
+      const escapeRegExp = value => value.replace(/[.*+?^$()|\[\]\\]/g, '\\$&');
       const pattern = new RegExp('\\b(' + aliases.map(item => escapeRegExp(item.alias)).join('|') + ')\\b', 'gi');
 
       const walker = document.createTreeWalker(root, NodeFilter.SHOW_TEXT);
@@ -209,6 +196,18 @@ const schema = {
   </script>
 
   <style is:global>
+    .destination-inline-link {
+      color: inherit;
+      text-decoration-line: underline;
+      text-decoration-color: rgba(20, 184, 166, 0.55);
+      text-decoration-thickness: 1px;
+      text-underline-offset: 3px;
+      transition: color .2s ease, text-decoration-color .2s ease;
+    }
+    .destination-inline-link:hover {
+      color: rgb(13, 148, 136);
+      text-decoration-color: currentColor;
+    }
     .sidebar-scroll { max-height: 420px; overflow-y: auto; overscroll-behavior: contain; scrollbar-width: thin; }
     .sidebar-scroll-light { scrollbar-color: rgba(9, 74, 92, 0.35) transparent; }
     .sidebar-scroll::-webkit-scrollbar { width: 6px; }

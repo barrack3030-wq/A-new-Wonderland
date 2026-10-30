@@ -1,8 +1,8 @@
 ---
 title: '5 raisons pour lesquelles Banggai est un paradis caché de l’Indonésie'
 description: 'Cinq raisons de découvrir Banggai, au centre de Sulawesi : une nature remarquablement variée, des eaux cristallines, des lieux paisibles, des voyages authentiques et des expériences encore très personnelles.'
-seoTitle: '5 raisons pour lesquelles Banggai est un paradis caché de l’Indonésie'
-seoDescription: 'Découvrez cinq raisons pour lesquelles Banggai mérite sa place parmi les paradis cachés d’Indonésie, entre lacs cristallins, plages paisibles, îles tropicales et expériences locales authentiques.'
+seoTitle: "5 raisons pour lesquelles Banggai est un paradis caché"
+seoDescription: "Découvrez cinq raisons pour lesquelles Banggai mérite sa place parmi les paradis cachés d’Indonésie : lacs cristallins, plages paisibles, îles tropicales."
 image: /images/Poganda-Beach-Banggai-IndonesiaJuara-Trip.webp
 imageAlt: 'Poganda Beach, Banggai, Indonésie'
 author: 'aji'
@@ -14,8 +14,6 @@ tags:
   - Voyage en Indonésie
   - Sulawesi
 ---
-
-# 5 raisons pour lesquelles Banggai est un paradis caché de l’Indonésie
 
 Certains endroits sont magnifiques parce que tout le monde les connaît.
 

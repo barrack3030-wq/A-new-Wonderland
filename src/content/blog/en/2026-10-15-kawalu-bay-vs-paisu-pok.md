@@ -16,8 +16,6 @@ tags:
   - "Indonesia travel"
 ---
 
-# Kawalu Bay vs Paisu Pok: Which Should You Visit?
-
 The Banggai Islands in Central Sulawesi offer more than one kind of blue-water escape. **Kawalu Bay** is a coastal destination associated with turquoise sea, green hills, and marine activities. **Paisu Pok Lake**, on Peleng Island, is a freshwater lake known for exceptionally clear water and submerged trees visible beneath the surface.
 
 If you are deciding between them, the best choice depends on the landscape you want to experience, the activities you enjoy, and how much time you have to plan your journey.

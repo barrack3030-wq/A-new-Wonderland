@@ -16,8 +16,6 @@ tags:
   - "Travel Guide"
 ---
 
-# How to Get to the Banggai Islands from Luwuk
-
 Luwuk is the main starting point for travelers heading to the Banggai Islands in Central Sulawesi, Indonesia.
 
 Most visitors arrive at Syukuran Aminuddin Amir Airport in Luwuk before continuing by sea to destinations such as Peleng, Salakan or Banggai. The correct route depends on which part of the Banggai Islands you want to visit.

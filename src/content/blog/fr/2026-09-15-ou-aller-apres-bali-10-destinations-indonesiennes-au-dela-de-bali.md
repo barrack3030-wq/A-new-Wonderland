@@ -1,8 +1,8 @@
 ---
 title: "Où aller après Bali ? 10 destinations indonésiennes au-delà de Bali"
 description: "Après Bali, explorez 10 destinations sur l’île de Banggai, à Luwuk et dans les environs. Guide complet du lac Paisu Pok, de la plage de Poganda, du snorkeling et conseils pratiques."
-seoTitle: "Où aller après Bali ? 10 destinations indonésiennes au-delà de Bali"
-seoDescription: "Après Bali, explorez 10 destinations sur l’île de Banggai, à Luwuk et dans les environs. Guide complet du lac Paisu Pok, de la plage de Poganda, du snorkeling et conseils pratiques."
+seoTitle: "Où aller après Bali ? 10 destinations indonésiennes"
+seoDescription: "Après Bali, explorez 10 destinations sur l’île de Banggai, à Luwuk et dans les environs. Guide complet du lac Paisu Pok, de la plage de Poganda."
 image: "/images/blog/dji-0992-2-20260915111011.webp"
 imageAlt: "Where to Go After Bali? 10 Indonesian Destinations Beyond Bali"
 author: "Banggai Wonderland"
