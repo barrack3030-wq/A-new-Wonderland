@@ -19,7 +19,7 @@ tags:
   - "homestay"
 ---
 
-Paisu Pok Lake sudah lama menjadi bahan pembicaraan di kalangan pelancong yang mengikuti akun-akun perjalanan Indonesia. Airnya yang jernih, batang-batang pohon tenggelam yang terlihat dari permukaan, dan lokasinya yang berada di pulau terpencil membuat danau ini terasa seperti destinasi yang hanya bisa diakses oleh mereka yang benar-benar berniat datang. Foto-fotonya memang memukau, tetapi perjalanan ke sana memerlukan persiapan yang lebih dari sekadar membeli tiket pesawat.
+[Paisu Pok Lake](/id/destinations/paisu-pok-lake/) sudah lama menjadi bahan pembicaraan di kalangan pelancong yang mengikuti akun-akun perjalanan Indonesia. Airnya yang jernih, batang-batang pohon tenggelam yang terlihat dari permukaan, dan lokasinya yang berada di pulau terpencil membuat danau ini terasa seperti destinasi yang hanya bisa diakses oleh mereka yang benar-benar berniat datang. Foto-fotonya memang memukau, tetapi perjalanan ke sana memerlukan persiapan yang lebih dari sekadar membeli tiket pesawat.
 
 Artikel ini bukan tentang mengapa Anda harus pergi. Artikel ini tentang **apa yang perlu Anda ketahui sebelum pergi**—dari cara mencapai danau, biaya yang harus disiapkan, aturan yang berlaku di lokasi, hingga hal-hal kecil yang sering terlewatkan oleh wisatawan yang baru pertama kali datang ke Banggai.
 

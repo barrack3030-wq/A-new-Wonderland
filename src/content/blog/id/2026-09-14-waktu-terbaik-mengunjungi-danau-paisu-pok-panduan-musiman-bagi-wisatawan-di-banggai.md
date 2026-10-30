@@ -19,7 +19,7 @@ tags:
   - "travel guide"
 ---
 
-Danau Paisu Pok di Pulau Peleng, Banggai, merupakan salah satu danau air tawar paling jernih di Indonesia. Jarak pandang di dalam air bisa mencapai 10–15 meter, memperlihatkan batang-batang pohon yang telah lama terendam di bawah permukaan—terlihat jelas dari atas layaknya instalasi seni alami yang sunyi. Meskipun foto-foto danau ini telah banyak beredar di media sosial, jumlah pengunjungnya sebenarnya masih tergolong sedikit. Salah satu alasan utamanya adalah aksesibilitas; perjalanan menuju ke sana mengharuskan wisatawan terbang ke Luwuk, menyeberang dengan feri ke Pulau Peleng, dan melanjutkan perjalanan darat melewati jalan yang sebagian kondisinya kurang baik.
+[Danau Paisu Pok](/id/destinations/paisu-pok-lake/) di Pulau Peleng, Banggai, merupakan salah satu danau air tawar paling jernih di Indonesia. Jarak pandang di dalam air bisa mencapai 10–15 meter, memperlihatkan batang-batang pohon yang telah lama terendam di bawah permukaan—terlihat jelas dari atas layaknya instalasi seni alami yang sunyi. Meskipun foto-foto danau ini telah banyak beredar di media sosial, jumlah pengunjungnya sebenarnya masih tergolong sedikit. Salah satu alasan utamanya adalah aksesibilitas; perjalanan menuju ke sana mengharuskan wisatawan terbang ke Luwuk, menyeberang dengan feri ke Pulau Peleng, dan melanjutkan perjalanan darat melewati jalan yang sebagian kondisinya kurang baik.
 
 Bagi mereka yang bersedia menempuh perjalanan tersebut, pertanyaan pertama yang biasanya muncul adalah: **kapan waktu terbaik untuk berkunjung?**
 

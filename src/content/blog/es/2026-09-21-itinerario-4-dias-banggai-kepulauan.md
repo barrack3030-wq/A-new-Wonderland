@@ -19,7 +19,7 @@ tags:
   - "Banggai Laut"
 ---
 
-¿Es tu primera vez en **Banggai Kepulauan**? El mayor reto no es decidir qué visitar, sino conectar los barcos sin viajar con demasiadas prisas. Este itinerario de 4 días combina Luwuk, Salakan, las playas de Banggai Laut, Peleng y el lago Paisu Pok con una secuencia de traslados más realista.
+¿Es tu primera vez en **Banggai Kepulauan**? El mayor reto no es decidir qué visitar, sino conectar los barcos sin viajar con demasiadas prisas. Este itinerario de 4 días combina Luwuk, Salakan, las playas de Banggai Laut, Peleng y el lago [Paisu Pok](/es/destinations/paisu-pok-lake/) con una secuencia de traslados más realista.
 
 El plan supone que ya estás en Luwuk. La mayoría de los visitantes internacionales llega el día anterior vía Makassar, así que conviene pasar la noche en Luwuk antes de comenzar el Día 1.
 
@@ -43,7 +43,7 @@ Los viajeros que prefieren que alguien coordine aeropuertos, puertos, barcos y a
 
 **Mañana:** Sal temprano en coche hacia un puerto de salida como Kalumbatan y continúa en lancha rápida.
 
-**Playas:** **Oyama Beach**, **Mandel Beach**, zona de **Poganda Beach**, y las zonas de **Pompon y Bone-Pompon**. La mayoría tiene pocos servicios, así que lleva agua y protección solar.
+**Playas:** **[Oyama Beach](/es/destinations/oyama-beach/)**, **[Mandel Beach](/es/destinations/mandel-beach/)**, zona de **[Poganda Beach](/es/destinations/poganda-beach/)**, y las zonas de **Pompon y Bone-Pompon**. La mayoría tiene pocos servicios, así que lleva agua y protección solar.
 
 El snorkel suele hacerse en aguas poco profundas, de unos 1–4 metros. Para buscar el Banggai cardinalfish, pregunta al capitán por bahías de manglar protegidas.
 
@@ -51,7 +51,7 @@ El snorkel suele hacerse en aguas poco profundas, de unos 1–4 metros. Para bus
 
 **Mañana:** Conduce desde Salakan hacia el oeste de Peleng. Reserva varias horas para el trayecto por carretera.
 
-**Mediodía:** Visita el **lago Paisu Pok**, un lago de agua dulce azul y transparente con embarcadero, kayaks y zonas para nadar. Cerca también puede añadirse **Paisu Batango Lagoon**.
+**Mediodía:** Visita el **lago Paisu Pok**, un lago de agua dulce azul y transparente con embarcadero, kayaks y zonas para nadar. Cerca también puede añadirse **[Paisu Batango](/es/destinations/paisu-batango-lake/) Lagoon**.
 
 **Noche:** Alojamiento en el pueblo de Leme Leme, en Peleng.
 

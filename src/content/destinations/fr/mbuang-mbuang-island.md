@@ -104,4 +104,4 @@ Des **familles d'accueil locales** et des cottages simples sont disponibles via 
 
 ## Destinations à proximité
 
-**Paisu Pok Lake** sur l'île de Peleng est une destination d'eau douce plus accessible. **Pantai Bontolan** près de Bone Baru offre des expériences côtières et de snorkeling. **Long Beach** et **Oyama Beach** sont accessibles en bateau dans la région de Banggai Laut. Depuis Luwuk, on peut aussi visiter **Kilo 5 Beach** et **Piala Waterfall**.
+**[Paisu Pok Lake](/fr/destinations/paisu-pok-lake/)** sur l'île de Peleng est une destination d'eau douce plus accessible. **[Pantai Bontolan](/fr/destinations/bontolan-beach/)** près de Bone Baru offre des expériences côtières et de snorkeling. **[Long Beach](/fr/destinations/long-beach/)** et **[Oyama Beach](/fr/destinations/oyama-beach/)** sont accessibles en bateau dans la région de Banggai Laut. Depuis Luwuk, on peut aussi visiter **[Kilo 5 Beach](/fr/destinations/kilo-5-beach/)** et **[Piala Waterfall](/fr/destinations/piala-waterfall/)**.

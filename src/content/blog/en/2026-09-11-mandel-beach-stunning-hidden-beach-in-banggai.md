@@ -18,7 +18,7 @@ tags:
 
 **Discover Hidden Paradise of Banggai**
 
-Imagine waking up to the sound of gentle waves, fine white sand beneath your feet, and turquoise sea water so clear you can see all the way to the bottom. No hustle and bustle, no photo queues, just you and the untouched beauty of nature. Welcome to **Mandel Beach**—a hidden gem in Banggai that has slipped under the radar of mainstream tourists until now.
+Imagine waking up to the sound of gentle waves, fine white sand beneath your feet, and turquoise sea water so clear you can see all the way to the bottom. No hustle and bustle, no photo queues, just you and the untouched beauty of nature. Welcome to **[Mandel Beach](/en/destinations/mandel-beach/)**—a hidden gem in Banggai that has slipped under the radar of mainstream tourists until now.
 
 Located between Kombutokan Village and Palam Village, Totikum District, Banggai Kepulauan Regency, Central Sulawesi, Mandel Beach is the perfect definition of the *hidden paradise* you've been looking for. Featuring a coastline of about 2 kilometers, this beach offers a stretch of soft white sand, clear light blue seawater, and is surrounded by lush green grassy hills and shady trees that treat the eyes.
 
@@ -70,7 +70,7 @@ One of the most magical moments at Mandel Beach is witnessing the **sunrise**. T
 With a backdrop of white sand, turquoise water, and green hills, Mandel Beach is a paradise for photographers. Every corner offers a perfect composition for landscape, portrait, and underwater photography.
 
 ### 5. Island Hopping
-Use Mandel Beach as a base to explore other destinations on Peling Island, such as **Lake Paisu Pok** famous for its glass-like blue water, **Poganda Beach**, and **Piala Waterfall**.
+Use Mandel Beach as a base to explore other destinations on Peling Island, such as **Lake [Paisu Pok](/en/destinations/paisu-pok-lake/)** famous for its glass-like blue water, **[Poganda Beach](/en/destinations/poganda-beach/)**, and **[Piala Waterfall](/en/destinations/piala-waterfall/)**.
 
 
 ## When is the Best Time to Visit?

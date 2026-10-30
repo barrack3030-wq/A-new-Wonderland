@@ -7,6 +7,7 @@ image: /images/Poganda-Beach-Banggai-IndonesiaJuara-Trip.webp
 imageAlt: 'Poganda Beach in Banggai, Indonesia'
 author: 'aji'
 pubDate: "2026-09-08T20:00:00"
+translationKey: "2026-09-08-banggai-beyond-bali"
 tags:
   - Banggai
   - Luwuk
@@ -48,7 +49,7 @@ The landscapes can change dramatically from one day to the next.
 
 ### Paisupok Lake
 
-One of Banggai's natural treasures is **Paisupok Lake**.
+One of Banggai's natural treasures is **[Paisupok Lake](/en/destinations/paisu-pok-lake/)**.
 
 The water is remarkably clear, while the surrounding landscape creates a calm, almost secluded atmosphere. When the weather and light are right, the surface can look like glass.
 
@@ -62,7 +63,7 @@ Not every memorable travel experience needs a packed schedule. Sometimes the bes
 
 For travelers who love the sea but prefer a quieter atmosphere, Banggai offers plenty to explore.
 
-**Poganda Beach, Mandel Beach, Oyama Beach, Bontolan Beach, and Long Beach** each have their own character.
+**[Poganda Beach](/en/destinations/poganda-beach/), [Mandel Beach](/en/destinations/mandel-beach/), [Oyama Beach](/en/destinations/oyama-beach/), [Bontolan Beach](/en/destinations/bontolan-beach/), and [Long Beach](/en/destinations/long-beach/)** each have their own character.
 
 Some are ideal for swimming and relaxing. Others are better suited to snorkeling, photography, or watching the sunset.
 
@@ -78,9 +79,9 @@ Move inland and the scenery turns greener.
 
 This is where waterfalls become part of the journey.
 
-**Piala Waterfall** is a natural stop worth considering around Luwuk, especially for travelers who want to combine scenery, freshwater, and a little adventure.
+**[Piala Waterfall](/en/destinations/piala-waterfall/)** is a natural stop worth considering around Luwuk, especially for travelers who want to combine scenery, freshwater, and a little adventure.
 
-Then there is **Kamumu Waterfall**, a rewarding option for those who enjoy seeking out places beyond the more familiar tourist circuit.
+Then there is **[Kamumu Waterfall](/en/destinations/kamumu-waterfall/)**, a rewarding option for those who enjoy seeking out places beyond the more familiar tourist circuit.
 
 Trees, rocks, freshwater, and the sounds of the forest create a completely different atmosphere from the coast.
 

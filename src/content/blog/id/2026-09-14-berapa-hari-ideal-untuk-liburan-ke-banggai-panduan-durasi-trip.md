@@ -14,7 +14,7 @@ tags:
   - "Travel"
 ---
 
-Banggai adalah salah satu wilayah paling menarik—dan paling sering ditunda—di Sulawesi Tengah. Alasannya bukan karena tempatnya tidak menarik. Justru sebaliknya: Paisu Pok Lake dengan airnya yang sebening kaca, gugusan pulau di Kepulauan Banggai, air terjun tersembunyi di sekitar Luwuk, dan terumbu karang yang masih alami membuat wilayah ini terasa seperti versi Indonesia yang belum terjamah mass tourism.
+Banggai adalah salah satu wilayah paling menarik—dan paling sering ditunda—di Sulawesi Tengah. Alasannya bukan karena tempatnya tidak menarik. Justru sebaliknya: [Paisu Pok Lake](/id/destinations/paisu-pok-lake/) dengan airnya yang sebening kaca, gugusan pulau di Kepulauan Banggai, air terjun tersembunyi di sekitar Luwuk, dan terumbu karang yang masih alami membuat wilayah ini terasa seperti versi Indonesia yang belum terjamah mass tourism.
 
 Masalahnya, perjalanan ke Banggai tidak sesederhana terbang ke Bali atau Yogyakarta. Anda perlu mempertimbangkan penerbangan, penyeberangan feri, perjalanan darat, dan waktu yang dihabiskan di setiap titik. Pertanyaan “berapa hari yang saya butuhkan?” menjadi krusial—dan jawabannya bergantung pada apa yang ingin Anda lihat dan seberapa jauh Anda ingin masuk ke kepulauan.
 
@@ -24,9 +24,9 @@ Artikel ini membahas durasi perjalanan yang realistis untuk berbagai tipe wisata
 
 Sebelum membahas durasi, penting untuk memahami geografi Banggai. Wilayah ini terbagi menjadi beberapa kabupaten:
 
-**Kabupaten Banggai** dengan ibu kota Luwuk, yang menjadi pintu masuk utama. Di sini Anda akan menemukan Bandara Syukuran Aminuddin Amir (LUW), serta destinasi daratan seperti Air Terjun Salodik, Air Terjun Piala, dan Pantai Kilo 5.
+**Kabupaten Banggai** dengan ibu kota Luwuk, yang menjadi pintu masuk utama. Di sini Anda akan menemukan Bandara Syukuran Aminuddin Amir (LUW), serta destinasi daratan seperti [Air Terjun Salodik](/id/destinations/salodik-waterfall/), [Air Terjun Piala](/id/destinations/piala-waterfall/), dan [Pantai Kilo 5](/id/destinations/kilo-5-beach/).
 
-**Kabupaten Banggai Kepulauan** dengan Peleng Island sebagai pulau terbesar. Di sinilah Paisu Pok Lake berada, bersama destinasi seperti Paisu Batango Lagoon dan Pantai Poganda.
+**Kabupaten Banggai Kepulauan** dengan Peleng Island sebagai pulau terbesar. Di sinilah Paisu Pok Lake berada, bersama destinasi seperti [Paisu Batango](/id/destinations/paisu-batango-lake/) Lagoon dan [Pantai Poganda](/id/destinations/poganda-beach/).
 
 **Kabupaten Banggai Laut** dengan Salakan sebagai pusat pemerintahan. Wilayah ini menawarkan pulau-pulau kecil, pantai tersembunyi, dan spot snorkeling yang masih sangat alami.
 
@@ -56,7 +56,7 @@ Salah satu sumber merekomendasikan minimal 3 hari 2 malam atau 4 hari 3 malam un
 
 **4D3N adalah durasi yang paling sering direkomendasikan** untuk wisatawan yang ingin melihat lebih banyak tanpa merasa terburu-buru. Dengan waktu ini, Anda bisa:
 
- - Menjelajahi destinasi daratan Luwuk (Salodik, Piala, atau Kamumu Waterfall).
+ - Menjelajahi destinasi daratan Luwuk (Salodik, Piala, atau [Kamumu Waterfall](/id/destinations/kamumu-waterfall/)).
  - Menginap semalam di Peleng untuk menikmati Paisu Pok Lake pada pagi hari—waktu terbaik untuk fotografi dan suasana tenang.
  - Menambahkan satu hari untuk island hopping atau snorkeling di sekitar Peleng atau Banggai Laut.
 

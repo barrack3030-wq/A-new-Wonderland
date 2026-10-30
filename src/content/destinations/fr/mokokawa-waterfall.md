@@ -87,4 +87,4 @@ Ce n'est pas toujours obligatoire, mais un **guide local de Tontouan** peut faci
 
 ## Destinations associées
 
-**Piala Waterfall** et **Laumarang Waterfall** sont d'autres cascades de la région de Luwuk. **Kilo 5 Beach** est une option côtière proche, tandis que **Paisu Pok Lake** sur Peleng est une grande destination d'eau douce accessible par mer depuis Luwuk.
+**[Piala Waterfall](/fr/destinations/piala-waterfall/)** et **[Laumarang Waterfall](/fr/destinations/laumarang-waterfall/)** sont d'autres cascades de la région de Luwuk. **[Kilo 5 Beach](/fr/destinations/kilo-5-beach/)** est une option côtière proche, tandis que **[Paisu Pok Lake](/fr/destinations/paisu-pok-lake/)** sur Peleng est une grande destination d'eau douce accessible par mer depuis Luwuk.

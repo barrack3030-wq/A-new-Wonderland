@@ -7,12 +7,13 @@ image: /images/images (5).jpg
 imageAlt: 'Danau Paisu Pok di Pulau Peleng dengan air yang sangat jernih dan pepohonan terendam di bawah permukaan.'
 author: Diving Expert
 pubDate: "2026-10-15T00:00:00Z"
+translationKey: "2026-10-15-paisu-pok-diving-guide"
 tags:
   - Diving
   - Adventure
 ---
 
-**Bayangkan menyelam ke dalam air sebening kaca, melihat pepohonan yang terendam, bebatuan, dan dasar danau tanpa harus pergi ke laut. Selamat datang di Danau Paisu Pok, salah satu permata tersembunyi Kepulauan Banggai.**
+**Bayangkan menyelam ke dalam air sebening kaca, melihat pepohonan yang terendam, bebatuan, dan dasar danau tanpa harus pergi ke laut. Selamat datang di [Danau Paisu Pok](/id/destinations/paisu-pok-lake/), salah satu permata tersembunyi Kepulauan Banggai.**
 
 Di tengah lanskap tropis Pulau Peleng, Kabupaten Banggai Kepulauan, terdapat sebuah danau yang memiliki karakter berbeda dari kebanyakan destinasi wisata air di Indonesia.
 
@@ -312,19 +313,19 @@ Untuk pengalaman danau dan underwater freshwater.
 
 Untuk melanjutkan eksplorasi kawasan Luk Panenteng.
 
-**Poganda Beach**
+**[Poganda Beach](/id/destinations/poganda-beach/)**
 
 Untuk menikmati pantai dan pemandangan laut.
 
-**Mandel Beach**
+**[Mandel Beach](/id/destinations/mandel-beach/)**
 
 Untuk suasana pantai yang lebih tenang.
 
-**Long Beach**
+**[Long Beach](/id/destinations/long-beach/)**
 
 Untuk menikmati garis pantai dan laut tropis.
 
-**Oyama Beach**
+**[Oyama Beach](/id/destinations/oyama-beach/)**
 
 Untuk melengkapi pengalaman pesisir.
 

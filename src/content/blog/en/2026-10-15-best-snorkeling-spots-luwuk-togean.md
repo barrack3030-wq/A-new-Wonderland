@@ -26,7 +26,7 @@ This guide compares places worth considering and explains which are regional opt
 
 *Photo source: [The World Travel Guy — Banggai Islands](https://theworldtravelguy.com/banggai-islands-luwuk-indonesia/). Commercial reuse rights must be confirmed.*
 
-Poganda Beach on Peleng Island is known for white sand and shallow, clear coastal water. A Banggai travel guide notes reef close to shore, although visibility and conditions depend on weather, tides and local activity.
+[Poganda Beach](/en/destinations/poganda-beach/) on Peleng Island is known for white sand and shallow, clear coastal water. A Banggai travel guide notes reef close to shore, although visibility and conditions depend on weather, tides and local activity.
 
 It can suit travelers who want to combine beach time with a relaxed snorkel. Ask a local guide where it is safe to enter, whether currents are present, and which areas should be avoided.
 
@@ -36,7 +36,7 @@ It can suit travelers who want to combine beach time with a relaxed snorkel. Ask
 
 *Photo source: [LuwukBangai](https://luwukbanggai.com/en/banggai-islands-sulawesi-adventure/). Commercial reuse rights must be confirmed.*
 
-Pulo Dua in the Balantak area offers island scenery, beaches and a marine setting best planned as a dedicated excursion. The Central Sulawesi tourism department also lists Pulo Dua as a marine attraction.
+[Pulo Dua](/en/destinations/pulau-dua-balantak/) in the Balantak area offers island scenery, beaches and a marine setting best planned as a dedicated excursion. The Central Sulawesi tourism department also lists Pulo Dua as a marine attraction.
 
 Not every side of the island is automatically suitable for snorkeling. Ask the operator to choose a spot based on swell, currents, visibility and reef condition, and allow enough time for transport from Luwuk.
 
@@ -46,7 +46,7 @@ Not every side of the island is automatically suitable for snorkeling. Ask the o
 
 *Photo source: [The World Travel Guy — Banggai Islands](https://theworldtravelguy.com/banggai-islands-luwuk-indonesia/). Commercial reuse rights must be confirmed.*
 
-Oyama Beach is an option for travelers seeking coastal scenery and a quieter atmosphere. Before making it the main snorkeling stop, confirm with a local guide whether a specific entry point is safe and visibility is suitable. Facilities and transport may be limited, so arrange logistics in advance.
+[Oyama Beach](/en/destinations/oyama-beach/) is an option for travelers seeking coastal scenery and a quieter atmosphere. Before making it the main snorkeling stop, confirm with a local guide whether a specific entry point is safe and visibility is suitable. Facilities and transport may be limited, so arrange logistics in advance.
 
 ## 4. Banggai waters — choose a specific spot with a local operator
 
@@ -80,7 +80,7 @@ Local operators can help select a reef site according to your ability, currents 
 
 *Photo source: [Banggai Kepulauan Tourism Office](https://pariwisata.banggaikep.go.id/wisata-danau/). Check image-use terms.*
 
-Paisupok Lake is often combined with beach stops on Peleng Island. It is a freshwater lake, not a marine reef snorkeling site. Visit for the clear water and scenery; swim or use a boat only if permitted by local management and conditions are safe.
+[Paisupok Lake](/en/destinations/paisu-pok-lake/) is often combined with beach stops on Peleng Island. It is a freshwater lake, not a marine reef snorkeling site. Visit for the clear water and scenery; swim or use a boat only if permitted by local management and conditions are safe.
 
 ## How to choose a snorkeling stop
 

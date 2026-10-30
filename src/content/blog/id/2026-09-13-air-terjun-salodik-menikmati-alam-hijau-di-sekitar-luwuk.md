@@ -19,7 +19,7 @@ tags:
   - "Trans Sulawesi"
 ---
 
-Luwuk, sebagai ibu kota Kabupaten Banggai di Sulawesi Tengah, punya reputasi yang tumbuh perlahan di kalangan wisatawan. Kota kecil ini dikenal sebagai gerbang menuju Kepulauan Banggai—gugusan pulau dengan laut biru, danau ikonik seperti Paisu Pok, dan pantai-pantai yang masih sepi. Namun sebelum menyeberang ke pulau-pulau itu, ada satu tempat yang hampir selalu disebut oleh warga lokal ketika ditanya tentang wisata alam di daratan: **Air Terjun Salodik**.
+Luwuk, sebagai ibu kota Kabupaten Banggai di Sulawesi Tengah, punya reputasi yang tumbuh perlahan di kalangan wisatawan. Kota kecil ini dikenal sebagai gerbang menuju Kepulauan Banggai—gugusan pulau dengan laut biru, danau ikonik seperti [Paisu Pok](/id/destinations/paisu-pok-lake/), dan pantai-pantai yang masih sepi. Namun sebelum menyeberang ke pulau-pulau itu, ada satu tempat yang hampir selalu disebut oleh warga lokal ketika ditanya tentang wisata alam di daratan: **[Air Terjun Salodik](/id/destinations/salodik-waterfall/)**.
 
 Air terjun ini bukan atraksi yang megah dengan tebing setinggi puluhan meter. Justru daya tariknya ada pada hal yang lebih sederhana—aliran air yang bertingkat, kolam alami berwarna biru kehijauan, dan hutan tropis yang rapat di sekelilingnya. Bagi wisatawan yang baru tiba di Luwuk dan ingin merasakan suasana pedalaman Sulawesi tanpa harus menempuh perjalanan berjam-jam, Salodik adalah pilihan yang masuk akal.
 
@@ -94,7 +94,7 @@ Jika Anda berencana melanjutkan perjalanan ke Kepulauan Banggai, menginap di Luw
 
 ### Berapa Lama Sebaiknya Anda Tinggal?
 
-Untuk mengunjungi Air Terjun Salodik saja, **2–3 jam** sudah cukup—termasuk waktu untuk berenang, berfoto, dan bersantai. Namun jika Anda ingin menggabungkannya dengan destinasi lain di sekitar Luwuk, seperti Bukit Teletubbies atau Pantai Kilo 5, Anda bisa menghabiskan **setengah hari hingga satu hari penuh**.
+Untuk mengunjungi Air Terjun Salodik saja, **2–3 jam** sudah cukup—termasuk waktu untuk berenang, berfoto, dan bersantai. Namun jika Anda ingin menggabungkannya dengan destinasi lain di sekitar Luwuk, seperti [Bukit Teletubbies](/id/destinations/bukit-teletubbies/) atau [Pantai Kilo 5](/id/destinations/kilo-5-beach/), Anda bisa menghabiskan **setengah hari hingga satu hari penuh**.
 
 Salodik juga bisa menjadi perhentian singkat dalam perjalanan menuju destinasi lain di Banggai, misalnya jika Anda dalam perjalanan menuju [INTERNAL LINK: Banggai Islands] atau danau Paisu Pok.
 

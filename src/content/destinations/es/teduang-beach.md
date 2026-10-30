@@ -98,4 +98,4 @@ Hay **estructuras sencillas o bungalows para descansar**, pero el alojamiento fo
 
 ## Destinos Relacionados
 
-**Paisu Pok Lake** combina naturalmente con Teduang en un itinerario por las Islas Banggai. **Paisu Batango**, **Poganda Beach**, **Pompon Beach** y **Mandel Beach** ofrecen otras experiencias de agua dulce, arena blanca y snorkel. Para quienes se alojan en Luwuk, **Kilo 5 Beach** y **Piala Waterfall** son buenas opciones en tierra firme.
+**[Paisu Pok Lake](/es/destinations/paisu-pok-lake/)** combina naturalmente con Teduang en un itinerario por las Islas Banggai. **[Paisu Batango](/es/destinations/paisu-batango-lake/)**, **[Poganda Beach](/es/destinations/poganda-beach/)**, **[Pompon Beach](/es/destinations/pompon-beach/)** y **[Mandel Beach](/es/destinations/mandel-beach/)** ofrecen otras experiencias de agua dulce, arena blanca y snorkel. Para quienes se alojan en Luwuk, **[Kilo 5 Beach](/es/destinations/kilo-5-beach/)** y **[Piala Waterfall](/es/destinations/piala-waterfall/)** son buenas opciones en tierra firme.

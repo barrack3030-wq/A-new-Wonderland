@@ -15,7 +15,7 @@ tags:
 translationKey: "choose-banggai-tour-package-2026-10-26"
 ---
 
-Planning a trip to the Banggai Islands involves more than choosing beautiful places. You also need to match the route to your available days, group size, transport arrangements, and preferred pace. A well-matched **Banggai tour package** can make it easier to plan visits to Lake Paisupok, Paisu Batango, Salodik Waterfall, or Pulau Dua Balantak.
+Planning a trip to the Banggai Islands involves more than choosing beautiful places. You also need to match the route to your available days, group size, transport arrangements, and preferred pace. A well-matched **Banggai tour package** can make it easier to plan visits to Lake Paisupok, [Paisu Batango](/en/destinations/paisu-batango-lake/), [Salodik Waterfall](/en/destinations/salodik-waterfall/), or [Pulau Dua Balantak](/en/destinations/pulau-dua-balantak/).
 
 The first decision is whether you prefer a private trip with a more personal arrangement or an open trip where you join other travelers.
 
@@ -43,7 +43,7 @@ For either duration, keep some flexibility for rest, road conditions, and weathe
 
 ## Planning a trip to Lake Paisupok
 
-If Lake Paisupok is your main priority, ask how the route to the Luk Panenteng area is arranged, whether Paisu Batango or Poganda Beach is included, and how your return transport is coordinated.
+If Lake Paisupok is your main priority, ask how the route to the Luk Panenteng area is arranged, whether Paisu Batango or [Poganda Beach](/en/destinations/poganda-beach/) is included, and how your return transport is coordinated.
 
 Confirm local entrance fees, activity rules, and access conditions close to your travel date. Local arrangements can change, so older social media posts should not be treated as guaranteed current prices.
 

@@ -7,6 +7,7 @@ image: /images/Poganda-Beach-Banggai-IndonesiaJuara-Trip.webp
 imageAlt: 'Poganda Beach, Banggai, Indonesia'
 author: 'aji'
 pubDate: "2026-09-08T21:30:00"
+translationKey: "2026-09-08-five-reasons-banggai-hidden-paradise"
 tags:
   - Banggai
   - Luwuk
@@ -33,7 +34,7 @@ Banggai bukan destinasi yang hanya mengandalkan satu jenis pemandangan.
 
 Dalam satu perjalanan, Anda bisa menikmati danau yang jernih, pantai tropis, air terjun, hutan hijau, pulau-pulau kecil, hingga jalan pesisir dengan panorama laut terbuka.
 
-**Danau Paisupok** menawarkan ketenangan air yang bening. **Poganda Beach** dan pantai-pantai lain menghadirkan suasana tropis yang lebih santai. Sementara **Piala Waterfall** dan **Kamumu Waterfall** memperlihatkan sisi hijau dan alami dari wilayah ini.
+**Danau Paisupok** menawarkan ketenangan air yang bening. **[Poganda Beach](/id/destinations/poganda-beach/)** dan pantai-pantai lain menghadirkan suasana tropis yang lebih santai. Sementara **[Piala Waterfall](/id/destinations/piala-waterfall/)** dan **[Kamumu Waterfall](/id/destinations/kamumu-waterfall/)** memperlihatkan sisi hijau dan alami dari wilayah ini.
 
 Keragaman tersebut membuat perjalanan terasa dinamis.
 

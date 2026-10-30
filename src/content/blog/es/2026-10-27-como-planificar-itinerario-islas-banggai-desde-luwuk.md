@@ -24,11 +24,11 @@ La regla más útil es no planificar cada hora como si todos los traslados estuv
 
 Antes de elegir la duración, define el objetivo principal del viaje.
 
-- **El lago Paisu Pok y Peleng:** reserva tiempo suficiente para la isla; no lo trates como una excursión rápida desde Luwuk.
+- **El lago [Paisu Pok](/es/destinations/paisu-pok-lake/) y Peleng:** reserva tiempo suficiente para la isla; no lo trates como una excursión rápida desde Luwuk.
 - **Playas y bahías:** agrupa los lugares por zona y confirma los accesos por carretera con un operador local.
 - **Una parada breve en Luwuk:** elige actividades cercanas y no dependas de una conexión marítima el mismo día sin confirmar antes el transporte.
 
-Paisu Pok, Paisu Batango, Kawalu Bay y Poganda pueden formar parte de un viaje más amplio, pero el orden depende del alojamiento, el transporte disponible y las condiciones del día. No es recomendable convertir cada lugar en una parada obligatoria de una jornada demasiado apretada.
+Paisu Pok, [Paisu Batango](/es/destinations/paisu-batango-lake/), [Kawalu Bay](/es/destinations/kawalu-bay/) y Poganda pueden formar parte de un viaje más amplio, pero el orden depende del alojamiento, el transporte disponible y las condiciones del día. No es recomendable convertir cada lugar en una parada obligatoria de una jornada demasiado apretada.
 
 ## Divide el viaje en etapas
 

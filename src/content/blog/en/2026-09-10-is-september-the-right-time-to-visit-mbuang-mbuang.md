@@ -21,7 +21,7 @@ The short answer: **yes, absolutely—perhaps one of the best months.** But not 
 
 ## Weather: Dry, But Not Entirely Rain-Free
 
-September in Mbuang-Mbuang Village has a fairly friendly weather profile. Climate data from **timeanddate.com** shows average rainfall in September around **88.3 mm**—much lower than May (218.6 mm) or June (211.2 mm). The average temperature hovers around **26°C**, with highs around **31°C** and lows of **22°C**. Humidity is also relatively lower, around **74%**.
+September in [Mbuang-Mbuang](/en/destinations/mbuang-mbuang-island/) Village has a fairly friendly weather profile. Climate data from **timeanddate.com** shows average rainfall in September around **88.3 mm**—much lower than May (218.6 mm) or June (211.2 mm). The average temperature hovers around **26°C**, with highs around **31°C** and lows of **22°C**. Humidity is also relatively lower, around **74%**.
 
 *Important note:* this data comes from the **Kendari / Woltermon-Ginsidi** weather station located about **277 km** from Mbuang-Mbuang Village, so actual local conditions may vary slightly.
 

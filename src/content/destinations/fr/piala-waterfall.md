@@ -111,4 +111,4 @@ Le site peut rester accessible après une pluie légère, mais la route et le se
 
 ## Destinations à proximité
 
-**La cascade de Laumarang** se trouve à proximité et offre une expérience plus exigeante. **La cascade de Mokokawa** est une autre cascade en terrasses dans la région de Hanga-Hanga, avec un sentier forestier plus long. **Kilo 5 Beach** à Luwuk peut être combinée à une visite de cascade pour un itinéraire nature plus varié. Pour ceux qui continuent vers l'île de Peleng, **Paisu Pok Lake** est l'une des destinations d'eau douce les plus connues de Banggai.
+**La cascade de Laumarang** se trouve à proximité et offre une expérience plus exigeante. **La cascade de Mokokawa** est une autre cascade en terrasses dans la région de Hanga-Hanga, avec un sentier forestier plus long. **[Kilo 5 Beach](/fr/destinations/kilo-5-beach/)** à Luwuk peut être combinée à une visite de cascade pour un itinéraire nature plus varié. Pour ceux qui continuent vers l'île de Peleng, **[Paisu Pok Lake](/fr/destinations/paisu-pok-lake/)** est l'une des destinations d'eau douce les plus connues de Banggai.

@@ -25,10 +25,10 @@ Itinerary di bawah ini adalah kerangka perencanaan, bukan jadwal transportasi te
 Atur penjemputan, kebutuhan logistik, serta waktu keberangkatan menuju Pulau Peleng berdasarkan jadwal penyeberangan yang berlaku. Jika tiba terlambat atau koneksi kapal tidak sesuai, pertimbangkan menginap di Luwuk dan mulai perjalanan keesokan hari agar itinerary tidak terlalu padat.
 
 ### Hari 2 — Paisu Pok dan Paisu Batango
-Sisihkan waktu yang cukup untuk mengunjungi Danau Paisu Pok dan Paisu Batango. Hindari menyusun jadwal terlalu rapat karena perjalanan darat, kondisi akses, dan waktu di setiap lokasi dapat berbeda. Tanyakan aturan setempat dan biaya masuk atau aktivitas sebelum berangkat.
+Sisihkan waktu yang cukup untuk mengunjungi [Danau Paisu Pok](/id/destinations/paisu-pok-lake/) dan [Paisu Batango](/id/destinations/paisu-batango-lake/). Hindari menyusun jadwal terlalu rapat karena perjalanan darat, kondisi akses, dan waktu di setiap lokasi dapat berbeda. Tanyakan aturan setempat dan biaya masuk atau aktivitas sebelum berangkat.
 
 ### Hari 3 — Kawalu Bay dan Pantai Poganda
-Gunakan hari ini untuk menikmati Kawalu Bay dan Pantai Poganda, dengan urutan yang disesuaikan dengan lokasi menginap, kondisi cuaca, dan transportasi lokal. Sisakan waktu untuk istirahat serta perjalanan kembali; jangan mengandalkan estimasi peta saja untuk menentukan waktu keberangkatan.
+Gunakan hari ini untuk menikmati [Kawalu Bay](/id/destinations/kawalu-bay/) dan [Pantai Poganda](/id/destinations/poganda-beach/), dengan urutan yang disesuaikan dengan lokasi menginap, kondisi cuaca, dan transportasi lokal. Sisakan waktu untuk istirahat serta perjalanan kembali; jangan mengandalkan estimasi peta saja untuk menentukan waktu keberangkatan.
 
 ### Hari 4 — Kembali menuju Luwuk
 Konfirmasikan jadwal kapal dan titik keberangkatan sebelum menentukan waktu pulang. Beri jeda yang cukup untuk perjalanan menuju pelabuhan dan perubahan jadwal. Jika memiliki penerbangan dari Luwuk pada hari yang sama, hindari koneksi yang terlalu mepet dan pertimbangkan bermalam di Luwuk.

@@ -7,6 +7,7 @@ image: "/images/Poganda-Beach-Banggai-IndonesiaJuara-Trip.webp"
 imageAlt: "Pemandangan pesisir tropis di Kepulauan Banggai, Indonesia"
 author: "Banggai Wonderland"
 pubDate: 2026-09-18
+translationKey: "2026-09-18-how-to-get-to-banggai-islands-from-luwuk"
 tags:
   - "Luwuk"
   - "Kepulauan Banggai"
@@ -22,7 +23,7 @@ Sebagian besar wisatawan tiba di Bandara Syukuran Aminuddin Amir, kemudian melan
 
 Rute yang dipilih tergantung pada destinasi Anda.
 
-Untuk **Paisu Pok**, Peleng merupakan tujuan utama. Untuk perjalanan yang lebih luas di wilayah kepulauan, Salakan bisa menjadi titik singgah yang praktis. Sementara itu, wisatawan yang menuju **Banggai Laut** menggunakan rute berbeda melalui Banggai.
+Untuk **[Paisu Pok](/id/destinations/paisu-pok-lake/)**, Peleng merupakan tujuan utama. Untuk perjalanan yang lebih luas di wilayah kepulauan, Salakan bisa menjadi titik singgah yang praktis. Sementara itu, wisatawan yang menuju **Banggai Laut** menggunakan rute berbeda melalui Banggai.
 
 Hal terpenting adalah menentukan destinasi sebelum memilih kapal.
 

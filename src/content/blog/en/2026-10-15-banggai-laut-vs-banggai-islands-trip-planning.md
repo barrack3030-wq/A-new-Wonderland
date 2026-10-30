@@ -22,13 +22,13 @@ The right choice depends less on which place is “better” and more on how man
 
 ### If you want to explore the Banggai Islands area
 
-Travelers often build an itinerary around Peleng Island and nearby destinations such as Paisu Pok Lake, Paisu Batango Spring, Kawalu Bay and Poganda Beach. These stops offer different experiences, from clear freshwater to beaches and coastal boat trips.
+Travelers often build an itinerary around Peleng Island and nearby destinations such as [Paisu Pok Lake](/en/destinations/paisu-pok-lake/), [Paisu Batango](/en/destinations/paisu-batango-lake/) Spring, [Kawalu Bay](/en/destinations/kawalu-bay/) and [Poganda Beach](/en/destinations/poganda-beach/). These stops offer different experiences, from clear freshwater to beaches and coastal boat trips.
 
 Do not assume that every attraction is a short drive from the next. Some journeys require road transfers, local boats or coordination with a village operator. Check the starting point and current access arrangements for each attraction before setting the day's schedule.
 
 ### If you want to explore Banggai Laut
 
-Banggai Laut offers a different set of coastal experiences, including destinations on Banggai Island such as Oyama Beach, Bontolan Beach and Long Beach. Oyama is reached by boat from the Lokotoy or Popisi area, while Bontolan has road access near Bone Baru. Those different access patterns matter when you plan transport.
+Banggai Laut offers a different set of coastal experiences, including destinations on Banggai Island such as Oyama Beach, [Bontolan Beach](/en/destinations/bontolan-beach/) and [Long Beach](/en/destinations/long-beach/). Oyama is reached by boat from the Lokotoy or Popisi area, while Bontolan has road access near Bone Baru. Those different access patterns matter when you plan transport.
 
 If your priority is white-sand beaches and coastal scenery, consider grouping nearby places rather than crossing between islands repeatedly. Confirm boat availability, sea conditions, pickup points and return arrangements before departure.
 

@@ -41,7 +41,7 @@ Kabut asap dapat mengurangi kejernihan panorama kota, teluk, garis pantai, dan p
 
 ### 3. Spot alam perlu dinilai berdasarkan kondisi setempat
 
-Destinasi seperti Air Terjun Piala, Air Terjun Salodik, Pantai Kilo Lima, Pantai Poganda, Danau Paisupok, Paisu Batango, dan Kawalu Bay memiliki karakter serta jarak yang berbeda dari pusat Luwuk. Belum ada dasar dalam laporan yang dirujuk untuk menyimpulkan bahwa semua tempat tersebut ditutup atau seluruhnya terdampak pada tingkat yang sama.
+Destinasi seperti [Air Terjun Piala](/id/destinations/piala-waterfall/), [Air Terjun Salodik](/id/destinations/salodik-waterfall/), Pantai Kilo Lima, [Pantai Poganda](/id/destinations/poganda-beach/), Danau Paisupok, [Paisu Batango](/id/destinations/paisu-batango-lake/), dan [Kawalu Bay](/id/destinations/kawalu-bay/) memiliki karakter serta jarak yang berbeda dari pusat Luwuk. Belum ada dasar dalam laporan yang dirujuk untuk menyimpulkan bahwa semua tempat tersebut ditutup atau seluruhnya terdampak pada tingkat yang sama.
 
 Sebelum berangkat, tanyakan kondisi aktual kepada pemandu lokal atau pengelola destinasi. Perhatikan jarak pandang di jalan, kondisi akses, dan kenyamanan udara di lokasi. Untuk aktivitas berenang, snorkeling, trekking, atau perjalanan perahu, ikuti arahan operator setempat dan tunda kegiatan jika kondisi tidak mendukung keselamatan.
 

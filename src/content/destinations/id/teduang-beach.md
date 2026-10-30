@@ -98,4 +98,4 @@ Terdapat **bungalow atau bangunan sederhana untuk beristirahat**, tetapi akomoda
 
 ## Destinasi Terkait
 
-**Danau Paisu Pok** merupakan pasangan alami untuk itinerary Kepulauan Banggai. **Mata Air Paisu Batango**, **Pantai Poganda**, **Pantai Pompon**, dan **Pantai Mandel** menawarkan pengalaman air tawar, pasir putih, dan snorkeling lainnya. Bagi wisatawan yang berbasis di Luwuk, **Pantai Kilo 5** dan **Air Terjun Piala** merupakan tambahan daratan yang lebih mudah.
+**[Danau Paisu Pok](/id/destinations/paisu-pok-lake/)** merupakan pasangan alami untuk itinerary Kepulauan Banggai. **Mata Air [Paisu Batango](/id/destinations/paisu-batango-lake/)**, **[Pantai Poganda](/id/destinations/poganda-beach/)**, **[Pantai Pompon](/id/destinations/pompon-beach/)**, dan **[Pantai Mandel](/id/destinations/mandel-beach/)** menawarkan pengalaman air tawar, pasir putih, dan snorkeling lainnya. Bagi wisatawan yang berbasis di Luwuk, **[Pantai Kilo 5](/id/destinations/kilo-5-beach/)** dan **[Air Terjun Piala](/id/destinations/piala-waterfall/)** merupakan tambahan daratan yang lebih mudah.

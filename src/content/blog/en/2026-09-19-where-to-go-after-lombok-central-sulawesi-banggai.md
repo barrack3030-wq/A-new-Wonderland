@@ -38,7 +38,7 @@ That difference is exactly why some travellers search for **alternatives to Bali
 
 The appeal is not simply fewer people. It is the combination of landscapes and local life that comes with travelling beyond Indonesia's most established tourist routes.
 
-You can combine a mainland stay in Luwuk with island trips to Peleng, visits to Paisupok Lake and Poganda Beach, or longer journeys towards Banggai Laut.
+You can combine a mainland stay in Luwuk with island trips to Peleng, visits to Paisupok Lake and [Poganda Beach](/en/destinations/poganda-beach/), or longer journeys towards Banggai Laut.
 
 ## Banggai at a Glance
 
@@ -98,7 +98,7 @@ The beach combines white sand and calm water, with opportunities for swimming an
 
 ### Pulo Dua Balantak
 
-Pulo Dua, in North Balantak District, is accessible from the Luwuk side by road and boat.
+[Pulo Dua](/en/destinations/pulau-dua-balantak/), in North Balantak District, is accessible from the Luwuk side by road and boat.
 
 Its landscape combines green hills, clear water, and white-sand beaches. Visitors can snorkel, dive, swim, or climb the hills for wider views.
 
@@ -106,13 +106,13 @@ Its landscape combines green hills, clear water, and white-sand beaches. Visitor
 
 Travellers with more time can continue towards Banggai Laut Regency.
 
-This area offers a different island atmosphere, with longer stretches of quiet coast, reefs, villages, and simpler accommodation. Long Beach and Tanjung Gundul are among the places worth researching when planning a longer route.
+This area offers a different island atmosphere, with longer stretches of quiet coast, reefs, villages, and simpler accommodation. [Long Beach](/en/destinations/long-beach/) and Tanjung Gundul are among the places worth researching when planning a longer route.
 
 ### Waterfalls Around Luwuk
 
 You do not need to leave the mainland to see nature.
 
-Salodik Waterfall, Kamumu Waterfall, and Piala Waterfall can be combined with time in Luwuk before or after an island trip.
+[Salodik Waterfall](/en/destinations/salodik-waterfall/), [Kamumu Waterfall](/en/destinations/kamumu-waterfall/), and Piala Waterfall can be combined with time in Luwuk before or after an island trip.
 
 Kamumu requires more travel and a jungle hike, while Piala and Salodik are more accessible as mainland excursions.
 

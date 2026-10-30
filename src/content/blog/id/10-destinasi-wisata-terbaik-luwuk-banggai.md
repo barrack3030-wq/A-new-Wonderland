@@ -7,6 +7,7 @@ seoTitle: "10 Destinasi Wisata Terbaik di Luwuk dan Banggai"
 seoDescription: "Temukan 10 destinasi wisata terbaik di Luwuk dan Banggai, Sulawesi Tengah: Danau Paisupok, Pantai Poganda, Mandel Beach, Pulo Dua, Oyama, Kawalu Bay."
 author: aji
 pubDate: "2026-09-08T21:00:00"
+translationKey: "2026-09-08-banggai-top-10-destinations"
 tags:
   - Luwuk
   - Banggai
@@ -40,7 +41,7 @@ Suasananya membuat tempat ini terasa jauh dari kehidupan kota. Datang tanpa terb
 
 ## 2. Pantai Poganda
 
-**Poganda Beach** merupakan salah satu pantai yang cocok untuk Anda yang ingin menikmati laut dengan suasana yang lebih santai.
+**[Poganda Beach](/id/destinations/poganda-beach/)** merupakan salah satu pantai yang cocok untuk Anda yang ingin menikmati laut dengan suasana yang lebih santai.
 
 Air biru, garis pantai yang indah, dan suasana yang tidak terasa seperti kawasan wisata massal menjadi daya tarik utamanya.
 
@@ -54,7 +55,7 @@ Ada sesuatu yang menyenangkan dari pantai yang tidak membuat Anda merasa harus s
 
 ## 3. Mandel Beach
 
-Kalau Anda menyukai pantai yang terasa lebih tersembunyi, **Mandel Beach** layak dimasukkan ke itinerary.
+Kalau Anda menyukai pantai yang terasa lebih tersembunyi, **[Mandel Beach](/id/destinations/mandel-beach/)** layak dimasukkan ke itinerary.
 
 Daya tariknya bukan hanya pemandangan laut, tetapi juga rasa tenang yang biasanya dicari traveler ketika ingin benar-benar lepas dari rutinitas.
 
@@ -66,7 +67,7 @@ Luangkan waktu untuk menikmati garis pantai, air laut, dan perjalanan menuju lok
 
 ## 4. Pulo Dua
 
-Untuk pengalaman yang lebih identik dengan laut tropis dan island adventure, **Pulo Dua** adalah salah satu destinasi yang tidak boleh dilewatkan.
+Untuk pengalaman yang lebih identik dengan laut tropis dan island adventure, **[Pulo Dua](/id/destinations/pulau-dua-balantak/)** adalah salah satu destinasi yang tidak boleh dilewatkan.
 
 Pulau-pulau kecil, laut jernih, dan suasana terbuka membuat kawasan ini sangat menarik untuk **snorkeling dan island hopping**.
 
@@ -78,7 +79,7 @@ Itulah bagian yang membuat pengalaman island hopping di Banggai terasa begitu sp
 
 ## 5. Oyama Beach
 
-**Oyama Beach** adalah pilihan yang menarik bagi traveler yang ingin menikmati sisi pesisir Banggai dengan suasana lebih rileks.
+**[Oyama Beach](/id/destinations/oyama-beach/)** adalah pilihan yang menarik bagi traveler yang ingin menikmati sisi pesisir Banggai dengan suasana lebih rileks.
 
 Pantai seperti ini tidak selalu membutuhkan itinerary yang padat. Justru semakin sedikit agenda, semakin banyak waktu untuk menikmati tempatnya.
 
@@ -90,7 +91,7 @@ Untuk pasangan atau wisatawan yang ingin mencari momen romantis tanpa suasana te
 
 ## 6. Kawalu Bay
 
-Jika Anda menyukai lanskap laut yang lebih dramatis, **Kawalu Bay** patut dimasukkan dalam daftar.
+Jika Anda menyukai lanskap laut yang lebih dramatis, **[Kawalu Bay](/id/destinations/kawalu-bay/)** patut dimasukkan dalam daftar.
 
 Teluk menawarkan sudut pandang yang berbeda dari pantai terbuka. Bentang alam pesisir, air laut, dan pulau-pulau di sekitarnya menciptakan pemandangan yang cocok untuk dinikmati perlahan.
 
@@ -102,7 +103,7 @@ Kawalu Bay juga menarik bagi traveler yang gemar fotografi karena karakter lansk
 
 Luwuk tidak hanya memiliki pesona laut.
 
-Salah satu tempat yang bisa menjadi jeda dari perjalanan pesisir adalah **Piala Waterfall**.
+Salah satu tempat yang bisa menjadi jeda dari perjalanan pesisir adalah **[Piala Waterfall](/id/destinations/piala-waterfall/)**.
 
 Air terjun ini menghadirkan suasana yang sangat berbeda: pepohonan hijau, aliran air tawar, bebatuan, dan udara yang terasa lebih sejuk dibandingkan kawasan pantai.
 
@@ -112,7 +113,7 @@ Bagi traveler yang ingin menggabungkan wisata kota dan alam dalam satu perjalana
 
 ## 8. Kamumu Waterfall
 
-Kalau Anda ingin melangkah sedikit lebih jauh dari destinasi yang umum dikenal, **Kamumu Waterfall** menawarkan pengalaman yang lebih dekat dengan alam.
+Kalau Anda ingin melangkah sedikit lebih jauh dari destinasi yang umum dikenal, **[Kamumu Waterfall](/id/destinations/kamumu-waterfall/)** menawarkan pengalaman yang lebih dekat dengan alam.
 
 Perjalanan menuju air terjun sendiri dapat menjadi bagian dari pengalaman. Semakin jauh dari kawasan perkotaan, semakin terasa perubahan lanskapnya.
 
@@ -122,7 +123,7 @@ Tempat seperti Kamumu cocok untuk traveler yang tidak keberatan menukar sedikit 
 
 ## 9. Bontolan Beach
 
-**Bontolan Beach** menjadi pilihan lain untuk menikmati garis pantai Banggai dengan ritme yang lebih pelan.
+**[Bontolan Beach](/id/destinations/bontolan-beach/)** menjadi pilihan lain untuk menikmati garis pantai Banggai dengan ritme yang lebih pelan.
 
 Bagi banyak traveler, daya tarik pantai tidak selalu terletak pada fasilitas yang lengkap. Kadang justru kesederhanaan, pemandangan laut, dan kesempatan untuk menikmati ruang terbuka tanpa banyak gangguan yang membuat perjalanan terasa berharga.
 

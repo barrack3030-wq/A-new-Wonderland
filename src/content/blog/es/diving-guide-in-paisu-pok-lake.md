@@ -4,9 +4,10 @@ description: "Guía práctica para bucear y explorar el lago Paisu Pok en la isl
 seoTitle: "Guía de buceo en el lago Paisu Pok | Banggai Wonderland"
 seoDescription: "Guía práctica para bucear y explorar el lago Paisu Pok en la isla de Peleng: condiciones del agua, actividades, acceso y consejos en las islas Banggai."
 image: /images/DSCF7073-5.webp
-imageAlt: ''
+imageAlt: "Lago Paisu Pok en la isla de Peleng, islas Banggai"
 author: Diving Expert
 pubDate: "2026-10-15T00:00:00Z"
+translationKey: "2026-10-15-paisu-pok-diving-guide"
 tags:
   - Diving
   - Adventure
@@ -14,7 +15,7 @@ tags:
 
 ## Guía para Explorar Bajo el Agua en el Lago Paisu Pok
 
-**Descubre un mundo submarino diferente en el Lago Paisu Pok, una de las joyas naturales más sorprendentes de las Islas Banggai, Indonesia.**
+**Descubre un mundo submarino diferente en el [Lago Paisu Pok](/es/destinations/paisu-pok-lake/), una de las joyas naturales más sorprendentes de las Islas Banggai, Indonesia.**
 
 Imagina entrar en un lago de agua increíblemente transparente, donde puedes observar el paisaje bajo la superficie, las rocas, la vegetación y los árboles sumergidos.
 
@@ -298,14 +299,14 @@ Paisu Pok puede formar parte de un viaje más completo por las Islas Banggai.
 Puedes combinarlo con destinos como:
 
 - Lago Paisubatango
-- Playa Poganda
-- Playa Mandel
-- Long Beach
-- Playa Oyama
-- Playa Bontolan
+- [Playa Poganda](/es/destinations/poganda-beach/)
+- [Playa Mandel](/es/destinations/mandel-beach/)
+- [Long Beach](/es/destinations/long-beach/)
+- [Playa Oyama](/es/destinations/oyama-beach/)
+- [Playa Bontolan](/es/destinations/bontolan-beach/)
 - Bahía Kawalu
-- Pulo Dua
-- Mbuang-Mbuang
+- [Pulo Dua](/es/destinations/pulau-dua-balantak/)
+- [Mbuang-Mbuang](/es/destinations/mbuang-mbuang-island/)
 
 Así puedes disfrutar de un viaje que combina:
 

@@ -98,4 +98,4 @@ There are simple **day-use bungalows or resting structures**, but formal overnig
 
 ## Related Destinations
 
-**Paisu Pok Lake** is a natural pairing for a Banggai Islands itinerary. **Paisu Batango Spring**, **Poganda Beach**, **Pompon Beach** and **Mandel Beach** offer other freshwater, white-sand and snorkeling experiences. For travellers based in Luwuk, **Kilo 5 Beach** and **Piala Waterfall** are easier mainland additions.
+**[Paisu Pok Lake](/en/destinations/paisu-pok-lake/)** is a natural pairing for a Banggai Islands itinerary. **[Paisu Batango](/en/destinations/paisu-batango-lake/) Spring**, **[Poganda Beach](/en/destinations/poganda-beach/)**, **[Pompon Beach](/en/destinations/pompon-beach/)** and **[Mandel Beach](/en/destinations/mandel-beach/)** offer other freshwater, white-sand and snorkeling experiences. For travellers based in Luwuk, **[Kilo 5 Beach](/en/destinations/kilo-5-beach/)** and **[Piala Waterfall](/en/destinations/piala-waterfall/)** are easier mainland additions.

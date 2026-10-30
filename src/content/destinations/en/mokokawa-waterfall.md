@@ -87,4 +87,4 @@ A guide is not necessarily mandatory, but a **local guide from Tontouan** can ma
 
 ## Related Destinations
 
-**Piala Waterfall** and **Laumarang Waterfall** are other waterfall destinations in the Luwuk area. **Kilo 5 Beach** is a nearby coastal option, while **Paisu Pok Lake** on Peleng Island is a larger freshwater destination reached by sea from Luwuk.
+**[Piala Waterfall](/en/destinations/piala-waterfall/)** and **[Laumarang Waterfall](/en/destinations/laumarang-waterfall/)** are other waterfall destinations in the Luwuk area. **[Kilo 5 Beach](/en/destinations/kilo-5-beach/)** is a nearby coastal option, while **[Paisu Pok Lake](/en/destinations/paisu-pok-lake/)** on Peleng Island is a larger freshwater destination reached by sea from Luwuk.

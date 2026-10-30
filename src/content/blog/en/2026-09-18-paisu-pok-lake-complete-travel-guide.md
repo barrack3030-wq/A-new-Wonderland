@@ -7,6 +7,7 @@ image: "/images/DSCF7073-5.webp"
 imageAlt: "Clear blue-green water of Paisu Pok Lake with submerged trees and tropical reflections on Peleng Island"
 author: "Banggai Wonderland"
 pubDate: 2026-09-18
+translationKey: "2026-09-18-paisu-pok-lake-complete-guide"
 tags:
   - "Paisu Pok Lake"
   - "Paisu Pok"
@@ -16,7 +17,7 @@ tags:
   - "Itinerary"
 ---
 
-You may have seen the photographs before you ever heard the name Paisu Pok: remarkably clear blue-green water, submerged trees visible beneath the surface, and tropical vegetation surrounding the lake.
+You may have seen the photographs before you ever heard the name [Paisu Pok](/en/destinations/paisu-pok-lake/): remarkably clear blue-green water, submerged trees visible beneath the surface, and tropical vegetation surrounding the lake.
 
 What the photographs do not show is the geography.
 

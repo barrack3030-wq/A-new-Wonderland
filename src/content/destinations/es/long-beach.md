@@ -29,7 +29,7 @@ youtube: "https://www.youtube.com/watch?v=P6PO7BwgQa0"
 
 ## Long Beach: la costa de arena blanca de la isla de Banggai
 
-Long Beach, conocida localmente como **Pantai Pasir Panjang**, es una playa de arena blanca en la **isla de Banggai, en la regencia de Banggai Laut, Sulawesi Central**. Se encuentra junto a **Oyama Beach** y, al igual que Oyama, **solo se puede llegar en barco**, normalmente desde los pueblos de **Popisi** o **Lokotoy**. No hay acceso por carretera, no hay entrada y no existe infraestructura turística formal. A cambio, encontrarás una costa tranquila, poco desarrollada y con agua clara.
+Long Beach, conocida localmente como **Pantai Pasir Panjang**, es una playa de arena blanca en la **isla de Banggai, en la regencia de Banggai Laut, Sulawesi Central**. Se encuentra junto a **[Oyama Beach](/es/destinations/oyama-beach/)** y, al igual que Oyama, **solo se puede llegar en barco**, normalmente desde los pueblos de **Popisi** o **Lokotoy**. No hay acceso por carretera, no hay entrada y no existe infraestructura turística formal. A cambio, encontrarás una costa tranquila, poco desarrollada y con agua clara.
 
 Long Beach funciona especialmente bien como parte de una excursión en barco por la costa de Banggai Laut, junto con Oyama Beach y otros lugares costeros cercanos.
 
@@ -43,7 +43,7 @@ El ambiente es natural y poco desarrollado. No hay instalaciones formales en la 
 
 ## Snorkel y vida marina
 
-El snorkel es posible **directamente desde la playa** cuando las condiciones del mar son tranquilas. El arrecife no se describe como tan rico como el de Pantai Bontolan, pero hay coral y vida de arrecife cerca de la orilla.
+El snorkel es posible **directamente desde la playa** cuando las condiciones del mar son tranquilas. El arrecife no se describe como tan rico como el de [Pantai Bontolan](/es/destinations/bontolan-beach/), pero hay coral y vida de arrecife cerca de la orilla.
 
 Como las opciones de alquiler de equipo en la isla de Banggai pueden ser limitadas, los viajeros que quieran hacer snorkel deberían llevar su propia máscara, aletas y equipo básico de natación.
 
@@ -87,4 +87,4 @@ No se describen instalaciones formales de comida o alojamiento en la playa. Llev
 
 ## Destinos relacionados
 
-**Oyama Beach** está justo al lado de Long Beach y suele visitarse en el mismo viaje en barco. **Tanjung Gundul** es un acantilado de piedra caliza cercano con una abertura formada por las olas del mar, al que se llega en barco y con un pequeño tramo a nado. **Pantai Bontolan** en Bone Baru ofrece snorkel sobre arrecifes de coral y hábitat para el pez cardenal de Banggai endémico. Para quienes continúan hacia la isla de Peleng, **Paisu Pok Lake** y **Paisu Batango Spring** son dos de los destinos de agua dulce más destacados de la región.
+**Oyama Beach** está justo al lado de Long Beach y suele visitarse en el mismo viaje en barco. **Tanjung Gundul** es un acantilado de piedra caliza cercano con una abertura formada por las olas del mar, al que se llega en barco y con un pequeño tramo a nado. **Pantai Bontolan** en Bone Baru ofrece snorkel sobre arrecifes de coral y hábitat para el pez cardenal de Banggai endémico. Para quienes continúan hacia la isla de Peleng, **[Paisu Pok Lake](/es/destinations/paisu-pok-lake/)** y **[Paisu Batango](/es/destinations/paisu-batango-lake/) Spring** son dos de los destinos de agua dulce más destacados de la región.

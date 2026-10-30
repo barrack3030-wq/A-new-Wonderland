@@ -4,6 +4,7 @@ description: "Descubre Luwuk y las Islas Banggai en Sulawesi Central, desde el l
 seoTitle: "Luwuk y las islas Banggai: una alternativa tranquila a Bali"
 seoDescription: "Descubre Luwuk y las Islas Banggai en Sulawesi Central, desde el lago Paisu Pok y la cascada Piala hasta playas, ferris, buceo, snorkel y consejos prácticos."
 image: "/images/blog/images-16-20260916142820.jpg"
+imageAlt: "Luwuk y las islas Banggai en Sulawesi Central"
 author: "Banggai Wonderland"
 pubDate: 2026-09-16
 translationKey: "2026-09-16-alternatif-bali-menjelajah-keindahan-luwuk-dan-kepulauan-banggai"
@@ -43,7 +44,7 @@ Luwuk no es simplemente un punto de tránsito. La ciudad y sus alrededores ofrec
 
 ### Lago Paisu Pok: El Lago Azul en el Corazón de Banggai
 
-Este es uno de los iconos de la región. El lago Paisu Pok se encuentra en el pueblo de Luk Panenteng, distrito de Bulagi Utara, en la regencia de Banggai Islands. El agua es extraordinariamente transparente y permite ver claramente el fondo arenoso y rocoso del lago. Su color cambia según la luz del sol, desde un verde plateado hasta un intenso azul turquesa.
+Este es uno de los iconos de la región. El lago [Paisu Pok](/es/destinations/paisu-pok-lake/) se encuentra en el pueblo de Luk Panenteng, distrito de Bulagi Utara, en la regencia de Banggai Islands. El agua es extraordinariamente transparente y permite ver claramente el fondo arenoso y rocoso del lago. Su color cambia según la luz del sol, desde un verde plateado hasta un intenso azul turquesa.
 
 Se dice que el nombre Paisu Pok significa "agua negra" en la lengua local, aunque el agua no es negra en absoluto. Lo que sí está claro es que el lago se ha convertido en un atractivo para viajeros nacionales e internacionales durante los últimos años.
 

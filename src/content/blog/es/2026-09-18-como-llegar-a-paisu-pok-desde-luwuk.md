@@ -7,6 +7,7 @@ image: "/images/Poganda-Beach-Banggai-IndonesiaJuara-Trip.webp"
 imageAlt: "Paisaje tropical de Peleng cerca de Paisu Pok"
 author: "Banggai Wonderland"
 pubDate: 2026-09-18
+translationKey: "2026-09-18-how-to-get-to-paisu-pok-from-luwuk"
 tags:
   - "Luwuk"
   - "Paisu Pok"
@@ -16,7 +17,7 @@ tags:
   - "Guía de viaje"
 ---
 
-Paisu Pok es uno de los paisajes naturales más conocidos de las Islas Banggai, pero hay algo importante que debes saber antes de organizar el viaje: **Paisu Pok no está en Luwuk**.
+[Paisu Pok](/es/destinations/paisu-pok-lake/) es uno de los paisajes naturales más conocidos de las Islas Banggai, pero hay algo importante que debes saber antes de organizar el viaje: **Paisu Pok no está en Luwuk**.
 
 El lago se encuentra en **Luk Panenteng, en la isla de Peleng, dentro de Banggai Kepulauan**. Para la mayoría de los viajeros que llegan en avión, Luwuk es el punto de partida antes de cruzar el mar hacia Peleng y continuar por carretera.
 

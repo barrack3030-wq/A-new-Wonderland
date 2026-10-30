@@ -7,6 +7,7 @@ image: "/images/DSCF7073-5.webp"
 imageAlt: "Agua azul verdosa y cristalina del lago Paisu Pok con árboles sumergidos en la isla de Peleng"
 author: "Banggai Wonderland"
 pubDate: 2026-09-18
+translationKey: "2026-09-18-paisu-pok-lake-complete-guide"
 tags:
   - "Lago Paisu Pok"
   - "Paisu Pok"
@@ -20,7 +21,7 @@ Probablemente hayas visto las fotografías antes de conocer el nombre: agua azul
 
 Pero las fotos suelen ocultar el detalle más importante:
 
-**El lago Paisu Pok no está en Luwuk.**
+**El lago [Paisu Pok](/es/destinations/paisu-pok-lake/) no está en Luwuk.**
 
 Se encuentra en **Luk Panenteng, en la isla de Peleng, dentro de Banggai Kepulauan**. Para muchos viajeros que llegan en avión, Luwuk es la puerta de entrada desde el continente antes de continuar por mar y carretera.
 

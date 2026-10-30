@@ -22,7 +22,7 @@ Artikel ini akan mengajak Anda mengenal 10 destinasi di sekitar Luwuk dan Kepula
 
 Luwuk adalah ibu kota Kabupaten Banggai dan pintu gerbang utama menuju Kepulauan Banggai. Bandara Syukuran Aminuddin Amir (LUW) melayani penerbangan dari Jakarta dan Makassar. Jika Anda datang dari Bali atau kota lain, biasanya perlu transit di salah satu hub tersebut. Rute penerbangan dapat berubah, jadi periksa jadwal terbaru sebelum memesan tiket.
 
-Dari Luwuk, akses ke pulau-pulau di Kepulauan Banggai hanya bisa ditempuh melalui jalur laut. Ada feri dan kapal kayu dari Pelabuhan Rakyat Luwuk menuju Pulau Peling (Leme Leme) dan Salakan. Jadwal, harga, dan ketersediaan sangat bergantung pada cuaca dan kondisi gelombang. Selalu konfirmasi jadwal terbaru ke pelabuhan atau agen setempat sebelum berangkat. Untuk tujuan tertentu seperti Danau Paisu Pok, speedboat dari Teluk Lalong biasanya berangkat pagi hari.
+Dari Luwuk, akses ke pulau-pulau di Kepulauan Banggai hanya bisa ditempuh melalui jalur laut. Ada feri dan kapal kayu dari Pelabuhan Rakyat Luwuk menuju Pulau Peling (Leme Leme) dan Salakan. Jadwal, harga, dan ketersediaan sangat bergantung pada cuaca dan kondisi gelombang. Selalu konfirmasi jadwal terbaru ke pelabuhan atau agen setempat sebelum berangkat. Untuk tujuan tertentu seperti [Danau Paisu Pok](/id/destinations/paisu-pok-lake/), speedboat dari Teluk Lalong biasanya berangkat pagi hari.
 
 ## 10 Destinasi di Banggai dan Sekitarnya
 
@@ -32,19 +32,19 @@ Danau Paisu Pok di Desa Luk Panenteng, Kecamatan Bulagi Utara, adalah ikon Bangg
 
 ### 2. Pantai Poganda
 
-Masih di Desa Luk Panenteng, Pantai Poganda menawarkan pasir putih halus dan air laut yang tenang. Pantai ini cocok untuk berenang, snorkeling, dan diving. Dari dermaga kecil, Anda bisa langsung menyelam dan menikmati terumbu karang yang masih terjaga. Karena letaknya berdekatan dengan Danau Paisu Pok, banyak wisatawan mengunjungi keduanya dalam satu hari.
+Masih di Desa Luk Panenteng, [Pantai Poganda](/id/destinations/poganda-beach/) menawarkan pasir putih halus dan air laut yang tenang. Pantai ini cocok untuk berenang, snorkeling, dan diving. Dari dermaga kecil, Anda bisa langsung menyelam dan menikmati terumbu karang yang masih terjaga. Karena letaknya berdekatan dengan Danau Paisu Pok, banyak wisatawan mengunjungi keduanya dalam satu hari.
 
 ### 3. Pulau Dua Balantak
 
-Pulau Dua terletak di Kecamatan Balantak Utara, Kabupaten Banggai. Untuk mencapainya, Anda bisa menempuh perjalanan darat dari Luwuk menuju Desa Kampangar, lalu melanjutkan dengan perahu. Pulau ini menawarkan perpaduan perbukitan hijau, pantai berpasir putih, dan laut jernih. Aktivitas yang bisa dilakukan meliputi snorkeling, diving, berenang, dan mendaki bukit untuk menikmati panorama matahari terbit atau terbenam.
+[Pulau Dua](/id/destinations/pulau-dua-balantak/) terletak di Kecamatan Balantak Utara, Kabupaten Banggai. Untuk mencapainya, Anda bisa menempuh perjalanan darat dari Luwuk menuju Desa Kampangar, lalu melanjutkan dengan perahu. Pulau ini menawarkan perpaduan perbukitan hijau, pantai berpasir putih, dan laut jernih. Aktivitas yang bisa dilakukan meliputi snorkeling, diving, berenang, dan mendaki bukit untuk menikmati panorama matahari terbit atau terbenam.
 
 ### 4. Pantai Kilo 5
 
-Bagi Anda yang ingin menikmati pantai tanpa harus menyeberang ke pulau lain, Pantai Kilo 5 di Kelurahan Maahas, Kecamatan Luwuk Selatan, adalah pilihan tepat. Lokasinya dekat dengan pusat kota Luwuk. Pantai ini menawarkan pasir putih dan air laut yang jernih hingga terumbu karang terlihat jelas.
+Bagi Anda yang ingin menikmati pantai tanpa harus menyeberang ke pulau lain, [Pantai Kilo 5](/id/destinations/kilo-5-beach/) di Kelurahan Maahas, Kecamatan Luwuk Selatan, adalah pilihan tepat. Lokasinya dekat dengan pusat kota Luwuk. Pantai ini menawarkan pasir putih dan air laut yang jernih hingga terumbu karang terlihat jelas.
 
 ### 5. Air Terjun Piala
 
-Air Terjun Piala adalah salah satu air terjun paling populer di Sulawesi Tengah. Terletak tidak jauh dari Luwuk, air terjun dua tingkat ini memiliki air yang sangat jernih dan dikelilingi pepohonan rimbun. Anda perlu sedikit trekking untuk mencapainya, namun pemandangan dan udara segar di sekitarnya sepadan dengan usaha tersebut.
+[Air Terjun Piala](/id/destinations/piala-waterfall/) adalah salah satu air terjun paling populer di Sulawesi Tengah. Terletak tidak jauh dari Luwuk, air terjun dua tingkat ini memiliki air yang sangat jernih dan dikelilingi pepohonan rimbun. Anda perlu sedikit trekking untuk mencapainya, namun pemandangan dan udara segar di sekitarnya sepadan dengan usaha tersebut.
 
 ### 6. Pulau Peling (Leme Leme)
 

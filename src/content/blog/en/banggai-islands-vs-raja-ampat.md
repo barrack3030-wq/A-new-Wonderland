@@ -44,7 +44,7 @@ From Australia, both trips involve at least two domestic flights after you land 
 
 ### Banggai Islands: Lakes, Coves, and Quiet Exploration
 
-The Banggai Islands travel guide usually starts with Paisu Pok Lake on western Peleng - a clear, blue freshwater lake in forest with a jetty for kayaks and small boats. It's the visual anchor of the region, but the broader experience is island-hopping between quiet beaches like Mandel and Oyama near Salakan, and smaller coves around Banggai Laut that are reached by short boat rides.
+The Banggai Islands travel guide usually starts with [Paisu Pok Lake](/en/destinations/paisu-pok-lake/) on western Peleng - a clear, blue freshwater lake in forest with a jetty for kayaks and small boats. It's the visual anchor of the region, but the broader experience is island-hopping between quiet beaches like Mandel and Oyama near Salakan, and smaller coves around Banggai Laut that are reached by short boat rides.
 
 Around Luwuk, you can add waterfalls such as Piala, which is a short drive from town and swimmable, and limestone caves with pools inside on Peleng. Village life is low-key, with markets in Luwuk and fishing villages and some Bajau stilt-house communities on the water.
 

@@ -19,7 +19,7 @@ tags:
   - "Trans Sulawesi"
 ---
 
-Luwuk, en tant que chef-lieu du kabupaten de Banggai dans le Sulawesi central, jouit d'une réputation qui ne cesse de croître lentement auprès des voyageurs. Cette petite ville est connue comme la porte d'entrée vers les îles Banggai, un archipel aux eaux bleues, aux lacs emblématiques tels que Paisu Pok et aux plages encore sauvages. Cependant, avant de traverser vers ces îles, il y a un endroit que les habitants mentionnent presque toujours lorsqu'on les interroge sur le tourisme nature sur le continent : **l'Air Terjun Salodik** (la cascade de Salodik).
+Luwuk, en tant que chef-lieu du kabupaten de Banggai dans le Sulawesi central, jouit d'une réputation qui ne cesse de croître lentement auprès des voyageurs. Cette petite ville est connue comme la porte d'entrée vers les îles Banggai, un archipel aux eaux bleues, aux lacs emblématiques tels que [Paisu Pok](/fr/destinations/paisu-pok-lake/) et aux plages encore sauvages. Cependant, avant de traverser vers ces îles, il y a un endroit que les habitants mentionnent presque toujours lorsqu'on les interroge sur le tourisme nature sur le continent : **l'[Air Terjun Salodik](/fr/destinations/salodik-waterfall/)** (la cascade de Salodik).
 
 Cette cascade n'est pas une attraction grandiose dotée de falaises hautes de plusieurs dizaines de mètres. Son charme réside plutôt dans des choses plus simples : un débit d'eau étagé, des bassins naturels bleu turquoise et une forêt tropicale dense qui l'entoure. Pour les voyageurs qui viennent d'arriver à Luwuk et qui souhaitent ressentir l'atmosphère de l'intérieur des terres du Sulawesi sans avoir à entreprendre un voyage de plusieurs heures, Salodik est un choix tout à fait judicieux.
 
@@ -94,7 +94,7 @@ Si vous prévoyez de poursuivre votre voyage vers les îles Banggai, loger à Lu
 
 ### Combien de temps devez-vous y rester ?
 
-Pour une simple visite de la cascade de Salodik, **2 à 3 heures** suffisent amplement, incluant le temps de se baigner, de prendre des photos et de se détendre. En revanche, si vous souhaitez combiner cette visite avec d'autres destinations autour de Luwuk, telles que Bukit Teletubbies ou la plage de Kilo 5, vous pouvez y consacrer **une demi-journée à une journée entière**.
+Pour une simple visite de la cascade de Salodik, **2 à 3 heures** suffisent amplement, incluant le temps de se baigner, de prendre des photos et de se détendre. En revanche, si vous souhaitez combiner cette visite avec d'autres destinations autour de Luwuk, telles que [Bukit Teletubbies](/fr/destinations/bukit-teletubbies/) ou la plage de Kilo 5, vous pouvez y consacrer **une demi-journée à une journée entière**.
 
 Salodik constitue également une halte idéale lors d'un trajet vers d'autres destinations à Banggai, par exemple si vous vous dirigez vers [INTERNAL LINK: Banggai Islands] ou le lac Paisu Pok.
 

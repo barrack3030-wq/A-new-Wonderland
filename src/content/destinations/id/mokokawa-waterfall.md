@@ -87,4 +87,4 @@ Tidak selalu wajib, tetapi **pemandu lokal dari Tontouan** dapat membantu naviga
 
 ## Destinasi Terkait
 
-**Air Terjun Piala** dan **Air Terjun Laumarang** adalah destinasi air terjun lain di kawasan Luwuk. **Pantai Kilo 5** menjadi pilihan pesisir terdekat, sedangkan **Danau Paisu Pok** di Pulau Peleng merupakan destinasi air tawar yang lebih luas dan dicapai melalui jalur laut dari Luwuk.
+**[Air Terjun Piala](/id/destinations/piala-waterfall/)** dan **[Air Terjun Laumarang](/id/destinations/laumarang-waterfall/)** adalah destinasi air terjun lain di kawasan Luwuk. **[Pantai Kilo 5](/id/destinations/kilo-5-beach/)** menjadi pilihan pesisir terdekat, sedangkan **[Danau Paisu Pok](/id/destinations/paisu-pok-lake/)** di Pulau Peleng merupakan destinasi air tawar yang lebih luas dan dicapai melalui jalur laut dari Luwuk.

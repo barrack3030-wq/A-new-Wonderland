@@ -14,7 +14,7 @@ tags:
   - "Travel"
 ---
 
-Banggai is one of the most fascinating—and most frequently postponed—regions in Central Sulawesi. The reason is not because the place lacks attraction. Quite the contrary: Paisu Pok Lake with its glass-clear water, the island clusters in the Banggai Archipelago, hidden waterfalls around Luwuk, and pristine coral reefs make this region feel like an untouched version of Indonesia away from mass tourism.
+Banggai is one of the most fascinating—and most frequently postponed—regions in Central Sulawesi. The reason is not because the place lacks attraction. Quite the contrary: [Paisu Pok Lake](/en/destinations/paisu-pok-lake/) with its glass-clear water, the island clusters in the Banggai Archipelago, hidden waterfalls around Luwuk, and pristine coral reefs make this region feel like an untouched version of Indonesia away from mass tourism.
 
 The problem is, traveling to Banggai is not as simple as flying to Bali or Yogyakarta. You need to consider flights, ferry crossings, overland travel, and the time spent at each point. The question “how many days do I need?” becomes crucial—and the answer depends on what you want to see and how far into the archipelago you want to go.
 
@@ -24,9 +24,9 @@ This article discusses realistic travel durations for various types of travelers
 
 Before discussing duration, it is important to understand the geography of Banggai. This region is divided into several regencies:
 
-**Banggai Regency** with Luwuk as its capital, which serves as the main gateway. Here you will find Syukuran Aminuddin Amir Airport (LUW), as well as mainland destinations such as Salodik Waterfall, Piala Waterfall, and Kilo 5 Beach.
+**Banggai Regency** with Luwuk as its capital, which serves as the main gateway. Here you will find Syukuran Aminuddin Amir Airport (LUW), as well as mainland destinations such as [Salodik Waterfall](/en/destinations/salodik-waterfall/), [Piala Waterfall](/en/destinations/piala-waterfall/), and [Kilo 5 Beach](/en/destinations/kilo-5-beach/).
 
-**Banggai Kepulauan Regency** with Peleng Island as the largest island. This is where Paisu Pok Lake is located, along with destinations like Paisu Batango Lagoon and Poganda Beach.
+**Banggai Kepulauan Regency** with Peleng Island as the largest island. This is where Paisu Pok Lake is located, along with destinations like [Paisu Batango](/en/destinations/paisu-batango-lake/) Lagoon and [Poganda Beach](/en/destinations/poganda-beach/).
 
 **Banggai Laut Regency** with Salakan as the administrative center. This region offers small islands, hidden beaches, and snorkeling spots that remain very pristine.
 
@@ -56,7 +56,7 @@ One source recommends a minimum of 3 days 2 nights or 4 days 3 nights for a sati
 
 **4D3N is the most frequently recommended duration** for travelers who want to see more without feeling rushed. With this time, you can:
 
- - Explore Luwuk's mainland destinations (Salodik, Piala, or Kamumu Waterfall).
+ - Explore Luwuk's mainland destinations (Salodik, Piala, or [Kamumu Waterfall](/en/destinations/kamumu-waterfall/)).
  - Stay overnight on Peleng to enjoy Paisu Pok Lake in the morning—the best time for photography and a serene atmosphere.
  - Add a day for island hopping or snorkeling around Peleng or Banggai Laut.
 

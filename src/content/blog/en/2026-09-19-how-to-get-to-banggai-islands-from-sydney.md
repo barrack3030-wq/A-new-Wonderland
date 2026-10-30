@@ -144,7 +144,7 @@ For a short first experience, consider combining a Luwuk stay with one island de
 For a broader Banggai trip, add enough days for:
 
 - Paisupok Lake
-- Poganda Beach
+- [Poganda Beach](/en/destinations/poganda-beach/)
 - mainland waterfalls
 - Peleng
 - Banggai Laut

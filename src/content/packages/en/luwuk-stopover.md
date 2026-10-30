@@ -46,7 +46,7 @@ A short but memorable escape for travelers with limited time in Luwuk. Discover 
 - Lunch / local culinary experience
 - Enjoy the journey through the tropical landscape
 
-**Afternoon — Piala Waterfall**
+**Afternoon — [Piala Waterfall](/en/destinations/piala-waterfall/)**
 
 - Visit Piala Waterfall
 - Explore the surrounding tropical nature

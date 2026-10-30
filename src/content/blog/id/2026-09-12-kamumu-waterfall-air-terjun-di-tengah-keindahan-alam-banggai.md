@@ -18,7 +18,7 @@ tags:
 
 **Discover Hidden Paradise of Banggai**
 
-Ada sesuatu yang magis tentang air terjun yang tersembunyi di tengah hutan pinus. Suara gemericik air yang jatuh dari undakan batu alami, aroma khas resin pinus, dan udara sejuk yang menyegarkan paru-paru—semuanya menciptakan pengalaman yang jauh dari hiruk-pikuk kota. Inilah **Air Terjun Kamumu**, permata tersembunyi di Desa Kamumu, Kecamatan Luwuk Utara, Kabupaten Banggai, Sulawesi Tengah.
+Ada sesuatu yang magis tentang air terjun yang tersembunyi di tengah hutan pinus. Suara gemericik air yang jatuh dari undakan batu alami, aroma khas resin pinus, dan udara sejuk yang menyegarkan paru-paru—semuanya menciptakan pengalaman yang jauh dari hiruk-pikuk kota. Inilah **[Air Terjun Kamumu](/id/destinations/kamumu-waterfall/)**, permata tersembunyi di Desa Kamumu, Kecamatan Luwuk Utara, Kabupaten Banggai, Sulawesi Tengah.
 
 Terletak sekitar 26 hingga 30 kilometer dari pusat Kota Luwuk, air terjun ini telah mencuri perhatian wisatawan lokal maupun mancanegara berkat keunikan formasi bertingkatnya yang menyerupai teras alam. Dikelilingi oleh hutan pinus yang rimbun, Air Terjun Kamumu menawarkan suasana yang tenang, alami, dan menenangkan—sempurna bagi Anda yang mencari ketenangan jauh dari keramaian.
 

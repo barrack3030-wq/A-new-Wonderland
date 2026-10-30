@@ -41,12 +41,12 @@ Discover the hidden paradise of Banggai through crystal-clear lakes, pristine be
 **Day 2 — Crystal Lakes & Hidden Beaches**
 
 - Breakfast
-- Visit Paisu Pok Lake
+- Visit [Paisu Pok Lake](/en/destinations/paisu-pok-lake/)
 - Swimming and relaxation
 - Visit Paisubatango Lake
 - Local village experience
-- Poganda Beach
-- Mandel Beach
+- [Poganda Beach](/en/destinations/poganda-beach/)
+- [Mandel Beach](/en/destinations/mandel-beach/)
 - Sunset photography
 - Return to accommodation
 

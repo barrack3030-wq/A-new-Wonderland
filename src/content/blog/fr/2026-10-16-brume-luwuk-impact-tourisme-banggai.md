@@ -38,7 +38,7 @@ La brume peut réduire la netteté des vues sur la ville, la baie, le littoral e
 
 ### 3. Vérifiez les conditions de chaque site auprès des acteurs locaux
 
-Les voyageurs peuvent prévoir la cascade de Piala, la cascade de Salodik, la plage de Kilo Lima, la plage de Poganda, le lac Paisupok, Paisu Batango et Kawalu Bay. Les articles cités ne permettent pas d’affirmer que tous ces sites sont fermés ou touchés de la même manière.
+Les voyageurs peuvent prévoir la cascade de Piala, la cascade de Salodik, la plage de Kilo Lima, la plage de Poganda, le lac Paisupok, [Paisu Batango](/fr/destinations/paisu-batango-lake/) et [Kawalu Bay](/fr/destinations/kawalu-bay/). Les articles cités ne permettent pas d’affirmer que tous ces sites sont fermés ou touchés de la même manière.
 
 Avant de partir, demandez à un guide local ou à un opérateur touristique des informations actualisées sur l’accès, la visibilité et les conditions sur place. Pour la baignade, le snorkeling, la randonnée ou les sorties en bateau, suivez les consignes locales et reportez l’activité si les conditions ne permettent pas de la pratiquer en sécurité.
 

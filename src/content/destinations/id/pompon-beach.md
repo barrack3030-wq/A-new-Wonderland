@@ -71,7 +71,7 @@ Pompon berada di **Pulau Peleng**, Kabupaten Banggai Kepulauan.
 
 **Melalui jalan darat dari Salakan:** Dari ibu kota kabupaten **Salakan**, perjalanan menuju Desa Lalong sekitar **2,5 jam** melalui rute kurang lebih **90 kilometer** menurut riset perjalanan yang digunakan. Mobil atau sepeda motor merupakan pilihan praktis untuk perjalanan darat terakhir.
 
-**Dengan perahu dari Luwuk atau Banggai:** Wisatawan juga dapat menuju Pulau Peleng dengan perahu lalu melanjutkan perjalanan darat ke Pompon. Beberapa operator tur menggabungkan Pompon dengan **Danau Paisu Pok** dan **Pantai Poganda**.
+**Dengan perahu dari Luwuk atau Banggai:** Wisatawan juga dapat menuju Pulau Peleng dengan perahu lalu melanjutkan perjalanan darat ke Pompon. Beberapa operator tur menggabungkan Pompon dengan **[Danau Paisu Pok](/id/destinations/paisu-pok-lake/)** dan **[Pantai Poganda](/id/destinations/poganda-beach/)**.
 
 Jadwal transportasi dan kondisi laut dapat berubah, jadi pastikan jadwal feri atau speedboat sebelum berangkat.
 
@@ -117,4 +117,4 @@ Tidak ada akomodasi formal di pantai. Alternatifnya adalah homestay di desa seki
 
 ## Destinasi Terkait
 
-**Danau Paisu Pok** adalah destinasi air tawar terkenal di kawasan ini dan dapat digabungkan dengan Pompon dalam itinerary Pulau Peleng. **Pantai Poganda** menawarkan pasir putih, air tenang dan snorkeling dekat pantai. **Mata Air Paisu Batango** adalah atraksi alam lain di kawasan Luk Panenteng. **Pantai Mandel** adalah pilihan pantai berpasir putih lainnya di Peleng. Bagi wisatawan yang berbasis di Luwuk, **Pantai Kilo 5** dan **Air Terjun Piala** merupakan tambahan wisata daratan yang lebih mudah.
+**Danau Paisu Pok** adalah destinasi air tawar terkenal di kawasan ini dan dapat digabungkan dengan Pompon dalam itinerary Pulau Peleng. **Pantai Poganda** menawarkan pasir putih, air tenang dan snorkeling dekat pantai. **Mata Air [Paisu Batango](/id/destinations/paisu-batango-lake/)** adalah atraksi alam lain di kawasan Luk Panenteng. **[Pantai Mandel](/id/destinations/mandel-beach/)** adalah pilihan pantai berpasir putih lainnya di Peleng. Bagi wisatawan yang berbasis di Luwuk, **[Pantai Kilo 5](/id/destinations/kilo-5-beach/)** dan **[Air Terjun Piala](/id/destinations/piala-waterfall/)** merupakan tambahan wisata daratan yang lebih mudah.

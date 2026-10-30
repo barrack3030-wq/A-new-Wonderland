@@ -129,6 +129,6 @@ Oui. Des homestays sont disponibles dans Bone Baru Village et ses environs, nota
 
 ## Destinations à combiner avec Bontolan
 
-Bontolan peut être combinée avec d’autres destinations de l’île de Banggai et de Banggai Laut. **Oyama Beach** peut être intégrée au même itinéraire, tandis que **Long Beach** offre un littoral plus calme pour la photographie et la détente.
+Bontolan peut être combinée avec d’autres destinations de l’île de Banggai et de Banggai Laut. **[Oyama Beach](/fr/destinations/oyama-beach/)** peut être intégrée au même itinéraire, tandis que **[Long Beach](/fr/destinations/long-beach/)** offre un littoral plus calme pour la photographie et la détente.
 
-Pour continuer vers l’île de Peleng, **Paisu Pok Lake** et **Paisu Batango** offrent une expérience d’eau douce très différente du paysage marin de Bontolan.
+Pour continuer vers l’île de Peleng, **[Paisu Pok Lake](/fr/destinations/paisu-pok-lake/)** et **[Paisu Batango](/fr/destinations/paisu-batango-lake/)** offrent une expérience d’eau douce très différente du paysage marin de Bontolan.

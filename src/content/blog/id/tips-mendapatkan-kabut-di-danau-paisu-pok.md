@@ -4,9 +4,10 @@ description: Temukan tips mendapatkan momen kabut di Danau Paisu Pok, Banggai Ke
 seoTitle: Tips Mendapatkan Kabut di Danau Paisu Pok
 seoDescription: Ingin melihat kabut di Danau Paisu Pok? Temukan waktu, kondisi cuaca, dan tips fotografi untuk menikmati suasana mistis Paisu Pok di Banggai Kepulauan.
 image: /images/images (7).jpg
-imageAlt: ''
+imageAlt: "Danau Paisu Pok di Pulau Peleng, Kepulauan Banggai"
 author: aji
 pubDate: "2026-09-05T23:43:00"
+translationKey: "2026-09-05-paisu-pok-mist-tips"
 tags:
   - paisupok
   - kabut danau paisupok
@@ -14,7 +15,7 @@ tags:
 
 ## Tips Bagaimana Mendapatkan Kabut di Danau Paisu Pok
 
-Danau Paisu Pok bukan hanya terkenal karena airnya yang sangat jernih dan pemandangan bawah airnya yang menakjubkan. Pada kondisi tertentu, danau ini juga dapat menghadirkan suasana yang jauh lebih dramatis: kabut tipis yang perlahan muncul di atas permukaan air.
+[Danau Paisu Pok](/id/destinations/paisu-pok-lake/) bukan hanya terkenal karena airnya yang sangat jernih dan pemandangan bawah airnya yang menakjubkan. Pada kondisi tertentu, danau ini juga dapat menghadirkan suasana yang jauh lebih dramatis: kabut tipis yang perlahan muncul di atas permukaan air.
 
 Bagi fotografer, content creator, dan wisatawan yang ingin mendapatkan suasana Paisu Pok yang berbeda dari foto-foto biasa, momen berkabut bisa menjadi pengalaman yang sangat istimewa.
 

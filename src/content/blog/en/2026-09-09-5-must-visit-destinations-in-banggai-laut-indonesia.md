@@ -22,7 +22,7 @@ From quiet beaches to panoramic hills and offshore islands, here are five destin
 
 ## 1. Paisu Batango
 
-Paisu Batango is one of the most memorable natural attractions in Banggai Laut. Known for its calm, clear water and lush surroundings, this destination offers a peaceful setting for swimming, relaxing, and enjoying the beauty of the island environment.
+[Paisu Batango](/en/destinations/paisu-batango-lake/) is one of the most memorable natural attractions in Banggai Laut. Known for its calm, clear water and lush surroundings, this destination offers a peaceful setting for swimming, relaxing, and enjoying the beauty of the island environment.
 
 The water may appear in striking shades of blue and green depending on the light and weather. Its quiet atmosphere makes it especially appealing to travelers who prefer natural places away from crowded tourist centers.
 
@@ -37,7 +37,7 @@ Bring light travel essentials, sun protection, and a reusable water bottle. As w
 
 ## 2. Pantai Mandel
 
-Pantai Mandel is a beautiful coastal destination where visitors can enjoy the simple pleasures of Banggai Laut: soft sand, fresh sea air, and wide views across the water. The beach is well suited to travelers looking for a calm place to slow down and appreciate the island’s natural scenery.
+[Pantai Mandel](/en/destinations/mandel-beach/) is a beautiful coastal destination where visitors can enjoy the simple pleasures of Banggai Laut: soft sand, fresh sea air, and wide views across the water. The beach is well suited to travelers looking for a calm place to slow down and appreciate the island’s natural scenery.
 
 The coastline is particularly attractive during the softer light of early morning or late afternoon. These times are also ideal for photography, quiet walks, and taking in the changing colors of the sea.
 
@@ -59,7 +59,7 @@ Take time to explore the shoreline rather than visiting only for a quick photo s
 
 ## 4. Pulau Mbuang-Mbuang
 
-For travelers who want to experience Banggai Laut’s island character, Pulau Mbuang-Mbuang is a destination worth adding to the journey. Surrounded by the beautiful waters of the Banggai region, the island offers a chance to discover quiet coastal landscapes and a more intimate connection with local island life.
+For travelers who want to experience Banggai Laut’s island character, [Pulau Mbuang-Mbuang](/en/destinations/mbuang-mbuang-island/) is a destination worth adding to the journey. Surrounded by the beautiful waters of the Banggai region, the island offers a chance to discover quiet coastal landscapes and a more intimate connection with local island life.
 
 Boat travel is an important part of reaching many offshore destinations in Banggai Laut. The journey itself can be part of the adventure, with views of small islands, fishing boats, and open sea along the way.
 

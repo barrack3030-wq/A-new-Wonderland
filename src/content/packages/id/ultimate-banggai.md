@@ -25,7 +25,7 @@ itinerary: []
 
 **6 Hari 5 Malam**
 
-**Luwuk • Salakan • Peleng • Banggai Laut • Kamumu • Salodik • Pulo Dua**
+**Luwuk • Salakan • Peleng • Banggai Laut • Kamumu • Salodik • [Pulo Dua](/id/destinations/pulau-dua-balantak/)**
 
 ## Deskripsi
 
@@ -67,7 +67,7 @@ Perjalanan ini dirancang bagi wisatawan yang ingin menikmati Banggai lebih jauh 
 - Sarapan
 - Memulai perjalanan menuju Peleng
 
-**Danau Paisu Pok**
+**[Danau Paisu Pok](/id/destinations/paisu-pok-lake/)**
 
 - Mengunjungi danau dengan air sebening kristal
 - Berenang dan bersantai
@@ -79,14 +79,14 @@ Perjalanan ini dirancang bagi wisatawan yang ingin menikmati Banggai lebih jauh 
 - Pengalaman kehidupan desa lokal
 - Fotografi
 
-**Siang — Pantai Poganda**
+**Siang — [Pantai Poganda](/id/destinations/poganda-beach/)**
 
 - Bersantai di pantai
 - Berenang / snorkeling
 - Makan siang lokal
 - Menikmati panorama tropis
 
-**Sore — Pantai Mandel**
+**Sore — [Pantai Mandel](/id/destinations/mandel-beach/)**
 
 - Eksplorasi pesisir
 - Fotografi
@@ -136,7 +136,7 @@ Perjalanan ini dirancang bagi wisatawan yang ingin menikmati Banggai lebih jauh 
 
 **Setibanya di Luwuk**
 
-- Melanjutkan perjalanan langsung menuju Kamumu Waterfall
+- Melanjutkan perjalanan langsung menuju [Kamumu Waterfall](/id/destinations/kamumu-waterfall/)
 
 ### Kamumu Waterfall
 
@@ -145,7 +145,7 @@ Perjalanan ini dirancang bagi wisatawan yang ingin menikmati Banggai lebih jauh 
 - Berenang dan bersantai
 - Fotografi
 
-**Siang–Sore — Salodik Waterfall**
+**Siang–Sore — [Salodik Waterfall](/id/destinations/salodik-waterfall/)**
 
 - Melanjutkan perjalanan ke Salodik Waterfall
 - Menjelajahi hutan tropis

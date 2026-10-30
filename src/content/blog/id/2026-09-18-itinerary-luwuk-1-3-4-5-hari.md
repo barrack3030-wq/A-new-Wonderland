@@ -7,6 +7,7 @@ image: "/images/Poganda-Beach-Banggai-IndonesiaJuara-Trip.webp"
 imageAlt: "Pemandangan pesisir tropis di Banggai, Indonesia"
 author: "Banggai Wonderland"
 pubDate: 2026-09-18
+translationKey: "2026-09-18-luwuk-itinerary-1-3-4-5-days"
 tags:
   - "Luwuk"
   - "Banggai"
@@ -15,7 +16,7 @@ tags:
   - "Travel"
 ---
 
-Luwuk adalah salah satu gerbang utama menuju wilayah Banggai di Sulawesi Tengah, Indonesia. Bagi banyak wisatawan, Luwuk menjadi titik awal sebelum melanjutkan perjalanan ke Salakan, Pulau Peleng, Paisu Pok, dan destinasi lain di Kepulauan Banggai.
+Luwuk adalah salah satu gerbang utama menuju wilayah Banggai di Sulawesi Tengah, Indonesia. Bagi banyak wisatawan, Luwuk menjadi titik awal sebelum melanjutkan perjalanan ke Salakan, Pulau Peleng, [Paisu Pok](/id/destinations/paisu-pok-lake/), dan destinasi lain di Kepulauan Banggai.
 
 Tantangan utama dalam merencanakan perjalanan ke Banggai adalah jarak. Beberapa destinasi membutuhkan kombinasi perjalanan darat dan laut, sehingga itinerary perlu memberikan waktu yang cukup untuk perjalanan dan kemungkinan perubahan jadwal kapal.
 
@@ -46,7 +47,7 @@ Jika Anda berencana melanjutkan perjalanan ke pulau keesokan hari, gunakan waktu
 
 #### Menjelang Siang: Air Terjun Piala
 
-Kunjungi Air Terjun Piala, salah satu atraksi alam yang dekat dengan Luwuk. Luangkan sekitar satu hingga dua jam untuk menikmati area sekitar.
+Kunjungi [Air Terjun Piala](/id/destinations/piala-waterfall/), salah satu atraksi alam yang dekat dengan Luwuk. Luangkan sekitar satu hingga dua jam untuk menikmati area sekitar.
 
 #### Makan Siang: Luwuk
 
@@ -136,7 +137,7 @@ Tidak perlu menambahkan atraksi utama lain pada hari ini karena perjalanan itu s
 
 Mulai pagi di Danau Paisu Pok. Gunakan waktu untuk berenang, snorkeling, menjelajahi danau dengan perahu lokal, atau menikmati pemandangan.
 
-Setelah makan siang, Anda dapat mengunjungi satu atau dua destinasi pesisir seperti Paisu Batango atau Poganda, tergantung kondisi dan rute.
+Setelah makan siang, Anda dapat mengunjungi satu atau dua destinasi pesisir seperti [Paisu Batango](/id/destinations/paisu-batango-lake/) atau Poganda, tergantung kondisi dan rute.
 
 Hindari memasukkan terlalu banyak destinasi.
 
@@ -172,7 +173,7 @@ Gunakan hari kedua untuk menjelajahi destinasi pesisir dan pulau di sekitar Pele
 
 Salah satu rute yang dapat digunakan:
 
-**Salakan → titik keberangkatan kapal → Tanjung Gundul → Long Beach → Oyama → Bontolan**
+**Salakan → titik keberangkatan kapal → Tanjung Gundul → [Long Beach](/id/destinations/long-beach/) → Oyama → Bontolan**
 
 Nikmati waktu untuk berenang, snorkeling, dan bersantai di pantai daripada terburu-buru antar lokasi.
 
@@ -236,7 +237,7 @@ Struktur ini memberikan buffer antara perjalanan pulau dan penerbangan.
 
 ## Bisakah Menambahkan Pulo Dua?
 
-Bisa, tetapi Pulo Dua sebaiknya dijadikan perjalanan sehari tersendiri.
+Bisa, tetapi [Pulo Dua](/id/destinations/pulau-dua-balantak/) sebaiknya dijadikan perjalanan sehari tersendiri.
 
 Untuk perjalanan yang lebih panjang, salah satu opsi adalah:
 
@@ -254,7 +255,7 @@ Bisa. Salodik cocok dijadikan perjalanan setengah hari atau satu hari dari Luwuk
 
 Rute sederhana:
 
-**Luwuk → Air Terjun Salodik → Luwuk**
+**Luwuk → [Air Terjun Salodik](/id/destinations/salodik-waterfall/) → Luwuk**
 
 Lebih baik menyediakan waktu tersendiri daripada menggabungkannya dengan perjalanan panjang menuju pulau.
 

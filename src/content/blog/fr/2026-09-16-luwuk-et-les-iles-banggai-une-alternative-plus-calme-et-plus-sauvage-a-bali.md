@@ -4,6 +4,7 @@ description: " Découvrez Luwuk et les îles Banggai à Sulawesi central : lac P
 seoTitle: "Luwuk et les îles Banggai : une alternative cachée à Bali"
 seoDescription: " Découvrez Luwuk et les îles Banggai à Sulawesi central : lac Paisu Pok, cascade Piala, plages, ferries, plongée, snorkeling et conseils pratiques."
 image: "/images/blog/images-16-20260916142820.jpg"
+imageAlt: "Luwuk et les îles Banggai à Sulawesi central"
 author: "Banggai Wonderland"
 pubDate: 2026-09-16
 translationKey: "2026-09-16-alternatif-bali-menjelajah-keindahan-luwuk-dan-kepulauan-banggai"
@@ -83,7 +84,7 @@ La ville et ses environs offrent de nombreux endroits intéressants à découvri
 
 C’est l’un des sites emblématiques de la région.
 
-Le lac Paisu Pok se trouve à Luk Panenteng, dans le district de Bulagi Utara, dans la régence des îles Banggai.
+Le lac [Paisu Pok](/fr/destinations/paisu-pok-lake/) se trouve à Luk Panenteng, dans le district de Bulagi Utara, dans la régence des îles Banggai.
 
 Son eau est exceptionnellement claire, ce qui permet de voir nettement le fond du lac, composé de sable et de rochers.
 

@@ -91,4 +91,4 @@ Tidak. Tidak ada **homestay di pantai**. Akomodasi terdekat ada di Lokotoy atau 
 
 ## Destinasi Terkait
 
-**Pantai Bontolan** di Bone Baru sering digabungkan dengan Oyama dalam perjalanan perahu yang sama. **Long Beach (Pantai Pasir Panjang)** adalah pantai akses perahu lain di sisi Banggai Laut. **Tanjung Gundul** adalah tebing kapur di dekatnya dengan lubang yang terbentuk oleh ombak laut. Bagi wisatawan di Pulau Peleng, **Danau Paisu Pok** dan **Mata Air Paisu Batango** adalah destinasi air tawar ikonik kawasan ini.
+**[Pantai Bontolan](/id/destinations/bontolan-beach/)** di Bone Baru sering digabungkan dengan Oyama dalam perjalanan perahu yang sama. **[Long Beach](/id/destinations/long-beach/) (Pantai Pasir Panjang)** adalah pantai akses perahu lain di sisi Banggai Laut. **Tanjung Gundul** adalah tebing kapur di dekatnya dengan lubang yang terbentuk oleh ombak laut. Bagi wisatawan di Pulau Peleng, **[Danau Paisu Pok](/id/destinations/paisu-pok-lake/)** dan **Mata Air [Paisu Batango](/id/destinations/paisu-batango-lake/)** adalah destinasi air tawar ikonik kawasan ini.

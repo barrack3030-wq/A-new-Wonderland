@@ -4,6 +4,7 @@ description: "Poganda Beach à Banggai Laut offre du sable blanc, une eau de mer
 seoTitle: "Poganda Beach : Plage exotique à Banggai Laut, Sulawesi central"
 seoDescription: "Poganda Beach à Banggai Laut : sable blanc, eau cristalline, rochers de granit et snorkeling avec le cardinal de Banggai. Accès et conseils."
 image: "/images/blog/images-9-20260910083834.jpg"
+imageAlt: "Poganda Beach à Banggai Laut"
 author: "Banggai Wonderland"
 pubDate: 2026-09-10
 translationKey: "2026-09-10-poganda-beach-pantai-eksotis-dengan-pemandangan-laut-banggai"
@@ -15,7 +16,7 @@ tags:
 
 ## Poganda Beach : Une plage exotique dengan vue sur la mer de Banggai
 
-Poganda Beach est l'une des plages du kabupaten de Banggai Laut, dans le Sulawesi central, qui commence à se faire connaître des voyageurs en raison de son cadre naturel préservé et de la transparence de ses eaux. Cette plage est située sur la côte est de l'île Peleng, la deuxième plus grande île de l'archipel des Banggai après l'île Banggai.
+[Poganda Beach](/fr/destinations/poganda-beach/) est l'une des plages du kabupaten de Banggai Laut, dans le Sulawesi central, qui commence à se faire connaître des voyageurs en raison de son cadre naturel préservé et de la transparence de ses eaux. Cette plage est située sur la côte est de l'île Peleng, la deuxième plus grande île de l'archipel des Banggai après l'île Banggai.
 
 ### Emplacement et accès
 

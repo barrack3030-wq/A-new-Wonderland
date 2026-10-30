@@ -15,7 +15,7 @@ tags:
   - "consejos de viaje"
 ---
 
-La Cascada Kamumu es conocida por sus flujos de agua escalonados, los bosques de pinos que la rodean y un ambiente fresco durante todo el día. Una de las ventajas de Kamumu en comparación con muchas otras cascadas en Célebes es **su caudal de agua que tiende a ser estable durante todo el año**, tanto en la estación seca como en la de lluvias. Esto significa que no tienes que preocuparte por encontrar la cascada seca si la visitas en la época calurosa.
+La [Cascada Kamumu](/es/destinations/kamumu-waterfall/) es conocida por sus flujos de agua escalonados, los bosques de pinos que la rodean y un ambiente fresco durante todo el día. Una de las ventajas de Kamumu en comparación con muchas otras cascadas en Célebes es **su caudal de agua que tiende a ser estable durante todo el año**, tanto en la estación seca como en la de lluvias. Esto significa que no tienes que preocuparte por encontrar la cascada seca si la visitas en la época calurosa.
 
 Sin embargo, "poder visitarla en cualquier momento" no significa "que dé igual cuándo vengas". Tu experiencia estará muy influenciada por la época del año, la hora del día y las condiciones climáticas de ese momento. Este artículo analiza los tres aspectos, además de lo que debes preparar.
 

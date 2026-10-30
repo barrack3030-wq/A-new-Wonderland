@@ -21,7 +21,7 @@ Jawaban singkatnya: **ya, sangat tepat—mungkin salah satu bulan terbaik.** Tap
 
 ## Cuaca: Kering, Tapi Bukan Berarti Bebas Hujan
 
-September di Desa Mbuang-Mbuang punya profil cuaca yang cukup bersahabat. Data iklim dari **timeanddate.com** menunjukkan rata-rata curah hujan di bulan September sekitar **88,3 mm**—jauh lebih rendah dibanding Mei (218,6 mm) atau Juni (211,2 mm). Suhu rata-rata berkisar **26°C**, dengan suhu tertinggi sekitar **31°C** dan terendah **22°C**. Kelembapan juga relatif lebih rendah, sekitar **74%**.
+September di Desa [Mbuang-Mbuang](/id/destinations/mbuang-mbuang-island/) punya profil cuaca yang cukup bersahabat. Data iklim dari **timeanddate.com** menunjukkan rata-rata curah hujan di bulan September sekitar **88,3 mm**—jauh lebih rendah dibanding Mei (218,6 mm) atau Juni (211,2 mm). Suhu rata-rata berkisar **26°C**, dengan suhu tertinggi sekitar **31°C** dan terendah **22°C**. Kelembapan juga relatif lebih rendah, sekitar **74%**.
 
 *Catatan penting:* data ini berasal dari stasiun cuaca **Kendari / Woltermon-Ginsidi** yang berjarak sekitar **277 km** dari Desa Mbuang-Mbuang, sehingga kondisi aktual di lokasi bisa sedikit berbeda.
 

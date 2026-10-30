@@ -68,9 +68,9 @@ Itinerary dapat disesuaikan dengan jadwal kapal, cuaca, kondisi laut, serta wakt
 
 **Pilihan destinasi**
 
-- Paisu Pok Lake
-- Paisu Batango
-- Poganda Beach
+- [Paisu Pok Lake](/id/destinations/paisu-pok-lake/)
+- [Paisu Batango](/id/destinations/paisu-batango-lake/)
+- [Poganda Beach](/id/destinations/poganda-beach/)
 - Destinasi pesisir lain sesuai kondisi dan waktu
 
 **Siang**

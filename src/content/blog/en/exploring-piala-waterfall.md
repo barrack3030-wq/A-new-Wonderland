@@ -7,12 +7,13 @@ image: /images/piala.jpg
 imageAlt: 'Piala Waterfall near Luwuk, Banggai, surrounded by tropical forest'
 author: aji zulfikar
 pubDate: "2026-10-15T00:00:00Z"
+translationKey: "2026-10-15-exploring-piala-waterfall"
 tags:
   - Waterfall
   - Trekking
 ---
 
-**Discover the natural beauty of Piala Waterfall, one of the most refreshing hidden gems near Luwuk, Banggai, Indonesia.**
+**Discover the natural beauty of [Piala Waterfall](/en/destinations/piala-waterfall/), one of the most refreshing hidden gems near Luwuk, Banggai, Indonesia.**
 
 Imagine stepping away from the busy streets, following the sound of flowing water, and arriving at a tropical waterfall surrounded by lush greenery.
 
@@ -274,14 +275,14 @@ The wider Banggai area offers spectacular destinations that can be combined into
 
 Travelers can explore places such as:
 
-- Paisupok Lake
+- [Paisupok Lake](/en/destinations/paisu-pok-lake/)
 - Paisubatango Lake
-- Poganda Beach
-- Mandel Beach
-- Long Beach
-- Oyama Beach
-- Bontolan Beach
-- Kawalu Bay
+- [Poganda Beach](/en/destinations/poganda-beach/)
+- [Mandel Beach](/en/destinations/mandel-beach/)
+- [Long Beach](/en/destinations/long-beach/)
+- [Oyama Beach](/en/destinations/oyama-beach/)
+- [Bontolan Beach](/en/destinations/bontolan-beach/)
+- [Kawalu Bay](/en/destinations/kawalu-bay/)
 - Pulo Dua
 - Mbuang-Mbuang
 - Banggai Islands

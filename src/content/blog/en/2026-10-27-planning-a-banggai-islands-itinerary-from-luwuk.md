@@ -24,11 +24,11 @@ The most useful rule is simple: **do not plan every hour as if transfers were gu
 
 Choose the experience that matters most before deciding how many places to visit.
 
-- **Lake Paisu Pok and Peleng:** give the island portion of the trip enough time instead of treating it as a quick detour from Luwuk.
+- **Lake [Paisu Pok](/en/destinations/paisu-pok-lake/) and Peleng:** give the island portion of the trip enough time instead of treating it as a quick detour from Luwuk.
 - **Beaches and bays:** group places by area and confirm road access with a local operator.
 - **A short stop in Luwuk:** choose nearby activities and avoid relying on a same-day island crossing unless the transport plan has been confirmed.
 
-Lake Paisu Pok, Paisu Batango, Kawalu Bay, and Poganda may fit into a broader trip, but the best order depends on where you stay, available transport, and current conditions. Do not treat every destination as a fixed stop on one packed day.
+Lake Paisu Pok, [Paisu Batango](/en/destinations/paisu-batango-lake/), [Kawalu Bay](/en/destinations/kawalu-bay/), and Poganda may fit into a broader trip, but the best order depends on where you stay, available transport, and current conditions. Do not treat every destination as a fixed stop on one packed day.
 
 ## Plan the journey in stages
 

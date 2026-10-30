@@ -7,6 +7,7 @@ image: "/images/DSCF7073-5.webp"
 imageAlt: "Air biru-hijau jernih Danau Paisu Pok dengan pohon terendam di Pulau Peleng"
 author: "Banggai Wonderland"
 pubDate: 2026-09-18
+translationKey: "2026-09-18-paisu-pok-lake-complete-guide"
 tags:
   - "Danau Paisu Pok"
   - "Paisu Pok"
@@ -20,7 +21,7 @@ Anda mungkin sudah melihat fotonya sebelum mengetahui namanya: air biru-hijau ya
 
 Yang biasanya tidak terlihat dari foto adalah geografisnya.
 
-**Danau Paisu Pok tidak berada di Luwuk.**
+**[Danau Paisu Pok](/id/destinations/paisu-pok-lake/) tidak berada di Luwuk.**
 
 Danau ini berada di **Desa Luk Panenteng, Pulau Peleng, Kabupaten Banggai Kepulauan**. Bagi wisatawan yang datang melalui jalur udara, Luwuk menjadi gerbang dari daratan sebelum perjalanan dilanjutkan melalui laut dan jalan darat di Peleng.
 

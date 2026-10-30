@@ -4,9 +4,10 @@ description: "Guide pratique pour plonger et explorer le lac Paisu Pok sur l’�
 seoTitle: "Guide de plongée au lac Paisu Pok | Banggai Wonderland"
 seoDescription: "Guide pratique pour plonger et explorer le lac Paisu Pok sur l’île de Peleng : conditions de l’eau, activités, accès et conseils aux îles Banggai."
 image: /images/DSCF7073-5.webp
-imageAlt: ''
+imageAlt: "Lac Paisu Pok sur l’île de Peleng, îles Banggai"
 author: Diving Expert
 pubDate: "2026-10-15T00:00:00Z"
+translationKey: "2026-10-15-paisu-pok-diving-guide"
 tags:
   - Diving
   - Adventure
@@ -14,7 +15,7 @@ tags:
 
 ## Guide pour Explorer les Fonds du Lac Paisu Pok
 
-**Découvrez le monde sous-marin du lac Paisu Pok, un joyau naturel unique situé dans les îles Banggai, en Indonésie.**
+**Découvrez le monde sous-marin du lac [Paisu Pok](/fr/destinations/paisu-pok-lake/), un joyau naturel unique situé dans les îles Banggai, en Indonésie.**
 
 Imaginez plonger dans une eau douce d'une transparence exceptionnelle.
 
@@ -195,12 +196,12 @@ Vous pouvez également découvrir :
 - Le lac Paisubatango
 - La plage de Poganda
 - La plage de Mandel
-- Long Beach
+- [Long Beach](/fr/destinations/long-beach/)
 - La plage d'Oyama
 - La plage de Bontolan
 - La baie de Kawalu
-- Pulo Dua
-- Mbuang-Mbuang
+- [Pulo Dua](/fr/destinations/pulau-dua-balantak/)
+- [Mbuang-Mbuang](/fr/destinations/mbuang-mbuang-island/)
 
 Un seul voyage peut réunir **lacs, plages, îles, snorkeling, aventure et culture locale**.
 

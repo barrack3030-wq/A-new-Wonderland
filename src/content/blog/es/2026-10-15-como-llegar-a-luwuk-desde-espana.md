@@ -45,7 +45,7 @@ Si compras por separado el vuelo internacional y el doméstico, evita una conexi
 
 Luwuk es una base práctica para organizar el viaje por la región, pero muchas excursiones a las islas requieren coordinar carretera, barco o ferry. Si aterrizas después de un trayecto intercontinental, considera dormir en Luwuk antes de iniciar un traslado largo.
 
-Decide con antelación qué zona quieres visitar. Los atractivos de la isla de Peleng, como el lago Paisu Pok, no están en la misma zona que las playas de Banggai Laut. Combinar destinos de distintas islas puede ser posible, pero necesita tiempo de transporte y coordinación local; no calcules el itinerario únicamente por la distancia en línea recta.
+Decide con antelación qué zona quieres visitar. Los atractivos de la isla de Peleng, como el lago [Paisu Pok](/es/destinations/paisu-pok-lake/), no están en la misma zona que las playas de Banggai Laut. Combinar destinos de distintas islas puede ser posible, pero necesita tiempo de transporte y coordinación local; no calcules el itinerario únicamente por la distancia en línea recta.
 
 ## Documentos y preparativos antes de salir
 

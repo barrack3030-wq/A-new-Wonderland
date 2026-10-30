@@ -31,7 +31,7 @@ youtube: "https://www.youtube.com/watch?v=TsAT26i-QZE"
 
 ## Playa de Poganda: Costa para hacer snorkel en Peleng
 
-La playa de Poganda es una playa de arena blanca situada en **Dusun Poganda, Desa Luk Panenteng, Kecamatan Bulagi Utara, Kabupaten Banggai Kepulauan, Sulawesi Central**, en **la isla de Peleng**. Se encuentra al final del pueblo, aproximadamente a **15 minutos por carretera del lago Paisu Pok**, y forma parte del mismo conjunto turístico que el lago y el manantial Paisu Batango.
+La playa de Poganda es una playa de arena blanca situada en **Dusun Poganda, Desa Luk Panenteng, Kecamatan Bulagi Utara, Kabupaten Banggai Kepulauan, Sulawesi Central**, en **la isla de Peleng**. Se encuentra al final del pueblo, aproximadamente a **15 minutos por carretera del lago [Paisu Pok](/es/destinations/paisu-pok-lake/)**, y forma parte del mismo conjunto turístico que el lago y el manantial [Paisu Batango](/es/destinations/paisu-batango-lake/).
 
 La playa se extiende unos **3,4 kilómetros**, con arena clara y fina, agua turquesa y oleaje generalmente tranquilo. Es una playa de pueblo larga, no un complejo turístico, con cocoteros, refugios sencillos y un arrecife cerca de la orilla.
 
@@ -123,4 +123,4 @@ Sí. La playa es conocida por tener agua clara y relativamente tranquila, aunque
 
 **Paisu Pok Lake** está a unos **15 minutos por carretera** de Poganda y es uno de los destinos de agua dulce más conocidos de Banggai. **Paisu Batango Spring** está en el mismo pueblo y puede combinarse con la playa.
 
-**Mandel Beach** y **Oyama Beach** son otras playas insulares destacadas. **Piala Waterfall** y **Kilo 5 Beach** son opciones más accesibles para viajeros alojados en Luwuk.
+**[Mandel Beach](/es/destinations/mandel-beach/)** y **[Oyama Beach](/es/destinations/oyama-beach/)** son otras playas insulares destacadas. **[Piala Waterfall](/es/destinations/piala-waterfall/)** y **[Kilo 5 Beach](/es/destinations/kilo-5-beach/)** son opciones más accesibles para viajeros alojados en Luwuk.

@@ -19,7 +19,7 @@ tags:
   - "homestay"
 ---
 
-Le lac Paisu Pok est sejak longtemps au cœur des conversations parmi les voyageurs qui suivent les comptes de voyage indonésiens. Ses eaux cristallines, ses troncs d'arbres immergés visibles depuis la surface et son emplacement sur une île reculée font de ce lac une destination qui semble réservée à ceux qui ont une réelle volonté d'y accéder. Les photos sont certes spectaculaires, mais le voyage pour s'y rendre exige une préparation qui dépasse l'achat d'un simple billet d'avion.
+Le lac [Paisu Pok](/fr/destinations/paisu-pok-lake/) est sejak longtemps au cœur des conversations parmi les voyageurs qui suivent les comptes de voyage indonésiens. Ses eaux cristallines, ses troncs d'arbres immergés visibles depuis la surface et son emplacement sur une île reculée font de ce lac une destination qui semble réservée à ceux qui ont une réelle volonté d'y accéder. Les photos sont certes spectaculaires, mais le voyage pour s'y rendre exige une préparation qui dépasse l'achat d'un simple billet d'avion.
 
 Cet article ne cherche pas à vous expliquer pourquoi vous devriez y aller. Il est consacré à **ce que vous devez savoir avant de partir**—de la manière de rejoindre le lac jusqu'aux tarifs à prévoir, en passant par les règles en vigueur sur place et les précieux détails souvent ignorés des voyageurs visitant Banggai pour la première fois.
 

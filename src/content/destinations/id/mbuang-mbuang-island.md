@@ -104,4 +104,4 @@ Wisatawan dapat menginap di **homestay lokal** atau cottage sederhana yang diatu
 
 ## Destinasi Terkait
 
-**Danau Paisu Pok** di Pulau Peleng merupakan destinasi air tawar yang lebih mudah diakses. **Pantai Bontolan** di Bone Baru dikenal dengan pengalaman pesisir dan snorkeling. **Long Beach** dan **Pantai Oyama** merupakan destinasi yang diakses dengan perahu di kawasan Banggai Laut. Wisatawan yang berbasis di Luwuk juga dapat mengunjungi **Pantai Kilo 5** dan **Air Terjun Piala**.
+**[Danau Paisu Pok](/id/destinations/paisu-pok-lake/)** di Pulau Peleng merupakan destinasi air tawar yang lebih mudah diakses. **[Pantai Bontolan](/id/destinations/bontolan-beach/)** di Bone Baru dikenal dengan pengalaman pesisir dan snorkeling. **[Long Beach](/id/destinations/long-beach/)** dan **[Pantai Oyama](/id/destinations/oyama-beach/)** merupakan destinasi yang diakses dengan perahu di kawasan Banggai Laut. Wisatawan yang berbasis di Luwuk juga dapat mengunjungi **[Pantai Kilo 5](/id/destinations/kilo-5-beach/)** dan **[Air Terjun Piala](/id/destinations/piala-waterfall/)**.
