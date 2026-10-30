@@ -4,7 +4,7 @@ description: "Guía práctica para bucear y explorar el lago Paisu Pok en la isl
 seoTitle: "Guía de buceo en el lago Paisu Pok | Banggai Wonderland"
 seoDescription: "Guía práctica para bucear y explorar el lago Paisu Pok en la isla de Peleng: condiciones del agua, actividades, acceso y consejos en las islas Banggai."
 image: /images/DSCF7073-5.webp
-imageAlt: ''
+imageAlt: "Lago Paisu Pok en la isla de Peleng, islas Banggai"
 author: Diving Expert
 pubDate: "2026-10-15T00:00:00Z"
 tags:

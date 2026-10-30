@@ -72,13 +72,18 @@ const breadcrumbItems = [
   { name: entry.data.title, url: `/${lang}/destinations/${slug}/` }
 ];
 
+const destinationUrl = new URL(`/${lang}/destinations/${slug}/`, Astro.site).href;
 const schema = {
   '@context': 'https://schema.org',
   '@type': 'TouristAttraction',
   name: entry.data.title,
   description: entry.data.description,
-  image: entry.data.image,
-  url: new URL(`/${lang}/destinations/${slug}/`, Astro.site).href
+  image: [new URL(entry.data.image, Astro.site).href],
+  url: destinationUrl,
+  mainEntityOfPage: { '@type': 'WebPage', '@id': destinationUrl },
+  inLanguage: lang,
+  containedInPlace: { '@type': 'Place', name: entry.data.location },
+  address: { '@type': 'PostalAddress', addressRegion: 'Sulawesi Tengah', addressCountry: 'ID' }
 };
 
 const labels = ({

@@ -4,7 +4,7 @@ description: "Guía de la cascada de Piala cerca de Luwuk, Banggai, con ubicaci�
 seoTitle: "Cascada de Piala en Luwuk | Guía de viaje de Banggai"
 seoDescription: "Guía de la cascada de Piala cerca de Luwuk, Banggai, Sulawesi Central, con ubicación, actividades y consejos prácticos de viaje."
 image: /images/piala.jpg
-imageAlt: ''
+imageAlt: "Cascada de Piala cerca de Luwuk, Banggai"
 author: Nature Lover
 pubDate: "2026-10-15T00:00:00Z"
 tags:

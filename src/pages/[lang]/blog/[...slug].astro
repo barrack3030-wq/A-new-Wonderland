@@ -67,18 +67,26 @@ const breadcrumbItems = [
   { name: t('nav.blog'), url: `/${lang}/blog/` },
   { name: entry.data.title, url: `/${lang}/blog/${Astro.params.slug}/` }
 ];
+const siteOrigin = Astro.site || Astro.url.origin;
+const orgId = new URL('/#organization', siteOrigin).href;
+const imageAbsolute = new URL(resolvedImage, siteOrigin).href;
+const authorIsBrand = !entry.data.author || entry.data.author.trim().toLowerCase() === 'banggai wonderland';
 const schema = {
   '@context': 'https://schema.org',
   '@type': 'BlogPosting',
   headline: entry.data.title,
   description: entry.data.description,
-  image: resolvedImage,
+  image: [imageAbsolute],
   url: postUrl,
   mainEntityOfPage: { '@type': 'WebPage', '@id': postUrl },
-  author: { '@type': 'Person', name: entry.data.author },
-  publisher: { '@type': 'Organization', name: 'Banggai Wonderland' },
+  author: authorIsBrand
+    ? { '@type': 'Organization', '@id': orgId, name: 'Banggai Wonderland', url: new URL('/', siteOrigin).href }
+    : { '@type': 'Person', name: entry.data.author },
+  publisher: { '@type': 'Organization', '@id': orgId, name: 'Banggai Wonderland', logo: { '@type': 'ImageObject', url: new URL('/images/logo.png', siteOrigin).href } },
   datePublished: entry.data.pubDate.toISOString(),
-  inLanguage: lang
+  dateModified: (entry.data.updatedDate ?? entry.data.pubDate).toISOString(),
+  inLanguage: lang,
+  ...(entry.data.tags?.length ? { keywords: entry.data.tags.join(', ') } : {})
 };
 ---
 

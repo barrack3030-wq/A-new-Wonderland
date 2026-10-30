@@ -4,6 +4,7 @@ description: "Poganda Beach en Banggai Laut ofrece arena blanca, aguas cristalin
 seoTitle: "Poganda Beach: Playa exótica en Banggai Laut, Célebes Central"
 seoDescription: "Poganda Beach en Banggai Laut: arena blanca, aguas cristalinas, rocas de granito y esnórquel con el pez cardenal de Banggai. Acceso y consejos."
 image: "/images/blog/images-9-20260910083834.jpg"
+imageAlt: "Poganda Beach en Banggai Laut"
 author: "Banggai Wonderland"
 pubDate: 2026-09-10
 translationKey: "2026-09-10-poganda-beach-pantai-eksotis-dengan-pemandangan-laut-banggai"

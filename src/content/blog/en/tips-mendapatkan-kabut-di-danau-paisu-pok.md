@@ -4,7 +4,7 @@ description: "Mist at Paisu Pok Lake depends on temperature, humidity and wind. 
 seoTitle: "How to See Mist at Paisu Pok Lake: Timing & Tips"
 seoDescription: "Want to see mist over Paisu Pok Lake? Learn when to visit, which conditions help and photography tips. Mist is never guaranteed."
 image: /images/images (6).jpg
-imageAlt: ''
+imageAlt: "Paisu Pok Lake on Peleng Island, Banggai Islands"
 author: aji
 pubDate: "2026-09-05T23:52:00"
 tags: []

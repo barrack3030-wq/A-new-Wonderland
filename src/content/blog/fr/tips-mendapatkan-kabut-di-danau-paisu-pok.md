@@ -4,7 +4,7 @@ description: "La brume au lac Paisu Pok dépend de la température, de l’humid
 seoTitle: "Voir la brume au lac Paisu Pok : horaires et conseils"
 seoDescription: "Envie de voir la brume sur le lac Paisu Pok ? Découvrez quand venir, les conditions favorables et des conseils photo. La brume n’est jamais garantie."
 image: /images/images (6).jpg
-imageAlt: ''
+imageAlt: "Lac Paisu Pok sur l’île de Peleng, îles Banggai"
 author: aji
 pubDate: "2026-09-05T23:54:00"
 tags: []
