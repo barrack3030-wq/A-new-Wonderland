@@ -15,8 +15,6 @@ tags:
 translationKey: "banggai-islands-4-day-itinerary-from-luwuk"
 ---
 
-# Itinerary Banggai 4 Hari 3 Malam: Rute dari Luwuk ke Paisu Pok
-
 Merencanakan perjalanan ke Kepulauan Banggai akan lebih mudah jika rute, penyeberangan, kendaraan lokal, dan waktu kunjungan disusun sebelum berangkat. Untuk wisatawan yang ingin melihat danau berair jernih, pantai, dan teluk di Pulau Peleng, perjalanan beberapa hari dari Luwuk memberi ruang lebih baik daripada memaksakan semua tempat dalam satu hari.
 
 Itinerary di bawah ini adalah kerangka perencanaan, bukan jadwal transportasi tetap. Jadwal kapal, kondisi laut, waktu tempuh, dan akses destinasi perlu dikonfirmasi menjelang tanggal perjalanan.

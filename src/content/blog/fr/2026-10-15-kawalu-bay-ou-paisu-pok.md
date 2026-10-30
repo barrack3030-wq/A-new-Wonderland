@@ -16,8 +16,6 @@ tags:
   - "Sulawesi central"
 ---
 
-# Kawalu Bay ou Paisu Pok : quelle destination choisir ?
-
 L'archipel de Banggai, dans le centre de Sulawesi, offre des paysages aquatiques très différents. **Kawalu Bay** séduit par son cadre côtier, ses eaux bleu turquoise et ses collines verdoyantes. **Paisu Pok**, sur l'île de Peleng, est un lac d'eau douce réputé pour sa transparence et ses arbres immergés visibles sous la surface.
 
 Le meilleur choix dépend de ce que vous souhaitez découvrir, des activités qui vous intéressent et du temps dont vous disposez.

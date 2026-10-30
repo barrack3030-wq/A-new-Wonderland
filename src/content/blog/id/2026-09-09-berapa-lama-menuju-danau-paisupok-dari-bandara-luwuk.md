@@ -16,8 +16,6 @@ tags:
   - "Travel"
 ---
 
-# Berapa Lama Menuju Danau Paisupok dari Bandara Luwuk?
-
 Danau Paisupok merupakan salah satu tujuan alam paling menakjubkan di Banggai Kepulauan, Sulawesi Tengah. Airnya yang jernih, dikelilingi pepohonan hijau dan suasana pulau yang tenang, membuat danau ini menjadi destinasi favorit bagi wisatawan yang mencari pengalaman tropis yang autentik.
 
 Bagi wisatawan yang tiba melalui Bandara Luwuk, pertanyaan yang sering muncul adalah: **berapa lama perjalanan menuju Danau Paisupok?**

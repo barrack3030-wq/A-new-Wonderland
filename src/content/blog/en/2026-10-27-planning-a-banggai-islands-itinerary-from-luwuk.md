@@ -16,8 +16,6 @@ tags:
 translationKey: "banggai-trip-itinerary-buffer-planning"
 ---
 
-# How to Plan a Banggai Islands Itinerary from Luwuk
-
 A successful Banggai Islands trip depends on more than choosing beautiful places. The route also involves local road transfers, sea crossings, waiting time, and schedules that may change. If you are starting in Luwuk and want to explore Peleng Island, build your itinerary around transport connections first, then add destinations that fit the available time.
 
 The most useful rule is simple: **do not plan every hour as if transfers were guaranteed**. Weather, sea conditions, operator schedules, and the harbour you need can all affect the day.

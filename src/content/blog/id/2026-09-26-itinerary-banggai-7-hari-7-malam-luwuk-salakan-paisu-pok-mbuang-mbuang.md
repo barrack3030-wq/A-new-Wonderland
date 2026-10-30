@@ -18,8 +18,6 @@ tags:
 ---
 
 
-# Itinerary Banggai 7 Hari 7 Malam
-
 Jika Anda ingin menjelajahi **Luwuk dan Kepulauan Banggai** tanpa terburu-buru, rute 7 hari 7 malam ini menggabungkan perjalanan darat, ferry, pantai, dan beberapa destinasi laut yang lebih terpencil. Rute ini cocok untuk private trip yang ingin memasukkan **Paisu Pok, Mbuang-Mbuang, Bontolan, Oyama, Long Beach, Pulo Dua, Kamumu dan Salodik** dalam satu perjalanan.
 
 > Jadwal ferry dan aktivitas laut tetap perlu disesuaikan dengan cuaca, kondisi laut, dan jadwal operasional lokal.
@@ -81,7 +79,7 @@ Jika Anda ingin menjelajahi **Luwuk dan Kepulauan Banggai** tanpa terburu-buru, 
 
 ## Day 3 — Tebing → Mbuang-Mbuang → Bontolan
 
-![Mbuang-Mbuang](/images/mbuang mbuang.jpg)
+![Mbuang-Mbuang](/images/mbuang%20mbuang.jpg)
 
 ![Bontolan Beach](/images/bontolan.jpg)
 
@@ -103,7 +101,7 @@ Jika Anda ingin menjelajahi **Luwuk dan Kepulauan Banggai** tanpa terburu-buru, 
 
 ![Oyama Beach](/images/698024319f723539c41d303baa496f2e.jpg)
 
-![Long Beach](/images/long b.jpg)
+![Long Beach](/images/long%20b.jpg)
 
 ![Bontolan Beach](/images/bontolan.jpg)
 

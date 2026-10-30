@@ -16,8 +16,6 @@ tags:
   - "australia travel"
 ---
 
-# How to Get to the Banggai Islands from Sydney
-
 If you are based in Sydney and want to explore the Banggai Islands in Central Sulawesi, the first thing to know is that **Sydney does not have a direct flight to Luwuk (LUW)**.
 
 The trip needs a connection through Indonesia or another regional hub before you reach Luwuk.

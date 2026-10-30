@@ -1,7 +1,7 @@
 ---
 title: "Plage d’Oyama"
 description: "La plage d’Oyama est une plage de sable blanc à l’extrémité nord de l’île de Banggai, avec une eau turquoise calme et une grande mangrove derrière le rivage."
-seoTitle: "Oyama Beach Banggai | Plage accessible en bateau à Banggai Laut"
+seoTitle: "Oyama Beach Banggai : plage accessible en bateau"
 seoDescription: "Oyama Beach, sur l’île de Banggai, offre sable blanc, eau calme et mangrove. La plage est accessible uniquement en bateau depuis Lokotoy ou Popisi. Entrée gratuite."
 image: "/images/698024319f723539c41d303baa496f2e.jpg"
 imageAlt: "Rivage de sable blanc d’Oyama Beach sur l’île de Banggai, avec eau turquoise et forêt de mangrove, Banggai Laut, Sulawesi central."
@@ -26,8 +26,6 @@ travelTips:
   - "Confirmez le prix du bateau localement avant le départ"
 youtube: "https://www.youtube.com/watch?v=zcwUg-FHlcw"
 ---
-
-# Plage d’Oyama : l’évasion de sable blanc accessible uniquement en bateau
 
 Oyama Beach est une plage de sable blanc située à **l’extrémité nord de l’île de Banggai, à Banggai Laut, Sulawesi central**. Elle se trouve dans la zone de **Lokotoy / Pasir Putih, district de Banggai Utara**, mais les sources ne donnent pas toutes le même nom de village : certaines indiquent Desa Lokotoy, d’autres Desa Pasir Putih. Le cadre est constant : sable blanc fin, eau turquoise calme et grande forêt de mangrove juste derrière le rivage.
 

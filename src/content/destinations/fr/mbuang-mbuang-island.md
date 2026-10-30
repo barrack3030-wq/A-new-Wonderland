@@ -2,7 +2,7 @@
 title: "Mbuang-Mbuang: l'île isolée avec un lac de méduses sans dard"
 description: "Mbuang-Mbuang est un village insulaire isolé de Banggai Laut, connu pour le lac Paisu Batongan et ses méduses sans dard, son jardin protégé de bénitiers géants et ses plages de sable blanc."
 seoTitle: "Mbuang-Mbuang Island | Guide du lac de méduses de Banggai Laut"
-seoDescription: "Mbuang-Mbuang à Banggai Laut est une île isolée avec un lac de méduses sans dard, un jardin de bénitiers géants et des plages de sable blanc. Guide complet de l'accès et des séjours."
+seoDescription: "Mbuang-Mbuang à Banggai Laut est une île isolée avec un lac de méduses sans dard, un jardin de bénitiers géants et des plages de sable blanc."
 image: "/images/mbuang mbuang.jpg"
 imageAlt: "Eau claire du lac de méduses Danau Paisu Batongan sur l'île de Mbuang-Mbuang, avec des méduses translucides visibles au milieu d'une végétation tropicale, Banggai Laut, Sulawesi central."
 location: "Bokan Kepulauan, Banggai Laut"
@@ -25,8 +25,6 @@ travelTips:
   - "Respectez les règles locales de conservation et repartez avec vos déchets"
 youtube: "https://www.youtube.com/watch?v=sRkhqbTYvnk"
 ---
-
-# Mbuang-Mbuang: l'île isolée avec un lac de méduses sans dard
 
 Mbuang-Mbuang n'est ni une plage, ni un resort, ni une excursion d'une journée. C'est un **village insulaire isolé** du **kabupaten de Banggai Laut, Sulawesi central, Indonésie**. Administrativement, il s'agit de **Desa Mbuang-Mbuang**, dans le district de **Bokan Kepulauan**, sur la petite **Pulau Salue Kecil**.
 

@@ -2,7 +2,7 @@
 title: Kilo 5 Beach
 description: "Kilo 5 Beach, también conocida como Pantai Lalong, es la playa urbana emblemática de Luwuk, con arena blanca, aguas tranquilas, arrecifes poco profundos, snorkel, gastronomía y atardeceres cerca del centro de la ciudad."
 seoTitle: "Kilo 5 Beach Luwuk | Snorkel y gastronomía en Banggai"
-seoDescription: "Descubre Kilo 5 Beach en Luwuk: arena blanca, aguas tranquilas, arrecifes poco profundos, estatuas submarinas, snorkel, cafés de marisco y acceso fácil por carretera."
+seoDescription: "Descubre Kilo 5 Beach en Luwuk: arena blanca, aguas tranquilas, arrecifes poco profundos, estatuas submarinas, snorkel."
 image: /images/Pantai-Kilo-5-1.webp
 imageAlt: "Arena blanca y agua turquesa de Kilo 5 Beach en Luwuk, Banggai, con el cartel de la playa y la bahía tranquila"
 location: Luwuk, Banggai

@@ -28,7 +28,7 @@ itinerary:
     description: Arrive in Luwuk, meet the guide, visit Piala Waterfall, continue to the Luwuk coast and Kilo 5, then transfer to the airport or hotel.
 ---
 
-# Paket Wisata Luwuk 1 Hari
+## Paket Wisata Luwuk 1 Hari
 
 **1 Hari**
 
@@ -36,37 +36,37 @@ itinerary:
 
 Paket private trip satu hari untuk wisatawan yang memiliki waktu terbatas di Luwuk. Rute difokuskan pada destinasi yang dekat dan realistis untuk dikunjungi dalam satu hari tanpa perjalanan antarpulau.
 
-## Itinerary Luwuk 1 Hari
+### Itinerary Luwuk 1 Hari
 
-### Pagi — Tiba di Luwuk
+#### Pagi — Tiba di Luwuk
 
 - Penjemputan di Bandara Syukuran Aminuddin Amir
 - Meet and greet
 - Persiapan perjalanan
 
-### Siang — Air Terjun Piala
+#### Siang — Air Terjun Piala
 
 - Mengunjungi Air Terjun Piala
 - Menikmati alam tropis
 - Berenang atau bersantai jika kondisi memungkinkan
 - Fotografi
 
-### Sore — Pesisir Luwuk & Kilo 5
+#### Sore — Pesisir Luwuk & Kilo 5
 
 - Makan siang / kuliner lokal
 - Menjelajahi kawasan pesisir
 - Mengunjungi Kilo 5 atau spot pesisir pilihan
 - Menikmati sunset bila kondisi memungkinkan
 
-### Sore–Malam — Keberangkatan
+#### Sore–Malam — Keberangkatan
 
 - Transfer ke hotel atau bandara
 - Trip selesai
 
-## Cocok untuk
+### Cocok untuk
 
 Paket ini cocok untuk wisatawan yang transit di Luwuk, memiliki jadwal penerbangan singkat, atau ingin mengenal Luwuk sebelum melanjutkan perjalanan ke Kepulauan Banggai.
 
-## Catatan
+### Catatan
 
 Itinerary dapat disesuaikan dengan jadwal penerbangan, cuaca, kondisi jalan, dan situasi lokal. Untuk perjalanan menuju Paisu Pok atau pulau lain, gunakan paket dengan durasi lebih panjang.

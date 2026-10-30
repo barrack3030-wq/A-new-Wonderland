@@ -16,8 +16,6 @@ tags:
   - "Salakan"
 ---
 
-# Banggai Honeymoon: 4 Days 3 Nights for 2 People
-
 Banggai is a great choice for couples looking for a quieter island escape. The **Banggai Honeymoon Escape** is designed as a private 4-day, 3-night trip for two.
 
 The route connects Luwuk, Salakan, and several Banggai coastal destinations including **Paisu Pok, Paisu Batango, Kawalu Bay, Poganda Beach, Long Beach, Oyama, Bontolan, Pompon Beach, and Mandel Beach**.

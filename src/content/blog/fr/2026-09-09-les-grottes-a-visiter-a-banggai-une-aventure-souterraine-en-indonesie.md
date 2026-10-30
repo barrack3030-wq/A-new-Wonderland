@@ -14,8 +14,6 @@ tags:
   - "Travel"
 ---
 
-# Les grottes à visiter à Banggai
-
 Banggai est surtout connue pour ses eaux turquoise, ses îles couvertes de végétation et ses plages encore préservées. Pourtant, la région possède également un patrimoine naturel plus secret : ses grottes. Formées par le relief calcaire et façonnées par l’eau au fil du temps, elles offrent une autre manière de découvrir le paysage de Sulawesi Tengah.
 
 De Luwuk aux îles Banggai, une sortie dans une grotte permet d’explorer un environnement plus sauvage, souvent accompagné d’un guide local. Voici les sites et types de grottes à inscrire sur votre liste lors d’un voyage à Banggai.

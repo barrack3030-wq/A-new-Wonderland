@@ -16,8 +16,6 @@ tags:
   - "Itinerary"
 ---
 
-# Paisu Pok Lake: Complete Travel Guide
-
 You may have seen the photographs before you ever heard the name Paisu Pok: remarkably clear blue-green water, submerged trees visible beneath the surface, and tropical vegetation surrounding the lake.
 
 What the photographs do not show is the geography.
@@ -28,7 +26,7 @@ The lake is located in **Luk Panenteng Village on Peleng Island, in Banggai Kepu
 
 That matters when planning your trip. A Paisu Pok visit is not simply a short stop on a Luwuk itinerary. You need to consider the boat crossing, road transfer, accommodation, timing and the return journey.
 
-## Paisu Pok Lake at a Glance
+### Paisu Pok Lake at a Glance
 
 | Information | Details |
 |---|---|
@@ -40,7 +38,7 @@ That matters when planning your trip. A Paisu Pok visit is not simply a short st
 | **Recommended stay** | 2–3 days |
 | **Best base for a focused visit** | Luk Panenteng / Peleng |
 
-# Where Is Paisu Pok Lake?
+## Where Is Paisu Pok Lake?
 
 For a first trip, it helps to think of the journey as a chain:
 
@@ -54,7 +52,7 @@ For a first trip, it helps to think of the journey as a chain:
 
 This is the first detail many visitors get wrong. Reaching Luwuk does not mean you have reached Paisu Pok.
 
-# What Is Paisu Pok Lake Like?
+## What Is Paisu Pok Lake Like?
 
 The main attraction is the clarity of the water.
 
@@ -64,7 +62,7 @@ The appearance also changes with the light. Water color, reflections and visibil
 
 Paisu Pok is also becoming better known. A quiet photograph should not be taken as a guarantee that the lake will be empty all day.
 
-# How Do You Get to Paisu Pok?
+## How Do You Get to Paisu Pok?
 
 For travelers starting in Luwuk, one practical route is:
 
@@ -74,7 +72,7 @@ The first section is by boat. After reaching Peleng, you continue by road toward
 
 Other local arrangements may be available depending on the day, including private boats. Because local transport can change with weather and operations, confirm the actual service before departure rather than relying on an old online timetable.
 
-# How Long Does It Take to Reach Paisu Pok?
+## How Long Does It Take to Reach Paisu Pok?
 
 The biggest mistake is to count only the boat crossing.
 
@@ -87,7 +85,7 @@ The biggest mistake is to count only the boat crossing.
 
 Published travel information gives different crossing times, so the safest approach is to plan with a buffer rather than build a chain of exact connections.
 
-# Can You Visit Paisu Pok in One Day?
+## Can You Visit Paisu Pok in One Day?
 
 It depends on how you travel.
 
@@ -101,7 +99,7 @@ It depends on how you travel.
 
 Public transport is less flexible and can make a same-day return difficult. A private speedboat can make a day trip possible when boat availability and sea conditions allow.
 
-# Paisu Pok Lake Itinerary: 2 Days
+## Paisu Pok Lake Itinerary: 2 Days
 
 | Day | Route | Main activities | Overnight |
 |---|---|---|---|
@@ -110,7 +108,7 @@ Public transport is less flexible and can make a same-day return difficult. A pr
 
 Two days works well because it gives you some protection against delays instead of making the lake visit depend on perfect connections.
 
-# Paisu Pok Lake Itinerary: 3 Days
+## Paisu Pok Lake Itinerary: 3 Days
 
 | Day | Route | Main activities | Overnight |
 |---|---|---|---|
@@ -120,7 +118,7 @@ Two days works well because it gives you some protection against delays instead 
 
 Three days is particularly useful for travelers who want a slower pace or more flexibility around boat schedules.
 
-# When Should You Visit Paisu Pok?
+## When Should You Visit Paisu Pok?
 
 There are two questions: **what season** and **what time of day**.
 
@@ -130,7 +128,7 @@ The lake can become busier as daytime excursions arrive. Staying nearby gives yo
 
 For a detailed seasonal discussion, use a dedicated “best time to visit Paisu Pok” guide rather than repeating the same information here.
 
-# Where Should You Stay?
+## Where Should You Stay?
 
 | Location | Best for | Main consideration |
 |---|---|---|
@@ -140,7 +138,7 @@ For a detailed seasonal discussion, use a dedicated “best time to visit Paisu 
 
 For a trip centered on Paisu Pok, staying on Peleng usually makes the itinerary easier.
 
-# What Should You Prepare?
+## What Should You Prepare?
 
 | Item | Why it matters |
 |---|---|
@@ -157,37 +155,37 @@ The most important preparation is not equipment. It is logistics.
 
 Before leaving Luwuk, know how you are crossing to Peleng, how you will continue to Luk Panenteng, where you are sleeping and how you are returning.
 
-# Common Mistakes First-Time Travelers Make
+## Common Mistakes First-Time Travelers Make
 
-## 1. Thinking Paisu Pok Is in Luwuk
+### 1. Thinking Paisu Pok Is in Luwuk
 
 Luwuk is the gateway. Paisu Pok is on Peleng Island.
 
-## 2. Treating a Boat Schedule as Guaranteed
+### 2. Treating a Boat Schedule as Guaranteed
 
 Local sea transport can change. Confirm the actual service before committing to the next connection.
 
-## 3. Forgetting the Road Transfer
+### 3. Forgetting the Road Transfer
 
 Arriving on Peleng is not the same as arriving at the lake.
 
-## 4. Booking the Boat Too Close to Your Flight
+### 4. Booking the Boat Too Close to Your Flight
 
 Leave enough time for baggage, the transfer to the harbor and unexpected delays.
 
-## 5. Trying to Fit Everything Into One Day
+### 5. Trying to Fit Everything Into One Day
 
 A private day trip may work. A public-transport itinerary has much less room for error.
 
-## 6. Expecting the Lake to Be Empty
+### 6. Expecting the Lake to Be Empty
 
 Paisu Pok is increasingly known among travelers. A quiet photo represents a moment, not necessarily the entire day.
 
-## 7. Rushing Through the Visit
+### 7. Rushing Through the Visit
 
 Paisu Pok is not the kind of destination that benefits from watching the clock every few minutes.
 
-# Public Boat or Private Speedboat?
+## Public Boat or Private Speedboat?
 
 | | Public / Local Boat | Private Speedboat |
 |---|---|---|
@@ -199,7 +197,7 @@ Paisu Pok is not the kind of destination that benefits from watching the clock e
 
 The choice depends mainly on your itinerary. Public transport suits slower travel. Private transport buys flexibility.
 
-# What Can You Do at Paisu Pok?
+## What Can You Do at Paisu Pok?
 
 | Activity | Why it is worth doing |
 |---|---|
@@ -210,7 +208,7 @@ The choice depends mainly on your itinerary. Public transport suits slower trave
 | **Photography** | Capture water, reflections and submerged trees |
 | **Visit Luk Panenteng** | See the local setting around the attraction |
 
-# Paisu Pok Trip Checklist
+## Paisu Pok Trip Checklist
 
 | Check | Ready? |
 |---|---|
@@ -225,7 +223,7 @@ The choice depends mainly on your itinerary. Public transport suits slower trave
 
 The goal is not to make the trip rigid. It is to prevent avoidable problems from taking over the day.
 
-# How Many Days Do You Need?
+## How Many Days Do You Need?
 
 | Available time | Practical approach |
 |---|---|
@@ -236,17 +234,17 @@ The goal is not to make the trip rigid. It is to prevent avoidable problems from
 
 For first-time visitors, two to three days gives the journey enough breathing room.
 
-# FAQ
+## FAQ
 
-## Where is Paisu Pok Lake?
+### Where is Paisu Pok Lake?
 
 Paisu Pok Lake is in Luk Panenteng Village on Peleng Island, in Banggai Kepulauan.
 
-## Is Paisu Pok in Luwuk?
+### Is Paisu Pok in Luwuk?
 
 No. Luwuk is the mainland gateway, while Paisu Pok is across the sea on Peleng Island.
 
-## How do you get to Paisu Pok from Luwuk?
+### How do you get to Paisu Pok from Luwuk?
 
 A practical route is:
 
@@ -254,23 +252,23 @@ A practical route is:
 
 It combines sea and road transport.
 
-## How long does the journey take?
+### How long does the journey take?
 
 Allow several hours for the sea crossing, around one hour for the road section from Leme-Leme toward Luk Panenteng, plus waiting and connections.
 
-## Can you visit Paisu Pok in one day?
+### Can you visit Paisu Pok in one day?
 
 A same-day trip can be arranged with private transport in suitable conditions. Public transport is generally less flexible and works better with an overnight stay on Peleng.
 
-## Where should you stay?
+### Where should you stay?
 
 Luk Panenteng is the most convenient base when Paisu Pok is the main purpose of the trip.
 
-## What should you bring?
+### What should you bring?
 
 Cash, water, a dry bag, power bank, swimming clothes, comfortable footwear and rain protection are useful.
 
-# Final Thoughts
+## Final Thoughts
 
 Paisu Pok Lake makes more sense once you stop thinking of it as a quick attraction beside Luwuk.
 

@@ -1,7 +1,7 @@
 ---
 title: "Lista de preparación para viajar a Banggai: antes de salir"
 description: "Guía práctica sobre conexiones de transporte, efectivo, horarios de barcos, alojamiento, clima y artículos esenciales para visitar Luwuk y las islas Banggai."
-seoTitle: "Lista de viaje a Banggai | Preparativos para Luwuk y las islas Banggai"
+seoTitle: "Lista de viaje a Banggai: preparativos para Luwuk y las islas"
 seoDescription: "Organiza un viaje más cómodo a Banggai. Comprueba los transportes, barcos, efectivo, alojamiento y seguridad en el mar antes de partir."
 image: "https://upload.wikimedia.org/wikipedia/commons/0/02/Kadidiri%2C_morning_view_%286972093459%29.jpg"
 imageAlt: "Una isla tropical y mar cristalino en Indonesia"
@@ -16,8 +16,6 @@ tags:
   - islas Banggai
   - turismo en Sulawesi
 ---
-
-# Lista de preparación para viajar a Banggai: antes de salir
 
 Luwuk y las islas Banggai, en Sulawesi, ofrecen playas, islas y paisajes marinos. Sin embargo, para desplazarse entre islas puede ser necesario combinar trayectos por carretera y en barco. Comprobar algunos detalles antes de salir ayuda a evitar cambios de última hora.
 

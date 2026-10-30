@@ -17,8 +17,6 @@ tags:
   - Tourisme durable
 ---
 
-# Voyager de façon responsable à Banggai : protéger la mer et les communautés locales
-
 Les îles Banggai sont connues pour leurs eaux claires, leurs petites îles, leurs plages et leur vie marine particulière. Ces lieux ne sont pas seulement faits pour être admirés : ils doivent aussi être préservés. Quelques gestes simples pendant le voyage peuvent réduire la pression sur l’environnement et permettre au tourisme de profiter davantage aux communautés locales.
 
 ## Faire du snorkeling et profiter de la mer avec précaution

@@ -13,8 +13,6 @@ tags:
   - Travel
 ---
 
-# Combien de temps faut-il pour rejoindre le lac Paisupok depuis l’aéroport de Luwuk ?
-
 Le lac Paisupok, situé dans les îles Banggai, est l’un des joyaux naturels les plus fascinants de l’est de l’Indonésie. Avec son eau limpide, ses reflets bleu turquoise et son atmosphère encore préservée, il attire les voyageurs à la recherche d’une destination authentique, loin des itinéraires classiques.
 
 Une question revient souvent : **combien de temps faut-il pour aller au lac Paisupok depuis l’aéroport de Luwuk ?**

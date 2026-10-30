@@ -56,6 +56,7 @@ const blogCollection = defineCollection({
     imageSource: z.string().url().optional(),
     author: z.string(),
     pubDate: z.coerce.date(),
+    updatedDate: z.coerce.date().optional(),
     tags: z.array(z.string()).optional(),
     translationKey: z.string().optional(),
   }),

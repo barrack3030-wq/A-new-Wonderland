@@ -14,8 +14,6 @@ tags:
   - "Travel planning Indonesia"
 ---
 
-# Landing in Luwuk? Build a Buffer Before Your Banggai Islands Boat Trip
-
 Luwuk is a practical gateway for travellers heading towards the Banggai Islands, but arriving at the airport and reaching an island are separate parts of the journey. A flight delay, baggage wait, road transfer or a departure from the wrong pier can disrupt a tightly packed itinerary. The safest plan is to confirm each connection independently.
 
 ## Before you book a same-day connection

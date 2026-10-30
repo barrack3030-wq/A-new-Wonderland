@@ -16,8 +16,6 @@ tags:
   - "Luwuk"
 ---
 
-# Kalau Cuaca Laut Berubah: Cara Menyiapkan Rencana Cadangan Island Hopping Banggai
-
 Perjalanan antarpulau di Banggai sangat bergantung pada kondisi laut. Itinerary yang terlihat sederhana di atas kertas bisa berubah ketika angin menguat, gelombang meningkat, hujan mengurangi jarak pandang, atau operator menilai perjalanan tidak aman. Rencana cadangan bukan berarti liburan gagal; justru ini bagian penting dari perjalanan yang realistis.
 
 ## Sebelum berangkat, sepakati hal-hal berikut

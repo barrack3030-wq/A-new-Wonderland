@@ -1,8 +1,8 @@
 ---
 title: Laumarang Waterfall
 description: Laumarang Waterfall adalah salah satu destinasi menakjubkan di Banggai yang menawarkan pemandangan alam memukau dan pengalaman wisata tak terlupakan. Tempat ini memiliki keunikan tersendiri yang wajib dikunjungi.
-seoTitle: "Laumarang Waterfall | Banggai Wonderland"
-seoDescription: Kunjungi dan eksplorasi keindahan Laumarang Waterfall di Banggai.
+seoTitle: "Air Terjun Laumarang di Luwuk | Banggai Wonderland"
+seoDescription: "Air Terjun Laumarang adalah destinasi air terjun di Luwuk, Banggai, Sulawesi Tengah, cocok untuk kunjungan singkat dari Luwuk."
 image: /images/images.jpg
 imageAlt: Laumarang Waterfall view
 location: Luwuk, Banggai

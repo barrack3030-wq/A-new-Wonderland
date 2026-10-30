@@ -18,8 +18,6 @@ tags:
 ---
 
 
-# Banggai 7-Day 7-Night Itinerary
-
 If you want to explore **Luwuk and the Banggai Islands** without rushing, this 7-day, 7-night route combines road travel, ferries, beaches and remote marine destinations. It is designed for a private trip covering **Paisu Pok, Mbuang-Mbuang, Bontolan, Oyama, Long Beach, Pulo Dua, Kamumu and Salodik**.
 
 > Ferry and marine activities remain subject to weather, sea conditions and local operating schedules.
@@ -81,7 +79,7 @@ If you want to explore **Luwuk and the Banggai Islands** without rushing, this 7
 
 ## Day 3 — Tebing → Mbuang-Mbuang → Bontolan
 
-![Mbuang-Mbuang](/images/mbuang mbuang.jpg)
+![Mbuang-Mbuang](/images/mbuang%20mbuang.jpg)
 
 ![Bontolan Beach](/images/bontolan.jpg)
 
@@ -103,7 +101,7 @@ If you want to explore **Luwuk and the Banggai Islands** without rushing, this 7
 
 ![Oyama Beach](/images/698024319f723539c41d303baa496f2e.jpg)
 
-![Long Beach](/images/long b.jpg)
+![Long Beach](/images/long%20b.jpg)
 
 ![Bontolan Beach](/images/bontolan.jpg)
 

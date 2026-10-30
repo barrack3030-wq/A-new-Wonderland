@@ -16,8 +16,6 @@ tags:
   - "Travel Guide"
 ---
 
-# Cara ke Paisu Pok dari Luwuk
-
 Paisu Pok adalah salah satu destinasi alam yang paling dikenal di Kepulauan Banggai. Namun, hal pertama yang perlu diketahui adalah: **Paisu Pok tidak berada di Luwuk**.
 
 Danau ini berada di **Desa Luk Panenteng, Pulau Peleng, Kabupaten Banggai Kepulauan**. Bagi wisatawan yang datang melalui jalur udara, Luwuk menjadi titik awal sebelum perjalanan dilanjutkan melalui laut dan kemudian melalui darat.
@@ -28,7 +26,7 @@ Rute dasarnya adalah:
 
 Perjalanan ini menggabungkan penyeberangan dan perjalanan darat, jadi itinerary sebaiknya tidak dibuat terlalu rapat.
 
-## Luwuk ke Paisu Pok secara singkat
+### Luwuk ke Paisu Pok secara singkat
 
 | Tahap | Rute | Transportasi | Informasi |
 |---|---|---|---|
@@ -39,7 +37,7 @@ Perjalanan ini menggabungkan penyeberangan dan perjalanan darat, jadi itinerary 
 
 Waktu tersebut adalah perkiraan. Kondisi laut, jalan, cuaca, dan jadwal kapal dapat memengaruhi perjalanan.
 
-# Di Mana Paisu Pok Berada?
+## Di Mana Paisu Pok Berada?
 
 Paisu Pok berada di **Desa Luk Panenteng, Pulau Peleng, Kabupaten Banggai Kepulauan**.
 
@@ -52,7 +50,7 @@ Paisu Pok berada di **Desa Luk Panenteng, Pulau Peleng, Kabupaten Banggai Kepula
 
 Memahami empat titik ini membuat rute jauh lebih mudah dibayangkan.
 
-# Tahap 1: Berangkat dari Luwuk
+## Tahap 1: Berangkat dari Luwuk
 
 Sebagian besar wisatawan memulai perjalanan dari **Bandara Syukuran Aminuddin Amir**.
 
@@ -60,7 +58,7 @@ Setelah tiba, lanjut ke Luwuk dan persiapkan perjalanan menuju Peleng. Sebaiknya
 
 Jangan membuat jadwal kapal terlalu dekat dengan waktu kedatangan pesawat. Sisakan waktu untuk bagasi dan perjalanan menuju pelabuhan.
 
-# Tahap 2: Luwuk ke Leme-Leme
+## Tahap 2: Luwuk ke Leme-Leme
 
 Untuk wisatawan yang menuju Paisu Pok, **Leme-Leme merupakan akses penting menuju Peleng**.
 
@@ -75,7 +73,7 @@ Perjalanan dapat dilakukan dengan kapal penumpang umum atau private speedboat.
 
 Jadwal kapal sebaiknya selalu dikonfirmasi secara lokal sebelum berangkat.
 
-# Tahap 3: Leme-Leme ke Luk Panenteng
+## Tahap 3: Leme-Leme ke Luk Panenteng
 
 Setelah tiba di Leme-Leme, perjalanan belum selesai. Anda masih perlu melanjutkan perjalanan darat melewati Pulau Peleng menuju Luk Panenteng.
 
@@ -83,13 +81,13 @@ Jarak menuju kawasan Paisu Pok sekitar 23 km dan umumnya membutuhkan sekitar sat
 
 Untuk first-time traveler, lebih praktis mengatur kendaraan sebelum tiba di Leme-Leme.
 
-# Tahap 4: Tiba di Paisu Pok
+## Tahap 4: Tiba di Paisu Pok
 
 Luk Panenteng bukan sekadar titik transit. Desa ini berkaitan langsung dengan Paisu Pok dan menjadi bagian dari pengalaman perjalanan.
 
 Di kawasan ini tersedia penginapan lokal dan layanan wisata berbasis masyarakat. Aktivitas dapat meliputi menjelajahi danau, berenang jika diperbolehkan, snorkeling saat kondisi memungkinkan, naik perahu lokal, fotografi, dan mengunjungi Luk Panenteng.
 
-# Apakah Bisa ke Paisu Pok dan Kembali ke Luwuk dalam Satu Hari?
+## Apakah Bisa ke Paisu Pok dan Kembali ke Luwuk dalam Satu Hari?
 
 Tergantung transportasi yang digunakan.
 
@@ -102,14 +100,14 @@ Dengan private speedboat, perjalanan satu hari dapat dilakukan dalam kondisi dan
 | **Hari 1** | Luwuk → Leme-Leme → Luk Panenteng | Menyeberang ke Peleng dan tiba di akomodasi | Peleng |
 | **Hari 2** | Luk Panenteng → Paisu Pok | Menikmati danau dan area sekitar | Peleng / Luwuk |
 
-# Rute Paisu Pok 2 Hari
+## Rute Paisu Pok 2 Hari
 
 | Hari | Rute | Aktivitas utama | Menginap |
 |---|---|---|---|
 | **Hari 1** | Luwuk → Leme-Leme → Luk Panenteng | Penyeberangan, perjalanan darat, dan tiba di desa | Peleng |
 | **Hari 2** | Luk Panenteng → Paisu Pok | Menjelajahi danau, berenang atau snorkeling jika memungkinkan | Peleng / Luwuk |
 
-# Rute 3 Hari
+## Rute 3 Hari
 
 | Hari | Rute | Aktivitas utama | Menginap |
 |---|---|---|---|
@@ -117,7 +115,7 @@ Dengan private speedboat, perjalanan satu hari dapat dilakukan dalam kondisi dan
 | **Hari 2** | Peleng | Paisu Pok, Luk Panenteng dan destinasi sekitar | Peleng |
 | **Hari 3** | Peleng → Luwuk | Kembali ke Luwuk dan persiapan keberangkatan | Luwuk |
 
-# Sebaiknya Menginap di Mana?
+## Sebaiknya Menginap di Mana?
 
 | Lokasi | Cocok untuk | Keuntungan |
 |---|---|---|
@@ -127,7 +125,7 @@ Dengan private speedboat, perjalanan satu hari dapat dilakukan dalam kondisi dan
 
 Jika fokus utama Anda Paisu Pok, menginap di Peleng mengurangi waktu perjalanan bolak-balik.
 
-# Apa yang Perlu Dibawa?
+## Apa yang Perlu Dibawa?
 
 | Barang | Kegunaan |
 |---|---|
@@ -139,7 +137,7 @@ Jika fokus utama Anda Paisu Pok, menginap di Peleng mengurangi waktu perjalanan 
 | **Pakaian renang** | Untuk aktivitas di Paisu Pok |
 | **Perlengkapan hujan** | Cuaca dapat berubah |
 
-# Yang Perlu Dikonfirmasi Sebelum Berangkat
+## Yang Perlu Dikonfirmasi Sebelum Berangkat
 
 | Yang perlu dicek | Alasannya |
 |---|---|
@@ -152,13 +150,13 @@ Jika fokus utama Anda Paisu Pok, menginap di Peleng mengurangi waktu perjalanan 
 
 Jangan membuat itinerary terlalu rapat. Sisakan waktu untuk menunggu dan perubahan kondisi di lapangan.
 
-# Rute Ini Cocok untuk Siapa?
+## Rute Ini Cocok untuk Siapa?
 
 Rute ini cocok untuk wisatawan yang memiliki waktu 3–5 hari di Banggai, traveler independen yang nyaman menggunakan transportasi lokal, fotografer dan pencinta alam, serta wisatawan yang tujuan utamanya Paisu Pok.
 
 Private trip berguna ketika waktu terbatas, bepergian bersama keluarga atau grup, atau ingin kapal dan transportasi darat diatur dalam satu rangkaian.
 
-# Rute Sederhana untuk First-Time Traveler
+## Rute Sederhana untuk First-Time Traveler
 
 | Durasi | Rute yang disarankan |
 |---|---|
@@ -170,9 +168,9 @@ Private trip berguna ketika waktu terbatas, bepergian bersama keluarga atau grup
 
 Semakin banyak waktu yang tersedia, semakin mudah mengantisipasi perubahan transportasi dan cuaca.
 
-# FAQ
+## FAQ
 
-## Bagaimana cara ke Paisu Pok dari Luwuk?
+### Bagaimana cara ke Paisu Pok dari Luwuk?
 
 Rute utamanya adalah:
 
@@ -180,23 +178,23 @@ Rute utamanya adalah:
 
 Bagian pertama menggunakan kapal, lalu dilanjutkan melalui jalan darat di Pulau Peleng.
 
-## Apakah Paisu Pok berada di Luwuk?
+### Apakah Paisu Pok berada di Luwuk?
 
 Tidak. Paisu Pok berada di Luk Panenteng, Pulau Peleng, Kabupaten Banggai Kepulauan. Luwuk adalah titik awal dari daratan.
 
-## Berapa lama perjalanan Luwuk ke Paisu Pok?
+### Berapa lama perjalanan Luwuk ke Paisu Pok?
 
 Penyeberangan menuju Leme-Leme umumnya sekitar dua jam, kemudian sekitar satu jam perjalanan darat menuju kawasan danau. Waktu tunggu dapat membuat total perjalanan lebih lama.
 
-## Apakah bisa day trip dari Luwuk?
+### Apakah bisa day trip dari Luwuk?
 
 Dengan private speedboat, perjalanan satu hari dapat dilakukan dalam kondisi tertentu. Dengan transportasi umum, menginap satu malam di Peleng biasanya lebih praktis.
 
-## Apakah ada penginapan dekat Paisu Pok?
+### Apakah ada penginapan dekat Paisu Pok?
 
 Ada. Luk Panenteng memiliki homestay dan layanan wisata lokal.
 
-# Penutup
+## Penutup
 
 Perjalanan **Luwuk ke Paisu Pok** paling mudah dipahami sebagai satu rangkaian:
 

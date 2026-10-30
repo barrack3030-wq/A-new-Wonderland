@@ -2,7 +2,7 @@
 title: Cascade de Salodik
 description: La cascade de Salodik près de Luwuk est une cascade en terrasses au bord de la route, avec une eau bleu-vert claire et un accès facile.
 seoTitle: "Cascade de Salodik Luwuk | Guide des cascades de Banggai"
-seoDescription: La cascade de Salodik, près de Luwuk sur la route Trans Sulawesi, offre des niveaux rocheux, une eau bleu-vert claire et un accès très facile. Guide des tarifs et installations.
+seoDescription: "La cascade de Salodik, près de Luwuk sur la route Trans Sulawesi, offre des niveaux rocheux, une eau bleu-vert claire et un accès très facile."
 image: /images/images (3).jpg
 imageAlt: Cascade en terrasses de Salodik sur des rochers en gradins, avec une eau bleu-vert claire entourée de forêt à Luwuk, Banggai, Sulawesi central.
 location: Salodik, Luwuk Utara, régence de Banggai, Sulawesi central

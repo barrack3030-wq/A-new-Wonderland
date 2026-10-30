@@ -1,8 +1,8 @@
 ---
 title: "Itinéraire Banggai 7 jours et 7 nuits : Luwuk, Salakan, Peleng et Pulo Dua"
 description: "Un itinéraire privé de 7 jours et 7 nuits depuis Luwuk pour découvrir Salakan, Paisu Pok, Mbuang-Mbuang, Bontolan, les plages de Banggai et Pulo Dua."
-seoTitle: "Itinéraire Banggai 7 jours et 7 nuits : circuit complet depuis Luwuk"
-seoDescription: "Préparez un voyage de 7 jours et 7 nuits à Banggai depuis Luwuk avec Piala, Salakan, Paisu Pok, Mbuang-Mbuang, Bontolan, Oyama, Long Beach, Pulo Dua, Kamumu et Salodik."
+seoTitle: "Itinéraire Banggai 7 jours : circuit complet depuis Luwuk"
+seoDescription: "Préparez un voyage de 7 jours et 7 nuits à Banggai depuis Luwuk avec Piala, Salakan, Paisu Pok, Mbuang-Mbuang, Bontolan, Oyama, Long Beach, Pulo Dua."
 image: "/images/Poganda-Beach-Banggai-IndonesiaJuara-Trip.webp"
 imageAlt: "Plage de Poganda dans les îles Banggai"
 author: "Banggai Wonderland"
@@ -17,8 +17,6 @@ tags:
   - "Mbuang-Mbuang"
 ---
 
-
-# Itinéraire Banggai 7 jours et 7 nuits
 
 Pour découvrir **Luwuk et les îles Banggai** sans courir, cet itinéraire de 7 jours et 7 nuits combine route, ferry, plages et destinations marines plus isolées. Il comprend **Paisu Pok, Mbuang-Mbuang, Bontolan, Oyama, Long Beach, Pulo Dua, Kamumu et Salodik**.
 
@@ -81,7 +79,7 @@ Pour découvrir **Luwuk et les îles Banggai** sans courir, cet itinéraire de 7
 
 ## Jour 3 — Tebing → Mbuang-Mbuang → Bontolan
 
-![Mbuang-Mbuang](/images/mbuang mbuang.jpg)
+![Mbuang-Mbuang](/images/mbuang%20mbuang.jpg)
 
 ![Bontolan Beach](/images/bontolan.jpg)
 
@@ -103,7 +101,7 @@ Pour découvrir **Luwuk et les îles Banggai** sans courir, cet itinéraire de 7
 
 ![Oyama Beach](/images/698024319f723539c41d303baa496f2e.jpg)
 
-![Long Beach](/images/long b.jpg)
+![Long Beach](/images/long%20b.jpg)
 
 ![Bontolan Beach](/images/bontolan.jpg)
 

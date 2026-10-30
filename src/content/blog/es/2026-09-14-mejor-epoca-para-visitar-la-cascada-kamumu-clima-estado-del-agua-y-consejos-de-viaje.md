@@ -1,8 +1,8 @@
 ---
 title: "Mejor época para visitar la Cascada Kamumu: Clima, estado del agua y consejos de viaje"
 description: "clima Cascada Kamumu consejos para Kamumu estado del agua en Kamumu estación seca Banggai preparación para Kamumu"
-seoTitle: "Mejor época para visitar la Cascada Kamumu: Clima y consejos de viaje"
-seoDescription: "Guía sobre la mejor época para visitar la Cascada Kamumu en Banggai. Condiciones climáticas, caudal de agua en época seca y de lluvias, y consejos de preparación antes de la visita."
+seoTitle: "Mejor época para visitar la cascada Kamumu: clima y consejos"
+seoDescription: "Guía sobre la mejor época para visitar la Cascada Kamumu en Banggai. Condiciones climáticas, caudal de agua en época seca y de lluvias."
 image: "/images/blog/gemini-generated-image-z903ifz903ifz903-20260914195837.jpg"
 imageAlt: "Waktu Terbaik ke Air Terjun Kamumu: Cuaca, Kondisi Air & Tips Perjalanan"
 author: "Banggai Wonderland"

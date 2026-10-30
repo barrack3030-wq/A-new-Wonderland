@@ -1,8 +1,8 @@
 ---
 title: Laumarang Waterfall
 description: Laumarang Waterfall est l'une des destinations magnifiques de Banggai offrant des vues naturelles à couper le souffle et des expériences de voyage inoubliables. Cet endroit a sa propre unicité qui doit être visitée.
-seoTitle: "Laumarang Waterfall | Banggai Wonderland"
-seoDescription: Visitez et explorez la beauté de Laumarang Waterfall di Banggai.
+seoTitle: "Cascade de Laumarang à Luwuk | Banggai Wonderland"
+seoDescription: "La cascade de Laumarang est une destination de cascade à Luwuk, Banggai, Sulawesi central, idéale pour une courte visite depuis Luwuk."
 image: /images/images.jpg
 imageAlt: Laumarang Waterfall view
 location: Luwuk, Banggai

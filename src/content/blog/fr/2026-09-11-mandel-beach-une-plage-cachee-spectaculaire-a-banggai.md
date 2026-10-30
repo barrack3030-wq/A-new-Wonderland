@@ -2,7 +2,7 @@
 title: "Mandel Beach : Une Plage Cachée Spectaculaire à Banggai"
 description: "Pantai Mandel, plage cachée de Banggai, tourisme à Banggai, Mandel Beach, Banggai Wonderland"
 seoTitle: "Pantai Mandel : Plage Cachée de Banggai | Banggai Wonderland"
-seoDescription: "Explorez Pantai Mandel, une plage cachée à Banggai au sable blanc, aux eaux cristallines et au snorkeling sur récifs coralliens. Planifiez votre voyage avec Banggai Wonderland."
+seoDescription: "Explorez Pantai Mandel, une plage cachée à Banggai au sable blanc, aux eaux cristallines et au snorkeling sur récifs coralliens."
 image: "/images/blog/images-10-20260912074054.jpg"
 imageAlt: "Mandel Beach: Hidden Beach di Banggai yang Menakjubkan"
 author: "Banggai Wonderland"

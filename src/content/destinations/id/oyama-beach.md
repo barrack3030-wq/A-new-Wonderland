@@ -27,8 +27,6 @@ travelTips:
 youtube: "https://www.youtube.com/watch?v=zcwUg-FHlcw"
 ---
 
-# Pantai Oyama Banggai Laut: Akses Perahu, Snorkeling dan Panduan Wisata
-
 Pantai Oyama adalah pantai berpasir putih di **ujung utara Pulau Banggai, Kabupaten Banggai Laut, Sulawesi Tengah**. Panduan ini membahas cara menuju Pantai Oyama, akses perahu dari Lokotoy atau Popisi, snorkeling, waktu terbaik, dan persiapan perjalanan. Lokasinya berada di kawasan **Lokotoy / Pasir Putih, Kecamatan Banggai Utara**, meskipun nama desa tepatnya bervariasi antar sumber—sebagian menyebut Desa Lokotoy, sebagian lain Desa Pasir Putih. Yang konsisten adalah latarnya: pasir putih halus, air pirus yang tenang, dan hutan bakau besar tepat di belakang garis pantai.
 
 Pantai ini **tidak dapat diakses melalui jalan darat**. Ujung utara Pulau Banggai terpotong oleh bakau, sehingga satu-satunya cara masuk adalah dengan perahu—biasanya penyeberangan singkat dari desa **Lokotoy** atau **Popisi**. Ini adalah kendala praktis utama, sekaligus alasan Oyama tetap lebih sepi dibandingkan pantai seperti Bontolan atau Kilo 5.

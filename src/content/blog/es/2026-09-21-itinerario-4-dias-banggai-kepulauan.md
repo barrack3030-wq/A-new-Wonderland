@@ -19,8 +19,6 @@ tags:
   - "Banggai Laut"
 ---
 
-# Itinerario de 4 Días por Banggai Kepulauan para Primerizos
-
 ¿Es tu primera vez en **Banggai Kepulauan**? El mayor reto no es decidir qué visitar, sino conectar los barcos sin viajar con demasiadas prisas. Este itinerario de 4 días combina Luwuk, Salakan, las playas de Banggai Laut, Peleng y el lago Paisu Pok con una secuencia de traslados más realista.
 
 El plan supone que ya estás en Luwuk. La mayoría de los visitantes internacionales llega el día anterior vía Makassar, así que conviene pasar la noche en Luwuk antes de comenzar el Día 1.

@@ -1,7 +1,7 @@
 ---
 title: 'Banggai Islands vs Raja Ampat: Which Remote Trip Should You Choose?'
 description: 'Comparing Banggai Islands vs Raja Ampat from Australia? We break down access via Luwuk and Sorong, diving, landscapes, permits, and trip style to help you decide.'
-seoTitle: 'Banggai Islands vs Raja Ampat: Which Remote Trip Should You Choose?'
+seoTitle: "Banggai Islands vs Raja Ampat: Which Remote Trip to Choose?"
 seoDescription: 'Comparing Banggai Islands vs Raja Ampat from Australia? We break down access via Luwuk and Sorong, diving, landscapes, permits, and trip style to help you decide.'
 image: 'https://images.unsplash.com/photo-1675377668920-86545643d25c?auto=format&fit=crop&fm=jpg&ixlib=rb-4.1.0&q=80&w=1600'
 imageAlt: 'Raja Ampat islands and turquoise sea in West Papua, Indonesia'

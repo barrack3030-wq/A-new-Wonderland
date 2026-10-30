@@ -16,8 +16,6 @@ tags:
   - "Travel Guide"
 ---
 
-# Cara Menuju Kepulauan Banggai dari Luwuk
-
 Luwuk adalah titik awal utama bagi wisatawan yang ingin menjelajahi Kepulauan Banggai di Sulawesi Tengah, Indonesia.
 
 Sebagian besar wisatawan tiba di Bandara Syukuran Aminuddin Amir, kemudian melanjutkan perjalanan melalui laut menuju Peleng, Salakan, Banggai, atau pulau lainnya.

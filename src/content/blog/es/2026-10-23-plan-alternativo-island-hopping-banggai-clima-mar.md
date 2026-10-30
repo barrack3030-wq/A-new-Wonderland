@@ -16,8 +16,6 @@ tags:
   - "Luwuk"
 ---
 
-# Si cambia el estado del mar: plan alternativo para recorrer las islas de Banggai
-
 Las excursiones entre las islas de Banggai dependen de las condiciones del mar, no solo del itinerario. El viento fuerte, el oleaje, la lluvia intensa o la visibilidad reducida pueden hacer que una salida en barco deje de ser adecuada. Tener un plan alternativo no significa que el viaje haya salido mal: permite tomar decisiones razonables sin anteponer el horario a la seguridad.
 
 ## Qué confirmar antes de pagar

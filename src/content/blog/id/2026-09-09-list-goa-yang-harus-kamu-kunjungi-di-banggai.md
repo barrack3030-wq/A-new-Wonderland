@@ -2,7 +2,7 @@
 title: "List Goa yang Harus Kamu Kunjungi di Banggai"
 description: "Temukan rekomendasi goa menarik di Banggai, Luwuk, dan sekitarnya untuk pengalaman wisata alam yang berbeda, lengkap dengan tips kunjungan dan persiapan perjalanan."
 seoTitle: "List Goa yang Harus Kamu Kunjungi di Banggai"
-seoDescription: "Jelajahi list goa yang harus kamu kunjungi di Banggai, termasuk Goa Babang, Goa Wera, dan goa alami lain yang menawarkan pesona karst, kelelawar, serta suasana tersembunyi."
+seoDescription: "Jelajahi list goa yang harus kamu kunjungi di Banggai, termasuk Goa Babang, Goa Wera, dan goa alami lain yang menawarkan pesona karst, kelelawar."
 image: "/images/blog/goa-babang-20260909103206.jpg"
 imageAlt: "Pemandangan alami Goa Babang di Banggai"
 author: "Banggai Wonderland"
@@ -13,8 +13,6 @@ tags:
   - "Indonesia"
   - "Travel"
 ---
-
-# List Goa yang Harus Kamu Kunjungi di Banggai
 
 Banggai tidak hanya dikenal karena pantai berair jernih, pulau-pulau eksotis, dan danau tersembunyi. Di balik lanskap tropisnya, wilayah Banggai dan Luwuk juga menyimpan sejumlah goa dengan karakter yang beragam, mulai dari ruang karst alami hingga goa yang berada di sekitar kawasan pesisir dan permukiman lokal.
 

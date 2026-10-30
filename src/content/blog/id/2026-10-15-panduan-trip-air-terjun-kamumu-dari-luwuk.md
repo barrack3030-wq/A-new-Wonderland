@@ -14,8 +14,6 @@ tags:
   - Wisata Banggai
   - Sulawesi Tengah
 ---
-# Trip ke Air Terjun Kamumu dari Luwuk: Persiapan Sebelum Berangkat
-
 Air Terjun Kamumu bisa menjadi pilihan untuk mengisi waktu selama berada di Luwuk dan Kabupaten Banggai. Agar perjalanan terasa nyaman, jangan hanya fokus pada tujuan. Siapkan transportasi, perkirakan waktu di lokasi, dan beri ruang untuk kondisi jalan maupun cuaca.
 
 Informasi akses, fasilitas, dan biaya di tempat wisata dapat berubah. Sebaiknya konfirmasikan kondisi terbaru kepada pengemudi atau warga setempat sebelum berangkat.

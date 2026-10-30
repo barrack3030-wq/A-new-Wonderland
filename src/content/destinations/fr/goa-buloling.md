@@ -1,8 +1,8 @@
 ---
 title: Goa Buloling
 description: Goa Buloling est l'une des destinations magnifiques de Banggai offrant des vues naturelles à couper le souffle et des expériences de voyage inoubliables. Cet endroit a sa propre unicité qui doit être visitée.
-seoTitle: "Goa Buloling | Banggai Wonderland"
-seoDescription: Visitez et explorez la beauté de Goa Buloling di Banggai.
+seoTitle: "Goa Buloling : grotte à Banggai | Banggai Wonderland"
+seoDescription: "Goa Buloling est une grotte à Banggai, Sulawesi central, à ajouter à un voyage autour de Luwuk et des îles Banggai."
 image: /images/buloling_3.webp
 imageAlt: Goa Buloling view
 location: Banggai

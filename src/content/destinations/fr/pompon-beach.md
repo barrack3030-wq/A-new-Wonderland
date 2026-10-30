@@ -2,7 +2,7 @@
 title: Plage de Pompon
 description: La plage de Pompon à Lalong, sur l'île de Peleng, est une plage villageoise aux plages de sable blanc, aux eaux claires et aux récifs proches de la côte.
 seoTitle: "Plage de Pompon Banggai | Snorkeling à Banggai Kepulauan"
-seoDescription: La plage de Pompon à Lalong, Banggai Kepulauan, offre sable blanc, coraux en bonne santé et accès gratuit sur l'île de Peleng. Guide du snorkeling, accès et conseils.
+seoDescription: "La plage de Pompon à Lalong, Banggai Kepulauan, offre sable blanc, coraux en bonne santé et accès gratuit sur l'île de Peleng."
 image: /images/images (1).jpg
 imageAlt: Côte de sable blanc de la plage de Pompon à Lalong, île de Peleng, avec une eau turquoise claire et des cocotiers, Banggai Kepulauan, Sulawesi central.
 location: Lalong, Tinangkung Utara, Banggai Kepulauan, Sulawesi central

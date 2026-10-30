@@ -1,8 +1,8 @@
 ---
 title: "Cómo ir a las cascadas de Kamumu desde Luwuk: Guía completa de rutas"
 description: "Las cascadas de Kamumu son uno de los destinos naturales más accesibles desde Luwuk, siempre y cuando sepas qué ruta tomar. A diferencia del lago Paisu Pok, que requiere un cruce en ferry a la isla Peleng, Kamumu se encuentra en el continente de Sulawesi, a unos 26-30 kilómetros al norte de Luwuk, en el distrito de Luwuk Norte. El viaje en vehículo es relativamente corto. A lo que hay que prestar atención es al tramo final: el sendero"
-seoTitle: "Cómo ir a las cascadas de Kamumu desde Luwuk: Guía completa de rutas"
-seoDescription: "Guía de rutas a las cascadas de Kamumu desde Luwuk. Ruta de Trans Sulawesi, tiempo de viaje, estado de las carreteras, opciones de transporte y último trekking hasta la cascada."
+seoTitle: "Cómo ir a la cascada Kamumu desde Luwuk: guía de rutas"
+seoDescription: "Guía de rutas a las cascadas de Kamumu desde Luwuk: Trans Sulawesi, tiempo de viaje y estado de las carreteras."
 image: "/images/blog/images-13-20260914194738.jpg"
 imageAlt: "Cara Pergi ke Air Terjun Kamumu dari Luwuk: Panduan Rute Lengkap"
 author: "Banggai Wonderland"

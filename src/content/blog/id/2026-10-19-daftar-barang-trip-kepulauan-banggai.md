@@ -16,8 +16,6 @@ tags:
   - snorkeling
   - wisata Luwuk
 ---
-# Apa Saja yang Perlu Dibawa ke Kepulauan Banggai? Checklist Praktis
-
 Perjalanan ke Luwuk, Pulau Peleng, dan Kepulauan Banggai bisa melibatkan perjalanan darat, penyeberangan kapal, aktivitas berenang, serta menginap di lokasi dengan pilihan toko dan layanan yang terbatas. Persiapan barang yang tepat membantu perjalanan lebih nyaman tanpa membawa terlalu banyak bawaan.
 
 Gunakan daftar ini sebagai panduan awal, lalu sesuaikan dengan rute, musim, dan penginapan yang sudah dipesan.

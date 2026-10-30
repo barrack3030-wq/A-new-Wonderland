@@ -13,8 +13,6 @@ tags:
   - "Travel"
 ---
 
-# Quand partir à Mbuang-Mbuang ?
-
 Mbuang-Mbuang est l’une des destinations les plus confidentielles de l’archipel des Banggai, en Indonésie. Ici, le voyage se vit au rythme de la mer, des villages côtiers, des plages préservées et des paysages insulaires encore peu fréquentés.
 
 Choisir la bonne période pour partir est essentiel. Dans cette région éloignée, les conditions maritimes peuvent influencer les trajets en bateau, les excursions, la visibilité sous l’eau et le confort général du séjour. Pour profiter pleinement de Mbuang-Mbuang, il faut donc regarder au-delà des simples températures et tenir compte de la météo locale ainsi que de l’état de la mer.

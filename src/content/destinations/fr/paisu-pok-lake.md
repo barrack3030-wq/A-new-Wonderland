@@ -2,7 +2,7 @@
 title: "Paisu Pok Lake"
 description: "Paisu Pok Lake est un lac d'eau douce très clair à Luk Panenteng, sur l'île de Peleng, connu pour ses arbres immergés, ses eaux bleu-vert et son tourisme géré par le village."
 seoTitle: "Paisu Pok Lake Banggai | Lac cristallin de l'île de Peleng"
-seoDescription: "Paisu Pok Lake à Peleng est un lac d'eau douce très clair avec des arbres immergés et des reflets en miroir. Guide de l'accès, des tarifs, des locations et des séjours."
+seoDescription: "Paisu Pok Lake à Peleng est un lac d'eau douce très clair avec des arbres immergés et des reflets en miroir."
 image: "/images/DSCF7073-5.webp"
 imageAlt: "Eau bleu-vert cristalline du lac Paisu Pok avec arbres morts immergés et reflets des cocotiers à Luk Panenteng, île de Peleng, Banggai Kepulauan, Sulawesi central."
 location: "Luk Panenteng, Bulagi Utara, Banggai Kepulauan"
@@ -25,8 +25,6 @@ travelTips:
   - "Les jours de semaine sont généralement plus calmes"
 youtube: "https://www.youtube.com/watch?v=2vtdbJRPZMw"
 ---
-
-# Paisu Pok Lake : le lac bleu cristallin des îles Banggai
 
 Paisu Pok Lake est un **lac d'eau douce à Desa Luk Panenteng, Kecamatan Bulagi Utara, Kabupaten Banggai Kepulauan**, sur **l'île de Peleng**. Il couvre environ **1,2 hectare**, avec une profondeur généralement indiquée de **5 à 15 mètres**, au pied de collines verdoyantes entourées de cocotiers et de forêt tropicale.
 

@@ -26,8 +26,6 @@ travelTips:
 youtube: "https://www.youtube.com/watch?v=2vtdbJRPZMw"
 ---
 
-# Danau Paisu Pok: Danau Biru Jernih di Kepulauan Banggai
-
 Danau Paisu Pok adalah **danau air tawar di Desa Luk Panenteng, Kecamatan Bulagi Utara, Kabupaten Banggai Kepulauan, Sulawesi Tengah**, di **Pulau Peleng**. Luasnya sekitar **1,2 hektare** dengan kedalaman yang umumnya dilaporkan **5–15 meter**, di kaki perbukitan hijau yang dikelilingi pohon kelapa dan hutan lebat.
 
 Nama Paisu Pok berasal dari bahasa setempat: **"paisu" berarti air** dan **"pok" berarti hitam**, merujuk pada tampilan dasar danau yang gelap. Airnya sendiri sangat transparan, dengan warna biru hingga biru kehijauan tergantung cahaya dan waktu.

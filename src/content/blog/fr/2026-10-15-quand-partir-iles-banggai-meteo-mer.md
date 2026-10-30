@@ -2,7 +2,7 @@
 title: "Quand partir aux îles Banggai ? Météo, mer et préparation du voyage"
 description: "Conseils pour choisir la période d’un voyage aux îles Banggai en tenant compte de la pluie, de l’état de la mer, des bateaux et de la flexibilité de l’itinéraire."
 seoTitle: "Quand partir aux îles Banggai ? Saison et conseils pratiques"
-seoDescription: "Préparez votre voyage aux îles Banggai : météo, mer, excursions en bateau, vêtements et marge de sécurité. Les conditions locales peuvent changer, vérifiez avant de partir."
+seoDescription: "Préparez votre voyage aux îles Banggai : météo, mer, excursions en bateau, vêtements et marge de sécurité."
 image: "/images/DSCF7073-5.webp"
 imageAlt: "Eau claire du lac Paisu Pok sur l’île de Peleng, dans la région des îles Banggai"
 author: "Banggai Wonderland"
@@ -14,8 +14,6 @@ tags:
   - saison de voyage Indonésie
   - excursion en bateau
 ---
-# Quand partir aux îles Banggai ? Météo, mer et préparation du voyage
-
 Choisir la période d’un voyage aux îles Banggai ne consiste pas seulement à rechercher le mois le plus ensoleillé. Le confort du séjour dépend aussi de l’état de la mer, des transferts en bateau, de l’accès aux sites et du temps disponible pour modifier le programme si nécessaire.
 
 Les conditions varient selon les années et les zones. Une indication saisonnière reste un repère général, pas une garantie de ciel bleu ni de mer calme. Pour un itinéraire qui dépend d’un bateau, prévoyez toujours une marge.

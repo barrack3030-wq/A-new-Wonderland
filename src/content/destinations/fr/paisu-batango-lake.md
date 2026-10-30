@@ -1,8 +1,8 @@
 ---
 title: "Paisu Batango"
 description: "Paisu Batango est une source côtière et une lagune influencée par les marées à Luk Panenteng, sur l'île de Peleng, où se rencontrent eau douce, eau saumâtre et eau de mer."
-seoTitle: "Paisu Batango Banggai | Guide de la source côtière et de la lagune"
-seoDescription: "Paisu Batango à Luk Panenteng, sur l'île de Peleng, est une source côtière où se rencontrent eau douce, eau saumâtre et eau salée. Accès, installations et meilleure période."
+seoTitle: "Paisu Batango Banggai : source côtière et lagune"
+seoDescription: "Paisu Batango à Luk Panenteng, sur l'île de Peleng, est une source côtière où se rencontrent eau douce, eau saumâtre et eau salée."
 image: "/images/paisu.jpg"
 imageAlt: "Bassin clair de la source côtière Paisu Batango entouré de rochers et de végétation à Luk Panenteng, île de Peleng, Banggai Kepulauan, Sulawesi central."
 location: "Luk Panenteng, Banggai Kepulauan"
@@ -25,8 +25,6 @@ travelTips:
   - "Respectez les habitants et gardez l'eau propre"
 youtube: "https://www.youtube.com/watch?v=7RTzL8yKLM4"
 ---
-
-# Paisu Batango : la source où trois eaux se rencontrent
 
 Paisu Batango est une **source côtière et une lagune d'eau douce** située à **Desa Luk Panenteng, Kecamatan Bulagi Utara, Kabupaten Banggai Kepulauan, Sulawesi central**, sur **l'île de Peleng**. Elle se trouve au sud du village, environ **15 minutes avant** le célèbre **Paisu Pok Lake**. De nombreux voyageurs passent par ici en route vers Paisu Pok sans réaliser que le site mérite lui aussi une visite.
 

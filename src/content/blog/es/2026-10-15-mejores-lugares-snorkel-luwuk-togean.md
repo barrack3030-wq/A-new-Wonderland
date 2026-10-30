@@ -16,8 +16,6 @@ tags:
   - Poganda Beach
   - Pulo Dua
 ---
-# Los mejores lugares para hacer snorkel en Luwuk y sus alrededores
-
 Luwuk es un punto de partida práctico para explorar la costa y las islas de Banggai, en Sulawesi Central. Hay opciones en playas y mediante excursiones en barco, además de un viaje más largo a Togean Islands. El estado de los arrecifes, la visibilidad, las corrientes y el acceso cambian; ningún lugar es seguro todos los días por defecto.
 
 ## 1. Poganda Beach — playa y snorkel

@@ -2,7 +2,7 @@
 title: "Luna de Miel en Banggai: 4 Días y 3 Noches para 2 Personas"
 description: "Viaje privado de luna de miel de 4 días y 3 noches para parejas que quieren descubrir Paisu Pok, Paisu Batango, Kawalu Bay, Poganda, Long Beach, Oyama, Bontolan, Pompon y Mandel."
 seoTitle: "Luna de Miel en Banggai 4 Días 3 Noches | Viaje Privado"
-seoDescription: "Disfruta de una luna de miel privada de 4 días y 3 noches en Banggai para dos personas, con Paisu Pok, Paisu Batango, Kawalu Bay, Poganda, Long Beach, Oyama, Bontolan, Pompon y Mandel."
+seoDescription: "Disfruta de una luna de miel privada de 4 días y 3 noches en Banggai para dos personas, con Paisu Pok, Paisu Batango, Kawalu Bay, Poganda, Long Beach, Oyama."
 image: "/images/Poganda-Beach-Banggai-IndonesiaJuara-Trip.webp"
 imageAlt: "Paisaje tropical de Banggai para un viaje de luna de miel"
 author: "Banggai Wonderland"
@@ -15,8 +15,6 @@ tags:
   - "Luwuk"
   - "Salakan"
 ---
-
-# Luna de Miel en Banggai: 4 Días y 3 Noches para 2 Personas
 
 Banggai es una opción para parejas que buscan una escapada tranquila entre islas. **Banggai Honeymoon Escape** está diseñado como un viaje privado de 4 días y 3 noches para dos personas.
 

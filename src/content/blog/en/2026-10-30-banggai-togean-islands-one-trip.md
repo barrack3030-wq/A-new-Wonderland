@@ -15,8 +15,6 @@ tags:
 translationKey: "combining-banggai-togean-islands-trip"
 ---
 
-# Banggai and Togean Islands in One Trip: Routes and Time to Plan
-
 The Banggai Islands and the Togean Islands are two very different island experiences in Central Sulawesi. Visiting both in one holiday is possible, but they are not connected by a simple, guaranteed transfer. You need to plan the journey between island areas, road transfers and boat connections as carefully as the destinations themselves.
 
 Luwuk can work as a starting point for a Banggai trip and a gateway for continuing towards the Togean Islands. The best onward route depends on your travel dates, where you finish your Banggai itinerary and whether a private boat can be arranged.

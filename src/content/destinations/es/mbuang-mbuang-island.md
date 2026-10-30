@@ -1,8 +1,8 @@
 ---
 title: "Mbuang-Mbuang: La isla remota con un lago de medusas sin aguijón"
 description: "Mbuang-Mbuang es una aldea insular remota de Banggai Laut, conocida por el lago Paisu Batongan con medusas sin aguijón, un jardín protegido de almejas gigantes y playas de arena blanca."
-seoTitle: "Mbuang-Mbuang Island | Guía del lago de medusas de Banggai Laut"
-seoDescription: "Mbuang-Mbuang en Banggai Laut es una isla remota con un lago de medusas sin aguijón, jardín de almejas gigantes y playas de arena blanca. Guía completa de acceso y alojamiento."
+seoTitle: "Mbuang-Mbuang: guía del lago de medusas de Banggai Laut"
+seoDescription: "Mbuang-Mbuang en Banggai Laut es una isla remota con un lago de medusas sin aguijón, jardín de almejas gigantes y playas de arena blanca."
 image: "/images/mbuang mbuang.jpg"
 imageAlt: "Agua clara del lago de medusas Danau Paisu Batongan en la isla Mbuang-Mbuang, con medusas translúcidas visibles y vegetación tropical, Banggai Laut, Sulawesi Central."
 location: "Bokan Kepulauan, Banggai Laut"
@@ -25,8 +25,6 @@ travelTips:
   - "Respeta las normas locales de conservación y llévate tus residuos"
 youtube: "https://www.youtube.com/watch?v=sRkhqbTYvnk"
 ---
-
-# Mbuang-Mbuang: La isla remota con un lago de medusas sin aguijón
 
 Mbuang-Mbuang no es una playa, un resort ni una excursión de un día. Es una **aldea insular remota** en **Banggai Laut, Sulawesi Central, Indonesia**. Administrativamente pertenece a **Desa Mbuang-Mbuang**, en el distrito de **Bokan Kepulauan**, en la pequeña **Pulau Salue Kecil**.
 

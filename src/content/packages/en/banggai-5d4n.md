@@ -3,7 +3,7 @@ title: Banggai 5-Day Private Tour
 description: A 5-day private trip connecting Luwuk, Salakan and Peleng with Paisu Pok and selected coastal destinations.
 seoTitle: 'Banggai 5-Day 4-Night Tour Package | Private Trip'
 seoDescription: 'A 5-day 4-night Banggai private tour from Luwuk through Salakan and Peleng, including Paisu Pok, coastal destinations, transport and local guide.'
-image: /images/luwuk-salakan.webp
+image: /images/paisupok-lake.jpg
 imageAlt: Five-day private trip through Luwuk, Salakan and Peleng in the Banggai Islands
 duration: 5 Days 4 Nights
 destination: Luwuk, Salakan, Peleng, Paisu Pok
@@ -44,7 +44,7 @@ itinerary:
     description: Enjoy a flexible morning in Luwuk, visit a nearby attraction if time allows, then transfer to the airport.
 ---
 
-# Banggai 5-Day 4-Night Private Tour
+## Banggai 5-Day 4-Night Private Tour
 
 **5 Days 4 Nights**
 
@@ -52,9 +52,9 @@ itinerary:
 
 This private itinerary connects Luwuk with the islands without forcing too many activities into each day. The route focuses on Salakan, Peleng and Paisu Pok while allowing time for land and sea travel.
 
-## 5-Day Itinerary
+### 5-Day Itinerary
 
-### Day 1 — Luwuk to Salakan
+#### Day 1 — Luwuk to Salakan
 
 - Arrive in Luwuk
 - Airport pickup and lunch
@@ -62,7 +62,7 @@ This private itinerary connects Luwuk with the islands without forcing too many 
 - Ferry / boat to Salakan according to the available schedule
 - Hotel check-in and rest
 
-### Day 2 — Island Hopping
+#### Day 2 — Island Hopping
 
 Explore selected coastal and island destinations around Salakan and Peleng.
 
@@ -75,7 +75,7 @@ Activities may include:
 
 Destinations depend on sea conditions, available time and the practical route.
 
-### Day 3 — Paisu Pok & Luk Panenteng
+#### Day 3 — Paisu Pok & Luk Panenteng
 
 - Travel to Luk Panenteng
 - Visit Paisu Pok Lake
@@ -84,7 +84,7 @@ Destinations depend on sea conditions, available time and the practical route.
 - Add a nearby coastal destination when time permits
 - Return to accommodation
 
-### Day 4 — Salakan to Luwuk
+#### Day 4 — Salakan to Luwuk
 
 - Check out
 - Continue to the port
@@ -92,13 +92,13 @@ Destinations depend on sea conditions, available time and the practical route.
 - Hotel check-in in Luwuk
 - Dinner and rest
 
-### Day 5 — Luwuk & Departure
+#### Day 5 — Luwuk & Departure
 
 - Breakfast
 - Flexible time in Luwuk
 - Nearby sightseeing when the flight schedule allows
 - Airport transfer
 
-## Important Note
+### Important Note
 
 Sea travel can be affected by weather, sea conditions, operator schedules and local circumstances. The itinerary therefore remains flexible to keep the journey practical.

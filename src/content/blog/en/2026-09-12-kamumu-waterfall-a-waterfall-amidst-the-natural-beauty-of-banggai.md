@@ -4,8 +4,8 @@ image: /images/blog/images-11-20260912170453.jpg
 imageAlt: 'Kamumu Waterfall: Air Terjun di Tengah Keindahan Alam Banggai'
 title: 'Kamumu Waterfall: A Waterfall Amidst the Natural Beauty of Banggai'
 description: Discover Hidden Paradise of Banggai There is something magical about a waterfall hidden in the middle of a pine forest. The sound of rippling water falling down natural rock steps, the distinctive aroma of pine resin, and the cool air that refreshes the lungs—everything creates an experience far removed from the hustle and bustle of the city. This is Kamumu Waterfall, a hidden gem in Kamumu Village, North Luwuk District, Banggai Regency, Central Sulawesi
-seoTitle: 'Kamumu Waterfall: A Waterfall Amidst the Natural Beauty of Banggai'
-seoDescription: Discover Hidden Paradise of Banggai There is something magical about a waterfall hidden in the middle of a pine forest. The sound of rippling water falling down natural rock steps, the distinctive aroma of pine resin, and the cool air that refreshes the lungs—everything creates an experience far removed from the hustle and bustle of the city. This is Kamumu Waterfall, a hidden gem in Kamumu Village, North Luwuk District, Banggai Regency, Central Sulawesi
+seoTitle: "Kamumu Waterfall: Natural Beauty in North Luwuk, Banggai"
+seoDescription: "Kamumu Waterfall in North Luwuk, Banggai: a hidden multi-tiered waterfall in a pine forest. Find out what to expect and how to plan your visit."
 author: Banggai Wonderland
 pubDate: 2026-09-12
 tags:

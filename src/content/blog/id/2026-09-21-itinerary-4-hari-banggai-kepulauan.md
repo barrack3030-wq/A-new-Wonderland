@@ -19,8 +19,6 @@ tags:
   - "Banggai Laut"
 ---
 
-# Itinerary 4 Hari Banggai Kepulauan untuk First-Time Traveler
-
 Pertama kali ke **Banggai Kepulauan**? Tantangan utamanya bukan menentukan tempat yang ingin dikunjungi, tetapi menyusun koneksi kapal agar perjalanan tidak terlalu terburu-buru. Itinerary 4 hari ini menggabungkan Luwuk, Salakan, pantai-pantai Banggai Laut, Peleng, dan Danau Paisu Pok dengan ritme perpindahan yang lebih realistis.
 
 Itinerary ini mengasumsikan Anda sudah berada di Luwuk. Wisatawan internasional umumnya tiba sehari sebelumnya melalui Makassar, sehingga lebih aman menginap di Luwuk sebelum memulai Day 1.

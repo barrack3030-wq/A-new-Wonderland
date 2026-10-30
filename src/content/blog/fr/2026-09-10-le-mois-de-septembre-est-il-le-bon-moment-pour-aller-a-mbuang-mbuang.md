@@ -1,8 +1,8 @@
 ---
 title: "Le mois de septembre est-il le bon moment pour aller à Mbuang-Mbuang ?"
 description: "Le mois de septembre est-il le bon moment pour aller à Mbuang-Mbuang ?"
-seoTitle: "Le mois de septembre est-il le bon moment pour aller à Mbuang-Mbuang ?"
-seoDescription: "Vous hésitez sur la date de votre voyage à Mbuang-Mbuang ? Septembre offre un temps sec, une mer calme et les méduses du lac Paisu Batongan. Mais il y a des précisions sur l'accès à anticiper."
+seoTitle: "Septembre : bon moment pour aller à Mbuang-Mbuang ?"
+seoDescription: "Vous hésitez sur la date de votre voyage à Mbuang-Mbuang ? Septembre offre un temps sec, une mer calme et les méduses du lac Paisu Batongan."
 image: "/images/blog/1000603141-20260910201805.jpg"
 imageAlt: "Apakah Bulan September Waktu yang Tepat Pergi ke Mbuang-Mbuang?"
 author: "Banggai Wonderland"
@@ -14,8 +14,6 @@ tags:
 ---
 
 ![Apakah Bulan September Waktu yang Tepat Pergi ke Mbuang-Mbuang?](/images/blog/1000603141-20260910201805.jpg)
-
-# Le mois de septembre est-il le bon moment pour aller à Mbuang-Mbuang ?
 
 La réponse courte : **oui, c'est très approprié — peut-être l'un des meilleurs mois.** Mais non sans réserves. Analysons cela point par point, et pas seulement *"parce que c'est la saison sèche"*.
 

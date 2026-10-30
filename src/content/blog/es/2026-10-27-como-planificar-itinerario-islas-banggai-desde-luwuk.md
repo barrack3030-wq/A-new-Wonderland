@@ -16,8 +16,6 @@ tags:
 translationKey: "banggai-trip-itinerary-buffer-planning"
 ---
 
-# Cómo organizar un itinerario por las islas Banggai desde Luwuk
-
 Un viaje por las islas Banggai requiere algo más que elegir lugares bonitos. También hay que coordinar traslados por carretera, cruces marítimos, tiempos de espera y horarios que pueden cambiar. Si empiezas en Luwuk y quieres conocer la isla de Peleng, organiza primero las conexiones de transporte y añade después las visitas que realmente caben en el tiempo disponible.
 
 La regla más útil es no planificar cada hora como si todos los traslados estuvieran garantizados. El tiempo, el estado del mar, la operación de los barcos y el puerto correcto pueden cambiar el itinerario.

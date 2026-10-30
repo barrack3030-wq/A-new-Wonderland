@@ -4,7 +4,7 @@ imageAlt: "Poganda Beach, l’une des plus belles destinations de Banggai"
 title: "Les 10 meilleures destinations de Luwuk et Banggai à découvrir"
 description: "Guide des 10 destinations incontournables de Luwuk et Banggai, entre lac Paisupok, plages préservées, cascades et îles tropicales."
 seoTitle: "Les 10 meilleures destinations de Luwuk et Banggai à découvrir"
-seoDescription: "Découvrez 10 des plus beaux endroits de Luwuk et Banggai, à Sulawesi central : le lac Paisupok, Poganda Beach, Mandel Beach, Pulo Dua, Oyama, Kawalu Bay et d’autres merveilles naturelles."
+seoDescription: "Découvrez 10 des plus beaux endroits de Luwuk et Banggai, à Sulawesi central : lac Paisupok, Poganda Beach, Mandel Beach, Pulo Dua et plus."
 author: aji
 pubDate: "2026-09-08T21:00:00"
 tags:
@@ -15,8 +15,6 @@ tags:
   - Joyaux cachés d’Indonésie
   - Îles Banggai
 ---
-
-# Les 10 meilleures destinations de Luwuk et Banggai à découvrir
 
 Vous cherchez en Indonésie une destination plus paisible, plus naturelle et encore relativement préservée du tourisme de masse ? **Luwuk et Banggai** méritent largement une place dans votre carnet de voyage.
 

@@ -23,8 +23,6 @@ excluded:
 itinerary: []
 ---
 
-# ULTIMATE BANGGAI
-
 **6 Days 5 Nights**
 
 **Luwuk • Salakan • Peleng • Banggai Laut • Kamumu • Salodik • Pulo Dua**

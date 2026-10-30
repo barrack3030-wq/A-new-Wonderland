@@ -19,8 +19,6 @@ tags:
   - "Banggai Laut"
 ---
 
-# Banggai Kepulauan 4-Day Itinerary for First-Time Visitors
-
 First time in **Banggai Kepulauan**? The biggest challenge is not deciding what to see, but connecting the boats without rushing. This 4-day route is designed for travelers arriving from Australia who want to combine Luwuk waterfalls, Salakan, beaches around Banggai Laut, and Paisu Pok Lake on Peleng while keeping the daily transfers realistic.
 
 It assumes you are already in Luwuk. Most international visitors arrive the day before via Makassar, so plan to overnight in Luwuk before Day 1.

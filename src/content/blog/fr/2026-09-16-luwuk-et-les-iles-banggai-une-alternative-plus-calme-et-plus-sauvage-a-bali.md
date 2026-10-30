@@ -1,7 +1,7 @@
 ---
 title: " Luwuk et les îles Banggai : une alternative plus calme et plus sauvage à Bali"
 description: " Découvrez Luwuk et les îles Banggai à Sulawesi central : lac Paisu Pok, cascade Piala, plages, ferries, plongée, snorkeling et conseils pratiques."
-seoTitle: "Guide de voyage de Luwuk et des îles Banggai : une alternative cachée à Bali"
+seoTitle: "Luwuk et les îles Banggai : une alternative cachée à Bali"
 seoDescription: " Découvrez Luwuk et les îles Banggai à Sulawesi central : lac Paisu Pok, cascade Piala, plages, ferries, plongée, snorkeling et conseils pratiques."
 image: "/images/blog/images-16-20260916142820.jpg"
 author: "Banggai Wonderland"

@@ -15,8 +15,6 @@ tags:
 translationKey: "banggai-islands-4-day-itinerary-from-luwuk"
 ---
 
-# Banggai Islands Itinerary: Plan a 4-Day Trip from Luwuk
-
 A trip to the Banggai Islands takes more than choosing beautiful places on a map. Travellers need to coordinate the journey from Luwuk, ferry connections, transport on Peleng Island, accommodation, and time at each stop. A multi-day itinerary gives you more room to enjoy the scenery without trying to fit every destination into one rushed day.
 
 Use this as a planning framework, not a fixed timetable. Ferry schedules, road conditions, sea state and local access can change, so confirm logistics for your own travel dates.
