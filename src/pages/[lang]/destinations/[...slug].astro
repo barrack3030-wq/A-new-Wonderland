@@ -98,7 +98,7 @@ const labels = ({
 
 <BaseLayout title={(entry.data.title + ' | Banggai Wonderland').length <= 60 ? entry.data.title + ' | Banggai Wonderland' : entry.data.title} description={entry.data.description} seoTitle={entry.data.seoTitle} seoDescription={entry.data.seoDescription} ogImage={entry.data.image} imageAlt={entry.data.imageAlt} schema={schema}>
   <section class="relative h-[60vh] min-h-[400px] flex items-end pb-16 pt-32">
-    <div class="absolute inset-0 z-0"><img src={entry.data.image} alt={entry.data.imageAlt || entry.data.title} class="w-full h-full object-cover"/><div class="absolute inset-0 bg-gradient-to-t from-ocean-900 via-ocean-900/60 to-transparent"></div></div>
+    <div class="absolute inset-0 z-0"><img src={entry.data.image} alt={entry.data.imageAlt || entry.data.title} class="w-full h-full object-cover" fetchpriority="high" decoding="async"/><div class="absolute inset-0 bg-gradient-to-t from-ocean-900 via-ocean-900/60 to-transparent"></div></div>
     <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
       <Breadcrumb items={breadcrumbItems}/>
       <div class="mt-4"><span class="inline-block bg-turquoise-500 text-ocean-900 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wide mb-4">{entry.data.category}</span><h1 class="text-4xl md:text-5xl lg:text-6xl font-serif font-bold text-white mb-4">{entry.data.title}</h1><div class="flex items-center text-ocean-100 text-sm md:text-base">{entry.data.location}</div></div>

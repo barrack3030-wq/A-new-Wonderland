@@ -11,9 +11,13 @@ interface Props {
   imageAlt?: string;
   schema?: any;
   noIndex?: boolean;
+  ogType?: 'website' | 'article';
+  publishedTime?: string;
+  modifiedTime?: string;
+  articleTags?: string[];
 }
 
-const { title, description, seoTitle, seoDescription, ogImage = '/images/Poganda-Beach-Banggai-IndonesiaJuara-Trip.webp', imageAlt, schema, noIndex = false } = Astro.props;
+const { title, description, seoTitle, seoDescription, ogImage = '/images/Poganda-Beach-Banggai-IndonesiaJuara-Trip.webp', imageAlt, schema, noIndex = false, ogType = 'website', publishedTime, modifiedTime, articleTags } = Astro.props;
 // Canonical production origin: keep every canonical, hreflang, OG URL, and schema URL on the same non-www host.
 const siteUrl = new URL('https://banggaiwonderland.my.id');
 const normalizedPath = Astro.url.pathname.endsWith('/') ? Astro.url.pathname : `${Astro.url.pathname}/`;
@@ -147,7 +151,10 @@ const defaultLink = alternateLinks.find(link => link.lang === (hreflangMap.en ||
 <link rel="canonical" href={currentUrl} />
 {alternateLinks.map(link => <link rel="alternate" hreflang={link.lang} href={link.href} />)}
 {defaultLink && <link rel="alternate" hreflang="x-default" href={defaultLink.href} />}
-<meta property="og:type" content="website" />
+<meta property="og:type" content={ogType} />
+{ogType === 'article' && publishedTime && <meta property="article:published_time" content={publishedTime} />}
+{ogType === 'article' && modifiedTime && <meta property="article:modified_time" content={modifiedTime} />}
+{ogType === 'article' && articleTags?.map(tag => <meta property="article:tag" content={tag} />)}
 <meta property="og:url" content={currentUrl} />
 <meta property="og:title" content={effectiveSeoTitle} />
 <meta property="og:description" content={effectiveDescription} />

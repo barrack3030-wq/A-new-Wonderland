@@ -1,7 +1,7 @@
 ---
 title: '5 razones por las que Banggai es un paraíso escondido de Indonesia'
 description: 'Cinco razones para descubrir Banggai, en Sulawesi Central: paisajes extraordinariamente variados, aguas cristalinas, lugares tranquilos, viajes auténticos y experiencias que todavía se sienten personales.'
-seoTitle: '5 razones por las que Banggai es un paraíso escondido de Indonesia'
+seoTitle: "5 razones por las que Banggai es un paraíso escondido"
 seoDescription: "Cinco razones por las que Banggai es uno de los paraísos escondidos de Indonesia: lagos cristalinos, playas tranquilas e islas tropicales."
 image: /images/Poganda-Beach-Banggai-IndonesiaJuara-Trip.webp
 imageAlt: 'Poganda Beach, Banggai, Indonesia'
