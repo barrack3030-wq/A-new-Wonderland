@@ -21,7 +21,7 @@ Luwuk can work as a starting point for a Banggai trip and a gateway for continui
 
 ## Can you combine Banggai and Togean in one holiday?
 
-Yes. The important point is to allow enough time for the transfer rather than treating it as a short hop between neighbouring resorts. Banggai destinations such as Peleng Island and Paisu Pok require their own local transport arrangements. The Togean Islands are generally approached through Ampana or other departure points around the Gulf of Tomini.
+Yes. The important point is to allow enough time for the transfer rather than treating it as a short hop between neighbouring resorts. Banggai destinations such as Peleng Island and [Paisu Pok](/en/destinations/paisu-pok-lake/) require their own local transport arrangements. The Togean Islands are generally approached through Ampana or other departure points around the Gulf of Tomini.
 
 As a starting framework, allow around 9–11 days for both areas. That gives you several days in Banggai, time to change regions, a few days in Togean and a buffer for boat or weather changes. This is a planning suggestion, not a fixed minimum; the right duration depends on your chosen islands and confirmed connections.
 

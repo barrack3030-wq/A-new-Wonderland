@@ -91,4 +91,4 @@ No. No hay **homestay en la playa**. Las opciones más cercanas están en Lokoto
 
 ## Destinos relacionados
 
-**Pantai Bontolan** en Bone Baru puede combinarse con Oyama en una misma excursión en barco. **Long Beach / Pantai Pasir Panjang** es otra playa accesible por mar en Banggai Laut. **Tanjung Gundul** es un acantilado de piedra caliza cercano con un hueco formado por el mar. En Peleng, **Paisu Pok Lake** y **Paisu Batango Spring** son dos de los destinos de agua dulce más conocidos.
+**[Pantai Bontolan](/es/destinations/bontolan-beach/)** en Bone Baru puede combinarse con Oyama en una misma excursión en barco. **[Long Beach](/es/destinations/long-beach/) / Pantai Pasir Panjang** es otra playa accesible por mar en Banggai Laut. **Tanjung Gundul** es un acantilado de piedra caliza cercano con un hueco formado por el mar. En Peleng, **[Paisu Pok Lake](/es/destinations/paisu-pok-lake/)** y **[Paisu Batango](/es/destinations/paisu-batango-lake/) Spring** son dos de los destinos de agua dulce más conocidos.

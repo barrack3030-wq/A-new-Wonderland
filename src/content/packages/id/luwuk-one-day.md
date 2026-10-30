@@ -32,7 +32,7 @@ itinerary:
 
 **1 Hari**
 
-**Luwuk • Piala Waterfall • Kilo 5**
+**Luwuk • [Piala Waterfall](/id/destinations/piala-waterfall/) • Kilo 5**
 
 Paket private trip satu hari untuk wisatawan yang memiliki waktu terbatas di Luwuk. Rute difokuskan pada destinasi yang dekat dan realistis untuk dikunjungi dalam satu hari tanpa perjalanan antarpulau.
 
@@ -69,4 +69,4 @@ Paket ini cocok untuk wisatawan yang transit di Luwuk, memiliki jadwal penerbang
 
 ### Catatan
 
-Itinerary dapat disesuaikan dengan jadwal penerbangan, cuaca, kondisi jalan, dan situasi lokal. Untuk perjalanan menuju Paisu Pok atau pulau lain, gunakan paket dengan durasi lebih panjang.
+Itinerary dapat disesuaikan dengan jadwal penerbangan, cuaca, kondisi jalan, dan situasi lokal. Untuk perjalanan menuju [Paisu Pok](/id/destinations/paisu-pok-lake/) atau pulau lain, gunakan paket dengan durasi lebih panjang.

@@ -18,7 +18,7 @@ tags:
 
 **Discover Hidden Paradise of Banggai**
 
-Hay algo mágico en una cascada escondida en medio de un bosque de pinos. El murmullo del agua al caer por los escalones de piedra natural, el aroma característico de la resina de pino y el aire fresco que reconforta los pulmones: todo crea una experiencia lejos del bullicio de la ciudad. Esta es la **Cascada de Kamumu**, una joya oculta en la aldea de Kamumu, distrito de Luwuk Norte, regencia de Banggai, Célebes Central.
+Hay algo mágico en una cascada escondida en medio de un bosque de pinos. El murmullo del agua al caer por los escalones de piedra natural, el aroma característico de la resina de pino y el aire fresco que reconforta los pulmones: todo crea una experiencia lejos del bullicio de la ciudad. Esta es la **[Cascada de Kamumu](/es/destinations/kamumu-waterfall/)**, una joya oculta en la aldea de Kamumu, distrito de Luwuk Norte, regencia de Banggai, Célebes Central.
 
 Ubicada a unos 26 a 30 kilómetros del centro de la ciudad de Luwuk, esta cascada ha captado la atención de turistas locales e internacionales gracias a la singularidad de su formación escalonada que se asemeja a terrazas naturales. Rodeada por un frondoso bosque de pinos, la Cascada de Kamumu ofrece un ambiente tranquilo, natural y relajante, perfecto para quienes buscan serenidad lejos de las multitudes.
 

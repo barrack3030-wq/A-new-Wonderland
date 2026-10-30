@@ -29,7 +29,7 @@ itinerary: []
 
 **6 Jours 5 Nuits**
 
-**Luwuk • Salakan • Peleng • Banggai Laut • Kamumu • Salodik • Pulo Dua**
+**Luwuk • Salakan • Peleng • Banggai Laut • Kamumu • Salodik • [Pulo Dua](/fr/destinations/pulau-dua-balantak/)**
 
 #### Jour 1 — Luwuk → Salakan
 
@@ -59,10 +59,10 @@ itinerary: []
 
 #### Jour 2 — Salakan → Peleng
 
-- Lac Paisu Pok
+- [Lac Paisu Pok](/fr/destinations/paisu-pok-lake/)
 - Lac Paisubatango
-- Plage de Poganda
-- Plage de Mandel
+- [Plage de Poganda](/fr/destinations/poganda-beach/)
+- [Plage de Mandel](/fr/destinations/mandel-beach/)
 - Baignade et snorkeling
 - Photographie
 - Retour à Salakan
@@ -82,10 +82,10 @@ itinerary: []
 #### Jour 4 — Salakan → Luwuk → Kamumu & Salodik
 
 - Ferry / bateau vers Luwuk
-- Kamumu Waterfall
+- [Kamumu Waterfall](/fr/destinations/kamumu-waterfall/)
 - Petite randonnée
 - Baignade et détente
-- Salodik Waterfall
+- [Salodik Waterfall](/fr/destinations/salodik-waterfall/)
 - Forêt tropicale
 - Retour à Luwuk
 - Nuit à Luwuk

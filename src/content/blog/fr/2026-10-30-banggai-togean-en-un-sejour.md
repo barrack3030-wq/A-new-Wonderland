@@ -21,7 +21,7 @@ Luwuk peut servir de point de départ pour découvrir Banggai, puis poursuivre v
 
 ## Peut-on combiner Banggai et Togean pendant le même séjour ?
 
-Oui. L'essentiel est de prévoir suffisamment de temps pour le transfert, plutôt que de le considérer comme un court trajet entre deux stations balnéaires voisines. Les sites de Banggai, comme l'île de Peleng et Paisu Pok, nécessitent leurs propres moyens de transport local. Pour rejoindre Togean, les voyageurs passent généralement par Ampana ou par d'autres points de départ du golfe de Tomini.
+Oui. L'essentiel est de prévoir suffisamment de temps pour le transfert, plutôt que de le considérer comme un court trajet entre deux stations balnéaires voisines. Les sites de Banggai, comme l'île de Peleng et [Paisu Pok](/fr/destinations/paisu-pok-lake/), nécessitent leurs propres moyens de transport local. Pour rejoindre Togean, les voyageurs passent généralement par Ampana ou par d'autres points de départ du golfe de Tomini.
 
 À titre indicatif, prévoyez environ 9 à 11 jours pour les deux régions. Cette durée laisse plusieurs jours à Banggai, du temps pour changer de région, quelques jours à Togean et une marge en cas de modification des bateaux ou des conditions en mer. Il s'agit d'une base de planification, pas d'une durée minimale obligatoire.
 

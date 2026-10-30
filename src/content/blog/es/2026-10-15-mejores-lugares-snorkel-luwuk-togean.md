@@ -24,7 +24,7 @@ Luwuk es un punto de partida práctico para explorar la costa y las islas de Ban
 
 *Foto: [The World Travel Guy — Banggai Islands](https://theworldtravelguy.com/banggai-islands-luwuk-indonesia/). Hay que confirmar los derechos de uso comercial.*
 
-Poganda Beach, en la isla de Peleng, es conocida por su arena blanca y aguas costeras poco profundas. Una guía de viaje de Banggai menciona arrecifes cerca de la orilla, pero la visibilidad y las condiciones dependen del tiempo, las mareas y la situación local.
+[Poganda Beach](/es/destinations/poganda-beach/), en la isla de Peleng, es conocida por su arena blanca y aguas costeras poco profundas. Una guía de viaje de Banggai menciona arrecifes cerca de la orilla, pero la visibilidad y las condiciones dependen del tiempo, las mareas y la situación local.
 
 Puede ser una buena opción para combinar descanso y snorkel tranquilo. Consulta con un guía local dónde entrar al agua y si hay corrientes o zonas que deban evitarse.
 
@@ -34,7 +34,7 @@ Puede ser una buena opción para combinar descanso y snorkel tranquilo. Consulta
 
 *Foto: [LuwukBangai](https://luwukbanggai.com/en/banggai-islands-sulawesi-adventure/). Hay que confirmar los derechos de uso comercial.*
 
-Pulo Dua, en la zona de Balantak, ofrece paisaje insular, playas y un entorno marino que conviene planificar como excursión propia. La oficina de turismo de Sulawesi Central también la recoge como atractivo marino.
+[Pulo Dua](/es/destinations/pulau-dua-balantak/), en la zona de Balantak, ofrece paisaje insular, playas y un entorno marino que conviene planificar como excursión propia. La oficina de turismo de Sulawesi Central también la recoge como atractivo marino.
 
 No todas las costas de la isla son aptas para hacer snorkel. Pide al operador que elija el punto según el oleaje, las corrientes, la visibilidad y el estado del arrecife; reserva tiempo suficiente para el traslado desde Luwuk.
 
@@ -44,7 +44,7 @@ No todas las costas de la isla son aptas para hacer snorkel. Pide al operador qu
 
 *Foto: [The World Travel Guy — Banggai Islands](https://theworldtravelguy.com/banggai-islands-luwuk-indonesia/). Hay que confirmar los derechos de uso comercial.*
 
-Oyama Beach puede interesar a quienes buscan paisaje costero y un ambiente más tranquilo. Antes de convertirla en el principal punto de snorkel, confirma con un guía si la entrada es segura y la visibilidad es adecuada. Los servicios y el transporte pueden ser limitados.
+[Oyama Beach](/es/destinations/oyama-beach/) puede interesar a quienes buscan paisaje costero y un ambiente más tranquilo. Antes de convertirla en el principal punto de snorkel, confirma con un guía si la entrada es segura y la visibilidad es adecuada. Los servicios y el transporte pueden ser limitados.
 
 ## 4. Aguas de Banggai — elige un punto concreto
 
@@ -78,7 +78,7 @@ Los operadores locales pueden ayudarte a escoger un arrecife según tu experienc
 
 *Foto: [Oficina de Turismo de Banggai Kepulauan](https://pariwisata.banggaikep.go.id/wisata-danau/). Comprueba las condiciones de uso de la imagen.*
 
-Paisupok Lake se puede combinar con playas de Peleng, pero es un lago de agua dulce, no un punto de snorkel marino. Visítalo por el agua clara y el paisaje; nada o usa embarcaciones solo si la gestión local lo permite y las condiciones son seguras.
+[Paisupok Lake](/es/destinations/paisu-pok-lake/) se puede combinar con playas de Peleng, pero es un lago de agua dulce, no un punto de snorkel marino. Visítalo por el agua clara y el paisaje; nada o usa embarcaciones solo si la gestión local lo permite y las condiciones son seguras.
 
 ## Consejos para elegir y disfrutar con seguridad
 

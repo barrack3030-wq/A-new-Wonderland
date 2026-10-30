@@ -38,7 +38,7 @@ El humo puede reducir la claridad de las vistas de la ciudad, la bahía, la cost
 
 ### 3. Comprueba cada destino con operadores locales
 
-Entre los lugares que los viajeros suelen incluir en sus planes están la cascada de Piala, la cascada de Salodik, la playa de Kilo Lima, la playa de Poganda, el lago Paisupok, Paisu Batango y Kawalu Bay. Las noticias citadas no confirman que todos estos destinos estén cerrados ni que se hayan visto afectados por igual.
+Entre los lugares que los viajeros suelen incluir en sus planes están la cascada de Piala, la cascada de Salodik, la playa de Kilo Lima, la playa de Poganda, el lago Paisupok, [Paisu Batango](/es/destinations/paisu-batango-lake/) y [Kawalu Bay](/es/destinations/kawalu-bay/). Las noticias citadas no confirman que todos estos destinos estén cerrados ni que se hayan visto afectados por igual.
 
 Antes de salir, consulta a un guía local o al operador del destino sobre el acceso, la visibilidad y las condiciones en el lugar. Para nadar, hacer snorkel, caminar por senderos o viajar en barco, sigue las indicaciones locales y aplaza la actividad si no resulta segura.
 

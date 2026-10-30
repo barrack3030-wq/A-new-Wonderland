@@ -15,7 +15,7 @@ tags:
 translationKey: "choose-banggai-tour-package-2026-10-26"
 ---
 
-Merencanakan perjalanan ke Banggai bukan hanya soal memilih destinasi. Anda juga perlu menyesuaikan durasi, jumlah peserta, transportasi, dan ritme perjalanan. Pilihan paket yang tepat membantu Anda menikmati Danau Paisupok, Paisu Batango, Air Terjun Salodik, atau Pulau Dua Balantak tanpa menyusun setiap detail sendirian.
+Merencanakan perjalanan ke Banggai bukan hanya soal memilih destinasi. Anda juga perlu menyesuaikan durasi, jumlah peserta, transportasi, dan ritme perjalanan. Pilihan paket yang tepat membantu Anda menikmati Danau Paisupok, [Paisu Batango](/id/destinations/paisu-batango-lake/), [Air Terjun Salodik](/id/destinations/salodik-waterfall/), atau [Pulau Dua Balantak](/id/destinations/pulau-dua-balantak/) tanpa menyusun setiap detail sendirian.
 
 Jika sedang mencari **Banggai Tour** atau **Paket Tour Banggai**, mulailah dari satu pertanyaan: Anda lebih membutuhkan fleksibilitas perjalanan privat atau ingin bergabung dengan peserta lain melalui open trip?
 
@@ -43,7 +43,7 @@ Untuk kedua pilihan, sisakan waktu yang cukup bagi perpindahan lokasi, istirahat
 
 ## Jika tujuan utama Anda Danau Paisupok
 
-Untuk **Trip Danau Paisupok**, jangan hanya bertanya berapa lama berada di danau. Tanyakan juga bagaimana perjalanan menuju kawasan Luk Panenteng diatur, apakah Paisu Batango atau Pantai Poganda termasuk dalam rute, dan bagaimana transportasi pulang disiapkan.
+Untuk **Trip Danau Paisupok**, jangan hanya bertanya berapa lama berada di danau. Tanyakan juga bagaimana perjalanan menuju kawasan Luk Panenteng diatur, apakah Paisu Batango atau [Pantai Poganda](/id/destinations/poganda-beach/) termasuk dalam rute, dan bagaimana transportasi pulang disiapkan.
 
 Pastikan pula biaya yang mungkin dibayarkan langsung di lokasi, aturan aktivitas, dan kondisi akses dikonfirmasi menjelang perjalanan. Tarif dan ketentuan setempat dapat berubah, sehingga informasi lama dari unggahan media sosial sebaiknya tidak dianggap sebagai harga pasti.
 

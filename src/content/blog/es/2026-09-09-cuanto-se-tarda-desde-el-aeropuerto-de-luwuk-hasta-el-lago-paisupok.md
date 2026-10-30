@@ -7,6 +7,7 @@ image: "/images/Poganda-Beach-Banggai-IndonesiaJuara-Trip.webp"
 imageAlt: "Paisaje tropical de las islas Banggai en Indonesia"
 author: "Banggai Wonderland"
 pubDate: 2026-09-09
+translationKey: "2026-09-09-luwuk-airport-to-paisu-pok-travel-time"
 tags:
   - "Banggai"
   - "Indonesia"

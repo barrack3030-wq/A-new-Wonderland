@@ -7,6 +7,7 @@ image: "/images/Poganda-Beach-Banggai-IndonesiaJuara-Trip.webp"
 imageAlt: "Tropical landscape in the Banggai Islands near Paisu Pok"
 author: "Banggai Wonderland"
 pubDate: 2026-09-18
+translationKey: "2026-09-18-how-to-get-to-paisu-pok-from-luwuk"
 tags:
   - "Luwuk"
   - "Paisu Pok"
@@ -16,7 +17,7 @@ tags:
   - "Travel Guide"
 ---
 
-Paisu Pok Lake is one of the most distinctive natural attractions in the Banggai Islands, but it is important to understand one thing before planning your trip: **Paisu Pok is not in Luwuk**.
+[Paisu Pok Lake](/en/destinations/paisu-pok-lake/) is one of the most distinctive natural attractions in the Banggai Islands, but it is important to understand one thing before planning your trip: **Paisu Pok is not in Luwuk**.
 
 The lake is located in **Luk Panenteng Village on Peleng Island, Banggai Kepulauan**. For travelers arriving by air, Luwuk is the mainland gateway before the journey continues by sea and then by road.
 

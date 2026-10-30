@@ -98,4 +98,4 @@ Elle est signalée comme coulant toute l'année, y compris pendant la saison sè
 
 ## Destinations à proximité
 
-**Piala Waterfall** et **Laumarang Waterfall** à Hanga-Hanga offrent des accès forestiers plus exigeants et d'autres paysages de cascade. **Mokokawa Waterfall** est une autre cascade en terrasses avec un sentier plus long. Pour combiner cascade et plage près de Luwuk, **Kilo 5 Beach** est une option simple. Les voyageurs continuant vers Peleng peuvent ajouter **Paisu Pok Lake** à un itinéraire plus complet dans le Banggai.
+**[Piala Waterfall](/fr/destinations/piala-waterfall/)** et **[Laumarang Waterfall](/fr/destinations/laumarang-waterfall/)** à Hanga-Hanga offrent des accès forestiers plus exigeants et d'autres paysages de cascade. **[Mokokawa Waterfall](/fr/destinations/mokokawa-waterfall/)** est une autre cascade en terrasses avec un sentier plus long. Pour combiner cascade et plage près de Luwuk, **[Kilo 5 Beach](/fr/destinations/kilo-5-beach/)** est une option simple. Les voyageurs continuant vers Peleng peuvent ajouter **[Paisu Pok Lake](/fr/destinations/paisu-pok-lake/)** à un itinéraire plus complet dans le Banggai.

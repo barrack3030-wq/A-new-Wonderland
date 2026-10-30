@@ -14,7 +14,7 @@ tags:
   - "Voyage"
 ---
 
-Banggai est l'une des régions les plus fascinantes—et les plus souvent reportées—de Sulawesi central. La raison n'est pas que l'endroit manque d'intérêt. Bien au contraire : le lac Paisu Pok et son eau transparente comme du verre, l'archipel des îles Banggai, les cascades cachées autour de Luwuk et les récifs coralliens préservés font ressentir cette région comme une version de l'Indonésie encore préservée du tourisme de masse.
+Banggai est l'une des régions les plus fascinantes—et les plus souvent reportées—de Sulawesi central. La raison n'est pas que l'endroit manque d'intérêt. Bien au contraire : le lac [Paisu Pok](/fr/destinations/paisu-pok-lake/) et son eau transparente comme du verre, l'archipel des îles Banggai, les cascades cachées autour de Luwuk et les récifs coralliens préservés font ressentir cette région comme une version de l'Indonésie encore préservée du tourisme de masse.
 
 Le problème est que le voyage vers Banggai n'est pas aussi simple que de s'envoler pour Bali ou Yogyakarta. Vous devez prendre en compte les vols, les traversées en ferry, les trajets terrestres et le temps passé à chaque étape. La question « de combien de jours ai-je besoin ? » devient cruciale—et la réponse dépend de ce que vous souhaitez voir et jusqu'où vous voulez vous enfoncer dans l'archipel.
 
@@ -26,7 +26,7 @@ Avant d'aborder la durée, il est important de comprendre la géographie de Bang
 
 **La régence de Banggai** avec pour chef-lieu Luwuk, qui sert de porte d'entrée principale. Vous y trouverez l'aéroport Syukuran Aminuddin Amir (LUW), ainsi que des destinations continentales telles que la cascade de Salodik, la cascade de Piala et la plage Kilo 5.
 
-**La régence des îles Banggai (Banggai Kepulauan)** avec l'île de Peleng comme plus grande île. C'est ici que se trouve le lac Paisu Pok, aux côtés de destinations comme le lagon de Paisu Batango et la plage de Poganda.
+**La régence des îles Banggai (Banggai Kepulauan)** avec l'île de Peleng comme plus grande île. C'est ici que se trouve le lac Paisu Pok, aux côtés de destinations comme le lagon de [Paisu Batango](/fr/destinations/paisu-batango-lake/) et la plage de Poganda.
 
 **La régence de Banggai Laut** avec Salakan comme centre administratif. Cette région offre de petites îles, des plages cachées et des spots de snorkeling encore très sauvages.
 
@@ -153,7 +153,7 @@ Techniquement oui, mais ce n'est pas recommandé. Le trajet de Luwuk jusqu'au la
 
 ### Que peut-on voir en 4 jours à Banggai ?
 
-En 4 jours, vous pouvez visiter les cascades autour de Luwuk (Salodik ou Piala), traverser vers Peleng pour découvrir le lac Paisu Pok et le lagon de Paisu Batango, ainsi que profiter des plages comme Poganda Beach.
+En 4 jours, vous pouvez visiter les cascades autour de Luwuk (Salodik ou Piala), traverser vers Peleng pour découvrir le lac Paisu Pok et le lagon de Paisu Batango, ainsi que profiter des plages comme [Poganda Beach](/fr/destinations/poganda-beach/).
 
 ### Quel est le meilleur moment pour partir en vacances à Banggai ?
 

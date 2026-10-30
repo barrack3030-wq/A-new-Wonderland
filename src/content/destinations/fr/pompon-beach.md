@@ -71,7 +71,7 @@ Pompon se trouve sur l'**île de Peleng**, dans la régence de Banggai Kepulauan
 
 **Par la route depuis Salakan :** depuis **Salakan**, le trajet vers Desa Lalong prend environ **2 h 30** et couvre environ **90 kilomètres** selon les informations de voyage fournies. Une voiture ou une moto est la solution la plus pratique pour le trajet terrestre.
 
-**En bateau depuis Luwuk ou Banggai :** les voyageurs peuvent rejoindre Peleng en bateau puis continuer par la route jusqu'à Pompon. Certains itinéraires combinent Pompon avec **Paisu Pok Lake** et **Poganda Beach**.
+**En bateau depuis Luwuk ou Banggai :** les voyageurs peuvent rejoindre Peleng en bateau puis continuer par la route jusqu'à Pompon. Certains itinéraires combinent Pompon avec **[Paisu Pok Lake](/fr/destinations/paisu-pok-lake/)** et **[Poganda Beach](/fr/destinations/poganda-beach/)**.
 
 Les horaires des bateaux et les conditions de mer pouvant changer, confirmez les ferries ou speedboats avant le départ.
 
@@ -117,4 +117,4 @@ Il n'y a pas d'hébergement officiel sur la plage. Les alternatives sont les hom
 
 ## Destinations à proximité
 
-**Paisu Pok Lake** est la célèbre destination d'eau douce de la région et peut être combinée avec Pompon. **Poganda Beach** offre sable blanc, eau calme et snorkeling près du rivage. **Paisu Batango Spring** est une autre attraction naturelle de la zone de Luk Panenteng. **Mandel Beach** est une autre plage de sable blanc sur Peleng. Pour les voyageurs basés à Luwuk, **Kilo 5 Beach** et **Piala Waterfall** sont des ajouts faciles à l'itinéraire.
+**Paisu Pok Lake** est la célèbre destination d'eau douce de la région et peut être combinée avec Pompon. **Poganda Beach** offre sable blanc, eau calme et snorkeling près du rivage. **[Paisu Batango](/fr/destinations/paisu-batango-lake/) Spring** est une autre attraction naturelle de la zone de Luk Panenteng. **[Mandel Beach](/fr/destinations/mandel-beach/)** est une autre plage de sable blanc sur Peleng. Pour les voyageurs basés à Luwuk, **[Kilo 5 Beach](/fr/destinations/kilo-5-beach/)** et **[Piala Waterfall](/fr/destinations/piala-waterfall/)** sont des ajouts faciles à l'itinéraire.

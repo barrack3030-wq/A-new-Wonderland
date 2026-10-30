@@ -19,7 +19,7 @@ tags:
   - "guía de viaje"
 ---
 
-El lago Paisu Pok, ubicado en la isla de Peleng, Banggai, es uno de los lagos de agua dulce más cristalinos de Indonesia. La visibilidad bajo el agua puede alcanzar entre 10 y 15 metros, revelando troncos de árboles sumergidos desde hace mucho tiempo bajo la superficie, los cuales se aprecian claramente desde arriba como una silenciosa instalación de arte natural. Aunque las fotografías de este lago han circulado ampliamente en las redes sociales, el número de visitantes sigue siendo relativamente bajo. Una de las razones principales es la accesibilidad: el viaje para llegar allí requiere que los viajeros vuelen a Luwuk, crucen en ferry hacia la isla de Peleng y continúen por carretera a través de caminos que, en algunos tramos, no se encuentran en las mejores condiciones.
+El lago [Paisu Pok](/es/destinations/paisu-pok-lake/), ubicado en la isla de Peleng, Banggai, es uno de los lagos de agua dulce más cristalinos de Indonesia. La visibilidad bajo el agua puede alcanzar entre 10 y 15 metros, revelando troncos de árboles sumergidos desde hace mucho tiempo bajo la superficie, los cuales se aprecian claramente desde arriba como una silenciosa instalación de arte natural. Aunque las fotografías de este lago han circulado ampliamente en las redes sociales, el número de visitantes sigue siendo relativamente bajo. Una de las razones principales es la accesibilidad: el viaje para llegar allí requiere que los viajeros vuelen a Luwuk, crucen en ferry hacia la isla de Peleng y continúen por carretera a través de caminos que, en algunos tramos, no se encuentran en las mejores condiciones.
 
 Para aquellos dispuestos a realizar el trayecto, la primera pregunta que suele surgir es: **¿cuál es la mejor época para visitarlo?**
 

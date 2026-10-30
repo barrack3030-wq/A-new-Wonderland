@@ -7,6 +7,7 @@ image: "/images/Poganda-Beach-Banggai-IndonesiaJuara-Trip.webp"
 imageAlt: "Pemandangan pantai tropis Banggai untuk perjalanan honeymoon"
 author: "Banggai Wonderland"
 pubDate: 2026-09-30
+translationKey: "2026-09-30-banggai-honeymoon-4d3n"
 tags:
   - "Banggai Honeymoon"
   - "Private Trip"
@@ -18,7 +19,7 @@ tags:
 
 Banggai cocok untuk pasangan yang ingin menikmati perjalanan pulau dengan suasana yang lebih tenang. Dalam **Banggai Honeymoon Escape**, perjalanan dirancang khusus untuk **2 orang** dengan konsep private trip selama 4 hari 3 malam.
 
-Rute menghubungkan Luwuk, Salakan, dan sejumlah destinasi pesisir Banggai seperti **Paisu Pok, Paisu Batango, Kawalu Bay, Poganda Beach, Long Beach, Oyama, Bontolan, Pompon Beach, dan Mandel Beach**.
+Rute menghubungkan Luwuk, Salakan, dan sejumlah destinasi pesisir Banggai seperti **[Paisu Pok](/id/destinations/paisu-pok-lake/), [Paisu Batango](/id/destinations/paisu-batango-lake/), [Kawalu Bay](/id/destinations/kawalu-bay/), [Poganda Beach](/id/destinations/poganda-beach/), [Long Beach](/id/destinations/long-beach/), Oyama, Bontolan, [Pompon Beach](/id/destinations/pompon-beach/), dan [Mandel Beach](/id/destinations/mandel-beach/)**.
 
 ## Banggai Honeymoon Escape
 
@@ -28,7 +29,7 @@ Paket ini dibuat untuk pasangan yang ingin menikmati Banggai tanpa bergabung den
 
 ### Highlight
 
-- Piala Waterfall
+- [Piala Waterfall](/id/destinations/piala-waterfall/)
 - Paisu Pok
 - Paisu Batango
 - Kawalu Bay

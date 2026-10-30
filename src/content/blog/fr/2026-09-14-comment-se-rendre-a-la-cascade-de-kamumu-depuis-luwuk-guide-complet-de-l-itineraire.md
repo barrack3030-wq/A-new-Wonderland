@@ -14,7 +14,7 @@ tags:
   - "Voyage"
 ---
 
-La cascade de Kamumu est l'une des destinations naturelles les plus faciles d'accès depuis Luwuk—à condition de connaître le chemin à emprunter. Contrairement au lac Paisu Pok qui nécessite une traversée en ferry vers l'île de Peleng, Kamumu se trouve sur le continent de Sulawesi, à environ 26 à 30 kilomètres au nord de Luwuk, dans le district de Luwuk Utara. Le trajet en véhicule est relativement court. Ce qu'il faut surveiller, c'est plutôt la dernière partie : un court trekking à travers les plantations des habitants qui peut être glissant après la pluie.
+La cascade de Kamumu est l'une des destinations naturelles les plus faciles d'accès depuis Luwuk—à condition de connaître le chemin à emprunter. Contrairement au lac [Paisu Pok](/fr/destinations/paisu-pok-lake/) qui nécessite une traversée en ferry vers l'île de Peleng, Kamumu se trouve sur le continent de Sulawesi, à environ 26 à 30 kilomètres au nord de Luwuk, dans le district de Luwuk Utara. Le trajet en véhicule est relativement court. Ce qu'il faut surveiller, c'est plutôt la dernière partie : un court trekking à travers les plantations des habitants qui peut être glissant après la pluie.
 
 Ce guide aborde chaque étape du voyage : l'itinéraire depuis Luwuk, les options de transport, le temps de trajet, l'état des routes et ce à quoi s'attendre lors du dernier trajet vers la cascade.
 
@@ -32,7 +32,7 @@ L'itinéraire est simple et suit la route principale Trans-Sulawesi vers le nord
 
 **Direction :** Prenez la **route Trans-Sulawesi** vers le nord en direction de Luwuk Utara. Cette route traverse plusieurs villages avant d'arriver au village de Kamumu.
 
-**Repère :** L'intersection menant à Kamumu n'est pas toujours signalée par un panneau clair. Si vous conduisez vous-même, demandez aux habitants la direction de "Air Terjun Kamumu" ou "Desa Kamumu". La plupart des habitants de Luwuk Utara connaissent l'emplacement.
+**Repère :** L'intersection menant à Kamumu n'est pas toujours signalée par un panneau clair. Si vous conduisez vous-même, demandez aux habitants la direction de "[Air Terjun Kamumu](/fr/destinations/kamumu-waterfall/)" ou "Desa Kamumu". La plupart des habitants de Luwuk Utara connaissent l'emplacement.
 
 **Arrivée sur place :** Vous arriverez sur le parking du village géré par les résidents locaux. À partir d'ici, la cascade ne s'atteint qu'à pied.
 

@@ -18,7 +18,7 @@ tags:
 
 **Découvrez le Paradis Caché de Banggai**
 
-Imaginez vous réveiller le matin au son apaisant des vagues, le sable blanc et fin sous vos pieds, et une eau de mer bleu turquoise si claire qu'on en voit le fond. Aucun tumulte, aucune file d'attente pour prendre des photos, juste vous et la beauté d'une nature encore vierge. Bienvenue à **Pantai Mandel**—un joyau caché de Banggai qui a jusqu'à présent échappé au radar des touristes du grand public.
+Imaginez vous réveiller le matin au son apaisant des vagues, le sable blanc et fin sous vos pieds, et une eau de mer bleu turquoise si claire qu'on en voit le fond. Aucun tumulte, aucune file d'attente pour prendre des photos, juste vous et la beauté d'une nature encore vierge. Bienvenue à **[Pantai Mandel](/fr/destinations/mandel-beach/)**—un joyau caché de Banggai qui a jusqu'à présent échappé au radar des touristes du grand public.
 
 Située entre le village de Kombutokan et le village de Palam, dans le district de Totikum, régence de Banggai Kepulauan, Sulawesi central, Pantai Mandel est la définition parfaite du *paradis caché* que vous cherchiez. Avec une ligne de côte d'environ 2 kilomètres de long, cette plage offre une étendue de sable blanc doux, une eau de mer limpide d'un bleu clair, entourée de collines verdoyantes et d'arbres ombragés qui ravissent les yeux.
 
@@ -70,7 +70,7 @@ L'un des moments les plus magiques à Pantai Mandel est d'observer le **lever du
 Avec son décor de sable blanc, d'eau bleu turquoise et de collines verdoyantes, Pantai Mandel est un paradis pour les photographes. Chaque angle offre une composition parfaite pour les photos de paysage (*landscape*), les portraits ou la photographie sous-marine (*underwater photography*).
 
 ### 5. Island Hopping (Excursion d'île en île)
-Faites de Pantai Mandel votre point de départ pour explorer d'autres destinations de Pulau Peling, comme le **lac Paisu Pok** réputé pour son eau bleue limpide comme du verre, **Pantai Poganda**, et la **cascade Piala**.
+Faites de Pantai Mandel votre point de départ pour explorer d'autres destinations de Pulau Peling, comme le **lac [Paisu Pok](/fr/destinations/paisu-pok-lake/)** réputé pour son eau bleue limpide comme du verre, **[Pantai Poganda](/fr/destinations/poganda-beach/)**, et la **cascade Piala**.
 
 
 ## Quel est le meilleur moment pour visiter ?

@@ -14,7 +14,7 @@ tags:
   - "Viajes"
 ---
 
-Luwuk y sus alrededores albergan numerosas cascadas, pero dos nombres que aparecen con mayor frecuencia en las conversaciones entre viajeros son la **Cascada Kamumu** y la **Cascada Salodik**. Ambas se encuentran en el distrito de Luwuk Utara, a solo unos kilómetros de distancia entre sí, y ofrecen igualmente corrientes de agua cristalina dispuestas en varios niveles. Sin embargo, la experiencia en cada lugar puede ser muy diferente, dependiendo de lo que busque.
+Luwuk y sus alrededores albergan numerosas cascadas, pero dos nombres que aparecen con mayor frecuencia en las conversaciones entre viajeros son la **[Cascada Kamumu](/es/destinations/kamumu-waterfall/)** y la **[Cascada Salodik](/es/destinations/salodik-waterfall/)**. Ambas se encuentran en el distrito de Luwuk Utara, a solo unos kilómetros de distancia entre sí, y ofrecen igualmente corrientes de agua cristalina dispuestas en varios niveles. Sin embargo, la experiencia en cada lugar puede ser muy diferente, dependiendo de lo que busque.
 
 Este artículo compara ambas directamente: desde el acceso, las instalaciones y el ambiente, hasta quién disfrutará más de cada una. Ninguna es realmente "mejor" que la otra; se trata de elegir la que mejor se adapte a sus preferencias.
 

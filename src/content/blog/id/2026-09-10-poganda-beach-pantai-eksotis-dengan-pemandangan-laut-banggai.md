@@ -14,7 +14,7 @@ tags:
   - "Travel"
 ---
 
-Poganda Beach adalah salah satu pantai di Kabupaten Banggai Laut, Sulawesi Tengah, yang mulai dikenal wisatawan karena kondisi alamnya yang masih bersih dan pemandangan lautnya yang jernih. Pantai ini terletak di pesisir timur Pulau Peleng, pulau terbesar kedua di Kepulauan Banggai setelah Pulau Banggai.
+[Poganda Beach](/id/destinations/poganda-beach/) adalah salah satu pantai di Kabupaten Banggai Laut, Sulawesi Tengah, yang mulai dikenal wisatawan karena kondisi alamnya yang masih bersih dan pemandangan lautnya yang jernih. Pantai ini terletak di pesisir timur Pulau Peleng, pulau terbesar kedua di Kepulauan Banggai setelah Pulau Banggai.
 
 ## Lokasi dan Akses
 

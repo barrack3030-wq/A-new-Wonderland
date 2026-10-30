@@ -25,10 +25,10 @@ Use this as a planning framework, not a fixed timetable. Ferry schedules, road c
 Arrange your pickup, supplies and onward transfer around the current ferry schedule to Peleng Island. If your arrival is late or the ferry connection does not work, consider staying overnight in Luwuk and starting the island journey the next day rather than building the whole trip around a tight connection.
 
 ### Day 2 — Visit Paisu Pok and Paisu Batango
-Allow enough time for both Paisu Pok Lake and Paisu Batango. Road transfers and time at each location can take longer than expected, so avoid packing the day too tightly. Check local access rules and any entrance or activity fees before setting out.
+Allow enough time for both [Paisu Pok Lake](/en/destinations/paisu-pok-lake/) and [Paisu Batango](/en/destinations/paisu-batango-lake/). Road transfers and time at each location can take longer than expected, so avoid packing the day too tightly. Check local access rules and any entrance or activity fees before setting out.
 
 ### Day 3 — Explore Kawalu Bay and Poganda Beach
-Plan time for Kawalu Bay and Poganda Beach, choosing the order based on where you stay, local transport and the day's conditions. Leave a buffer for rest and transfers instead of relying on map estimates alone.
+Plan time for [Kawalu Bay](/en/destinations/kawalu-bay/) and [Poganda Beach](/en/destinations/poganda-beach/), choosing the order based on where you stay, local transport and the day's conditions. Leave a buffer for rest and transfers instead of relying on map estimates alone.
 
 ### Day 4 — Return towards Luwuk
 Confirm the departure port, ferry time and transfer arrangements before planning your return. Build in a buffer for reaching the port and possible schedule changes. If you have a flight from Luwuk that day, avoid a close ferry-to-flight connection and consider staying in Luwuk the night before.

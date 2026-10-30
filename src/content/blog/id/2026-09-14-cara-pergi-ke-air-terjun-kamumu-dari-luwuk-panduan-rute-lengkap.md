@@ -14,7 +14,7 @@ tags:
   - "Travel"
 ---
 
-Air Terjun Kamumu adalah salah satu destinasi alam yang paling mudah dijangkau dari Luwuk—asalkan Anda tahu jalur yang harus diambil. Berbeda dari Paisu Pok Lake yang memerlukan penyeberangan feri ke Peleng Island, Kamumu berada di daratan Sulawesi, sekitar 26–30 kilometer ke arah utara dari Luwuk, di Kecamatan Luwuk Utara. Perjalanan dengan kendaraan relatif singkat. Yang perlu diperhatikan justru bagian akhir: trekking singkat melewati kebun warga yang bisa licin setelah hujan.
+[Air Terjun Kamumu](/id/destinations/kamumu-waterfall/) adalah salah satu destinasi alam yang paling mudah dijangkau dari Luwuk—asalkan Anda tahu jalur yang harus diambil. Berbeda dari [Paisu Pok Lake](/id/destinations/paisu-pok-lake/) yang memerlukan penyeberangan feri ke Peleng Island, Kamumu berada di daratan Sulawesi, sekitar 26–30 kilometer ke arah utara dari Luwuk, di Kecamatan Luwuk Utara. Perjalanan dengan kendaraan relatif singkat. Yang perlu diperhatikan justru bagian akhir: trekking singkat melewati kebun warga yang bisa licin setelah hujan.
 
 Panduan ini membahas setiap tahap perjalanan: rute dari Luwuk, opsi transportasi, waktu tempuh, kondisi jalan, dan apa yang bisa diharapkan pada perjalanan terakhir menuju air terjun.
 
@@ -103,7 +103,7 @@ Jika Anda datang dari **Salakan** (Banggai Laut) atau bagian lain dari Peleng, A
 
 **Konfirmasi kondisi parkir dan jalur secara lokal.** Jalur setapak bisa berlumpur setelah hujan. Warga di area parkir bisa memberi saran tentang jalur terbaik.
 
-**Gabungkan dengan destinasi lain di Luwuk Utara.** Kamumu berada di rute yang sama dengan Air Terjun Salodik dan destinasi lain di Luwuk Utara. Jika Anda memiliki kendaraan pribadi, Anda bisa mengunjungi lebih dari satu tempat dalam sehari.
+**Gabungkan dengan destinasi lain di Luwuk Utara.** Kamumu berada di rute yang sama dengan [Air Terjun Salodik](/id/destinations/salodik-waterfall/) dan destinasi lain di Luwuk Utara. Jika Anda memiliki kendaraan pribadi, Anda bisa mengunjungi lebih dari satu tempat dalam sehari.
 
 **Atur transportasi pulang sejak awal.** Jika Anda tidak menyetir sendiri, konfirmasi dengan driver atau atur waktu penjemputan. Aplikasi ojek online mungkin tidak memiliki driver yang tersedia di Kamumu.
 

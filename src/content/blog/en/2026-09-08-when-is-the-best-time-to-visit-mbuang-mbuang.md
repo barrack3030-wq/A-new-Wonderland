@@ -7,6 +7,7 @@ image: "/images/Poganda-Beach-Banggai-IndonesiaJuara-Trip.webp"
 imageAlt: "Tropical beach and clear turquoise water in the Banggai Islands, Indonesia"
 author: "Banggai Wonderland"
 pubDate: 2026-09-08
+translationKey: "2026-09-08-best-time-mbuang-mbuang"
 tags:
   - "Banggai"
   - "Mbuang-Mbuang"
@@ -15,7 +16,7 @@ tags:
   - "Travel"
 ---
 
-Mbuang-Mbuang is one of the remote coastal destinations that makes the Banggai Islands so special. Surrounded by clear seas, small islands and a slower way of life, it offers the kind of tropical escape many travelers search for but rarely find.
+[Mbuang-Mbuang](/en/destinations/mbuang-mbuang-island/) is one of the remote coastal destinations that makes the Banggai Islands so special. Surrounded by clear seas, small islands and a slower way of life, it offers the kind of tropical escape many travelers search for but rarely find.
 
 Choosing the right time to visit is important. Because the journey depends on sea transportation and local weather, the best travel period is not only about sunshine. Sea conditions, wind, rain and flexibility all play a role in making your experience comfortable and enjoyable.
 

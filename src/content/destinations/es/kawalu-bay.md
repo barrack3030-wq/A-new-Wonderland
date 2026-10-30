@@ -31,7 +31,7 @@ youtube: "https://www.youtube.com/watch?v=1LqWUDwkxTQ"
 
 Kawalu Bay es una bahía tranquila de aguas turquesas situada en las **Islas Banggai, Sulawesi Central, Indonesia**. Es conocida por sus aguas casi inmóviles, sus orillas bordeadas de manglares y las verdes colinas que rodean la bahía. La combinación crea uno de los paisajes marinos más atractivos de la región y se disfruta mejor como parte de una excursión local en barco.
 
-Los viajeros suelen visitar Kawalu Bay junto con otros destinos de las Islas Banggai, como **Paisu Pok Lake** y **Paisu Batango Spring**. El alojamiento local o un guía puede ayudar normalmente a organizar el recorrido en barco y combinar varios lugares en una misma jornada.
+Los viajeros suelen visitar Kawalu Bay junto con otros destinos de las Islas Banggai, como **[Paisu Pok Lake](/es/destinations/paisu-pok-lake/)** y **[Paisu Batango](/es/destinations/paisu-batango-lake/) Spring**. El alojamiento local o un guía puede ayudar normalmente a organizar el recorrido en barco y combinar varios lugares en una misma jornada.
 
 Hay una distinción importante entre nombres. **Kawalu Beach, también conocida como Pantai Manado**, es otra ubicación situada en Desa Siuna, Kecamatan Pagimana, en el territorio continental de Banggai Regency. La Kawalu Bay de este artículo se encuentra en **Banggai Islands Regency** y se visita mediante una excursión en barco.
 
@@ -116,4 +116,4 @@ Desde finales de la mañana hasta primeras horas de la tarde suele haber mejor l
 
 Kawalu Bay suele combinarse con otros lugares de las Islas Banggai en la misma excursión en barco. **Paisu Pok Lake** es el famoso lago de agua dulce azul de la isla de Peleng, mientras que **Paisu Batango Spring** ofrece otra experiencia de agua dulce cristalina en la zona.
 
-**Poganda Beach** ofrece arena blanca y snorkel, mientras que **Oyama Beach**, en Banggai Laut, es otro destino costero remoto al que se llega en barco. Para los viajeros que se alojan en Luwuk, **Piala Waterfall** y **Bukit Teletubbies** son alternativas continentales antes o después de un viaje a las islas.
+**[Poganda Beach](/es/destinations/poganda-beach/)** ofrece arena blanca y snorkel, mientras que **[Oyama Beach](/es/destinations/oyama-beach/)**, en Banggai Laut, es otro destino costero remoto al que se llega en barco. Para los viajeros que se alojan en Luwuk, **[Piala Waterfall](/es/destinations/piala-waterfall/)** y **[Bukit Teletubbies](/es/destinations/bukit-teletubbies/)** son alternativas continentales antes o después de un viaje a las islas.

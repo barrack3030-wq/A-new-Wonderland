@@ -111,4 +111,4 @@ The site may still be reachable after light rain, but the trail and road can bec
 
 ## Related Destinations
 
-**Laumarang Waterfall** is nearby and provides a more challenging waterfall experience. **Mokokawa Waterfall** is another terraced cascade in the Hanga-Hanga area with a longer forest trek. **Kilo 5 Beach** in Luwuk can be combined with a waterfall visit for a mixed nature itinerary. Travelers continuing toward Peleng Island can also include **Paisu Pok Lake**, one of Banggai's best-known freshwater destinations.
+**[Laumarang Waterfall](/en/destinations/laumarang-waterfall/)** is nearby and provides a more challenging waterfall experience. **[Mokokawa Waterfall](/en/destinations/mokokawa-waterfall/)** is another terraced cascade in the Hanga-Hanga area with a longer forest trek. **[Kilo 5 Beach](/en/destinations/kilo-5-beach/)** in Luwuk can be combined with a waterfall visit for a mixed nature itinerary. Travelers continuing toward Peleng Island can also include **[Paisu Pok Lake](/en/destinations/paisu-pok-lake/)**, one of Banggai's best-known freshwater destinations.

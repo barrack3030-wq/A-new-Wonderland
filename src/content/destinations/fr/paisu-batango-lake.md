@@ -26,7 +26,7 @@ travelTips:
 youtube: "https://www.youtube.com/watch?v=7RTzL8yKLM4"
 ---
 
-Paisu Batango est une **source côtière et une lagune d'eau douce** située à **Desa Luk Panenteng, Kecamatan Bulagi Utara, Kabupaten Banggai Kepulauan, Sulawesi central**, sur **l'île de Peleng**. Elle se trouve au sud du village, environ **15 minutes avant** le célèbre **Paisu Pok Lake**. De nombreux voyageurs passent par ici en route vers Paisu Pok sans réaliser que le site mérite lui aussi une visite.
+Paisu Batango est une **source côtière et une lagune d'eau douce** située à **Desa Luk Panenteng, Kecamatan Bulagi Utara, Kabupaten Banggai Kepulauan, Sulawesi central**, sur **l'île de Peleng**. Elle se trouve au sud du village, environ **15 minutes avant** le célèbre **[Paisu Pok Lake](/fr/destinations/paisu-pok-lake/)**. De nombreux voyageurs passent par ici en route vers Paisu Pok sans réaliser que le site mérite lui aussi une visite.
 
 Le nom décrit le lieu. Dans la langue locale, **paisu signifie eau** et **batango signifie tronc d'arbre**, en référence à l'eau de source qui apparaît près de la base d'un tronc et forme un petit bassin. Ce n'est pas un lac classique, mais un **bassin de source influencé par les marées**.
 
@@ -56,7 +56,7 @@ Il existe deux itinéraires principaux.
 
 **Par la route depuis Salakan :** Depuis **Salakan**, la capitale de la régence, le trajet jusqu'à Desa Luk Panenteng prend environ **3 h 30** en voiture ou à moto. La route traverse des collines verdoyantes et des paysages côtiers. Paisu Batango se trouve au sud du village, avant Paisu Pok.
 
-**En hors-bord depuis Luwuk :** Depuis **Luwuk**, un hors-bord peut prendre environ **1 heure** jusqu'à la zone de Luk Panenteng, selon le point de départ et l'état de la mer. Des bateaux pour environ 10 personnes ont été signalés autour de **4 millions de roupies**, mais le tarif doit être confirmé localement. Cet itinéraire peut combiner **Paisu Batango, Paisu Pok et Poganda Beach** en une journée.
+**En hors-bord depuis Luwuk :** Depuis **Luwuk**, un hors-bord peut prendre environ **1 heure** jusqu'à la zone de Luk Panenteng, selon le point de départ et l'état de la mer. Des bateaux pour environ 10 personnes ont été signalés autour de **4 millions de roupies**, mais le tarif doit être confirmé localement. Cet itinéraire peut combiner **Paisu Batango, Paisu Pok et [Poganda Beach](/fr/destinations/poganda-beach/)** en une journée.
 
 Une autre solution consiste à prendre le ferry public de Luwuk à **Salakan**, à y passer la nuit puis à continuer par la route vers Luk Panenteng le lendemain.
 
@@ -96,5 +96,5 @@ L'option la plus rapide est le **hors-bord**, environ une heure selon le point d
 
 ## Destinations à proximité
 
-**Paisu Pok Lake** est le lac d'eau douce le plus connu de Luk Panenteng, environ 15 minutes plus loin dans le village. **Poganda Beach** se trouve à environ 2 km au sud et offre du sable blanc et du snorkeling. Sur l'île de Banggai, **Bontolan Beach** et **Oyama Beach** sont de grands sites côtiers. Depuis Luwuk, on peut aussi visiter **Kilo 5 Beach** et **Piala Waterfall**.
+**Paisu Pok Lake** est le lac d'eau douce le plus connu de Luk Panenteng, environ 15 minutes plus loin dans le village. **Poganda Beach** se trouve à environ 2 km au sud et offre du sable blanc et du snorkeling. Sur l'île de Banggai, **[Bontolan Beach](/fr/destinations/bontolan-beach/)** et **[Oyama Beach](/fr/destinations/oyama-beach/)** sont de grands sites côtiers. Depuis Luwuk, on peut aussi visiter **[Kilo 5 Beach](/fr/destinations/kilo-5-beach/)** et **[Piala Waterfall](/fr/destinations/piala-waterfall/)**.
 

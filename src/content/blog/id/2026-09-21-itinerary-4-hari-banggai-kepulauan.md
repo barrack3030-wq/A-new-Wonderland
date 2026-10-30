@@ -19,7 +19,7 @@ tags:
   - "Banggai Laut"
 ---
 
-Pertama kali ke **Banggai Kepulauan**? Tantangan utamanya bukan menentukan tempat yang ingin dikunjungi, tetapi menyusun koneksi kapal agar perjalanan tidak terlalu terburu-buru. Itinerary 4 hari ini menggabungkan Luwuk, Salakan, pantai-pantai Banggai Laut, Peleng, dan Danau Paisu Pok dengan ritme perpindahan yang lebih realistis.
+Pertama kali ke **Banggai Kepulauan**? Tantangan utamanya bukan menentukan tempat yang ingin dikunjungi, tetapi menyusun koneksi kapal agar perjalanan tidak terlalu terburu-buru. Itinerary 4 hari ini menggabungkan Luwuk, Salakan, pantai-pantai Banggai Laut, Peleng, dan [Danau Paisu Pok](/id/destinations/paisu-pok-lake/) dengan ritme perpindahan yang lebih realistis.
 
 Itinerary ini mengasumsikan Anda sudah berada di Luwuk. Wisatawan internasional umumnya tiba sehari sebelumnya melalui Makassar, sehingga lebih aman menginap di Luwuk sebelum memulai Day 1.
 
@@ -43,7 +43,7 @@ Bila ingin urusan transfer bandara, pelabuhan, kapal dan penginapan diatur dalam
 
 **Pagi:** Berangkat lebih awal menggunakan mobil menuju pelabuhan seperti Kalumbatan, lalu melanjutkan dengan speedboat untuk island hopping.
 
-**Pantai:** **Pantai Oyama**, **Pantai Mandel**, area **Pantai Poganda**, serta area **Pompon dan Bone-Pompon**. Sebagian besar lokasi minim fasilitas, jadi bawa air minum dan perlindungan dari matahari.
+**Pantai:** **[Pantai Oyama](/id/destinations/oyama-beach/)**, **[Pantai Mandel](/id/destinations/mandel-beach/)**, area **[Pantai Poganda](/id/destinations/poganda-beach/)**, serta area **Pompon dan Bone-Pompon**. Sebagian besar lokasi minim fasilitas, jadi bawa air minum dan perlindungan dari matahari.
 
 Snorkeling umumnya berada di perairan dangkal sekitar 1–4 meter. Untuk mencari Banggai cardinalfish, tanyakan kepada kapten mengenai teluk mangrove yang terlindung.
 
@@ -51,7 +51,7 @@ Snorkeling umumnya berada di perairan dangkal sekitar 1–4 meter. Untuk mencari
 
 **Pagi:** Perjalanan darat dari Salakan menuju bagian barat Peleng. Siapkan waktu beberapa jam untuk perjalanan.
 
-**Siang:** Kunjungi **Danau Paisu Pok**, danau air tawar berwarna biru jernih dengan dermaga, kayak dan area berenang. Paisu Batango Lagoon dapat ditambahkan sebagai kunjungan terdekat.
+**Siang:** Kunjungi **Danau Paisu Pok**, danau air tawar berwarna biru jernih dengan dermaga, kayak dan area berenang. [Paisu Batango](/id/destinations/paisu-batango-lake/) Lagoon dapat ditambahkan sebagai kunjungan terdekat.
 
 **Malam:** Menginap di Desa Leme Leme di Pulau Peleng.
 
@@ -59,7 +59,7 @@ Snorkeling umumnya berada di perairan dangkal sekitar 1–4 meter. Untuk mencari
 
 **Pagi:** Naik feri umum dari Leme Leme kembali ke Luwuk. Penyeberangan sekitar 2–3 jam.
 
-**Menjelang siang:** Lanjutkan dengan mengunjungi **Air Terjun Piala**, **Air Terjun Laumarang**, dan **Pantai Kilometer 5** di sekitar Luwuk.
+**Menjelang siang:** Lanjutkan dengan mengunjungi **[Air Terjun Piala](/id/destinations/piala-waterfall/)**, **[Air Terjun Laumarang](/id/destinations/laumarang-waterfall/)**, dan **Pantai Kilometer 5** di sekitar Luwuk.
 
 ## Ringkasan Rute 4 Hari
 

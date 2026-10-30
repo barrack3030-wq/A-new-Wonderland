@@ -26,7 +26,7 @@ Demandez quels tronçons se font en voiture, en bateau rapide, en embarcation lo
 
 ## 2. Quels sites sont réellement inclus ?
 
-Demandez un itinéraire écrit plutôt qu’un simple montage de photos promotionnelles. Vérifiez les étapes, leur ordre et le temps prévu sur place. Si vous souhaitez visiter Paisupok, Paisu Batango, Kawalu Bay ou la plage de Poganda, demandez si chaque site figure dans votre formule et si le parcours est réaliste à vos dates.
+Demandez un itinéraire écrit plutôt qu’un simple montage de photos promotionnelles. Vérifiez les étapes, leur ordre et le temps prévu sur place. Si vous souhaitez visiter Paisupok, [Paisu Batango](/fr/destinations/paisu-batango-lake/), [Kawalu Bay](/fr/destinations/kawalu-bay/) ou la plage de Poganda, demandez si chaque site figure dans votre formule et si le parcours est réaliste à vos dates.
 
 Un lieu présenté dans une publicité n’est pas nécessairement inclus dans toutes les excursions.
 

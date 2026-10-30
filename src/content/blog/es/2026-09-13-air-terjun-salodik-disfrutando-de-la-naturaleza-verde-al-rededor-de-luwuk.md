@@ -19,7 +19,7 @@ tags:
   - "Trans Sulawesi"
 ---
 
-Luwuk, como capital de la regencia de Banggai en Célebes Central, tiene una reputación que crece lentamente entre los viajeros. Esta pequeña ciudad es conocida como la puerta de entrada a las islas Banggai, un archipiélago de mares azules, lagos icónicos como Paisu Pok y playas aún vírgenes. Sin embargo, antes de cruzar a esas islas, hay un lugar que casi siempre mencionan los lugareños cuando se les pregunta sobre el turismo natural en tierra firme: **Air Terjun Salodik**.
+Luwuk, como capital de la regencia de Banggai en Célebes Central, tiene una reputación que crece lentamente entre los viajeros. Esta pequeña ciudad es conocida como la puerta de entrada a las islas Banggai, un archipiélago de mares azules, lagos icónicos como [Paisu Pok](/es/destinations/paisu-pok-lake/) y playas aún vírgenes. Sin embargo, antes de cruzar a esas islas, hay un lugar que casi siempre mencionan los lugareños cuando se les pregunta sobre el turismo natural en tierra firme: **[Air Terjun Salodik](/es/destinations/salodik-waterfall/)**.
 
 Esta cascada no es una atracción grandiosa con acantilados de decenas de metros de altura. Su encanto reside precisamente en algo más sencillo: un flujo de agua escalonado, piscinas naturales de color azul verdoso y un denso bosque tropical a su alrededor. Para los viajeros que acaban de llegar a Luwuk y desean experimentar la atmósfera del interior de Célebes sin tener que viajar durante horas, Salodik es una opción razonable.
 

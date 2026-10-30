@@ -46,7 +46,7 @@ itinerary:
 
 **5 Hari 4 Malam**
 
-**Luwuk • Salakan • Peleng • Paisu Pok**
+**Luwuk • Salakan • Peleng • [Paisu Pok](/id/destinations/paisu-pok-lake/)**
 
 Paket ini dirancang untuk wisatawan yang ingin menggabungkan Luwuk dengan perjalanan kepulauan tanpa membuat itinerary terlalu padat. Fokus utamanya adalah Salakan, Peleng dan Paisu Pok dengan waktu yang cukup untuk perjalanan laut dan darat.
 

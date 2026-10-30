@@ -17,7 +17,7 @@ tags:
 translationKey: "banggai-trip-itinerary-buffer-planning"
 ---
 
-Perjalanan ke Kepulauan Banggai akan terasa lebih nyaman jika itinerary disusun berdasarkan **koneksi transportasi**, bukan sekadar jumlah tempat yang ingin dikunjungi. Banyak wisatawan memulai perjalanan dari Luwuk, lalu melanjutkan perjalanan darat dan laut menuju Pulau Peleng untuk mengunjungi Danau Paisu Pok, Paisu Batango, pantai, dan teluk di sekitarnya.
+Perjalanan ke Kepulauan Banggai akan terasa lebih nyaman jika itinerary disusun berdasarkan **koneksi transportasi**, bukan sekadar jumlah tempat yang ingin dikunjungi. Banyak wisatawan memulai perjalanan dari Luwuk, lalu melanjutkan perjalanan darat dan laut menuju Pulau Peleng untuk mengunjungi [Danau Paisu Pok](/id/destinations/paisu-pok-lake/), [Paisu Batango](/id/destinations/paisu-batango-lake/), pantai, dan teluk di sekitarnya.
 
 Kuncinya adalah memberi ruang untuk penyeberangan, waktu tunggu, dan perubahan kondisi laut. Jangan menganggap perjalanan antar-pulau memiliki jadwal yang selalu sama setiap hari.
 
@@ -29,7 +29,7 @@ Mulailah dengan memilih pengalaman yang paling penting untuk Anda:
 - **Pantai dan teluk:** pilih beberapa lokasi yang masuk akal digabungkan berdasarkan posisi dan kondisi akses.
 - **Singgah sebentar di Luwuk:** gunakan waktu sebelum penerbangan atau perjalanan lanjutan untuk destinasi yang dekat, bukan untuk memaksakan perjalanan lintas pulau.
 
-Paisu Pok, Paisu Batango, Kawalu Bay, dan Poganda dapat menjadi bagian dari rencana perjalanan, tetapi urutan dan jumlah lokasi yang realistis bergantung pada titik menginap, transportasi, serta kondisi hari itu.
+Paisu Pok, Paisu Batango, [Kawalu Bay](/id/destinations/kawalu-bay/), dan Poganda dapat menjadi bagian dari rencana perjalanan, tetapi urutan dan jumlah lokasi yang realistis bergantung pada titik menginap, transportasi, serta kondisi hari itu.
 
 ## 2. Susun perjalanan berdasarkan tahap
 

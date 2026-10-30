@@ -7,13 +7,14 @@ image: "/images/Poganda-Beach-Banggai-IndonesiaJuara-Trip.webp"
 imageAlt: "Tropical coastal scenery in Banggai, Indonesia"
 author: "Banggai Wonderland"
 pubDate: 2026-09-09
+translationKey: "2026-09-09-luwuk-airport-to-paisu-pok-travel-time"
 tags:
   - "Banggai"
   - "Indonesia"
   - "Travel"
 ---
 
-Lake Paisupok, also known as Paisu Pok Lake, is one of the most remarkable natural attractions in the Banggai Islands. Located on Peleng Island, the lake is famous for its clear blue water, peaceful atmosphere and lush tropical surroundings.
+Lake Paisupok, also known as [Paisu Pok Lake](/en/destinations/paisu-pok-lake/), is one of the most remarkable natural attractions in the Banggai Islands. Located on Peleng Island, the lake is famous for its clear blue water, peaceful atmosphere and lush tropical surroundings.
 
 For travelers arriving by air, the journey begins at **Syukuran Aminuddin Amir Airport in Luwuk**. Since Lake Paisupok is located across the sea on Peleng Island, it is not a direct road trip. The route usually combines airport transfer, a boat journey and an overland trip on the island.
 

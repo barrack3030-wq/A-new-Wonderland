@@ -19,7 +19,7 @@ tags:
   - "homestay"
 ---
 
-El lago Paisu Pok ha sido selama mucho tiempo un tema de conversación entre los viajeros que siguen cuentas de viajes sobre Indonesia. Sus aguas cristalinas, los troncos de árboles sumergidos visibles desde la superficie y su ubicación en una isla remota hacen que este lago parezca un destino al que solo se puede acceder con una verdadera determinación. Sus fotografías son sin duda deslumbrantes, pero el viaje hasta allí requiere algo más de preparación que simplemente comprar un billete de avión.
+El lago [Paisu Pok](/es/destinations/paisu-pok-lake/) ha sido selama mucho tiempo un tema de conversación entre los viajeros que siguen cuentas de viajes sobre Indonesia. Sus aguas cristalinas, los troncos de árboles sumergidos visibles desde la superficie y su ubicación en una isla remota hacen que este lago parezca un destino al que solo se puede acceder con una verdadera determinación. Sus fotografías son sin duda deslumbrantes, pero el viaje hasta allí requiere algo más de preparación que simplemente comprar un billete de avión.
 
 Este artículo no trata de por qué deberías ir. Trata sobre **lo que necesitas saber antes de ir**: desde cómo llegar al lago, los costes que debes preparar y las normas que rigen en el lugar, hasta esos pequeños detalles que a menudo pasan por alto los viajeros que visitan Banggai por primera vez.
 

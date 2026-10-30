@@ -21,7 +21,7 @@ La réponse courte : **oui, c'est très approprié — peut-être l'un des meill
 
 ## Météo : sec, mais cela ne veut pas dire sans pluie
 
-En septembre, le village de Mbuang-Mbuang bénéficie d'un profil météo plutôt amical. Les données climatiques de **timeanddate.com** montrent des précipitations moyennes en septembre d'environ **88,3 mm** — bien inférieures à celles de mai (218,6 mm) ou de juin (211,2 mm). La température moyenne tourne autour de **26°C**, avec des maximales d'environ **31°C** et des minimales de **22°C**. L'humidité est également relativement plus basse, autour de **74%**.
+En septembre, le village de [Mbuang-Mbuang](/fr/destinations/mbuang-mbuang-island/) bénéficie d'un profil météo plutôt amical. Les données climatiques de **timeanddate.com** montrent des précipitations moyennes en septembre d'environ **88,3 mm** — bien inférieures à celles de mai (218,6 mm) ou de juin (211,2 mm). La température moyenne tourne autour de **26°C**, avec des maximales d'environ **31°C** et des minimales de **22°C**. L'humidité est également relativement plus basse, autour de **74%**.
 
 *Remarque importante :* ces données proviennent de la station météo de **Kendari / Woltermon-Ginsidi**, située à environ **277 km** du village de Mbuang-Mbuang ; les conditions réelles sur place peuvent donc être légèrement différentes.
 

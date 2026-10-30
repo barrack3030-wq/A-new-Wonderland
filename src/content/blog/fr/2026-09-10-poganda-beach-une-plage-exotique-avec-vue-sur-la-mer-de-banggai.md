@@ -16,7 +16,7 @@ tags:
 
 ## Poganda Beach : Une plage exotique dengan vue sur la mer de Banggai
 
-Poganda Beach est l'une des plages du kabupaten de Banggai Laut, dans le Sulawesi central, qui commence à se faire connaître des voyageurs en raison de son cadre naturel préservé et de la transparence de ses eaux. Cette plage est située sur la côte est de l'île Peleng, la deuxième plus grande île de l'archipel des Banggai après l'île Banggai.
+[Poganda Beach](/fr/destinations/poganda-beach/) est l'une des plages du kabupaten de Banggai Laut, dans le Sulawesi central, qui commence à se faire connaître des voyageurs en raison de son cadre naturel préservé et de la transparence de ses eaux. Cette plage est située sur la côte est de l'île Peleng, la deuxième plus grande île de l'archipel des Banggai après l'île Banggai.
 
 ### Emplacement et accès
 

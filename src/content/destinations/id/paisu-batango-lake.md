@@ -26,7 +26,7 @@ travelTips:
 youtube: "https://www.youtube.com/watch?v=7RTzL8yKLM4"
 ---
 
-Paisu Batango adalah **mata air pantai dan laguna air tawar** di **Desa Luk Panenteng, Kecamatan Bulagi Utara, Kabupaten Banggai Kepulauan, Sulawesi Tengah**, di **Pulau Peleng**. Lokasinya berada di sisi selatan desa, sekitar **15 menit sebelum** **Danau Paisu Pok** yang lebih terkenal. Banyak wisatawan melewatinya dalam perjalanan ke Paisu Pok tanpa menyadari bahwa tempat ini juga merupakan destinasi tersendiri.
+Paisu Batango adalah **mata air pantai dan laguna air tawar** di **Desa Luk Panenteng, Kecamatan Bulagi Utara, Kabupaten Banggai Kepulauan, Sulawesi Tengah**, di **Pulau Peleng**. Lokasinya berada di sisi selatan desa, sekitar **15 menit sebelum** **[Danau Paisu Pok](/id/destinations/paisu-pok-lake/)** yang lebih terkenal. Banyak wisatawan melewatinya dalam perjalanan ke Paisu Pok tanpa menyadari bahwa tempat ini juga merupakan destinasi tersendiri.
 
 Namanya menggambarkan karakter tempatnya. Dalam bahasa lokal, **paisu berarti air** dan **batango berarti batang pohon**, merujuk pada air mata air yang muncul di dekat dasar batang pohon dan membentuk kolam kecil. Ini bukan danau konvensional, melainkan **kolam mata air yang dipengaruhi pasang surut**.
 
@@ -56,7 +56,7 @@ Ada dua rute utama.
 
 **Melalui jalan darat dari Salakan:** Dari **Salakan**, ibu kota kabupaten, perjalanan menuju Desa Luk Panenteng memakan waktu sekitar **3,5 jam** dengan mobil atau sepeda motor. Rute melewati perbukitan hijau dan pemandangan pesisir. Paisu Batango berada di sisi selatan desa, sebelum Paisu Pok.
 
-**Dengan speedboat dari Luwuk:** Dari **Luwuk**, speedboat dapat menempuh perjalanan sekitar **1 jam** menuju kawasan Luk Panenteng, tergantung titik keberangkatan dan kondisi laut. Perahu untuk sekitar 10 orang pernah dilaporkan sekitar **Rp4 juta**, tetapi harga perlu dikonfirmasi secara lokal. Rute ini dapat digabungkan dengan **Paisu Batango, Paisu Pok dan Pantai Poganda** dalam satu hari.
+**Dengan speedboat dari Luwuk:** Dari **Luwuk**, speedboat dapat menempuh perjalanan sekitar **1 jam** menuju kawasan Luk Panenteng, tergantung titik keberangkatan dan kondisi laut. Perahu untuk sekitar 10 orang pernah dilaporkan sekitar **Rp4 juta**, tetapi harga perlu dikonfirmasi secara lokal. Rute ini dapat digabungkan dengan **Paisu Batango, Paisu Pok dan [Pantai Poganda](/id/destinations/poganda-beach/)** dalam satu hari.
 
 Pilihan lain adalah feri umum dari Luwuk menuju **Salakan**, kemudian menginap dan melanjutkan perjalanan darat ke Luk Panenteng keesokan harinya.
 
@@ -96,5 +96,5 @@ Sekitar **air surut**, ketika air mata air lebih dominan. Saat air pasang, air l
 
 ## Destinasi Terkait
 
-**Danau Paisu Pok** adalah danau air tawar yang lebih terkenal di Luk Panenteng, sekitar 15 menit lebih jauh ke dalam desa. **Pantai Poganda** berjarak sekitar 2 km di selatan dan menawarkan pasir putih serta snorkeling. Di Pulau Banggai, **Pantai Bontolan** dan **Pantai Oyama** merupakan atraksi pesisir utama. Wisatawan yang berbasis di Luwuk juga dapat mengunjungi **Pantai Kilo 5** dan **Air Terjun Piala**.
+**Danau Paisu Pok** adalah danau air tawar yang lebih terkenal di Luk Panenteng, sekitar 15 menit lebih jauh ke dalam desa. **Pantai Poganda** berjarak sekitar 2 km di selatan dan menawarkan pasir putih serta snorkeling. Di Pulau Banggai, **[Pantai Bontolan](/id/destinations/bontolan-beach/)** dan **[Pantai Oyama](/id/destinations/oyama-beach/)** merupakan atraksi pesisir utama. Wisatawan yang berbasis di Luwuk juga dapat mengunjungi **[Pantai Kilo 5](/id/destinations/kilo-5-beach/)** dan **[Air Terjun Piala](/id/destinations/piala-waterfall/)**.
 

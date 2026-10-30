@@ -19,7 +19,7 @@ tags:
   - "Banggai Laut"
 ---
 
-First time in **Banggai Kepulauan**? The biggest challenge is not deciding what to see, but connecting the boats without rushing. This 4-day route is designed for travelers arriving from Australia who want to combine Luwuk waterfalls, Salakan, beaches around Banggai Laut, and Paisu Pok Lake on Peleng while keeping the daily transfers realistic.
+First time in **Banggai Kepulauan**? The biggest challenge is not deciding what to see, but connecting the boats without rushing. This 4-day route is designed for travelers arriving from Australia who want to combine Luwuk waterfalls, Salakan, beaches around Banggai Laut, and [Paisu Pok Lake](/en/destinations/paisu-pok-lake/) on Peleng while keeping the daily transfers realistic.
 
 It assumes you are already in Luwuk. Most international visitors arrive the day before via Makassar, so plan to overnight in Luwuk before Day 1.
 
@@ -43,7 +43,7 @@ For travelers who want the transport sequence handled, local operators such as B
 
 **Morning:** Start early by car to a launch harbor such as Kalumbatan, then continue by short speedboat transfers.
 
-**Beaches:** **Oyama Beach**, **Mandel Beach**, **Poganda Beach area**, and the **Pompon and Bone-Pompon area**. Most beaches have few facilities, so bring drinking water and sun protection.
+**Beaches:** **[Oyama Beach](/en/destinations/oyama-beach/)**, **[Mandel Beach](/en/destinations/mandel-beach/)**, **[Poganda Beach](/en/destinations/poganda-beach/) area**, and the **Pompon and Bone-Pompon area**. Most beaches have few facilities, so bring drinking water and sun protection.
 
 Snorkeling is generally in shallow water of around 1–4 meters. To look for the Banggai cardinalfish, ask your captain about sheltered mangrove bays.
 
@@ -51,7 +51,7 @@ Snorkeling is generally in shallow water of around 1–4 meters. To look for the
 
 **Morning:** Travel from Salakan toward western Peleng by car. Allow several hours for the road journey.
 
-**Midday:** Visit **Paisu Pok Lake**, a clear blue freshwater lake with a jetty, kayaks and swimming areas. It is especially attractive on sunny days. **Paisu Batango Lagoon** can be added nearby.
+**Midday:** Visit **Paisu Pok Lake**, a clear blue freshwater lake with a jetty, kayaks and swimming areas. It is especially attractive on sunny days. **[Paisu Batango](/en/destinations/paisu-batango-lake/) Lagoon** can be added nearby.
 
 **Evening:** Overnight in Leme Leme village on Peleng.
 
@@ -59,7 +59,7 @@ Snorkeling is generally in shallow water of around 1–4 meters. To look for the
 
 **Morning:** Take the public ferry from Leme Leme back to Luwuk. The crossing is around 2–3 hours.
 
-**Late morning onward:** Visit waterfalls around Luwuk, including **Piala Waterfall**, **Laumarang Waterfall**, and **Kilometer 5 Beach**.
+**Late morning onward:** Visit waterfalls around Luwuk, including **[Piala Waterfall](/en/destinations/piala-waterfall/)**, **[Laumarang Waterfall](/en/destinations/laumarang-waterfall/)**, and **Kilometer 5 Beach**.
 
 ## 4-Day Route at a Glance
 

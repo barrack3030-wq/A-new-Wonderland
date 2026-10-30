@@ -26,7 +26,7 @@ Pregunta qué tramos se hacen en coche, lancha rápida, embarcación local o fer
 
 ## 2. ¿Qué destinos están incluidos de verdad?
 
-Pide un itinerario escrito, no solo fotografías promocionales. Comprueba las paradas, su orden y el tiempo previsto en cada lugar. Si quieres visitar Paisupok, Paisu Batango, Kawalu Bay o la playa de Poganda, pregunta si cada sitio forma parte del paquete concreto y si la ruta es viable en tus fechas.
+Pide un itinerario escrito, no solo fotografías promocionales. Comprueba las paradas, su orden y el tiempo previsto en cada lugar. Si quieres visitar Paisupok, [Paisu Batango](/es/destinations/paisu-batango-lake/), [Kawalu Bay](/es/destinations/kawalu-bay/) o la playa de Poganda, pregunta si cada sitio forma parte del paquete concreto y si la ruta es viable en tus fechas.
 
 Que un lugar aparezca en la publicidad no significa que esté incluido en todas las excursiones.
 

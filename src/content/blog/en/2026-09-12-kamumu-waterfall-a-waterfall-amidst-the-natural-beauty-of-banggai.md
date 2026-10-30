@@ -18,7 +18,7 @@ tags:
 
 **Discover Hidden Paradise of Banggai**
 
-There is something magical about a waterfall hidden in the middle of a pine forest. The sound of rippling water falling from natural rock steps, the distinctive aroma of pine resin, and the cool air refreshing the lungs—everything creates an experience far removed from the hustle and bustle of the city. This is **Kamumu Waterfall**, a hidden gem in Kamumu Village, North Luwuk District, Banggai Regency, Central Sulawesi.
+There is something magical about a waterfall hidden in the middle of a pine forest. The sound of rippling water falling from natural rock steps, the distinctive aroma of pine resin, and the cool air refreshing the lungs—everything creates an experience far removed from the hustle and bustle of the city. This is **[Kamumu Waterfall](/en/destinations/kamumu-waterfall/)**, a hidden gem in Kamumu Village, North Luwuk District, Banggai Regency, Central Sulawesi.
 
 Located around 26 to 30 kilometers from the center of Luwuk City, this waterfall has caught the attention of local and international tourists alike thanks to its unique tiered formation resembling natural terraces. Surrounded by a lush pine forest, Kamumu Waterfall offers a peaceful, natural, and soothing atmosphere—perfect for those seeking tranquility far from the crowds.
 

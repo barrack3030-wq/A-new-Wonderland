@@ -22,7 +22,7 @@ Cet article vous invite à découvrir 10 destinations autour de Luwuk et des îl
 
 Luwuk est la capitale du kabupaten de Banggai et la principale porte d’accès aux îles Banggai. L’aéroport Syukuran Aminuddin Amir (LUW) propose des vols au départ de Jakarta et de Makassar. Si vous arrivez de Bali ou d’une autre ville, vous devrez généralement effectuer une correspondance dans l’un de ces hubs. Les itinéraires aériens peuvent changer ; vérifiez donc les horaires les plus récents avant de réserver votre billet.
 
-Depuis Luwuk, les îles de Banggai Kepulauan ne sont accessibles que par la mer. Des ferries et des bateaux en bois relient le Pelabuhan Rakyat de Luwuk à l’île de Peling (Leme Leme) et à Salakan. Les horaires, les tarifs et la disponibilité dépendent fortement de la météo et de l’état de la mer. Confirmez toujours les horaires les plus récents auprès du port ou d’un agent local avant votre départ. Pour certaines destinations comme le lac Paisu Pok, des vedettes rapides partent généralement de Teluk Lalong le matin.
+Depuis Luwuk, les îles de Banggai Kepulauan ne sont accessibles que par la mer. Des ferries et des bateaux en bois relient le Pelabuhan Rakyat de Luwuk à l’île de Peling (Leme Leme) et à Salakan. Les horaires, les tarifs et la disponibilité dépendent fortement de la météo et de l’état de la mer. Confirmez toujours les horaires les plus récents auprès du port ou d’un agent local avant votre départ. Pour certaines destinations comme le lac [Paisu Pok](/fr/destinations/paisu-pok-lake/), des vedettes rapides partent généralement de Teluk Lalong le matin.
 
 ## 10 destinations à Banggai et dans les environs
 
@@ -36,7 +36,7 @@ Toujours dans le village de Luk Panenteng, la plage de Poganda offre un sable bl
 
 ### 3. Pulau Dua Balantak
 
-Pulau Dua se trouve dans le district de Balantak Utara, au sein du kabupaten de Banggai. Pour y accéder, vous pouvez prendre la route depuis Luwuk jusqu’au village de Kampangar, puis poursuivre en bateau. L’île offre un superbe mélange de collines verdoyantes, de plages de sable blanc et d’eaux cristallines. Les activités possibles comprennent le snorkeling, la plongée, la baignade et l’ascension des collines pour admirer le lever ou le coucher du soleil.
+[Pulau Dua](/fr/destinations/pulau-dua-balantak/) se trouve dans le district de Balantak Utara, au sein du kabupaten de Banggai. Pour y accéder, vous pouvez prendre la route depuis Luwuk jusqu’au village de Kampangar, puis poursuivre en bateau. L’île offre un superbe mélange de collines verdoyantes, de plages de sable blanc et d’eaux cristallines. Les activités possibles comprennent le snorkeling, la plongée, la baignade et l’ascension des collines pour admirer le lever ou le coucher du soleil.
 
 ### 4. La plage de Kilo 5
 

@@ -46,7 +46,7 @@ Une escapade courte mais mémorable pour les voyageurs disposant de peu de temps
 - Déjeuner / découverte de la cuisine locale
 - Découverte des paysages tropicaux
 
-**Après-midi — Piala Waterfall**
+**Après-midi — [Piala Waterfall](/fr/destinations/piala-waterfall/)**
 
 - Visite de Piala Waterfall
 - Exploration de la nature tropicale

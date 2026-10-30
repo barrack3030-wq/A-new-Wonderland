@@ -18,7 +18,7 @@ tags:
 
 **Descubre el Paraíso Oculto de Banggai**
 
-Imagina despertarte por la mañana con el suave sonido de las olas, fina arena blanca bajo tus pies y un agua de mar turquesa tan cristalina que se ve el fondo. Sin ajetreo, sin colas para fotos, solo tú y la belleza inalterada de la naturaleza. Bienvenido a **Pantai Mandel**, una joya oculta en Banggai que ha permanecido fuera del radar del turismo masivo.
+Imagina despertarte por la mañana con el suave sonido de las olas, fina arena blanca bajo tus pies y un agua de mar turquesa tan cristalina que se ve el fondo. Sin ajetreo, sin colas para fotos, solo tú y la belleza inalterada de la naturaleza. Bienvenido a **[Pantai Mandel](/es/destinations/mandel-beach/)**, una joya oculta en Banggai que ha permanecido fuera del radar del turismo masivo.
 
 Ubicada entre la aldea de Kombutokan y la aldea de Palam, en el distrito de Totikum, regencia de Banggai, Célebes Central (Sulawesi Tengah), Pantai Mandel es la definición perfecta del *hidden paradise* que has estado buscando. Con una línea de costa de aproximadamente 2 kilómetros, esta playa ofrece una extensión de suave arena blanca, aguas cristalinas de color azul claro, y está rodeada de verdes colinas sombreadas por frondosos árboles que deleitan la vista.
 
@@ -70,7 +70,7 @@ Uno de los momentos más mágicos en Pantai Mandel es contemplar la **salida del
 Con un fondo de arena blanca, agua turquesa y colinas verdosas, Pantai Mandel es un paraíso para los fotógrafos. Cada rincón ofrece una composición perfecta para fotos de paisajes (*landscape*), retratos (*portrait*) o fotografía submarina (*underwater photography*).
 
 ### 5. Island Hopping
-Utiliza Pantai Mandel como base para explorar otros destinos de la isla de Peling, como el **lago Paisu Pok**, famoso por sus aguas azules como el cristal, la **playa Poganda** y la **cascada Piala**.
+Utiliza Pantai Mandel como base para explorar otros destinos de la isla de Peling, como el **lago [Paisu Pok](/es/destinations/paisu-pok-lake/)**, famoso por sus aguas azules como el cristal, la **playa Poganda** y la **cascada Piala**.
 
 
 ## ¿Cuál es la Mejor Época para Visitarla?

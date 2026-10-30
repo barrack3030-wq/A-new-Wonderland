@@ -186,7 +186,7 @@ Jika bepergian bersama kelompok atau memiliki itinerary tertentu, kapal pribadi 
 
 ### Jika Paisu Pok Adalah Tujuan Utama
 
-Jika Paisu Pok menjadi salah satu alasan utama Anda datang ke Banggai, rencanakan perjalanan dengan baik.
+Jika [Paisu Pok](/id/destinations/paisu-pok-lake/) menjadi salah satu alasan utama Anda datang ke Banggai, rencanakan perjalanan dengan baik.
 
 Paisu Pok bukan sekadar perjalanan singkat dari Luwuk. Untuk mencapainya, Anda perlu bergerak dari daratan menuju kepulauan dan kemudian melanjutkan dengan transportasi lokal melalui darat dan/atau laut sesuai rute.
 

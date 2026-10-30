@@ -19,7 +19,7 @@ tags:
   - "homestay"
 ---
 
-Paisu Pok Lake has long been a topic of conversation among travelers who follow Indonesian travel accounts. Its crystal-clear water, submerged tree trunks visible from the surface, and location on a remote island make this lake feel like a destination accessible only to those who truly intend to visit. The photos are indeed stunning, but the journey there requires more preparation than simply buying a plane ticket.
+[Paisu Pok Lake](/en/destinations/paisu-pok-lake/) has long been a topic of conversation among travelers who follow Indonesian travel accounts. Its crystal-clear water, submerged tree trunks visible from the surface, and location on a remote island make this lake feel like a destination accessible only to those who truly intend to visit. The photos are indeed stunning, but the journey there requires more preparation than simply buying a plane ticket.
 
 This article is not about why you should go. This article is about **what you need to know before you go**—from how to reach the lake, the costs you need to prepare for, the rules in place on site, to the small details that are often missed by first-time visitors to Banggai.
 

@@ -14,7 +14,7 @@ tags:
   - "Viajes"
 ---
 
-Banggai es una de las regiones más fascinantes—y más a menudo pospuestas—de Célebes Central (Sulawesi Tengah). La razón no es que el lugar carezca de atractivo. Todo lo contrario: el lago Paisu Pok con sus aguas cristalinas como el vidrio, el archipiélago de las Islas Banggai, las cascadas ocultas alrededor de Luwuk y los arrecifes de coral vírgenes hacen que esta región se sienta como una versión de Indonesia aún no afectada por el turismo masivo.
+Banggai es una de las regiones más fascinantes—y más a menudo pospuestas—de Célebes Central (Sulawesi Tengah). La razón no es que el lugar carezca de atractivo. Todo lo contrario: el lago [Paisu Pok](/es/destinations/paisu-pok-lake/) con sus aguas cristalinas como el vidrio, el archipiélago de las Islas Banggai, las cascadas ocultas alrededor de Luwuk y los arrecifes de coral vírgenes hacen que esta región se sienta como una versión de Indonesia aún no afectada por el turismo masivo.
 
 El problema es que viajar a Banggai no es tan sencillo como volar a Bali o Yogyakarta. Debe tener en cuenta los vuelos, los cruces en ferri, los desplazamientos por carretera y el tiempo transcurrido en cada punto. La pregunta «¿cuántos días necesito?» se vuelve crucial, y la respuesta depende de lo que desee ver y de qué tan adentro del archipiélago quiera adentrarse.
 
@@ -24,9 +24,9 @@ Este artículo analiza duraciones de viaje realistas para diferentes tipos de vi
 
 Antes de abordar la duración, es importante comprender la geografía de Banggai. Esta región se divide en varias regencias:
 
-**Regencia de Banggai** con su capital Luwuk, que sirve como puerta de entrada principal. Aquí encontrará el Aeropuerto Syukuran Aminuddin Amir (LUW), así como destinos continentales como la Cascada Salodik, la Cascada Piala y la Playa Kilo 5.
+**Regencia de Banggai** con su capital Luwuk, que sirve como puerta de entrada principal. Aquí encontrará el Aeropuerto Syukuran Aminuddin Amir (LUW), así como destinos continentales como la [Cascada Salodik](/es/destinations/salodik-waterfall/), la [Cascada Piala](/es/destinations/piala-waterfall/) y la [Playa Kilo 5](/es/destinations/kilo-5-beach/).
 
-**Regencia de Banggai Kepulauan** con la Isla Peleng como la isla más grande. Aquí es donde se encuentra el lago Paisu Pok, junto con destinos como la Laguna Paisu Batango y la Playa Poganda.
+**Regencia de Banggai Kepulauan** con la Isla Peleng como la isla más grande. Aquí es donde se encuentra el lago Paisu Pok, junto con destinos como la Laguna [Paisu Batango](/es/destinations/paisu-batango-lake/) y la [Playa Poganda](/es/destinations/poganda-beach/).
 
 **Regencia de Banggai Laut** con Salakan como centro administrativo. Esta región ofrece pequeñas islas, playas ocultas y puntos de esnórquel aún muy vírgenes.
 

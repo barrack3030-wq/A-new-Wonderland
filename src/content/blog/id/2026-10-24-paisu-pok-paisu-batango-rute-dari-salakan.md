@@ -15,7 +15,7 @@ tags:
   - "Wisata Banggai Kepulauan"
 ---
 
-Jika berangkat dari Salakan, mengunjungi Paisu Pok dan Mata Air Paisu Batango dalam satu rangkaian perjalanan dapat membantu Anda memanfaatkan waktu di kawasan Luk Panenteng. Namun, perjalanan sebaiknya direncanakan berdasarkan kondisi jalan, waktu berangkat, dan aturan terbaru di lokasi—bukan hanya berdasarkan jarak pada peta.
+Jika berangkat dari Salakan, mengunjungi [Paisu Pok](/id/destinations/paisu-pok-lake/) dan Mata Air [Paisu Batango](/id/destinations/paisu-batango-lake/) dalam satu rangkaian perjalanan dapat membantu Anda memanfaatkan waktu di kawasan Luk Panenteng. Namun, perjalanan sebaiknya direncanakan berdasarkan kondisi jalan, waktu berangkat, dan aturan terbaru di lokasi—bukan hanya berdasarkan jarak pada peta.
 
 Kedua tempat tersebut berada di Desa Luk Panenteng, Kecamatan Bulagi Utara, Kabupaten Banggai Kepulauan. Panduan perjalanan Wikivoyage mencatat bahwa Paisu Batango berada dekat gerbang Paisu Pok dan dapat dicapai dengan berjalan kaki ke arah barat. Anggap keterangan jarak sebagai orientasi awal, bukan jaminan durasi untuk setiap pengunjung.
 
@@ -27,7 +27,7 @@ Kedua tempat tersebut berada di Desa Luk Panenteng, Kecamatan Bulagi Utara, Kabu
 
 **3. Sisihkan waktu untuk Paisu Batango.** Setelah Paisu Pok, tanyakan jalur berjalan kaki yang benar ke mata air. Ikuti petunjuk lokal dan jangan menerobos pekarangan atau jalur yang dibatasi. Jika membawa orang lanjut usia atau anak kecil, periksa kondisi permukaan jalan terlebih dahulu.
 
-**4. Tambahkan Pantai Poganda hanya jika waktunya realistis.** Poganda juga berada di kawasan Luk Panenteng. Namun, jangan memasukkan terlalu banyak titik jika Anda harus kembali ke Salakan pada jam tertentu. Pastikan rute dan kondisi jalan dikonfirmasi secara lokal.
+**4. Tambahkan [Pantai Poganda](/id/destinations/poganda-beach/) hanya jika waktunya realistis.** Poganda juga berada di kawasan Luk Panenteng. Namun, jangan memasukkan terlalu banyak titik jika Anda harus kembali ke Salakan pada jam tertentu. Pastikan rute dan kondisi jalan dikonfirmasi secara lokal.
 
 ## Biaya: apa yang perlu dipastikan sebelum berangkat?
 

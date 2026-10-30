@@ -7,12 +7,13 @@ image: /images/piala.jpg
 imageAlt: "Cascada de Piala cerca de Luwuk, Banggai"
 author: Nature Lover
 pubDate: "2026-10-15T00:00:00Z"
+translationKey: "2026-10-15-exploring-piala-waterfall"
 tags:
   - Waterfall
   - Trekking
 ---
 
-**Descubre la belleza natural de la Cascada de Piala, una de las joyas escondidas cerca de Luwuk, en Banggai, Indonesia.**
+**Descubre la belleza natural de la [Cascada de Piala](/es/destinations/piala-waterfall/), una de las joyas escondidas cerca de Luwuk, en Banggai, Indonesia.**
 
 Imagina alejarte de las calles concurridas, seguir el sonido del agua y llegar a una cascada tropical rodeada de exuberante vegetación.
 
@@ -214,14 +215,14 @@ La región de Banggai ofrece numerosos destinos espectaculares que pueden combin
 
 - Lago Paisupok
 - Lago Paisubatango
-- Playa Poganda
-- Playa Mandel
-- Long Beach
-- Playa Oyama
-- Playa Bontolan
+- [Playa Poganda](/es/destinations/poganda-beach/)
+- [Playa Mandel](/es/destinations/mandel-beach/)
+- [Long Beach](/es/destinations/long-beach/)
+- [Playa Oyama](/es/destinations/oyama-beach/)
+- [Playa Bontolan](/es/destinations/bontolan-beach/)
 - Bahía Kawalu
-- Pulo Dua
-- Mbuang-Mbuang
+- [Pulo Dua](/es/destinations/pulau-dua-balantak/)
+- [Mbuang-Mbuang](/es/destinations/mbuang-mbuang-island/)
 - Islas Banggai
 
 Puedes crear una aventura que combine **cascadas, playas, islas, lagunas, snorkel, cultura local y paisajes tropicales**.

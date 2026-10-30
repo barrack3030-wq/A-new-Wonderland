@@ -38,7 +38,7 @@ Haze can reduce the clarity of views over the town, bay, coastline and surroundi
 
 ### 3. Check each nature spot locally
 
-Travelers may be planning visits to Piala Waterfall, Salodik Waterfall, Kilo Lima Beach, Poganda Beach, Lake Paisupok, Paisu Batango and Kawalu Bay. The reports cited here do not establish that all these destinations are closed or affected equally.
+Travelers may be planning visits to [Piala Waterfall](/en/destinations/piala-waterfall/), [Salodik Waterfall](/en/destinations/salodik-waterfall/), Kilo Lima Beach, [Poganda Beach](/en/destinations/poganda-beach/), Lake Paisupok, [Paisu Batango](/en/destinations/paisu-batango-lake/) and [Kawalu Bay](/en/destinations/kawalu-bay/). The reports cited here do not establish that all these destinations are closed or affected equally.
 
 Before leaving, ask a local guide or destination operator about current access, visibility and conditions on site. For swimming, snorkeling, trekking or boat trips, follow local operator guidance and postpone activities if conditions are not safe.
 

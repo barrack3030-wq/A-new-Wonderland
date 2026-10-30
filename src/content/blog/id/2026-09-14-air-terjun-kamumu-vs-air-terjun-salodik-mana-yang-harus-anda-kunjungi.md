@@ -14,7 +14,7 @@ tags:
   - "Travel"
 ---
 
-Luwuk dan sekitarnya menyimpan banyak air terjun, tetapi dua nama yang paling sering muncul dalam percakapan wisatawan adalah **Air Terjun Kamumu** dan **Air Terjun Salodik**. Keduanya berada di Kecamatan Luwuk Utara, berjarak hanya beberapa kilometer satu sama lain, dan sama-sama menawarkan aliran air bertingkat yang jernih. Namun pengalaman di masing-masing tempat bisa terasa sangat berbeda, tergantung apa yang Anda cari.
+Luwuk dan sekitarnya menyimpan banyak air terjun, tetapi dua nama yang paling sering muncul dalam percakapan wisatawan adalah **[Air Terjun Kamumu](/id/destinations/kamumu-waterfall/)** dan **[Air Terjun Salodik](/id/destinations/salodik-waterfall/)**. Keduanya berada di Kecamatan Luwuk Utara, berjarak hanya beberapa kilometer satu sama lain, dan sama-sama menawarkan aliran air bertingkat yang jernih. Namun pengalaman di masing-masing tempat bisa terasa sangat berbeda, tergantung apa yang Anda cari.
 
 Artikel ini membandingkan keduanya secara langsung—dari akses, fasilitas, suasana, hingga siapa yang paling cocok mengunjungi masing-masing. Tidak ada yang benar-benar "lebih baik" di antara keduanya; yang ada adalah pilihan yang lebih sesuai dengan preferensi Anda.
 

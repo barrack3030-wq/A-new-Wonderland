@@ -29,7 +29,7 @@ youtube: "https://www.youtube.com/watch?v=P6PO7BwgQa0"
 
 ## Long Beach
 
-Long Beach—locally known as **Pantai Pasir Panjang**—is a white-sand beach on **Banggai Island in Banggai Laut Regency, Central Sulawesi**. It sits next to **Oyama Beach** and, like Oyama, is **reachable only by boat**, typically from the villages of **Popisi** or **Lokotoy**. There is no road access, no entrance fee, and no formal infrastructure. What you get instead is a quiet, undeveloped shoreline with clear water and direct access to the sea.
+Long Beach—locally known as **Pantai Pasir Panjang**—is a white-sand beach on **Banggai Island in Banggai Laut Regency, Central Sulawesi**. It sits next to **[Oyama Beach](/en/destinations/oyama-beach/)** and, like Oyama, is **reachable only by boat**, typically from the villages of **Popisi** or **Lokotoy**. There is no road access, no entrance fee, and no formal infrastructure. What you get instead is a quiet, undeveloped shoreline with clear water and direct access to the sea.
 
 Long Beach is commonly included in boat trips around the Banggai Laut coast together with nearby beaches such as Oyama.
 
@@ -43,7 +43,7 @@ The atmosphere is quiet rather than developed. There are no formal beach facilit
 
 ## Snorkeling and Marine Life
 
-Snorkeling is possible **directly from the beach** when sea conditions are calm. The reef is not described as being as rich as Pantai Bontolan, but coral and reef life can be found close to shore.
+Snorkeling is possible **directly from the beach** when sea conditions are calm. The reef is not described as being as rich as [Pantai Bontolan](/en/destinations/bontolan-beach/), but coral and reef life can be found close to shore.
 
 Because rental options on Banggai Island can be limited, travelers planning to snorkel should bring their own mask, fins and basic swimming equipment.
 
@@ -87,4 +87,4 @@ No formal food or accommodation facilities are described at the beach. Bring you
 
 ## Related Destinations
 
-**Oyama Beach** is immediately next to Long Beach and is commonly visited on the same boat trip. **Tanjung Gundul** is a nearby limestone cliff with a sea-carved opening, reached by boat and a short swim. **Pantai Bontolan** in Bone Baru offers snorkeling over coral and habitat for endemic Banggai cardinalfish. For travelers continuing to Peleng Island, **Paisu Pok Lake** and **Paisu Batango Spring** are two of the region's signature freshwater destinations.
+**Oyama Beach** is immediately next to Long Beach and is commonly visited on the same boat trip. **Tanjung Gundul** is a nearby limestone cliff with a sea-carved opening, reached by boat and a short swim. **Pantai Bontolan** in Bone Baru offers snorkeling over coral and habitat for endemic Banggai cardinalfish. For travelers continuing to Peleng Island, **[Paisu Pok Lake](/en/destinations/paisu-pok-lake/)** and **[Paisu Batango](/en/destinations/paisu-batango-lake/) Spring** are two of the region's signature freshwater destinations.

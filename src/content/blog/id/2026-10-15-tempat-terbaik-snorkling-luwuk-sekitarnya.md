@@ -27,7 +27,7 @@ Panduan ini membandingkan beberapa tempat yang layak dipertimbangkan, sekaligus 
 
 *Foto: [The World Travel Guy — Banggai Islands](https://theworldtravelguy.com/banggai-islands-luwuk-indonesia/). Hak penggunaan komersial perlu dikonfirmasi.*
 
-Poganda Beach di Pulau Peleng dikenal dengan pantai berpasir putih dan air dangkal yang menarik untuk menikmati pesisir. Panduan perjalanan Banggai menyebut terumbu berada tidak jauh dari pantai, tetapi visibilitas dan kondisi laut tetap bergantung pada cuaca, pasang surut, serta aktivitas setempat.
+[Poganda Beach](/id/destinations/poganda-beach/) di Pulau Peleng dikenal dengan pantai berpasir putih dan air dangkal yang menarik untuk menikmati pesisir. Panduan perjalanan Banggai menyebut terumbu berada tidak jauh dari pantai, tetapi visibilitas dan kondisi laut tetap bergantung pada cuaca, pasang surut, serta aktivitas setempat.
 
 **Cocok untuk:** wisatawan yang ingin menggabungkan waktu santai di pantai dengan snorkeling ringan. Tanyakan kepada warga atau pemandu lokal tentang titik masuk yang aman, kondisi arus, dan apakah ada area yang perlu dihindari.
 
@@ -37,7 +37,7 @@ Poganda Beach di Pulau Peleng dikenal dengan pantai berpasir putih dan air dangk
 
 *Foto: [LuwukBangai](https://luwukbanggai.com/en/banggai-islands-sulawesi-adventure/). Hak penggunaan komersial perlu dikonfirmasi.*
 
-Pulo Dua di kawasan Balantak menawarkan lanskap pulau, pantai, dan perairan yang bisa dijelajahi melalui perjalanan perahu. Tempat ini cocok bagi wisatawan yang ingin menggabungkan pemandangan dari darat dengan aktivitas laut. Dinas Pariwisata Sulawesi Tengah juga mencatat Pulo Dua sebagai daya tarik wisata bahari.
+[Pulo Dua](/id/destinations/pulau-dua-balantak/) di kawasan Balantak menawarkan lanskap pulau, pantai, dan perairan yang bisa dijelajahi melalui perjalanan perahu. Tempat ini cocok bagi wisatawan yang ingin menggabungkan pemandangan dari darat dengan aktivitas laut. Dinas Pariwisata Sulawesi Tengah juga mencatat Pulo Dua sebagai daya tarik wisata bahari.
 
 Jangan menganggap setiap sisi pulau cocok untuk snorkeling. Minta operator memilih lokasi berdasarkan gelombang, arus, visibilitas, dan kondisi terumbu pada hari kunjungan. Perjalanan dari Luwuk perlu direncanakan sebagai kunjungan tersendiri, bukan persinggahan singkat tanpa menghitung waktu.
 
@@ -47,7 +47,7 @@ Jangan menganggap setiap sisi pulau cocok untuk snorkeling. Minta operator memil
 
 *Foto: [The World Travel Guy — Banggai Islands](https://theworldtravelguy.com/banggai-islands-luwuk-indonesia/). Hak penggunaan komersial perlu dikonfirmasi.*
 
-Oyama Beach menarik untuk menikmati pantai, air laut, dan suasana yang lebih tenang. Sebelum menjadikannya tujuan snorkeling utama, konfirmasikan kepada pemandu lokal apakah titik tertentu sedang aman dan memiliki visibilitas yang memadai. Fasilitas dan transportasi dapat terbatas, sehingga sebaiknya atur kendaraan atau perahu terlebih dahulu.
+[Oyama Beach](/id/destinations/oyama-beach/) menarik untuk menikmati pantai, air laut, dan suasana yang lebih tenang. Sebelum menjadikannya tujuan snorkeling utama, konfirmasikan kepada pemandu lokal apakah titik tertentu sedang aman dan memiliki visibilitas yang memadai. Fasilitas dan transportasi dapat terbatas, sehingga sebaiknya atur kendaraan atau perahu terlebih dahulu.
 
 ## 4. Perairan Kepulauan Banggai — pilih titik berdasarkan kondisi hari itu
 
@@ -81,7 +81,7 @@ Saat berada di Togean, operator lokal dapat membantu memilih lokasi snorkeling s
 
 *Foto: [Dinas Pariwisata Kabupaten Banggai Kepulauan](https://pariwisata.banggaikep.go.id/wisata-danau/). Periksa ketentuan penggunaan foto.*
 
-Paisupok Lake sering dipadukan dengan perjalanan ke pantai-pantai di Pulau Peleng. Ini adalah danau air tawar, bukan spot snorkeling laut, sehingga jangan memasukkannya ke daftar terumbu karang. Datang untuk menikmati air jernih dan pemandangan; berenang atau menggunakan perahu hanya jika diizinkan pengelola dan kondisi setempat aman.
+[Paisupok Lake](/id/destinations/paisu-pok-lake/) sering dipadukan dengan perjalanan ke pantai-pantai di Pulau Peleng. Ini adalah danau air tawar, bukan spot snorkeling laut, sehingga jangan memasukkannya ke daftar terumbu karang. Datang untuk menikmati air jernih dan pemandangan; berenang atau menggunakan perahu hanya jika diizinkan pengelola dan kondisi setempat aman.
 
 ## Cara memilih lokasi snorkeling
 

@@ -31,7 +31,7 @@ travelTips:
 
 Kawalu Bay adalah teluk tenang dengan air berwarna toska di **Kepulauan Banggai, Sulawesi Tengah, Indonesia**. Panduan ini membahas lokasi Kawalu Bay, cara berkunjung, akses perahu, snorkeling, diving, waktu terbaik, dan hal yang perlu dibawa. Teluk ini dikenal karena permukaannya yang tenang, garis pantai yang dikelilingi mangrove, dan perbukitan hijau di sekitarnya. Kombinasi tersebut menjadikannya salah satu lanskap bahari yang menarik untuk dijelajahi melalui perjalanan perahu lokal.
 
-Kawalu Bay biasanya dikunjungi bersama destinasi Kepulauan Banggai lainnya, seperti **Paisu Pok Lake** dan **Paisu Batango Spring**. Untuk mengunjungi teluk ini, wisatawan umumnya mengatur perjalanan melalui homestay, penginapan, atau pemandu lokal.
+Kawalu Bay biasanya dikunjungi bersama destinasi Kepulauan Banggai lainnya, seperti **[Paisu Pok Lake](/id/destinations/paisu-pok-lake/)** dan **[Paisu Batango](/id/destinations/paisu-batango-lake/) Spring**. Untuk mengunjungi teluk ini, wisatawan umumnya mengatur perjalanan melalui homestay, penginapan, atau pemandu lokal.
 
 Perlu diperhatikan bahwa terdapat **Kawalu Beach atau Pantai Manado** di **Desa Siuna, Kecamatan Pagimana**, Kabupaten Banggai. Lokasi tersebut berbeda dengan Kawalu Bay yang dibahas dalam artikel ini. Kawalu Bay yang dimaksud berada di **Kabupaten Banggai Kepulauan** dan lebih tepat dijelajahi dengan perahu.
 
@@ -116,4 +116,4 @@ Akhir pagi hingga awal siang biasanya memberikan cahaya kuat untuk menonjolkan w
 
 Kawalu Bay sering digabungkan dengan destinasi Kepulauan Banggai lainnya dalam satu perjalanan perahu. **Paisu Pok Lake** merupakan danau air tawar biru yang terkenal di Pulau Peleng, sementara **Paisu Batango Spring** menawarkan pengalaman air tawar berwarna jernih di kawasan yang sama.
 
-**Poganda Beach** menawarkan pantai berpasir putih dan snorkeling, sedangkan **Oyama Beach** di Banggai Laut merupakan destinasi pesisir lain yang dapat dijelajahi dengan perahu. Untuk wisatawan yang berbasis di Luwuk, **Piala Waterfall** dan **Bukit Teletubbies** dapat menjadi pilihan destinasi daratan sebelum atau setelah perjalanan ke Kepulauan Banggai.
+**[Poganda Beach](/id/destinations/poganda-beach/)** menawarkan pantai berpasir putih dan snorkeling, sedangkan **[Oyama Beach](/id/destinations/oyama-beach/)** di Banggai Laut merupakan destinasi pesisir lain yang dapat dijelajahi dengan perahu. Untuk wisatawan yang berbasis di Luwuk, **[Piala Waterfall](/id/destinations/piala-waterfall/)** dan **[Bukit Teletubbies](/id/destinations/bukit-teletubbies/)** dapat menjadi pilihan destinasi daratan sebelum atau setelah perjalanan ke Kepulauan Banggai.

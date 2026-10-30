@@ -15,7 +15,7 @@ tags:
   - "travel tips"
 ---
 
-Kamumu Waterfall is known for its tiered water streams, surrounding pine forest, and cool atmosphere throughout the day. One of Kamumu's advantages compared to many other waterfalls in Sulawesi is its **water flow, which tends to be stable year-round**—both in the dry and rainy seasons. This means you do not need to worry about finding a dried-up waterfall when visiting during the warmer months.
+[Kamumu Waterfall](/en/destinations/kamumu-waterfall/) is known for its tiered water streams, surrounding pine forest, and cool atmosphere throughout the day. One of Kamumu's advantages compared to many other waterfalls in Sulawesi is its **water flow, which tends to be stable year-round**—both in the dry and rainy seasons. This means you do not need to worry about finding a dried-up waterfall when visiting during the warmer months.
 
 However, "can be visited anytime" does not mean "it is the same whenever you come." Your experience will be heavily influenced by the time of year, the time of day, and the weather conditions at that moment. This article discusses all three, plus what you need to prepare.
 

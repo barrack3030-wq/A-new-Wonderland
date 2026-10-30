@@ -91,4 +91,4 @@ Non. Il n’y a pas de **homestay sur la plage**. Les options les plus proches s
 
 ## Destinations associées
 
-**Pantai Bontolan** à Bone Baru peut être combinée avec Oyama lors d’une même sortie en bateau. **Long Beach / Pantai Pasir Panjang** est une autre plage accessible en bateau dans la région de Banggai Laut. **Tanjung Gundul** est une falaise calcaire voisine avec une ouverture creusée par la mer. Sur Peleng, **Paisu Pok Lake** et **Paisu Batango Spring** font partie des destinations d’eau douce emblématiques.
+**[Pantai Bontolan](/fr/destinations/bontolan-beach/)** à Bone Baru peut être combinée avec Oyama lors d’une même sortie en bateau. **[Long Beach](/fr/destinations/long-beach/) / Pantai Pasir Panjang** est une autre plage accessible en bateau dans la région de Banggai Laut. **Tanjung Gundul** est une falaise calcaire voisine avec une ouverture creusée par la mer. Sur Peleng, **[Paisu Pok Lake](/fr/destinations/paisu-pok-lake/)** et **[Paisu Batango](/fr/destinations/paisu-batango-lake/) Spring** font partie des destinations d’eau douce emblématiques.

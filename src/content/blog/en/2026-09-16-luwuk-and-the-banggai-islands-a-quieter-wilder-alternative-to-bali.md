@@ -44,7 +44,7 @@ Luwuk is not simply a transit point. The city and its surrounding areas offer pl
 
 ### Paisu Pok Lake: The Blue Lake in the Heart of Banggai
 
-This is one of the area's icons. Paisu Pok Lake is located in Luk Panenteng Village, Bulagi Utara District, in Banggai Islands Regency. The water is exceptionally clear, allowing the sandy and rocky lake bottom to be seen clearly. Its color changes depending on the sunlight, ranging from silvery green to deep turquoise blue.
+This is one of the area's icons. [Paisu Pok Lake](/en/destinations/paisu-pok-lake/) is located in Luk Panenteng Village, Bulagi Utara District, in Banggai Islands Regency. The water is exceptionally clear, allowing the sandy and rocky lake bottom to be seen clearly. Its color changes depending on the sunlight, ranging from silvery green to deep turquoise blue.
 
 The name Paisu Pok is said to mean "black water" in the local language, although the water itself is not black at all. What is clear is that the lake has become a magnet for both domestic and international travelers in recent years.
 
@@ -52,19 +52,19 @@ Around the lake, visitors can rent small boats, canoes, or paddleboards to explo
 
 ### Piala Waterfall: Turquoise Green Water Close to the City
 
-Piala Waterfall is located in Hanga-Hanga Village, South Luwuk District, only about 20 minutes by car from central Luwuk. The waterfall features a clear blue-green natural pool, while the unique shape of the flowing water resembles a cup or trophy, which is where its name comes from.
+[Piala Waterfall](/en/destinations/piala-waterfall/) is located in Hanga-Hanga Village, South Luwuk District, only about 20 minutes by car from central Luwuk. The waterfall features a clear blue-green natural pool, while the unique shape of the flowing water resembles a cup or trophy, which is where its name comes from.
 
 It is a popular destination for swimming and photography. Entrance fees are reported to be very affordable, around IDR 5,000 to IDR 10,000, and the site is open daily from around 7:30 AM to 5:00 PM Central Indonesia Time. Because of its proximity to the city, Piala Waterfall can be a good choice for filling the first or final half-day of your stay in Luwuk.
 
 ### Salodik and Kamumu Waterfalls
 
-Besides Piala, there are several other waterfalls around Luwuk offering a different atmosphere. Salodik Waterfall is located in Salodik Village, North Luwuk District, around 20 kilometers from the city center and about an hour away by road. The waterfall features several tiers and is surrounded by lush forest.
+Besides Piala, there are several other waterfalls around Luwuk offering a different atmosphere. [Salodik Waterfall](/en/destinations/salodik-waterfall/) is located in Salodik Village, North Luwuk District, around 20 kilometers from the city center and about an hour away by road. The waterfall features several tiers and is surrounded by lush forest.
 
-Meanwhile, Kamumu Waterfall is located in Kamumu Village, also in North Luwuk District, around 26 kilometers from Luwuk. What makes Kamumu different is the pine forest surrounding it, creating a cool and peaceful atmosphere. Visitors may need to walk for 15 to 20 minutes after reaching the village.
+Meanwhile, [Kamumu Waterfall](/en/destinations/kamumu-waterfall/) is located in Kamumu Village, also in North Luwuk District, around 26 kilometers from Luwuk. What makes Kamumu different is the pine forest surrounding it, creating a cool and peaceful atmosphere. Visitors may need to walk for 15 to 20 minutes after reaching the village.
 
 ### Kilo 5 Beach: Clear Water Close to Town
 
-If you want to enjoy a beach without taking a boat to an island, Kilo 5 Beach is the answer. Located only about 5 kilometers from central Luwuk, the beach has white sand and relatively clear seawater, allowing coral reefs and small fish to be seen from the surface.
+If you want to enjoy a beach without taking a boat to an island, [Kilo 5 Beach](/en/destinations/kilo-5-beach/) is the answer. Located only about 5 kilometers from central Luwuk, the beach has white sand and relatively clear seawater, allowing coral reefs and small fish to be seen from the surface.
 
 At the beach, you can rent snorkeling equipment, try a banana boat, or simply sit at the seaside cafés serving affordable food and drinks. It is a good place to relax and enjoy the sunset after a full day of exploration.
 

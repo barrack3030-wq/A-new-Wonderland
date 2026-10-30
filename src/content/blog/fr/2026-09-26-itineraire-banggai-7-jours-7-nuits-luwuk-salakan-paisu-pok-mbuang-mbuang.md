@@ -18,7 +18,7 @@ tags:
 ---
 
 
-Pour découvrir **Luwuk et les îles Banggai** sans courir, cet itinéraire de 7 jours et 7 nuits combine route, ferry, plages et destinations marines plus isolées. Il comprend **Paisu Pok, Mbuang-Mbuang, Bontolan, Oyama, Long Beach, Pulo Dua, Kamumu et Salodik**.
+Pour découvrir **Luwuk et les îles Banggai** sans courir, cet itinéraire de 7 jours et 7 nuits combine route, ferry, plages et destinations marines plus isolées. Il comprend **[Paisu Pok](/fr/destinations/paisu-pok-lake/), [Mbuang-Mbuang](/fr/destinations/mbuang-mbuang-island/), Bontolan, Oyama, [Long Beach](/fr/destinations/long-beach/), [Pulo Dua](/fr/destinations/pulau-dua-balantak/), Kamumu et Salodik**.
 
 > Les ferries et activités maritimes dépendent de la météo, de l’état de la mer et des horaires locaux.
 

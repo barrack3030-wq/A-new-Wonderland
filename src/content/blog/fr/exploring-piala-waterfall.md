@@ -7,6 +7,7 @@ image: /images/piala.jpg
 imageAlt: "Cascade de Piala près de Luwuk, Banggai"
 author: Nature Lover
 pubDate: "2026-10-15T00:00:00Z"
+translationKey: "2026-10-15-exploring-piala-waterfall"
 tags:
   - Waterfall
   - Trekking
@@ -143,7 +144,7 @@ La cascade de Piala peut facilement être intégrée à une journée complète d
 
 Selon vos centres d'intérêt et votre temps disponible, votre itinéraire peut inclure :
 
-**Cascade de Piala** — nature et eau rafraîchissante.
+**[Cascade de Piala](/fr/destinations/piala-waterfall/)** — nature et eau rafraîchissante.
 
 **Côte de Luwuk** — paysages marins et panoramas.
 
@@ -215,14 +216,14 @@ La région de Banggai offre de nombreuses destinations extraordinaires :
 
 - Lac Paisupok
 - Lac Paisubatango
-- Plage de Poganda
-- Plage de Mandel
-- Long Beach
-- Plage d'Oyama
-- Plage de Bontolan
+- [Plage de Poganda](/fr/destinations/poganda-beach/)
+- [Plage de Mandel](/fr/destinations/mandel-beach/)
+- [Long Beach](/fr/destinations/long-beach/)
+- [Plage d'Oyama](/fr/destinations/oyama-beach/)
+- [Plage de Bontolan](/fr/destinations/bontolan-beach/)
 - Baie de Kawalu
-- Pulo Dua
-- Mbuang-Mbuang
+- [Pulo Dua](/fr/destinations/pulau-dua-balantak/)
+- [Mbuang-Mbuang](/fr/destinations/mbuang-mbuang-island/)
 - Îles Banggai
 
 Vous pouvez créer un itinéraire combinant **cascades, plages, îles, lagons, snorkeling, culture locale et paysages tropicaux**.

@@ -26,7 +26,7 @@ Minta operator menjelaskan bagian perjalanan yang menggunakan mobil, kapal cepat
 
 ## 2. Destinasi mana yang benar-benar termasuk dalam itinerary?
 
-Minta daftar destinasi secara tertulis, bukan hanya foto promosi. Pastikan nama tempat, urutan kunjungan, dan perkiraan waktu di setiap lokasi jelas. Jika Anda ingin mengunjungi Paisupok, Paisu Batango, Kawalu Bay, atau Pantai Poganda, tanyakan secara spesifik apakah semuanya masuk dalam paket dan apakah rutenya realistis untuk tanggal perjalanan Anda.
+Minta daftar destinasi secara tertulis, bukan hanya foto promosi. Pastikan nama tempat, urutan kunjungan, dan perkiraan waktu di setiap lokasi jelas. Jika Anda ingin mengunjungi Paisupok, [Paisu Batango](/id/destinations/paisu-batango-lake/), [Kawalu Bay](/id/destinations/kawalu-bay/), atau [Pantai Poganda](/id/destinations/poganda-beach/), tanyakan secara spesifik apakah semuanya masuk dalam paket dan apakah rutenya realistis untuk tanggal perjalanan Anda.
 
 Nama destinasi yang disebut saat promosi belum tentu semuanya termasuk dalam paket yang Anda pilih.
 

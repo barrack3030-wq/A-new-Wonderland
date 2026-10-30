@@ -7,6 +7,7 @@ image: /images/Poganda-Beach-Banggai-IndonesiaJuara-Trip.webp
 imageAlt: 'Poganda Beach, Banggai, Indonesia'
 author: 'aji'
 pubDate: "2026-09-08T21:30:00"
+translationKey: "2026-09-08-five-reasons-banggai-hidden-paradise"
 tags:
   - Banggai
   - Luwuk
@@ -35,7 +36,7 @@ Banggai no depende de un único paisaje de postal.
 
 En un mismo viaje puedes pasar de un lago sereno a una playa tropical, de una cascada rodeada de bosque a una pequeña isla a la que se llega en barco.
 
-**Paisupok Lake** ofrece aguas tranquilas y transparentes. **Poganda Beach** y otras zonas costeras muestran la belleza clásica de una escapada tropical, mientras que **Piala Waterfall** y **Kamumu Waterfall** revelan una faceta más verde y aventurera.
+**[Paisupok Lake](/es/destinations/paisu-pok-lake/)** ofrece aguas tranquilas y transparentes. **[Poganda Beach](/es/destinations/poganda-beach/)** y otras zonas costeras muestran la belleza clásica de una escapada tropical, mientras que **[Piala Waterfall](/es/destinations/piala-waterfall/)** y **[Kamumu Waterfall](/es/destinations/kamumu-waterfall/)** revelan una faceta más verde y aventurera.
 
 Esa variedad mantiene vivo el viaje.
 

@@ -98,4 +98,4 @@ The waterfall is reported to flow year-round, including the dry season. Road acc
 
 ## Related Destinations
 
-**Piala Waterfall** and **Laumarang Waterfall** in Hanga-Hanga offer more demanding forest approaches and different waterfall scenery. **Mokokawa Waterfall** is another terraced cascade with a longer trail. For a waterfall-and-beach combination near Luwuk, **Kilo 5 Beach** is an easy coastal addition. Travelers continuing toward Peleng Island can add **Paisu Pok Lake** to a longer Banggai itinerary.
+**[Piala Waterfall](/en/destinations/piala-waterfall/)** and **[Laumarang Waterfall](/en/destinations/laumarang-waterfall/)** in Hanga-Hanga offer more demanding forest approaches and different waterfall scenery. **[Mokokawa Waterfall](/en/destinations/mokokawa-waterfall/)** is another terraced cascade with a longer trail. For a waterfall-and-beach combination near Luwuk, **[Kilo 5 Beach](/en/destinations/kilo-5-beach/)** is an easy coastal addition. Travelers continuing toward Peleng Island can add **[Paisu Pok Lake](/en/destinations/paisu-pok-lake/)** to a longer Banggai itinerary.

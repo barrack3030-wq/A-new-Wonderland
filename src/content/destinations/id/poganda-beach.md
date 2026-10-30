@@ -31,7 +31,7 @@ youtube: "https://www.youtube.com/watch?v=TsAT26i-QZE"
 
 ## Pantai Poganda: Pesisir Snorkeling di Pulau Peleng
 
-Pantai Poganda adalah pantai berpasir putih di **Dusun Poganda, Desa Luk Panenteng, Kecamatan Bulagi Utara, Kabupaten Banggai Kepulauan, Sulawesi Tengah**, di **Pulau Peleng**. Pantai ini berada di ujung desa, sekitar **15 menit berkendara dari Danau Paisu Pok**, dan merupakan bagian dari klaster wisata yang sama dengan danau tersebut dan Mata Air Paisu Batango.
+Pantai Poganda adalah pantai berpasir putih di **Dusun Poganda, Desa Luk Panenteng, Kecamatan Bulagi Utara, Kabupaten Banggai Kepulauan, Sulawesi Tengah**, di **Pulau Peleng**. Pantai ini berada di ujung desa, sekitar **15 menit berkendara dari [Danau Paisu Pok](/id/destinations/paisu-pok-lake/)**, dan merupakan bagian dari klaster wisata yang sama dengan danau tersebut dan Mata Air [Paisu Batango](/id/destinations/paisu-batango-lake/).
 
 Pantai ini membentang sekitar **3,4 kilometer**, dengan pasir halus berwarna terang, air pirus yang jernih, dan ombak yang relatif tenang. Ini adalah pantai desa yang panjang, bukan kawasan resor, dengan suasana lokal, pepohonan kelapa, shelter sederhana, dan terumbu karang yang dekat dari pantai.
 
@@ -123,4 +123,4 @@ Ya. Pantai ini dikenal memiliki air yang jernih dan relatif tenang, tetapi kondi
 
 **Danau Paisu Pok** berjarak sekitar **15 menit berkendara** dari Poganda dan merupakan salah satu destinasi air tawar paling terkenal di Banggai. **Mata Air Paisu Batango** berada di desa yang sama dan dapat digabungkan dalam satu perjalanan.
 
-**Pantai Mandel** dan **Pantai Oyama** adalah pantai pulau lain yang menarik. **Air Terjun Piala** dan **Pantai Kilo 5** menjadi pilihan daratan yang lebih mudah bagi wisatawan yang berbasis di Luwuk.
+**[Pantai Mandel](/id/destinations/mandel-beach/)** dan **[Pantai Oyama](/id/destinations/oyama-beach/)** adalah pantai pulau lain yang menarik. **[Air Terjun Piala](/id/destinations/piala-waterfall/)** dan **[Pantai Kilo 5](/id/destinations/kilo-5-beach/)** menjadi pilihan daratan yang lebih mudah bagi wisatawan yang berbasis di Luwuk.

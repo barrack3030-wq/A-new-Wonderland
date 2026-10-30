@@ -14,7 +14,7 @@ tags:
   - "Viajes"
 ---
 
-Poganda Beach es una de las playas del municipio de Banggai Laut, Célebes Central, que ha comenzado a ganar reconocimiento entre los viajeros debido a su entorno natural bien conservado y sus cristalinas vistas marinas. Esta playa se encuentra en la costa oriental de la isla de Peleng, la segunda isla más grande del archipiélago de Banggai después de la isla de Banggai.
+[Poganda Beach](/es/destinations/poganda-beach/) es una de las playas del municipio de Banggai Laut, Célebes Central, que ha comenzado a ganar reconocimiento entre los viajeros debido a su entorno natural bien conservado y sus cristalinas vistas marinas. Esta playa se encuentra en la costa oriental de la isla de Peleng, la segunda isla más grande del archipiélago de Banggai después de la isla de Banggai.
 
 ## Ubicación y acceso
 

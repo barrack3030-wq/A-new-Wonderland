@@ -98,4 +98,4 @@ Air terjun dilaporkan mengalir sepanjang tahun, termasuk musim kemarau. Akses ja
 
 ## Destinasi Terkait
 
-**Air Terjun Piala** dan **Air Terjun Laumarang** di Hanga-Hanga menawarkan trek hutan yang lebih menantang dan karakter air terjun berbeda. **Air Terjun Mokokawa** adalah kaskade bertingkat lain dengan jalur yang lebih panjang. Untuk kombinasi air terjun dan pantai dekat Luwuk, **Pantai Kilo 5** mudah ditambahkan. Wisatawan yang melanjutkan ke Pulau Peleng dapat memasukkan **Danau Paisu Pok** dalam itinerary Banggai yang lebih panjang.
+**[Air Terjun Piala](/id/destinations/piala-waterfall/)** dan **[Air Terjun Laumarang](/id/destinations/laumarang-waterfall/)** di Hanga-Hanga menawarkan trek hutan yang lebih menantang dan karakter air terjun berbeda. **[Air Terjun Mokokawa](/id/destinations/mokokawa-waterfall/)** adalah kaskade bertingkat lain dengan jalur yang lebih panjang. Untuk kombinasi air terjun dan pantai dekat Luwuk, **[Pantai Kilo 5](/id/destinations/kilo-5-beach/)** mudah ditambahkan. Wisatawan yang melanjutkan ke Pulau Peleng dapat memasukkan **[Danau Paisu Pok](/id/destinations/paisu-pok-lake/)** dalam itinerary Banggai yang lebih panjang.

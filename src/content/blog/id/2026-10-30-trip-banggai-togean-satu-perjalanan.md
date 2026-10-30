@@ -21,7 +21,7 @@ Kabar baiknya, Luwuk dapat menjadi titik awal untuk menjelajahi Banggai sekaligu
 
 ## Apakah Banggai dan Togean bisa dikunjungi dalam satu trip?
 
-Bisa, tetapi sebaiknya jangan memperlakukan perjalanan ini sebagai satu paket perpindahan singkat. Area wisata Banggai Kepulauan seperti Pulau Peleng dan Paisu Pok memiliki kebutuhan transportasi yang berbeda dari Togean, yang umumnya diakses melalui Ampana atau pelabuhan lain di Teluk Tomini.
+Bisa, tetapi sebaiknya jangan memperlakukan perjalanan ini sebagai satu paket perpindahan singkat. Area wisata Banggai Kepulauan seperti Pulau Peleng dan [Paisu Pok](/id/destinations/paisu-pok-lake/) memiliki kebutuhan transportasi yang berbeda dari Togean, yang umumnya diakses melalui Ampana atau pelabuhan lain di Teluk Tomini.
 
 Untuk wisatawan yang ingin menikmati kedua kawasan tanpa terburu-buru, siapkan sekitar 9–11 hari sebagai kerangka awal. Durasi tersebut memberi ruang untuk beberapa hari di Banggai, perpindahan antarkawasan, beberapa hari di Togean, serta jeda jika jadwal kapal berubah. Ini bukan durasi wajib; kebutuhan sebenarnya bergantung pada destinasi dan koneksi transportasi.
 

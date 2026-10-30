@@ -41,12 +41,12 @@ Descubre el paraíso escondido de Banggai a través de lagos cristalinos, playas
 **Día 2 — Lagos Cristalinos y Playas Escondidas**
 
 - Desayuno
-- Visita al lago Paisu Pok
+- Visita al lago [Paisu Pok](/es/destinations/paisu-pok-lake/)
 - Natación y relajación
 - Visita al lago Paisubatango
 - Experiencia en una aldea local
-- Playa Poganda
-- Playa Mandel
+- [Playa Poganda](/es/destinations/poganda-beach/)
+- [Playa Mandel](/es/destinations/mandel-beach/)
 - Fotografía del atardecer
 - Regreso al alojamiento
 

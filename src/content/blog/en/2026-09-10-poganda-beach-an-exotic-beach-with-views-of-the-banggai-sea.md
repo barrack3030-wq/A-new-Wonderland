@@ -14,7 +14,7 @@ tags:
   - "Travel"
 ---
 
-Poganda Beach is one of the beaches in Banggai Laut Regency, Central Sulawesi, which is gaining recognition among tourists for its pristine natural condition and crystal-clear sea views. The beach is located on the eastern coast of Peleng Island, the second largest island in the Banggai Islands after Banggai Island.
+[Poganda Beach](/en/destinations/poganda-beach/) is one of the beaches in Banggai Laut Regency, Central Sulawesi, which is gaining recognition among tourists for its pristine natural condition and crystal-clear sea views. The beach is located on the eastern coast of Peleng Island, the second largest island in the Banggai Islands after Banggai Island.
 
 ## Location and Access
 

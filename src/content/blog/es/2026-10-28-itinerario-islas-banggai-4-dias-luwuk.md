@@ -25,10 +25,10 @@ Este itinerario es una estructura para organizar el viaje, no un horario garanti
 Organiza la recogida, las provisiones y el traslado hacia Peleng según el horario vigente del ferry. Si llegas tarde o la conexión no encaja, puede ser mejor pasar la noche en Luwuk y comenzar el recorrido al día siguiente, en lugar de depender de un enlace demasiado ajustado.
 
 ### Día 2 — Paisu Pok y Paisu Batango
-Reserva tiempo suficiente para conocer el lago Paisu Pok y Paisu Batango. Los traslados por carretera y las visitas pueden durar más de lo previsto. Consulta las normas de acceso y las posibles tarifas locales antes de salir.
+Reserva tiempo suficiente para conocer el lago [Paisu Pok](/es/destinations/paisu-pok-lake/) y [Paisu Batango](/es/destinations/paisu-batango-lake/). Los traslados por carretera y las visitas pueden durar más de lo previsto. Consulta las normas de acceso y las posibles tarifas locales antes de salir.
 
 ### Día 3 — Kawalu Bay y playa de Poganda
-Dedica el día a Kawalu Bay y la playa de Poganda. El orden dependerá del alojamiento, el transporte disponible y las condiciones del día. Incluye pausas y margen para los desplazamientos; no calcules toda la jornada únicamente con estimaciones del mapa.
+Dedica el día a [Kawalu Bay](/es/destinations/kawalu-bay/) y la playa de Poganda. El orden dependerá del alojamiento, el transporte disponible y las condiciones del día. Incluye pausas y margen para los desplazamientos; no calcules toda la jornada únicamente con estimaciones del mapa.
 
 ### Día 4 — Regreso hacia Luwuk
 Confirma el puerto de salida, la hora del ferry y el traslado antes de cerrar el plan. Deja margen para llegar al puerto y para posibles cambios de horario. Si vuelas desde Luwuk ese mismo día, evita una conexión demasiado justa entre el ferry y el vuelo; considera dormir en Luwuk la noche anterior.
