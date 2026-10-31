@@ -6,7 +6,6 @@ seoDescription: "Kenali Goa Babanang di Bulagi Selatan, Banggai Kepulauan. Infor
 image: /images/blog/goa-babang-20260909103206.jpg
 imageAlt: Dokumentasi Goa Babanang di Banggai Kepulauan
 location: Babang, Bulagi Selatan, Banggai Kepulauan
-noindex: true
 category: Gua
 highlights:
   - Destinasi wisata gua di Banggai Kepulauan

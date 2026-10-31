@@ -121,7 +121,7 @@ Si quieres explorar **Luwuk y las Islas Banggai** sin prisas, esta ruta de 7 dí
 
 ## Día 5 — Pompon Beach → Mandel Beach → Luwuk
 
-![Pompon Beach](/images/images (1).jpg)
+![Pompon Beach](/images/images%20(1).jpg)
 
 ![Mandel Beach](/images/mandel.jpg)
 
@@ -162,7 +162,7 @@ Si quieres explorar **Luwuk y las Islas Banggai** sin prisas, esta ruta de 7 dí
 
 ![Kamumu Waterfall](/images/kamumuu.jpg)
 
-![Salodik Waterfall](/images/images (3).jpg)
+![Salodik Waterfall](/images/images%20(3).jpg)
 
 | Hora | Actividad |
 |---|---|

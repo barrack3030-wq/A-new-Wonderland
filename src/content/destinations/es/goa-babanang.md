@@ -6,7 +6,6 @@ seoDescription: "Conoce Goa Babanang, en Bulagi Selatan, con información sobre 
 image: /images/blog/goa-babang-20260909103206.jpg
 imageAlt: Cueva Goa Babanang en las islas Banggai
 location: Babang, Bulagi Selatan, islas Banggai
-noindex: true
 category: Cueva
 highlights:
   - Una cueva de interés turístico en las islas Banggai

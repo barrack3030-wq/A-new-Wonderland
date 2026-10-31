@@ -6,7 +6,6 @@ seoDescription: "Découvrez Goa Babanang à Bulagi Selatan : localisation et con
 image: /images/blog/goa-babang-20260909103206.jpg
 imageAlt: Grotte Goa Babanang dans les îles Banggai
 location: Babang, Bulagi Selatan, îles Banggai
-noindex: true
 category: Grotte
 highlights:
   - Une grotte touristique dans les îles Banggai

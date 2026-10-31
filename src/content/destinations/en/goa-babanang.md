@@ -6,7 +6,6 @@ seoDescription: "Find out about Goa Babanang in Bulagi Selatan, Banggai Islands,
 image: /images/blog/goa-babang-20260909103206.jpg
 imageAlt: Goa Babanang cave in the Banggai Islands
 location: Babang, Bulagi Selatan, Banggai Islands
-noindex: true
 category: Cave
 highlights:
   - A cave attraction in the Banggai Islands
