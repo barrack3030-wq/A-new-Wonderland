@@ -377,14 +377,14 @@ const breadcrumbItems = [
     </section>
 
 
-    <section class="bg-white py-12 md:py-16">
+    <section class="bg-white py-10 md:py-16">
       <div class="max-w-7xl mx-auto px-5 sm:px-8 lg:px-12">
-        <h2 class="font-serif text-3xl md:text-4xl text-ocean-900 leading-tight tracking-[-0.03em] mb-7">{ui.whyTitle}</h2>
-        <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-3">
+        <h2 class="font-serif text-2xl md:text-4xl text-ocean-900 leading-tight tracking-[-0.03em] mb-5 md:mb-7">{ui.whyTitle}</h2>
+        <div class="grid grid-cols-2 lg:grid-cols-4 gap-3">
           {ui.why.map(([t, d]) => (
-            <article class="rounded-2xl border border-[#E8E2D6] bg-[#FFFEFB] p-5">
-              <h3 class="font-semibold text-ocean-900 mb-2">{t}</h3>
-              <p class="text-sm text-ocean-600 leading-[1.65]">{d}</p>
+            <article class="rounded-2xl border border-[#E8E2D6] bg-[#FFFEFB] p-4 md:p-5">
+              <h3 class="text-sm md:text-base font-semibold text-ocean-900 mb-1.5 md:mb-2">{t}</h3>
+              <p class="text-xs md:text-sm text-ocean-600 leading-[1.55] md:leading-[1.65]">{d}</p>
             </article>
           ))}
         </div>
