@@ -21,7 +21,7 @@ const gallerySeoTitle = ({
 } as Record<string, string>)[lang as string];
 
 const breadcrumbItems = [
-  { name: lang === 'ko' ? '홈' : lang === 'id' ? 'Beranda' : 'Home', url: `/${lang}/` },
+  { name: lang === 'ko' ? '홈' : lang === 'id' ? 'Beranda' : 'Home', url: (lang === 'id' ? '/' : `/${lang}/`) },
   { name: t('nav.gallery'), url: `/${lang}/gallery/` }
 ];
 

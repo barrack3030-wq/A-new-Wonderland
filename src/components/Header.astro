@@ -7,7 +7,7 @@ const t = useTranslations(lang);
 <header class="bw-site-header fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-xl border-b border-black/5">
   <div class="max-w-7xl mx-auto px-5 sm:px-8 lg:px-12">
     <div class="bw-site-header-row h-[72px] md:h-[84px] flex items-center justify-between">
-      <a href={'/' + lang + '/'} class="bw-header-home flex items-center shrink-0" aria-label="Banggai Wonderland home">
+      <a href={lang === 'id' ? '/' : '/' + lang + '/'} class="bw-header-home flex items-center shrink-0" aria-label="Banggai Wonderland home">
         <img src="/images/logo.png" alt="Banggai Wonderland" class="h-[58px] md:h-[72px] w-auto object-contain" />
       </a>
 

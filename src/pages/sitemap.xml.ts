@@ -40,7 +40,8 @@ export async function GET() {
   const lastmod = new Map<string, string>();
 
   for (const lang of languages) {
-    urls.add(`${site}/${lang}/`);
+    // Default-language homepage is served at the root.
+    urls.add(lang === 'id' ? `${site}/` : `${site}/${lang}/`);
 
     for (const page of staticPages) {
       urls.add(`${site}/${lang}/${page}`);

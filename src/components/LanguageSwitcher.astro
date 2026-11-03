@@ -118,7 +118,9 @@ const getPath = (newLang: string) => {
     parts.unshift(newLang);
   }
 
-  return `/${parts.join('/')}${parts.length ? '/' : ''}`;
+  const path = `/${parts.join('/')}${parts.length ? '/' : ''}`;
+  // The default-language homepage lives at the root.
+  return path === '/id/' ? '/' : path;
 };
 ---
 
