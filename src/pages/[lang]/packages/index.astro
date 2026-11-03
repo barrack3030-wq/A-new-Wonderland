@@ -61,7 +61,7 @@ const copy = ({
 };
 
 const breadcrumbItems = [
-  { name: lang === 'ko' ? '홈' : lang === 'id' ? 'Beranda' : 'Home', url: `/${lang}/` },
+  { name: lang === 'ko' ? '홈' : lang === 'id' ? 'Beranda' : 'Home', url: (lang === 'id' ? '/' : `/${lang}/`) },
   { name: copy.title, url: `/${lang}/packages/` }
 ];
 

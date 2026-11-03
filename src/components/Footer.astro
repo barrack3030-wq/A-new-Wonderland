@@ -9,7 +9,7 @@ const t = useTranslations(lang);
   <div class="max-w-7xl mx-auto px-6 sm:px-10 lg:px-12 relative z-10">
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-12 mb-10">
       <div class="min-w-0">
-        <a href={`/${lang}/`} class="inline-block">
+        <a href={lang === 'id' ? '/' : `/${lang}/`} class="inline-block">
           <h2 class="text-xl font-serif font-bold text-white tracking-wide">Banggai Wonderland</h2>
         </a>
         <p class="text-ocean-100 text-sm leading-relaxed mt-4 max-w-xs">{t('footer.desc')}</p>

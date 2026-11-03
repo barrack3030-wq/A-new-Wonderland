@@ -27,7 +27,7 @@ const currentLangCode = pathParts[0] && Object.keys(languages).includes(pathPart
 const section = pathParts[1] || '';
 // Booking query parameters only prefill the form; they are not separate SEO pages.
 const isParameterizedBookingUrl = section === 'book' && Astro.url.searchParams.toString().length > 0;
-const isLocalizedHomepage = pathParts.length === 1 && Object.keys(languages).includes(pathParts[0]);
+const isLocalizedHomepage = pathParts.length === 0 || (pathParts.length === 1 && Object.keys(languages).includes(pathParts[0]));
 // Localized homepages must remain indexable; only parameterized booking URLs are forcibly excluded.
 const shouldNoIndex = (noIndex && !isLocalizedHomepage) || isParameterizedBookingUrl;
 
@@ -69,7 +69,7 @@ const manualBlogTranslationKeys: Record<string, string> = {
 };
 
 if (!section) {
-  alternateLinks = Object.keys(languages).map(langCode => ({ lang: hreflangMap[langCode] || langCode, href: new URL(`/${langCode}/`, siteUrl).href }));
+  alternateLinks = Object.keys(languages).map(langCode => ({ lang: hreflangMap[langCode] || langCode, href: new URL(langCode === 'id' ? '/' : `/${langCode}/`, siteUrl).href }));
 } else if (localizedLandingSections.includes(section) || section === 'paisu-pok') {
   // These SEO landing pages are maintained per language. Only emit a self hreflang until matching translations exist.
   alternateLinks = [{ lang: hreflangMap[currentLangCode] || currentLangCode, href: currentUrl }];
