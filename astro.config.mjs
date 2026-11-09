@@ -51,6 +51,7 @@ export default defineConfig({
       "/zh/gallery/": "/en/gallery/",
       "/zh/book/": "/en/book/",
       "/zh/contact/": "/en/contact/",
+      "/zh/packages/": "/en/packages/",
       "/zh/banggai-travel/": "/id/banggai-travel/",
       "/zh/banggai-trip/": "/id/banggai-trip/",
       "/zh/banggai-open-trip/": "/id/banggai-open-trip/",
