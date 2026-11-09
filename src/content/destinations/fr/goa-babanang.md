@@ -20,6 +20,8 @@ travelTips:
   - Confirmez l'itinéraire auprès des habitants
   - Portez des chaussures adaptées aux terrains naturels
   - Prévoyez de l'eau et vos effets personnels
+# Thin page: kept out of search results and the sitemap until it has real content.
+noindex: true
 ---
 
 ## Goa Babanang dans les îles Banggai
