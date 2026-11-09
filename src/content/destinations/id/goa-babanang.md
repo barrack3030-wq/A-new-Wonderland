@@ -20,6 +20,8 @@ travelTips:
   - Konfirmasi akses dan kondisi jalur kepada warga setempat
   - Gunakan alas kaki yang sesuai untuk medan alam
   - Bawa air minum dan perlengkapan pribadi
+# Thin page: kept out of search results and the sitemap until it has real content.
+noindex: true
 ---
 
 ## Goa Babanang di Banggai Kepulauan

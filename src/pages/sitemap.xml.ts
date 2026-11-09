@@ -7,11 +7,10 @@ const languages = ['id', 'en', 'es', 'fr'];
 
 // Only include universal static pages here. Collection archives are added below
 // only for languages that actually have content, avoiding empty archive URLs.
+// Utility pages (gallery, book, contact) stay reachable but are kept out of the sitemap:
+// they carry little search value and dilute crawl attention on a young domain.
 const staticPages = [
   'about/',
-  'gallery/',
-  'book/',
-  'contact/',
   'jasa-tour-luwuk-banggai/'
 ];
 
