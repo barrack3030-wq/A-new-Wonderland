@@ -1,9 +1,11 @@
 import { getCollection } from 'astro:content';
+import { deferredIndexLangs } from '../utils/i18n';
 
 export const prerender = true;
 
 const site = 'https://banggaiwonderland.my.id';
-const languages = ['id', 'en', 'es', 'fr'];
+// Languages in deferredIndexLangs are noindex, so they are left out of the sitemap too.
+const languages = ['id', 'en', 'es', 'fr'].filter(lang => !deferredIndexLangs.includes(lang));
 
 // Only include universal static pages here. Collection archives are added below
 // only for languages that actually have content, avoiding empty archive URLs.

@@ -7,6 +7,10 @@ export const languages = {
 
 export const defaultLang = 'id';
 
+// Languages kept out of search (noindex, sitemap, hreflang) while the young domain earns trust.
+// Pages stay live for visitors. Empty this list to open them for indexing again.
+export const deferredIndexLangs: string[] = ['es', 'fr'];
+
 export function getLangFromUrl(url: URL) {
   const [, lang] = url.pathname.split('/');
   if (lang in languages) return lang as keyof typeof languages;
