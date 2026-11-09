@@ -1,6 +1,6 @@
 ---
 import { getCollection } from 'astro:content';
-import { languages } from '../utils/i18n';
+import { languages, deferredIndexLangs } from '../utils/i18n';
 
 interface Props {
   title: string;
@@ -29,7 +29,9 @@ const section = pathParts[1] || '';
 const isParameterizedBookingUrl = section === 'book' && Astro.url.searchParams.toString().length > 0;
 const isLocalizedHomepage = pathParts.length === 0 || (pathParts.length === 1 && Object.keys(languages).includes(pathParts[0]));
 // Localized homepages must remain indexable; only parameterized booking URLs are forcibly excluded.
-const shouldNoIndex = (noIndex && !isLocalizedHomepage) || isParameterizedBookingUrl;
+// Deferred languages are noindex everywhere, including their localized homepage.
+const isDeferredLang = deferredIndexLangs.includes(currentLangCode);
+const shouldNoIndex = (noIndex && !isLocalizedHomepage) || isParameterizedBookingUrl || isDeferredLang;
 
 const homepageSeo: Record<string, { title: string; description: string }> = {
   en: { title: 'Banggai Islands Travel Guide & Private Trips | Banggai Wonderland', description: 'Discover the Banggai Islands in Central Sulawesi with private trips to Paisu Pok, Piala Waterfall, Pulo Dua, Kamumu and other hidden destinations around Luwuk and Banggai.' },
@@ -142,6 +144,8 @@ const organizationSchema = {
 const websiteSchema = { '@context': 'https://schema.org', '@type': 'WebSite', '@id': websiteId, name: 'Banggai Wonderland', url: siteUrl.href, inLanguage: hreflangMap[currentLangCode] || currentLangCode, publisher: { '@id': orgId } };
 // Defined on every page so @id references (publisher, provider) always resolve within the same document.
 const finalSchema = [websiteSchema, organizationSchema, ...(schema ? [schema] : [])];
+// Do not advertise noindex language versions as hreflang alternates.
+alternateLinks = alternateLinks.filter(link => !deferredIndexLangs.some(l => (hreflangMap[l] || l) === link.lang));
 const defaultLink = alternateLinks.find(link => link.lang === (hreflangMap.en || 'en')) || alternateLinks.find(link => link.lang === (hreflangMap.id || 'id'));
 ---
 <title>{effectiveSeoTitle}</title>
